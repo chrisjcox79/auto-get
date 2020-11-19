@@ -45,7 +45,7 @@ jobs:
         ls
         mv ./scp-* ../scp-tmp2
         cd ../scp-tmp2
-        sed '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
+        sed -i -e '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
         sed -i -e '1,/page-content/d' *
         sed -i -e '/clear:both/,$d' *
         sed -i -e 's/<p>/\n/g' ./scp-*
@@ -101,7 +101,7 @@ jobs:
         ls
         mv ./scp-* ../scp-tmp2-en
         cd ../scp-tmp2-en
-        sed '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
+        sed -i -e '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
         sed -i -e '1,/page-content/d' *
         sed -i -e '/clear:both/,$d' *
         sed -i -e 's/<p>/\n/g' ./scp-*
