@@ -1,0 +1,142 @@
+name: Scp Docs
+on: 
+  release:
+    types: [published]
+  push:
+    tags:
+    - 'v*'
+  #  branches: 
+  #    - master
+  schedule:
+    - cron: '12 */6 * * *'
+  watch:
+    types: [started]
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Clear
+      run: |
+        rm -rf scp-tmp
+        rm -rf scp-tmp2
+        rm -rf scp-docs
+        #rmdir scp-tmp
+        #rmdir scp-tmp2
+        #rmdir scp-docs
+    - name: Prepare
+      run: |
+        mkdir scp-docs
+        mkdir scp-tmp2
+        mkdir scp-tmp
+    - name: Download
+      run: |
+        cd scp-tmp
+        wget --no-check-certificate  -r -nd -R .jpg -R .png -R .gif http://scp-wiki-cn.wikidot.com > log.txt &
+    - name: Wait
+      run: |
+        sleep 3600
+    - name: Convert
+      run: |
+        cd scp-tmp
+        find . -name "scp-*" -and -size -14k | xargs rm -f
+        ls
+        mv ./scp-* ../scp-tmp2
+        cd ../scp-tmp2
+        sed '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
+        sed -i -e '1,/page-content/d' *
+        sed -i -e '/clear:both/,$d' *
+        sed -i -e 's/<p>/\n/g' ./scp-*
+        sed -i -e 's/<\/strong>/ /g' ./scp-*
+        sed -i -e 's/<br \/>/\n/g' ./scp-*
+        sed -i -e 's/<br\/>/\n/g' ./scp-*
+        sed -i -e 's/<hr \/>/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/g' ./scp-*
+        sed -i -e 's/<\/blockquote>/附加记录：    /g' ./scp-*
+        sed -i -e 's/<blockquote>/\n/g' ./scp-*
+        sed -i -e 's/<\/..>//g' ./scp-*
+        sed -i -e 's/<\/...>//g' ./scp-*
+        sed -i -e 's/<\/....>//g' ./scp-*
+        sed -i -e 's/<\/.....>//g' ./scp-*
+        sed -i -e 's/<..>//g' ./scp-*
+        sed -i -e 's/<...>//g' ./scp-*
+        sed -i -e 's/<....>//g' ./scp-*
+        sed -i -e 's/<.....>//g' ./scp-*
+        sed -i -e 's/<......>//g' ./scp-*
+        sed -i -e 's/<.*>//g' ./scp-*
+        sed -i -e 's/&.*;//g' ./scp-*
+        sed -i 's/^\t*//g' ./scp-*
+        sed -i '/^x$/d' ./scp-*
+        sed -i '/^X$/d' ./scp-*
+        for file in *; do cat -s $file > $file.txt; done
+        sed -i -e 's/$/\r/g' ./scp-*
+        #sed -i -e '$a \\n\n所有 SCP档案 均来自SCP基金会中文维基站点(www.scp-wiki-cn.net)\n>>>所有未经授权的阅读档案行为将被 监控 , 定位 和 处理<<<\n' ./scp-*
+        mv ./*.txt ../scp-docs
+        echo -e "\a"
+    - name: Clear-en
+      run: |
+        rm -rf scp-tmp-en
+        rm -rf scp-tmp2-en
+        rm -rf scp-docs-en
+        #rmdir scp-tmp
+        #rmdir scp-tmp2
+        #rmdir scp-docs
+    - name: Prepare-en
+      run: |
+        mkdir scp-docs-en
+        mkdir scp-tmp2-en
+        mkdir scp-tmp-en
+    - name: Download-en
+      run: |
+        cd scp-tmp-en
+        wget --no-check-certificate  -r -nd -R .jpg -R .png -R .gif http://www.scpwiki.com > log.txt &
+    - name: Wait-en
+      run: |
+        sleep 3600
+    - name: Convert-en
+      run: |
+        cd scp-tmp-en
+        find . -name "scp-*" -and -size -14k | xargs rm -f
+        ls
+        mv ./scp-* ../scp-tmp2-en
+        cd ../scp-tmp2-en
+        sed '/<script/{: START;s#</script>#&#;t DEL;: LOOP;N;s#</script>#&#; t DEL;b LOOP;: DEL;s#<script.*</script>##;s#<script#&#;t START;}' ./scp-*
+        sed -i -e '1,/page-content/d' *
+        sed -i -e '/clear:both/,$d' *
+        sed -i -e 's/<p>/\n/g' ./scp-*
+        sed -i -e 's/<\/strong>/ /g' ./scp-*
+        sed -i -e 's/<br \/>/\n/g' ./scp-*
+        sed -i -e 's/<br\/>/\n/g' ./scp-*
+        sed -i -e 's/<hr \/>/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/g' ./scp-*
+        sed -i -e 's/<\/blockquote>/附加记录：    /g' ./scp-*
+        sed -i -e 's/<blockquote>/\n/g' ./scp-*
+        sed -i -e 's/<\/..>//g' ./scp-*
+        sed -i -e 's/<\/...>//g' ./scp-*
+        sed -i -e 's/<\/....>//g' ./scp-*
+        sed -i -e 's/<\/.....>//g' ./scp-*
+        sed -i -e 's/<..>//g' ./scp-*
+        sed -i -e 's/<...>//g' ./scp-*
+        sed -i -e 's/<....>//g' ./scp-*
+        sed -i -e 's/<.....>//g' ./scp-*
+        sed -i -e 's/<......>//g' ./scp-*
+        sed -i -e 's/<.*>//g' ./scp-*
+        sed -i -e 's/&.*;//g' ./scp-*
+        sed -i 's/^\t*//g' ./scp-*
+        sed -i '/^x$/d' ./scp-*
+        sed -i '/^X$/d' ./scp-*
+        for file in *; do cat -s $file > $file.txt; done
+        sed -i -e 's/$/\r/g' ./scp-*
+        #sed -i -e '$a \\n\n所有 SCP档案 均来自SCP基金会中文维基站点(www.scp-wiki-cn.net)\n>>>所有未经授权的阅读档案行为将被 监控 , 定位 和 处理<<<\n' ./scp-*
+        mv ./*.txt ../scp-docs-en
+        echo -e "\a"
+    - name: Commit #上传新的文件到仓库
+      run: |
+        git config --global user.email AutoupdateRobot@email.com
+        git config --global user.name AutoupdateRobot
+        git add .
+        git commit -m "update docs" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
