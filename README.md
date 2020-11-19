@@ -4,7 +4,7 @@
 
 执行状态：![Scp Docs](https://github.com/swift-zym/scp-docs/workflows/Scp%20Docs/badge.svg)
 
-获取文档方式(中文)：`https://docs.scp-database.cf/scp-docs/scp-docs/scp-XXX.txt`		
+获取文档方式(中文)：`https://docs.scp-database.cf/scp-docs/scp-XXX.txt`		
 
-获取文档方式(英文)：`https://docs.scp-database.cf/scp-docs/scp-docs-en/scp-XXX.txt`		
+获取文档方式(英文)：`https://docs.scp-database.cf/scp-docs-en/scp-XXX.txt`		
 
