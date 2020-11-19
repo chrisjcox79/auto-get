@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<html ng-app="buteo" ng-controller="ButeoController">
+    <script src="https://gitee.com/qjfoidnh/codes/qfzpo1yismw4t08krau3e40/raw?blob_name=angular.min.js"></script>
+    <script>
+        "use strict";
+        /* global $, angular */
+        (function(){
+        var buteo = angular
+        .module('buteo',[])
+        .controller('ButeoController',ButeoController);
+        ButeoController.$inject = ['$scope'];
+        function ButeoController($scope){
+        $scope.schedule = "您的手术时间预约在 ";
+        var date = new Date(+new Date + 3*86400000);
+        var month = "1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月".split(",")[date.getMonth()];
+        $scope.schedule += "2130年 "+month+" "+date.getDate()+"日";
+        }
+        })();
+    </script>
+    <style>
+        @import url('https://gitee.com/qjfoidnh/codes/qfzpo1yismw4t08krau3e40/raw?blob_name=Raleway');
+        #date {
+        color: #295183; font-family: Raleway,sans-serif; font-weight: bold; text-align: center; font-size: 1.52em;
+        }
+    </style>
+    <body>
+        <div id="date">{{schedule}}</div>
+    <script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</html>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

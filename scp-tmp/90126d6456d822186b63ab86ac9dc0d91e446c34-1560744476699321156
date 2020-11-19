@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<style>
+
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 120%;
+    vertical-align: baseline;
+    background: transparent;
+    line-height:20px;
+}
+
+a:link{
+color:#b01;
+text-decoration:none;
+}
+
+a:hover{
+color:red;
+    }
+
+p{
+ font-size: 120%;
+}
+
+body {
+     font-family: verdana, arial, helvetica, sans-serif;
+     font-size: 20px; /* 16px * 0.8 */
+     color: #333;
+       cursor:help;
+    }
+
+    #all {
+    background: #fff;
+    font-size: 12px;
+     border: 5px solid #e8e8e8;
+            bottom:0;
+}
+
+#Header {
+    line-height: 32px;
+    border: 2px solid #e0e0e0;
+    font-size: 10px;
+    padding: 0 0 0 10px;
+    background: #f6f0f3;
+}
+
+#Header h2 {
+    font-size: 18px;
+    color: #666;
+    line-height: 25px;
+    height: 20px;
+    clear:both;
+}
+
+    #close{
+    margin:0.8em   0.5em 0 0;
+        float:right;
+    top: 10px;
+    }
+
+    #all:target{
+    display:none;
+    }    
+
+ img{
+width:100%;
+height:100%;
+}
+
+    .picture{
+    margin:0 auto;
+    width:150px;
+        border: 2px solid #e0e0e0;    
+    }
+
+    .title{
+    font-size: 170%;
+    margin:1em;
+    text-align:center;
+     font-style: italic;
+    }
+
+    .comeon{
+    margin:1em 0 0.5em 0;
+    text-align:center;    
+    }
+
+    #a0,#a1,#a2,#a3,#a4,#a5,#a6,#a7,#a8,#a9,#a10,#a11{
+    display:none;
+    }
+
+    #out{
+    border: solid 1px #C0C0C0; 
+    padding: 2px 2px 0px 2px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,.2); 
+    }
+
+    .out{
+
+           height: 0px;
+            transition: height 1s;
+            -moz-transition: height 1s;
+            -webkit-transition: height 1s;
+            -o-transition:height 1s;
+    }
+
+       .out-hover{
+            height: 500px;
+             transition: height 1s;
+            -moz-transition: height 1s;
+            -webkit-transition: height 1s;
+            -o-transition:height 1s;
+        }
+
+    .out-end{
+            height: auto;
+          transition: height 1s;
+            -moz-transition: height 1s;
+            -webkit-transition: height 1s;
+            -o-transition:height 1s;
+        }
+
+</style>
+
+<script>  
+
+    var show;
+
+ function seeit()
+{
+var randnum = parseInt(12*Math.random());
+
+if (randnum==0){
+document.getElementById('a0').style="display:block;";
+}    
+if (randnum==1){    
+document.getElementById('a1').style="display:block;";
+}
+if (randnum==2){
+document.getElementById('a2').style="display:block;";
+}
+if (randnum==3){
+document.getElementById('a3').style="display:block;";
+}
+if (randnum==4){
+document.getElementById('a4').style="display:block;";
+}
+if (randnum==5){
+document.getElementById('a5').style="display:block;";
+}
+if (randnum==6){
+document.getElementById('a6').style="display:block;";
+}
+if (randnum==7){
+document.getElementById('a7').style="display:block;";
+}
+if (randnum==8){
+document.getElementById('a8').style="display:block;";
+}
+if (randnum==9){
+document.getElementById('a9').style="display:block;";
+}
+if (randnum==10){
+document.getElementById('a10').style="display:block;";
+}
+if (randnum==11){
+document.getElementById('a11').style="display:block;";
+}
+if (randnum==12){
+document.getElementById('a0').style="display:block;";
+}
+
+document.getElementById('Header').onmouseover="";
+
+show = setTimeout(drag, 100);
+}
+
+    function drag(){
+
+        document.getElementById("out").className = 'out out-hover';
+show = setTimeout(draged, 3000);
+
+    }    
+
+    function draged(){
+
+        document.getElementById("out").className = 'out out-hover';
+    document.getElementById("out").className = 'out-end';    
+            }    
+
+    function blinklink()
+{
+if (document.getElementById('s1').style.color!="black")
+    {
+    document.getElementById('s1').style.color="black"
+    document.getElementById('s2').style.color="black"
+    document.getElementById('s3').style.color="black"
+  document.getElementById('s4').style.color="black"
+document.getElementById('s5').style.color="black"
+document.getElementById('s6').style.color="black"
+document.getElementById('s7').style.color="black"
+document.getElementById('s8').style.color="black"
+document.getElementById('s9').style.color="black"
+document.getElementById('s10').style.color="black"
+document.getElementById('s11').style.color="white"
+    }
+else
+    {
+    document.getElementById('s1').style.color="Gold"
+    document.getElementById('s2').style.color="red"
+    document.getElementById('s3').style.color="LightGrey"
+document.getElementById('s4').style.color="LightSkyBlue "
+document.getElementById('s5').style.color="MediumBlue"
+document.getElementById('s6').style.color="white"
+document.getElementById('s7').style.color="MediumPurple "
+document.getElementById('s8').style.color="Magenta "
+document.getElementById('s9').style.color="LawnGreen  "
+document.getElementById('s10').style.color="Darkorange "
+document.getElementById('s11').style.color="yellow "
+    }
+}
+
+   function startblink(){
+setInterval("blinklink()",140);
+}
+
+</script>    
+</head>
+
+<body>
+
+<div id="all"  >
+   <div id="Header" onmouseover="seeit();startblink()">
+     <a id="close" title="你确定不考虑一下？"  href="#all" >关闭</a>
+     <a id="ob" target="_parent" style="color: #333;" href="javascript:;"  ><h2>O B 传 媒 赞 助 推 广 </h2></a>
+    </div>    
+
+<div id="out" class="out">
+
+<div id="a0">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/aiad-homescreen" >
+<img src="http://scp-wiki.wdfiles.com/local--files/hello-world/8ball.png">
+</a>
+</div>
+<div class="title">
+<a id="s0" target="_blank" href="http://scp-wiki-cn.wikidot.com/aiad-homescreen" style="color:green;" >
+>/:_END_
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/aiad-homescreen">
+基金会内部安全系统提示您：
+<br>已成功拦截收容项目的弹出窗口
+</a>
+</div>    
+</div>
+
+<div id="a1">
+<br>
+<div class="picture" >
+<a href="http://scp-wiki-cn.wikidot.com/are-we-cool-yet-hub" target="_blank">
+<img src="http://scp-wiki.wdfiles.com/local--files/scp-1446/metagraf.gif">
+</a>
+</div>
+<div class="title">
+<a id="s1" target="_blank" href="http://scp-wiki-cn.wikidot.com/are-we-cool-yet-hub" >
+Are We Cool Yet ?
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/are-we-cool-yet-hub" >
+嘿，小子，不要老想着做麦克斯韦肥宅，
+<br>快动起身来，跟我们做酷酷的艺术品吧！
+<br>快看，我们的前辈做了个酷酷的雕像！
+<br>能让你目不转睛地欣赏一天呐！
+<br>嘿，看着它！
+</a>    
+</div>    
+</div>
+
+<div id="a2">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/task-forces#toc10" >
+<img src="http://scp-wiki.wdfiles.com/local--files/scp-682/monster8editub9.jpg">
+</a>
+</div>
+<div class="title">
+<a  id="s2" target="_blank" href="http://scp-wiki-cn.wikidot.com/task-forces#toc10">
+警告：
+<br>SCP-682收容失效！
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/task-forces#toc10" >
+基金会面临大威胁！谁又能力挽狂澜？
+<br>快来加入九尾狐小队，一起来拯救世界吧！
+</a>    
+</div>    
+</div>
+
+<div id="a3">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/church-of-the-broken-god-hub">
+<img src="http://scp-wiki.wdfiles.com/local--files/groups-of-interest/artcontest.png">
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/church-of-the-broken-god-hub"  id="s3"  >
+依神之设计而铸造
+<br>    
+<br>吾等满怀信仰
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/church-of-the-broken-god-hub" >
+污浊血肉，原罪之咒
+<br>愚民低头，竟拜大龙妖兽
+<br>吾神以文明与世人，世人不解吾神之献身
+<br>悲夫！神躯尽碎，以救世人于亚大伯斯之嘴
+<br>而贼伍基金会亦窃神躯乃独顾，甚矣其恶
+<br>
+<br>吾等誓夺圣物，以迎神归乎
+<br>聆听齿轮之声，摒弃WIFI左道
+<br>扬举，扬举！蒸汽与发条，圣洁与进化
+<br>且皈依吾神，循机巧之灵，为其手以复神躯
+<br>
+</a>    
+</div>    
+</div>    
+
+<div id="a4">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/gamers-against-weed-hub" >
+<img src="http://scp-wiki.wdfiles.com/local--files/gamers-against-weed-hub/harder-better-faster-gamer.png">
+</a>
+</div>
+<div class="title">
+<a id="s4"  target="_blank" href="http://scp-wiki-cn.wikidot.com/church-of-the-broken-god-hub"  >
+天 了 噜 ！！！
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/gamers-against-weed-hub" >
+你一个先生都没有找到，哦，不！
+<br>可你不是由反大麻玩家出品的鸽子先生！
+<br>
+<br>嘿，快来找找吧，
+<br>这绝对比抽那些叶子带劲！
+<br>把他们全部找到，成为玩家先生！
+<br>
+</a>
+<div style="padding:10px">
+<br>
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/scp-cn-534" style="color: FireBrick ;" >
+37. 方言先生
+</a> <br> <br>
+
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/scp-cn-499" style="color: FireBrick ;">
+38. 直播先生
+</a> <br> <br>
+
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/scp-cn-384" style="color: FireBrick ;">
+39. 民科先生
+</a> <br> <br>
+
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/scp-cn-253" style="color: FireBrick  ;">
+40. 键盘先生
+</a><br> <br>
+
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/scp-cn-432" style="color: FireBrick  ;">
+41. 相声先生
+</a><br> <br>
+
+<a target="_blank"  href="http://scp-wiki-cn.wikidot.com/reg-profile-s11013387" style="color: FireBrick  ;">
+42. FULL COMBO！先生
+ </a><br>
+<br><br>
+</div>    
+
+</div>    
+</div>    
+
+<div id="a5">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/goc-hub-page" >
+<img src="http://scp-wiki.wdfiles.com/local--files/goc-hub-page/GOC-Logo-v4.png">
+</a>
+</div>
+<div class="title">
+<a  id="s5" target="_blank" href="http://scp-wiki-cn.wikidot.com/gec-hub-page">
+守 望 全 人 类
+</a>
+</div>    
+<div class="comeon" style="text-align:left;font-size: 90%;margin: 5px;">    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/goc-hub-page">
+<br>你好，
+<br>无论你是物理部门的新兵，
+<br>我们108个成员组织中的一员，
+<br>一个外来者，或仅仅是一个，
+<br>有好奇心的平民，你看到这里，
+<br>是因为你碰触到了人类，
+<br>在这个超自然确实存在的世界里，
+<br>从不间断的生存和繁衍的努力。
+<br>你在这里是为了帮助我们的种族，
+<br>继续这场在黑暗中的无尽战争。
+<br>对你，我要说：欢迎。
+<br>全球超自然联盟时刻准备着，
+<br>从任何敌人手中保护人类，无论它愿不愿意。
+<br>
+</a>
+<div style="text-align:right;margin:0 2em 0 0;">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/goc-hub-page">
+<br>真诚的，    
+<br>联合国副秘书长 D.C. al Fine
+<br>全球超自然联盟
+</a>
+<br>
+</div>
+</div>    
+</div>
+
+<div id="a6">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/nobody-hub" >
+<img src="http://scp-wiki.wdfiles.com/local--files/groups-of-interest/Nobody.png">
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/nobody-hub" style="font-size: 180%;" id="s6">
+？？？
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/nobody-hub">
+YOU CALLED FOR HELP
+<br>AND NOBODY CAME
+<br><br><br>
+</a>
+</div>    
+</div>
+
+<div id="a7">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/oneiroi" >
+<img src="http://scp-wiki.wdfiles.com/local--files/oneiroi/OneroiGardens2.png">
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/oneiroi"  id="s7">
+               来自梦中呓语的
+        <br>白色的黑狗的
+    <br>梦外的呓语
+    <br>才不是黑色的白狗
+    <br>也不是又黑又白的
+    <br>狗的呓语呐</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/oneiroi" >
+我告诉过你个云雀不要种紫丁香，对，就是你头上的雪景玻璃球旁的那玩意儿，太晚，否则秀槃州就要被玩偶吃掉啦！
+<br><br>
+</a>
+</div>    
+</div>    
+
+<div id="a8">
+<br>
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/k-o-failure-scenario-hub">
+<img src="http://scp-wiki.wdfiles.com/local--files/spc-169-j/ahab2.jpg">
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/k-o-failure-scenario-hub"   id="s8">
+搜寻、殴打、征服！</a>
+</div>    
+<div class="comeon" style="padding:5%;text-align:left;">    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/k-o-failure-scenario-hub" >
+<br>朋友，你听说过一个都市传说吗？
+<br>传闻世界上有个叫做
+<br><i>Shark Collecting Project</i> 的基金会，
+<br>它们崇拜着牙鲛帝-鲨皇，
+<br>收集并献祭了许多异常鲨鱼，
+<br>行踪隐秘，不知道在密谋着什么。
+<br>它们在夜间捕猎，极其隐秘，而到早上，
+<br>我们只发现墙角陈列着一排无头的尸体，
+<br>水中漂浮着谁也不认识的残肢，
+<br>这些无声冤魂似乎在诉说着SCP的残暴。
+<br>我们SPC，<i>Shark Punch Center</i>，
+<br>殴打鲨鱼中心，誓要彻查他们的邪恶计划，
+<br>无论在九天之上，
+<br>还是在深渊之底，
+<br>我们的铁拳一定会把邪恶的鲨鱼击碎！
+<br>搜寻、殴打、征服！
+<br>我们，需要你的拳头，砸烂它们的鱼头！
+<br>
+</a>
+</div>    
+</div>
+
+<div id="a9">
+<br>
+<div  style="background:url(http://scp-wiki.wdfiles.com/local--files/component%3Ahf-book-left/Herman-Fuller-book-page-loop.png) no-repeat;background－size:cover;">    
+<div class="picture" >
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/wanderers:start" >
+<img src="http://scp-wiki.wdfiles.com/local--files/serpent-s-hand-hub/shlogo3---Cutout2.png" >
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/wanderers:start"  id="s9">
+书籍——
+<br>万事万物的掠影
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/wanderers:start" >
+宇宙之大，总有一个角落，
+<br>能让你安静地读一本好书。
+<br>看看各个世界的风俗，
+<br>细细寻找失落的奇术，
+<br>慢慢品味秘闻，
+<br>这里是，狱卒和焚书人所不能及的避难所，
+<br>这里也是，被放逐者的肉体与灵魂的归宿。
+</a>
+</div>    
+</div>    
+</div>    
+
+<div id="a10">
+<br>
+<div style="background:url(http://scp-wiki.wdfiles.com/local--files/component:hf-poster/Herman-Fuller-background.png) no-repeat;background-size:cover;">
+<div class="title" style="padding:5em 0 0 0;">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/herman-fuller-hub"  id="s10">
+号外！号外！
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/herman-fuller-hub" style="color: Lavender;">
+<br>赫曼·富勒的不安马戏团即将到来！
+<br>女士们先生们，
+<br>快来看世界上最棒的表演！
+<br>魔法？异兽？怪人？[数据删除]？
+<br>这里全都有！
+<br>这次我们为观众带来了新的惊喜，
+<br>大家拭目以待吧！
+<br><br>
+</a>
+</div>    
+</div>    
+</div>    
+
+<br><br>
+
+</div>        
+</div>
+
+<div id="a11">
+<div  style="background:#000;">        
+<br>
+<div class="picture" style="width:100%">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/church-of-the-broken-god-hub">
+<img src="http://scpsandboxcn.wdfiles.com/local--files/muffin/ad12">
+</a>
+</div>
+<div class="title">
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/porn-hub-page id="s11" >
+性感荷官，在线发牌
+</a>
+</div>    
+<div class="comeon" >    
+<a target="_blank" href="http://scp-wiki-cn.wikidot.com/porn-hub-page" >
+<br>及时行乐
+<br>不要等熊猫流泪。
+<br>
+</a>    
+</div>    
+</div>    
+</div>        
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

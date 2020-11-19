@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<!-----此代码由THEBILLITH独家制作。有问题？有建议？把它发在讨论区。希望我会找到时间来修改这个移动端响应式布局。---->
+
+<html>
+<head>
+<body>
+
+<form method="post" name="hiddenstuff" onsubmit="show(); return false;">
+<div style=
+             "margin:0px;padding:0px;position:absolute;width:800;height:400;borderstyle:solid;">
+
+<canvas style="width:800px;height:400px;"></canvas>
+<input id="password" input type="text"
+                       style="position:absolute;width:200;height:100;top:300px;left:410px;color:lawngreen;background-color: #000000;border;border-color:#333333;none;"/>
+<input value="" name="submit"
+                       style="position:absolute;top:300px;left:560px;background:none;border:none;" type="submit">
+</div>
+
+<canvas id="myCanvas" width="800" height="400">>你的浏览器不支持此标签 :((((</canvas>
+
+<script>
+function show(){
+debugger
+  var curr=document.getElementById("menu_element");
+  var passcode = document.getElementById('password').value
+   if(passcode == "saraswati3959"){ alert("请稍候....");
+   window.open("http://scp-wiki-cn.wikidot.com/scp-3959-restricted");    }
+   else { alert("无效输入。请再试一次。"); }
+    }
+
+ var canvas = document.getElementById('myCanvas');
+ var ctx = canvas.getContext('2d');
+ var cursorOn=1,cursX=10, cursY=30;
+ var textColor ="lawngreen";
+ var toggleCursor;
+ var words;
+ var readyTog = 0;
+
+ function display(){
+
+            ctx.fillStyle  = "black";
+            ctx.fillRect(0,0,1200,600);
+            ctx.fillStyle = textColor;
+            ctx.font = "12px Courier New";
+            setTimeout(startUp1, 3000);
+            setTimeout(startUp2, 5000);
+            setTimeout(startUp3, 7000);
+            setTimeout(startUp4, 8000);
+            setTimeout(startUp5, 10000);
+            setTimeout(startUp6, 12000);
+            setTimeout(startUp7, 12000);
+            setTimeout(startUp8, 12000);
+            setTimeout(startUp9, 15000);
+
+}
+
+function startUp1() { type("   基金会定制BIOS平台 v8.00");  newline(2); }
+function startUp2() { type("   按F12进入安装"); newline(4); }
+function startUp3() { type("   请稍候  ... "); }
+function startUp4() { type("   完成"); newline(2); }
+function startUp5() { type("   主处理器: Intel(R) Core(TM) i7-6700K CPU 4.20GHz"); newline(3); }
+function startUp6() { type("   SCP基金会财产。盗窃、修改或破坏该设备 "); newline(1); }
+function startUp7() { type("   受严格禁止。所有内存信息为机密。请会见你的 "); newline(1); }
+function startUp8() { type("   站点主管获取正确安保权限。"); newline(6); }
+function startUp9() { type("   请提交安保权限（5级）:"); toggleCursor = 1; readyTog = 1;}
+
+function newline(n){cursX=10; cursY+=15*n;}
+
+function type(string){ctx.fillText(string,cursX,cursY);cursX+=string.length*8;}
+
+function flash(){
+   if(toggleCursor == 1) {
+   if(cursorOn==1) {ctx.fillStyle = textColor; ctx.fillRect(cursX,cursY-11,7,14);}
+   else {cursorOff();}
+   cursorOn=-cursorOn;
+     }
+}
+
+function cursorOff(){ctx.fillStyle = "black"; ctx.fillRect(cursX,cursY-11,7,14);}
+
+display();
+setInterval('flash()',500);
+
+</script>
+</form>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</head>
+</html>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

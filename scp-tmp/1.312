@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>CSS预览器 - SCP基金会</title>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<meta http-equiv="content-language" content="zh,zh-cn"/>
+<link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+<link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+<link rel="apple-touch-icon" href="/common--images/apple-touch-icon-57x57.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/common--images/apple-touch-icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="/common--images/apple-touch-icon-114x114.png"/>
+<style type="text/css">
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.9em;
+}
+#toolBody {
+  margin: 0 auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+textarea {
+  width: 95%;
+}
+.previewBtn {
+  width: 80%;
+  font-size: 1.75em;
+}
+</style>
+</head>
+<body>
+<div id="toolBody">
+<div style="padding: 0.5em 1em 0;">
+<p>基础版式&#58; <select id="baseTheme" value="1"><option value="0">空白</option><option selected="selected" value="1">SCP Sigma-9</option><option value="2">黑色标记笔</option></select> <button type="button" onclick="setBaseTheme()">应用</button></p>
+<p>设置页面宽度&#58; <input type="number" id="toolWidth" value="" maxlength="4" min="0" step="1" style="width: 5em; text-align: center;" onkeyup="if(event.keyCode==13){setToolWidth()}" /> px <button type="button" onclick="setToolWidth()">应用</button> <button type="button" onclick="resetWidth()">还原</button> &#124; 快捷切换&#58; <button type="button" onclick="setWidth('375px')">375px</button> <button type="button" onclick="setWidth('767px')">767px</button> <button type="button" onclick="setWidth('1040px')">1040px</button></p>
+<p>在这里粘贴你的CSS代码&#58;</p>
+<p style="text-align: center;"><textarea name="cssArea" rows="10" placeholder="请不要加[[module css]]和[[/module]]"></textarea></p>
+<p style="text-align: center;"><button type="button" class="previewBtn" onclick="preview(0)">预览</button></p>
+<p>在这里你可以输入想要调试的部分&#58;</p>
+<p style="text-align: center;"><textarea name="cssArea" rows="10" placeholder="这里的内容拥有更高的优先权"></textarea></p>
+<p style="text-align: center;"><button type="button" class="previewBtn" onclick="preview(1)">预览</button></p>
+<br />
+<p style="text-align: right;"><button type="button" onclick="reloadFrame()">重新载入样本区域</button></p>
+<div id="loadTip"><p style="text-align: center; font-size: 1.5em;">正在载入，请稍候</p></div>
+</div>
+<iframe src="/css-previewer/code/2" allowtransparency="true" frameborder="0" style="height: 1000px; overflow: hidden;" id="toolFrame" onload="loadFrame(this)"></iframe>
+</div>
+<script type="text/javascript">
+var postedData = new Array();
+postedData[0] = "1";
+function packCSS(str){str=str.replace(/\/\*(.|\n)*?\*\//g,"").replace(/\s*([\{\}\:\;\,])\s*/g,"$1").replace(/\,[\s\.\#\d]*\{/g,"{").replace(/;\s*;/g,";").match(/^\s*(\S+(\s+\S+)*)\s*$/);return(str==null)?"":str[1]}
+function postData(mode, str) {
+  if (postedData[mode] != str) {
+    postedData[mode] = str;
+    document.getElementById("toolFrame").contentWindow.postMessage(mode + str, "*");
+  }
+}
+function setBaseTheme() {
+  postData(0, document.getElementById("baseTheme").value);
+}
+function setWidth(w) {
+  document.getElementById("toolBody").style.width = w;
+  document.getElementById("toolFrame").style.width = w;
+  postData(1, w);
+}
+function setToolWidth() {
+  setWidth(Math.max(200, document.getElementById("toolWidth").value) + "px");
+}
+function resetWidth() {
+  setWidth("100%");
+}
+resetWidth();
+function preview(i) {
+  var cssArea = document.getElementsByName("cssArea");
+  postData(i + 2, packCSS(cssArea[i].value));
+}
+function loadFrame(obj) {
+  document.getElementById("loadTip").style.display = "none";
+  postData(1, document.getElementById("toolFrame").style.width);
+}
+function reloadFrame() {
+  postedData[0] = "1";
+  for (var i = 1; i < postedData.length; i++) {
+    postedData[i] = "";
+  }
+  document.getElementById("loadTip").style.display = "block";
+  document.getElementById("toolFrame").src = "/css-previewer/code/2";
+}
+</script>
+</body>
+</html>

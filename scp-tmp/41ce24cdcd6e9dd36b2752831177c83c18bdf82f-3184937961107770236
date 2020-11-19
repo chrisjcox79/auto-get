@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<p id="demo"></p>
+<script>
+var countDownDate = new Date("Sep 29, 2018 15:37:25").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var a = document.getElementById("demo");
+  a.setAttribute('style','font-size: 20px; cursor: pointer; text-align:center;');
+  a.innerHTML = "███天 ██时 " + minutes + "分 " + seconds + "秒 ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "哈，这篇文章已经有一年了啊";
+   }
+}, 1000);
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
