@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body, input, a {
+    font-family: "Arimo", sans-serif;
+  }
+
+  a {
+    color: #933F65;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #933F65;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #ffd1dc;
+    font-size: 1.4em;
+  }
+
+  #result {
+    margin-top: 10px;
+  }
+
+  section {
+    border: 1px dashed #DDD;
+    background-color: #F7F7F7;
+    padding: 1em;
+    margin: 0.4em 0;
+  }
+
+  section .title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  section .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  #powered-by {
+    font-size: 0.8em;
+    text-align: right;
+    color: #333;
+  }
+</style>
+
+<div id="__root"></div>
+
+<script src="https://unpkg.com/mithril@2.0.0-rc.4/mithril.min.js"></script>
+<script>
+var query = '';
+var result = null;
+
+function onInput(e) {
+  query = e.target.value;
+}
+
+function onSubmit(e) {
+  if (query.length === 0) {
+    return;
+  }
+  m.request("https://crom-dev.avn.sh/search", {
+    data: {q: query}
+  }).then(function(data) {
+    result = data;
+  }).catch(function(err) {
+    result = err.response;
+  });
+  return false;
+}
+
+var StatusText = {
+  view: function(vnode) {
+    return m("em", vnode.attrs.text);
+  }
+};
+
+var App = {
+  view: function(vnode) {
+    var resultComponent;
+    if (result && result.status === 404) {
+      resultComponent = m(StatusText, {text: "No Results."});
+    } else if (result && result.status === 500) {
+      resultComponent = m(StatusText, {text: "Server Error."});
+    } else if (result && result.url) {
+      var imageComponent = m("div[class=thumbnail-wrapper]", [
+          result.image && m("img[class=thumbnail]", { src: "https://images.weserv.nl/?url=" + result.image.slice(7) + "&w=800&h=200&t=square&a=entropy" })
+      ]);
+      var title = result.scp_title ? result.title + " — " + result.scp_title : result.title;
+      resultComponent = m("div", [
+        m("section", [
+          imageComponent,
+          m("h1[class=title]", [
+            m("a[target=_blank]", { href: result.url }, title),
+            result.rating !== null && (" (" + (result.rating >= 0 ? "+" : "-") + result.rating + ")")
+          ]),
+          m("p", [
+            "by ",
+            result.authors.map(function (author, i) {
+              var name;
+              if (author.author_page_url) {
+                name = m("a[target=_blank]", { href: author.author_page_url }, author.display_name);
+              } else {
+                name = author.display_name;
+              }
+              return m("span", i == 0 ? name : [", ", name]);
+            })
+          ])
+        ])
+      ]);
+    }
+
+    return m("main", [
+      m("form", { onsubmit: onSubmit }, [
+        m("input[type=text][placeholder=Search...]", { oninput: onInput })
+      ]),
+      m("div[id=result]", [resultComponent]),
+      m("div[id=powered-by]", [
+        m("a[href=http://scpdsandbox.wikidot.com/crom][target=_blank]", "Provided by Crom")
+      ])
+    ])
+  }
+};
+
+var root = document.getElementById('__root');
+m.mount(root, App);
+
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

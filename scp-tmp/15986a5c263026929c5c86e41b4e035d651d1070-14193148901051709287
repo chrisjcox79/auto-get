@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<body onload="getLocation()">
+<div id="location" class="danke agent">
+<p id="IPloacation" ></p>
+<p id="demo"></p>
+<p  id="player"></p>
+</div>
+
+<style>
+.footnoteref{
+color: #FF4644;
+}
+.danke{
+padding: 5px 5px 5px 15px;
+margin-bottom:10px;
+width: 85%;
+font-family: monospace;
+font-size: 1.1em; 
+margin:0 auto;
+}
+
+.agent{
+    background-color: #0e0e0e;
+    border: 3px solid #407840;
+    color: #FFF;
+}
+
+.site{
+background-color:#444400;
+border: 3px solid #AAAA55;
+color: #AAAA77;
+}
+</style>
+
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script src="http://ip.ws.126.net/ipquery"></script>
+
+<script>
+var date;
+today = new Date();
+date =  "根据基金会手册第五条规定，你的位置信息已被锁定。<br /><br />"+"你的登入位置："+(today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日 ";
+document.getElementById("IPloacation").innerHTML= date + " ，"+"位于" + localAddress["province"]  +" "+ "<br />你的IP地址："+ " " +returnCitySN["cip"]+ " " +"已经锁定";
+
+var x=document.getElementById("demo");
+
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML=" ";}
+  }
+function showPosition(position)
+   {
+var EW = position.coords.longitude;
+var NS = position.coords.latitude ;
+if(EW != 0 && NS != 0){
+  x.innerHTML=
+  "你现在的位置是："  +
+"<br /> " +
+  "<br /> 经度: " + EW +
+"<br /> " +
+  "<br /> 纬度: " + NS +
+"<br /> " +
+  "<br /> 精度: " +  position.coords.accuracy    ;
+
+document.getElementById("IPlocation").innerHTML="注意："+"<br />您的地理坐标已经被上传，"+"<br />请等待附近的sdxzdgsrdgvexdf";
+  }
+
+        }  
+function showError(error)
+  {
+  switch(error.code)
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="警告，你具体的地理位置已经被基金会定位，请在原地等候安保人员的安排。"
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="警告，你具体的地理位置已经被基金会定位，请在原地等候安保人员的安排。"
+      break;
+
+    case error.TIMEOUT:
+      x.innerHTML="警告，你具体的地理位置已经被基金会定位，请在原地等候安保人员的安排。"
+      break;
+
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="警告，你具体的地理位置已经被基金会定位，请在原地等候安保人员的安排。"
+      break;
+    }
+  }
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
