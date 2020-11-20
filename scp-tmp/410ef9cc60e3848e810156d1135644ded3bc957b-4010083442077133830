@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<style type="text/css">
+   @import url(http://d3g0gp89917ko0.cloudfront.net/v--2f62f70fa3c2/common--theme/base/css/style.css);
+                    @import url(http://scp-wiki-cn.wikidot.com/component:theme/code/1);
+</style>
+ <script>  
+function showTime()
+{
+var enabled = 0; 
+today = new Date();
+var date;
+var d=new Date()    
+var month=new Array(12)
+month[0]="Jan"
+month[1]="Feb"
+month[2]="Mar"
+month[3]="Apr"
+month[4]="May"
+month[5]="Jun"
+month[6]="Jul"
+month[7]="Aug"
+month[8]="Sep"
+month[9]="Oct"
+month[10]="Nov"
+month[11]="Dec"
+var sss = month[d.getMonth()]
+var yr = (today.getFullYear() )
+var day = (today.getDate() - 1)
+var hrs =(today.getHours());
+var min = (today.getMinutes()); 
+
+if (day < 1 ){
+day = 28;
+}
+
+if (hrs < 10 ){
+var hrs = "0" + hrs;
+}
+
+if (min < 10 ){
+var min = "0" + min;
+}
+
+date ="【" + day + " "+ sss + " "+ yr +","+ " " + hrs  +":" + min ;
+document.getElementById("timer").innerHTML= date;
+}
+
+</script>
+</head>
+
+<body  onload="showTime()" >
+<h4 id="timer">xxx</h4>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

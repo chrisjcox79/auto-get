@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>伙计们，对SCP基金会要放轻松哦 - SCP基金会</title>
+    <title>Nicholas - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "keeping-it-chill";
-        OZONE.request.timestamp = 1605884023;
+        WIKIREQUEST.info.requestPageName = "nicholas";
+        OZONE.request.timestamp = 1605902755;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "keeping-it-chill";
-        WIKIREQUEST.info.pageId = 986073983;
+                WIKIREQUEST.info.pageUnixName = "nicholas";
+        WIKIREQUEST.info.pageId = 1305828980;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,6 +65,9 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
+
+
         
                 
         /* theme */
@@ -117,17 +120,99 @@
     </script>
         
 <style>
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+div.terminal{
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #131;
+/* 终端上方的黑色阴影 */
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    display: block;
+/* 终端周围的阴影 */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* 防止扫描条产生滚动条 */
+    overflow:hidden;
+}
+div.terminal blockquote {
+    background-color: black;
+    border: double 3px #80FF80
+}
+div.scanline{
+    margin-top: -40%;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    pointer-events: none;
+/* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* 你可能需要修改这个。如果扫描条走得太快了，添加5秒。 */
+    animation: scan 12s linear 0s infinite; /* 同上 */
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+}
+
+div.text{
+    color: rgba(128,255,128,0.8);
+    padding-left: 2em;
+    padding-top: 40%;
+    font-family: monospace;
+    font-size: 1.2em;
+    }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 你可能需要根据你终端的长短修改这个。如果扫描条走到一半停止了，增大第二个数字。 */
+}
+
+@keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 同上。 */
+}
+
+div.text a {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
+}
+div.text a.newpage {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
+}
+div.text a:hover {
+    color: #131;
+    text-decoration: underline;
+    background-color: #80FF80;
+    padding: 1px;
+}
+div.text a:hover::before{
+content: "> ";
+}
 </style>
 <style>
-@import url("http://scp-wiki-cn.wikidot.com/theme:expose/code/1");
+#u-start, .textchange div.sitemember:nth-child(2) {display:none;}.type-wrap-wrapper {position: relative;text-align: left;}.type-wrapper {background: #555;}.typearea {color: lime; font-family: "Courier";font-size: 1.2em;margin: 10px 0 0 10px;white-space: nowrap;overflow: hidden;width: 0;}#u-start:target ~ .typearea {width: 100%;animation: type 4s steps(60, end); }.typearea a{color: lime;text-decoration: none;}.blink {animation: blink 1s infinite;}@keyframes type{ from { width: 0; } } @keyframes blink{to{opacity: .0;}}.buttonwrapper {text-align: center;}.likebutton {padding: 0.1em 0.5em;text-decoration: none;font-size: 1.3em;background-color: #F4F4F4;border: 1px solid #AAA;color: #000;}.likebutton:hover {background-color: #DDD;color: #000;border: 1px solid #0098b3;}
 </style>
 <style>
-div#extra-div-1,div#extra-div-2{display:none;}
+.email-example .collapsible-block-folded a.collapsible-block-link {
+    animation: blink 0.8s ease-in-out infinite alternate;
+}
+@keyframes blink {
+    0% { color: transparent; }
+    50%, 100% { color: #b01; }
+}
+.email {border: solid 2px #000000; width: 88%; padding: 1px 15px; margin: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.5)}
+.email-example a.collapsible-block-link {font-weight: bold;}
+.tofrom {margin-left: 10px; margin-top: 5px; padding: 1px 15px; border-left: solid 3px maroon}
+</style>
+<style>
+.cdver2 {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.0%22%20width%3D%22600%22%20height%3D%22100%22%20viewBox%3D%220%200%20600%20100%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%3E%20%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%2250%25%22%20y%3D%2230%22%20text-anchor%3D%22middle%22%20font-size%3D%2221%22%20font-family%3D%22'Trebuchet%20MS'%2C%20Trebuchet%2C%20Verdana%2C%20Arial%2C%20Helvetica%22%20fill%3D%22%23901%22%20font-weight%3D%22bold%22%3EOh%20no!%3C%2Ftext%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%2250%25%22%20y%3D%2245%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20font-family%3D%22'Trebuchet%20MS'%2C%20Trebuchet%2C%20Verdana%2C%20Arial%2C%20Helvetica%22%20fill%3D%22%23444%22%20font-weight%3D%22normal%22%3EPlease%20use%20an%20encoder%3B%20maybe%20the%20module%20is%20inserted%20characters%20without%20alphabets%2C%20numbers%20or%20a%20few%20symbols.%3C%2Ftext%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%2250%25%22%20y%3D%2260%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20font-family%3D%22'Trebuchet%20MS'%2C%20Trebuchet%2C%20Verdana%2C%20Arial%2C%20Helvetica%22%20fill%3D%22%23444%22%20font-weight%3D%22normal%22%3EThe%20encoder%20will%20be%20found%20in%20SCP%20Style%20Resource.%3C%2Ftext%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%2250%25%22%20y%3D%2275%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20font-family%3D%22'Trebuchet%20MS'%2C%20Trebuchet%2C%20Verdana%2C%20Arial%2C%20Helvetica%22%20fill%3D%22%23444%22%20font-weight%3D%22normal%22%3E%3Ctspan%20font-weight%3D%22bold%22%3ETips%3A%3C%2Ftspan%3E%20You%20can't%20use%20the%20following%20symbols%20without%20encoding%3A%3C%2Ftext%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%2250%25%22%20y%3D%2290%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20font-family%3D%22'Trebuchet%20MS'%2C%20Trebuchet%2C%20Verdana%2C%20Arial%2C%20Helvetica%22%20fill%3D%22%23444%22%20font-weight%3D%22normal%22%3E%25%20%22%20%7B%20%7D%20%7C%20%5C%20%2F%20%5E%20%5B%20%5D%20%60%20%26lt%3B%20%26gt%3B%20%40%20%23%20%2C%20%3D%20%3F%20*%20%2B%20%2C%20%3B%3C%2Ftext%3E%20%3C%2Fsvg%3E");
+}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -474,7 +559,7 @@ div#extra-div-1,div#extra-div-2{display:none;}
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=keeping-it-chill" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=nicholas" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -496,14 +581,10 @@ div#extra-div-1,div#extra-div-2{display:none;}
                     
                     
                         <div id="page-title">
-                            伙计们，对SCP基金会要放轻松哦
+                            Nicholas
                         </div>
                     
 
-                    
-                        <div id="breadcrumbs">
-                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/broken-masquerade-hub">曝光中心</a> &raquo; 伙计们，对SCP基金会要放轻松哦
-                        </div>
                     
 
                     
@@ -516,105 +597,124 @@ div#extra-div-1,div#extra-div-2{display:none;}
 
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" style="display: none;" name="styleFrame"></iframe></p>
 
 
 
 
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">-14</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div class="cn cdver2" style="width: 100%;height: 0;padding-bottom: calc(50% / 3);background-position: center; background-size: contain; background-repeat: no-repeat; background-image: url(&quot;data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22100%22%20viewBox%3D%220%200%20600%20100%22%3E%3Cdefs%3E%3Cstyle%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3Erect%5Bfill*%3D%22b01%22%5D%20%7Banimation%3A%20blink%203s%20ease-in-out%20infinite%3B%7D%40keyframes%20blink%20%7B0%25%2C20%25%7Bfill-opacity%3A%201%3B%7D50%25%7Bfill-opacity%3A%200.75%3B%7D80%25%2C100%25%20%7Bfill-opacity%3A%201%3B%7D%7D%3C%2Fstyle%3E%3Cfilter%20id%3D%22shadow%22%20width%3D%22200%25%22%20height%3D%22200%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%223%22%20result%3D%22shadow%22%2F%3E%3CfeOffset%20dx%3D%220%22%20dy%3D%220%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%3E%3Ctext%20x%3D%2210%22%20y%3D%2240%22%20font-size%3D%2216%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%EF%BC%9A%3C%2Ftspan%3ESCP-CN-1767%3C%2Ftext%3E%3Ctext%20x%3D%2210%22%20y%3D%2270%22%20font-size%3D%2216%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E9%A1%B9%E7%9B%AE%E7%AD%89%E7%BA%A7%EF%BC%9A%3C%2Ftspan%3EKeter%3C%2Ftext%3E%3C%2Fg%3E%3Cg%3E%3Crect%20x%3D%22220%22%20y%3D%2225%22%20width%3D%222%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23333%22%2F%3E%3Ctext%20x%3D%22230%22%20y%3D%2232%22%20font-size%3D%229%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E8%B4%9F%E8%B4%A3%E7%AB%99%E7%82%B9%EF%BC%9A%3C%2Ftspan%3ESite-CN-198%3C%2Ftext%3E%3Ctext%20x%3D%22230%22%20y%3D%2246%22%20font-size%3D%229%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E9%A1%B9%E7%9B%AE%E4%B8%BB%E7%AE%A1%EF%BC%9A%3C%2Ftspan%3ENicholas·Kenwei%3C%2Ftext%3E%3Ctext%20x%3D%22230%22%20y%3D%2260%22%20font-size%3D%229%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E9%A6%96%E5%B8%AD%E7%A0%94%E7%A9%B6%E5%91%98%EF%BC%9A%3C%2Ftspan%3EDr.Nicholas%3C%2Ftext%3E%3Ctext%20x%3D%22230%22%20y%3D%2274%22%20font-size%3D%229%22%20font-family%3D%22Arial%2Csans-serif%22%3E%3Ctspan%20font-weight%3D%22bold%22%3E%E6%8C%87%E6%B4%BE%E7%89%B9%E9%81%A3%E9%98%9F%EF%BC%9A%3C%2Ftspan%3EMTF-Σ-1“Montezuma”%3C%2Ftext%3E%3Crect%20x%3D%22488%22%20y%3D%2225%22%20width%3D%222%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23333%22%2F%3E%3C%2Fg%3E%3Cg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20transform%3D%22skewX(-15)%22%3E%3Crect%20x%3D%22523%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3Crect%20x%3D%22535%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3Crect%20x%3D%22547%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3Crect%20x%3D%22559%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3Crect%20x%3D%22571%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3Crect%20x%3D%22583%22%20y%3D%2225%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222%22%20ry%3D%222%22%20fill%3D%22%23b01%22%2F%3E%3C%2Fg%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%22535%22%20y%3D%2270%22%20font-size%3D%2216%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23aaa%22%20filter%3D%22url(%23shadow)%22%3ELv.%3Ctspan%20font-size%3D%2225%22%3E6%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%22535%22%20y%3D%2270%22%20font-size%3D%2216%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23fff%22%3ELv.%3Ctspan%20font-size%3D%2225%22%3E6%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fsvg%3E&quot;);"></div>
 
-<div class="scp-image-block block-center" style="width:100%;"><img src="http://scp-wiki.wdfiles.com/local--files/keeping-it-chill/brickround.png" style="width:100%;" alt="brickround.png" class="image" /></div>
+
+
+<div style="border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;">
+<div style="text-align: center;">
+<h1 id="toc0"><span style="font-size:larger;"><span><strong><span style="color: black">警告</span></strong></span></span></h1>
+<p><strong><span style="color: black">由于文档撰写者Nicholas在短时间内仍有另一间要事需要进行，该文档不会完全以正规的基金会指定标准用语进行描述，大部分描述方式更偏向于第一人称的阶段性直述，现已将该消息提前交付于O5议会进行审批</span></strong></p>
+<p><span style="font-size:large;"><strong><span style="color: black">&#8212;Anier·Sastina</span></strong></span></p>
+</div>
+</div>
+<p><a style="font-size: 18px; color:white ; text-shadow: 1px 3px 1px rgba(0,0,0,0.3); text-decoration: none;" href="http://scp-wiki-cn.wikidot.com/niveaux-de-menace-des-objets-scp" target="_blank"><span style="display: inline-block; width: 100%; background-color: red; text-align: center; border: 1px none #000; margin: 1px; padding-top: 8px; padding-bottom: 8px;"><strong>威胁等级：</strong>红色</span></a></p>
+<div class="wiki-note">
+<p><span style="font-size:80%;"><strong>”你应该知道，没有什么比那个北极光行动的计划更加重要，就目前来说“</strong></span></p>
+</div>
+<div style="text-align: center;">
+<h2 id="toc1"><span><strong>正在进行身份验证</strong></span></h2>
+<h2 id="toc2"><span>您即将阅览Dr.Nicholas的邮件</span></h2>
+</div>
+<div class="type-wrap-wrapper">
+<div class="type-wrapper">
+<div id="u-start"></div>
+<div class="typearea">
+<div class="textchange">
+
+<div class="sitemember">
+<p>我无法识别你的Wikidot账号。<span class="blink">|</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="buttonwrapper">
+<p><a class="likebutton" href="#u-start">点击验证</a></p>
+</div>
+</div>
+<div style="text-align: center;">
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc3"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc4"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc5"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc6"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc7"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<h1 id="toc8"><span>・</span></h1>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+</div>
+<div class="email-example">
+<div style="text-align: center;">
 <hr />
-<p><strong>Henry Rouslin博士：</strong> 好了，Michael，这是一段我们为公众制作的视频……属于公众形象恢复运动的一部分。 现在，我不得不提醒您，这段视频它……嗯嗯……不是很容易理解。</p>
-<p><strong>Michael Handler：</strong> 等等，你什么意思？对公众来说它已经很棒了，Henry，所以它应该很好理解才对啊。</p>
-<p><strong>Rouslin博士：</strong> 嗯，我们希望让它变得面向……更年轻的观众，所以我们试着把它变得……更酷些。例如带着“模因”和“俚语”之类的东西。</p>
-<p><strong>Handler先生：</strong> 哦，天啊，我明白了，但是你要知道，我对这一代人的了解并不比其他任何人多。</p>
-<p><strong>Rouslin博士：</strong> 好吧，您有我办公室的号码，如果有什么状况，随时电话通知我好吗？</p>
-<p><strong>Handler先生：</strong> 好的，好的，回见。</p>
-<p><em>Handler先生走回他的公众形象恢复（PR）部门办公室，在自己的办公桌后坐下。他小心翼翼地将Rouslin博士给他的闪存驱动器插入电脑，然后点击安装其中的内容。一个名为KICWYHDATSCPF.mp4的单独文件出现在他的桌面上。他长舒口气，点开它，视频开始了。</em></p>
-<div style="background: gray; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<div style="background: white; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<p><em>随着Rick Astley制作的名曲 &quot;Never Gonna Give You Up&quot; 的器乐版开始播放，动态的SCP 徽标镶入屏幕中心。徽标周围闪烁着一圈文字：“伙计们，对SCP基金会要保持冷静哦”。徽标界面逐渐淡去，某处室外景观出现在屏幕上，背景里是满布涂鸦的墙体。两名男子分别从屏幕的一侧进入画面，他们穿着宽松的实验袍和花花绿绿的T恤衫，还有运动短裤、耐克袜子和运动鞋，不过最显眼的还是他们头顶上帽檐朝后的普通蓝色棒球帽。</em></p>
-<p><strong>Chandler Wentworth博士：</strong>哇撒，兄弟是来开趴的吗？我是基金会研究员，查兹-温沃思（Chaz Wentworth）哟！</p>
-<p><strong>站点主管Douglas Robertson：</strong> 我是他的好哥们鲍比-道格（Bobby-Doug）哦！我们俩一起……</p>
-<p><em>Robertson主管和Wentworth博士相互挽着手臂，彼此依偎，面朝摄像机，随后各自看向屏幕两侧。</em></p>
-<p><strong>俩人一起：</strong> <span class="ruby">少年超酷偷窥组<span class="rt">The &quot;Supah Cool Peeps&quot;</span></span>耶！！！</p>
-<p><em>此时可以听见卡通版的“啵嘤”音效。</em></p>
-<p><strong>Wentworth博士：</strong> 今天，鲍比-道格和我想跟各位聊聊关于某个聚光灯下著名组织的幕后故事，这个组织可以确保每个人都过上正常生活哟！</p>
-<p><strong>Robertson主管：</strong> 好主意，查兹！一大堆人一直说着有关SCP的坏话，这让我们可难过呢，不过我们要向各位澄清：那些都不过是坨讨人厌的胡扯罢了！事实上，让我们在这透露给大家一个秘密吧：SCP基金会阻止了超过9000次世界末日喔！</p>
-<p><strong>Wentworth博士：</strong> 有这么酷毙了吗？让我想起……</p>
-<p><strong>俩人一起：</strong> 打它，啊~哒~哒~哒~哒……哒啪！</p>
-<p><em>Robertson主管和Wentworth博士各自做出了一段脑残风的动作来模仿被称为“哒哒”的流行舞步，俩人将手掌展平指向地下，又向同一个方向伸直胳膊，以便让脸蛋和外侧腋窝亲密接触。</em></p>
-<p><strong>Robertson主管：</strong> <span class="ruby">欧耶<span class="rt">Yeet</span></span>！</p>
-<p><strong>Wentworth博士：</strong> <span class="ruby">欧耶<span class="rt">Yeet</span></span>！</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">访问邮件？一&nbsp;(1)&nbsp;封新邮件！</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">页面折叠</a></div>
+<div class="collapsible-block-content">
+<div style="text-align: left;">
+<div class="email">
+<div class="tofrom">
+<p><strong>至：</strong>Anier・Sastina<br />
+<strong>自：</strong>Nicholas・Kenwei<br />
+<strong>主题：</strong>问题回应</p>
+</div>
+<hr />
+<p>这东西好像一直有某种干扰性，我希望快速得到确认，暂时绕过O5议会进行处理，我会提前准备好行动的所需用品立即动身，这篇文档会在我离开之后的一个星期内自动上传，我们的邮件记录我会在文档描述开始前进行添加，这是我们目前唯一的待审批证明。</p>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span>
+<div class="email">
+<div class="tofrom">
+<p><strong>至：</strong>Nicholas・Kenwei<br />
+<strong>自：</strong>Anier・Sastina<br />
+<strong>主题：</strong>提醒通知</p>
+</div>
+<hr />
+<p>Dr.Nicholas,介于我们无法确定这个异常项目是否存在威胁性，暂时无法确定O5议会是否会进行审批目前可以确定的是你当前使用的描述方式确实存在一定的问题，我们不得不怀疑你现有的技术，但是介于北极光提案的行动需要立即动身，暂时允许保留最原始版本。</p>
 </div>
 </div>
-<p><em>Handler先生暂停了视频。让转椅朝向电话，拨通了Rouslin博士办公室的号码。在Rouslin博士接听前，电话响了三声。</em></p>
-<p><strong>Rouslin博士：</strong> 您好，这里是Henry Rouslin博士， Site-96的常规研究员兼收容专家。</p>
-<p><strong>Handler先生：</strong> 嗨Henry，我是Michael。</p>
-<p><strong>Rouslin博士：</strong> 哦，嘿Michael，你看过那段视频了吗？</p>
-<p><strong>Handler先生：</strong>恰好我正在看呢。嗯，啊哈哈，这是什么鬼，某种恶搞吗？这简直像是某种广播剧之类的东西，现在他们竟然高呼着“欧耶”还是其他什么鬼。 这是个骂人的词吗？</p>
-<p><strong>Rouslin博士：</strong> 我想……不是吧。让我查查看。</p>
-<p><em>可以听到Rouslin博士在键盘上敲击的声音。</em></p>
-<p><strong>Rouslin博士：</strong> 好了，我找到了。它的意思是“高速丢出一件物品”。</p>
-<p><strong>Handler先生：</strong>什么？但是Chandler和Douglass看起来只是……随意地说出，没有任何上下文。如果我们将视频发给公众，语义必须是连贯的！</p>
-<p><strong>Rouslin博士：</strong> 那么，您知道我们的实习生Barry吗？他才19岁，他知道自己在干什么，他说这些孩子们整天都会说“欧耶”这个词，单独这个词。所以……您还想知道些别的吗？</p>
-<p><strong>Handler先生：</strong> 好吧，Henry，我相信你。改天再聊。</p>
-<p><strong>Rouslin博士：</strong> 再见，Michael。</p>
-<p><em>Handler先生挂断电话，继续看视频。</em></p>
-<div style="background: gray; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<div style="background: white; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<p><strong>Robertson主管：</strong> 认真地说，队友。SCP基金会试图超努力地收容危险和怪异的玩意来让地球上的每个人都更安全。</p>
-<p><strong>Wentworth博士：</strong> 当然啦，这并不是说怪异的东西都是坏家伙，但我们都不希望异常事件发生在自己身边，对吧各位？</p>
-<p><strong>Robertson主管：</strong>哇哦，查兹，超给力地使用“异常”这个词。大家知道“异常”是啥意思咩？本来我想自己跟各位讲的，不过我找到了个超棒的朋友，愿意替我跟大家说！ 来吧，999！</p>
-<p><em>Rouslin博士穿上了让人联想起 <a href="/scp-999">SCP-999</a>的大型泡沫COS服，在屏幕上晃动起来。</em></p>
-<p><strong>Rouslin博士：</strong> 嘿呀孩子们，偶是SCP-999，偶最喜欢助人为乐啦！偶今天要交给大家一个大词<span class="ruby">“异常”<span class="rt">&quot;Anomalous&quot;</span></span>，它的拼法是A-N-O-M-A-L-O-U-S！现在，一个不按套路出牌的罪犯会被认为是异常的吗？当然啦！不过嘛，偶们用它来表示有些不同的东西。 在这儿，“异常”这词就是指那些不讲理的家伙。就像伦家！偶是个异常，因为偶是一团鲜活的史莱姆！</p>
-<p><strong>Wentworth博士：</strong> 哇塞，这是个超奇妙的描述啊， 999！非常感谢你的光临！</p>
-<p><strong>Rouslin博士：</strong> 哎哎，是伦家的荣幸啦Chand……偶是说，呃，查兹！</p>
-<p><em>Rouslin博士转身，慢慢离开屏幕。在这过程中，大量泡沫从他的COS服上脱落下来，洒在地板上。伴随着卡通音效“邦咔”声，他弯下腰想尽快脱下衣服，结果向前一跤摔倒了，“邦咔”声再次响起。Robertson主管扶他站起来，将他推到了镜头外。</em></p>
 </div>
 </div>
-<p><em>Handler先生暂停了视频，把额头埋在双手中，进行了一连串深呼吸。大概过了一分多钟，他坐起身，继续播放视频。</em></p>
-<div style="background: gray; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<div style="background: white; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<p><strong>Robertson主管：</strong> 现在大家知道异常的含义了吧，那让我们简单聊聊这些异常在基金会里的情况吧，还有我们的工作为何如此野蛮！我是说，我们可以收容<span class="ruby">瘦长鬼影 <span class="rt">slender man</span></span>，我们可以收容<span class="ruby">舞者柯西塔<span class="rt">Dame Tu Cosita</span></span>，甚至我们可以收容<span class="ruby">大蠢兔<span class="rt">Big Chungus</span></span>！查兹，你最最喜欢的SCP是哪个呢？</p>
-<p><strong>Wentworth博士：</strong> 鲍比，我就知道你会问这个。上周四之前，我每月遭遇一回<a href="http://scp-wiki-cn.wikidot.com/scp-4252" target="_blank">SCP-4252</a>，他是Site-96的异常居民之一。 SCP-4252的这个古怪房间里面满是——简直令人难以置信——烤豆子！每个月房间里都会被烤豆子填满，然后我们用召唤出一个会魔法的豆子小妖精！那么，有兴趣了解最疯狂的部分吗？他把那些豆子一颗不剩都吃光了！除了<span class="ruby">乱舞的放荡模因（r/dankmemes）<span class="rt">&quot;are slash dankmeme&quot;</span></span>，我不知道还能用什么词来形容这事！</p>
-<p><strong>Robertson主管：</strong> 啊，这很火爆啊，查兹。火力全开啊。但不幸的是，亲们，我们收容的很多异常都是另一回事，那些让我们感觉<span class="ruby">“我不喜欢”<span class="rt">&quot;no me gusta&quot;</span></span>的玩意。我们最重要的工作是保护大家免受伤害，可惜出于某些原因，持偏见的反对者们总会说我们很糟，认为我们的团体早该自我了断，并且到处骚扰我们，令我们感觉像给葡萄剥皮一样小心翼翼。</p>
-<p><strong>Wentworth博士：</strong>但是伙计们，是这样的。 实际上，我们为全人类做过很多伟大的事情。我们<a href="http://scp-wiki-cn.wikidot.com/scp-4946" target="_blank">根除了痢疾</a>， <a href="http://scp-wiki-cn.wikidot.com/scp-4589" target="_blank">避免了真菌的灾难性蔓延</a>，我们关押了不计其数的怪兽——那些没有我们的努力就会把大家都做成寿司吃掉的恶棍们！</p>
-<p><strong>Robertson主管：</strong> 现在，我想是接下来该是重头戏了。不，这不是一场<span class="ruby">堡垒之夜<span class="rt">fortnite</span></span>。这是我们的D级兄弟弟弟们！在SCP基金会中，我们得到了D级人员们超给力的帮助，他们进行测试来帮我们了解各种生物和场所的异常效应。实际上，我们请到了大家想见的人。快出来吧！</p>
-<p><em>一个穿着橙色连体服的人走进屏幕，站在Robertson主管和Wentworth博士中间。他显得非常不安。</em></p>
-<p><strong>D-13745：</strong>呃，嗨，我是D-13745，不过大家可以叫我德里克（Derek），我，嗯嗯，曾经是个坏人，我偷了好多东西，在逃跑时又弄伤了一票人，但最后还是被抓住了。在SCP基金会赐给我工作前，我已在监狱里呆了四年。我到这俩星期了，而且呃……这里比监狱好多了。除了<a href="http://scp-wiki-cn.wikidot.com/scp-2496" target="_blank">参加秘密科学测试</a>和<a href="http://scp-wiki-cn.wikidot.com/scp-4281" target="_blank">跟浴室里的老兄聊天</a>外，我感觉很冷静。</p>
-<p><strong>Wentworth博士：</strong> D-13745，你感觉自己成为D级人员后的生活更幸福了吗？</p>
-<p><strong>D-13745：</strong> 我的意思是，我猜，您知道的，尽管我依然没有自由，但感觉自己的生活更有盼头了。不是吗？</p>
-<p><strong>Robertson主管：</strong> 太棒了，感谢在<span class="ruby">网飞和静静<span class="rt">Netflix and Chilling</span></span>上与我们相伴， D-13745， 你做得太棒了！</p>
-<p><strong>D-13745：</strong> 是的，无论如何都谢谢。</p>
-<p><em>D-13745 离开画面，同时，听到一个先上扬又下降的汽笛声。</em></p>
 </div>
 </div>
-<p><em>Handler先生暂停了视频。他打开网络浏览器，在搜索栏键入&quot;Netflix and Chill&quot; ，经过二十秒的加载，关于该词的定义出现在浏览器顶部。</em></p>
+</div>
+<div style="text-align: center;">
+<h2 id="toc9"><span><strong>为保证当前环境的安全性，请重新进行一次登陆</strong></span></h2>
+</div>
+<div class="terminal">
+<div class="scanline"></div>
+<div class="text">
+<div style="text-align: center;">
+<p><span style="font-size:150%;">Site-CN-198信息处理中心</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">------</span><br />
+已通过授权，允许登陆，欢迎访问<br />
+<span style="white-space: pre-wrap;">------</span></p>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span>
+<div style="text-align: center;">
 <blockquote>
-<p><span style="font-size:120%;"><tt>&quot;<strong>Netflix and chill</strong>&quot; 是一个互联网短语，既可以作为一起观看<span class="ruby"><strong>网飞</strong><span class="rt"><strong>Netflix</strong></span></span>视频的邀请，也可以用作对性活动的委婉说法，既可以用在浪漫伴侣间的相互邀请，也可以用在随机性行为或性团体的邀请中。</tt></span></p>
+<p>就目前来看，一切还是可控的，欢迎查看。<br />
+<a href="http://scp-wiki-cn.wikidot.com/Nicholas/offset/1">原始文件01</a></p>
 </blockquote>
-<p><em>Handler先生不满地摇摇头。继续播放视频前，他在便笺上写了些笔记。</em></p>
-<div style="background: gray; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<div style="background: white; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
-<p><strong>Robertson主管：</strong> 那啥叫“超给力的”呢？SCP基金会对D级人员的待遇非常高！只要他们愿意协助一些科学实验，我们就会把他们从监狱里挽救出来，让他们一起待在我们身边。</p>
-<p><strong>Wentworth博士：</strong> 是的，有些时候这类实验确实很危险，但是我们做这些只是为了尽可能长久的让大家远离地球上那些惊险刺激事物的侵扰，而且如果没有这些D级朋友来帮助我们的话，我们很可能没办法确保每个人的安全！</p>
-<p><em>一段1940年代卡通片 &quot;Aooga&quot;的背景音乐响起。</em></p>
-<p><strong>Robertson主管：</strong> 好啦，亲们，这就是我们要给大家说的全部了。但我希望各位小哥哥小姐姐们能牢牢记住我们今天聊的每一句话。请记住，只要大家专心致志地做好自己的工作，你们一样能挽救世界！</p>
-<p><em>Wentworth博士和 Robertson主管的身影在屏幕上摇曳，镜头渐渐变暗。</em></p>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
 </div>
 </div>
-<p><em>Handler先生花了些时间去消化刚刚看过的东西。他把手伸向电话，却又停在半空中。转向自己的电脑，他打开电子邮件并查了一遍该宣传项目的截止日期。</em></p>
-<blockquote>
-<p><span style="font-size:120%;"><tt>5月21日，星期二，下午4:00。</tt></span></p>
-</blockquote>
-<p><em>Handler先生看了眼屏幕右下角。</em></p>
-<blockquote>
-<p><span style="font-size:120%;"><tt>2019/5/21 下午</tt><br />
-<tt>3:42</tt></span></p>
-</blockquote>
-<p><br />
-<em>Handler先生叹了口气。弯腰从办公桌下掏出半瓶苏格兰威士忌和一个高脚杯，给自己斟了一杯酒，一饮而尽，然后按下“发送”键。</em></p>
 
                     </div>
 
@@ -643,7 +743,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%9B%9D%E5%85%89#pages">曝光</a>
+                                <a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%BE%85%E5%88%A0%E9%99%A4#pages">待删除</a>
                             </span>
                         </div>
                     
@@ -651,12 +751,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 12, 最后编辑于: <span class="odate time_1601300793 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">28 Sep 2020 13:46</span></div>
+                            <div id="page-info">页面版本: 5, 最后编辑于: <span class="odate time_1605629814 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">17 Nov 2020 16:16</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+20</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">-14</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-12910581/keeping-it-chill" class="btn btn-default" id="discuss-button">讨论 (12)</a>
+<a href="/forum/t-13864934/nicholas" class="btn btn-default" id="discuss-button">讨论 (2)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -723,21 +823,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://autorytet-rpc.pl">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/autorytet-rpc.pl/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.wikiwealth.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.wikiwealth.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://autorytet-rpc.pl">Autorytet RPC</a></h3>
+            <h3><a target="_blank" href="http://www.wikiwealth.com">WikiWealth</a></h3>
             <div class="desc">          
-              Badania, Ochrona, Przechowywanie
+              Stock, ETF and Mutual Fund Ratings | Commodity, Currency Research
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chessvariants.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chessvariants.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.nycmush.net">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.nycmush.net/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chessvariants.wikidot.com">Chess Variants Wiki</a></h3>
+            <h3><a target="_blank" href="http://www.nycmush.net">NYC: Veil of Shadows</a></h3>
             <div class="desc">          
               
             </div>
@@ -745,23 +845,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://soulslore.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/soulslore.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://psychgradsearch.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/psychgradsearch.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://soulslore.wikidot.com">Souls Lore</a></h3>
+            <h3><a target="_blank" href="http://psychgradsearch.wikidot.com">Psychology Grad School Wiki</a></h3>
             <div class="desc">          
-              
+              for prospective psych grad students
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://dndis.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/dndis.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://level1wiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/level1wiki.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://dndis.wikidot.com">Dungeons &amp; Discourse</a></h3>
+            <h3><a target="_blank" href="http://level1wiki.wikidot.com">Level 1 Wiki</a></h3>
             <div class="desc">          
-              Gamma Edition
+              
             </div>
           </div>
         </div>
