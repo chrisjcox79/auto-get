@@ -54,7 +54,7 @@ googletag.enableServices();
         WIKIREQUEST.info.categoryId = 366566;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "more-of-the-world-and-its-likeness";
-        OZONE.request.timestamp = 1605967818;
+        OZONE.request.timestamp = 1605989074;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "more-of-the-world-and-its-likeness";
@@ -150,80 +150,28 @@ googletag.enableServices();
     </script>
         
 <style>
-.containercontainer {position: relative;width: auto;height: auto;border: 2px solid #666;background: #141212;color: #3F3;margin-top: 1em;margin-bottom: 1em;}.containercontainer .container .overlay {background: rgba(51, 255, 51, 0.9);color: #121010;position: absolute;width: auto;height: 50px;top: 0;right: 0;bottom: 0;left: 0;margin: auto;line-height: 50px;display: inline;vertical-align: middle;text-align: center;font-family: Courier New;font-size: 30px;letter-spacing: 5px;font-weight: bolder;z-index: 3;animation: overlay-anim 10s linear;animation-fill-mode: forwards;animation-iteration-count: infinite;}.overlayback {background: rgba(187, 187, 187, 0.5);z-index: 3;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: auto;height: auto;animation: overlay-anim 10s linear;animation-fill-mode: forwards;animation-iteration-count: infinite;}.containercontainer .container {text-align: center;width: inherit;height: inherit;position: relative;overflow: hidden;}.containercontainer .container::after {content: " ";display: block;position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: rgba(21, 19, 19, 0.2);opacity: 0;z-index: 2;animation: flicker 0.15s infinite;}.containercontainer .container::before {content: " ";display: block;position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: linear-gradient(rgba(18, 16, 16, 0.03) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.22), rgba(0, 255, 0, 0.11), rgba(0, 0, 255, 0.22));z-index: 2;background-size: 100% 2px, 3px 100%;}.no-unfold {text-align: center;}.container h1,.container h2,.container h3,.container h5,.container h6 {color: #3F3;}.container hr {border-top: 1px dotted #3F3;border-bottom: none;}.container hr {border-top: 1px solid #3F3;border-bottom: 1px solid #3F3;color: transparent;background-color: transparent;}.container hr:after {display: block;margin-top: 2px;border-top: 1px solid #3F3;border-bottom: 1px solid #3F3;}.blinkbar {animation: blink 1.5s infinite; letter-spacing: -0.13em;}@keyframes blink{to{opacity: .0;}}@keyframes flicker {0% {opacity: 0.9890; }5% {opacity: 0.5842; }10% {opacity: 0.9865; }15% {opacity: 0.0412; }20% {opacity: 0.6255; }25% {opacity: 0.3157; }30% {opacity: 0.7328; }35% {opacity: 0.4654; }40% {opacity: 0.9128; }45% {opacity: 0.2449; }50% {opacity: 0.5485; }55% {opacity: 0.6438; }60% {opacity: 0.1180; }65% {opacity: 0.9085; }70% {opacity: 0.0266; }75% {opacity: 0.6795; }80% {opacity: 0.7812; }85% {opacity: 0.0117; }90% {opacity: 0.2239; }95% {opacity: 0.8897; }100% {opacity: 0.2260; }}@keyframes overlay-anim {0% {visibility: hidden; }10% {visibility: hidden; }11% {visibility: visible; }50% {visibility: hidden; }100% {visibility: hidden; }}
+@import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
+@import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/black-highlighter.min.css");
 </style>
 <style>
-@import url(http://scp-sandbox-3.wikidot.com/local--code/component:todaysdate/7);
-</style>
-<style>
-div.terminal{
-    border: 1px solid black;
-    border: solid 3px #BBBBBB;
-    border-radius: 16px;
-    background-color: #131;
-/* black shadow at the top of the terminal */
-    background-image: 
-        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
-    background-position: center;
-    display: block;
-/* shadow around the terminal */
-    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
-/* prevents scanline from forming a scrollwheel */
-    overflow:hidden;
+#page-content .collapsible-block {  
+  max-width: 100%;
+    /* text-align: center; */
+    text-align: center;
+text-color: black;
+    border-color: #b01;
+    border: solid 1px #b01;
+    background-color: #E6DD93;
 }
-div.terminal blockquote {
-    background-color: black;
-    border: double 3px #80FF80
+.collapsible-block-content p {
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-div.scanline{
-    margin-top: -40%;
-    width: 100%;
-    height: 60px;
-    position: relative;
-    pointer-events: none;
-/* Safari 4.0 - 8.0 */
-    -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
-    animation: scan 12s linear 0s infinite; /* Same as above */
-    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
-}
-
-div.text{
-    color: rgba(128,255,128,0.8);
-    padding-left: 2em;
-    padding-top: 40%;
-    font-family: monospace;
-    font-size: 1.2em;
-    }
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes scan{
-    from{ transform: translateY(-10%);}
-    to{  transform: translateY(5000%);} /* You may need to change this depending on the length of your terminal. If the scanline stops halfway, increase the second number.*/
-}
-
-@keyframes scan{
-    from{ transform: translateY(-10%);}
-    to{  transform: translateY(5000%);} /* Same as above.*/
-}
-
-div.text a {
-    color:#99badd;
-    text-decoration: none;
-    background: transparent;
-}
-div.text a.newpage {
-    color:#99badd;
-    text-decoration: none;
-    background: transparent;
-}
-div.text a:hover {
-    color: #131;
-    text-decoration: underline;
-    background-color: #80FF80;
-    padding: 1px;
-}
-div.text a:hover::before{
-content: "> ";
+blockquote {
+    border: 1px double #999;
+    /* padding: 0 1em; */
+    background-color: #f4f4f4;
 }
 </style>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -535,101 +483,47 @@ content: "> ";
                     <div id="page-content">
                         
 
+
+
+
 <div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+12</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 
 
 
-
-
-
-
-<div class="terminal">
-<div class="scanline"></div>
-<div class="text">
+<div style="border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;">
 <div style="text-align: center;">
-<p><span style="font-size:150%;"><span style="text-decoration: underline;">DATABASE-LOAD-#832</span></span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<strong>THIS PERSONNEL PAGE IS CLASSIFIED TO 5/WORLD_NESS CLEARANCE</strong><br />
-<strong>ANY UNAUTHORIZED ACCESS WILL BE LOGGED AND DISCIPLINARY ACTIONS WILL BE TAKEN.</strong><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<tt>Credentials accepted.</tt><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">------</span><br />
-Welcome, Overseer.<br />
-<span style="white-space: pre-wrap;">------</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-The following links are currently <tt>RESTRICTED</tt>. Any attempt to open them without proper clearance will result in severe disciplinary measures.<br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Subject&nbsp;Information</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Close</a></div>
-<div class="collapsible-block-content">
-<p><a style="font-size: 18px; color: white; text-shadow: 1px 3px 1px rgba(0,0,0,0.3); text-decoration: none;" href="http://scp-int.wikidot.com/niveaux-de-menace-des-objets-scp" target="_blank"><span style="display: inline-block; width: 100%; background-color: red; text-align: center; border: 1px none #000; margin: 1px; padding-top: 8px; padding-bottom: 8px;"><strong>Threat Level:</strong> Red</span></a></p>
-<div style="display: inline-block; border:dashed 1px #999999; background:#999999; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p style="text-align: center;"><strong>You barked up the wrong tree.</strong></p>
-<hr />
-<p><strong>DATE:</strong> <span style="color:black">Time doesn't exist.</span></p>
-<p><strong>NOTE:</strong> The following file has been corrupted. Information recall will begin shortly.</p>
-<hr />
-<p>[BEGINNING SUBJECT INFORMATION RECALL&#8230;<span class="blinkbar">[]</span>]</p>
-<p style="text-align: center;"><span style="color:black">&#8230;oh?</span></p>
-<p style="text-align: center;"><span style="color:black">You want to know more about me?</span></p>
-<p style="text-align: center;"><span style="color:black">I like your moxie.</span></p>
-<hr />
-<p style="text-align: center;"><strong>SUBJECT OVERVIEW</strong></p>
-<p>Name : Sr Researcher Dr Adams Campbell<br />
-Clearance Level : Provisional Level 4<br />
-Current Status : Unknown<br />
-Place of Residence : [DATA CORRUPTED]</p>
-<p>About :<br />
-Dr Campbell, the lead of many projects that have been recently shut down, was discharged from Foundation service after proceeding with The Bridgewater Project despite Ethic Committee interference. <span style="text-decoration: line-through;">Was also suspended multiple times due to suspected use of unregistered thaumatergic abilities.</span><sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></p>
-<p>Despite the use of amnestics as per discharge protocol, Dr Campbell appears to have resurfaced under the alias of 'MoreWorldliness' in multiple chatrooms and servers spreading <span style="text-decoration: line-through;">false</span> <span style="text-decoration: line-through;">truthful</span> varying statements about the Foundation and the SCPs contained. Discovered through the I/UNDER webcrawler, efforts are currently being made to locate and contain Dr Campbell, with limited degrees of success.</p>
-<p>Activity reported from 'MoreWorldliness' includes;</p>
-<ul>
-<li><span style="font-size:150%;">Leaking Foundation Secrets</span></li>
-<li><span style="font-size:150%;">Excessive Interaction</span></li>
-<li><span style="font-size:150%;">Too Many Ideas</span></li>
-<li><span style="font-size:150%;">Bad 'Noir'-Style Roleplaying (To the point that we consider it offensive)</span></li>
-<li><span style="font-size:150%;">Development of Memetic Images</span></li>
-</ul>
-<p>No further information has been obtainable thus far and information recovered is most commonly discovered to be false, written by Dr Campbell himself, or corrupted.<br />
-[END OF FILE]</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<hr />
-<p>Credentials accepted. Welcome back, <span style="color:black">Dr. Campbell</span></p>
-<hr />
-<p><span style="color:black">Alternatively, you could always listen to me.</span></p>
-<p><span style="color:black">I like tea and hot chocolate, not that I'd ever drink them together<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>. I worked for the Foundation since 1984 and was discharged for an <a href="http://www.scp-wiki.net/treading-around-the-fuzz">'unethical' experiment</a>. Yea right, they were just looking for an excuse. They always said that I was too investigative.</span></p>
-<p><span style="color:black">What's 'unethical' in the Foundation, anyway? We literally send hundreds of people to their deaths every month, not to mention the thousands lost in the field and you're telling me the <a href="http://www.scp-wiki.net/the-old-town-of-bridgewater">mistreatment of three kids</a> is too far?</span></p>
-<p><span style="color:black">But whatever, you know? I'll get back at them. One way or another.</span></p>
-<p><span style="font-size:0.8em;"><span style="color:black"><strong>And my noir is <em>not</em> bad</strong></span></span></p>
+<h4 id="toc0"><span>NOTICE FROM THE FOUNDATION HUMAN RESOURCES DEPARTMENT</span></h4>
+<p>Information on this page is subject to change. Please stop sending emails to this page in particular.</p>
+<p>&#8212; Osiris Wentworth, HR Liason, HRD</p>
 </div>
 </div>
-</div>
+<hr />
+<table style="width: 100%;">
+<tr>
+<td style="border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:90%;"><strong>Name</strong></span></td>
+<td style="border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:90%;"><strong>Clearance</strong></span></td>
+<td style="border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:90%;"><strong>Assigned Site</strong></span></td>
+<td style="border-bottom: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:90%;"><strong>About</strong></span></td>
+</tr>
+<tr>
+<td style="border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:80%;">Osiris Mullivan Wentworth</span></td>
+<td style="border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:80%;">2</span></td>
+<td style="border-right: 1px solid #AAA; text-align: center; width: 25%;"><span style="font-size:80%;">Site-32</span></td>
+<td style="text-align: center; width: 25%;"><span style="font-size:80%;">[<a href="http://www.scp-wiki.net/osiris-wentworth-and-his-wonderful-day-at-work">Don't ask about his fans.</a>]</span></td>
+</tr>
+</table>
+<hr />
+<div style="text-align: center;">
+<p><span style="font-size:150%;"><br />
+<span style="color: green">Accessing Files&#8230;</span><br />
+<span style="color: green">Accessing Files&#8230;</span></span></p>
 </div>
 <br />
-<span style="white-space: pre-wrap;">&#32;</span></div>
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">De-Classified&nbsp;Files</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
 <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Close</a></div>
 <div class="collapsible-block-content">
-<blockquote>
-<div style="text-align: center;">
-<h4 id="toc0"><span>NOTICE FROM THE FOUNDATION MEMETIC AND ANTI-MEMETIC CONTINGENCY AGENCY.</span></h4>
-<p>The following content has shown characteristics consistent with info and cognitohazards. Caution is advised.<br />
-&#8212; Alex MacJade, Sr. Researcher, MAMCA</p>
-</div>
-</blockquote>
 <p>[<a href="http://www.scp-wiki.net/transmission-p1-deepspace">TRANSMISSION-P1-DEEPSPACE</a>] ;<br />
 <em>&quot;I remember the day I thought the world ended.&quot;</em></p>
 <p>[<a href="http://www.scp-wiki.net/ideals">Ideals</a>] - ;<br />
@@ -638,7 +532,7 @@ Dr Campbell, the lead of many projects that have been recently shut down, was di
 <em>&quot;It wasn't hard to pay attention to everything when two of your friends had been taken by the pseudo-government.&quot;</em></p>
 <p>[<a href="http://www.scp-wiki.net/the-old-town-of-bridgewater">The Bridgewater Incident</a>] - ;<br />
 <em>&quot;Together, a three, may have been considered a gift. None remember their old town of Bridgewater.&quot;</em><br />
-(Collaborative piece with <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/doctor-north" onclick="WIKIDOT.page.listeners.userInfo(4695462); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4695462&amp;amp;size=small&amp;amp;timestamp=1583033532" alt="Doctor North" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4695462)" /></a><a href="http://www.wikidot.com/user:info/doctor-north" onclick="WIKIDOT.page.listeners.userInfo(4695462); return false;">Doctor North</a></span>!)</p>
+(Collaborative piece with <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/doctor-north" onclick="WIKIDOT.page.listeners.userInfo(4695462); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4695462&amp;amp;size=small&amp;amp;timestamp=1605983444" alt="Doctor North" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4695462)" /></a><a href="http://www.wikidot.com/user:info/doctor-north" onclick="WIKIDOT.page.listeners.userInfo(4695462); return false;">Doctor North</a></span>!)</p>
 <p>[<a href="http://www.scp-wiki.net/the-fear-of-infinity">The Fear of Infinity</a>] - ;<br />
 <em>&quot;I've been waiting. For what, though? I have not a clue.&quot;</em></p>
 <p>[<a href="http://www.scp-wiki.net/osiris-wentworth-and-his-wonderful-day-at-work">Osiris Wentworth and his Wonderful Day at Work</a>] - ;<br />
@@ -646,7 +540,6 @@ Dr Campbell, the lead of many projects that have been recently shut down, was di
 </div>
 </div>
 </div>
-<hr />
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Webcrawler&nbsp;Files</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -663,8 +556,8 @@ Dr Campbell, the lead of many projects that have been recently shut down, was di
 <blockquote>
 <p>Oh wow, look, a North!</p>
 <p>Do you have the new <a href="/subject-north">North</a><sup>tm</sup>?</p>
-<p>North North North North North North North North North North North North<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup></p>
-<p><span style="text-decoration: line-through;">North is forcing me to write this help</span> <tt>WOW ISN'T NORTH SURE GREAT HUH</tt><sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup></p>
+<p>North North North North North North North North North North North North<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></p>
+<p><span style="text-decoration: line-through;">North is forcing me to write this help</span> <tt>WOW ISN'T NORTH SURE GREAT HUH</tt><sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup></p>
 </blockquote>
 <p><span style="font-size:150%;"><tt>WELCOME TO THE XILAS CORNER</tt></span></p>
 <blockquote>
@@ -680,14 +573,10 @@ xilas only consumes.<br />
 </div>
 </div>
 </div>
-</div>
-<hr /></div>
 <div class="footnotes-footer">
 <div class="title">Footnotes</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. <span style="color:black">You can't blame me - I didn't want to be held up in a little cell and tested on.</span></div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. <span style="color:black">Completely unrelated, I know but we might have had something in common! Don't worry, I know you're not meant to be here. I won't tell :)</span></div>
-<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. One for all the pings</div>
-<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. I'm not sorry :)</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. One for all the pings</div>
+<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. I'm not sorry :)</div>
 </div>
 
                     </div>
@@ -718,7 +607,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 17, last edited: <span class="odate time_1553477192 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">25 Mar 2019 01:26</span></div>
+                            <div id="page-info">page revision: 19, last edited: <span class="odate time_1605983444 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">21 Nov 2020 18:30</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+12</span>)</a>
@@ -790,45 +679,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ozradonc.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ozradonc.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://grantsrecipes.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/grantsrecipes.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ozradonc.wikidot.com">OzRadOnc</a></h3>
+            <h3><a target="_blank" href="http://grantsrecipes.wikidot.com">Grant&#039;s Recipes</a></h3>
             <div class="desc">          
-              A collection of thoughts and notes
+              Good food for you!
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://neverlandsv3.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/neverlandsv3.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://blackberrystorm.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/blackberrystorm.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://neverlandsv3.wikidot.com">Never Lands</a></h3>
+            <h3><a target="_blank" href="http://blackberrystorm.wikidot.com">BlackBerry Storm Wiki</a></h3>
             <div class="desc">          
-              Never Lands
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://cunefc2.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cunefc2.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-un.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-un.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://cunefc2.wikidot.com">CUNEF Group C2</a></h3>
+            <h3><a target="_blank" href="http://scp-un.wikidot.com">SCP Foundation</a></h3>
             <div class="desc">          
-              For Your Work, Opinions and Discoveries!
+              Underrepresented Languages Incubator
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://backrooms-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/backrooms-wiki.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://steelandstone.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/steelandstone.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://backrooms-wiki.wikidot.com">The Backrooms</a></h3>
+            <h3><a target="_blank" href="http://steelandstone.wikidot.com">Steel and Stone</a></h3>
             <div class="desc">          
-              Watch Your Back...
+              Wagering Lives to the Blade
             </div>
           </div>
         </div>
