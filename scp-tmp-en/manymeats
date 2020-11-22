@@ -54,7 +54,7 @@ googletag.enableServices();
         WIKIREQUEST.info.categoryId = 366566;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "manymeats";
-        OZONE.request.timestamp = 1606013590;
+        OZONE.request.timestamp = 1606032181;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "manymeats";
@@ -152,6 +152,249 @@ googletag.enableServices();
 <style>
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/black-highlighter.min.css");
+</style>
+<style>
+/* BHL styled collapsibles with fancy-schamncy animations! By Monkatraz */
+/* #page-content is shoved everywhere to make sure it's the most specific thingy */
+/* Styling! */
+#page-content .collapsible-block-folded, #page-content .collapsible-block-unfolded-link {
+    margin-top: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: rgb(128, 128, 128) 0px 0px 3px 0px;
+    /* Animated things */
+    transition: background 0.2s linear;
+    background: rgb(66, 66, 72);
+    /* Technical bits */
+    width: min-content;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* The Clicky Text */
+#page-content .collapsible-block-link {
+    color: white;
+    font-weight: bold;
+}
+/* Gets rid of the underline when hovering over the collapsible */
+#page-content .collapsible-block-link:hover {
+    text-decoration: none
+}
+/* Collapsible content */
+#page-content .collapsible-block-content {
+    border-bottom: solid 3px rgb(66,66,72);
+    /* Animated things */
+    transition: border-top-color 0.2s linear;
+    border-top: solid rgb(66, 66, 72) 5px;
+}
+/* End of addendum tag */
+#page-content .collapsible-block-content::after {
+    content:"END OF ADDENDUM";
+    font-weight: bold;
+    font-size: 95%;
+    color:white;
+    background: rgb(66, 66, 72);
+    width: 150px;
+    border-radius: 3px;
+    /* Technical bits */
+    display: block;
+    text-align: center;
+    margin:auto;
+    margin-bottom: -3px;
+}
+/* Folded blocks are animated, unfolded ones are not */
+#page-content .collapsible-block-folded {
+    transition: max-width 0.2s linear;
+    max-width: 10.5em;
+}
+#page-content .collapsible-block-unfolded-link{
+    width: min-content;
+}
+/* Addendum counter */
+#page-content {
+    counter-reset: collapse;
+}
+#page-content .collapsible-block, #page-content .unfolded-collapse, #page-content .centered-unfolded-collapse{
+    counter-increment: collapse;
+}
+
+/* Addendum prefixes */
+#page-content .collapsible-block-folded .collapsible-block-link::before {
+    content: "▷ ADDENDUM XXXX." counter(collapse);
+    border-right: dotted 0.25em;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    font-family: var(--mono-font);
+}
+#page-content .collapsible-block-unfolded .collapsible-block-link::before {
+    content: "▽ ADDENDUM XXXX." counter(collapse);
+    border-right: dotted 0.25em;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    font-family: var(--mono-font);
+}
+/* Hovering effects */
+#page-content .collapsible-block-folded:hover, #page-content .collapsible-block-unfolded-link:hover{
+    background: rgb(100, 46, 44);
+    max-width: 100%;
+}
+/* Top of the collapsible border - because it looks prettier this way */
+#page-content .collapsible-block-unfolded-link:hover + .collapsible-block-content{
+    border-top-color: rgb(100, 46, 44);
+}
+/* Accent flash when clicking, also forces the collapsible to expand */
+#page-content .collapsible-block-folded:active, #page-content .collapsible-block-unfolded-link:active{
+    transition: background 0s, max-width 0s;
+    background: rgb(133, 0, 5);
+    max-width: 100%;
+}
+/* Done with normal collapsibles, now we do all the variations */
+/* Unfolded collapsible */
+#page-content .unfolded-collapse{
+    margin-top: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: rgb(128, 128, 128) 0px 0px 3px 0px;
+    background: rgb(66, 66, 72);
+    /* Text */
+    color: white;
+    font-weight: bold;
+    /* Technical bits */
+    width: min-content;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* Addendum prefix */
+#page-content .unfolded-collapse::before {
+    content: "▽ ADDENDUM XXXX." counter(collapse);
+    border-right: dotted 0.25em;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    font-family: var(--mono-font);
+}
+/* Bottom border */
+#page-content .unfolded-collapse-border {
+    display: block;
+    width: 700px;
+    border-top: solid rgb(66, 66, 72) 5px;
+}
+/* Centering, very simple */
+#page-content .center-collapse .collapsible-block-folded, #page-content .center-collapse .collapsible-block-unfolded-link, #page-content .center-collapse .unfolded-collapse{
+    margin:auto;
+    margin-top: 10px;
+}
+/* Removing the slick animation and addendum number because you're a monster */
+/* Set back the max width and just ignore the transition screwyness */
+#page-content .no-addendum .collapsible-block-folded {
+    max-width: auto;
+}
+/* Prefixes */
+#page-content .no-addendum .collapsible-block-unfolded .collapsible-block-link::before, #page-content .no-addendum .unfolded-collapse::before {
+    content: "▽";
+    border-right: none;
+    padding-right: 0rem;
+}
+#page-content .no-addendum .collapsible-block-folded .collapsible-block-link::before {
+    content: "▷";
+    border-right: none;
+    padding-right: 0rem;
+}
+/* Kill the automatic footer because you haven no trouble figuring out where your addendums end */
+#page-content .no-footer .collapsible-block-content{
+    border-bottom: none;
+}
+#page-content .no-footer .collapsible-block-content::after{
+    display:none;
+}
+/* Fittingly, we finish with the footer object */
+/* The footer is actually the giant bottom border object because larger -> smaller works better */
+#page-content .addendumfooter{
+    display: block;
+    border-bottom: solid 3px rgb(66,66,72);
+    margin:auto;
+    text-align: center;
+}
+/* Texty bits */
+#page-content .addendumfooter::after{
+    content: "END OF ADDENDUM";
+    font-weight: bold;
+    font-size: 95%;
+    color:white;
+    background: rgb(66, 66, 72);
+    width: 150px;
+    border-radius: 3px;
+    /* Technical bits */
+    display: block;
+    text-align: center;
+    margin:auto;
+    margin-bottom: -3px;
+}
+/* Ayer's info-bar patch */
+#page-content .info-container .collapsible-block {
+    counter-increment: none;
+}
+#page-content .info-container .collapsible-block-folded, #page-content .info-container .collapsible-block-unfolded-link  {
+    transition: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    background: var(--barColour);
+}
+#page-content .info-container .collapsible-block-folded::before, #page-content .info-container .collapsible-block-unfolded-link::before  {
+    content: "";
+    display: none;
+}
+#page-content .info-container .collapsible-block-content {
+    border-bottom: none;
+    transition: none;
+    border-top: none;
+}
+#page-content .info-container .collapsible-block-content::after {
+    display: none;
+}
+
+/* License Box Patch */
+#page-content .licensebox22 .collapsible-block-link {
+    color: inherit;
+}
+#page-content .licensebox22 .collapsible-block-link:hover {
+    text-decoration: underline;
+}
+#page-content .licensebox22 .collapsible-block {
+    counter-increment: none;
+}
+#page-content .licensebox22  .collapsible-block-folded,
+#page-content .licensebox22  .collapsible-block-unfolded-link  {
+    transition: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+}
+#page-content .licensebox22 .collapsible-block-folded::before,
+#page-content .licensebox22 .collapsible-block-unfolded-link::before  {
+    content: "";
+    display: none;
+}
+#page-content .licensebox22 .collapsible-block-content {
+    border-bottom: none;
+    transition: none;
+    border-top: none;
+}
+#page-content .licensebox22 .collapsible-block-folded .collapsible-block-link::before,
+#page-content .licensebox22 .collapsible-block-unfolded .collapsible-block-link::before,
+#page-content .licensebox22 .unfolded-collapse::before {
+    display: none;
+}
+#page-content .licensebox22 .collapsible-block-content::after {
+    display: none;
+}
 </style>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
@@ -465,237 +708,45 @@ googletag.enableServices();
 
 
 
+
+
 <div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+31</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-<p>This page is undergoing a re-write and, for now, is just a table of my submitted mainlist works. Check back again for major revisions!</p>
-<p>-Meats 5/2020</p>
-<div class="list-pages-box">    
-
-<table class="wiki-content-table">
-<tr>
-<th>Article Name</th>
-<th>Rating</th>
-<th>Votes</th>
-<th>Comments</th>
-<th>Last Comment</th>
-</tr>
-<tr>
-<td><a href="/scp-4369">SCP-4369</a></td>
-<td>38</td>
-<td>+42, -4</td>
-<td>11</td>
-<td><span class="odate time_1565482054 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Aug 2019 00:07</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4401">SCP-4401</a></td>
-<td>38</td>
-<td>+41, -3</td>
-<td>7</td>
-<td><span class="odate time_1561232749 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Jun 2019 19:45</span></td>
-</tr>
-<tr>
-<td><a href="/turn-around-brighteyes">Turn Around Brighteyes</a></td>
-<td>11</td>
-<td>+11, -0</td>
-<td>2</td>
-<td><span class="odate time_1550489212 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Feb 2019 11:26</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4898">SCP-4898</a></td>
-<td>29</td>
-<td>+33, -4</td>
-<td>8</td>
-<td><span class="odate time_1553277048 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Mar 2019 17:50</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4897">SCP-4897</a></td>
-<td>38</td>
-<td>+45, -7</td>
-<td>6</td>
-<td><span class="odate time_1583886590 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2020 00:29</span></td>
-</tr>
-<tr>
-<td><a href="/manymeats">Manymeats</a></td>
-<td>31</td>
-<td>+31, -0</td>
-<td>5</td>
-<td><span class="odate time_1558038588 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 May 2019 20:29</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4198">SCP-4198</a></td>
-<td>25</td>
-<td>+28, -3</td>
-<td>4</td>
-<td><span class="odate time_1568790542 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2019 07:09</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4905">SCP-4905</a></td>
-<td>45</td>
-<td>+49, -4</td>
-<td>8</td>
-<td><span class="odate time_1577990734 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Jan 2020 18:45</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4802">SCP-4802</a></td>
-<td>36</td>
-<td>+40, -4</td>
-<td>8</td>
-<td><span class="odate time_1595499537 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 10:18</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4805">SCP-4805</a></td>
-<td>42</td>
-<td>+45, -3</td>
-<td>5</td>
-<td><span class="odate time_1559188877 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 May 2019 04:01</span></td>
-</tr>
-<tr>
-<td><a href="/late-to-the-party">Late To The Party</a></td>
-<td>12</td>
-<td>+13, -1</td>
-<td>7</td>
-<td><span class="odate time_1571664783 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Oct 2019 13:33</span></td>
-</tr>
-<tr>
-<td><a href="/ambrose-sanfran">Ambrose SanFran</a></td>
-<td>20</td>
-<td>+39, -19</td>
-<td>18</td>
-<td><span class="odate time_1598684378 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Aug 2020 06:59</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4305">SCP-4305</a></td>
-<td>31</td>
-<td>+34, -3</td>
-<td>9</td>
-<td><span class="odate time_1586282351 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Apr 2020 17:59</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4705">SCP-4705</a></td>
-<td>27</td>
-<td>+31, -4</td>
-<td>2</td>
-<td><span class="odate time_1561240760 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Jun 2019 21:59</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4497">SCP-4497</a></td>
-<td>163</td>
-<td>+169, -6</td>
-<td>22</td>
-<td><span class="odate time_1577381098 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Dec 2019 17:24</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4869">SCP-4869</a></td>
-<td>58</td>
-<td>+61, -3</td>
-<td>4</td>
-<td><span class="odate time_1563559950 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Jul 2019 18:12</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4702">SCP-4702</a></td>
-<td>67</td>
-<td>+73, -6</td>
-<td>16</td>
-<td><span class="odate time_1565910930 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Aug 2019 23:15</span></td>
-</tr>
-<tr>
-<td><a href="/tuesday-canceled">Tuesday Has Been Canceled</a></td>
-<td>69</td>
-<td>+70, -1</td>
-<td>10</td>
-<td><span class="odate time_1568723706 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Sep 2019 12:35</span></td>
-</tr>
-<tr>
-<td><a href="/scp-9999-j">SCP-9999-J</a></td>
-<td>82</td>
-<td>+98, -16</td>
-<td>27</td>
-<td><span class="odate time_1575234900 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Dec 2019 21:15</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4706">SCP-4706</a></td>
-<td>64</td>
-<td>+68, -4</td>
-<td>12</td>
-<td><span class="odate time_1571674536 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Oct 2019 16:15</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4709">SCP-4709</a></td>
-<td>50</td>
-<td>+59, -9</td>
-<td>9</td>
-<td><span class="odate time_1576471434 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Dec 2019 04:43</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4486">SCP-4486</a></td>
-<td>93</td>
-<td>+97, -4</td>
-<td>5</td>
-<td><span class="odate time_1580523739 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Feb 2020 02:22</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4490">SCP-4490</a></td>
-<td>59</td>
-<td>+62, -3</td>
-<td>7</td>
-<td><span class="odate time_1579810394 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jan 2020 20:13</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5600">SCP-5600</a></td>
-<td>148</td>
-<td>+157, -9</td>
-<td>25</td>
-<td><span class="odate time_1583950487 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2020 18:14</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5399">SCP-5399</a></td>
-<td>77</td>
-<td>+81, -4</td>
-<td>8</td>
-<td><span class="odate time_1589776638 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 May 2020 04:37</span></td>
-</tr>
-<tr>
-<td><a href="/single-issue-voters">Single Issue Voters</a></td>
-<td>20</td>
-<td>+30, -10</td>
-<td>5</td>
-<td><span class="odate time_1587608941 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Apr 2020 02:29</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5905">SCP-5905</a></td>
-<td>37</td>
-<td>+39, -2</td>
-<td>9</td>
-<td><span class="odate time_1603374927 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 13:55</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5805">SCP-5805</a></td>
-<td>109</td>
-<td>+118, -9</td>
-<td>15</td>
-<td><span class="odate time_1600350539 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Sep 2020 13:48</span></td>
-</tr>
-<tr>
-<td><a href="/needs-of-the-many">Needs Of The Many</a></td>
-<td>20</td>
-<td>+22, -2</td>
-<td>6</td>
-<td><span class="odate time_1599771897 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Sep 2020 21:04</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5605">SCP-5605</a></td>
-<td>29</td>
-<td>+32, -3</td>
-<td>4</td>
-<td><span class="odate time_1604316495 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Nov 2020 11:28</span></td>
-</tr>
-</table>
-
-    
-    
-    
-    </div>
+<h2 id="toc0"><span><strong>Welcome</strong> to the <strong>Meatverse</strong></span></h2>
+<p>I am putting some text here.</p>
+<hr />
+<p>Please enjoy a quick tour through some of my most highly rated pieces. I have provided a short snippet about them and, far below, you will find a table that includes all of my works in chronological order. Thanks for your readership!</p>
+<div class="no-addendum">
+<div class="no-footer">
+<div class="unfolded-collapse">SCP-4497: Whose Cuisine Reigns Supreme?! [+163]</div>
+<div class="unfolded-collapse-border">An esoteric adventure through the dream-scape of <a href="/scp-4497">SCP-4497</a>, this piece explores the ultimate power over cookery&#8230;if you have what it takes to defend the title!</div>
+</div>
+</div>
+<hr />
+<div class="no-addendum">
+<div class="no-footer">
+<div class="unfolded-collapse">SCP-5600: A December To Remember [+148]</div>
+<div class="unfolded-collapse-border">My 5000 contest entry, <a href="/scp-5600">SCP-5600</a> takes us home to small-town Wisconsin for Christmas and never, ever lets us leave. Learning to let go on December 32nd.</div>
+</div>
+</div>
+<hr />
+<div class="no-addendum">
+<div class="no-footer">
+<div class="unfolded-collapse">SCP-5805: You Can't Go Back [+109]</div>
+<div class="unfolded-collapse-border">Although one of my shortest works, <a href="/scp-5805">SCP-5805</a> packs a big punch aimed directly at a sense of loss and of nostalgia. The type of feeling that reminds you of summers past and friends no longer in your life, for whatever reason. This one's for you, Johnny. Wherever you are.</div>
+</div>
+</div>
+<hr />
+<div class="no-addendum">
+<div class="no-footer">
+<div class="unfolded-collapse">SCP-4486 Happy Is Relative [+93]</div>
+<div class="unfolded-collapse-border">The legacy and history of Ronald McDonald is both goofy and very serious. <a href="/scp-4486">SCP-4486</a> explores a setting where the McDonald brothers created a friend to represent their love of their company and then lost control of him.</div>
+</div>
+</div>
+<hr />
+<div class="no-addendum">
+<div class="center-collapse">
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Same&nbsp;table&nbsp;but&nbsp;with&nbsp;edited&nbsp;on&nbsp;dates</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">All&nbsp;listed&nbsp;works</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
 <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Get&nbsp;on&nbsp;outta&nbsp;here</a></div>
 <div class="collapsible-block-content"><div class="list-pages-box">    
@@ -710,84 +761,12 @@ googletag.enableServices();
 <th>Last Edit</th>
 </tr>
 <tr>
-<td><a href="/scp-4369">SCP-4369</a></td>
-<td>38</td>
-<td>+42, -4</td>
-<td>11</td>
-<td><span class="odate time_1565482054 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Aug 2019 00:07</span></td>
-<td><span class="odate time_1560997131 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:18</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4401">SCP-4401</a></td>
-<td>38</td>
-<td>+41, -3</td>
-<td>7</td>
-<td><span class="odate time_1561232749 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Jun 2019 19:45</span></td>
-<td><span class="odate time_1560997186 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:19</span></td>
-</tr>
-<tr>
 <td><a href="/turn-around-brighteyes">Turn Around Brighteyes</a></td>
 <td>11</td>
 <td>+11, -0</td>
 <td>2</td>
 <td><span class="odate time_1550489212 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Feb 2019 11:26</span></td>
 <td><span class="odate time_1552499099 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Mar 2019 17:44</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4898">SCP-4898</a></td>
-<td>29</td>
-<td>+33, -4</td>
-<td>8</td>
-<td><span class="odate time_1553277048 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Mar 2019 17:50</span></td>
-<td><span class="odate time_1591886417 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:40</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4897">SCP-4897</a></td>
-<td>38</td>
-<td>+45, -7</td>
-<td>6</td>
-<td><span class="odate time_1583886590 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2020 00:29</span></td>
-<td><span class="odate time_1591886445 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:40</span></td>
-</tr>
-<tr>
-<td><a href="/manymeats">Manymeats</a></td>
-<td>31</td>
-<td>+31, -0</td>
-<td>5</td>
-<td><span class="odate time_1558038588 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 May 2019 20:29</span></td>
-<td><span class="odate time_1602121699 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Oct 2020 01:48</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4198">SCP-4198</a></td>
-<td>25</td>
-<td>+28, -3</td>
-<td>4</td>
-<td><span class="odate time_1568790542 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2019 07:09</span></td>
-<td><span class="odate time_1596780864 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Aug 2020 06:14</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4905">SCP-4905</a></td>
-<td>45</td>
-<td>+49, -4</td>
-<td>8</td>
-<td><span class="odate time_1577990734 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Jan 2020 18:45</span></td>
-<td><span class="odate time_1595472611 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:50</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4802">SCP-4802</a></td>
-<td>36</td>
-<td>+40, -4</td>
-<td>8</td>
-<td><span class="odate time_1595499537 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 10:18</span></td>
-<td><span class="odate time_1591886482 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:41</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4805">SCP-4805</a></td>
-<td>42</td>
-<td>+45, -3</td>
-<td>5</td>
-<td><span class="odate time_1559188877 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 May 2019 04:01</span></td>
-<td><span class="odate time_1595472646 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:50</span></td>
 </tr>
 <tr>
 <td><a href="/late-to-the-party">Late To The Party</a></td>
@@ -806,12 +785,28 @@ googletag.enableServices();
 <td><span class="odate time_1556247068 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Apr 2019 02:51</span></td>
 </tr>
 <tr>
-<td><a href="/scp-4305">SCP-4305</a></td>
-<td>31</td>
-<td>+34, -3</td>
-<td>9</td>
-<td><span class="odate time_1586282351 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Apr 2020 17:59</span></td>
-<td><span class="odate time_1560997480 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:24</span></td>
+<td><a href="/single-issue-voters">Single Issue Voters</a></td>
+<td>20</td>
+<td>+30, -10</td>
+<td>5</td>
+<td><span class="odate time_1587608941 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Apr 2020 02:29</span></td>
+<td><span class="odate time_1600489379 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Sep 2020 04:22</span></td>
+</tr>
+<tr>
+<td><a href="/needs-of-the-many">Needs Of The Many</a></td>
+<td>20</td>
+<td>+22, -2</td>
+<td>6</td>
+<td><span class="odate time_1599771897 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Sep 2020 21:04</span></td>
+<td><span class="odate time_1599714448 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Sep 2020 05:07</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4198">SCP-4198</a></td>
+<td>25</td>
+<td>+28, -3</td>
+<td>4</td>
+<td><span class="odate time_1568790542 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2019 07:09</span></td>
+<td><span class="odate time_1596780864 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Aug 2020 06:14</span></td>
 </tr>
 <tr>
 <td><a href="/scp-4705">SCP-4705</a></td>
@@ -822,12 +817,100 @@ googletag.enableServices();
 <td><span class="odate time_1595472684 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:51</span></td>
 </tr>
 <tr>
-<td><a href="/scp-4497">SCP-4497</a></td>
-<td>163</td>
-<td>+169, -6</td>
-<td>22</td>
-<td><span class="odate time_1577381098 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Dec 2019 17:24</span></td>
-<td><span class="odate time_1595472860 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:54</span></td>
+<td><a href="/scp-4898">SCP-4898</a></td>
+<td>29</td>
+<td>+33, -4</td>
+<td>8</td>
+<td><span class="odate time_1553277048 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Mar 2019 17:50</span></td>
+<td><span class="odate time_1591886417 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:40</span></td>
+</tr>
+<tr>
+<td><a href="/scp-5605">SCP-5605</a></td>
+<td>29</td>
+<td>+32, -3</td>
+<td>4</td>
+<td><span class="odate time_1604316495 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Nov 2020 11:28</span></td>
+<td><span class="odate time_1604065305 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Oct 2020 13:41</span></td>
+</tr>
+<tr>
+<td><a href="/manymeats">Manymeats</a></td>
+<td>31</td>
+<td>+31, -0</td>
+<td>5</td>
+<td><span class="odate time_1558038588 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 May 2019 20:29</span></td>
+<td><span class="odate time_1606029334 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Nov 2020 07:15</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4305">SCP-4305</a></td>
+<td>31</td>
+<td>+34, -3</td>
+<td>9</td>
+<td><span class="odate time_1586282351 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Apr 2020 17:59</span></td>
+<td><span class="odate time_1560997480 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:24</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4802">SCP-4802</a></td>
+<td>36</td>
+<td>+40, -4</td>
+<td>8</td>
+<td><span class="odate time_1595499537 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 10:18</span></td>
+<td><span class="odate time_1591886482 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:41</span></td>
+</tr>
+<tr>
+<td><a href="/scp-5905">SCP-5905</a></td>
+<td>37</td>
+<td>+39, -2</td>
+<td>9</td>
+<td><span class="odate time_1603374927 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 13:55</span></td>
+<td><span class="odate time_1595472976 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:56</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4369">SCP-4369</a></td>
+<td>38</td>
+<td>+42, -4</td>
+<td>11</td>
+<td><span class="odate time_1565482054 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Aug 2019 00:07</span></td>
+<td><span class="odate time_1560997131 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:18</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4401">SCP-4401</a></td>
+<td>38</td>
+<td>+41, -3</td>
+<td>7</td>
+<td><span class="odate time_1561232749 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Jun 2019 19:45</span></td>
+<td><span class="odate time_1560997186 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Jun 2019 02:19</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4897">SCP-4897</a></td>
+<td>38</td>
+<td>+45, -7</td>
+<td>6</td>
+<td><span class="odate time_1583886590 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2020 00:29</span></td>
+<td><span class="odate time_1591886445 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:40</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4805">SCP-4805</a></td>
+<td>42</td>
+<td>+45, -3</td>
+<td>5</td>
+<td><span class="odate time_1559188877 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 May 2019 04:01</span></td>
+<td><span class="odate time_1595472646 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:50</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4905">SCP-4905</a></td>
+<td>45</td>
+<td>+49, -4</td>
+<td>8</td>
+<td><span class="odate time_1577990734 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Jan 2020 18:45</span></td>
+<td><span class="odate time_1595472611 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:50</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4709">SCP-4709</a></td>
+<td>50</td>
+<td>+59, -9</td>
+<td>9</td>
+<td><span class="odate time_1576471434 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Dec 2019 04:43</span></td>
+<td><span class="odate time_1595472836 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:53</span></td>
 </tr>
 <tr>
 <td><a href="/scp-4869">SCP-4869</a></td>
@@ -836,6 +919,22 @@ googletag.enableServices();
 <td>4</td>
 <td><span class="odate time_1563559950 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Jul 2019 18:12</span></td>
 <td><span class="odate time_1595472775 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:52</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4490">SCP-4490</a></td>
+<td>59</td>
+<td>+62, -3</td>
+<td>7</td>
+<td><span class="odate time_1579810394 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jan 2020 20:13</span></td>
+<td><span class="odate time_1595472911 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:55</span></td>
+</tr>
+<tr>
+<td><a href="/scp-4706">SCP-4706</a></td>
+<td>64</td>
+<td>+68, -4</td>
+<td>12</td>
+<td><span class="odate time_1571674536 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Oct 2019 16:15</span></td>
+<td><span class="odate time_1584311551 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Mar 2020 22:32</span></td>
 </tr>
 <tr>
 <td><a href="/scp-4702">SCP-4702</a></td>
@@ -854,28 +953,20 @@ googletag.enableServices();
 <td><span class="odate time_1605983231 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Nov 2020 18:27</span></td>
 </tr>
 <tr>
+<td><a href="/scp-5399">SCP-5399</a></td>
+<td>77</td>
+<td>+81, -4</td>
+<td>8</td>
+<td><span class="odate time_1589776638 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 May 2020 04:37</span></td>
+<td><span class="odate time_1595472959 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:55</span></td>
+</tr>
+<tr>
 <td><a href="/scp-9999-j">SCP-9999-J</a></td>
 <td>82</td>
 <td>+98, -16</td>
 <td>27</td>
 <td><span class="odate time_1575234900 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Dec 2019 21:15</span></td>
 <td><span class="odate time_1591886570 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Jun 2020 14:42</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4706">SCP-4706</a></td>
-<td>64</td>
-<td>+68, -4</td>
-<td>12</td>
-<td><span class="odate time_1571674536 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Oct 2019 16:15</span></td>
-<td><span class="odate time_1584311551 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Mar 2020 22:32</span></td>
-</tr>
-<tr>
-<td><a href="/scp-4709">SCP-4709</a></td>
-<td>50</td>
-<td>+59, -9</td>
-<td>9</td>
-<td><span class="odate time_1576471434 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Dec 2019 04:43</span></td>
-<td><span class="odate time_1595472836 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:53</span></td>
 </tr>
 <tr>
 <td><a href="/scp-4486">SCP-4486</a></td>
@@ -886,12 +977,12 @@ googletag.enableServices();
 <td><span class="odate time_1595472890 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:54</span></td>
 </tr>
 <tr>
-<td><a href="/scp-4490">SCP-4490</a></td>
-<td>59</td>
-<td>+62, -3</td>
-<td>7</td>
-<td><span class="odate time_1579810394 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jan 2020 20:13</span></td>
-<td><span class="odate time_1595472911 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:55</span></td>
+<td><a href="/scp-5805">SCP-5805</a></td>
+<td>109</td>
+<td>+118, -9</td>
+<td>15</td>
+<td><span class="odate time_1600350539 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Sep 2020 13:48</span></td>
+<td><span class="odate time_1598108845 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2020 15:07</span></td>
 </tr>
 <tr>
 <td><a href="/scp-5600">SCP-5600</a></td>
@@ -902,52 +993,12 @@ googletag.enableServices();
 <td><span class="odate time_1595472936 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:55</span></td>
 </tr>
 <tr>
-<td><a href="/scp-5399">SCP-5399</a></td>
-<td>77</td>
-<td>+81, -4</td>
-<td>8</td>
-<td><span class="odate time_1589776638 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 May 2020 04:37</span></td>
-<td><span class="odate time_1595472959 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:55</span></td>
-</tr>
-<tr>
-<td><a href="/single-issue-voters">Single Issue Voters</a></td>
-<td>20</td>
-<td>+30, -10</td>
-<td>5</td>
-<td><span class="odate time_1587608941 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Apr 2020 02:29</span></td>
-<td><span class="odate time_1600489379 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Sep 2020 04:22</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5905">SCP-5905</a></td>
-<td>37</td>
-<td>+39, -2</td>
-<td>9</td>
-<td><span class="odate time_1603374927 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 13:55</span></td>
-<td><span class="odate time_1595472976 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:56</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5805">SCP-5805</a></td>
-<td>109</td>
-<td>+118, -9</td>
-<td>15</td>
-<td><span class="odate time_1600350539 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Sep 2020 13:48</span></td>
-<td><span class="odate time_1598108845 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2020 15:07</span></td>
-</tr>
-<tr>
-<td><a href="/needs-of-the-many">Needs Of The Many</a></td>
-<td>20</td>
-<td>+22, -2</td>
-<td>6</td>
-<td><span class="odate time_1599771897 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Sep 2020 21:04</span></td>
-<td><span class="odate time_1599714448 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Sep 2020 05:07</span></td>
-</tr>
-<tr>
-<td><a href="/scp-5605">SCP-5605</a></td>
-<td>29</td>
-<td>+32, -3</td>
-<td>4</td>
-<td><span class="odate time_1604316495 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Nov 2020 11:28</span></td>
-<td><span class="odate time_1604065305 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Oct 2020 13:41</span></td>
+<td><a href="/scp-4497">SCP-4497</a></td>
+<td>163</td>
+<td>+169, -6</td>
+<td>22</td>
+<td><span class="odate time_1577381098 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Dec 2019 17:24</span></td>
+<td><span class="odate time_1595472860 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Jul 2020 02:54</span></td>
 </tr>
 </table>
 
@@ -957,16 +1008,25 @@ googletag.enableServices();
     </div></div>
 </div>
 </div>
+</div>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span>
+<div class="no-addendum">
+<div class="center-collapse">
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Morbid&nbsp;but&nbsp;necessary</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Authorial&nbsp;Will</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
 <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Get&nbsp;back&nbsp;to&nbsp;it</a></div>
 <div class="collapsible-block-content">
 <blockquote>
-<p><strong>Authorial Will:</strong> In the event of my unannounced disappearance from the Wiki for a period no shorter than twelve months, I wish for my written works to remain as I intended and only updated, changed, or refreshed in keeping with changes to the Themes or Components (etc) which may be used as part of their formatting.</p>
-<p>The &quot;IP&quot; I have developed is of free use to the site as a whole, with the exception that I would like the content and direction of the &quot;Late Stage Capitalism&quot; Canon to pass into the care and curator-ship of Dr Akimoto.</p>
+<p>In the event of my unannounced disappearance from the Wiki for a period no shorter than six months, I wish for my written works to remain as I intended and only updated, changed, or refreshed in keeping with changes to the Themes or Components (etc) which may be used as part of their formatting.</p>
+<p>The &quot;IP&quot; I have developed is of free use to the site as a whole, with the exception that I would like the content and direction of the &quot;Late Stage Capitalism&quot; Canon to pass into the care and curator-ship of DrAkimoto.</p>
 <p>If I appear absent or am unresponsive, please attempt to contact me by Wiki PM, IRC, Discord, or by reaching out to Wiki Staff and asking that they make an attempt to contact me before carrying out these wishes.</p>
 </blockquote>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -999,7 +1059,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 60, last edited: <span class="odate time_1602121699 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">08 Oct 2020 01:48</span></div>
+                            <div id="page-info">page revision: 77, last edited: <span class="odate time_1606029334 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">22 Nov 2020 07:15</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+31</span>)</a>
@@ -1071,45 +1131,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ozradonc.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ozradonc.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://nauticoamager.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/nauticoamager.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ozradonc.wikidot.com">OzRadOnc</a></h3>
+            <h3><a target="_blank" href="http://nauticoamager.wikidot.com">NauticoAmager</a></h3>
             <div class="desc">          
-              A collection of thoughts and notes
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.trumpetexercises.net">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.trumpetexercises.net/80.jpg"/>
+            <a target="_blank" class="image" href="http://makeyourbot.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/makeyourbot.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.trumpetexercises.net">Trumpet exercise database</a></h3>
+            <h3><a target="_blank" href="http://makeyourbot.wikidot.com">Make Your Bot!</a></h3>
             <div class="desc">          
-              for trumpet players, students and teachers
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://thegamerdome.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/thegamerdome.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.tpswiki.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.tpswiki.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://thegamerdome.wikidot.com">The Gamer Dome</a></h3>
+            <h3><a target="_blank" href="http://www.tpswiki.com">TPSwiki.com</a></h3>
             <div class="desc">          
-              Community Game Design Projects
+              The Radiation Oncology Treatment Planning System Wiki
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://signaturbogen.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/signaturbogen.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://softwarecraftsmanship.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/softwarecraftsmanship.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://signaturbogen.wikidot.com">Signaturbogen 2.0</a></h3>
+            <h3><a target="_blank" href="http://softwarecraftsmanship.wikidot.com">Software Craftsmanship</a></h3>
             <div class="desc">          
-              4.000 signaturer, 2.500 kunstnere
+              A conference all about building it right
             </div>
           </div>
         </div>
