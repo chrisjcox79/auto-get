@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>Esperanza_Cai的冷门翻译们 - SCP基金会</title>
+    <title>顺其自然的日子 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "esperanza-s-translations";
-        OZONE.request.timestamp = 1606031722;
+        WIKIREQUEST.info.requestPageName = "df-thirteen";
+        OZONE.request.timestamp = 1606053304;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "esperanza-s-translations";
-        WIKIREQUEST.info.pageId = 999670719;
+                WIKIREQUEST.info.pageUnixName = "df-thirteen";
+        WIKIREQUEST.info.pageId = 227216204;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,56 +117,153 @@
     </script>
         
 <style>
-@import url(http://scp-wiki-cn.wikidot.com/theme:minimal/code/1);
-#header h1 a::before {
-    content: "What the Thulium";
-}
-#header h2 span::before {
-    content: "Till then carry on, and miss me when I'm gone.";
-}
+@import url(http://scpsandboxcn.wikidot.com/snow-dance/code/1);
+@import url(http://scpsandboxcn.wikidot.com/night-sky/code/1);
 </style>
 <style>
-#header {
-    background: url("http://scp-wiki.wdfiles.com/local--files/component%3Apride-highlighter/lsb_logo_blk.svg") 15px 40px no-repeat !important;
-    background-size: 6rem !important;
+.infobox {
+ display:inline-box;
+ overflow:hidden;
+ position:fixed;
+ right: 1em;
+ bottom: 2em;
+ width: 21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:#ffffff;
+ opacity: 1;
+ transition: all 0.5s ease-out;
 }
-@media (max-width: 580px) and (min-width: 480px) {
-    #header {
-        background-position: 0.5em 4.5em  !important;
-        background-size: 66px 66px  !important;
+
+.infobox:hover {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+.preview{
+ color:grey;
+ width:100%;
+ display: inline-block;
+ padding-left:1%;
+ transition: box-shadow 1s ease-out;
+}
+
+.preview:hover{
+ box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
+ transition: box-shadow 0.3s ease-out;
+}
+
+.preview.yes:hover, .preview.true:hover{
+  background: url('http://scpsandboxcn.wikidot.com/local--files/asriel3/logo.png') 80% 50% fixed no-repeat;
+}
+
+.preview .span { 
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease-in-out;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ position:fixed;
+ z-index: 11;
+ right: 1em;
+ bottom: 2em;
+ width:21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ color:grey;
+ text-size:0.9em;
+ font-family:微软细黑, Segoe UI Light,Verdana,sans-serif;
+}
+
+.preview:hover .span { 
+ opacity: 1;
+ background-color:#ffffff;
+}
+
+.collab-header{
+ display:none;
+}
+
+.imagepre{
+ background:#fff;
+ max-width:19%;
+ max-height:40%;
+ position:fixed;
+ right: 2em;
+ bottom:calc(23% + 3em);
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagepre.\{\$image\} {
+display:none
+}
+
+.translation.\{\$translation\} {
+display:none
+}
+
+.sortbar.no{
+display:none
+}
+
+@media screen and (max-width:992px) {
+    .preview .span{
+        display: none;
+    }
+    .infobox {
+        position: relative;
+        margin: 1em auto;
+        right: 0;
+        bottom: 0;
+        height: 9em;
     }
 }
 
-@media (max-width: 479px) {
-    #header {
-        background-position: 0 5.5em !important;
-        background-size: 55px 55px !important;
-    }
+#page-options-container {
+ background: transparent;
+ position: relative;
+ z-index: 10;
 }
+
+#action-area { position: relative; z-index: 20; }
 </style>
 <style>
-/* -------------- LINKS -------------- */
-a {
-    color: grey;}
-
-a.newpage {
-    color: hsl(335, 95%, 45%);}
-
- a:visited {
-     color: hsl(335, 95%, 35%);
+.collab-header{
+ display:initial;
 }
 
-#side-bar a {
-     color: black
-}
+.written_by.\{\$written_by\} {display: none;}
 
-#side-bar a:visited {
-     color: grey;
-}
+.collabnote.\{\$note\} {display: none;}
 </style>
 <style>
-.footnotes-footer {
-display:none;
+.collab-header{
+ display:initial;
+}
+
+.written_by.\{\$written_by\} {display: none;}
+
+.collabnote.\{\$note\} {display: none;}
+</style>
+<style>
+.collab-header{
+ display:initial;
+}
+
+.written_by.\{\$written_by\} {display: none;}
+
+.collabnote.\{\$note\} {display: none;}
+</style>
+<style>
+.picture_writing.\{\$pw\} {
+display:none
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -517,7 +614,7 @@ display:none;
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=esperanza-s-translations" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=df-thirteen" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -539,7 +636,7 @@ display:none;
                     
                     
                         <div id="page-title">
-                            Esperanza_Cai的冷门翻译们
+                            顺其自然的日子
                         </div>
                     
 
@@ -554,1192 +651,1151 @@ display:none;
 
 
 
-
-
-
-
-
-<div style="text-align: center;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">厨力是第一生产力</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">im&nbsp;not&nbsp;proud&nbsp;of&nbsp;that</a></div>
-<div class="collapsible-block-content"><img src="http://czyesperanza.wdfiles.com/local--files/pictures/imnotproudofthat.png" alt="imnotproudofthat.png" class="image" /></div>
-</div>
-</div>
-</div>
-<hr />
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
 </script>
-<div id="wiki-tabview-eec6897e68eec3438b86701be4cbbc2d" class="yui-navset">
+<div id="wiki-tabview-b0b3b41785f0c5b2b9637061110ff6ee" class="yui-navset">
 <ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>一种泥泞的色彩。</em></a></li>
-<li><a href="javascript:;"><em>一点善意的行为。</em></a></li>
-<li><a href="javascript:;"><em>一千道未愈的伤。</em></a></li>
+<li class="selected"><a href="javascript:;"><em>创作/翻译一览</em></a></li>
+<li><a href="javascript:;"><em>其他创作/翻译</em></a></li>
+<li><a href="javascript:;"><em>相关艺作</em></a></li>
+<li><a href="javascript:;"><em>竞赛计分板</em></a></li>
 </ul>
 <div class="yui-content">
 <div id="wiki-tab-0-0">
-<blockquote>
-<p>在英语里，我名字的意思是希望。在西班牙语里，它意味着太多的字母。它意味着哀伤，意味着等待。它就像数字九。一种泥泞的色彩。<br /></p>
-<div style="text-align: right;">
-<p>——《芒果街上的小屋》，桑德拉·希斯内罗丝/著，潘帕/译</p>
-</div>
-</blockquote>
-<hr />
-<p>这里列出的任何翻译，不管您什么时候看到，有任何的意见或者建议都还请提出来（讨论区或者私信都可以），我看到就会回复。<br />
-有时候我不一定会接受您的意见或者建议，但会附上理由，您也可以选择继续对这份理由进行讨论。<span style="text-decoration: line-through;">其实我很容易被说服的啦</span></p>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;SCP文档</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;SCP文档</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
 
-<blockquote>
-<p>1. <strong><a href="/henzoid-crocket-s-proposal-j">Henzoid-Crocket的提案</a></strong><br />
-2. <strong><a href="/scp-tldr-j">SCP-太长不看-J</a></strong><br />
-3. <strong><a href="/scp-4964">SCP-4964</a></strong><br />
-4. <strong><a href="/scp-4767">SCP-4767</a></strong><br />
-5. <strong><a href="/scp-4109">SCP-4109</a></strong><br />
-6. <strong><a href="/scp-2707">SCP-2707</a></strong><br />
-7. <strong><a href="/scp-cc-by-sa-3-0-co">SCP-CC BY-SA 3.0-CO</a></strong><br />
-8. <strong><a href="/scp-pu1p-j">SCP-PU1P-J</a></strong><br />
-9. <strong><a href="/scp-2914">SCP-2914</a></strong><br />
-10. <strong><a href="/scp-4563">SCP-4563</a></strong><br />
-11. <strong><a href="/scp-5096">SCP-5096</a></strong><br />
-12. <strong><a href="/scp-5309">SCP-5309</a></strong><br />
-13. <strong><a href="/scp-5020">SCP-5020</a></strong><br />
-14. <strong><a href="/scp-5747">SCP-5747</a></strong><br />
-15. <strong><a href="/scp-5710">SCP-5710</a></strong><br />
-16. <strong><a href="/scp-5067">SCP-5067</a></strong><br />
-17. <strong><a href="/scp-5466">SCP-5466</a></strong><br />
-18. <strong><a href="/scp-4186">SCP-4186</a></strong><br />
-19. <strong><a href="/scp-5788">SCP-5788</a></strong><br />
-20. <strong><a href="/scp-5117">SCP-5117</a></strong><br />
-21. <strong><a href="/scp-5251">SCP-5251</a></strong><br />
-22. <strong><a href="/scp-5325">SCP-5325</a></strong><br />
-23. <strong><a href="/scp-5899">SCP-5899</a></strong><br />
-24. <strong><a href="/scp-5633">SCP-5633</a></strong><br />
-25. <strong><a href="/scp-3748">SCP-3748</a></strong><br />
-26. <strong><a href="/scp-4879">SCP-4879</a></strong><br />
-27. <strong><a href="/director-bold-s-proposal-j">Bold主管的提案-J</a></strong><br />
-28. <strong><a href="/scp-5353">SCP-5353</a></strong><br />
-29. <strong><a href="/scp-5877">SCP-5877</a></strong></p>
-</blockquote>
 
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;SCP文档</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;故事</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;故事</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
+<div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
 
-<blockquote>
-<p>1.《<strong><a href="/i-thought-you-would-leave-even-the-reaper-for-me">我所希冀的一切；我所应得的一切</a></strong>》<br />
-2.《<strong><a href="/the-special-bond-between-child-and-mother">母子情深，血浓于水</a></strong>》<br />
-3.《<strong><a href="/the-slow-asphyxiation-of-undiluted-ardor">溺爱窒息</a></strong>》<br />
-4.《<strong><a href="/losing-my-colors">黯失我色</a></strong>》<br />
-5.《<strong><a href="/sophia-light-at-the-end-of-the-tunnel">隧道尽头的Sophia Light</a></strong>》<br />
-6.《<strong><a href="/for-old-time-s-sake">为了那些过去的日子</a></strong>》<br />
-7.《<strong><a href="/reboot-or-how-i-learned-to-stop-worrying-and-love-the-apocal">重启或：我如何学会停止担忧并爱上世界末日</a></strong>》<br />
-8.《<strong><a href="/jargon">黑话</a></strong>》<br />
-9.《<strong><a href="/a-world-we-live-in">我们生活的世界</a></strong>》<br />
-10.《<strong><a href="/property-of-communication-verifier-spc-corporation">来自SPC公司通讯核验员████的财产</a></strong>》<br />
-11.《<strong><a href="/tuesday-11am-conference-room-three">星期二上午11点，三号会议室</a></strong>》<br />
-12.《<strong><a href="/every-waking-hour-of-every-living-day">活着的每一时，醒着的每一刻</a></strong>》<br />
-13.《<strong><a href="/sunday-0600-mobile-task-force-central-training-facility">机动特遣队第一课：就职说明</a></strong>》<br />
-14.《<strong><a href="/conviction">罪恶信念</a></strong>》<br />
-15.《<strong><a href="/cool-guys-dont-look-at-explosions">真男人从不回头看爆炸</a></strong>》<br />
-16.《<strong><a href="/stop-picking-on-me">傻屌丘比特：别再找茬了</a></strong>》<br />
-17.《<strong><a href="/the-hitchhiker-s-guide-to-the-library">图书馆搭车客指南</a></strong>》<br />
-18.《<strong><a href="/dust-and-shopper-s-rewards">尘与商场大酬宾</a></strong>》<br />
-19.《<strong><a href="/four-stories-told-in-order">按顺序讲四个故事来哄骗一只对私人问题过分好奇的有智能的断手</a></strong>》<br />
-20.《<strong><a href="/slice-of-forum-life">论坛生活片段</a></strong>》<br />
-21.《<strong><a href="/troy-lament-and-the-terror-ferrets-of-darkling-lane">Troy Lament和黑暗巷的恐怖雪貂</a></strong>》<br />
-22.《<strong><a href="/substation-9">九号变电所</a></strong>》<br />
-23.《<strong><a href="/you-are-not-insignificant">你并不渺小</a></strong>》<br />
-24.《<strong><a href="/repost">转帖</a></strong>》<br />
-25.《<strong><a href="/translated-from-palauan">由帕劳语翻译而来</a></strong>》<br />
-26.《<strong><a href="/flos">Flos</a></strong>》<br />
-27.《<strong><a href="/you-will-come-back-to-me-once-this-is-done">你还会回来找我，在一切结束之后</a></strong>》<br />
-28.《<strong><a href="/a-kind-of-redemption">一种救赎</a></strong>》<br />
-29.《<strong><a href="/awakening">觉醒之时</a></strong>》<br />
-30.《<strong><a href="/what-is-wrong-with-you">你有什么毛病</a></strong>》<br />
-31.《<strong><a href="/blood-in-the-water">水中之血</a></strong>》<br />
-32.《<strong><a href="/strange-beasts">奇兽</a></strong>》<br />
-33.《<strong><a href="/such-a-shame-it-didn-t-work">大计未成，呜呼哀哉</a></strong>》<br />
-34.《<strong><a href="/asmodeus">阿斯蒙蒂斯</a></strong>》<br />
-35.《<strong><a href="/this-is-how-we-build-revelation">观谬者启示论</a></strong>》<br />
-36.《<strong><a href="/let-the-factory-fail">#打倒工厂</a></strong>》<br />
-37.《<strong><a href="/heart-of-the-beast">野兽之心</a></strong>》<br />
-38.《<strong><a href="/lilies">百合</a></strong>》<br />
-39.《<strong><a href="/everyday-is-somebodys-birthday">每天都有人过生日</a></strong>》<br />
-40.《<strong><a href="/discussion">一场讨论</a></strong>》<br />
-41.《<strong><a href="/ghosts-in-the-machine">机器幽灵</a></strong>》<br />
-42.《<strong><a href="/chiaroscuro">黑白变奏</a></strong>》<br />
-43.《<strong><a href="/nobody-in-their-right-mind">无人在此铭记时</a></strong>》</p>
-</blockquote>
 
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;故事</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;GoI格式</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;GoI格式</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<blockquote>
-<p>1.<strong><a href="/critterprofile-otis">小动物简介：Otis！</a></strong></p>
-</blockquote>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;GoI格式</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;艺术作品</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;艺术作品</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<blockquote>
-<p>1. <strong><a href="/raddagher-s-toon-zone">Raddagher的卡通基地</a></strong><br />
-2. <strong><a href="/desk-of-junior-designer-s-yvonne">初级设计师S. Yvonne的办公桌</a></strong><br />
-3. <strong><a href="/greyve-art-page">Greyve的艺作页</a></strong><br />
-4. <strong><a href="/strange-beasts">奇兽</a></strong></p>
-</blockquote>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;艺术作品</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;作者页</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;作者页</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<blockquote>
-<p>1. <strong><a href="/doctor-s-s-personnel-file">S███████博士的人事档案</a></strong><br />
-2. <strong><a href="/henzoids-author-page">Ozid博士的经历</a></strong><br />
-3. <strong><a href="/esperanza-s-translations">Esperanza_Cai的冷门翻译们</a></strong><br />
-4. <strong><a href="/mr-carbon-personnel-file">Mr Carbon的草稿们</a></strong><br />
-5. <strong><a href="/westrinsauthorpage">Westrin的人事档案</a></strong><br />
-6. <strong><a href="/coolpage-funpage">超酷超有趣的页面</a></strong><br />
-7. <strong><a href="/gargus-author-page">Gargus的作者页</a></strong><br />
-8. <strong><a href="/dr-dune-s-personnel-file">J. Dune的作者页</a></strong><br />
-9. <strong><a href="/the-radd-zone">Radd基地</a></strong><br />
-10. <strong><a href="/meet-the-interviewer-whiteguard">会见访谈者 - WhiteGuard篇</a></strong><br />
-11. <strong><a href="/riemann">Riemann</a></strong></p>
-</blockquote>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;作者页</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;其他</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;其他</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<blockquote>
-<p>1. <strong><a href="/mtf-psi-7-home-improvement-hub">机动特遣队Psi-7（“Home Improvement”-家居装饰）中心</a></strong><br />
-2. <strong><a href="/foundation-tales-arc">基金会故事-ARC</a></strong><br />
-3. <strong><a href="/reimagining-contest">重新想象竞赛</a></strong><br />
-4. <strong><a href="/fragment:scp-3309-april-fools">SCP-3309愚人节版</a></strong><br />
-5. <strong><a href="/scpdeclassified:scp-5466">解密：SCP-5466 - 创作者之死</a></strong><br />
-6. <strong><a href="/canon-renaissance-contest">设定复兴竞赛</a></strong><br />
-7. <strong><a href="/scpdeclassified:scp-4098">解密：SCP-4098 - S-C-P，简单得就像19-3-16！</a></strong><br />
-8. <strong><a href="/interviewing-icons-hub">访谈偶像中心页</a></strong><br />
-9. <strong><a href="/finding-asmodeus-hub">寻找阿斯蒙蒂斯</a></strong></p>
-</blockquote>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;其他</a></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我翻译的数量等于这里列出的-2</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<table class="wiki-content-table">
-<tr>
-<th>序号</th>
-<th>标题</th>
-<th>分数</th>
-<th>最后编辑</th>
-</tr>
-<tr>
-<td>1</td>
-<td><strong><a href="/i-thought-you-would-leave-even-the-reaper-for-me">我所希冀的一切；我所应得的一切</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1579156120 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Jan 2020 06:28</span></td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong><a href="/the-slow-asphyxiation-of-undiluted-ardor">溺爱窒息</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1579610443 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Jan 2020 12:40</span></td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong><a href="/the-special-bond-between-child-and-mother">母子情深，血浓于水</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1580973890 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Feb 2020 07:24</span></td>
-</tr>
-<tr>
-<td>4</td>
-<td><strong><a href="/scp-4964">SCP-4964</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1581412137 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Feb 2020 09:08</span></td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong><a href="/for-old-time-s-sake">为了那些过去的日子</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1581563246 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2020 03:07</span></td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong><a href="/reboot-or-how-i-learned-to-stop-worrying-and-love-the-apocal">重启或：我如何学会停止担忧并爱上世界末日</a></strong></td>
-<td>11</td>
-<td><span class="odate time_1582189658 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2020 09:07</span></td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong><a href="/jargon">黑话</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1582433654 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Feb 2020 04:54</span></td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong><a href="/a-world-we-live-in">我们生活的世界</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1582521439 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Feb 2020 05:17</span></td>
-</tr>
-<tr>
-<td>9</td>
-<td><strong><a href="/property-of-communication-verifier-spc-corporation">来自SPC公司通讯核验员████的财产</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1582602710 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Feb 2020 03:51</span></td>
-</tr>
-<tr>
-<td>10</td>
-<td><strong><a href="/tuesday-11am-conference-room-three">星期二上午11点，三号会议室</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1582683191 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Feb 2020 02:13</span></td>
-</tr>
-<tr>
-<td>11</td>
-<td><strong><a href="/conviction">罪恶信念</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1583326482 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Mar 2020 12:54</span></td>
-</tr>
-<tr>
-<td>12</td>
-<td><strong><a href="/scp-4767">SCP-4767</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1583371668 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Mar 2020 01:27</span></td>
-</tr>
-<tr>
-<td>13</td>
-<td><strong><a href="/cool-guys-dont-look-at-explosions">真男人从不回头看爆炸</a></strong></td>
-<td>10</td>
-<td><span class="odate time_1583836640 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Mar 2020 10:37</span></td>
-</tr>
-<tr>
-<td>14</td>
-<td><strong><a href="/mtf-psi-7-home-improvement-hub">机动特遣队Psi-7（“Home Improvement”-家居装饰）中心</a></strong></td>
-<td>7</td>
-<td><span class="odate time_1584073198 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Mar 2020 04:19</span></td>
-</tr>
-<tr>
-<td>15</td>
-<td><strong><a href="/scp-2707">SCP-2707</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1584758086 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Mar 2020 02:34</span></td>
-</tr>
-<tr>
-<td>16</td>
-<td><strong><a href="/stop-picking-on-me">傻屌丘比特：别再找茬了</a></strong></td>
-<td>10</td>
-<td><span class="odate time_1585221920 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Mar 2020 11:25</span></td>
-</tr>
-<tr>
-<td>17</td>
-<td><strong><a href="/the-hitchhiker-s-guide-to-the-library">图书馆搭车客指南</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1585448243 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Mar 2020 02:17</span></td>
-</tr>
-<tr>
-<td>18</td>
-<td><strong><a href="/dust-and-shopper-s-rewards">尘与商场大酬宾</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1585671034 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 Mar 2020 16:10</span></td>
-</tr>
-<tr>
-<td>19</td>
-<td><strong><a href="/scp-pu1p-j">SCP-PU1P-J</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1586752733 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Apr 2020 04:38</span></td>
-</tr>
-<tr>
-<td>20</td>
-<td><strong><a href="/troy-lament-and-the-terror-ferrets-of-darkling-lane">Troy Lament和黑暗巷的恐怖雪貂</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1587274474 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Apr 2020 05:34</span></td>
-</tr>
-<tr>
-<td>21</td>
-<td><strong><a href="/mr-carbon-personnel-file">Mr Carbon的草稿们</a></strong></td>
-<td>0</td>
-<td><span class="odate time_1587282362 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Apr 2020 07:46</span></td>
-</tr>
-<tr>
-<td>22</td>
-<td><strong><a href="/westrinsauthorpage">Westrin的人事档案</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1592396082 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Jun 2020 12:14</span></td>
-</tr>
-<tr>
-<td>23</td>
-<td><strong><a href="/scp-2914">SCP-2914</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1592476333 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Jun 2020 10:32</span></td>
-</tr>
-<tr>
-<td>24</td>
-<td><strong><a href="/scp-4563">SCP-4563</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1593075352 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Jun 2020 08:55</span></td>
-</tr>
-<tr>
-<td>25</td>
-<td><strong><a href="/scp-tldr-j">SCP-太长不看-J</a></strong></td>
-<td>9</td>
-<td><span class="odate time_1593150828 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jun 2020 05:53</span></td>
-</tr>
-<tr>
-<td>26</td>
-<td><strong><a href="/every-waking-hour-of-every-living-day">活着的每一时，醒着的每一刻</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1593154139 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jun 2020 06:48</span></td>
-</tr>
-<tr>
-<td>27</td>
-<td><strong><a href="/sunday-0600-mobile-task-force-central-training-facility">机动特遣队第一课：就职说明</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1593154192 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jun 2020 06:49</span></td>
-</tr>
-<tr>
-<td>28</td>
-<td><strong><a href="/four-stories-told-in-order">按顺序讲四个故事来哄骗一只对私人问题过分好奇的有智能的断手</a></strong></td>
-<td>0</td>
-<td><span class="odate time_1593154684 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jun 2020 06:58</span></td>
-</tr>
-<tr>
-<td>29</td>
-<td><strong><a href="/scp-5096">SCP-5096</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1593188833 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jun 2020 16:27</span></td>
-</tr>
-<tr>
-<td>30</td>
-<td><strong><a href="/scp-cc-by-sa-3-0-co">SCP-CC BY-SA 3.0-CO</a></strong></td>
-<td>13</td>
-<td><span class="odate time_1593874239 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Jul 2020 14:50</span></td>
-</tr>
-<tr>
-<td>31</td>
-<td><strong><a href="/scp-5710">SCP-5710</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1594815939 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Jul 2020 12:25</span></td>
-</tr>
-<tr>
-<td>32</td>
-<td><strong><a href="/sophia-light-at-the-end-of-the-tunnel">隧道尽头的Sophia Light</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1595567823 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Jul 2020 05:17</span></td>
-</tr>
-<tr>
-<td>33</td>
-<td><strong><a href="/you-are-not-insignificant">你并不渺小</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1595575168 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Jul 2020 07:19</span></td>
-</tr>
-<tr>
-<td>34</td>
-<td><strong><a href="/scp-5067">SCP-5067</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1595747249 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jul 2020 07:07</span></td>
-</tr>
-<tr>
-<td>35</td>
-<td><strong><a href="/repost">转帖</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1595755290 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Jul 2020 09:21</span></td>
-</tr>
-<tr>
-<td>36</td>
-<td><strong><a href="/scp-4186">SCP-4186</a></strong></td>
-<td>0</td>
-<td><span class="odate time_1596987293 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Aug 2020 15:34</span></td>
-</tr>
-<tr>
-<td>37</td>
-<td><strong><a href="/raddagher-s-toon-zone">Raddagher的卡通基地</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1597390033 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Aug 2020 07:27</span></td>
-</tr>
-<tr>
-<td>38</td>
-<td><strong><a href="/henzoids-author-page">Ozid博士的经历</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1597564287 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Aug 2020 07:51</span></td>
-</tr>
-<tr>
-<td>39</td>
-<td><strong><a href="/scp-5020">SCP-5020</a></strong></td>
-<td>8</td>
-<td><span class="odate time_1597570611 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Aug 2020 09:36</span></td>
-</tr>
-<tr>
-<td>40</td>
-<td><strong><a href="/scp-4109">SCP-4109</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1597571279 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Aug 2020 09:47</span></td>
-</tr>
-<tr>
-<td>41</td>
-<td><strong><a href="/henzoid-crocket-s-proposal-j">Henzoid-Crocket的提案</a></strong></td>
-<td>12</td>
-<td><span class="odate time_1597572517 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Aug 2020 10:08</span></td>
-</tr>
-<tr>
-<td>42</td>
-<td><strong><a href="/losing-my-colors">黯失我色</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1597573409 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Aug 2020 10:23</span></td>
-</tr>
-<tr>
-<td>43</td>
-<td><strong><a href="/doctor-s-s-personnel-file">S███████博士的人事档案</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1597842376 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Aug 2020 13:06</span></td>
-</tr>
-<tr>
-<td>44</td>
-<td><strong><a href="/scp-5788">SCP-5788</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1597851070 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Aug 2020 15:31</span></td>
-</tr>
-<tr>
-<td>45</td>
-<td><strong><a href="/translated-from-palauan">由帕劳语翻译而来</a></strong></td>
-<td>0</td>
-<td><span class="odate time_1597897346 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2020 04:22</span></td>
-</tr>
-<tr>
-<td>46</td>
-<td><strong><a href="/scp-5117">SCP-5117</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1597911066 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2020 08:11</span></td>
-</tr>
-<tr>
-<td>47</td>
-<td><strong><a href="/reimagining-contest">重新想象竞赛</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1597932860 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2020 14:14</span></td>
-</tr>
-<tr>
-<td>48</td>
-<td><strong><a href="/flos">Flos</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1597980691 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Aug 2020 03:31</span></td>
-</tr>
-<tr>
-<td>49</td>
-<td><strong><a href="/the-radd-zone">Radd基地</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1597992536 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Aug 2020 06:48</span></td>
-</tr>
-<tr>
-<td>50</td>
-<td><strong><a href="/scp-5325">SCP-5325</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1599107569 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">03 Sep 2020 04:32</span></td>
-</tr>
-<tr>
-<td>51</td>
-<td><strong><a href="/scp-5899">SCP-5899</a></strong></td>
-<td>13</td>
-<td><span class="odate time_1599307626 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Sep 2020 12:07</span></td>
-</tr>
-<tr>
-<td>52</td>
-<td><strong><a href="/scp-5633">SCP-5633</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1599904442 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Sep 2020 09:54</span></td>
-</tr>
-<tr>
-<td>53</td>
-<td><strong><a href="/scp-3748">SCP-3748</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1600000168 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Sep 2020 12:29</span></td>
-</tr>
-<tr>
-<td>54</td>
-<td><strong><a href="/a-kind-of-redemption">一种救赎</a></strong></td>
-<td>0</td>
-<td><span class="odate time_1600315387 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Sep 2020 04:03</span></td>
-</tr>
-<tr>
-<td>55</td>
-<td><strong><a href="/what-is-wrong-with-you">你有什么毛病</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1600447190 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2020 16:39</span></td>
-</tr>
-<tr>
-<td>56</td>
-<td><strong><a href="/foundation-tales-arc">基金会故事-ARC</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1600496776 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Sep 2020 06:26</span></td>
-</tr>
-<tr>
-<td>57</td>
-<td><strong><a href="/substation-9">九号变电所</a></strong></td>
-<td>26</td>
-<td><span class="odate time_1600567258 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Sep 2020 02:00</span></td>
-</tr>
-<tr>
-<td>58</td>
-<td><strong><a href="/slice-of-forum-life">论坛生活片段</a></strong></td>
-<td>8</td>
-<td><span class="odate time_1600567930 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Sep 2020 02:12</span></td>
-</tr>
-<tr>
-<td>59</td>
-<td><strong><a href="/fragment:scp-3309-april-fools">SCP-3309愚人节版</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1601039669 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Sep 2020 13:14</span></td>
-</tr>
-<tr>
-<td>60</td>
-<td><strong><a href="/you-will-come-back-to-me-once-this-is-done">你还会回来找我，在一切结束之后</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1601128326 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Sep 2020 13:52</span></td>
-</tr>
-<tr>
-<td>61</td>
-<td><strong><a href="/scp-5309">SCP-5309</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1601299088 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">28 Sep 2020 13:18</span></td>
-</tr>
-<tr>
-<td>62</td>
-<td><strong><a href="/strange-beasts">奇兽</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1601390513 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Sep 2020 14:41</span></td>
-</tr>
-<tr>
-<td>63</td>
-<td><strong><a href="/scp-4879">SCP-4879</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1601567221 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Oct 2020 15:47</span></td>
-</tr>
-<tr>
-<td>64</td>
-<td><strong><a href="/greyve-art-page">Greyve的艺作页</a></strong></td>
-<td>9</td>
-<td><span class="odate time_1601746028 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">03 Oct 2020 17:27</span></td>
-</tr>
-<tr>
-<td>65</td>
-<td><strong><a href="/scp-5466">SCP-5466</a></strong></td>
-<td>15</td>
-<td><span class="odate time_1602002784 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Oct 2020 16:46</span></td>
-</tr>
-<tr>
-<td>66</td>
-<td><strong><a href="/such-a-shame-it-didn-t-work">大计未成，呜呼哀哉</a></strong></td>
-<td>8</td>
-<td><span class="odate time_1602249097 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Oct 2020 13:11</span></td>
-</tr>
-<tr>
-<td>67</td>
-<td><strong><a href="/blood-in-the-water">水中之血</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1602252662 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Oct 2020 14:11</span></td>
-</tr>
-<tr>
-<td>68</td>
-<td><strong><a href="/scpdeclassified:scp-4098">解密：SCP-4098 - S-C-P，简单得就像19-3-16！</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1602334520 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Oct 2020 12:55</span></td>
-</tr>
-<tr>
-<td>69</td>
-<td><strong><a href="/scpdeclassified:scp-5466">解密：SCP-5466 - 创作者之死</a></strong></td>
-<td>12</td>
-<td><span class="odate time_1602335444 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Oct 2020 13:10</span></td>
-</tr>
-<tr>
-<td>70</td>
-<td><strong><a href="/this-is-how-we-build-revelation">观谬者启示论</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1602755478 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Oct 2020 09:51</span></td>
-</tr>
-<tr>
-<td>71</td>
-<td><strong><a href="/director-bold-s-proposal-j">Bold主管的提案-J</a></strong></td>
-<td>16</td>
-<td><span class="odate time_1603117230 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Oct 2020 14:20</span></td>
-</tr>
-<tr>
-<td>72</td>
-<td><strong><a href="/scp-5747">SCP-5747</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1603328390 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 00:59</span></td>
-</tr>
-<tr>
-<td>73</td>
-<td><strong><a href="/coolpage-funpage">超酷超有趣的页面</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1603357608 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 09:06</span></td>
-</tr>
-<tr>
-<td>74</td>
-<td><strong><a href="/asmodeus">阿斯蒙蒂斯</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1603375758 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Oct 2020 14:09</span></td>
-</tr>
-<tr>
-<td>75</td>
-<td><strong><a href="/heart-of-the-beast">野兽之心</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1603862485 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">28 Oct 2020 05:21</span></td>
-</tr>
-<tr>
-<td>76</td>
-<td><strong><a href="/finding-asmodeus-hub">寻找阿斯蒙蒂斯</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1603891325 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">28 Oct 2020 13:22</span></td>
-</tr>
-<tr>
-<td>77</td>
-<td><strong><a href="/dr-dune-s-personnel-file">J. Dune的作者页</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1604051784 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Oct 2020 09:56</span></td>
-</tr>
-<tr>
-<td>78</td>
-<td><strong><a href="/riemann">Riemann</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1604071365 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Oct 2020 15:22</span></td>
-</tr>
-<tr>
-<td>79</td>
-<td><strong><a href="/lilies">百合</a></strong></td>
-<td>5</td>
-<td><span class="odate time_1604077941 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Oct 2020 17:12</span></td>
-</tr>
-<tr>
-<td>80</td>
-<td><strong><a href="/critterprofile-otis">小动物简介：Otis！</a></strong></td>
-<td>11</td>
-<td><span class="odate time_1604149362 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 Oct 2020 13:02</span></td>
-</tr>
-<tr>
-<td>81</td>
-<td><strong><a href="/esperanza-s-translations">Esperanza_Cai的冷门翻译们</a></strong></td>
-<td>10</td>
-<td><span class="odate time_1604149821 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 Oct 2020 13:10</span></td>
-</tr>
-<tr>
-<td>82</td>
-<td><strong><a href="/interviewing-icons-hub">访谈偶像中心页</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1604474591 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Nov 2020 07:23</span></td>
-</tr>
-<tr>
-<td>83</td>
-<td><strong><a href="/meet-the-interviewer-whiteguard">会见访谈者 - WhiteGuard篇</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1604474771 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Nov 2020 07:26</span></td>
-</tr>
-<tr>
-<td>84</td>
-<td><strong><a href="/scp-5251">SCP-5251</a></strong></td>
-<td>20</td>
-<td><span class="odate time_1604488337 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Nov 2020 11:12</span></td>
-</tr>
-<tr>
-<td>85</td>
-<td><strong><a href="/discussion">一场讨论</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1604727373 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Nov 2020 05:36</span></td>
-</tr>
-<tr>
-<td>86</td>
-<td><strong><a href="/gargus-author-page">Gargus的作者页</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1604727500 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Nov 2020 05:38</span></td>
-</tr>
-<tr>
-<td>87</td>
-<td><strong><a href="/let-the-factory-fail">#打倒工厂</a></strong></td>
-<td>16</td>
-<td><span class="odate time_1605098598 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Nov 2020 12:43</span></td>
-</tr>
-<tr>
-<td>88</td>
-<td><strong><a href="/awakening">觉醒之时</a></strong></td>
-<td>1</td>
-<td><span class="odate time_1605335543 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Nov 2020 06:32</span></td>
-</tr>
-<tr>
-<td>89</td>
-<td><strong><a href="/chiaroscuro">黑白变奏</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1605681752 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 06:42</span></td>
-</tr>
-<tr>
-<td>90</td>
-<td><strong><a href="/scp-5353">SCP-5353</a></strong></td>
-<td>3</td>
-<td><span class="odate time_1605682277 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 06:51</span></td>
-</tr>
-<tr>
-<td>91</td>
-<td><strong><a href="/scp-5877">SCP-5877</a></strong></td>
-<td>2</td>
-<td><span class="odate time_1605682717 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 06:58</span></td>
-</tr>
-<tr>
-<td>92</td>
-<td><strong><a href="/nobody-in-their-right-mind">无人在此铭记时</a></strong></td>
-<td>4</td>
-<td><span class="odate time_1605683080 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 07:04</span></td>
-</tr>
-<tr>
-<td>93</td>
-<td><strong><a href="/canon-renaissance-contest">设定复兴竞赛</a></strong></td>
-<td>17</td>
-<td><span class="odate time_1605683813 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 07:16</span></td>
-</tr>
-<tr>
-<td>94</td>
-<td><strong><a href="/everyday-is-somebodys-birthday">每天都有人过生日</a></strong></td>
-<td>7</td>
-<td><span class="odate time_1605684730 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 07:32</span></td>
-</tr>
-<tr>
-<td>95</td>
-<td><strong><a href="/ghosts-in-the-machine">机器幽灵</a></strong></td>
-<td>6</td>
-<td><span class="odate time_1605684808 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Nov 2020 07:33</span></td>
-</tr>
-<tr>
-<td>96</td>
-<td><strong><a href="/desk-of-junior-designer-s-yvonne">初级设计师S. Yvonne的办公桌</a></strong></td>
-<td>9</td>
-<td><span class="odate time_1605774153 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2020 08:22</span></td>
-</tr>
-</table>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我翻译的数量等于这里列出的-2</a></div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我翻译的数量等于这里列出的+1</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<p>1. <strong><a href="/i-thought-you-would-leave-even-the-reaper-for-me">我所希冀的一切；我所应得的一切</a></strong><br />
-2. <strong><a href="/doctor-s-s-personnel-file">S███████博士的人事档案</a></strong><br />
-3. <strong><a href="/the-special-bond-between-child-and-mother">母子情深，血浓于水</a></strong><br />
-4. <strong><a href="/the-slow-asphyxiation-of-undiluted-ardor">溺爱窒息</a></strong><br />
-5. <strong><a href="/losing-my-colors">黯失我色</a></strong><br />
-6. <strong><a href="/henzoid-crocket-s-proposal-j">Henzoid-Crocket的提案</a></strong><br />
-7. <strong><a href="/sophia-light-at-the-end-of-the-tunnel">隧道尽头的Sophia Light</a></strong><br />
-8. <strong><a href="/scp-tldr-j">SCP-太长不看-J</a></strong><br />
-9. <strong><a href="/henzoids-author-page">Ozid博士的经历</a></strong><br />
-10. <strong><a href="/scp-4964">SCP-4964</a></strong><br />
-11. <strong><a href="/for-old-time-s-sake">为了那些过去的日子</a></strong><br />
-12. <strong><a href="/mtf-psi-7-home-improvement-hub">机动特遣队Psi-7（“Home Improvement”-家居装饰）中心</a></strong><br />
-13. <strong><a href="/reboot-or-how-i-learned-to-stop-worrying-and-love-the-apocal">重启或：我如何学会停止担忧并爱上世界末日</a></strong><br />
-14. <strong><a href="/foundation-tales-arc">基金会故事-ARC</a></strong><br />
-15. <strong><a href="/jargon">黑话</a></strong><br />
-16. <strong><a href="/a-world-we-live-in">我们生活的世界</a></strong><br />
-17. <strong><a href="/property-of-communication-verifier-spc-corporation">来自SPC公司通讯核验员████的财产</a></strong><br />
-18. <strong><a href="/tuesday-11am-conference-room-three">星期二上午11点，三号会议室</a></strong><br />
-19. <strong><a href="/every-waking-hour-of-every-living-day">活着的每一时，醒着的每一刻</a></strong><br />
-20. <strong><a href="/sunday-0600-mobile-task-force-central-training-facility">机动特遣队第一课：就职说明</a></strong><br />
-21. <strong><a href="/scp-4767">SCP-4767</a></strong><br />
-22. <strong><a href="/esperanza-s-translations">Esperanza_Cai的冷门翻译们</a></strong><br />
-23. <strong><a href="/conviction">罪恶信念</a></strong><br />
-24. <strong><a href="/scp-4109">SCP-4109</a></strong><br />
-25. <strong><a href="/cool-guys-dont-look-at-explosions">真男人从不回头看爆炸</a></strong><br />
-26. <strong><a href="/scp-2707">SCP-2707</a></strong><br />
-27. <strong><a href="/stop-picking-on-me">傻屌丘比特：别再找茬了</a></strong><br />
-28. <strong><a href="/the-hitchhiker-s-guide-to-the-library">图书馆搭车客指南</a></strong><br />
-29. <strong><a href="/dust-and-shopper-s-rewards">尘与商场大酬宾</a></strong><br />
-30. <strong><a href="/scp-cc-by-sa-3-0-co">SCP-CC BY-SA 3.0-CO</a></strong><br />
-31. <strong><a href="/scp-pu1p-j">SCP-PU1P-J</a></strong><br />
-32. <strong><a href="/four-stories-told-in-order">按顺序讲四个故事来哄骗一只对私人问题过分好奇的有智能的断手</a></strong><br />
-33. <strong><a href="/slice-of-forum-life">论坛生活片段</a></strong><br />
-34. <strong><a href="/troy-lament-and-the-terror-ferrets-of-darkling-lane">Troy Lament和黑暗巷的恐怖雪貂</a></strong><br />
-35. <strong><a href="/mr-carbon-personnel-file">Mr Carbon的草稿们</a></strong><br />
-36. <strong><a href="/westrinsauthorpage">Westrin的人事档案</a></strong><br />
-37. <strong><a href="/coolpage-funpage">超酷超有趣的页面</a></strong><br />
-38. <strong><a href="/gargus-author-page">Gargus的作者页</a></strong><br />
-39. <strong><a href="/scp-2914">SCP-2914</a></strong><br />
-40. <strong><a href="/reimagining-contest">重新想象竞赛</a></strong><br />
-41. <strong><a href="/scp-4563">SCP-4563</a></strong><br />
-42. <strong><a href="/scp-5096">SCP-5096</a></strong><br />
-43. <strong><a href="/scp-5309">SCP-5309</a></strong><br />
-44. <strong><a href="/scp-5020">SCP-5020</a></strong><br />
-45. <strong><a href="/scp-5747">SCP-5747</a></strong><br />
-46. <strong><a href="/scp-5710">SCP-5710</a></strong><br />
-47. <strong><a href="/substation-9">九号变电所</a></strong><br />
-48. <strong><a href="/you-are-not-insignificant">你并不渺小</a></strong><br />
-49. <strong><a href="/scp-5067">SCP-5067</a></strong><br />
-50. <strong><a href="/repost">转帖</a></strong><br />
-51. <strong><a href="/scp-5466">SCP-5466</a></strong><br />
-52. <strong><a href="/dr-dune-s-personnel-file">J. Dune的作者页</a></strong><br />
-53. <strong><a href="/scp-4186">SCP-4186</a></strong><br />
-54. <strong><a href="/raddagher-s-toon-zone">Raddagher的卡通基地</a></strong><br />
-55. <strong><a href="/desk-of-junior-designer-s-yvonne">初级设计师S. Yvonne的办公桌</a></strong><br />
-56. <strong><a href="/the-radd-zone">Radd基地</a></strong><br />
-57. <strong><a href="/scp-5788">SCP-5788</a></strong><br />
-58. <strong><a href="/translated-from-palauan">由帕劳语翻译而来</a></strong><br />
-59. <strong><a href="/scp-5117">SCP-5117</a></strong><br />
-60. <strong><a href="/greyve-art-page">Greyve的艺作页</a></strong><br />
-61. <strong><a href="/flos">Flos</a></strong><br />
-62. <strong><a href="/scp-5251">SCP-5251</a></strong><br />
-63. <strong><a href="/canon-renaissance-contest">设定复兴竞赛</a></strong><br />
-64. <strong><a href="/you-will-come-back-to-me-once-this-is-done">你还会回来找我，在一切结束之后</a></strong><br />
-65. <strong><a href="/scp-5325">SCP-5325</a></strong><br />
-66. <strong><a href="/scp-5899">SCP-5899</a></strong><br />
-67. <strong><a href="/scp-5633">SCP-5633</a></strong><br />
-68. <strong><a href="/scp-3748">SCP-3748</a></strong><br />
-69. <strong><a href="/meet-the-interviewer-whiteguard">会见访谈者 - WhiteGuard篇</a></strong><br />
-70. <strong><a href="/a-kind-of-redemption">一种救赎</a></strong><br />
-71. <strong><a href="/awakening">觉醒之时</a></strong><br />
-72. <strong><a href="/what-is-wrong-with-you">你有什么毛病</a></strong><br />
-73. <strong><a href="/interviewing-icons-hub">访谈偶像中心页</a></strong><br />
-74. <strong><a href="/blood-in-the-water">水中之血</a></strong><br />
-75. <strong><a href="/strange-beasts">奇兽</a></strong><br />
-76. <strong><a href="/scp-4879">SCP-4879</a></strong><br />
-77. <strong><a href="/such-a-shame-it-didn-t-work">大计未成，呜呼哀哉</a></strong><br />
-78. <strong><a href="/asmodeus">阿斯蒙蒂斯</a></strong><br />
-79. <strong><a href="/finding-asmodeus-hub">寻找阿斯蒙蒂斯</a></strong><br />
-80. <strong><a href="/this-is-how-we-build-revelation">观谬者启示论</a></strong><br />
-81. <strong><a href="/director-bold-s-proposal-j">Bold主管的提案-J</a></strong><br />
-82. <strong><a href="/let-the-factory-fail">#打倒工厂</a></strong><br />
-83. <strong><a href="/riemann">Riemann</a></strong><br />
-84. <strong><a href="/heart-of-the-beast">野兽之心</a></strong><br />
-85. <strong><a href="/lilies">百合</a></strong><br />
-86. <strong><a href="/critterprofile-otis">小动物简介：Otis！</a></strong><br />
-87. <strong><a href="/everyday-is-somebodys-birthday">每天都有人过生日</a></strong><br />
-88. <strong><a href="/discussion">一场讨论</a></strong><br />
-89. <strong><a href="/ghosts-in-the-machine">机器幽灵</a></strong><br />
-90. <strong><a href="/chiaroscuro">黑白变奏</a></strong><br />
-91. <strong><a href="/scp-5353">SCP-5353</a></strong><br />
-92. <strong><a href="/scp-5877">SCP-5877</a></strong><br />
-93. <strong><a href="/nobody-in-their-right-mind">无人在此铭记时</a></strong></p>
-
-    
-    
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我翻译的数量等于这里列出的+1</a></div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我也不知道是不是中分最受欢迎的翻译作品</a></div>
-<div class="collapsible-block-content"><div class="list-pages-box">    
-
-<ul>
-<li><a href="/scp-001-o5">SCP-001:O5</a></li>
-<li><a href="/scp-000">SCP-000</a></li>
-<li><a href="/scp-1762">SCP-1762</a></li>
-<li><a href="/site-rules">站规</a></li>
-<li><a href="/scp-914">SCP-914</a></li>
-<li><a href="/scp-2662">SCP-2662</a></li>
-<li><a href="/scp-1922-j">SCP-1922-J</a></li>
-<li><a href="/scp-2295">SCP-2295</a></li>
-<li><a href="/scp-010-j">SCP-010-J</a></li>
-<li><a href="/scp-buns">SCP兔兔</a></li>
-<li><a href="/scp-001-ex">The Great Hippo 与 PeppersGhost 的提案</a></li>
-<li><a href="/until-death">至死不渝</a></li>
-<li><a href="/scp-3041">SCP-3041</a></li>
-<li><a href="/scp-1230">SCP-1230</a></li>
-<li><a href="/scp-079">SCP-079</a></li>
-<li><a href="/about-the-scp-foundation">关于SCP基金会</a></li>
-<li><a href="/tanhony-s-proposal">Tanhony的提案</a></li>
-<li><a href="/scp-8900-ex">SCP-8900-EX</a></li>
-<li><a href="/scp-2316">SCP-2316</a></li>
-<li><a href="/ethics-committee-orientation">伦理道德委员会培訓</a></li>
-<li><a href="/css-theme-preparation-tool">CSS主题制作工具</a></li>
-<li><a href="/jonathan-ball-s-proposal">Jonathan Ball的提案</a></li>
-<li><a href="/lily-s-proposal">Lily的提案</a></li>
-<li><a href="/clef101">Clef博士教研班的文字记录，“现实扭曲者与你：怎样在现实并不存在时生存下来。”</a></li>
-<li><a href="/scp-2998">SCP-2998</a></li>
-<li><a href="/scp-309-j">我该怎么删除文档</a></li>
-<li><a href="/scp-4100">SCP-4100</a></li>
-<li><a href="/scp-2935">SCP-2935</a></li>
-<li><a href="/scp-035">SCP-035</a></li>
-<li><a href="/scp-002">SCP-002</a></li>
-<li><a href="/mackenzie-stereotypes">Mackenzie博士的作家观念指南</a></li>
-<li><a href="/your-last-first-day">你最后一个第一天</a></li>
-<li><a href="/scp-4290">SCP-4290</a></li>
-<li><a href="/scp-048">SCP-048</a></li>
-<li><a href="/scp-5999">SCP-5999</a></li>
-<li><a href="/svg-animation">7happy7 的 SVG-动画 画廊</a></li>
-<li><a href="/interviews-with-prospective-groups-of-interest">相关组织面试</a></li>
-<li><a href="/scp-049-j">SCP-049-J</a></li>
-<li><a href="/scp-3201">SCP-3201</a></li>
-<li><a href="/scp-3020">SCP-3020</a></li>
-<li><a href="/scp-076">SCP-076</a></li>
-<li><a href="/scp-166">SCP-166</a></li>
-<li><a href="/fear-alone">恐惧唯存</a></li>
-<li><a href="/the-death-of-alto-clef-etc">Alto Clef之死，又称Ukulele特工，又称亚当·本·耶和华，又称路西法，谎言之父，又称混蛋，等等。</a></li>
-<li><a href="/scp-ttku-j">SCP-TTKU-J（即是要杀了你的东西）</a></li>
-<li><a href="/scp-963">SCP-963</a></li>
-<li><a href="/sandrewswann-s-proposal">S Andrew Swann的提案</a></li>
-<li><a href="/dr-clef-s-proposal">Clef博士的提案</a></li>
-<li><a href="/tanhony-s-proposal-ii">Tanhony的提案II</a></li>
-<li><a href="/wikipedia-shigastan">西加斯坦共和国（被删除的页面） - 维基百科</a></li>
-</ul>
-
-    
-    <div class="pager"><span class="pager-no">page 2 of 5</span><span class="target"><a href="/esperanza-s-translations/p/1">&laquo; previous</a></span><span class="target"><a href="/esperanza-s-translations/p/1">1</a></span><span class="current">2</span><span class="target"><a href="/esperanza-s-translations/p/3">3</a></span><span class="target"><a href="/esperanza-s-translations/p/4">4</a></span><span class="target"><a href="/esperanza-s-translations/p/5">5</a></span><span class="target"><a href="/esperanza-s-translations/p/3">next &raquo;</a></span></div>
-    
-    </div></div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;我也不知道是不是中分最受欢迎的翻译作品</a></div>
-</div>
-</div>
-</div>
-<div id="wiki-tab-0-1" style="display:none">
-<blockquote>
-<p><strong><span style="text-decoration: line-through;">善良的人：</span></strong> <a href="/a-kind-of-christmas">这</a><a href="/scp-2331">不是</a>一篇条目。这是一个<a href="/the-melody-of-autumn-passing-into-winter">洞</a>，有谁在旅途中<a href="/reap-what-you-sew">穿过</a>此处，寻找足够让它们<a href="/scp-2772">爱</a>到终结的故事。</p>
-<p><a href="http://www.scp-wiki.net/system:page-tags/tag/kindness#pages">它们的脚步还能被感觉到，印入纸页之中。</a><br /></p>
-<div style="text-align: right;">
-<p>——摘自<a href="/personnel-and-character-dossier">人员及角色档案</a></p>
-</div>
-</blockquote>
-<p><span style="color: grey">我收集的Kind Man的出场文段。<br />
-感觉现在补完翻译也不必要了全文校对也不必要了，就把它留在这里好了（。</span></p>
-<p><strong><span style="font-size:larger;">剧透注意。</span></strong></p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;这个折叠页，按一下就是剧透</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;紫色香烟，蓝色墨水</a></div>
-<div class="collapsible-block-content">
-<p>按<a href="http://www.scp-wiki.net/system:page-tags/tag/kindness#pages">kindness tag</a>顺序排列：</p>
-<ul>
-<li><span style="color: #a18cd1"><strong>A Kind Of Christmas:</strong></span> <span style="color: #1e90ff">In all instances where the SCP object has been capable of speech, the effector of the breach was described as “a kind man.”</span></li>
-<li><span style="color: #a18cd1"><strong>From Unknown Admirer to Unknown Admiree:</strong></span> <span style="color: #1e90ff">Even if it's the kindest of men.</span></li>
-<li><span style="color: #a18cd1"><strong>&#8230;Like Clockwork:</strong></span> <span style="color: #1e90ff">（其实我看了一遍原文但还是不敢确定）</span></li>
-<li><span style="color: #a18cd1"><strong>Reap What You Sew:</strong></span> <span style="color: #1e90ff">On the card, in a neat, blue, cursive script&#8230;The last thing Kairos saw before the lid shut and he was sent off to places unknown, was a loving smile, and a pair of kind eyes.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-1252:</strong></span> <span style="color: #1e90ff">The letter had no return address and the message contained details of Suzie's condition written in neat blue ink. （蓝色墨水的neat，不过其实不加也可以？）</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-1353:</strong></span> <span style="color: #1e90ff">I just woke up thinking about some man with kind eyes I saw down the street the day before, how he touched my arm and said he was sorry before walking off.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-1551:</strong></span> <span style="color: #1e90ff">Especially that man snooping around, the one with the kind smile.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-166:</strong></span> <span style="color: #1e90ff">（<span style="text-decoration: line-through;">我暂时没找着，</span>不过我喜欢这个故事（。）我找到了！谁能想到会有空白折叠页这种操作啊！</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-1771:</strong></span> <span style="color: #1e90ff">Upon routine inspection of SCP-1771-03 during fall season, Agent ██ reported finding a letter directed to a non-existent inhabitant referred to only as 'the kind man who did the redecorating'.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2331:</strong></span> <span style="color: #1e90ff">I did something very kind for him once. We've had a kind of friendship ever since.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2353:</strong></span> <span style="color: #1e90ff">Even that kind, poor fella cashiering the damn place was giving you a side-eye!</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2442:</strong></span> <span style="color: #1e90ff">You're kinder than the description frames you, you know.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2552:</strong></span> <span style="color: #1e90ff">I AM NO K[illegible].</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2662:</strong></span> <span style="color: #1e90ff">Welcome Researcher K███ M██</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2772:</strong></span> <span style="color: #1e90ff">On the card was a note written with blue ink in neat cursive containing what is believed to be the entire decoded transcript of Auditory Event 482&#8230;</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2882:</strong></span> <span style="color: #1e90ff">'When Kindness Is Eclipsed With Cruelty'（大概是）</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2909:</strong></span> <span style="color: #1e90ff">One kind man had put a gun to me.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-2992:</strong></span> <span style="color: #1e90ff">Doctor K. M██(primary)</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-414:</strong></span> <span style="color: #1e90ff">Routine interviews will be conducted by Dr. K███ M██.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-5699:</strong></span> <span style="color: #1e90ff">And even if, you would have still shown me kindness.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-5995:</strong></span> <span style="color: #1e90ff">（别问，问就是没找着（。（我看了<span style="text-decoration: line-through;">一</span>两遍原文<span style="text-decoration: line-through;">两</span>三遍译文，<span style="text-decoration: line-through;">不过都没有特别仔细，就先这样吧</span>只发现了Agent Kevin McHannon（化名Keith McKinsey）和Kair Malone博士，但我觉得证据不足？？？</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-747:</strong></span> <span style="color: #1e90ff">Blue crayon written in neat cursive.</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-797:</strong></span> <span style="color: #1e90ff">Dr.K███M██'s note（第二张图每次都把我吓一跳）</span></li>
-<li><span style="color: #a18cd1"><strong>SCP-979:</strong></span> <span style="color: #1e90ff">SCP-979 was featured in an exhibition by an artist under the pseudonym of The Kind Man, in the ████████ Museum.</span></li>
-<li><span style="color: #a18cd1"><strong>Seasick Sharks:</strong></span> <span style="color: #1e90ff">Even the strangers, that kind man who looked to me in pity as if he could know my sacrifice.</span></li>
-<li><span style="color: #a18cd1"><strong>The Melody Of Autumn, Passing Into Winter:</strong></span> <span style="color: #1e90ff">the scarecrow and his kind friend had their discussion&#8230; His friend was there, sitting in the fog, exhaling a familiar purple smoke.</span></li>
-<li><span style="color: #a18cd1"><strong>The Slow Asphyxiation Of Undiluted Ardor:</strong></span> <span style="color: #1e90ff">Once, a Kinder person arrived in the lizard's room of love.</span></li>
-<li><span style="color: #a18cd1"><strong>The Special Bond Between Child and Mother:</strong></span> <span style="color: #1e90ff">even if it is to deliver to a world without Kind Men</span></li>
-<li><span style="color: #a18cd1"><strong>They Who Find Darkness Loving:</strong></span> <span style="color: white">In that dream a man leans against a white hallway, puffing on a cigarette that produces purple smoke.</span></li>
-<li><span style="color: #a18cd1"><strong>This Is How We Build Revelation:</strong></span> <span style="color: #1e90ff">The bus driver announced no stops on her way home, kindly silent, and allowed her the space to ponder the difference between migration and abandonment.</span></li>
-</ul>
-</div>
-</div>
-</div>
-<hr /></div>
-<div id="wiki-tab-0-2" style="display:none">
-<div style="text-align: center;"><img src="http://scp-wiki-cn.wikidot.com/local--files/lyricslinn-s-personnel-file/Avery%20Solace.jpg" style="width: 800px" class="enlarge" alt="Avery%20Solace.jpg" /><br />
-<strong><span style="font-size:larger;">是来自<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3935168&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="Lyrics Linn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3935168)" /></a><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;">Lyrics Linn</a></span>的<a href="/lyricslinn-s-calligraphy-notebook">神仙书法</a>！非常非常感谢(´∀｀)♡</span></strong><br />
-<span style="color: grey">虽然我也不知道放在这里是不是特别合适，但既然这个tab就是个安利页就姑且先这样……</span>
-<hr />
-<p><strong>然后也许有人愿意点一下<a href="http://czyesperanza.wikidot.com/all-about-avery-solace">这个链接</a>？</strong></p>
-</div>
-<hr />
-<blockquote>
-<p>Avery Solace博士进入它们的房间，换下衣服，假装没有注意到在它们无光的房间中央那儿，那个被漆黑粘液覆盖的人形。</p>
-<p>该实体只会在心理学家开始爬上床后，才会开始说话。 Lament的声音变得同他腐坏的肉体一样泥泞，在看不见的墙壁间回响着。</p>
-<p><em>“Avery，今晚又不吃药？你一定喜欢我在你身边吧。真希望其他医生不会嫉妒（get jelly）。”</em><br />
-<span style="color: white"><tt>Avery在第二天早餐时才明白这个笑话。</tt></span><br />
-“……我没那么糟。不论如何我是他们唯一的测试对象。我不是一只实验老鼠……药物没法让你离开，所以说它不起作用。”</p>
-<p><em>“好吧，也不能说你不是只小白鼠。”</em><br />
-<span style="color: white"><tt>直到它们差点被百吉饼呛住才消停。</tt></span><br />
-Solace博士背向声音的来处，试着睡一会。它们最后感觉到的事，是有人在帮他掖被子。<br /></p>
-<div style="text-align: right;">
-<p>——《<a href="/they-who-find-darkness-loving">它们与黑暗相爱</a>》，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=637830&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="SoullessSingularity" style="background-image:url(http://www.wikidot.com/userkarma.php?u=637830)" /></a><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;">SoullessSingularity</a></span>/著，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/gpxx" onclick="WIKIDOT.page.listeners.userInfo(4478534); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4478534&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="GPXx" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4478534)" /></a><a href="http://www.wikidot.com/user:info/gpxx" onclick="WIKIDOT.page.listeners.userInfo(4478534); return false;">GPXx</a></span>/译</p>
-</div>
-<hr />
-<p><span style="color: grey">出于某种原因我也<a href="http://czyesperanza.wikidot.com/they-who-find-darkness-loving">重译</a>了一下这篇，然后明显地发现水平是真的不够啊Orz</span></p>
-</blockquote>
-<hr />
-<blockquote>
-<p>Avery Solace盯着ta手里的马尼拉纸质文件夹。被脓液覆盖的Lament特工把他的手臂搭在ta脖子上，越过ta的肩膀看着。自从上一次事故之后，Solace博士第一次感觉到自己被一个团队所需要。“最后的希望”——非常合适的名字。</p>
-<p>在ta黑暗的房间里，Solace博士换下衣服，躺到床上，盯着天花板。在ta视线的角落，ta的幻觉坐在床边，看着ta试图入睡。</p>
-<p><em>“又不吃药了，Avery？我真是受宠若惊。”</em>Lament特工的仿制品笑出声来，那声音好像什么柔软又蓬松的东西正在慢慢地死去。</p>
-<p>Solace博士没有回答。Ta只是不安地沉思着。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">第一段记忆像一道光芒穿越亿万星辰，</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">在ta的注视下燃烧殆尽。</a></div>
-<div class="collapsible-block-content">
-<p>Avery是一个研究小组的一员，该小组负责测试不可转移的认知危害和无害的模因学之间的界限，做的通常是其他不那么秘密的实验室里为实习生准备的工作。这对他认知神经学的博士学位是一种浪费——但又有谁会拒绝研究如此边缘的学科的机会呢？</p>
-<p>第一次收容失效的时候他正在输入数据。他的导师走了进来，对他大声喊叫——他不记得具体说了什么了。可他永远不会忘记那双眼睛：瞳孔放大，像碧玉环绕着深渊。</p>
-<p>他记得一阵汹涌的喜悦，像发烧时模糊扭曲的梦。</p>
-<p>Avery从他的幻梦中清醒过来，发现自己仍被导师凝视着。那双眼睛从他的手掌中盯着他。他不知道她剩余的部分发生了什么。</p>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">第二段记忆从第一段中升起，像胆汁涌上喉咙，</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">不请自来。</a></div>
-<div class="collapsible-block-content">
-<p>他负责管理上一次事故后重组的队伍。奇怪的是，一个平凡的科学家组成的小组，怎么竟会像他们研究的异常一样固执。</p>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">最后一段记忆依然疼痛。</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">如一千道未愈合的伤口。</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/foundation-is-watching-you">随机作品传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/df-thirteen" onclick="WIKIDOT.page.listeners.userInfo(4011450); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4011450&amp;amp;size=small&amp;amp;timestamp=1606053300" alt="DF-thirteen" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4011450)" /></a><a href="http://www.wikidot.com/user:info/df-thirteen" onclick="WIKIDOT.page.listeners.userInfo(4011450); return false;">DF-thirteen</a></span></strong></tt></p>
+<p style="text-align: center;">共18篇</p>
+<p><br />
 <br />
-<div style="text-align: right;">
-<p>——《<a href="http://scpsandbox2.wikidot.com/soullesshuman">一人血书求作者更新</a><sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup>》，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=637830&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="SoullessSingularity" style="background-image:url(http://www.wikidot.com/userkarma.php?u=637830)" /></a><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;">SoullessSingularity</a></span>/著，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span>/译</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
 </div>
-</blockquote>
-<hr />
-<blockquote>
-<p>“所以……呃，你说啥？”</p>
-<p>Avery Solace博士并没有明确地在看着Magnus博士。如果ta在看的话，ta就会明白自己刚刚朝他扔了一个重磅炸弹。Ta有特殊的能力可以看穿别人。Magnus博士在一口水喝到一半的时候停下来提出了这个问题。这个时候，两位研究员正在Site 19的餐厅里吃早饭。</p>
-<p>Solace博士点了点头，动作急促而不稳，更像是肌肉抽搐。“SCP-055。我知道那是什么。大概。”</p>
-<p>Ta看着Magnus博士抓了抓他的脑袋，一头金发整齐地梳成马尾辫。有几缕头发从束发的皮筋里松脱出来，随即屈服于重力。差不多是早上九点钟，他的发型就已经开始凌乱了。Avery Solace博士也好不到哪里去，穿着一件亟需熨烫的实验服，不过ta从来就没有衣冠齐整过。至少ta今天费心穿上了相配的袜子。</p>
-<p>Magus博士清了清嗓子。“那。呃。你介意告诉我它是什么吗？”</p>
-<p>回应他的是一个缓慢、近乎困惑的眨眼。“嗯。”</p>
-<p>“你是说，你不想告诉我？”</p>
-<p>又一下急促，僵硬的点头。Solace博士又啜了一口咖啡，快速地瞥了一眼一个空荡的角落，然后轻轻地歪了歪头。Magnus转身顺着ta的视线看过去，什么也没有看到。这让他模糊地想到了自己家里的猫。他转回去看着他的同伴。“那你介意告诉我原因吗？”</p>
-<p>“……不礼貌？”Avery又歪了歪头，舔了舔干裂的嘴唇，喝了一口咖啡。</p>
-<p>“你是说你不确定是不是无礼吗？一点都不无礼，Avery。你能——你应该告诉我。现在就说。”较高的那个人的话变得快速、深沉，令人窒息，与其说是请求不如说更像强烈要求。</p>
-<p>Solace沉默了一段时间。ta呆滞的目光紧张地停留在一个空荡的角落里，眉头皱起，好像被空气冒犯了。“不。我觉得我不会说。人们……人们花了很多心思去搞清楚。他们现在还在努力。我不想毁了他们的乐趣……”</p>
-<p>有一米八几高的Magnus站了起来，抓住另一位研究员单薄的肩膀。他让ta面对自己。他强迫ta与他对视，目光凌厉，充满了野心与找到突破口的狂热决心。“不，你一定要告诉我。现在就说。”一只手靠近了Solace脆弱的脖子，很容易就能折断。</p>
-<p>可他的手被小心而坚决地撬开了。Solace拿着他的空盘和咖啡杯站了起来。“……不，那样会很没礼貌。我不想做无礼的事情，Magnus博士。明天见。”</p>
-<p>要不是会违反人力资源规定，Magnus可能已经揍了ta一顿。<br /></p>
-<div style="text-align: right;">
-<p>——《<a href="http://scpsandbox2.wikidot.com/soulless-sandbox-part-iii">一人血书求作者更新·第二季</a><sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>》，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=637830&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="SoullessSingularity" style="background-image:url(http://www.wikidot.com/userkarma.php?u=637830)" /></a><a href="http://www.wikidot.com/user:info/soullesssingularity" onclick="WIKIDOT.page.listeners.userInfo(637830); return false;">SoullessSingularity</a></span>/著，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1605368662" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span>/译</p>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/ambrose-restaurant-hub">随机页面传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/df-thirteen" onclick="WIKIDOT.page.listeners.userInfo(4011450); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4011450&amp;amp;size=small&amp;amp;timestamp=1606053300" alt="DF-thirteen" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4011450)" /></a><a href="http://www.wikidot.com/user:info/df-thirteen" onclick="WIKIDOT.page.listeners.userInfo(4011450); return false;">DF-thirteen</a></span></strong></tt></p>
+<p style="text-align: center;">共26个页面</p>
 </div>
-</blockquote>
-<hr />
-<blockquote>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;迷妹发言已折叠</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;乱七八糟的通感们</a></div>
-<div class="collapsible-block-content">
+    
+    
+    
+    </div></div>
+<div class="sortbar {$sortbar}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/df-thirteen/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/df-thirteen/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/df-thirteen/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/df-thirteen/order/updated_at%20desc/category/*">最近编辑</a></p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
 <div style="text-align: center;">
-<p>【一个半死不活的季节】</p>
-</div>
-<p>清冷萧瑟但温暖的秋天。</p>
-<p>冷。但不是冷酷。温暖。但有时候温暖得很苍白。萧瑟。有点像他经历过又过去了但还会疼的累累伤痕。</p>
-<p>是那种将尽未尽的秋天，某一个起风的傍晚，本就短命的秋日气数将尽，最后一口气里还吹着干燥了的温暖。</p>
-<p>即将传入冬日的秋日的旋律。</p>
-<p>隔着很遥远的时光的距离触碰到的温暖。</p>
 <hr />
-<div style="text-align: center;">
-<p>【一种不太好闻的香水】</p>
-</div>
-<p>扑面而来的是辛辣的苦味，差不多会让人退避三舍。</p>
-<p>然后张牙舞爪的气味燃烧殆尽，余烬的味道缠绵不逝，苦味的幽魂仍然缱绻不散地萦绕在背景中，只是没有一开始那么冲的气味，烟雾袅袅。</p>
-<p>雾色渐深，厚重的木质香气在这个时候一点点漫溢上来，缓慢地温柔地，一点点驱散了余烟呛人的气味，融化了苦涩的棱角，到最后终于只剩一点气味，能让人模糊地回忆起温暖的感受大概会是什么样子。</p>
-</div>
-</div>
-</div>
-</blockquote>
+<h2><span>原创SCP</span></h2>
 <hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-770">SCP-CN-770</a></strong><br />
++<strong><tt>57</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>15</tt></strong><br />
+<em>最新评论：</em> <strong><tt>SisterTan_Greasy</tt></strong> <em>于</em> <strong><tt><span class="odate time_1590573153 format_%25D%20%25H%3A%25M">27 May 2020 09:52</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1533733095 format_%25D%20%25H%3A%25M">08 Aug 2018 12:58</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-CN-770&#32;项目等级：EuclidKeter...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter scp 原创 地下 宗教 建筑 敌意 欲肉教 生物性 破碎之神教会</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-769">SCP-CN-769</a></strong><br />
++<strong><tt>56</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>16</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1528158614 format_%25D%20%25H%3A%25M">05 Jun 2018 00:30</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1555892615 format_%25D%20%25H%3A%25M">22 Apr 2019 00:23</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 不可摧毁 原创 反熵 家具 木质</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-730">SCP-CN-730</a></strong><br />
++<strong><tt>35</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>8</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1529112198 format_%25D%20%25H%3A%25M">16 Jun 2018 01:23</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1538286376 format_%25D%20%25H%3A%25M">30 Sep 2018 05:46</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;SCP-CN-729&#32;|&#32;SCP-CN-730&#32;|&#32;SCP-CN-731&#32;&#32;</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 原创 智能 未收容 视觉性 认知危害</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-467">SCP-CN-467</a></strong><br />
++<strong><tt>29</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>6</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Rachud</tt></strong> <em>于</em> <strong><tt><span class="odate time_1547398434 format_%25D%20%25H%3A%25M">13 Jan 2019 16:53</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1552735013 format_%25D%20%25H%3A%25M">16 Mar 2019 11:16</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid ijamea scp 人形生物 医院 原创 欲肉教 破碎之神教会</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1101">SCP-CN-1101</a></strong><br />
++<strong><tt>173</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>38</tt></strong><br />
+<em>最新评论：</em> <strong><tt>SisterTan_Greasy</tt></strong> <em>于</em> <strong><tt><span class="odate time_1590572877 format_%25D%20%25H%3A%25M">27 May 2020 09:47</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576495354 format_%25D%20%25H%3A%25M">16 Dec 2019 11:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;SCP-CN-1101：太岁&#32;作者：Simon&#32;Arran、a51501830、DF-thirteen&#32;图片信息：&#32;https://commons.m.wikimedia.org/wiki/File:Himalia.png#mw-jump-to-license&#32;NASA/JPL/University&#32;of&#32;Arizona，Public&#32;domain（公有领域）...</span><br />
+<span style="color: #000000"><em>标签：</em></span> cn1000 keter k级情景 scp 历史性 原创 反熵 合著 宗教 异学会 强迫性 形态改变 成瘾性 敌意 文言文 星际 有机 未收容 本质促动 欲肉教 活物 生物危害 生物性 破碎之神教会 神话传说 超维度 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1339">SCP-CN-1339</a></strong><br />
++<strong><tt>29</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>9</tt></strong><br />
+<em>最新评论：</em> <strong><tt>zixixi</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582161563 format_%25D%20%25H%3A%25M">20 Feb 2020 01:19</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Simon Arran</tt></strong> <em>于</em> <strong><tt><span class="odate time_1569208930 format_%25D%20%25H%3A%25M">23 Sep 2019 03:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;SCP-CN-1339：云端跳蛛&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;项目编号：SCP-CN-1339&#32;项目等级：Euclid...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 动物 原创 电力 蜘蛛</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1042">SCP-CN-1042</a></strong><br />
++<strong><tt>31</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>9</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573465593 format_%25D%20%25H%3A%25M">11 Nov 2019 09:46</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576936491 format_%25D%20%25H%3A%25M">21 Dec 2019 13:54</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2019夏季征文 euclid scp 伦理委员会 原创 气象</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创故事</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/foundation-is-watching-you">Foundation is watching you</a></strong><br />
++<strong><tt>127</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>18</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1547080385 format_%25D%20%25H%3A%25M">10 Jan 2019 00:33</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1553776231 format_%25D%20%25H%3A%25M">28 Mar 2019 12:30</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 医院 原创 故事 欲肉教 破碎之神教会</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/time-machine">时间机器</a></strong><br />
++<strong><tt>92</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>29</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561437724 format_%25D%20%25H%3A%25M">25 Jun 2019 04:42</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1570270097 format_%25D%20%25H%3A%25M">05 Oct 2019 10:08</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2018夏季征文 原创 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/operation-straylight">行动记录：迷光</a></strong><br />
++<strong><tt>20</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>5</tt></strong><br />
+<em>最新评论：</em> <strong><tt>OEOWO3O</tt></strong> <em>于</em> <strong><tt><span class="odate time_1562552103 format_%25D%20%25H%3A%25M">08 Jul 2019 02:15</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1567997279 format_%25D%20%25H%3A%25M">09 Sep 2019 02:47</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;行动记录：迷光&#32;本文档可被视为江雨寒濛，雪泥鸿爪的低权限（3/4级）版本文档。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;基金会行动记录报告-迷光行动（Operation&#32;Straylight）&#32;本文档限3/STRAYLIGHT权限。未授权的访问将被立即报告至RAISA。&#32;&#32;&#32;&#32;1.&#32;代号：迷光行动&#32;2.&#32;行动时间：20██年03月15日，0115时&#32;-&#32;0329时&#32;3....</span><br />
+<span style="color: #000000"><em>标签：</em></span> linkage 医院 原创 故事 破碎之神教会</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/capture-harbinger">捕获先驱</a></strong><br />
++<strong><tt>20</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
+<em>最新评论：</em> <strong><tt>WhatVR</tt></strong> <em>于</em> <strong><tt><span class="odate time_1565927834 format_%25D%20%25H%3A%25M">16 Aug 2019 03:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1580310813 format_%25D%20%25H%3A%25M">29 Jan 2020 15:13</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 原创 故事</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创GoI格式</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/helios-system">批准以利用太阳大气层物质摧毁指定目标为目的建造奇术武器系统的申请</a></strong><br />
++<strong><tt>125</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>21</tt></strong><br />
+<em>最新评论：</em> <strong><tt>VashtaNerada</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585018596 format_%25D%20%25H%3A%25M">24 Mar 2020 02:56</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1587771376 format_%25D%20%25H%3A%25M">24 Apr 2020 23:36</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> goi格式 原创 普罗米修斯实验室 第三定律 精品</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/john-von-neumann-project">批准开发可编程分子机械魔像的申请</a></strong><br />
++<strong><tt>30</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>2</tt></strong><br />
+<em>最新评论：</em> <strong><tt>(user deleted)</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585557678 format_%25D%20%25H%3A%25M">30 Mar 2020 08:41</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1570686136 format_%25D%20%25H%3A%25M">10 Oct 2019 05:42</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> goi格式 原创 普罗米修斯实验室 第三定律</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/reality-cat-5h8m5-312df-13src">‘现实稳定猫’（5H8M5/312DF/13SRC）</a></strong><br />
++<strong><tt>261</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>45</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Confucian Lee</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596424127 format_%25D%20%25H%3A%25M">03 Aug 2020 03:08</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1587910558 format_%25D%20%25H%3A%25M">26 Apr 2020 14:15</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">5H8M5/312DF/13SRC&#32;&#32;&#32;状态&#32;预留&#32;&#32;&#32;需求&#32;N/A&#32;&#32;&#32;价格&#32;不出售&#32;&#32;&#32;可得性&#32;当前库存13只（其中3只由Percival&#32;Darke与Iris&#32;Dark持有）&#32;&#32;&#32;品名&#32;现实稳定猫&#32;&#32;&#32;描述...</span><br />
+<span style="color: #000000"><em>标签：</em></span> goi格式 mc&amp;d 原创 安布罗斯餐厅 精品</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>其他原创</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/hospital-hub">医院 中心页</a></strong><br />
++<strong><tt>97</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>27</tt></strong><br />
+<em>最新评论：</em> <strong><tt>DrStevenXu</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589353101 format_%25D%20%25H%3A%25M">13 May 2020 06:58</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576506074 format_%25D%20%25H%3A%25M">16 Dec 2019 14:21</span></tt></strong></p>
+<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/hospital-hub/logo"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/hospital-hub/logo/medium.jpg" class="imagepre {$image}" alt="logo" /></a><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;关于“医院”&#32;作品目录&#32;写作指导&#32;&#32;&#32;&#32;在曾经的某一个时间点，或许是19世纪末期，或许是21世纪初期，亦或是你能想到的任何一个别的时间，一群破碎之神传教士远渡重洋来到中国，试图让更多的人加入他们重建神明的伟业。然而正如同所有伟大的事业，让一个超凡的存在复归完整总是会不可避免的伴随着一点小插曲……&#32;&#32;工但应神，为其手以复神躯。&#32;&#32;——筑造者&#32;Robert&#32;Bumaro，时间未知&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 中心 医院 原创</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/anchor">你所不知的锚</a></strong><br />
++<strong><tt>67</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>9</tt></strong><br />
+<em>最新评论：</em> <strong><tt>zhdpx</tt></strong> <em>于</em> <strong><tt><span class="odate time_1594719528 format_%25D%20%25H%3A%25M">14 Jul 2020 09:38</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576325212 format_%25D%20%25H%3A%25M">14 Dec 2019 12:06</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">导语：斯克兰顿现实稳定锚——你真的了解它吗？&#32;以其发明者罗伯特·斯克兰顿博士为名，斯克兰顿现实稳定锚（Scranton&#32;Reality&#32;Anchor）或称SRA，可能是SCP基金会有史以来最为知名的技术。自出现以来，稳定锚便一直是基金会对抗现实扭曲的最佳武器，但真正了解锚为何物的读者则仍寥寥无几。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 原创 文章</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/how-to-use-wikidot-search-engine-correctly">如何正确地使用Wikidot搜索引擎</a></strong><br />
++<strong><tt>75</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>14</tt></strong><br />
+<em>最新评论：</em> <strong><tt>bugjump</tt></strong> <em>于</em> <strong><tt><span class="odate time_1584499834 format_%25D%20%25H%3A%25M">18 Mar 2020 02:50</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576325270 format_%25D%20%25H%3A%25M">14 Dec 2019 12:07</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 原创 文章</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+<div class="translation yes"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译SCP</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-4389">SCP-4389</a></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1569736628 format_%25D%20%25H%3A%25M">29 Sep 2019 05:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1569751620 format_%25D%20%25H%3A%25M">29 Sep 2019 10:07</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：&#32;SCP-4389&#32;项目等级：&#32;Euclid&#32;特殊收容措施：基金会特工...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 变形 寄生性 昆虫 未收容 活物 种群 鳞翅目</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译故事</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/i-ll-remember-you">我会记得你</a></strong><br />
+<em>最新评论：</em> <strong><tt>Dr_Ricky</tt></strong> <em>于</em> <strong><tt><span class="odate time_1601695766 format_%25D%20%25H%3A%25M">03 Oct 2020 03:29</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1556894319 format_%25D%20%25H%3A%25M">03 May 2019 14:38</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> nobody 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/samsara">轮回</a></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589941294 format_%25D%20%25H%3A%25M">20 May 2020 02:21</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Simon Arran</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583328345 format_%25D%20%25H%3A%25M">04 Mar 2020 13:25</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;赋予之主&#32;|&#32;轮回&#32;&#32;</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2016mtf竞赛 tau-5-轮回 合著 故事 普罗米修斯实验室 第三定律</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译GoI格式</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/grant-request-for-genetically-engineering-low-cost-organic-a">批准创造拥有复杂人工智能的低成本基因工程有机机器人作为劳动力的申请</a></strong><br />
+<em>最新评论：</em> <strong><tt>Diorite</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583136924 format_%25D%20%25H%3A%25M">02 Mar 2020 08:15</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582170646 format_%25D%20%25H%3A%25M">20 Feb 2020 03:50</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> goi格式 普罗米修斯实验室 第三定律</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>其他翻译</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/snow-art">落雪艺作页</a></strong><br />
+<em>最新评论：</em> <strong><tt>Pimpernel_F_Wagner</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578729826 format_%25D%20%25H%3A%25M">11 Jan 2020 08:03</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595683207 format_%25D%20%25H%3A%25M">25 Jul 2020 13:20</span></tt></strong></p>
+<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/snow-art/1151-1"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/snow-art/1151-1/medium.jpg" class="imagepre {$image}" alt="1151-1" /></a><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;童趣与雪的艺术&#32;作者：DF-thirteen，miumeat，koi_Vicky&#32;Stan，B_Froster，Agent&#32;Phage，Silkworm&#32;Moth，Ivi-Jinn，C2C2，Nyx_1，tERaNCarol，Simon&#32;Arran，zhi_zi-jiu_jun。本页面开放合著。如您在本页面添加了图片，请将您的Wiki账号填写于此栏中。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 艺术作品</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/ambrose-restaurant-hub">安布罗斯餐厅 中心页</a></strong><br />
+<em>最新评论：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585981988 format_%25D%20%25H%3A%25M">04 Apr 2020 06:33</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585981914 format_%25D%20%25H%3A%25M">04 Apr 2020 06:31</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/ambrose-restaurant-hub/3KNuBvH.png" class="imagepre {$image}" alt="3KNuBvH.png" /><br />
+<span style="white-space: pre-wrap;">概述&#32;相关文档&#32;SCP项目&#32;补充材料&#32;写作指导&#32;&#32;&#32;&#32;&#32;Ambrose&#32;Restaurants1&#32;&#32;&#32;&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 中心 合著 安布罗斯餐厅</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-buns">SCP兔兔</a></strong><br />
+<em>最新评论：</em> <strong><tt>bbookkii</tt></strong> <em>于</em> <strong><tt><span class="odate time_1605696717 format_%25D%20%25H%3A%25M">18 Nov 2020 10:51</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583982177 format_%25D%20%25H%3A%25M">12 Mar 2020 03:02</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 艺术作品</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div class="collab-header" style="text-align: center;">
+<hr />
+<h2 id="toc0"><span>更多页面</span></h2>
+<hr /></div>
+
+
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-035">SCP-035</a></strong><br />
++<strong><tt>53</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>33</tt></strong><br />
+<span class="written_by {$written_by}"><em>作者：</em> {$written_by}；</span><span class="collabnote 进行了全文校对和大幅度优化">进行了全文校对和大幅度优化</span><br />
+<em>最新评论：</em> <strong><tt>lifecouldbeadream</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606018654 format_%25D%20%25H%3A%25M">22 Nov 2020 04:17</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>xiaoliang22</tt></strong> <em>于</em> <strong><tt><span class="odate time_1598272523 format_%25D%20%25H%3A%25M">24 Aug 2020 12:35</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-035/scp--035--002.gif" class="imagepre {$image}" alt="scp--035--002.gif" /><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter scp 反熵 心灵感应 感知力 智能 精神影响 衣物 认知危害</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/old:scp-4432">SCP-4432（旧）</a></strong><br />
++<span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
+<span class="written_by {$written_by}"><em>作者：</em> {$written_by}；</span><span class="collabnote 翻完一看原文没了我也很绝望啊.jpg">翻完一看原文没了我也很绝望啊.jpg</span><br />
+<em>最新评论：</em> <strong><tt>TimeElapsed</tt></strong> <em>于</em> <strong><tt><span class="odate time_1569567236 format_%25D%20%25H%3A%25M">27 Sep 2019 06:53</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DF-thirteen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1569593025 format_%25D%20%25H%3A%25M">27 Sep 2019 14:03</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：&#32;SCP-4432&#32;项目等级：&#32;Euclid&#32;特殊收容措施：所有未经授...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 反熵 旧页面 牛类</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/doomsday-tales">末世故事集</a></strong><br />
++<strong><tt>46</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>20</tt></strong><br />
+<span class="written_by {$written_by}"><em>作者：</em> {$written_by}；</span><span class="collabnote 与其他11位作者的合著作品">与其他11位作者的合著作品</span><br />
+<em>最新评论：</em> <strong><tt>Sraosha</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582727798 format_%25D%20%25H%3A%25M">26 Feb 2020 14:36</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Diorite</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585973469 format_%25D%20%25H%3A%25M">04 Apr 2020 04:11</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;末世故事集&#32;发布时间：2020年2月23日&#32;合著作者：Agent&#32;Phage、bye&#32;jack、ColorlessL、copperia、DF-thirteen、EveTerminus、Lyrics&#32;Linn、Star&#32;Lyn、SwanKnight、ThomasX、TimeElapsed、wlft&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;慢递...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 原创 合著 故事</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-1" style="display:none">
+<div style="text-align: center;">
+<hr />
+<h2 id="toc1"><span>bilibili</span></h2>
+<hr /></div>
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="https://www.bilibili.com/read/cv2785827">SCP基金会-杂谈：锚</a></p>
+<p><em>接下来，我们谈谈锚是什么。</em></p>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="https://www.bilibili.com/read/cv3957644">SCP基金会-项目文档科普 | SCP-3241 SS索末菲号的悲剧</a></p>
+<p><em>那行于黑暗中的事必将被光明所揭露。</em></p>
+</div>
+<div style="text-align: center;">
+<hr />
+<h2 id="toc2"><span>Wikidot</span></h2>
+<hr /></div>
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="http://scp-wiki-cn.wikidot.com/forum/t-12456166/scp-3241">SCP-3241的后记</a></p>
+<p><em>顺带校对了一下3241的译文。</em></p>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="http://scp-wiki-cn.wikidot.com/forum/t-12802376/clef-scp">Clef博士的公开信 | 我还没有从SCP基金会上赚到一毛钱。</a></p>
+<p><em>谨以此翻译献给所有违反授权协议的混蛋。</em></p>
+</div>
+<div style="text-align: center;">
+<hr />
+<h2 id="toc3"><span>Sandbox</span></h2>
+<hr /></div>
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="http://scpsandboxcn.wikidot.com/df-thirteen">我的原创沙盒</a></p>
+<p><em>千仞高塔，筑基于此</em></p>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p><a href="http://scp-sandbox-3.wikidot.com/df-thirteen">我的翻译沙盒</a></p>
+<p><em>Revenge of the Sandbox</em></p>
+</div>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<p>感谢每一位愿意为我绘制艺术作品的人！</p>
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967270&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Dr Aral See" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967270)" /></a><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;">Dr Aral See</a></span>绘制的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/DF-13" style="width: 100%; height: 100%;" class="enlarge" alt="DF-13" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967270&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Dr Aral See" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967270)" /></a><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;">Dr Aral See</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>绘制的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scpsandboxcn.wikidot.com/local--files/breaddddd3/img514.jpg" style="width: 100%; height: 100%;" class="enlarge" alt="img514.jpg" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>绘制的Q版13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13%EF%BC%88Q.ver%EF%BC%89" style="width: 100%; height: 100%;" class="enlarge" alt="13%EF%BC%88Q.ver%EF%BC%89" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3935168&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Lyrics Linn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3935168)" /></a><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;">Lyrics Linn</a></span>书写的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/DF-thirteen" style="width: 100%; height: 100%;" class="enlarge" alt="DF-thirteen" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3935168&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Lyrics Linn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3935168)" /></a><a href="http://www.wikidot.com/user:info/lyrics-linn" onclick="WIKIDOT.page.listeners.userInfo(3935168); return false;">Lyrics Linn</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由某位不愿透露姓名的作者绘制的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13miao" style="width: 100%; height: 100%;" class="enlarge" alt="13miao" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢某位不愿透露姓名的作者！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由某位不愿透露姓名的作者绘制的13</p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 显示</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<p><strong>警告：此图片含有露骨的色情内容。请谨慎查看。</strong></p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 我确认我已经达到浏览此图片的法定年龄并希望查看此图片</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13x" style="width: 100%; height: 100%;" class="enlarge" alt="13x" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢某位不愿透露姓名的作者！</p>
+</div>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由某位不愿透露姓名的作者绘制的13</p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 显示</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<p><strong>警告：此图片含有露骨的色情内容。请谨慎查看。</strong></p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 我确认我已经达到浏览此图片的法定年龄并希望查看此图片</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13x2" style="width: 100%; height: 100%;" class="enlarge" alt="13x2" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢某位不愿透露姓名的作者！</p>
+</div>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/anorke" onclick="WIKIDOT.page.listeners.userInfo(4151262); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4151262&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Anorke" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4151262)" /></a><a href="http://www.wikidot.com/user:info/anorke" onclick="WIKIDOT.page.listeners.userInfo(4151262); return false;">Anorke</a></span>书写的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13a" style="width: 100%; height: 100%;" class="enlarge" alt="13a" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/anorke" onclick="WIKIDOT.page.listeners.userInfo(4151262); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4151262&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="Anorke" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4151262)" /></a><a href="http://www.wikidot.com/user:info/anorke" onclick="WIKIDOT.page.listeners.userInfo(4151262); return false;">Anorke</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由某位不愿透露姓名的作者绘制的13</p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 显示</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<p><strong>警告：此图片含有露骨的色情内容。请谨慎查看。</strong></p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 我确认我已经达到浏览此图片的法定年龄并希望查看此图片</a><a href="javascript:;">- 隐藏</a></div>
+</div>
+<div class="colmod-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13x3" style="width: 100%; height: 100%;" class="enlarge" alt="13x3" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢某位不愿透露姓名的作者！</p>
+</div>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由某位不愿透露姓名的作者绘制的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13TL" style="width: 100%; height: 100%;" class="enlarge" alt="13TL" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢某位不愿透露姓名的作者！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>绘制的魔法少女13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/breaddddd-art-3/ms-13.jpg" style="width: 100%; height: 100%;" class="enlarge" alt="ms-13.jpg" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+<hr />
+<div style="color:#003366;margin:0 auto;padding: 1px 15px; background-color:#fff; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/drstse" onclick="WIKIDOT.page.listeners.userInfo(3930061); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3930061&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="DrStse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3930061)" /></a><a href="http://www.wikidot.com/user:info/drstse" onclick="WIKIDOT.page.listeners.userInfo(3930061); return false;">DrStse</a></span>绘制的13</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+<div class="collapsible-block-content">
+<div class="scp-image-block block-center" style="width:100%; height:100%"><img src="http://scp-wiki-cn.wikidot.com/local--files/df-thirteen/13st" style="width: 100%; height: 100%;" class="enlarge" alt="13st" />
+<div class="scp-image-caption" style="width: 100%;">
+<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/drstse" onclick="WIKIDOT.page.listeners.userInfo(3930061); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3930061&amp;amp;size=small&amp;amp;timestamp=1598594115" alt="DrStse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3930061)" /></a><a href="http://www.wikidot.com/user:info/drstse" onclick="WIKIDOT.page.listeners.userInfo(3930061); return false;">DrStse</a></span>！</p>
+</div>
+</div>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏</a></div>
+</div>
+</div>
+</div>
+</div>
+<div id="wiki-tab-0-3" style="display:none">
+<p>当前竞赛：2020夏季征文</p>
+
+
+
+<div style="font-family:微软细黑 !important;">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">--&gt;竞赛计分板</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">&lt;--收起</a></div>
+<div class="collapsible-block-content">
+<div style="background-color:#f0f0f0;padding:4%;margin: 5%;">
+<div class="picture_writing {$pw}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p>当前门槛分为 <strong><tt>30 + 2 x 29 = 88</tt></strong></p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="list-pages-box">    
+
+<p><strong><tt>21</tt></strong>. <strong><a href="/dog-s-story">《牧羊犬故事集》（2020.4~2020.8），艾德·珀西蒙 著</a></strong> <strong><tt>[+20 (+22/-2)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1598767085 format_%25m.%25d">30 Aug 2020 05:58</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/persimmon2457" onclick="WIKIDOT.page.listeners.userInfo(5433455); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5433455&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="Persimmon2457" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5433455)" /></a><a href="http://www.wikidot.com/user:info/persimmon2457" onclick="WIKIDOT.page.listeners.userInfo(5433455); return false;">Persimmon2457</a></span></strong></tt></span><br />
+<strong><tt>22</tt></strong>. <strong><a href="/lecture-of-hi-story">基金会学院人类史选修课第二单元第二课时</a></strong> <strong><tt>[+18 (+39/-21)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1596788835 format_%25m.%25d">07 Aug 2020 08:27</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eulenlau" onclick="WIKIDOT.page.listeners.userInfo(3948368); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3948368&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="EuleNLau" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3948368)" /></a><a href="http://www.wikidot.com/user:info/eulenlau" onclick="WIKIDOT.page.listeners.userInfo(3948368); return false;">EuleNLau</a></span></strong></tt></span><br />
+<strong><tt>23</tt></strong>. <strong><a href="/proud-revue">剧目-骄傲的王</a></strong> <strong><tt>[+13 (+22/-9)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1596986558 format_%25m.%25d">09 Aug 2020 15:22</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/misaka19092nd" onclick="WIKIDOT.page.listeners.userInfo(3242622); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3242622&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="Misaka19092nd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3242622)" /></a><a href="http://www.wikidot.com/user:info/misaka19092nd" onclick="WIKIDOT.page.listeners.userInfo(3242622); return false;">Misaka19092nd</a></span></strong></tt></span><br />
+<strong><tt>24</tt></strong>. <strong><a href="/comform">安魂</a></strong> <strong><tt>[+12 (+14/-2)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1597373699 format_%25m.%25d">14 Aug 2020 02:54</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lpcaco3" onclick="WIKIDOT.page.listeners.userInfo(5166393); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5166393&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="LPCaCO3" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5166393)" /></a><a href="http://www.wikidot.com/user:info/lpcaco3" onclick="WIKIDOT.page.listeners.userInfo(5166393); return false;">LPCaCO3</a></span></strong></tt></span><br />
+<strong><tt>25</tt></strong>. <strong><a href="/the-pied-piper-of-the-nameless-forest">无名者之森的吹笛人</a></strong> <strong><tt>[+8 (+10/-2)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1598889189 format_%25m.%25d">31 Aug 2020 15:53</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></strong></tt></span><br />
+<strong><tt>26</tt></strong>. <strong><a href="/scp-cn-1746">SCP-CN-1746</a></strong> <strong><tt>[+8 (+33/-25)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1596895505 format_%25m.%25d">08 Aug 2020 14:05</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5934437&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="Sirius Dawn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5934437)" /></a><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;">Sirius Dawn</a></span></strong></tt></span><br />
+<strong><tt>27</tt></strong>. <strong><a href="/scp-cn-1464">SCP-CN-1464</a></strong> <strong><tt>[+5 (+19/-14)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1598577749 format_%25m.%25d">28 Aug 2020 01:22</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/imeaning" onclick="WIKIDOT.page.listeners.userInfo(6631373); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6631373&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="iMeaning" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6631373)" /></a><a href="http://www.wikidot.com/user:info/imeaning" onclick="WIKIDOT.page.listeners.userInfo(6631373); return false;">iMeaning</a></span></strong></tt></span><br />
+<strong><tt>28</tt></strong>. <strong><a href="/scp-cn-1343">SCP-CN-1343</a></strong> <strong><tt>[+4 (+16/-12)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1597313825 format_%25m.%25d">13 Aug 2020 10:17</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/confucian-lee" onclick="WIKIDOT.page.listeners.userInfo(6591621); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6591621&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="Confucian Lee" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6591621)" /></a><a href="http://www.wikidot.com/user:info/confucian-lee" onclick="WIKIDOT.page.listeners.userInfo(6591621); return false;">Confucian Lee</a></span></strong></tt></span><br />
+<strong><tt>29</tt></strong>. <strong><a href="/scp-cn-1478">SCP-CN-1478</a></strong> <strong><tt>[+3 (+13/-10)]</tt></strong><br />
+<span style="white-space: pre-wrap;">&#32;&#32;</span><span style="color: #003e3e"><tt><strong><span class="odate time_1597315551 format_%25m.%25d">13 Aug 2020 10:45</span> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/flameinex" onclick="WIKIDOT.page.listeners.userInfo(3382093); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3382093&amp;amp;size=small&amp;amp;timestamp=1606053304" alt="FlameInex" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3382093)" /></a><a href="http://www.wikidot.com/user:info/flameinex" onclick="WIKIDOT.page.listeners.userInfo(3382093); return false;">FlameInex</a></span></strong></tt></span></p>
+
+    
+    <div class="pager"><span class="pager-no">page 2 of 2</span><span class="target"><a href="/df-thirteen/p/1">&laquo; previous</a></span><span class="target"><a href="/df-thirteen/p/1">1</a></span><span class="current">2</span></div>
+    
+    </div>
+<hr />
+<div class="list-pages-box">    
+
+
+    
+    
+    
+    </div></div>
+</div>
+</div>
+</div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+</div>
 </div>
 </div>
 <script type="text/javascript">
 //<![CDATA[
 OZONE.dom.onDomReady(function(){
-        var tabVieweec6897e68eec3438b86701be4cbbc2d = new YAHOO.widget.TabView('wiki-tabview-eec6897e68eec3438b86701be4cbbc2d');
+        var tabViewb0b3b41785f0c5b2b9637061110ff6ee = new YAHOO.widget.TabView('wiki-tabview-b0b3b41785f0c5b2b9637061110ff6ee');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script><script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-c5a6aa6be9a392fd5eadee1b5a1b0bc7" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>通用</em></a></li>
+<li><a href="javascript:;"><em>主线</em></a></li>
+<li><a href="javascript:;"><em>4.6</em></a></li>
+<li><a href="javascript:;"><em>4.7</em></a></li>
+<li><a href="javascript:;"><em>4.8</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p>201X年4月6日A市郊区某别墅发生火灾，因为当天下午下雨，火情被消防员迅速控制，但是仍有三人丧命：知名科学家小岛秀一、他的配偶小岛美惠、以及女佣酒井。三人体表均被重度烧伤，其中酒井是在到医院后治疗无效死亡，其他两人均为当场死亡</p>
+<p>这件事的发生严重影响了几日后A大学某会议的召开，务必在11日A大会议之前查清此案（当前4.8下午）</p>
+<p>警察 星野澄<br />
+警官 大友彦武<br />
+法医 浅井枫（在4.7晚上死了）<br />
+小岛的实验室助理 宫下都子<br />
+小岛的朋友 霜越卯雪</p>
+<p>科学家 小岛秀一（死了）<br />
+他妻子 小岛美惠（死了）<br />
+女佣 酒井（抢救无效死了）<br />
+小岛的儿子 小岛太郎<br />
+小岛的熟人 石井孝三（在4.7晚上死了）<br />
+小岛的学生 服部</p>
+<ul>
+<li>在小岛宅回收的纸片（酒井写的）：</li>
+</ul>
+<p>X月3日 随夫人看病<br />
+不是发作，<span style="text-decoration: line-through;">向先生提议多通风</span>继续紧闭门窗<br />
+X月5日 联系除虫公司<br />
+X月6日 采购食材</p>
+<ul>
+<li>在小岛宅发现的书籍残页（拉丁文）：</li>
+</ul>
+<p>信息素，寻路，元胞自动机，蚂蚁，有机，催化反应，动态建模</p>
+<ul>
+<li>小岛近期的通讯记录：</li>
+</ul>
+<p>2日 13：49 呼出 石井 121min<br />
+4日 02：31 呼出 石井 43min<br />
+4日 22：42 呼出 太郎 20min<br />
+5日 09：13 呼出 除虫公司 6min<br />
+6日 14：20 呼出 德川 5min<br />
+6日 15：30 呼入 服部 1min</p>
+<ul>
+<li>石井近期的通讯记录：</li>
+</ul>
+<p>2日 13：49 ←小岛 121min<br />
+4日 02：31 ←小岛 43min<br />
+5日 14：10 ←明美 4min<br />
+6日 12：24 →明美 5min<br />
+6日 19：30 →小岛 未接通<br />
+6日 19：31 →小岛 未接通<br />
+6日 19：31 →小岛 未接通<br />
+6日 19：32 →小岛 未接通<br />
+6日 19：32 →小岛 未接通<br />
+6日 19：35 →服部 20min<br />
+7日 10：40 →服部 23min</p>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
+<p>1955年：小岛、石井等人组成野外昆虫考察队</p>
+<p>1955 - 201X年：石井的研究方向转向生物-化学交叉领域</p>
+<p>201X年4月2日：小岛与石井通话2小时，内容未知</p>
+<p>4月3日：酒井随美惠前去医院看病，疑似急性病</p>
+<p>4月4日：小岛与儿子太郎通话20分钟，内容反常</p>
+<p>4月5日：小岛呼叫除虫公司，石井与女儿明美通话5分钟</p>
+<p>4月6日：小岛宅起火，三人死亡。石井与服部通话20分钟</p>
+<p>4月7日：石井与服部通话23分钟，当晚浅井、石井死亡</p>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<ul>
+<li>小岛宅：玄关上有三双鞋子，女佣在一楼门口失能。一楼书房天花板/二楼不明房间地板被冲击波轰出了个大洞，地上有玻璃碎片，碎片之间和洞口边缘都有黑色稻壳状碎屑。在书房发现了拉丁文的书籍残页</li>
+</ul>
+<ul>
+<li>爆心在二楼实验室，爆炸原因不明。小岛死在二楼实验室（铺有加厚地砖），他妻子在卧室床上失能后死亡。床头柜里有个保险箱被太郎带走了</li>
+</ul>
+<ul>
+<li>实验室里有两个通风橱（化学试剂）和两个防爆柜（有机试剂和酸）。在小岛尸体附近和卫生间水滴过的地方发现了白色粉末。在下水口边上发现了黑色碎屑</li>
+</ul>
+<ul>
+<li>不明房间里有个大玻璃柜（被炸碎了），用途和房间一样不明。小岛宅总的来说打理得非常整洁</li>
+</ul>
+<ul>
+<li>采集的样品：白色粉末是草酸钠与碳酸钠的混合物，黑色碎屑是碳化植物纤维和蛋白质的混合物（蚂蚁。）</li>
+</ul>
+<ul>
+<li>小岛秀一：顽固，迂腐，但是在研究上却跳跃无比。行为反常，从不开窗</li>
+</ul>
+<ul>
+<li>小岛美惠：有哮喘，死前在床上失去意识</li>
+</ul>
+<ul>
+<li>小岛和他儿子的电话录音，爆炸案前2日，语气急促：“再继续下去，不知道会有什么样的后果”，“不要想太多”</li>
+</ul>
+<ul>
+<li>塔林噻唑，阿尔茨海默症药物。（4.7更新）准备由德川化工生产。相关论文里有步骤被划去</li>
+</ul>
+</div>
+<div id="wiki-tab-0-3" style="display:none">
+<ul>
+<li>小岛的研究：神经阻隔类药物用于麻醉和治疗过敏性呼吸道疾病，古兹菲德-雅各氏病，病理探索，非靶性治疗方法</li>
+</ul>
+<ul>
+<li>石井孝三：小岛的熟人，研究昆虫（蚂蚁？）</li>
+</ul>
+<ul>
+<li>在打开回收自小岛宅的保险箱时看到了某种黑色阴影，不太可能是视觉系统故障</li>
+</ul>
+<ul>
+<li>女佣在失去意识前指向一楼书房，天花板被砸出大洞的那个。楼上有玻璃柜</li>
+</ul>
+<ul>
+<li>书房里什么都没有，应该有某种重物砸穿二楼地板的。被其他实体抢先带走了？</li>
+</ul>
+<ul>
+<li>消防员在书房里看到了什么，可能和保险箱里的黑影是同一种东西？</li>
+</ul>
+<ul>
+<li>接触事件现场的消防员在此后中遭遇了安全绳断裂，可能和蚂蚁有关系。小心类似情况</li>
+</ul>
+<p>4.8更新：</p>
+<ul>
+<li>法医死了，住宅起火，和小岛一致。死前采集了小岛宅的样品前往A大实验室进行化验。尽可能避免与法医类似的行为</li>
+</ul>
+<ul>
+<li>石井孝三也死了，死前接触了回收自小岛宅的文件残片。避免接触任何事件现场的物质</li>
+</ul>
+</div>
+<div id="wiki-tab-0-4" style="display:none">
+<ul>
+<li>浅井宅：爆炸后（可能是面粉导致的粉尘爆炸）烧得非常厉害，厨房水槽里有个被烧焦的鼓风机（没插电），柜子里有一大袋开着口的面粉。洗手台被浅井的头发堵住了。浅井死前拿椅子腿（椅子呢？）在墙上刻下了“白粉”（面粉？）</li>
+</ul>
+<ul>
+<li>没有蚂蚁尸体或者相关的东西，下水道口除了头发没有任何反常，没有可疑化学物（更新）蚂蚁短路了空调电路板引发粉尘爆炸，表现出相当高的智力程度，问题大了</li>
+</ul>
+<ul>
+<li>浅井的行动轨迹预测：晚上11:30到家，在床上做推理（手机电脑圆珠笔的残骸），去洗手间搓下了大把头发/到厨房捣鼓面粉和鼓风机，然后爆炸发生，他在墙上留下线索</li>
+</ul>
+<ul>
+<li>他应该能意识到粉尘爆炸的可能性，为什么不跑？是他主动引发了爆炸？确信自己无法离开公寓房间？还是在意识到自己马上要失能后选择留下线索？他在推理什么？</li>
+</ul>
+<ul>
+<li>德川明二：德川家族的次子，也是德川化工的社长。毕业于美国斯坦福大学化工专业，之后攻读了MBA，留背头，戴金丝边眼镜</li>
+</ul>
+<ul>
+<li>德川明二的车在4.6早上离开德川化工前往小岛家（和叠氮有关系？）</li>
+</ul>
+<ul>
+<li>德川化工违规搬运乙醚，负责人被发现后的表现很奇怪，似乎有点庆幸？肯定有更深的问题</li>
+</ul>
+<ul>
+<li>小岛秀一尸检：爆炸前就停止呼吸了，氢叠氮酸中毒（在实验室里）氢叠氮酸的合成需要酸</li>
+</ul>
+<ul>
+<li>小岛美惠尸检：吸入大量烟尘，在火灾发生后还有呼吸，氢叠氮酸中毒</li>
+</ul>
+<ul>
+<li>酒井尸检：血液里检出过量麻醉剂（乙醚？）</li>
+</ul>
+<p>下午更新：</p>
+<ul>
+<li>石井尸检：从楼道上摔下去，惨不忍睹，血液里检出过量麻醉剂（很可能还是乙醚，蚂蚁？）。身体硬朗，没有心脑血管疾病和其他急性病史</li>
+</ul>
+<ul>
+<li>石井在1955年和小岛以及其他人组成过野外考察队（昆虫学），科考队不久后解散。他近期的研究方向转向到了生物-化学交叉领域，如对信息素的研究和针对性染色剂，以及生物在社会集群状态下表现出的智慧行为</li>
+</ul>
+<ul>
+<li>石井宅：屋内几乎没有异常。石井的房间里有股松香味，放着大量生物学和昆虫学相关书籍，他死前在这里做过笔记</li>
+</ul>
+<ul>
+<li>石井房间窗外有棵老树，树上挂着一块A大文件夹的残片，残片挂的位置很难由从窗口丢出去做到。残片的边缘是非常微小的、像是钝刀切割的痕迹（蚂蚁。）</li>
+</ul>
+<ul>
+<li>布基胶带永远的神</li>
+</ul>
+<ul>
+<li>浅井尸检：吸入大量烟尘，在火灾发生后还有呼吸</li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabViewc5a6aa6be9a392fd5eadee1b5a1b0bc7 = new YAHOO.widget.TabView('wiki-tabview-c5a6aa6be9a392fd5eadee1b5a1b0bc7');
                 }, "dummy-ondomready-block");
         
 //]]>
 </script>
-
-
-<div class="footnotes-footer">
-<div class="title">Footnotes</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 其实不叫这个名字</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. 同上</div>
-</div>
-
                     </div>
 
                             
@@ -1767,7 +1823,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a>
+                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a><a href="/system:page-tags/tag/%E6%88%90%E4%BA%BA%E5%86%85%E5%AE%B9#pages">成人内容</a>
                             </span>
                         </div>
                     
@@ -1775,12 +1831,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 44, 最后编辑于: <span class="odate time_1604149821 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">31 Oct 2020 13:10</span></div>
+                            <div id="page-info">页面版本: 1047, 最后编辑于: <span class="odate time_1597925563 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">20 Aug 2020 12:12</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+10</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+24</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13110528/esperanza-s-translations" class="btn btn-default" id="discuss-button">讨论 (11)</a>
+<a href="/forum/t-8202873/df-thirteen" class="btn btn-default" id="discuss-button">讨论 (20)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -1847,6 +1903,17 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
+            <a target="_blank" class="image" href="http://java.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/java.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://java.wikidot.com">Learn Java!</a></h3>
+            <div class="desc">          
+              No... it&#039;s not coffee.
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
             <a target="_blank" class="image" href="http://cpp-wiki.wikidot.com">
               <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cpp-wiki.wikidot.com/80.jpg"/>
             </a>
@@ -1858,34 +1925,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://porsche.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/porsche.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ddscat.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ddscat.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://porsche.wikidot.com">Porsche Wiki</a></h3>
+            <h3><a target="_blank" href="http://ddscat.wikidot.com">DDSCAT</a></h3>
             <div class="desc">          
-              Brought to You By RedLine Technik | RedLineTechnik.com
+              Light Scattering Code
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://is2216.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/is2216.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://denver.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/denver.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://is2216.wikidot.com">IS2216 - JAVA WIKI</a></h3>
+            <h3><a target="_blank" href="http://denver.wikidot.com">Shadowrun: Denver</a></h3>
             <div class="desc">          
-              Java for beginners
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://patriot-box-office.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/patriot-box-office.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://patriot-box-office.wikidot.com">Patriot Box Office Media Player (PBO)</a></h3>
-            <div class="desc">          
-              More Than Meets the Eye
+              Complicated Shadows
             </div>
           </div>
         </div>
