@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<body>
+    <div style="text-align:center">
+        <div id="url-type">
+            <input type="radio" name="url-sel" value="sandbox" onclick="document.getElementById('url-pre').innerHTML = 'http://scpsandboxcn.wikidot.com/'; document.getElementById('url').size ='25';" checked>沙盒
+            <input type="radio" name="url-sel" value="wiki-cn" onclick="document.getElementById('url-pre').innerHTML = 'http://scp-wiki-cn.wikidot.com/'; document.getElementById('url').size ='25';">中文维基
+            <input type="radio" name="url-sel" value="wiki" onclick="document.getElementById('url-pre').innerHTML = 'http://scp-wiki.wikidot.com/'; document.getElementById('url').size ='25';">英文维基
+            <input type="radio" name="url-sel" value="no-pre" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='50';">纯链接
+        </div> 
+        <p><span id="url-pre" style="font-family:Consolas;font-size: 12.8px;color: #333;">http://scpsandboxcn.wikidot.com/</span>
+        <input type="text" id="url" name="url" placeholder="URL" size="25" ></p>
+        <p>
+            <button onclick="Go0()">安全打开页面</button>
+            <button onclick="Go1()">安全编辑页面</button>
+            <button onclick="Go2()">免跳转浏览</button>
+        </p>
+    </div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+
+<script language="javascript">
+
+    var keyWord;
+
+function expand() {
+    var urltype = document.getElementsByName('url-sel');
+   if (urltype[0].checked) {
+       keyWord = 'http://scpsandboxcn.wikidot.com/' + keyWord;
+   }
+   if (urltype[1].checked) {
+       keyWord = 'http://scp-wiki-cn.wikidot.com/' + keyWord;
+   }
+   if (urltype[2].checked) {
+       keyWord = 'http://scp-wiki.wikidot.com/' + keyWord;
+   }
+}
+
+function Go0(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result=keyWord + '/norender/true';
+  window.open(result);
+}
+}
+
+function Go1(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result=keyWord + '/edit/true/norender/true';
+  window.open(result);
+}
+}
+
+function Go2(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result=keyWord + '/noredirect/true';
+  window.open(result);
+}
+}
+</script>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

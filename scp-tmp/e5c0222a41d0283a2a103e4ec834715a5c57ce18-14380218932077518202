@@ -1,0 +1,3348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style type="text/css">
+@import url(http://scp-jp.wdfiles.com/local--files/japanese-syntax/scp-WikidotCss.css);
+
+*{
+font-size: 11.5px;
+}
+
+.blackout{
+animation: daychange 5s linear both;
+}
+
+@keyframes daychange{
+0%{opacity: 1;}
+40%{opacity: 0;}
+60%{opacity: 0;}
+100%{opacity: 1;}
+}
+
+:root{
+--mecolor: #6DF560;
+--youcolor: #ffffff;
+}
+
+#all .me{
+position: relative;
+float: right;
+width: 75%;
+max-width: 450px;
+margin-bottom: 8px;
+padding-right: 12px;
+text-align: right;
+white-space: nowrap;
+}
+
+#all .you{
+display: inline-block;
+position: relative;
+width: 75%;
+max-width: 450px;
+margin-bottom: 8px;
+padding-left: 12px;
+text-align: left;
+white-space: nowrap;
+vertical-align: top;
+}
+
+#all .talk,
+#change .talk{
+display: inline-block;
+max-width: 75%;
+white-space: normal;
+color: #000000; 
+border-radius: 16px; 
+text-align: left;
+font-size: 120%;
+padding: 6px 11px;
+vertical-align: bottom;
+}
+
+.talk p{
+margin: 0;
+}
+
+.info{
+text-align: center;
+padding: 0px 15px;
+margin-bottom: 8px;
+vertical-align: bottom;
+}
+
+#all .metalk{
+background-color: var(--mecolor);
+}
+
+#all .youtalk{
+background-color: var(--youcolor);
+}
+
+#all .infotalk{
+color: white;
+background-color: #777777;
+font-size: 85%;
+opacity: 0.7;
+}
+
+.me::before{
+display: inline-block;
+content: attr(data-kidoku)"\A" attr(data-time);
+white-space: pre;
+text-align: right; 
+font-size: 70%;
+color: #ffffff; 
+}
+
+.me::after{
+content: "";
+right: -18px;
+position: absolute;
+transform: rotate(-30deg);
+height: 0;
+width: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-right: 20px solid transparent;
+border-left: 20px solid var(--mecolor);
+}
+
+.you::before{
+content: "";
+left: -18px;
+position: absolute;
+transform: rotate(30deg);
+height: 0;
+width: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-right: 20px solid var(--youcolor);
+border-left: 20px solid transparent;
+}
+
+.you::after{
+display: inline-block;
+content: attr(data-kidoku)"\A" attr(data-time);
+white-space: pre;
+text-align: right; 
+font-size: 70%;
+color: #ffffff; 
+}
+
+.pict .me::after,
+.stamp .me::after{
+display: none;
+}
+
+.pict .you::before,
+.stamp .you::before{
+display: none;
+}
+
+#all .pict .pictin{
+display: inline-block;
+width: 85%;
+max-width: 250px;
+max-height: 250px;
+}
+
+.pict .pictin img{
+border-radius: 7px; 
+width: 100%;
+height: 100%;
+}
+
+.stamp .stampin{
+display:inline-block;
+width: 150px;
+height: 150px; 
+}
+
+.stamp .stampin img{
+width: 100%;
+height: 100%;
+object-fit: cover; 
+}
+
+.icon{
+display: inline-block; 
+float: left; 
+margin-left: 5px;
+}
+
+.icon img{
+all: initial;
+border-radius: 50%;
+width: 32px;
+height: 32px;
+object-fit: cover;
+}
+
+.hide{
+display: none;
+}
+
+#banner p{
+line-height: 3em;
+margin: auto;
+padding: 0 10px;
+}
+</style>
+<div style="background: black;">
+<div id="change">
+<table style="width:100%; height: 50px; color: #ffffff; background-color: #303060; border-collapse:collapse;">
+<tr>
+<td style="width: 10%; text-align: center; font-size: 150%;">
+<i class="fa fa-angle-left fa-2x"></i>
+</td>
+<td style="width: 10%;">
+</td>
+<td style="text-align: center; font-size: 150%;">
+穗村
+</td>
+<td style="width: 10%; text-align: center; font-size: 150%;">
+<i class="fa fa-phone fa-1.5x"></i>
+</td>
+<td style="width: 10%; text-align: center; font-size: 150%;">
+<i class="fa fa-angle-down fa-2x"></i>
+</td>
+</tr>
+</table>
+<div style="position: relative; height: 460px;">
+<div id="all" style="background-color: #6495dd;  padding-top:10px; height: 450px; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch;">
+
+<div class="flow hide" data-delay="2500">
+<div class="info">
+<div class="talk infotalk">
+2017年8月4日（周五）
+</div>
+</div>
+
+<div class="me" data-kidoku="" data-time="22:35" data-kidokudelay="2000">
+<div class="talk metalk">
+老子离家出走啦233
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="4000">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:38">
+<div class="talk youtalk">
+啥，你真出走啦？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:38" data-kidokudelay="500">
+<div class="talk metalk">
+跟你说了说干就干
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:38" data-kidokudelay="500">
+<div class="talk metalk">
+真受不了傻逼父母了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:38">
+<div class="talk youtalk">
+行吧……
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:38">
+<div class="talk youtalk">
+那得了
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:38">
+<div class="talk youtalk">
+要有啥事想让我帮忙你说
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:39">
+<div class="talk youtalk"">
+别自己一个人扛着
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:39" data-kidokudelay="500">
+<div class="talk metalk">
+谢谢老哥
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:42">
+<div class="talk youtalk">
+那你晚上在哪住啊？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:42">
+<div class="talk youtalk">
+哎，关键是你现在在哪儿啊
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:43" data-kidokudelay="500">
+<div class="talk metalk">
+现在正往███山上爬
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:43" data-kidokudelay="500">
+<div class="talk metalk">
+躲进深山老林里就没人来追我了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:42">
+<div class="talk youtalk">
+你不怕啊？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:43" data-kidokudelay="500">
+<div class="talk metalk">
+那我有什么办法
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:45" data-kidokudelay="500">
+<div class="talk metalk">
+哎跟你说，我找到个废弃的板房
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:45" data-kidokudelay="500">
+<div class="talk metalk">
+也不知道多少年没人用了，破破烂烂的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:45" data-kidokudelay="500">
+<div class="talk metalk">
+我就住这得了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:45">
+<div class="talk youtalk">
+当真的？你可小心点
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:45" data-kidokudelay="500">
+<div class="talk metalk">
+(^^)b
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:46">
+<div class="talk youtalk">
+你可别装逼把命给搭进去
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="23:46">
+<div class="talk youtalk">
+受不了来我家，哥罩你
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide dayend" data-delay="2500">
+<div class="me" data-kidoku="" data-time="23:49" data-kidokudelay="500">
+<div class="talk metalk">
+(^^)b
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="10000">
+<div class="info">
+<div class="talk infotalk">
+2017年8月5日（周六）
+</div>
+</div>
+
+<div class="pict">
+<div class="me" data-kidoku="" data-time="10:08" data-kidokudelay="3000">
+<div class="pictin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/曇凪.jpg">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:08" data-kidokudelay="500">
+<div class="talk metalk">
+卧槽，这玩意厉害了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:10">
+<div class="talk youtalk">
+啥
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:11">
+<div class="talk youtalk">
+你咋跑海上了？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:11">
+<div class="talk youtalk">
+做功交出去了？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2000">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:11">
+<div class="talk youtalk">
+x坐公交
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:11" data-kidokudelay="500">
+<div class="talk metalk">
+不是
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:11" data-kidokudelay="500">
+<div class="talk metalk">
+这是那个板房窗户外边的景色233
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:11">
+<div class="talk youtalk">
+啥？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:11" data-kidokudelay="500">
+<div class="talk metalk">
+我也不知道怎么回事，反正这房子的窗户外面能看见海
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:12" data-kidokudelay="500">
+<div class="talk metalk">
+不如说感觉就好像在海上似的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:12" data-kidokudelay="500">
+<div class="talk metalk">
+就坐船那种感觉
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:12" data-kidokudelay="500">
+<div class="talk metalk">
+还能听见海浪声
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:12" data-kidokudelay="500">
+<div class="talk metalk">
+感受宁静……
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:12">
+<div class="talk youtalk">
+怕不是镶了个电视进去
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:12" data-kidokudelay="500">
+<div class="talk metalk">
+我是不明白什么原理
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:13" data-kidokudelay="500">
+<div class="talk metalk">
+总之我还得解决今天的温饱问题
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:13">
+<div class="talk youtalk">
+那我给你弄点？你要啥？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:13" data-kidokudelay="500">
+<div class="talk metalk">
+不用不用，我带钱了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="10:13" data-kidokudelay="500">
+<div class="talk metalk">
+在附近711买点面包啥的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide dayend" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="10:15">
+<div class="talk youtalk">
+行吧
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="10000">
+<div class="info">
+<div class="talk infotalk">
+2017年8月6日（周日）
+</div>
+</div>
+
+<div class="me" data-kidoku="" data-time="17:21" data-kidokudelay="1500">
+<div class="talk metalk">
+疯了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="3500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="17:29">
+<div class="talk youtalk">
+咋了？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:29" data-kidokudelay="500">
+<div class="talk metalk">
+总感觉
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:30" data-kidokudelay="500">
+<div class="talk metalk">
+这种一个人离家出走，一个人过的这种不是个事
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:30" data-kidokudelay="500">
+<div class="talk metalk">
+虽然有这个莫名其妙的板房在过的稍微好点吧
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:30" data-kidokudelay="500">
+<div class="talk metalk">
+今天天气又不怎么样……
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="17:30">
+<div class="talk youtalk">
+啥玩意
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="17:30">
+<div class="talk youtalk">
+今天不是大晴天连一朵云都看不见吗
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:31" data-kidokudelay="500">
+<div class="talk metalk">
+不是，我说那个板房里的海
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:31" data-kidokudelay="500">
+<div class="talk metalk">
+昨天还是起了点小雾，今天就黑云滚滚的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:31" data-kidokudelay="500">
+<div class="talk metalk">
+浪也大起来了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:31" data-kidokudelay="500">
+<div class="talk metalk">
+还摇摇晃晃的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:32" data-kidokudelay="500">
+<div class="talk metalk">
+有点奇怪的就是
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:32" data-kidokudelay="500">
+<div class="talk metalk">
+屋里摇的那么厉害，一出去发现板房压根就没有动静
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:31" data-kidokudelay="500">
+<div class="talk metalk">
+也不知道什么原理
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="17:34">
+<div class="talk youtalk">
+那你来我家？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:34" data-kidokudelay="500">
+<div class="talk metalk">
+等我真感觉要死的时候吧
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="17:34">
+<div class="talk youtalk">
+跟你讲别自己一个人扛着…
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="17:35" data-kidokudelay="500">
+<div class="talk metalk">
+谢谢
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide dayend" data-delay="3500">
+<div class="me" data-kidoku="" data-time="17:45" data-kidokudelay="500">
+<div class="talk metalk">
+我去搞点吃的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="10000">
+<div class="info">
+<div class="talk infotalk">
+2017年8月7日（周一）
+</div>
+</div>
+
+<div class="me" data-kidoku="" data-time="18:20">
+<div class="talk metalk">
+摇的特别厉害
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2500">
+<div class="me" data-kidoku="" data-time="18:20">
+<div class="talk metalk">
+感觉风暴就要来了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2500">
+<div class="me" data-kidoku="" data-time="18:20">
+<div class="talk metalk">
+疯了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2500">
+<div class="me" data-kidoku="" data-time="18:21">
+<div class="talk metalk">
+有可能真得跑你家去了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="4500">
+<div class="me" data-kidoku="" data-time="19:05">
+<div class="talk metalk">
+拜托了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="5000">
+<div class="me" data-kidoku="" data-time="20:12">
+<div class="talk metalk">
+喂？
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2500">
+<div class="me" data-kidoku="" data-time="20:12">
+<div class="talk metalk">
+还活着吗？
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2500">
+<div class="me" data-kidoku="" data-time="20:12">
+<div class="talk metalk">
+怎么没回音的……
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="5000">
+<div class="me" data-kidoku="" data-time="21:00">
+<div class="talk metalk">
+今天还是在板房里过了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku dayend" data-delay="2500">
+<div class="me" data-kidoku="" data-time="21:00">
+<div class="talk metalk">
+抱歉
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="10000">
+<div class="info">
+<div class="talk infotalk">
+2017年8月8日（周二）
+</div>
+</div>
+
+<div class="me" data-kidoku="" data-time="4:03">
+<div class="talk metalk">
+不行
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:03">
+<div class="talk metalk">
+暴风雨来了，搞得我晕晕乎乎的
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:03">
+<div class="talk metalk">
+救命
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:03">
+<div class="talk metalk">
+门打不开
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+怎么回事
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+手麻le
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+快回信救救wo
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="4000">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+吐了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="1500">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+要命
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:04">
+<div class="talk metalk">
+感觉板房都要烂了
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="talk metalk">
+大哥快回信救命求求你
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ1 -->
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="1000">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="500">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ10 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:05">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ20 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ30 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="300">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ40 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ50 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="1500">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="300">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="700">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ60 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:06">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ70 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ80 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ90 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/morning.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ100 -->
+<div class="flow hide nokidoku" data-delay="1000">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:07">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ110 -->
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ120 -->
+<div class="flow hide nokidoku" data-delay="100">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="200">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/happy.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="800">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ130 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/good.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ140 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:08">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:09">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/goodnight.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:09">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<!-- スタンプ143 -->
+<div class="flow hide nokidoku" data-delay="150">
+<div class="stamp">
+<div class="me" data-kidoku="" data-time="4:09">
+<div class="stampin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/help.png">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku" data-delay="2000">
+<div class="me" data-kidoku="" data-time="4:09">
+<div class="talk metalk">
+卧槽
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku dayend" data-delay="2000">
+<div class="pict">
+<div class="me" data-kidoku="" data-time="4:09" data-kidokudelay="3000">
+<div class="pictin">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/招手.jpg">
+</div>
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide dokidoku" data-delay="10000">
+<div class="info">
+<div class="talk infotalk">
+2017年8月9日（周三）
+</div>
+</div>
+
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:12">
+<div class="talk youtalk">
+对不起我被拉去强化集训班了没法用手机
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:12">
+<div class="talk youtalk">
+这图片啥
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:13">
+<div class="talk youtalk">
+你没事吧？现在在哪里？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="3500">
+<div class="me" data-kidoku="" data-time="0:56" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:56">
+<div class="talk youtalk">
+在哪？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="0:57" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:57">
+<div class="talk youtalk">
+得了得了我明白
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:57">
+<div class="talk youtalk">
+OK
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:57">
+<div class="talk youtalk">
+你现在在哪儿呢
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:57">
+<div class="talk youtalk">
+我去找你
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="0:58" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:58">
+<div class="talk youtalk">
+行了我知道了好不
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="0:58" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:58">
+<div class="talk youtalk">
+阿凉啊
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:58">
+<div class="talk youtalk">
+你这就有点烦了啊
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:59">
+<div class="talk youtalk">
+那我不去找你了？你自己一个人呆着？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="0:59" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:59">
+<div class="talk youtalk">
+操你妈！
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="0:59">
+<div class="talk youtalk">
+你给我正常点行不！！
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="me" data-kidoku="" data-time="1:00" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="1:00">
+<div class="talk youtalk">
+呃
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="1:00">
+<div class="talk youtalk">
+行吧
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="2500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="1:01">
+<div class="talk youtalk">
+现在问这个可能有点奇怪
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="3500">
+<div class="icon">
+<img src="http://ja.scp-wiki.net/local--files/talklog-1473jp/icon.jpg">
+</div>
+<div class="you" data-time="1:01">
+<div class="talk youtalk">
+你真的是阿凉吗？
+</div>
+</div>
+<div style="clear: left;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="3500">
+<div class="me" data-kidoku="" data-time="1:01" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide" data-delay="3000">
+<div class="me" data-kidoku="" data-time="1:02" data-kidokudelay="500">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+<div class="flow hide nokidoku2" data-delay="5000">
+<div class="me" data-kidoku="" data-time="2:13">
+<div class="talk metalk">
+没事。
+</div>
+</div>
+<div style="clear: right;">
+</div>
+</div>
+
+</div>
+<a href="javascript:scroll()">
+<div id="banner" class="hide" style="width: 100%; height: 3em; bottom: 0; position: absolute; color: #000000; background: #ffffff; opacity: 0.8; overflow: hidden;">
+</div>
+</a>
+</div>
+
+<table style="width:100%; height: 50px;  color: #303060;background-color: #ffffff; border-collapse:collapse; border: solid 1px;">
+<tr>
+<td style="width: 12%; text-align: center; font-size: 180%;">
+<i class="fa fa-plus"></i>
+</td>
+<td style="width: 12%; text-align: center; font-size: 180%;">
+<i class="fa fa-camera"></i>
+</td>
+<td style="width: 12%; text-align: center; font-size: 180%;">
+<i class="fa fa-image"></i>
+</td>
+<td style="text-align: center; font-size: 180%;">
+<div class="talk" style="background-color: #eeeeee; width: 100%;">
+<div style="display: inline-block; color: #bbbbbb; font-size: medium;">
+Aa
+</div>
+</div>
+</td>
+<td style="width: 12%; text-align: center; font-size: 180%;">
+<i class="fa fa-microphone"></i>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<script type="text/javascript">
+let ary = document.getElementsByClassName("flow");
+let banner = document.getElementById("banner");
+let obj = document.getElementById("all");
+setTimeout(function(){show(ary, 0);}, ary[0].dataset.delay);
+
+obj.onscroll = function(){
+  if(obj.scrollTop + obj.offsetHeight >= obj.scrollHeight){
+    banner.classList.add("hide");
+  }
+}
+
+function scroll(){
+  obj.scrollTop = obj.scrollHeight;
+}
+
+function show(ary, i){
+  if(obj.scrollTop + obj.offsetHeight >= obj.scrollHeight){
+    setTimeout(function(){obj.scrollTop = obj.scrollHeight;}, 1);
+  }
+ else{
+    setTimeout(function(){banner.classList.remove("hide");}, 1);
+  }
+  ary[i].classList.remove("hide");
+  if(ary[i].querySelector(".me") != null){
+    if(ary[i].querySelector(".stamp") != null){
+      banner.innerHTML = "<p>你：表情</p>";
+    }
+    else if(ary[i].querySelector(".pict") != null){
+      banner.innerHTML = "<p>你：图片</p>";
+    }
+    else{
+      banner.innerHTML = "<p>你：" + ary[i].querySelector(".me").textContent + "</p>";
+    }
+    if(!(ary[i].classList.contains("nokidoku") || ary[i].classList.contains("nokidoku2"))){
+      setTimeout(function(){ary[i].querySelector(".me").dataset.kidoku = "已读";}, ary[i].querySelector(".me").dataset.kidokudelay);
+    }
+  }
+  else{
+    banner.innerHTML = "<p>穂村：" + ary[i].querySelector(".you").textContent + "</p>";
+  }
+  if(ary[i].classList.contains("dayend")){
+    setTimeout(function(){
+      let change = document.getElementById("change");
+      change.classList.remove("blackout");
+      change.offsetWidth = change.offsetWidth;
+      change.classList.add("blackout");
+    }, 2500);
+  }
+  if(i+1 != ary.length){
+    if(ary[i+1].classList.contains("dokidoku")){
+      setTimeout(function(){
+        let j;
+        let nokidokuary = document.getElementsByClassName("nokidoku");
+        for(j = 0; j < nokidokuary.length; j++){
+          nokidokuary[j].querySelector(".me").dataset.kidoku = "已读";
+        }
+      }, ary[i+1].dataset.delay - 2000);
+    }
+    setTimeout(function(){show(ary, i+1);}, ary[i+1].dataset.delay);
+  }
+}
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
