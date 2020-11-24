@@ -1,367 +1,323 @@
-@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+/* Classic SCP Foundation Theme
+ * [2020 Wikidot Theme]
+ * Created by Lt Flops
+**/
 
-@supports(--css: variables) {
-
-:root {
-    /* Typefaces */
-    --body-font: 'IBM Plex Mono', '等线', monospace;
-    --header-font: 'IBM Plex Mono', '等线', sans-serif;
-    --title-font: 'IBM Plex Mono', '等线', monospace;
-    --mono-font: "IBM Plex Mono", '等线', monospace;
-
-    /* Standard Colors */
-
-    --white-monochrome: 238, 238, 216;
-    --pale-gray-monochrome: 233, 231, 204;
-    --light-gray-monochrome: 147, 147, 147;
-    --gray-monochrome: 127, 127, 127;
-    --dark-gray-monochrome: 101, 101, 101;
-    --black-monochrome: 25, 20, 16;
-    --bright-accent: 145, 179, 153;
-    --medium-accent: 145, 179, 153;
-    --dark-accent: 105, 133, 111;
-
-
-    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Ascp-offices-theme/scpoffices_logo.svg");
-
-    --background-gradient-color: 215, 215, 215;
-    --background-gradient-distance: 40rem;
-
-    /* Link Colors */
-	--link-color: var(--bright-accent);
-	--visited-link-color: var(--dark-accent);
-	--hover-link-color: var(--dark-accent);
-	--newpage-color: 221, 102, 17;
-
-    scrollbar-color: rgba(var(--white-monochrome), 1) rgba(var(--bright-accent), 0.50);
+/* ---- PAGE WRAP ---- */
+ div#container-wrap{
+     background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aclassic/classic_body_bg.png);
+     background-repeat: repeat-x;
 }
 
-#container-wrap-wrap {
-
-    background-image:
-        -webkit-repeating-linear-gradient(top,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        -webkit-linear-gradient(top,
-        rgba(var(--black-monochrome), 1) 7.5rem,
-        rgba(var(--gray-monochrome), 1) 7.625rem,
-        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
-        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
-        rgba(var(--black-monochrome), 1) 100%);
-
-    background-image:
-        -moz-repeating-linear-gradient(top,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        -moz-linear-gradient(top,
-        rgba(var(--black-monochrome), 1) 7.5rem,
-        rgba(var(--gray-monochrome), 1) 7.625rem,
-        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
-        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
-        rgba(var(--black-monochrome), 1) 100%);
-
-    background-image:
-        repeating-linear-gradient(180deg,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        -webkit-gradient(linear,
-        left top, left bottom,
-        color-stop(7.5rem, rgba(var(--black-monochrome), 1)),
-        color-stop(7.625rem, rgba(var(--gray-monochrome), 1)),
-        color-stop(rgba(var(--gray-monochrome), 1)),
-        color-stop(rgba(var(--gray-monochrome), 1)),
-        to(rgba(var(--black-monochrome), 1)));
-
-    background-image:
-        -o-repeating-linear-gradient(top,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        -o-linear-gradient(top,
-        rgba(var(--black-monochrome), 1) 7.5rem,
-        rgba(var(--gray-monochrome), 1) 7.625rem,
-        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
-        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
-        rgba(var(--black-monochrome), 1) 100%);
-
-    background-image:
-        repeating-linear-gradient(180deg,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        linear-gradient(to bottom,
-        rgba(var(--black-monochrome), 1) 7.5rem,
-        rgba(var(--gray-monochrome), 1) 7.625rem,
-        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
-        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
-        rgba(var(--black-monochrome), 1) 100%);
-    -webkit-background-size: 100% 7.5rem, 100% 9.375rem;
-       -moz-background-size: 100% 7.5rem, 100% 9.375rem;
-         -o-background-size: 100% 7.5rem, 100% 9.375rem;
-            background-size: 100% 7.5rem, 100% 9.375rem;
-    background-repeat: no-repeat;
+/* ---- HEADERS ---- */
+ span, a{
+     word-break: unset;
+}
+ h1{
+     font-size: 190%;
+}
+ h1, h2, h3, h4, h5, h6{
+     font-family: "Trebuchet MS", "Trebuchet", "Verdana", "Arial", "Helvetica", sans-serif;
+}
+ #header h1,
+ #header h2{
+     margin-left: -.16em;
+}
+ #header h1{
+     max-height: 105px;
+     margin: 0;
+}
+ #header h2{
+     margin: 0;
 }
 
-#skrollr-body {}
-
-a {
-    font-weight: 900;
+/* ---- SITE HEADER ---- */
+ #header h1 a,
+ #header h2 span{
+     color: transparent;
+     text-shadow: none;
+}
+ #header h1 a{
+     font-family: "Trebuchet MS", "Trebuchet", "Verdana", "Arial", "Helvetica", sans-serif;
+     letter-spacing: 0;
+}
+ #header h1 a::before,
+ #header h2 span::before{
+     text-shadow: none;
+}
+ #header h1 a::before{
+     content: "SCP基金会";
+     color: hsl(0, 0%, 93%);
+}
+ #header h2 span::before{
+     content: "为行控制、收容及保护之事";
+     color: hsl(353, 100%, 30%);
 }
 
-#header h2 span::before {
-    color: rgb(var(--bright-accent));
+/* ---- TOP MENU ---- */
+ #header{
+     background: none;
+}
+ #top-bar ul li,
+ #top-bar ul li ul{
+     box-shadow: none;
+}
+ #top-bar ul li ul{
+     border-color: hsl(0, 0%, 27%);
+     border-style: solid;
+     border-width: 0 1px 1px;
+}
+ #top-bar ul li a,
+ #top-bar ul li.sfhover a,
+ #top-bar ul li:hover a{
+     border-color: hsl(0, 0%, 27%);
+     border-style: solid;
+     border-width: 0 0 0 1px;
+}
+ #top-bar ul li a::before{
+     content: "[";
+}
+ #top-bar ul li a::after{
+     content: "]";
+     position: relative;
+
+/* NOTE: The Top Bar Menu has spaces after each bullet, which is why this is done: */
+     left: -.3em;
+}
+ #top-bar ul li ul li a::before{
+     content: unset;
+}
+ #top-bar ul li ul li a::after{
+     content: unset;
+}
+ .mobile-top-bar{
+     bottom: -.5px;
 }
 
-#header h1 *,
-#top-bar *,
-#page-title * {
-    will-change: opacity;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -o-transition: opacity 0.2s ease-in-out;
-    -moz-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+/* ---- SEARCH BOX ---- */
+ #search-top-box input.empty{
+     color: hsl(0, 0%, 45%);
+}
+ #search-top-box-input{
+     color: hsl(0, 0%, 5%);
+     background-color: hsl(0, 0%, 100%);
+     border: 1px solid hsl(0, 0%, 47%);
+     border-radius: 0;
+     box-shadow: none;
+}
+ #search-top-box-input:hover,
+ #search-top-box-input:focus{
+     color: hsl(0, 0%, 5%);
+     background-color: hsl(0, 0%, 100%);
+     border: 1px solid hsl(0, 0%, 47%);
+     box-shadow: none;
+}
+ #search-top-box-form input[type="submit"]{
+     color: hsl(0, 0%, 5%);
+     background: hsl(0, 0%, 96%);
+     border: 1px solid hsl(0, 0%, 67%);
+     border-radius: 0;
+     box-shadow: none;
+     font-size: 100%;
+     font-weight: normal;
+}
+ #search-top-box-form input[type="submit"]:hover,
+ #search-top-box-form input[type="submit"]:focus{
+     color: hsl(0, 0%, 5%);
+     background: hsl(0, 0%, 87%);
+     border: 1px solid hsl(0, 0%, 67%);
+     box-shadow: none;
 }
 
-#header h1 a:hover::before,
-#top-bar a:hover,
-#page-title:hover,
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-    -webkit-animation: flicker 20s linear infinite;
-    -moz-animation: flicker 20s linear infinite;
-    -o-animation: flicker 20s linear infinite;
-       animation: flicker 20s linear infinite;
+/* ---- SIDE MENU ---- */
+ #side-bar{
+     clear: both;
+     padding: .78em;
+     padding-bottom: 0;
+     border: 1px solid hsl(0, 0%, 87%);
+     border-radius: 0;
+     box-shadow: none;
+}
+ #side-bar .side-block{
+     margin-bottom: .78em;
+     background: transparent;
+     border: none;
+     border-radius: 0;
+     box-shadow: none;
+}
+ #side-bar .heading{
+     padding-left: 0;
+     color: hsl(0, 0%, 5%);
+     border-bottom: 1px solid hsl(0, 0%, 67%);
+}
+ #side-bar .collapsible-block-unfolded-link{
+     border-bottom: 1px solid hsl(0, 0%, 67%);
+}
+ #side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+ #side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover{
+     margin-left: 0;
+     color: hsl(0, 0%, 5%);
 }
 
-#top-bar li:hover ul,
-#top-bar li:focus-within ul,
-#top-bar li.sfhover ul,
-#top-bar li ul {
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+/* ---- INFO BAR ---- */
+ body{
+     --barColour: hsl(0, 0%, 28%);
 }
 
-#search-top-box-form input[type="submit"] {
-    background: rgb(var(--bright-accent)) !important;
+/* ---- INFO PANE ---- */
+.creditRate{
+     margin-right: 0 !important;
+     border: none !important;
+}
+ .rate-box-with-credit-button{
+     background-color: hsl(0, 0%, 40%) !important;
+     border: none !important;
+     border-radius: 0 !important;
+     box-shadow: none !important;
+}
+ .creditButton p a{
+     color: hsl(0, 0%, 95%);
+     border-left: none !important;
+}
+ .rate-box-with-credit-button .fa-info:hover{
+     color: hsl(112, 100%, 77%);
+}
+ .modalbox{
+     max-height: unset !important;
+     border-radius: 0 !important;
+     box-shadow: none !important;
 }
 
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-	background: rgb(var(--dark-accent)) !important;
+/* ---- PAGE RATING ---- */
+.page-rate-widget-box{
+     margin-right: 0;
+     border-radius: 0;
+     box-shadow: none;
 }
-	
-#side-bar img {
-	display: none;
+ .page-rate-widget-box .rate-points{
+     background-color: hsl(0, 0%, 40%) !important;
+     border: none;
+     border-radius: 0;
 }
-	
-#side-bar .collapsible-block-unfolded {
-	background: unset;
+ .page-rate-widget-box .rateup,
+ .page-rate-widget-box .ratedown{
+     background-color: hsl(0, 0%, 87%);
+     border: none;
+     font-weight: normal;
 }
-	
-#side-bar div.menu-item a.collapsible-block-link,
-#side-bar .side-block>.collapsible-block a.collapsible-block-link {
-	background: rgba(var(--medium-accent),0.5);	
+ .page-rate-widget-box .rateup a,
+ .page-rate-widget-box .ratedown a{
+     color: hsl(0, 0%, 5%);
 }
-
-#side-bar div.menu-item a,
-#side-bar div.menu-item .text {
-    font-weight: 900;
+ .page-rate-widget-box .rateup a:hover,
+ .page-rate-widget-box .ratedown a:hover{
+     color: hsl(0, 0%, 5%);
+     background: hsl(0, 0%, 93%);
+     text-decoration: underline;
 }
-
-#side-bar div.menu-item a:hover {
-    -webkit-animation: flicker 20s linear infinite;
-    -moz-animation: flicker 20s linear infinite;
-    -o-animation: flicker 20s linear infinite;
-       animation: flicker 20s linear infinite;
+ .page-rate-widget-box .cancel{
+     background-color: hsl(0, 0%, 87%);
+     border: none;
+     border-radius: 0;
 }
-
-.page-rate-widget-box {
-    background:
-        -webkit-gradient(linear,
-        left top, left bottom,
-        from(rgb(var(--bright-accent))),
-        color-stop(30%, rgb(var(--dark-accent))),
-        to(rgb(var(--dark-accent)))) !important;
-    background:
-        -webkit-linear-gradient(top,
-        rgb(var(--bright-accent)) 0%,
-        rgb(var(--dark-accent)) 30%,
-        rgb(var(--dark-accent)) 100%) !important;
-    background:
-        -moz-linear-gradient(top,
-        rgb(var(--bright-accent)) 0%,
-        rgb(var(--dark-accent)) 30%,
-        rgb(var(--dark-accent)) 100%) !important;
-    background:
-        -o-linear-gradient(top,
-        rgb(var(--bright-accent)) 0%,
-        rgb(var(--dark-accent)) 30%,
-        rgb(var(--dark-accent)) 100%) !important;
-    background:
-        linear-gradient(to bottom,
-        rgb(var(--bright-accent)) 0%,
-        rgb(var(--dark-accent)) 30%,
-        rgb(var(--dark-accent)) 100%) !important;
+ .page-rate-widget-box .cancel a{
+     color: hsl(0, 0%, 5%);
+     text-transform: lowercase;
+}
+ .page-rate-widget-box .cancel a:hover{
+     color: hsl(0, 0%, 5%);
+     background: hsl(0, 0%, 93%);
+     text-decoration: underline;
 }
 
-.page-rate-widget-box > span.rate-points,
-.page-rate-widget-box > span.rateup,
-.page-rate-widget-box > span.ratedown,
-.page-rate-widget-box > span.cancel,
-.page-rate-widget-box > span.rate-points > a,
-.page-rate-widget-box > span.rateup > a,
-.page-rate-widget-box > span.ratedown > a,
-.page-rate-widget-box > span.cancel > a {
-    color: rgb(var(--white-monochrome));
-    mix-blend-mode: unset;
-    -webkit-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    -moz-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+/* ----- GENERAL ----- */
+ body{
+     color: hsl(0, 0%, 5%);
+     word-break: unset;
+}
+ hr{
+     height: 0;
+     margin: 1em 0;
+     background-color: transparent;
+     border-top: 1px solid hsl(0, 0%, 67%);
 }
 
-.page-rate-widget-box > span.rate-points:hover,
-.page-rate-widget-box > span.rate-points:active {
-    color: rgb(var(--white-monochrome)) !important;
-    mix-blend-mode: unset !important;
+/* ---- IMAGE BLOCK ---- */
+ .scp-image-block.block-right{
+     margin: 0 0 1em 2em;
+     box-shadow: none;
 }
 
-.page-rate-widget-box > span.rateup:hover,
-.page-rate-widget-box > span.rateup:active,
-.page-rate-widget-box > span.ratedown:hover,
-.page-rate-widget-box > span.ratedown:active,
-.page-rate-widget-box > span.cancel:hover,
-.page-rate-widget-box > span.cancel:active {
-    color: rgb(var(--black-monochrome));
-    -webkit-animation: flicker 20s linear infinite;
-    -moz-animation: flicker 20s linear infinite;
-    -o-animation: flicker 20s linear infinite;
-       animation: flicker 20s linear infinite;
-}
-	
-.info-container .collapsible-block-folded,
-.info-container .collapsible-block-unfolded-link {
-	background: rgb(var(--bright-accent))!important;	
-}
-	
-iframe.scpnet-interwiki-frame {
-	-webkit-filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
-	        filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
-}	
-
-@media only screen and (max-width: 768px) {
-	#header {
-		background-position: left -webkit-calc(5vw + 5.5rem - 10.4rem) top -webkit-calc(4% - var(--offset-from-page-top) / 2),top center;
-		background-position: left -moz-calc(5vw + 5.5rem - 10.4rem) top -moz-calc(4% - var(--offset-from-page-top) / 2),top center;
-		background-position: left calc(5vw + 5.5rem - 10.4rem) top calc(4% - var(--offset-from-page-top) / 2),top center;
-		-webkit-background-size: -webkit-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
-		   -moz-background-size: -moz-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
-		     -o-background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
-		        background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
-		background-repeat: no-repeat,repeat;
-	}
+/* ---- CLASSIC IMAGE BLOCK DIV ---- */
+ .classic-image-block{
+     float: right;
+     width: 300px;
+     margin: 0 0 1em 2em;
+     text-align: center;
 }
 
-@-webkit-keyframes flicker {
-    0% {
-        opacity: .2;
-    }
-
-    5% {
-        opacity: .9;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: .4;
-    }
-
-    11.25% {
-        opacity: .6;
-    }
-
-    11.5% {
-        opacity: .4;
-    }
-
-    18% {
-        opacity: 1;
-    }
-
-    18.5% {
-        opacity: .9;
-    }
-
-    22% {
-        opacity: 1;
-    }
-
-    38.5% {
-        opacity: 1;
-    }
-
-    39% {
-        opacity: .8;
-    }
-
-    42% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    60.5% {
-        opacity: 0;
-    }
-
-    62% {
-        opacity: 0;
-    }
-
-    63% {
-        opacity: .2;
-    }
-
-    63.25% {
-        opacity: 0;
-    }
-
-    65% {
-        opacity: 1;
-    }
-
-    73% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: .8;
-    }
-
-    79% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
+/* ---- YUI TABS ---- */
+ .yui-navset .yui-nav a,
+ .yui-navset .yui-navset-top .yui-nav a{
+    /* ---- Tab Background Colour | [UNSELECTED] ---- */
+     background-color: hsl(0, 0%, 100%);
+    /* -------- */
+     background-image: none;
 }
+ .yui-navset .yui-nav a:hover,
+ .yui-navset .yui-nav a:focus{
+    /* ---- Tab Background Colour | [HOVER] ---- */
+     background-color: hsl(0, 49%, 91%);
+    /* -------- */
+     background-image: none;
+}
+ .yui-navset .yui-nav .selected a,
+ .yui-navset .yui-nav .selected a:focus,
+ .yui-navset .yui-nav .selected a:hover{
+    /* ---- Tab Background Colour | [SELECTED] ---- */
+     background-color: hsl(0, 70%, 35%);
+    /* -------- */
+     background-image: none;
+}
+
+
+/* --- INTERWIKI --- */
+ iframe.scpnet-interwiki-frame{
+     position: relative;
+     width: 17em;
+     height: 12em;
+     margin-left: .313em;
+     background-color: transparent;
+}
+
+/* ---- MOBILE MEDIA QUERIES ---- */
+ @media (max-width: 479px){
+      #top-bar ul li a{
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+     }
+}
+ @media (max-width: 767px){
+       #side-bar .side-block{
+          background-color: hsl(0, 0%, 100%);
+     }
+      #side-bar:after{
+          background-color: hsla(0, 0%, 30%, .2);
+     }
+}
+ @media (max-width: 479px),
+ @media (min-width: 480px) and (max-width: 580px),
+ @media (min-width: 581px) and (max-width: 767px){
+      #side-bar .side-block{
+          background-color: hsl(0, 0%, 100%);
+     }
+      #side-bar:after{
+          background-color: hsla(0, 0%, 30%, .2);
+     }
+      #header, .mobile-top-bar{
+          max-width: 95%;
+     }
+      .mobile-top-bar{
+          left: 0;
+     }
 }

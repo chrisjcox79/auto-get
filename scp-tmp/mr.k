@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342261;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "system:page-tags";
-        OZONE.request.timestamp = 1606159296;
+        OZONE.request.timestamp = 1606182447;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "system:page-tags";
@@ -768,7 +768,7 @@
 					style="font-size: 102%; color: rgb(127, 127, 191);"
 					>异常移动</a>
 							<a class="tag" href="/system:page-tags/tag/%E5%BC%BA%E8%BF%AB%E6%80%A7"
-					style="font-size: 108%; color: rgb(125, 125, 189);"
+					style="font-size: 108%; color: rgb(126, 126, 190);"
 					>强迫性</a>
 							<a class="tag" href="/system:page-tags/tag/%E5%BD%A2%E6%80%81%E6%94%B9%E5%8F%98"
 					style="font-size: 104%; color: rgb(127, 127, 191);"
@@ -888,7 +888,7 @@
 					style="font-size: 100%; color: rgb(128, 128, 192);"
 					>梦神集团</a>
 							<a class="tag" href="/system:page-tags/tag/%E6%A4%8D%E7%89%A9"
-					style="font-size: 104%; color: rgb(127, 127, 191);"
+					style="font-size: 105%; color: rgb(127, 127, 191);"
 					>植物</a>
 							<a class="tag" href="/system:page-tags/tag/%E6%A6%82%E5%BF%B5"
 					style="font-size: 103%; color: rgb(127, 127, 191);"
@@ -1241,45 +1241,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://schoolsteachersparents.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/schoolsteachersparents.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://tmduc.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/tmduc.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://schoolsteachersparents.wikidot.com">Schools - Teachers - Parents</a></h3>
+            <h3><a target="_blank" href="http://tmduc.wikidot.com">TMD (uc)</a></h3>
             <div class="desc">          
-              Issues in Schooling
+              creación colectiva
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://balchipedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/balchipedia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ci-sandbox.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ci-sandbox.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://balchipedia.wikidot.com">Balchipedia</a></h3>
+            <h3><a target="_blank" href="http://ci-sandbox.wikidot.com">Insu Sandbox</a></h3>
             <div class="desc">          
-              The Encyclopedia of Balch History
+              All you need is a shovel... and a sacrifice.
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://signaturbogen.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/signaturbogen.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.freesmug.org">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.freesmug.org/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://signaturbogen.wikidot.com">Signaturbogen 2.0</a></h3>
+            <h3><a target="_blank" href="http://www.freesmug.org">FreeSMUG</a></h3>
             <div class="desc">          
-              4.000 signaturer, 2.500 kunstnere
+              Free Open Source Software Mac User Group
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://insurrection-du-chaos-sandbox.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/insurrection-du-chaos-sandbox.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://tibasicdev.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/tibasicdev.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://insurrection-du-chaos-sandbox.wikidot.com">IC-FR Sandbox</a></h3>
+            <h3><a target="_blank" href="http://tibasicdev.wikidot.com">TI-Basic Developer</a></h3>
             <div class="desc">          
-              Sandbox de l&#039;Insurrection du Chaos francophone
+              The TI-Basic Information Repository
             </div>
           </div>
         </div>
