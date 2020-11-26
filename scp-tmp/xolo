@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "xolo";
-        OZONE.request.timestamp = 1606356624;
+        OZONE.request.timestamp = 1606375727;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "xolo";
@@ -65,9 +65,6 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
-
-
         
                 
         /* theme */
@@ -120,134 +117,312 @@
     </script>
         
 <style>
-@import url(http://ah-sandbox.wikidot.com/cmr:norm/code/1);
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+</style>
+<style>
+/*↓ 所有变量 ↓ */
 
 :root {
-    --bg-color: #e6e6e6;
-    --hd-color-1: #482c68;
-    --hd-color-2: #3e2659;
-    --hd-color-3: #000;
-    --hd-color-4: #160e20;
-    --hd-color-5: #1e122b;
-    --ft-color: #000;
-    --color-white: #FFF;
-    --color-black: #000;
-    --color-red-1: #593781;
-    --color-red-2: #593781;
-    --lk-color: #593781;
-    --hd-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Adeus-ex-machina/pataphysics_logo.svg);
+            /*↓ S-CSS-P 集成 ↓ */
+            /*↓ 如果你正在制作一个新的CSS主题版式，请至少添加以下三个变量。 ↓ */
+            /*↓ 每一个变量的说明在其下方 ↓ */
+
+                  --theme-base: "黑色标记笔";
+            /*↑ 必须为“黑色标记笔”或者“sigma9” ↑*/
+                  --theme-id: "unnamed";
+            /*↑ 你的版式页面的URL地址 - 例如“component:ar-theme”，则设置为“ar-theme” ↑*/
+                  --theme-name: "未命名";
+            /*↑ 你的版式的名字 ↑*/
+
+            /*↓ 页眉 ↓ */
+
+                  --logo-image: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
+            /*↑ 页眉Logo ↑*/
+                  --header-title: "是xOLo也是Sinnine";
+            /*↑ 大标题 ↑*/
+                  --header-subtitle: "敬重万物之人";
+            /*↑ 副标题 ↑*/
+
+            /*↓ 字体 - 字体的数量可以任意增加，之间以半角逗号隔开，系统会根据设备是否安装了该字体从前往后依次渲染 ↓ */
+
+                  --body-font: "方正粗黑宋简体", sans-serif;
+            /*↑ 正文字体 ↑*/
+                  --header-font: "Charlemagne Std", sans-serif;
+            /*↑ 页眉字体 ↑*/
+                  --title-font: "Charlemagne Std", sans-serif;
+            /*↑ 标题字体 ↑*/
+                  --mono-font: "ZCOOL QingKe HuangYou", "Andale Mono", "Courier New", Courier, monospace;
+            /*↑ 等宽字 ↑*/
+
+            /*↓ 标准颜色 ↓ */
+            /*↓ 颜色格式为 RGB 红、绿、蓝 ↓ */
+
+                  --white-monochrome: 252, 252, 252;
+            /*↑ 白色 ↑*/
+                  --pale-gray-monochrome: 244, 244, 244;
+            /*↑ 非常浅的灰色，用于引用块 ↑*/
+                  --light-pale-gray-monochrome: 244, 244, 244;
+            /*↑ 浅灰色 ↑*/
+                  --very-light-gray-monochrome: 215, 215, 215;
+            /*↑ 浅灰色 ↑*/
+                  --light-gray-monochrome: 160, 160, 160;
+            /*↑ 浅灰色 ↑*/
+                  --gray-monochrome: 66, 66, 72;
+            /*↑ 灰色 ↑*/
+                  --dark-gray-monochrome: 48, 48, 52;
+            /*↑ 深灰色 ↑*/
+                  --black-monochrome: 12, 12, 12;
+            /*↑ 黑色 ↑*/
+                  --pale-accent: 160, 160, 160;
+            /*↑ 浅红色，链接颜色 ↑*/
+                  --bright-accent: 48, 48, 52;
+            /*↑ 亮红色 ↑*/
+                  --medium-accent: 66, 66, 72;
+            /*↑ 红色 - 基准颜色 ↑*/
+                  --dark-accent: 12, 12, 12;
+            /*↑ 深红色 ↑*/
+                  --alt-accent: 160, 160, 160;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+            /*↓ 背景及页眉颜色 ↓ */
+
+                  --background-gradient-color: var(--very-light-gray-monochrome);
+                  --header-gradient-color-bottom: var(--medium-accent);
+            /*↑ 页眉渐变 - 底端 ↑*/
+                  --header-gradient-color-middle: var(--black-monochrome);
+            /*↑ 页眉渐变 - 中间 ↑*/
+                  --header-gradient-color-top: var(--black-monochrome);
+            /*↑ 页面渐变 - 顶端 ↑*/
+
+            /*↓ 主要版式颜色 - 一般无需修改 ↓ */
+
+                  --swatch-background: var(--white-monochrome);
+                  --swatch-primary: var(--bright-accent);
+                  --swatch-primary-darker: var(--medium-accent);
+                  --swatch-primary-darkest: var(--dark-accent);
+
+            /*↓ 主要文字颜色 - 一般无需修改 ↓ */
+
+                  --swatch-text-dark: var(--black-monochrome);
+                  --swatch-text-light: var(--white-monochrome);
+                  --swatch-important-text: var(--bright-accent);
+
+            /*↓ 主要菜单颜色 - 一般无需修改 ↓ */
+
+                  --swatch-menubg-color: var(--white-monochrome);
+                  --swatch-menubg-light-color: var(--pale-gray-monochrome);
+                  --swatch-menubg-medium-color: var(--light-gray-monochrome);
+                  --swatch-menubg-medium-dark-color: var(--gray-monochrome);
+                  --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+                  --swatch-menubg-black-color: var(--black-monochrome);
+                  --swatch-menubg-hover-color: var(--black-monochrome);
+                  --swatch-menutxt-dark-color: var(--black-monochrome);
+                  --swatch-menutxt-light-color: var(--white-monochrome);
+                  --swatch-border-color: var(--black-monochrome);
+
+            /*↓ 主要页眉颜色 ↓ */
+
+                  --swatch-headerh1-color: var(--white-monochrome);
+            /*↑ 大标题颜色 - 即“SCP基金会” ↑*/
+                  --swatch-headerh2-color: var(--white-monochrome);
+            /*↑ 副标题颜色 - 即“控制，收容，保护” ↑*/
+                  --swatch-topmenu-border-color: var(--black-monochrome);
+            /*↑ 顶栏的边框颜色 ↑*/
+                  --swatch-topmenu-bg-color: var(--gray-monochrome);
+            /*↑ 顶栏的背景颜色 ↑*/
+
+            /*↓ 链接颜色 ↓ */
+
+                  --link-color: var(--pale-accent);
+            /*↑ 一般链接颜色 ↑*/
+                  --visited-link-color: var(--swatch-primary);
+            /*↑ 已访问的链接颜色 ↑*/
+                  --hover-link-color: var(--swatch-primary);
+            /*↑ 高亮的链接颜色 - 鼠标悬停时 ↑*/
+                  --newpage-color: var(--alt-accent);
+            /*↑ 页面不存在的链接颜色 ↑*/
+                  --sidebar-links-text: var(--swatch-menutxt-dark-color);
+            /*↑ 侧边栏的链接颜色 ↑*/
+
+            /*↓ 评分模块颜色 ↓ */
+
+                  --rating-module-button-color: var(--black-monochrome);
+            /*↑ 评分模块字体颜色 ↑*/
+                  --rating-module-button-plus-color: 160, 160, 160;
+            /*↑ 好评背景颜色 - 绿色 ↑*/
+                  --rating-module-button-negative-color: 160, 160, 160;
+            /*↑ 差评背景颜色 - 红色 ↑*/
+                  --rating-module-button-cancel-color: 200, 200, 200;
+            /*↑ 取消评分背景颜色 - 白色 ↑*/
+                  --rating-module-button-credit-color: 50, 50, 50;
+            /*↑ 著作信息模块中字母“i”的颜色 ↑*/
+                  --rating-module-text-color: var(--swatch-menutxt-dark-color);
+            /*↑ 评分模块字体颜色 ↑*/
+                  --rating-module-text-hover-color: var(--swatch-menutxt-light-color);
+            /*↑ 评分模块字体鼠标悬停时颜色 ↑*/
+
+            /*↓ 页眉渐变 - 一般无需修改 ↓ */
+
+                  --gradient-header: linear-gradient(
+                  to top,
+                        rgb(var(--header-gradient-color-bottom)) 0%,
+                        rgb(var(--header-gradient-color-middle)) 90%,
+                        rgb(var(--header-gradient-color-top)) 100%
+            );
+                  --gradient-topmenu: linear-gradient(
+                  to bottom,
+                  rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0) var(--header-height-on-desktop),
+                        rgba(var(--swatch-topmenu-border-color),1) var(--header-height-on-desktop),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--header-height-on-desktop) + 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 0.95) calc(100% - 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - 0.125rem),
+                        rgba(var(--swatch-topmenu-border-color), 1) 100%);
+                  --gradient-topmenu-mobile: linear-gradient(
+                  to bottom,
+                        rgba(var(--swatch-topmenu-border-color),1) 0,
+                        rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--topbar-height-on-mobile) - 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--topbar-height-on-mobile) - 0.125rem),
+                        rgba(var(--swatch-topmenu-border-color),1) var(--topbar-height-on-mobile));
+                  --diagonal-stripes: repeating-linear-gradient(
+                  45deg,
+                  hsla(0, 0%, 100%, 0),
+                  hsla(0, 0%, 100%, 0) 0.25vh,
+                  rgba(88, 88, 88, 0.1) 0.35vh,
+                  rgba(88, 88, 88, 0.2) 0.5vh
+            );
+                  --gradient-sidemenu-header: linear-gradient(10deg,
+                        rgba(var(--medium-accent), 0.45) 0%,
+                        rgba(var(--medium-accent), 0.55) 100%
+            );
+                  --background-gradient-distance: 40rem;
+                  --gradient-background: linear-gradient(
+                  to bottom,
+                        rgba(var(--background-gradient-color),1) 0,
+                        rgba(var(--background-gradient-color),0.987) calc(0.008 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.951) calc(0.029 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.896) calc(0.064 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.825) calc(0.110 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.741) calc(0.166 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.648) calc(0.231 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.550) calc(0.304 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.450) calc(0.383 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.352) calc(0.467 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.259) calc(0.554 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.175) calc(0.644 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.104) calc(0.735 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.049) calc(0.825 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.013) calc(0.914 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0) var(--background-gradient-distance));
+
+            /*↓ 页面排版 - 一般无需修改 ↓ */
+
+            /*↓ 页眉排版 - 一般无需修改 ↓ */
+                  --header-height-on-desktop: 7.5rem;
+                  --header-height-on-mobile: 7.5rem;
+                  --topbar-height-on-desktop: 1.875rem;
+                  --topbar-height-on-mobile: 3rem;
+                  --header-background-image-size: 100% var(--header-height-on-desktop);
+
+                  --body-width-on-desktop: 44.25rem;
+                  --sidebar-width-on-desktop: calc((var(--base-font-size) * (14/15)) * 19);
+                  --sidebar-width-on-mobile: calc((var(--base-font-size) * (14/15)) * 16);
+                  --scrollbar-width: 1rem;
+                  --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
+                  --border-radius-width: 0.0625rem;
+
+            /*↓ 阴影 - 一般无需修改 ↓ */
+                  --box-border-bottom: 0 0.0625rem 0 0 rgb(var(--swatch-border-color));
+                  --box-border-top: 0 -0.0625rem 0 0 rgb(var(--swatch-border-color));
+                  --box-border-left: -0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+                  --box-border-right: 0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+                  --box-border-all: 0 0 0 0.0625rem rgb(var(--swatch-border-color));
+
+            /*↓ 侧边栏 ↓ */
+                  --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+            /*↑ 侧边栏动画效果 - 持续时间、速度曲线、延迟时间 ↑*/
+                  --sidebar-internal-border-thickness: 0.125rem;
+            /*↑ 侧边栏项目的高度 ↑*/
+
+            /*↓ 杂项 ↓ */
+                  --base-font-size: 0.9375rem;
+            /*↑ 基准字体大小 ↑*/
+                  --base-line-height: 1.313rem;
+                  --final-header-height-on-desktop: calc(var(--header-height-on-desktop) + var(--topbar-height-on-desktop));
+                  --final-header-height-on-mobile: calc(var(--header-height-on-mobile) + var(--topbar-height-on-mobile));
+}
+</style>
+<style>
+#page-title {
+    text-align: center;
+
+}
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
 }
 
-#header h1 a,
-#header h2 span {
-    color: transparent;
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
 }
 
-#header h1 a::before {
-    content: "PATAPHYSICS";
-    color: #FFF;
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
 }
 
-#header h2 span::before {
-    content: "Our God IS SON OF BITCH";
-    color: #FFF;
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
 }
 
-/* ================ */
-/* 来自超形上学部版式 */
-body {
-    background-color: #f8f8f8;
-    color: #0c0c0c;
-
-    --bg: #e6e6e6;
-    --key: black;
-    --footnote: #bd00a7;
-    --fg-light: #5b2f8e;
-    --fg-muted: #613c8b;
-    --fg-medium: #593781;
-    --fg-med-dark: #482c68;
-    --fg-dark: #1e122b;
-    --fg-dark-2: #160e20;
-    --fg-muted-dark: #3e2659;
-    --fg-grad-2: #523276;
-    --fg-grad-3: #2f1d44;
-}
-/* SIDE MENU */
- #side-bar {
-     display: block;
-     background: transparent;
-}
- .side-block .menu-item > .image {
-     filter: hue-rotate(268deg) saturate(50%) brightness(111%);
-     -webkit-filter: hue-rotate(268deg) saturate(50%) brightness(111%);
-}
- #side-bar .side-block {
-     background: #eee;
-     background: var(--page-title);
-     border: 3px solid #3e2659;
-     border: 3px solid var(--fg-muted-dark);
-     border-radius: 0;
-     box-shadow: 0 2px 6px rgba(32,32,32,0);
-}
- #side-bar .heading {
-     color: #3e2659;
-     color: var(--fg-muted-dark);
-     border-bottom: solid 1px #3e2659;
-     border-bottom: solid 1px var(--fg-muted-dark);
-}
- #side-bar div.menu-item.inactive a {
-     color: #3e2659;
-     color: var(--fg-muted-dark);
-}
- #side-bar div.menu-item .sub-text {
-     color: #3e2659;
-     color: var(--fg-muted-dark);
-}
- #side-bar .collapsible-block-folded {
-     background: none;
-}
- #side-bar .collapsible-block-unfolded-link {
-     border-bottom: solid 1px #3e2659;
-     border-bottom: solid 1px var(--fg-muted-dark);
-}
- #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-     color: #3e2659;
-     color: var(--fg-muted-dark);
-     font-weight: bold;
-}
- #side-bar .heading {
-     color: #593781;
-     color: var(--fg-medium);
-     border-bottom: solid 1px #593781;
-     border-bottom: solid 1px var(--fg-medium);
-}
- #side-bar div.menu-item.inactive a {
-     color: #482c68;
-     color: var(--fg-med-dark);
-}
- #side-bar div.menu-item .sub-text {
-     color: #482c68;
-     color: var(--fg-med-dark);
-}
- #side-bar .collapsible-block-unfolded-link {
-     border-bottom: solid 1px #482c68;
-     border-bottom: solid 1px var(--fg-med-dark);
-}
- #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-     color: #482c68;
-     color: var(--fg-med-dark);
-     font-weight: bold;
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
 }
 
-/* SIDEBAR CHANGES PER NAV UPDATE */
- #side-bar .side-block {
-     background-color: #e6e6e6 !important;
-     background-color: var(--bg) !important;
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
 }
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
+</style>
+<style>
+@import url("http://www.scp-wiki.net/component:collapsible-sidebar/code/1")
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -625,10 +800,10 @@ body {
                     <div id="page-content">
                         
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+5</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 
 
 
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" style="display: none;" name="typeFrame"></iframe></p>
 <div style="border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;">
 <div style="text-align: center;">
 <p><span style="font-size:larger;"><strong>基金会记录与信息安全管理部的通知</strong></span></p>
@@ -638,7 +813,7 @@ body {
 </div>
 <hr />
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">→&nbsp;如果你真想点开&nbsp;←</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">→&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你真想点开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;←</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
 <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">↓&nbsp;快关上快关上&nbsp;↓</a></div>
 <div class="collapsible-block-content">
@@ -678,6 +853,14 @@ body {
 </div>
 <hr />
 
+
+
+
+
+
+
+
+
                     </div>
 
                             
@@ -713,7 +896,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 5, 最后编辑于: <span class="odate time_1600927519 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">24 Sep 2020 06:05</span></div>
+                            <div id="page-info">页面版本: 7, 最后编辑于: <span class="odate time_1606360559 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">26 Nov 2020 03:15</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+5</span>)</a>
@@ -785,10 +968,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chimiex-bicaz.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chimiex-bicaz.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.music-industrapedia.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.music-industrapedia.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chimiex-bicaz.wikidot.com">Chimiex Bicaz</a></h3>
+            <h3><a target="_blank" href="http://www.music-industrapedia.com">Music Industrapedia</a></h3>
+            <div class="desc">          
+              A Legacy of your Working Life in the Music Industry
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://kingswaypreint.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kingswaypreint.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://kingswaypreint.wikidot.com">Kingsway Pre-Intermediate</a></h3>
             <div class="desc">          
               
             </div>
@@ -796,34 +990,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://figmentregistry.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/figmentregistry.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://05command.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/05command.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://figmentregistry.wikidot.com">Sygnus Figment Registry</a></h3>
+            <h3><a target="_blank" href="http://05command.wikidot.com">O5 Command</a></h3>
             <div class="desc">          
-              Where Writers Share Their Characters &amp; Worlds
+              Why they changed it I can&#039;t say. People just liked it better that way
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://morningside-genetics.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/morningside-genetics.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://cgp.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cgp.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://morningside-genetics.wikidot.com">Morningside Genetics</a></h3>
+            <h3><a target="_blank" href="http://cgp.wikidot.com">Computer Games Programming</a></h3>
             <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://bzhlab.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bzhlab.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://bzhlab.wikidot.com">BZHLab</a></h3>
-            <div class="desc">          
-              Makers goes west!
+              CGP Students
             </div>
           </div>
         </div>
