@@ -1,307 +1,43 @@
 /*
-  Created for the Buried tale hub
-  By Sekai
-  CC BY-SA 3.0
+    RETRO AIAD Theme
+    [2020 Wikidot Theme]
+    By Placeholder McD
+    Based on Y2K Theme created by Etoisle
 */
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#header h1 span,
+#header h2 span::before,
+.interwiki {
+    font-family: "Microsoft Sans Serif", "黑体";
+}
+
 div#container-wrap {
-  background-image: url(http://scp-wiki-cn.wikidot.com/local--files/buried-hub/body_bg_grey.png);
-  background-repeat: repeat-x;
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme:retro-aiad-theme/retroaiadbg.png);
 }
-#header, #side-bar {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+
+div#header {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme:retro-aiad-theme/retroaiadlogo.png);
 }
-#header {
-  background: none;
+
+#header h1 span {
+    color: transparent;
+    text-shadow: none;
 }
-#header::before {
-  display: block;
-  position: absolute;
-  width: 90%;
-  height: 140px;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  content: "";
-  background: url(/local--files/component:theme/logo.png) 10px 40px no-repeat;
-  background-size: 100px 100px;
+
+#header h1 span::before {
+    font-family: "Microsoft Sans Serif", "黑体";
+    content: "信息技术部门";
+    color: #ffffff;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
 }
-@media (max-width: 479px) {
-  #header::before {
-    background-position: 0 5.5em;
-    background-size: 55px 55px;
-  }
-}
-@media (min-width: 480px) and (max-width: 580px) {
-  #header::before {
-    background-position: 0.5em 4.5em;
-    background-size: 66px 66px;
-  }
-}
-@media (min-width: 581px) and (max-width: 767px) {
-  #header::before {
-    background-position: 1em 4em;
-    background-size: 77px 77px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-#header::before {
-    background-position: 1em 4em;
-    background-size: 88px 88px;
-  }
-}
-#header h1 {
-  -webkit-animation: flicker-1 10s infinite;
-  -o-animation: flicker-1 10s infinite;
-  animation: flicker-1 10s infinite;
-}
-#header::before {
-  -webkit-animation: flicker-2 10s infinite;
-  -o-animation: flicker-2 10s infinite;
-  animation: flicker-2 10s infinite;
-}
-#header h2 {
-  -webkit-animation: flicker-3 10s infinite;
-  -o-animation: flicker-3 10s infinite;
-  animation: flicker-3 10s infinite;
-}
-@keyframes flicker-1 {
-  53% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  53.5% {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
-  }
-  54% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  54.5% {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-  }
-  55% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  64% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  64.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  65% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  65.5% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  66% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  96.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  97% {
-    -webkit-filter: brightness(70%);
-    filter: brightness(70%);
-  }
-  97.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  98% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-}
-@keyframes flicker-2 {
-  54% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  54.5% {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
-  }
-  55% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  55.5% {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-  }
-  56% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  65% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  65.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  66% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  66.5% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  67% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  97.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  98% {
-    -webkit-filter: brightness(70%);
-    filter: brightness(70%);
-  }
-  98.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  99% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-}
-@keyframes flicker-3 {
-  55% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  55.5% {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
-  }
-  56% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  56.5% {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-  }
-  57% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  66% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-  66.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  67% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  67.5% {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-  }
-  68% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  98.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  99% {
-    -webkit-filter: brightness(70%);
-    filter: brightness(70%);
-  }
-  99.5% {
-    -webkit-filter: brightness(40%);
-    filter: brightness(40%);
-  }
-  100% {
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-  }
-}
-#page-title {
-  color: rgb(34, 34, 34);
-}
-h1, a {
-  color: rgb(200, 0, 5);
-}
-a:visited {
-  color: rgb(100, 3, 15);
-}
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a,
-#top-bar ul li ul a,
-#top-bar a:hover,
-#side-bar a,
-#side-bar a:visited,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover,
-#breadcrumbs a,
-.page-tags a,
-#page-options-container a,
-#license-area a {
-  color: rgb(41, 41, 41);
-}
-.page-rate-widget-box .rate-points {
-  background-color: rgb(62, 62, 62) !important;
-  border-color: rgb(62, 62, 62);
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-  background-color: rgb(247, 247, 247);
-  border-color: rgb(62, 62, 62);
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-  color: rgb(62, 62, 62);
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-  background: rgb(62, 62, 62);
-  color: rgb(254, 254, 254);
-}
-.page-rate-widget-box .cancel {
-  background-color: rgb(62, 62, 62);
-  border-color: rgb(62, 62, 62);
-}
-.page-rate-widget-box .cancel a {
-  color: rgb(113, 113, 113);
-}
-.page-rate-widget-box .cancel a:hover {
-  background: rgb(62, 62, 62);
-  color: rgb(254, 254, 254);
-}
-.rate-box-with-credit-button {
-  background-color: rgb(62, 62, 62) !important;
-  border-color: rgb(62, 62, 62) !important;
-}
-.creditButton p a {
-  border-left-color: rgb(113, 113, 113) !important;
-}
-.modalbox {
-  box-shadow: 0 2px 6px rgba(22, 22, 22, .5) !important;
-}
-.close-credits, .credit-back {
-  filter: grayscale(100%);
+
+#header h2 span::before {
+    content: "人工智能应用科";
 }
