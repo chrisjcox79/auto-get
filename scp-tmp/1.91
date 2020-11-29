@@ -1,186 +1,513 @@
-/* - == === BHL VARIABLES === == - */
+@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
+@import url("https://use.typekit.net/tqr1skr.css");
 
-/* This is a BHL theme, which is configuration-based, so the root element
- * contains variables that will affect the whole theme
- */
+ @supports(--css:variables) {
 :root {
-  /* S-CSS-P integration */
-  --theme-base: "black-highlighter";
-  --theme-id: "swirling-ashes";
-  --theme-name: "Swirling Ashes Theme";
+    /* S-CSS-P Integration */
+    --theme-base: "nuscp";
+    --theme-id: "dustjacket-theme";
+    --theme-name: "Dustjacket Theme";
 
-  /* Colours */
-  --dark-gray-monochrome: 26, 24, 26;
-  --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
-  --dark-accent: 63, 9, 143;
-  --medium-accent: 81, 13, 181;
-  --bright-accent: 105, 49, 186;
-  --pale-accent: 128, 80, 200;
+    /* Header */
+    --logo-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_logo.png");
+    --header-title: "被放逐者之图书馆";
+    --header-subtitle: " ";
+    --diagonal-stripes: unset;
 
-  /* Sky */
-  --sky-at-dawn: 236, 112, 99;
-  --sky-at-morning: 174, 214, 241;
-  --sky-at-daytime: 249, 231, 159;
-  --sky-at-evening: 248, 196, 113;
-  --sky-at-dusk: 140, 50, 70;
-  --sky-at-night: 50, 40, 67;
-  --sky-length: 15;
-  --sky-time: 60s;
+    /* Typefaces */
+    --body-font: adelle-sans, 'Lato', '微软雅黑', sans-serif;
+    --header-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
+    --title-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
+    --mono-font: adaptive-mono, "PT Mono", "Andale Mono", "Courier New", Courier, NSimSun, monospace;
 
-  /* Header adjustments */
-  --header-title: "鼠巢";
-  --header-subtitle: "让我们从结局开始";
+    /* Standard Colors */
+    --pale-gray-monochrome: 178, 210, 180;
+    --light-gray-monochrome: 130, 160, 135;
+    --gray-monochrome: 45, 70, 45;
+    --dark-gray-monochrome: 30, 55, 30;
+    --bright-accent: 255, 219, 90;
+    --medium-accent: 228, 180, 28;
+    --dark-accent: 185, 150, 17;
+    --newpage-color: 221, 102, 17;
 
-  /* Delete the default header background */
-  --gradient-header: linear-gradient(transparent, transparent);
-  --diagonal-stripes: linear-gradient(transparent, transparent);
+    /* Primary Menu Colors */
+    --swatch-menubg-hover-color: var(--dark-gray-monochrome);
+    --swatch-menutxt-dark-color: var(--dark-gray-monochrome);
+    --swatch-menutxt-light-color: var(--bright-accent);
+    --swatch-border-color: var(--medium-accent);
+
+   /* Primary Header Colors */
+    --swatch-topmenu-border-color: var(--bright-accent);
+    --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
+
+   /* Link Colors */
+    --link-color: var(--pale-accent);
+
+    --rating-module-button-color: var(--bright-accent);
+    --rating-module-text-color: var(--bright-accent);
+    --gradient-sidemenu-header: linear-gradient(10deg,
+        rgba(var(--dark-gray-monochrome), 0.65) 0%,
+        rgba(var(--dark-gray-monochrome), 0.75) 100%);
+
+   --barColour: rgb(var(--gray-monochrome));
+    --linkColour: rgb(var(--medium-accent));
 }
 
-/* - == === HEADER BACKGROUNDS === == - */
-
-/* The header is made up of a million different stacked backgrounds.
- * Instead of fucking about with z-index, I've added backgrounds to
- * the ::before and ::after of various full-page elements in their
- * natural stacking order.
- */
-
-/* The following pseudoelements each contain a different part of the
- * header background. They need to be drawn precisely over the header
- * and made unclickable so they don't interfere with the links up there.
- * They appear on the page in this order, so they'll also be drawn on
- * top of each other in this order.
- */
-body::before,
-div#container-wrap-wrap::before,
-div#container-wrap::before,
-div#container-wrap-wrap::after,
-body::after {
-  content: "";
-  position: absolute;
-  height: var(--header-height-on-desktop); width: 100%; top: 0; left: 0;
-  pointer-events: none;
+/* HIGHLIGHTING */
+::-moz-selection {
+    background: rgba(var(--bright-accent), 0.5);
 }
 
-/* The sky, which loops through a series of colours to evoke the
- * unstoppable passing of time
- */
-body::before {
-  background: linear-gradient(
-                to top,
-                rgb(var(--sky-at-morning)) 0%,
-                rgb(var(--sky-at-morning)) 11%,
-                rgb(var(--sky-at-daytime)) 22%,
-                rgb(var(--sky-at-daytime)) 33%,
-                rgb(var(--sky-at-evening)) 44%,
-                rgb(var(--sky-at-dusk)) 55%,
-                rgb(var(--sky-at-night)) 66%,
-                rgb(var(--sky-at-night)) 77%,
-                rgb(var(--sky-at-dawn)) 88%,
-                rgb(var(--sky-at-morning)) 100%
-              );
-  background-size: 100% calc(var(--header-height-on-desktop)
-                             * var(--sky-length));
-  animation: sky linear var(--sky-time) infinite;
-}
-@keyframes sky {
-  from { background-position: 0 0; }
-  to {
-    background-position: 0 calc(var(--header-height-on-desktop)
-                                * var(--sky-length));
-  }
+::selection {
+    background: rgba(var(--bright-accent), 0.5);
 }
 
-/* The city skyline */
-div#container-wrap-wrap::before {
-  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
-  background-size: auto var(--header-height-on-desktop);
+/* LINKS */
+a {
+    color: rgb(var(--swatch-primary-darker));
 }
 
-/* Two backgrounds: a white and blurred shine on the buildings,
- * taken from a brightness threshold of the original skyline
- * image; and a white-to-transparent gradient that uses the
- * original skyline image as a clipping mask. These appear in
- * the day and fade for the night to represent the sun's
- * reflection on the buildings.
- */
-div#container-wrap::before {
-  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-whitewash.png),
-              url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-highlight.png);
-  background-size: auto var(--header-height-on-desktop);
-  animation: shine ease-in-out var(--sky-time) infinite;
-}
-@keyframes shine {
-  0%, 40%, 100% { opacity: 0.2; }
-  55%, 77% { opacity: 0; }
+a:hover,
+a:active,
+a:visited {
+    color: rgb(var(--swatch-primary-darkest));
 }
 
-/* The final two pseudoelements contain the ashes: clouds that
- * roll past the city at ground level. Two elements are needed
- * because the two layers of clouds have different widths and
- * move at different speeds.
- * The fade animation affords an unobscured view of the city
- * every 3rd night.
- */
-div#container-wrap-wrap::after, body::after {
-  background-size: var(--ashes-width) var(--header-height-on-desktop);
-  background-repeat: repeat-x;
-  animation: ashes-move linear var(--ashes-move-duration),
-             ashes-fade ease calc(var(--sky-time) * 3);
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-div#container-wrap-wrap::after {
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-large.png);
-  --ashes-move-duration: 27s;
-  --ashes-width: 500px;
-  --ashes-opacity: 0.5;
-}
-body::after {
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-small.png);
-  --ashes-move-duration: 20s;
-  --ashes-width: 800px;
-  --ashes-opacity: 0.4;
-}
-@keyframes ashes-move {
-  from { background-position: 0 0; }
-  to { background-position: var(--ashes-width) 0; }
-}
-@keyframes ashes-fade {
-  0%, 85%, 96%, 100% { opacity: var(--ashes-opacity); }
-  88.66%, 92.33% { opacity: 0.1; }
+/* HEADER */
+div#extra-div-1,
+div#extra-div-2 {
+        position: absolute;
+    display: block;
+    width: 100%;
+    height: 7.5rem;
+    top: 0;
+    left: 0;
 }
 
-/* - == === BODY BACKGROUNDS === == - */
-
-/* This psuedolement contains the faint purple patchy smog on the page
- * just below the header, as a thematic transition from dark to light.
- */
-#content-wrap { position: relative; }
-#content-wrap::before {
-  content: "";
-  position: absolute;
-  height: 100%; width: 100%; top: 0; left: 0;
-  background-repeat: repeat-x;
-  pointer-events: none;
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/purple-smoke.png);
-  opacity: 0.2;
+div#extra-div-1 {
+    background-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png");
+    background-size: 31.250rem;
+    z-index: -1;
+    mix-blend-mode: hard-light;
 }
 
-/* This one is the skyline at the bottom of the sidebar */
-#side-bar::before {
-  content: "";
-  position: absolute;
-  height: 100%; width: 100%; bottom: 0; left: 0;
-  background-repeat: repeat-x;
-  pointer-events: none;
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
-  background-size: auto 15rem;
-  background-position: bottom;
-  opacity: 0.2;
+div#extra-div-2 {
+    background: var(--gradient-header);
+    background-size: var(--header-background-image-size);
+    background-repeat: repeat;
+    z-index: -2;
 }
 
-/* - == === MISCELLANEOUS === == - */
+#header h1 a {
+    margin-left: 7.75rem;
+    margin-top: 0.6em;
+    font-size: 175%;
+    overflow-wrap: normal;
+}
 
-#side-bar .scpnet-interwiki-wrapper {
-  filter: brightness(0.86) invert(1) hue-rotate(73deg) saturate(10);
+#header h1 a::before {
+    content: "被放逐者之图书馆";
+    content: var(--header-title);
+    color: rgb(var(--bright-accent));
+    text-shadow: inherit;
+    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow-wrap: normal;
+}
+
+#header h2 {
+    display: none;
+}
+
+/* Search Bar */
+#search-top-box-form * {
+    font-family: var(--header-font);
+    font-weight: 600 !important;
+    letter-spacing: 0.05em;
+}
+
+#search-top-box-form {
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    height: 1.3rem;
+    top: 47%;
+    right: 3%;
+    width: auto;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 0.4rem !important;
+}
+
+#search-top-box input.empty {
+    color: rgba(var(--swatch-menutxt-light-color), 0.5);
+}
+
+#search-top-box-form > input,
+#search-top-box-form > input[type="submit"] {
+    min-height: 1.3rem;
+    height: 1.3rem;
+    padding: .25rem;
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    font-weight: 500;
+}
+
+input.button.btn {
+    padding-top: 0.1em !important;
+}
+
+/* Log-In Info */
+#login-status {
+    color: rgb(var(--swatch-menubg-light-color));
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+#login-status * {
+    font-family: var(--header-font);
+    letter-spacing: 0.05em;
+}
+
+/* TOPBAR */
+#top-bar div.top-bar > ul > li > a,
+#top-bar div.mobile-top-bar > ul > li > a {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+}
+
+#top-bar div.top-bar > ul > li > ul > li > a,
+#top-bar div.mobile-top-bar > ul > li > ul > li > a {
+    font-weight: 700;
+    color: rgb(var(--swatch-menutxt-dark-color));
+}
+
+#top-bar div.top-bar > ul > li > ul,
+#top-bar div.mobile-top-bar > ul > li > ul {
+    background: rgba(var(--pale-gray-monochrome), 0.93);
+}
+
+#top-bar div.top-bar > ul > li > ul > li > ul > li > a:hover,
+#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li > a:hover {
+    background: transparent;
+}
+
+#top-bar div.top-bar > ul > li > ul > li > a::before,
+#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
+#top-bar div.top-bar > ul > li > ul > li > a:hover::before {
+    background-color: rgba(var(--bright-accent), 1);
+}
+
+#top-bar > div.mobile-top-bar > div.open-menu > p > a {
+    color: rgb(var(--medium-accent)) !important;
+}
+
+/* SIDEBAR */
+/* 中文调整 */
+#side-bar {
+      box-shadow: inherit;
+      border-radius: inherit;
+}
+
+#side-bar .side-block {
+      background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#side-bar .heading {
+      font-family: var(--header-font);
+      /* 中文调整 */
+      width: inherit;
+      margin: inherit;
+}
+
+#side-bar div.menu-item a::before,
+#side-bar div.menu-item a:hover::before {
+    background-color: rgb(var(--gray-monochrome),0.25);
+}
+
+/* Page-Options */
+div#page-options-bottom > a,
+div#page-options-bottom-2 > a {
+    background-color: rgba(var(--swatch-menubg-dark-color), 1);
+    border: 0.08rem solid rgba(var(--swatch-primary), 1);
+    color: rgba(var(--swatch-primary), 1);
+    font-weight: 700;
+}
+
+div#page-options-bottom > a:hover,
+div#page-options-bottom > a:active,
+div#page-options-bottom-2 > a:hover,
+div#page-options-bottom-2 > a:active {
+    background-color: rgba(var(--swatch-menubg-light-color), 0.85);
+    border: 0.08rem solid rgba(var(--swatch-primary-darkest),1);
+    color: rgba(var(--swatch-primary), 1);
+}
+
+
+/* Footer */
+#footer {
+    width: calc(100% - 1.25rem);
+    color: rgb(var(--swatch-menubg-dark-color));
+}
+
+#footer a {
+    color: inherit;
+}
+
+/* Page-Tags */
+#main-content .page-tags {
+    border-top: 2px solid rgb(var(--dark-accent));
+}
+
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background: rgb(var(--gray-monochrome));
+    color: rgb(var(--bright-accent));
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent
+     rgb(48, 48, 52)
+     transparent
+     transparent;
+    border-color:
+     transparent
+     rgb(var(--gray-monochrome, 45, 70, 45))
+     transparent
+     transparent;
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: rgb(var(--bright-accent, 255, 219, 90));
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+
+/* Rating and Info Modules */
+.page-rate-widget-box,
+#page-content .rate-box-with-credit-button {
+    background: linear-gradient(to top,
+        rgba(var(--swatch-menubg-dark-color), 1) 0,
+        rgba(var(--swatch-menubg-medium-color), 1) 100%);
+    font-family: var(--header-font);
+    letter-spacing: 0.05em;
+}
+
+.page-rate-widget-box .rate-points,
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown,
+.page-rate-widget-box .cancel,
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a,
+.page-rate-widget-box .cancel a {
+    font-weight: 500;
+}
+
+#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
+    background-color: rgb(var(--rating-module-button-color));
+}
+
+/* Blockquotes, Horizontal Rules and Special Divs*/
+.blockquote,
+blockquote {
+       background: rgb(var(--pale-gray-monochrome));
+       border: 3px outset rgb(var(--medium-accent));
+}
+
+hr {
+    height: .125rem;
+    border: 0;
+    border-top: .063rem solid transparent;
+    background-color: rgba(var(--bright-accent));
+    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
+    background-size: cover;
+}
+
+.fancyhr hr {
+    border-top: 2vw solid transparent;
+    background-color: rgba(var(--bright-accent), 0);
+    height: 0;
+    box-sizing: border-box;
+    border-image-source: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_hr.png);
+    border-image-repeat: round round;
+    background: none;
+    border-image-slice: 80 500 80 500 fill;
+    border-image-width: 10em 80em 10em 80em;
+}
+
+.fancyborder {
+    box-sizing: border-box;
+    border: 2vw solid rgba(0,0,0,0.5);
+    border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
+    border-image-width: 6;
+    padding: 2vw;
+}
+
+/* footnote by 7happy7 */
+span:not([class]):not([style]) > sup.footnoteref:first-child > a.footnoteref:before,
+sup.footnoteref > a.footnoteref:before {
+content: "(";
+}
+span:not([class]):not([style]) > sup.footnoteref > a.footnoteref:before {
+content: ",";
+}
+
+/* Adjusts footnote block at bottom to fit the Hand format better, rather than BHL Default */
+.footnotes-footer {
+        width: unset;
+    margin: unset;
+    padding: 20px;
+    background-color: #EEF6EE;
+        border: solid 1px #112211;
+}
+
+/* MOBILE ELEMENTS */
+@media only screen and (max-width: 768px) {
+    #header h1 a,
+    #header h2 span {
+        margin-left: 7.75rem;
+        margin-top: 0.35em;
+    }
+
+    #header h1 a {
+        line-height: 1;
+    }
+
+    #header h2 span {
+        margin-top: calc(3.4rem + var(--offset-from-page-top));
+    }
+
+    div#extrac-div-1 {
+        background-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png);
+        background-size: 31.250rem;
+        z-index: 3;
+    }
+
+    div#extrac-div-1,
+    div#extrac-div-2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 7.5rem;
+        top: 0;
+        left: 0;
+    }
+
+    div#extrac-div-3::before {
+        text-shadow: inherit;
+        background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        content: var(--header-title);
+        font-family: var(--header-font);
+        font-size: 170%;
+        width: 95%;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    div#extrac-div-3 {
+        display: block;
+        position: static;
+        z-index: 1;
+        background-color: transparent;
+    }
+
+    div#extrac-div-2 > span {
+        display: flex;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 3rem;
+        box-sizing: inherit;
+        background: var(--gradient-topmenu-mobile, linear-gradient(to bottom,
+            rgba(var(--swatch-topmenu-border-color), 1) 0,
+            rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
+            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+            rgba(var(--swatch-topmenu-border-color), 1) 3rem));
+        background-size: 100% 10.375rem;
+        align-items: center;
+        position: sticky;
+        margin-top: 7.5rem;
+        background-color: transparent;
+    }
+
+    div#extra-div-2::before {
+        content: " ";
+        width: 100%;
+        height: 100%;
+    }
+
+    div#extrac-div-2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    #search-top-box {
+        width: 12.5rem;
+    }
+
+   #search-top-box-form {
+        top: 0;
+        right: 0;
+        align-items: initial;
+    }
+}
 }
