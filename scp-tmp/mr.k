@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342261;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "system:page-tags";
-        OZONE.request.timestamp = 1606676765;
+        OZONE.request.timestamp = 1606702604;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "system:page-tags";
@@ -1241,43 +1241,43 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://theskyremains.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/theskyremains.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://porsche.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/porsche.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://theskyremains.wikidot.com">The Sky Remains</a></h3>
+            <h3><a target="_blank" href="http://porsche.wikidot.com">Porsche Wiki</a></h3>
             <div class="desc">          
-              
+              Brought to You By RedLine Technik | RedLineTechnik.com
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.capnbarefoot.info">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.capnbarefoot.info/80.jpg"/>
+            <a target="_blank" class="image" href="http://grave-box.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/grave-box.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.capnbarefoot.info">Captain Barefoot</a></h3>
+            <h3><a target="_blank" href="http://grave-box.wikidot.com">The Grave-Box</a></h3>
             <div class="desc">          
-              The naturist guide to the Greek Islands
+              Close that grave-box door
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ejs-in-india.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ejs-in-india.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://cunefb2.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cunefb2.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ejs-in-india.wikidot.com">Environmental Journalists in India</a></h3>
+            <h3><a target="_blank" href="http://cunefb2.wikidot.com">CUNEF Group B2</a></h3>
             <div class="desc">          
-              Sign Up Here If Your Ink Is Green
+              For Your Work, Opinions and Discoveries!
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://anime-planet.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/anime-planet.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://amiii.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/amiii.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://anime-planet.wikidot.com">Anime Planet</a></h3>
+            <h3><a target="_blank" href="http://amiii.wikidot.com">Análise Matemática III</a></h3>
             <div class="desc">          
               
             </div>
