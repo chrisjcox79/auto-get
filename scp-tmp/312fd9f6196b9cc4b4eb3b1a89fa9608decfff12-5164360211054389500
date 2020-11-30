@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono">
+<style type="text/css">
+body {
+    color: rgb(252, 252, 252);
+    font-family: "PT Mono", "Courier New", Courier, monospace;
+    font-size: 0.938rem;
+    font-weight: 900;
+    line-height: 1.406rem;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    font-variant-numeric: normal;
+    -webkit-font-feature-settings: "lnum", "kern", "liga", "clig", "calt";
+    -moz-font-feature-settings: "lnum", "kern", "liga", "clig", "calt";
+    font-feature-settings: "lnum", "kern", "liga", "clig", "calt";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    orphans: 2;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+    word-break: normal
+}
+</style>
+</head>
+<body>
+<span id="random_text"></span>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script src="http://scptestwiki.wdfiles.com/local--files/members%3Ascp-wt-woedcode-3/mersenne-twister.js "></script>
+<script type="text/javascript">
+if (localStorage.getItem("RandomID") === null) {
+    var randomArray = [];
+    var randomID = "";
+    var alphabet = to_a();
+    var symbol = ["/",".","|"]
+
+    function to_a(c1 = 'a', c2 = 'z') {
+     a = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    return (a.slice(a.indexOf(c1), a.indexOf(c2) + 1));
+    }
+
+    var m = new MersenneTwister();
+
+    function generateId (num) {
+     console.log("num=" + num);
+     for (var i=0; i < num; i++) {
+     var randNum = Math.floor(m.random(m.random() * 100) * 100);
+     var newNum;
+     console.log("randNum=" + randNum);
+     if (0 < randNum && randNum <= 20) {
+     var n = new MersenneTwister(i);
+     newNum = alphabet[Math.floor((n.random() * 25))];
+     }
+     if (21 < randNum && randNum <= 90) {
+     var n = new MersenneTwister(i);
+     newNum = Math.floor((n.random() * 10));
+     }
+     if (91 < randNum && randNum <= 99) {
+     var n = new MersenneTwister(i);
+     newNum = symbol[Math.floor((n.random() * 3))];
+     }
+     randomArray.push(newNum);
+     }
+     randomID =  randomArray.join("");
+     return randomID;
+    }
+    document.addEventListener("DOMContentLoaded", function() {    
+     localStorage.setItem("RandomID", generateId(20));
+    });
+}
+
+document.getElementById("random_text").innerHTML = localStorage.getItem("RandomID");
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
