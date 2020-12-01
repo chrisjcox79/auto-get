@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<head>
+<style>
+.box div{
+float:center;
+
+text-align:center;
+}
+</style>
+
+<script language="javascript">
+window.setInterval('showTime()',1000);
+
+function showTime()
+{
+var date;
+var enabled = 0;
+today = new Date();
+var hours=today.getHours();
+var min=today.getMinutes();
+var sec=today.getSeconds();
+
+if ( hours < 10 ){
+ hours =  "0"+hours;
+}
+
+if (min < 10 ){
+ min =  "0"+min;
+}
+
+if ( sec < 10 ){
+ sec =  "0"+sec;
+}
+
+date =hours+":"+min+":"+sec;
+document.getElementById("time").innerHTML=date;
+}
+
+</script>
+</head>
+
+<body onload="showTime()">
+<p id="time" style="font-size:100%;"></p>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
