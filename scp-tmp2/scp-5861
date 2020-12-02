@@ -1,982 +1,982 @@
- #page-content h2,
- #page-content h3,
- #page-content h4,
- #page-content h5,
- #page-content h6{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     margin-bottom: .57em;
-
-     word-break: unset;
-}
- hr{
-     height: 0;
-     margin: 1em 0;
-
-     background-color: transparent;
-     border-top: 1px solid hsl(0, 0%, 67%);
-}
- .collapsible-block-link{
-     font-size: 120%;
-     font-weight: bold;
-}
- .info-container .collapsible-block-link{
-     font-size: 100%;
-}
- ol li{
-     margin: 0 0 1em;
-}
- ul{
-     margin:1em 0;
-}
- .footnotes-footer, .bibitems{
-     padding: 0 0 .5em;
-}
-
-/* ---- IMAGE BLOCK ---- */
- .scp-image-block.block-right{
-     margin: 0 0 1em 2em;
-}
-
-/* ---- FORMATTING | [SPECIAL] ---- */
- .centered{ /* ---- Center-Aligns Text ---- */
-     text-align: center;
-}
-
- .justified{ /* ---- Justify-Aligns Text ---- */
-     text-align: justify;
-}
-
- .indented{ /* ---- Indents Block by ½-inch/2em (Use Within Other Divs) ---- */
-     text-indent: 2.4em;
-}
- .indented .bibcite,
- .indented .footnoteref,
- .indented ul,
- .indented ol,
- .indented .scp-image-block.block-right,
- .indented #page-content h1,
- .indented #page-content h2,
- .indented #page-content h3,
- .indented #page-content h4,
- .indented #page-content h5,
- .indented #page-content h6,
- .indented .footnotes-footer,
- .indented .bibitems{
-     text-indent: 0;
-}
-
- .rev-red, .rev-green, .rev-blue, .rev-yellow, .terminal-span{
-     font-weight: bold;
-}
- .rev-red{ /* ---- Red Document Revision Text ---- */
-     color: hsl(360, 100%, 27%);
-}
- .rev-green{ /* ---- Green Document Revision Text ---- */
-     color: hsl(120, 100%, 27%);
-}
- .rev-blue{ /* ---- Blue Document Revision Text ---- */
-     color: hsl(240, 100%, 27%);
-}
- .rev-yellow{ /* ---- Yellow Document Revision Text ---- */
-     color: hsl(40, 100%, 40%);
-}
-
- .terminal-span{ /* ---- Computer Terminal Text ---- */
-     font-family: "Fira Code", monospace;
-     font-size: 110%;
-}
- .code pre, .code p, .code, tt, .page-source, .faux-source{ /* ---- Code by Croquembouche ---- */
-     font-family: "Fira Code", monospace;
-}
- .code pre *{
-     white-space: pre;
-}
- .code *, .pre *{
-     font-feature-settings: unset;
-}
-
- .lite-heading{ /* ---- Special Heading Area (Adapted From SCP-4058) ---- */
-     margin: 2.4em auto;
-     clear: both;
-}
- .lite-heading h3{
-     color: hsl(360, 100%, 27%);
-}
- .lite-heading hr{
-     width: 55%;
-     margin: auto;
-
-     border-width: medium;
-}
-
- .scene-break{ /* ---- Fancy Section Break ---- */
-     width: 2.5em;
-     margin: 1em 0;
-}
-
- .footing::before{ /* ---- Article Footing ---- */
-     content: " ";
-     position: absolute;
-     bottom: 1px;
-     left: 0;
-     right: 0;
-
-     border-bottom: 2px solid hsl(0, 0%, 47%);
-}
- .footing{
-     position: relative;
-     bottom: -2px;
-     margin-bottom: 2px;
-
-     border-bottom: 1px solid hsl(0, 0%, 47%);
-}
-
- .series-nav{ /* ---- Series Navigation ---- */
-     margin: .5em 0;
-
-     background:
-       linear-gradient(to bottom right,
-                hsla(0, 0%, 100%, 1),
-                 hsla(0, 0%, 50%, .5));
-     border: outset 1.5px hsl(0, 0%, 5%);
-     border-radius: 2em;
-
-     font-size: 85%;
-     font-weight: bold;
-     text-align: center;
-}
-
-/* ---- CUSTOM DIV BLOCKS ---- */
- blockquote, /* ---- Regular Quote Block ---- */
- div.blockquote{
-     background-color: hsl(0, 0%, 96%);
-     border: 3px double hsl(0, 0%, 60%);
-}
-
- .alt-blockquote{ /* ---- Alternative Quote Block ---- */
-     margin: 1em 0;
-     padding: 0 1em;
-
-     background-color: hsl(0, 0%, 96%);
-     border: 1px solid hsl(0, 0%, 60%);
-     border-radius: 1em;
-}
-
- .lightweight{ /* ---- Lightweight Quote Block ---- */
-     margin: 1em 3em;
-     padding: 0 1em;
-
-     background-color: hsl(0, 0%, 90%);
-
-     text-align: left;
-}
-
- .card-block{ /* ---- Decorative Quote Block ---- */
-     margin: 1em 0;
-     padding: .6em 1.2em;
-
-     background: hsl(220, 15%, 93%);
-     border-left: 8px solid hsl(0, 100%, 30%);
-     border-radius: .48em;
-}
- blockquote hr, div.blockquote hr, .alt-blockquote hr, .lightweight hr, .card-block hr{
-     border-color: hsl(0, 0%, 67%);
-}
-
- .report-box{ /* ---- Report Block ---- */
-     margin: 1em 0;
-     padding: 0 1em;
-
-     background-color: hsl(0, 0%, 100%);
-     border: medium solid hsl(0, 0%, 5%);
-}
- .report-box hr{
-     border-color: hsl(0, 0%, 5%);
-}
-
- .realistic-shadow{ /* ---- Better Shadows ---- */
-     box-shadow:
-          0 1px 1px hsla(0, 0%, 0%, .23),
-          0 2px 2px hsla(0, 0%, 0%, .18),
-          0 4px 4px hsla(0, 0%, 0%, .15),
-          0 8px 8px hsla(0, 0%, 0%, .13);
-}
-
- div.o5-box{
-     margin: 1em 6em;
-     padding: 0 1em;
-
-     background-color: hsl(0, 0%, 75%);
-     border: medium solid hsl(0, 0%, 5%);
-}
- div.o5-box hr{
-     border-color: hsl(0, 0%, 5%);
-}
-
- .faux-source{ /* ---- Mimics "Page Source" Appearance ---- */
-     margin-bottom: 1em;
-     padding: 1em 2em;
-
-     background-color: hsl(0, 0%, 100%);
-     border: 1px dashed hsl(0, 0%, 67%);
-}
-
- .raisa-header, .pink-header, .oracle-header{
-     margin-bottom: 1em;
-     padding: 0 .5em;
-
-     text-align: center;
-}
- .raisa-header{ /* ---- RAISA Notice Header ---- */
-     background: hsl(60, 65%, 85%);
-     border: 1px solid hsl(0, 0%, 60%);
-}
- .pink-header{ /* ---- Pretty Header ---- */
-     background: hsl(350, 100%, 85%);
-     border: 1px solid hsl(0, 4%, 36%);
-}
- .pink-header hr{
-     border-color: hsl(0, 4%, 36%);
-}
- .oracle-header{ /* ---- SPC Oracle Notice Header ---- */
-     color: hsl(208, 100%, 97%);
-     background: hsl(208, 67%, 44%);
-     border: 1px solid hsl(0, 0%, 5%);
-}
- .oracle-header hr{
-     border-color: hsl(208, 100%, 97%);
-}
- .img-resize img{ /* ---- Header Icons (See Examples) ---- */
-     float: left;
-     width: auto;
-     height: 8em;
-     margin: .5em;
-}
-
- .log-header{ /* ---- Interview/Exploration Log Header ---- */
-     margin-bottom: 1em;
-     padding: 0 1em;
-
-     background: hsl(0, 0%, 96%);
-     border: 3px dashed hsl(0, 0%, 60%);
-     border-radius: 1em;
-}
-
- .warning-notice{ /* ---- Simple Warning Block (Adapted From SCP-3143) ---- */
-     padding: 0 1em;
-
-     background-color: hsl(0, 0%, 100%);
-     background-image: url(http://scp-wiki.wdfiles.com/local--files/scp-style-resource/scp_trans.png);
-     background-position: center;
-     background-repeat: no-repeat;
-     border: 2px solid hsl(0, 0%, 5%);
-
-     text-align: center;
-}
-
- .journal{ /* ---- Journal Block (Adapted From SCP-4003) ---- */
-     margin: 1em 0;
-     padding: .9em;
-
-     background-image:
-                       linear-gradient(to top,
-                        hsl(201, 33%, 84%) 0%,
-                        hsl(60, 29%, 89%) 8%);
-     background-position: 0 8px;
-     background-size: 100% 1.3rem;
-     border: 1px solid hsl(0, 0%, 80%);
-     border-radius: .9em;
-
-     font-family: "Architects Daughter", cursive;
-}
- .journal p{
-     margin: 0;
-
-     font-size: 1.3rem;
-     line-height: 1.3rem;
-}
-
- .sms-message{ /* ---- Text Message Block ---- */
-     float: left;
-     clear: left;
-     width: 22.4em;
-     margin: 0 0 1em;
-     padding: 0 1.2em;
-
-     background: hsl(0, 0%, 75%);
-     border-radius: 2em;
-
-     font-size: 112.5%;
-     text-align: center;
-}
-
- blockquote .collapsible-block-folded,
- .alt-blockquote .collapsible-block-folded,
- .lightweight .collapsible-block-folded,
- .report-box .collapsible-block-folded,
- div.blockquote .collapsible-block-folded{
-    /* ---- For Collapsibles Inside Divs | [CLOSED] ---- */
-     padding: .75em 0;
-    /* -------- */
-}
- .alt-blockquote .collapsible-block-unfolded,
- .lightweight .collapsible-block-unfolded,
- .report-box .collapsible-block-unfolded,
- div.blockquote .collapsible-block-unfolded{
-    /* ---- For Collapsibles Inside Divs | [OPEN] ---- */
-     padding-top: .75em;
-    /* -------- */
-}
-
-/* ---- ADVANCED WARNING HEADER ----
- * Adapted From SCP-001-JP - indonootoko's Proposal
- * See the Example at the Top of the Page
-**/
- .orderwrapper{
-     position: relative;
-     width: auto;
-
-     text-align: center;
-}
- .council{
-     position: relative;
-     top: 0;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     width: 295px;
-     height: 295px;
-     margin: auto;
-
-     background-image: url(http://scp-wiki.wdfiles.com/local--files/scp-style-resource/scp_trans.png);
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: 295px 295px;
-}
- .ordertitle{
-     position: absolute;
-     top: 27px;
-     left: 0;
-     right: 0;
-}
- .ordertitle h1{
-     color: hsl(0, 0%, 5%);
-     font-size: 220%;
-     line-height: 90%;
-}
- .orderdescription{
-     position: absolute;
-     top: 93px;
-     left: 0;
-     right: 0;
-     width: 100%;
-}
- .orderdescription h1{
-     color: hsl(0, 0%, 5%);
-     font-size: 120%;
-}
- .orderdescription p{
-     color: hsl(0, 0%, 5%);
-     font-size: 90%;
-}
- .itemno{
-     position: absolute;
-     bottom: 18px;
-     left: 0;
-     right: 0;
-}
- .itemno h1{
-     color: hsl(0, 0%, 5%);
-     font-size: 170%;
-}
-
-/* ---- YUI TAB BASE ---- */
-.yui-navset .yui-nav a,.yui-navset .yui-navset-top .yui-nav a{background-color:inherit;background-image:inherit}.yui-navset .yui-nav a:hover,.yui-navset .yui-nav a:focus{background:inherit;text-decoration:inherit}.yui-navset .yui-nav .selected a,.yui-navset .yui-nav .selected a:focus,.yui-navset .yui-nav .selected a:hover{color:inherit;background:inherit}.yui-navset .yui-nav,.yui-navset .yui-navset-top .yui-nav{border-color:inherit}.yui-navset li{line-height:inherit}
-
-/* ---- YUI TAB CUSTOMIZATION ----
- * Adapted From Black Highlighter Theme Dev
-**/
- .yui-navset *{
-     transition:
-                  color 80ms cubic-bezier(.4, 0, .2, 1),
-       background-color 80ms cubic-bezier(.4, 0, .2, 1);
-}
- .yui-navset .yui-nav,
- .yui-navset .yui-navset-top .yui-nav{
-     display: flex;
-     flex-wrap: wrap;
-     width: calc(100% - .125rem);
-     margin: 0 auto;
-
-     border-color: hsl(360, 94%, 20%);
-     box-shadow: 0 calc(.0625rem * 5) 0 0 hsl(360, 94%, 20%);
-}
- .yui-navset .yui-nav a, /* ---- Link Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav a{
-     color: hsl(0, 0%, 5%);
-    /* ---- Tab Background Colour | [UNSELECTED] ---- */
-     background-color: hsl(0, 0%, 99%);
-    /* -------- */
-     background-image: none;
-     border: unset;
-}
- .yui-navset .yui-nav a:hover,
- .yui-navset .yui-nav a:focus{
-     color: hsl(0, 0%, 96%);
-    /* ---- Tab Background Colour | [HOVER] ---- */
-     background-color: hsl(360, 100%, 27%);
-    /* -------- */
-}
- .yui-navset .yui-nav li, /* ---- Listitem Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav li{
-     position: relative;
-     display: flex;
-     flex-grow: 2;
-     max-width: 100%;
-     margin: 0;
-     padding: 0;
-
-     background-color: hsl(0, 0%, 96%);
-     border-color: transparent;
-     box-shadow: 0 0 0 .0625rem hsl(360, 94%, 20%);
-}
- .yui-navset .yui-nav li a,
- .yui-navset-top .yui-nav li a,
- .yui-navset-bottom .yui-nav li a{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-}
- .yui-navset .yui-nav li em{
-     border: unset;
-}
- .yui-navset .yui-nav a em,
- .yui-navset .yui-navset-top .yui-nav a em{
-     padding: .35em .75em;
-
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
-}
- .yui-navset .yui-nav .selected, /* ---- Selection Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav .selected{
-     flex-grow: 2;
-     margin: 0;
-     padding: 0;
-
-    /* ---- Tab Background Colour | [SELECTED] ---- */
-     background-color: hsl(360, 94%, 20%);
-    /* -------- */
-}
- .yui-navset .yui-nav .selected a,
- .yui-navset .yui-nav .selected a em{
-     border: hsl(360, 94%, 20%);
-}
- .yui-navset .yui-nav .selected a{
-     width: 100%;
-
-     color: hsl(0, 0%, 96%) !important;
-     background-image: none;
-}
- .yui-navset .yui-nav .selected a:focus,
- .yui-navset .yui-nav .selected a:active{
-     color: hsl(0, 0%, 96%);
-     background-color: hsl(360, 94%, 20%);
-}
- .yui-navset .yui-nav .selected a:hover{
-     cursor: default;
-}
- .yui-navset-left .yui-content{
-    /* ---- Content Background ---- */
-     background-color: hsl(0, 0%, 99%);
-    /* -------- */
-}
- .yui-navset .yui-content,
- .yui-navset .yui-navset-top .yui-content{
-     padding: .5em;
-     border-color: hsl(0, 0%, 60%);
-}
-
-/* --- INTERWIKI --- */
- iframe.scpnet-interwiki-frame{
-     position: relative;
-     width: 17em;
-     height: 12em;
-     margin-left: 4px;
-     margin-bottom: .78em;
-
-     background-color: hsl(0, 0%, 100%);
-     border: 2px solid hsl(0, 0%, 20%);
-}
-
-/* ---- REDUCED MOTION ACCESSIBILITY ----
- * By SMLT
-**/
- @media (prefers-reduced-motion: reduce){
-     *, *::before, *::after{
-         animation-duration: .001s !important;
-         animation-iteration-count: 1 !important;
-         transition-duration: .001s !important;
-    }
-}
-
-/* ---- MOBILE MEDIA QUERY ---- */
- @media (max-width: 479px){
-     #header h1 a{
-         font-size: 85%;
-    }
-     div.o5-box{
-         margin: 1em 0;
-    }
-}
-
-/* ---- NOTE MEDIA QUERY ---- */
- @media (min-width: 480px) and (max-width: 580px){
-     #header h1 a{
-         font-size: 100%;
-    }
-     div.o5-box{
-         margin: .5em;
-    }
-}
-
-/* ---- MINI TABLET MEDIA QUERY ---- */
- @media (min-width: 581px) and (max-width: 767px){
-     #header h1 a{
-         font-size: 120%;
-    }
-}
- @media (max-width: 767px){
-     .open-menu a:hover{
-         box-shadow: none;
-    }
-}
-
-/* ---- TABLET MEDIA QUERY ---- */
- @media (min-width: 768px) and (max-width: 979px){
-     #header h1 a{
-         font-size: 140%;
-    }
-}
-
-
-/* 点击这里查看实际效果：
- * http://scp-wiki-cn.wikidot.com/component:flops-header
-**/
-
-/* ---- ITEM INFO ---- */
- .itemInfo{
-     position: relative;
-     top: .5em;
-     width: 100%;
-
-     font-size: .9604rem;
-     text-transform: uppercase;
-     letter-spacing: -.01em;
-}
- .alignL{
-    position: relative;
-    right: .195em;
-}
- .alignR{
-    position: relative;
-    left: .195em;
-
-    text-align: right;
-}
-
-/* ---- DISRUPTION CLASS ---- */
- .disruptionHeader{
-     display: inline-block;
-     width: 100%;
-     padding: .3em 0;
-
-     color: hsl(0, 0%, 96%);
-     font-size: 140%;
-     text-align: center;
-     text-shadow:
-        .5px    .9px  0 hsla(0, 0%, 0%, .3),
-       1.5px   2.6px  0 hsla(0, 0%, 0%, .3);
-     text-transform: uppercase;
-}
- .disruptionHeader a:hover{
-     text-decoration: none;
-}
-
-.lang-cn .lang-tr,
-.lang-tr .lang-cn {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        
+
+
+
+
+
+
+);
+);
+);
+ 
+/
+ 
+ 
+ 
+  3.0) --
+/
+ 
+//
+ 
+     ;
+
+ ,
+ 
+     ;
+     
+        ),
+       ;
+
+ 
+     ;
+     ;
+     ;
+
+ ,
+ 
+     ;
+     ;
+
+ 
+//
+ 
+     ;
+
+ 
+     ;
+
+ 
+     ;
+     ;
+ 
+     ;
+
+ ,
+ 
+     ;
+
+ ,
+ 
+     ;
+
+ 
+//
+ 
+     ;
+     ;
+
+ 
+     ;
+     ;
+
+ 
+//
+ 
+     ;
+ 
+     ;
+
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ 
+     ; 
+
+ 
+//
+ 
+     --;
+
+ 
+     ; 
+
+ 
+     ;
+
+ 
+     ;
+
+ 
+//
+ 
+     ;
+
+ 
+     ;
+     ;
+
+ 
+//
+ 
+     ;
+
+ ,
+ 
+     ;
+
+ ,
+ 
+     ;
+
+ 
+//
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+
+ 
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+     ;
+     ;
+
+ 
+     ;
+
+ 
+     ;
+
+ 
+     ;
+
+ 
+     ;
+
+ 
+//
+ 
+     ;
+
+ 
+//
+ /
+     ;
+
+ 
+ /
+     ;
+
+ 
+ /
+     ;
+
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ ,
+ 
+     ;
+
+ 
+ 
+     ;
+
+ /
+     ;
+
+ /
+     ;
+
+ /
+     ;
+
+ /
+     ;
+
+ 
+ /
+     ;
+     ;
+
+ /
+     ;
+
+ 
+     ;
+
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+
+ 
+     ;
+
+ 
+     ;
+     ;
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+
+ 
+ /
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+
+ 
+     ;
+     ;
+     ;
+ 
+     ;
+
+ 
+ /
+     ;
+ 
+     
+       linear-gradient(to ,
+                hsla(),
+                 hsla(;
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+
+ 
+//
+ /
+ 
+     ;
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+     ;
+
+ 
+ /
+     
+          ),
+          ),
+          ),
+          ;
+
+ 
+ 
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+ 
+     ;
+     ;
+ 
+     ;
+
+ /
+     ;
+     ;
+
+ /
+     ;
+     ;
+
+ 
+     ;
+
+ /
+     ;
+     ;
+     ;
+
+ 
+     ;
+
+ /
+     ;
+     ;
+     ;
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+
+ 
+ /
+     ;
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+
+ 
+ /
+     ;
+     ;
+ 
+     
+                       linear-gradient(to ,
+                        hsl(,
+                        hsl(;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+
+ 
+     ;
+ 
+     ;
+     ;
+
+ 
+ /
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+ ,
+ ,
+ ,
+ ,
+ 
+    //
+     ;
+    //
+
+ ,
+ ,
+ ,
+ 
+    //
+     ;
+    //
+
+ 
+/ ----
+ 
+ 
+/
+ 
+     ;
+     ;
+ 
+     ;
+
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+     ;
+
+ 
+     ;
+     ;
+     ;
+     ;
+
+ 
+     ;
+     ;
+     ;
+
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+
+ 
+     ;
+     ;
+
+ 
+     ;
+     ;
+
+ 
+     ;
+     ;
+     ;
+     ;
+
+ 
+     ;
+     ;
+
+ 
+//
+
+ 
+/ ----
+ 
+/
+ 
+     
+                  color ),
+       background-color ;
+
+ ,
+ 
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+     ;
+
+ /
+ 
+     ;
+    //
+     ;
+    //
+     ;
+     ;
+
+ ,
+ 
+     ;
+    //
+     ;
+    //
+
+ /
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+     ;
+     ;
+
+ ,
+ ,
+ 
+     ;
+     ;
+     ;
+     ;
+
+ 
+     ;
+
+ ,
+ 
+     ;
+ 
+     ;
+     ;
+     ;
+
+ /
+ 
+     ;
+     ;
+     ;
+ 
+    //
+     ;
+    //
+
+ ,
+ 
+     ;
+
+ 
+     ;
+ 
+     ;
+     ;
+
+ ,
+ 
+     ;
+     ;
+
+ 
+     ;
+
+ 
+    //
+     ;
+    //
+
+ ,
+ 
+     ;
+     ;
+
+ 
+//
+ 
+     ;
+     ;
+     ;
+     ;
+     ;
+ 
+     ;
+     ;
+
+ 
+/ ----
+ 
+/
+ 
+     
+         ;
+         ;
+         ;
+    
+
+ 
+//
+ 
+     
+         ;
+    
+     
+         ;
+    
+
+ 
+//
+ 
+     
+         ;
+    
+     
+         ;
+    
+
+ 
+//
+ 
+     
+         ;
+    
+
+ 
+     hover{
+         box-shadow: ;
+    
+}
+ 
+//
+ 
+     
+         ;
+    
+}
+
+
+
+
+
+
+
+
+項目編號：SCP-5861
+級
+
+
+收容等級：Thaumiel
+confidential
+
+
+
+擾動等級：dark
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+特殊收容措施： 基金会AIC“Ἀφρόδιτα”将被部署，用以监控关于SCP-5861相关材料的期刊论文。此类论文将被回拒，相关研究员将被拘留、讯问，而后记忆删除，或是考虑为基金会所雇用。
+
+调查超技术公司的基金会特工应留意是否存在对SCP-5861的开发，并在有所发现后立即上报。
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+描述： SCP-5861是一种能将爱恋情感转化为电力的奇术进程。此进程的材料需求列于技术报告5861-A之中，包括至少一名感受到此种情感的人类；非人类无论是否具有智能，均不能与此进程兼容。
+
+当前，使用SCP-5861的XI型反应堆为94座基金会站点充当了主要能源（参见技术报告5861-B获取详情）。
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+附录
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I. 历史：起源 
+
+
+
+Mark III反应堆
+
+
+
+1968年，基金会对收容站点的替代能源展开了一项长期研究，从中发现了SCP-5861。此项研究的目标是找到一种全新的电力来源，能用以最小化向基金会站点的运货次数，减少其被发现的风险。
+
+在1968到1984期间，曾建造了一系列使用SCP-5861的实验反应堆，以求将此进程优化到最大产能。初期设计中需要两名处于恋爱关系的对象才能运作，推广应用被伦理委员会所禁止。
+
+1980年的实验性Mark III反应堆首次产生了净正面能量输出，但需要四名人类对象才能工作，且需要以300毫升3/小时消耗润滑。材料成本使其不足以胜任替代式发电方法。
+
+1984年出现了一次重大突破，改用柏拉图式爱恋成为可能。经过接下来两年内的一系列开发后，首台能产生出实用级电量的反应堆制造完成。这便是Mark VI反应堆，能从四名人类中产生100千瓦的电力。
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+II. 历史：初步改进 
+
+
+
+Mark VIII反应堆
+
+
+
+Site-1471在1989年成为首个仅使用SCP-5851发电的站点。伦理委员会在当时暂且否决将SCP-5861用作能源，因其仍然依赖于人类对人类的情感状态。O5议会以7-5投票同意继续以此方式使用SCP-5861，同时也资助更多研究，寻找更有效的实施手段。
+
+1993年的Mark VIII反应堆首次有望在基金会内广泛应用。SCP-5861进程的改进使其只需两名人类便能产生300千瓦电力；但此过程需要两名人类经历有柏拉图式恋爱感受。
+
+到1998年，Mark X反应堆开发完成。它在SCP-5861中只需使用一名人类，且允许以色欲来替代爱恋。具体而言，每台反应堆使用一名人类，并以色情作品作为情感的焦点。此反应堆在总能量输出上不及Mark VIII，只能产生50千瓦电力；然而其所需空间和维护远小于后者。
+
+这使得Mark X在供应需求上远超O5议会所预期，为此展开了进一步优化。伦理委员会整体将Mark X视作一种折衷方案。
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+III. 历史：最终开发 
+
+2002年，Mark XI开发完成。色情作品的应用渐渐淡出，让位于在更多人类间传播的较弱吸引能。就此而言，最有效的催化媒介被发现是怜爱，具体是针对猫类图片的怜爱。
+
+该反应堆中利用的人类可被终生有效使用，只要能定期提供新的猫类图片，效率下降即可降低到最小。为此，基金会需要大量的猫，并在威尔逊野生动物应对组的指导下开展了繁育工作，确保能大量供应多样的猫类图片，提供给Mark XI反应堆中的对象。
+
+2004年，SCP-5861进程得到了进一步改良，转化现可在极小的设备上进行，足以被装入桌面电脑中，由此开发出了Mark XII反应堆。它被加入了基金会计算机设备的标准配件表内；基金会的默认屏幕保护也被改为了滚动播放的猫类图片幻灯片。此外，在伦理委员会的监督下，基金会人员（包括D级）被鼓励在休息期间多浏览一些包含猫类图片的网站。
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Footnotes
+1. 位于城市地点中的小型、深度隐藏站点
+
+
+
+
+
+
+
+SCP-5862 
+
+
+
+
+
+
+                    
+
+                            
+            
+
+
+        
+    
+
+                    
+
+
+
+                    
+                        
+                            
+                                移情作用
+                            
+                        
+                    
+
+                    
+                    
+                        
+                            27 Aug 2020 04:05
+            
+            编辑
++8)
+标签
+讨论 (6)
+历史记录
+附件
+打印
+网站工具
++选项 
+
+
+    编辑段落
+    附加
+    编辑元信息
+    关注者 
+    反向链接 
+    页面源代码 
+    父页面 
+    锁定页面    
+    重新命名 
+    删除 
+
+
+
+
+                        
+                    
+                    
+                
+            
+            
+            
+            
+            
+                
+    说明
+    |
+    服务条款
+    |
+    隐私
+    |
+    报告错误
+    |
+    标记为令人反感的
+
+基于 Wikidot.com 
+            
+            
+                
+                    除非特别注明，本页内容采用以下授权方式： Creative Commons Attribution-ShareAlike 3.0 License
+                
+            
+            
+            
+
+
+
+            
+            
+            
+            
+            
+                
+  
+     
+  其它有趣的网站
+  
+  
+              
+          
+            
+              
+            
+            Trueblood: Dallas
+                      
+              
+            
+          
+        
+              
+          
+            
+              
+            
+            Fifth Sanctum School for The Supernatural
+                      
+              fun and friendship in a semi-serious roleplay about teens in a school for supernatural
+            
+          
+        
+              
+          
+            
+              
+            
+            Parameterized Complexity
+                      
+              Did you say NP-hard?
+            
+          
+        
+              
+          
+            
+              
+            
+            Tasker Wiki
+                      
+              
+            
+          
+        
+        
+  
+
+            
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
     
         
-            
-              SCP基金会
-                
-                    控制，收容，保护
-                
-                
-                
-                
-                
     
+
+
+
+
+
+    
+        请点此编辑本页内容。    
+
+
+    
+        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    
+    
+        在不编辑整个页面源代码的情况下添加内容。    
+    
+        看看本页过去是如何沿革的。    
+    
+        若您想要讨论本页内容 - 这是最简单的方法。    
+    
+        检视并管理本页附件。    
+    
+        管理网站的实用工具。    
+    
+        检视链接至本页或引用本页的页面。    
+    
+        变更页面名称（及URL 位址，或许会影响分类）。    
+    
+        在不编辑的情形下检视维基原始码。    
+      
+        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    
+            
+            向管理员举报本页有令人反感的内容。        
+        
+            事情不如预期？看看您可以做些什么。        
+        
+            一般的 Wikidot.com 文件与说明。        
+        
+            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        
+        
+            Wikidot.com 隐私政策。          
         
     
 
-                
-                
-                    
-                        
-
-
-
-SCP系列
-
-系列 VI (5000 - 5999)
-系列 V (4000 - 4999)
-» 系列 V 故事
-系列 IV (3000 - 3999)
-» 系列 IV 故事
-系列 III (2000 - 2999)
-» 系列 III 故事
-系列 II (1000 - 1999)
-» 系列 II 故事
-系列 I (001 - 999)
-» 系列 I 故事
-搞笑SCP
-» 搞笑SCP故事
-已解明SCP
-» 已解明SCP故事
-
-
-故事
-
-基金会故事
-设定
-故事系列
-事故报告
-Creepy-Pasta 归档
-
-
-图书馆
-
-用户推荐清单
-异常物品记录
-超常现象记录
-未解明地点记录
-GoI格式
-音频记录
-艺术作品
-征文竞赛
-被放逐者之图书馆
-原创图书馆中心
-
-
-SCP-CN系列
-
-CN系列 II (CN-1000 - CN-1999)
-CN系列 I (CN-001 - CN-999)
-搞笑SCP-CN
-已解明SCP-CN
-原创异常物品记录
-原创超常现象记录
-原创基金会故事
-原创短篇故事合集
-原创设定
-原创故事系列
-中文分部征文竞赛
-
-
-SCP国际
-
-SCP国际翻译中心
-SCP国际翻译站
-Russian Branch(-RU)
-SCP 재단(-KO)
-Fondation SCP(-FR)
-Fundacja SCP(-PL)
-La Fundación SCP(-ES)
-สถาบัน SCP(-TH)
-SCP財団(-JP)
-SCP auf Deutsch(-DE)
-Fondazione SCP(-IT)
-Ukrainian Branch(-UA)
-Fundação SCP(-PT/BR)
-SCP Nadace(-CZ)
-
-
-背景资料
-
-关于基金会
-相关组织
-项目等级
-职员档案
-安保许可等级
-安保设施
-机动特遣队
-中国相关组织
-中国分部设施
-中国分部机动特遣队
-
-
-指导
-
-指导中心
-新手指南
-如何撰写一篇SCP文档
-图像使用守则
-授权指南
-标签指导
-标签搜索
-翻译发布及搬运指南
-翻译与校对守则
-常见问题解答
-网站站规
-删帖指导
-批评守则
-链接
-
-
-
-
-
-
-
-≡
-
-
-SCP系列
-
-CN系列 II (CN-1000 - CN-1999)
-CN系列 I (CN-001 - CN-999)
-搞笑SCP-CN
-已解明SCP-CN
-系列 VI (5000 - 5999)
-系列 V (4000 - 4999)
-» 系列 V 故事
-系列 IV (3000 - 3999)
-» 系列 IV 故事
-系列 III (2000 - 2999)
-» 系列 III 故事
-系列 II (1000 - 1999)
-» 系列 II 故事
-系列 I (001 - 999)
-» 系列 I 故事
-搞笑SCP
-» 搞笑SCP故事
-已解明SCP
-» 已解明SCP故事
-SCP国际翻译中心
-
-
-故事
-
-基金会故事
-设定
-故事系列
-事故报告
-Creepy-Pasta 归档
-原创基金会故事
-原创短篇故事合集
-原创设定
-原创故事系列
-
-
-图书馆
-
-用户推荐清单
-异常物品记录
-超常现象记录
-未解明地点记录
-GoI格式
-音频记录
-艺术作品
-征文竞赛
-原创异常物品记录
-原创超常现象记录
-中文分部征文竞赛
-被放逐者之图书馆
-原创图书馆中心
-
-
-背景资料
-
-关于基金会
-相关组织
-项目等级
-职员档案
-安保许可等级
-安保设施
-机动特遣队
-中国相关组织
-中国分部设施
-中国分部机动特遣队
-
-
-指导
-
-指导中心
-新手指南
-如何撰写一篇SCP文档
-图像使用守则
-授权指南
-标签指导
-标签搜索
-翻译发布及搬运指南
-翻译与校对守则
-常见问题解答
-网站站规
-删帖指导
-批评守则
-链接
-
-
-
-
-
-                    
-                
-                登入 
-                
-            
-            
-            
-                
-                    
-                        
-
-
-                        
-
-
-
-
-新人资讯
-
-新手指南
-网站站规
-加入网站
-如何撰写一篇SCP文档
-SCP中文沙盒站
-常见问题解答
-
-
-主页
-
-
-SCP-CN系列
-
-II
-
-
-SCP系列
-
-VI
-
-
-SCP系列故事
-
-V
-
-
-SCP图书馆
-
-原创故事
-原创设定
-GoI格式
-SCP国际翻译中心
-原创中心
-
-
-网站
-
-最近新增的页面
-故事
-原创故事
-修改的页面
-最高评分的页面
-最低评分的页面
-
-
-社交
-
-讨论区
-帖子
-批评守则
-中文分部作者页
-
-
-相关网站
-
-SCP技术部门
-SCP国际翻译站
-
-
-
-
-写作指导
-
-指导中心
-标签指导
-标签搜索
-翻译发布及搬运指南
-维基语法
-语法速查
-
-
-
-管理专用
-
-管理专用
-
-后台管理
-职员专站
-所有页面
-会员一览
-版式
-
-
-
-
-
-
-
-相关媒体
-
-
-
-
-
-
-
-
-© SCP基金会
-
-授权指南
-
-
-
-
-
-
-
-    
-    
-    
-    
