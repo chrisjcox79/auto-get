@@ -1,341 +1,256 @@
 /*
-    None CSS with Left Beef
-    [2019 Wikidot Theme]
-    Created by stormbreath.
+    Alexylva University Theme
+    [2018 Wikidot Theme]
+    Created by Uncle Nicolini, cleaned by ROUNDERHOUSE.
+    Logo created by MingoMongo, under CC BA SA 3.0: https://www.deviantart.com/mingomongo/art/SCP-Alexylva-University-Simple-Logo-750830216
+    Paper Textures created by Jojo-ojoj, under CC BY SA 3.0: https://www.deviantart.com/jojo-ojoj/art/Old-paper-seamless-textures-1-531542908
+    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan, and MC&D Theme created by Randomini.
 */
 
-/* LINKS */
-a {
-    color: #0645AD;}
+   /* FONTS */
 
-a.newpage {
-    color: #CC2200;}
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=GFS+Neohellenic');
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil:700');
 
- a:visited {
-     color: #0B0080;
-}
-
-#side-bar a {
-     color: black
-}
-
-#side-bar a:visited {
-     color: black;
-}
-
-
-/* REMAKE THE HEADER */
-
-h1, #page-title {
-    color: black;
-}
-
-#page-title {
-    border-color: black;
-}
-
-
-div#container-wrap {
-    background: url(none);
-}
-
-div#extra-div-1 {
-    height: 22px;
-    width: 100%;
-    top: 140px;
-    position: absolute;
-    background: black;
-}
+   /* HEADER */
 
 #header {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aminimal/minimal.svg);
-    background-size: 6rem;
-}
-@media (max-width: 580px) and (min-width: 480px) {
-    #header {
-        background-position: 0.5em 4.5em;
-        background-size: 66px 66px;
-    }
+    height: 140px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30px; /* for menu */
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/alexyvalogo.png) 10px 35px no-repeat;
 }
 
-@media (max-width: 479px) {
-    #header {
-        background-position: 0 5.5em;
-        background-size: 55px 55px;
-    }
-}
-
-#header h1 a {
-    color: transparent;
-    text-shadow: none;
-}
-
-#header h1 a::before {
-    color: black;
+#header h1 span {
+    display: none;
 }
 
 #header h2 span {
     color: transparent;
     text-shadow: none;
 }
+
 #header h2 span::before {
+    content: "西哥特人冲啊！";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#header h1 a::before {
+    content: "Alexylva大学";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    color: white;
+    font-style: normal;
+    text-shadow: none;
+}
+
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/header2.png) top left repeat-x;
+    background-size: 105px;
+}
+
+/*
+div#page-content {
+    color: white;
+    transform: rotatez(1deg);
+    background-image: url("https://i.imgur.com/igf22s1.gif");
+}
+*/
+
+   /* LINKS */
+
+a {
+    color: #9c3111;
+    text-decoration: bold;
+}
+
+a.newpage {
+    color: #d68c53;
+    text-decoration: bold;
+}
+
+#side-bar a:visited {
+    color: #9c3111;
+}
+
+a:visited {
+    color: #4c3c26;
+}
+
+   /* MISC & WIDGET STYLING */
+
+#login-status, #login-status a {
+    color: #fff;
+    border-color: #fff;
+}
+
+.scp-image-block .scp-image-caption {
+   font-family: 'Oswald', sans-serif;
+   background-color: #9c3111;
+   color: white;
+}
+
+hr {
+  background-color: #9c3111;
+}
+
+#page-title {
+    font-family: 'Oswald', sans-serif;
+    color: #9c3111;
+}
+
+h1, h2, h3, h4, h6, h7 {
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-style: italic;
     color: black;
+    font-weight: bold;
 }
 
-/* SIDE-BAR */
-#side-bar .side-block {
-    background-color: white !important;
-    border-color: transparent;
-    border-radius: 0px;
-    box-shadow: none;
+#page-title {
+    border-color: black;
 }
 
-#side-bar .heading {
+.blockquote, blockquote {
+    background-color: #9c3111;
     color: black;
-    border-bottom: solid 1px black;
+    font-family: 'Oswald', sans-serif;
+    border: 4px solid #d84519;
 }
 
-
-@media (max-width: 767px) {
-    #side-bar {
-         background-color: white;
-    }
-
-    #side-bar:target .close-menu {
-         background: none;
-    }
+.borders {
+    display: block;
+    margin: auto;
+    border: 6px double #9c3111;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/4.jpg");
+    background-repeat: repeat;
+    background-size: contain;
 }
 
-#side-bar .collapsible-block-folded {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aminimal/expand.png);
-}
-
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px black;
-}
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: black;
-}
-
-
-#side-bar img,
-iframe.scpnet-interwiki-frame {
-    filter: grayscale(100%) saturate(0%);
-    -webkit-filter: grayscale(100%) saturate(0%);
-}
-
-/* TOP-BAR */
-#top-bar ul li ul {
-    border: solid 1px black;
-}
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    border-top: 1px solid white;
-}
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: white;
-    color: black;
-}
-#top-bar ul li ul a, #top-bar a:hover {
-    color: black;
-}
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover {
-    background: black;
-    color: white; /* top bar hover background color */
+.main-body-div{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px 25px;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/3.jpg");
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 /* RATING MODULE */
+
 .page-rate-widget-box .rate-points {
-    background-color: black !important;
-    border: solid 1px black;
-    text-transform: capitalize;
+     background-color: #a38b65 !important;
+     border: solid 1px #ffe4af;
 }
 
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: black;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
+     background-color: a38b65;
+     border-top: solid 1px #ffe4af;
+     border-bottom: solid 1px #ffe4af;
+     font-weight: bold;
 }
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: white;
+
+.page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a {
+     background: a38b65;
+     color: #ffe4af;
+     padding: 0 4px;
+     margin: 0 1px;
 }
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: white;
-    color: black;
+
+.page-rate-widget-box .rateup a:hover, .page-rate-widget-box .ratedown a:hover {
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
 }
+
 .page-rate-widget-box .cancel {
-    background-color: black;
-    border: solid 1px black;
+     background-color: #a38b65;
+     border: solid 1px #ffe4af;
+     border-left: 0;
+     border-radius: 0 5px 5px 0;
 }
+
 .page-rate-widget-box .cancel a {
-    color: white;
+     background: transparent;
+     text-transform: uppercase;
+     color: #ffe4af;
 }
+
 .page-rate-widget-box .cancel a:hover {
-    background: white;
-    color: black;
+     border-radius: 0 3px 3px 0;
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
 }
 
-#page-content .rate-box-with-credit-button {
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 5px !important;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-}
+   /* SIDEBAR */
 
-.rate-box-with-credit-button .page-rate-widget-box .cancel a:hover {
+/* bonus: .side-block {transform: skew(3deg, 4deg);} */
+
+#side-bar .side-block {
+    padding: 10px;
+    border: 3px double #9c3111;
     border-radius: 0;
+    box-shadow: 0 2px 6px rgba(102,0,0,.5);
+    background: #fff;
 }
 
-#page-content .rate-box-with-credit-button .creditButton p a {
-    border-left-color: transparent;
+#side-bar div.menu-item img {
+    filter: hue-rotate(50deg);
 }
 
-#page-content .rate-box-with-credit-button .fa-info:hover {
-     color: black;
-     background-color: white;
+   /* Search Bar */
+
+#search-top-box-input, #search-top-box input.empty,
+#search-top-box-form input[type=submit] {
+    transition: 0.2s linear;
 }
 
-#page-content .modalbox {
-    box-shadow: 0 2px 6px rgba(102, 102, 102, .5);
+#search-top-box-input, #search-top-box input.empty {
+    background-color: #B4935D;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
 }
 
-.close-credits,
-.credit-back {
-    filter: hue-rotate(260deg);
-}
-
-/* PAGE ELEMENTS */
-blockquote,
-div.blockquote,
-#toc,
-.code {
-     background-color: white;
-}
-
-.scp-image-block {
-    border: solid 1px black;
-    box-shadow: none;
-}
-.scp-image-block .scp-image-caption {
-    background-color: white !important;
-    border-top: solid 1px black !important;
-    color: black;
-}
-
-/* RECOLOR THE SEARCH BAR */
-#search-top-box-input {
-    border-color: black;
-    color: black !important;
-    background-color: white;
-}
-
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    background-color: white;
-    border-color: black;
+#search-top-box-input:hover, #search-top-box-input:focus,
+#search-top-box input.empty:hover, #search-top-box input.empty:focus {
+    outline: 0;
+    border: 1px solid #fff;
+    background-color: #B4935D;
+    box-shadow: 0 1px 3px rgba(0,0,0,.8);
 }
 
 #search-top-box-form input[type=submit] {
-    border: solid 1px black;
-    color: black;
-    background-color: white;
-    background: white;
+    outline: 0;
+    height: 1.65em;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
+
+    position: relative;
+    top: -1px;
+
+    box-shadow: none;
 }
 
 #search-top-box-form input[type=submit]:hover,
 #search-top-box-form input[type=submit]:focus {
-    border: solid 1px black;
-    background-color: white;
-    background: white;
-    color: black;
+    border: 1px solid #fff;
+    border-radius: 0;
+    background: #B6925E;
 }
 
-
-/* LOGIN STUFF */
-#login-status {
-    color: black;
-    filter: grayscale(100%) saturate(0%);
-    -webkit-filter: grayscale(100%) saturate(0%);
-}
-#login-status a {
-    color: black;
-}
-#login-status ul a {
-    color: black;
-}
-#account-topbutton {
-     background: #ccc;
-     color: black;
-}
-
-/* HOVER THINGIES */
-.hovertip {
-     background: white !important;
-}
-
-/* FOOTER */
-#footer {
-    background: black;
-    color: white;
-}
-
-/* TABS */
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: transparent; /* color between tab list and content */
-}
-
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background: white; /* tab background */
-    border-color: white;
-    color: black;
-    transition: 0.125s;
-}
-
-.yui-navset .yui-nav a em {
-    background: white;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.7);
-    border-color: white;
-}
-
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:hover {
-    background: white; /* selected tab background */
-    color: black;
-}
-
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background: white;
-}
-
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a em {
-    border-color: transparent;
-    box-shadow: 0px 1px 2px 0.5px rgba(0,0,0,0.5);
-    background: white;
-}
-
-.yui-navset .yui-content {
-    background: transparent; /* content background color */
-}
-
-.yui-navset .yui-content,
-.yui-navset .yui-navset-top .yui-content {
-    border-color: transparent; /* content border */
-    border-top-color: transparent; /* different border color */
-}
-
-.yui-navset-left .yui-content {
-    border-left-color: #b7a9a9; /* different border color */
+#search-top-box-form input[type=submit]:active {
+    padding: 0 0.5em;
+    border: 2px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
 }
