@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+    <base target="_blank">
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    function changeYear(year) {
+        $("iframe").attr("src","http://www.scp-wiki.net/fragment:top-rated-by-year-" + year);
+    }
+</script>
+<style>
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/base/css/style.css);
+@import url(http://www.scp-wiki.net/component:theme/code/1);
+a {
+    cursor: pointer;
+    word-break: normal;
+}
+iframe {
+    width: 100%;
+    min-height: 1000px;
+    border: none;
+}
+.holder::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: rotate(0deg) translate(-50%,-50%);
+    transform-origin: 0% 0%;
+    background: url(http://scp-sandbox-3.wdfiles.com/local--files/croqueyearly/logo.png) 50% 50%/100px 100px no-repeat;
+    opacity: 0.5;
+    animation: load 2000ms infinite linear;
+    z-index: -1;
+}
+.navigator {
+    text-align: center;
+    width: 100%;
+    font-size:1.25em;
+    font-weight: bold;
+}
+@keyframes load {
+    0% { transform: rotate(0deg) translate(-50%,-50%); }
+    100% { transform: rotate(360deg) translate(-50%,-50%); }
+}
+</style>
+<body>
+    <div class="content-panel standalone series">
+        <div style="text-align: center;">
+        <h2><span>Click on a year to find the top rated pages during that time!</span></h2>
+        </div>
+        <div class="navigator">
+        <p><button onclick="changeYear('08')">2008</button><button onclick="changeYear('09')">2009</button><button onclick="changeYear('10')">2010</button><button onclick="changeYear('11')">2011</button><button onclick="changeYear('12')">2012</button><button onclick="changeYear('13')">2013</button><button onclick="changeYear('14')">2014</button><button onclick="changeYear('15')">2015</button><button onclick="changeYear('16')">2016</button><button onclick="changeYear('17')">2017</button><button onclick="changeYear('18')">2018</button><button onclick="changeYear('19')">2019</button><button onclick="changeYear('20')">2020</button></p>
+        </div>
+    </div>
+    <div class="holder">
+        <iframe src="http://www.scp-wiki.net/fragment:top-rated-by-year-20"></iframe>
+    </div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

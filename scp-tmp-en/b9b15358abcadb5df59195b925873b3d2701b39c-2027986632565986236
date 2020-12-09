@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style>
+body{
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.80em;
+    line-height: 141%;
+}
+
+blockquote{
+    background-color: rgb(241,241,241);
+    border-width: 1px;
+    border-color: rgb(135,135,135);
+    border-style: dashed;
+    padding: 3px 10px 10px;
+}
+</style>
+<html>
+<head>
+<script type="text/javascript">
+
+function showMore()
+{
+    content = document.getElementById('content');
+    login = document.getElementById('login');
+    error = document.getElementById('error');
+    passwordEntered =  document.getElementById('pass').value;
+
+    if (passwordEntered == "nothing:something")
+    {
+        login.style.display = "none";
+        content.style.display = "block";
+    }
+    else
+    {
+        error.style.display = "block";
+        error.innerHTML = "<h4>INCORRECT PASSCODE! UNAUTHORIZED ACCESS DETECTED! RESPONSE TEAM ACTIVATED!<h4>";
+    }
+}
+</script>
+</head>
+<body>
+<div id="login">
+<input type="password" size="25" id="pass"> <input type="button" value="Enter passcode" onClick="showMore();">
+<div id="error" style="display: none;"></div>
+</div>
+
+<div id="content" style="display: none;">
+Current projects: TAR and the almost people, The Nightmare Light, and "The Follower."
+</div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</html>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
