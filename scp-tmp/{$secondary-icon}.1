@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-5451 - SCP基金会</title>
+    <title>SCP-CN-1724 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-5451";
-        OZONE.request.timestamp = 1607502814;
+        WIKIREQUEST.info.requestPageName = "scp-cn-1724";
+        OZONE.request.timestamp = 1607524378;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-5451";
-        WIKIREQUEST.info.pageId = 1305317862;
+                WIKIREQUEST.info.pageUnixName = "scp-cn-1724";
+        WIKIREQUEST.info.pageId = 1306141884;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,6 +65,9 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
+
+
         
                 
         /* theme */
@@ -121,25 +124,1009 @@
 @import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
 </style>
 <style>
-.one {
-  width: 15%;
-  float: left;
+/*↓ 所有变量 ↓ */
+
+:root {
+            /*↓ S-CSS-P 集成 ↓ */
+            /*↓ 如果你正在制作一个新的CSS主题版式，请至少添加以下三个变量。 ↓ */
+            /*↓ 每一个变量的说明在其下方 ↓ */
+
+                  --theme-base: "sigma9";
+            /*↑ 必须为“黑色标记笔”或者“sigma9” ↑*/
+                  --theme-id: "unnamed";
+            /*↑ 你的版式页面的URL地址 - 例如“component:ar-theme”，则设置为“ar-theme” ↑*/
+                  --theme-name: "Site-CN-82";
+            /*↑ 你的版式的名字 ↑*/
+
+            /*↓ 页眉 ↓ */
+
+                  --logo-image: url("http://91secretsandbox.wikidot.com/local--files/secret:site-cn-82-css-b/_beta.svg");
+            /*↑ 页眉Logo ↑*/
+                  --header-title: "Site-CN-82-β";
+            /*↑ 大标题 ↑*/
+                  --header-subtitle: "生灵 自然 万物";
+            /*↑ 副标题 ↑*/
+
+            /*↓ 字体 - 字体的数量可以任意增加，之间以半角逗号隔开，系统会根据设备是否安装了该字体从前往后依次渲染 ↓ */
+
+                  --body-font: "Noto Sans SC", sans-serif;
+            /*↑ 正文字体 ↑*/
+                  --header-font: "Noto Sans SC", sans-serif;
+            /*↑ 页眉字体 ↑*/
+                  --title-font: "Noto Sans SC", sans-serif;
+            /*↑ 标题字体 ↑*/
+                  --mono-font: "Segoe Script", "Segoe Script", "Segoe Script", Courier, monospace;
+            /*↑ 等宽字 ↑*/
+
+            /*↓ 标准颜色 ↓ */
+            /*↓ 颜色格式为 RGB 红、绿、蓝 ↓ */
+
+                  --white-monochrome: 252, 252, 252;
+            /*↑ 白色 ↑*/
+                  --pale-gray-monochrome: 244, 244, 244;
+            /*↑ 非常浅的灰色，用于引用块 ↑*/
+                  --light-pale-gray-monochrome: 244, 244, 244;
+            /*↑ 浅灰色 ↑*/
+                  --very-light-gray-monochrome: 215, 215, 215;
+            /*↑ 浅灰色 ↑*/
+                  --light-gray-monochrome: 160, 160, 160;
+            /*↑ 浅灰色 ↑*/
+                  --gray-monochrome: 66, 66, 72;
+            /*↑ 灰色 ↑*/
+                  --dark-gray-monochrome: 48, 48, 52;
+            /*↑ 深灰色 ↑*/
+                  --black-monochrome: 12, 12, 12;
+            /*↑ 黑色 ↑*/
+                  --pale-accent: 230, 40, 60;
+            /*↑ 浅红色，链接颜色 ↑*/
+                  --bright-accent: 133, 0, 5;
+            /*↑ 亮红色 ↑*/
+                  --medium-accent: 100, 46, 44;
+            /*↑ 红色 - 基准颜色 ↑*/
+                  --dark-accent: 100, 3, 15;
+            /*↑ 深红色 ↑*/
+                  --alt-accent: 221, 102, 17;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+            /*↓ 背景及页眉颜色 ↓ */
+
+                  --background-gradient-color: var(--white-monochrome);
+                  --header-gradient-color-bottom: var(--medium-accent);
+            /*↑ 页眉渐变 - 底端 ↑*/
+                  --header-gradient-color-middle: var(--black-monochrome);
+            /*↑ 页眉渐变 - 中间 ↑*/
+                  --header-gradient-color-top: var(--black-monochrome);
+            /*↑ 页面渐变 - 顶端 ↑*/
+
+            /*↓ 主要版式颜色 - 一般无需修改 ↓ */
+
+                  --swatch-background: var(--white-monochrome);
+                  --swatch-primary: var(--bright-accent);
+                  --swatch-primary-darker: var(--medium-accent);
+                  --swatch-primary-darkest: var(--dark-accent);
+
+            /*↓ 主要文字颜色 - 一般无需修改 ↓ */
+
+                  --swatch-text-dark: var(--black-monochrome);
+                  --swatch-text-light: var(--white-monochrome);
+                  --swatch-important-text: var(--bright-accent);
+
+            /*↓ 主要菜单颜色 - 一般无需修改 ↓ */
+
+                  --swatch-menubg-color: var(--white-monochrome);
+                  --swatch-menubg-light-color: var(--pale-gray-monochrome);
+                  --swatch-menubg-medium-color: var(--light-gray-monochrome);
+                  --swatch-menubg-medium-dark-color: var(--gray-monochrome);
+                  --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+                  --swatch-menubg-black-color: var(--black-monochrome);
+                  --swatch-menubg-hover-color: var(--black-monochrome);
+                  --swatch-menutxt-dark-color: var(--black-monochrome);
+                  --swatch-menutxt-light-color: var(--white-monochrome);
+                  --swatch-border-color: var(--black-monochrome);
+
+            /*↓ 主要页眉颜色 ↓ */
+
+                  --swatch-headerh1-color: var(--white-monochrome);
+            /*↑ 大标题颜色 - 即“Site-CN-82” ↑*/
+                  --swatch-headerh2-color: var(--white-monochrome);
+            /*↑ 副标题颜色 - 即“以收容为本，以实践为主，以理论为纲” ↑*/
+                  --swatch-topmenu-border-color: var(--black-monochrome);
+            /*↑ 顶栏的边框颜色 ↑*/
+                  --swatch-topmenu-bg-color: var(--gray-monochrome);
+            /*↑ 顶栏的背景颜色 ↑*/
+
+            /*↓ 链接颜色 ↓ */
+
+                  --link-color: var(--pale-accent);
+            /*↑ 一般链接颜色 ↑*/
+                  --visited-link-color: var(--swatch-primary);
+            /*↑ 已访问的链接颜色 ↑*/
+                  --hover-link-color: var(--swatch-primary);
+            /*↑ 高亮的链接颜色 - 鼠标悬停时 ↑*/
+                  --newpage-color: var(--alt-accent);
+            /*↑ 页面不存在的链接颜色 ↑*/
+                  --sidebar-links-text: var(--swatch-menutxt-dark-color);
+            /*↑ 侧边栏的链接颜色 ↑*/
+
+            /*↓ 评分模块颜色 ↓ */
+
+                  --rating-module-button-color: var(--black-monochrome);
+            /*↑ 评分模块字体颜色 ↑*/
+                  --rating-module-button-plus-color: 0, 200, 0;
+            /*↑ 好评背景颜色 - 绿色 ↑*/
+                  --rating-module-button-negative-color: 200, 0, 0;
+            /*↑ 差评背景颜色 - 红色 ↑*/
+                  --rating-module-button-cancel-color: 200, 200, 200;
+            /*↑ 取消评分背景颜色 - 白色 ↑*/
+                  --rating-module-button-credit-color: 50, 50, 50;
+            /*↑ 著作信息模块中字母“i”的颜色 ↑*/
+                  --rating-module-text-color: var(--swatch-menutxt-dark-color);
+            /*↑ 评分模块字体颜色 ↑*/
+                  --rating-module-text-hover-color: var(--swatch-menutxt-light-color);
+            /*↑ 评分模块字体鼠标悬停时颜色 ↑*/
+
+            /*↓ 页眉渐变 - 一般无需修改 ↓ */
+
+                  --gradient-header: linear-gradient(
+                  to top,
+                        rgb(var(--header-gradient-color-bottom)) 0%,
+                        rgb(var(--header-gradient-color-middle)) 90%,
+                        rgb(var(--header-gradient-color-top)) 100%
+            );
+                  --gradient-topmenu: linear-gradient(
+                  to bottom,
+                  rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0) var(--header-height-on-desktop),
+                        rgba(var(--swatch-topmenu-border-color),1) var(--header-height-on-desktop),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--header-height-on-desktop) + 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 0.95) calc(100% - 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - 0.125rem),
+                        rgba(var(--swatch-topmenu-border-color), 1) 100%);
+                  --gradient-topmenu-mobile: linear-gradient(
+                  to bottom,
+                        rgba(var(--swatch-topmenu-border-color),1) 0,
+                        rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--topbar-height-on-mobile) - 0.125rem),
+                        rgba(var(--swatch-topmenu-bg-color), 1) calc(var(--topbar-height-on-mobile) - 0.125rem),
+                        rgba(var(--swatch-topmenu-border-color),1) var(--topbar-height-on-mobile));
+                  --diagonal-stripes: repeating-linear-gradient(
+                  45deg,
+                  hsla(0, 0%, 100%, 0),
+                  hsla(0, 0%, 100%, 0) 0.25vh,
+                  rgba(88, 88, 88, 0.1) 0.35vh,
+                  rgba(88, 88, 88, 0.2) 0.5vh
+            );
+                  --gradient-sidemenu-header: linear-gradient(10deg,
+                        rgba(var(--medium-accent), 0.45) 0%,
+                        rgba(var(--medium-accent), 0.55) 100%
+            );
+                  --background-gradient-distance: 40rem;
+                  --gradient-background: linear-gradient(
+                  to bottom,
+                        rgba(var(--background-gradient-color),1) 0,
+                        rgba(var(--background-gradient-color),0.987) calc(0.008 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.951) calc(0.029 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.896) calc(0.064 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.825) calc(0.110 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.741) calc(0.166 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.648) calc(0.231 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.550) calc(0.304 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.450) calc(0.383 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.352) calc(0.467 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.259) calc(0.554 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.175) calc(0.644 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.104) calc(0.735 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.049) calc(0.825 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0.013) calc(0.914 * var(--background-gradient-distance)),
+                        rgba(var(--background-gradient-color),0) var(--background-gradient-distance));
+
+            /*↓ 页面排版 - 一般无需修改 ↓ */
+
+            /*↓ 页眉排版 - 一般无需修改 ↓ */
+                  --header-height-on-desktop: 7.5rem;
+                  --header-height-on-mobile: 7.5rem;
+                  --topbar-height-on-desktop: 1.875rem;
+                  --topbar-height-on-mobile: 3rem;
+                  --header-background-image-size: 100% var(--header-height-on-desktop);
+
+                  --body-width-on-desktop: 44.25rem;
+                  --sidebar-width-on-desktop: calc((var(--base-font-size) * (14/15)) * 19);
+                  --sidebar-width-on-mobile: calc((var(--base-font-size) * (14/15)) * 16);
+                  --scrollbar-width: 1rem;
+                  --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
+                  --border-radius-width: 0.0625rem;
+
+            /*↓ 阴影 - 一般无需修改 ↓ */
+                  --box-border-bottom: 0 0.0625rem 0 0 rgb(var(--swatch-border-color));
+                  --box-border-top: 0 -0.0625rem 0 0 rgb(var(--swatch-border-color));
+                  --box-border-left: -0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+                  --box-border-right: 0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+                  --box-border-all: 0 0 0 0.0625rem rgb(var(--swatch-border-color));
+
+            /*↓ 侧边栏 ↓ */
+                  --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+            /*↑ 侧边栏动画效果 - 持续时间、速度曲线、延迟时间 ↑*/
+                  --sidebar-internal-border-thickness: 0.125rem;
+            /*↑ 侧边栏项目的高度 ↑*/
+
+            /*↓ 杂项 ↓ */
+                  --base-font-size: 0.9375rem;
+            /*↑ 基准字体大小 ↑*/
+                  --base-line-height: 1.313rem;
+                  --final-header-height-on-desktop: calc(var(--header-height-on-desktop) + var(--topbar-height-on-desktop));
+                  --final-header-height-on-mobile: calc(var(--header-height-on-mobile) + var(--topbar-height-on-mobile));
+}
+</style>
+<style>
+/*版头图*/
+div#container-wrap {
+    background-image: url(http://scpsandboxcn.wdfiles.com/local--files/collab%3Ace-5/%E7%89%88%E5%A4%B4%EF%BC%88%E6%B5%8B%E8%AF%95%E7%94%A84%EF%BC%89);
+}
+/*标题横线消失*/
+#page-title {
+    font-size: 3em;
+    border: none;
+    padding: 0;
+    margin: 0.5em 0 0.3em 0;
+}
+/*标题居中*/
+#page-title {
+    text-align: center !important;
+    font-family: var(--header-font);
+    font-size: 270%;
+}
+</style>
+<style>
+/* Table */
+table.listpages-table,
+table.timeline {
+  width: 100%;
+  word-break: break-word;
+}
+table.listpages-table th {
+  background-color: #666;
+  color: #fff;
+}
+table.listpages-table td {
+  vertical-align: top;
+}
+table.listpages-table td:not(:first-child) {
+  text-align: center;
+}
+table.listpages-table tr:nth-child(2n+1) td {
+  background-color: rgba(210, 210, 210, .5);
+}
+table.timeline {
+  border-spacing: 0;
+}
+table.timeline td {
+  vertical-align: top;
+}
+table.timeline td.label {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+table.timeline td.left {
+  border-right: solid 1px #999;
+  width: 50%;
+  text-align: right;
+  padding: 5px 6px 5px 0;
+}
+table.timeline td.right {
+  padding: 5px 0 5px 6px;
+}
+table.timeline div.crucial {
+  font-family: monospace;
+  font-size: 1.1em;
+  color: #999;
+}
+table.timeline div.title {
+  font-size: 1.25em;
+}
+table.timeline div.description {
+  display: inline-block;
+  text-align: left;
+  padding: 2px 0 8px;
+}
+table.timeline div.description p:first-child {
+  margin-top: 0;
+}
+</style>
+<style>
+:root {
+    --linkColour: #FFF;
+    --barColour: #633;
 }
 
-.two {
-  margin-left: 15%;
-}
-.post{
-  padding: 5%;
-}
-.eno {
-  width: 15%;
-  float: right;
+#breadcrumbs{
+margin: auto;
+text-align: center;
+padding-bottom: 4px;
 }
 
-.owt {
-  margin-right: 15%;
+#page-title {
+    position: relative;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0;
 }
+
+.info-container {
+    content: " ";
+    width: 100%;
+    text-align: center;
+    bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.info-container h1 {
+    text-align: center;
+}
+
+.info-container .collapsible-block-folded,
+.info-container .collapsible-block-unfolded-link {
+-webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 628 18' xml:space='preserve'%3E%3Cpolygon fill='%23B2B2B2' points='628.3,0 0,0 0,5.3 243.6,5.3 268.1,18.2 360,18.3 384.7,5.3 628.3,5.3 '/%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 628 18' xml:space='preserve'%3E%3Cpolygon fill='%23B2B2B2' points='628.3,0 0,0 0,5.3 243.6,5.3 268.1,18.2 360,18.3 384.7,5.3 628.3,5.3 '/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: top center;
+    mask-position: top center;
+    background: var(--barColour);
+}
+
+.info-container .collapsible-block-folded {
+    display: block;
+    margin: 0 auto;
+    height: 1.5em;
+    width: 100%;
+}
+
+.translation_block > p {
+    margin: 1em 2em 0 2em;
+}
+
+.info-container .collapsible-block-folded .collapsible-block-link, .info-container .collapsible-block-link {
+    -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 103 205.3' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23FFFFFF' d='M4.2,75.6c24.1-2.6,48.2-5.2,74.9-8.1c0,15.6,0,29.4,0,43.3c0,20.8,0.4,41.6-0.2,62.3 c-0.3,10.5,4,16.3,13.4,20c4,1.5,7.1,5.3,10.6,8c-0.8,1.4-1.6,2.8-2.4,4.3c-32.4,0-64.8,0-97.3,0c-0.9-1.1-1.7-2.3-2.6-3.4 c3.3-2.7,6.2-7,9.9-7.8c11.4-2.3,15.3-9,15.2-19.9c-0.2-20.3-0.6-40.5,0.1-60.8c0.4-11.8-4.4-18.1-15-22.3c-4.4-1.8-7.4-7.2-11-11 C1.4,78.6,2.8,77.1,4.2,75.6z'/%3E%3Cpath fill='%23FFFFFF' d='M79.6,27c0,16.3-11,26.9-27.5,26.7c-16.5-0.2-26.2-9.9-26.2-26c0-17,10.1-27.7,26.5-27.7 C68.6-0.1,79.6,10.8,79.6,27z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 103 205.3' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23FFFFFF' d='M4.2,75.6c24.1-2.6,48.2-5.2,74.9-8.1c0,15.6,0,29.4,0,43.3c0,20.8,0.4,41.6-0.2,62.3 c-0.3,10.5,4,16.3,13.4,20c4,1.5,7.1,5.3,10.6,8c-0.8,1.4-1.6,2.8-2.4,4.3c-32.4,0-64.8,0-97.3,0c-0.9-1.1-1.7-2.3-2.6-3.4 c3.3-2.7,6.2-7,9.9-7.8c11.4-2.3,15.3-9,15.2-19.9c-0.2-20.3-0.6-40.5,0.1-60.8c0.4-11.8-4.4-18.1-15-22.3c-4.4-1.8-7.4-7.2-11-11 C1.4,78.6,2.8,77.1,4.2,75.6z'/%3E%3Cpath fill='%23FFFFFF' d='M79.6,27c0,16.3-11,26.9-27.5,26.7c-16.5-0.2-26.2-9.9-26.2-26c0-17,10.1-27.7,26.5-27.7 C68.6-0.1,79.6,10.8,79.6,27z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-size: 0.5em;
+    mask-size: 0.5em;
+    -webkit-mask-position: top center;
+    mask-position: top center;
+    mask-position-y: 3px;
+    -webkit-mask-position-y: 3px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background: var(--linkColour);
+    text-decoration: none;
+}
+
+.info-container .collapsible-block-unfolded-link {
+    display: block;
+    margin: 0 auto;
+    height: 1.5em;
+    width: 100%;
+}
+
+.info-container .collapsible-block-unfolded {
+    border: 1px solid #BBB;
+    border-top: none;
+}
+
+.info-container .collapsible-block-content {
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.info-container .collapsible-block-content > div:nth-child(1) > p {
+    margin: 2em;
+}
+
+.u-faq a:link {
+    font-size: 80%;
+}
+
+#u-author_block > div a {
+    display: inline;
+    padding: 0.8em;
+    background: var(--barColour);
+    color: var(--linkColour);
+    border-radius: 0.25vw;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0);
+    transition: -webkit-backdrop-filter .3s, backdrop-filter .3s, box-shadow .3s;
+}
+
+#u-author_block > div a:hover {
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, .8);
+    text-decoration: none;
+}
+
+.translation_block {
+    display: block;
+    margin: 0 2em;
+    width: calc(100% - 4em);
+    text-align: center;
+}
+
+.translation_block iframe{
+    width: 17.2em;
+}
+
+.translation_block > p > iframe {
+    margin: 0 auto;
+    width: 19em;
+    display: block;
+}
+.translation_block > p {
+    margin: 0;
+}
+</style>
+<style>
+@import url("http://www.scp-wiki.net/component:collapsible-sidebar/code/1")
+</style>
+<style>
+.yui-navset .yui-content, .yui-navset .yui-navset-top .yui-content {
+     border: none;
+}
+
+.yui-navset .yui-content {
+    background: none;
+}
+
+.yui-navset .yui-content {
+    background-color: transparent;
+}
+</style>
+<style>
+/* 必要布局样式css */
+.vehicle-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+.vehicle-example-item {
+    float: center;
+    width: 286px;
+    height: 315px;
+    overflow: hidden;
+    margin: 0 18px 18px 0;
+    text-align: centre;
+    background: #fff;
+    position: relative;
+    transition: all .2s;
+}
+.vehicle-example-item a .case-pad {
+    width: 286px;
+    height: 180px;
+}
+.vehicle-item-info {
+    height: 135px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transition: all .2s;
+}
+.vehicle-info-logo {
+    margin-top: 0;
+    margin-bottom: 8px;
+    height: 80px;
+    transition: all .2s;
+}
+.vehicle-info-title {
+    font-size: 14px;
+    color: #646466;
+    margin-bottom: 35px;
+}
+.vehicle-info-text {
+    font-size: 14px;
+    color: #666;
+    padding: 0 30px;
+    text-align: left;
+    line-height: 1.8;
+}
+.vehicle-index-content .vehicle-example-item:hover .vehicle-item-info {
+    height: 325px;
+}
+</style>
+<style>
+#main-content .page-tags {
+    border-top: 2px solid rgba(var(--swatch-menubg-medium-color),.5);
+}
+
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background: rgb(48, 48, 52);
+    background: rgb(var(--swatch-menubg-dark-color, 48, 48, 52));
+    color: rgb(252, 252, 22);
+    color: rgb(var(--swatch-menutxt-light-color, 252, 252, 252));
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent
+     rgb(48, 48, 52)
+     transparent
+     transparent;
+    border-color:
+     transparent
+     rgb(var(--swatch-menubg-dark-color,  48, 48, 52))
+     transparent
+     transparent;
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--swatch-menubg-dark-color,  48, 48, 52));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: rgb(252, 252, 252);
+    background-color: rgb(var(--swatch-background, 252, 252, 252));
+    box-shadow: -0.0625rem -0.0625rem 0.125rem rgb(48, 48, 52);
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+</style>
+<style>
+:root {
+    --linkColour: #FFF;
+    --barColour: #633;
+}
+
+#breadcrumbs{
+margin: auto;
+text-align: center;
+padding-bottom: 4px;
+}
+
+#page-title {
+    position: relative;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-container {
+    content: " ";
+    width: 100%;
+    text-align: center;
+    bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.info-container h1 {
+    text-align: center;
+}
+
+.info-container .collapsible-block-folded,
+.info-container .collapsible-block-unfolded-link {
+-webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 628 18' xml:space='preserve'%3E%3Cpolygon fill='%23B2B2B2' points='628.3,0 0,0 0,5.3 243.6,5.3 268.1,18.2 360,18.3 384.7,5.3 628.3,5.3 '/%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 628 18' xml:space='preserve'%3E%3Cpolygon fill='%23B2B2B2' points='628.3,0 0,0 0,5.3 243.6,5.3 268.1,18.2 360,18.3 384.7,5.3 628.3,5.3 '/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: top center;
+    mask-position: top center;
+    background: var(--barColour);
+}
+
+.info-container .collapsible-block-folded {
+    display: block;
+    margin: 0 auto;
+    height: 1.5em;
+    width: 100%;
+}
+
+.translation_block > p {
+    margin: 1em 2em 0 2em;
+}
+
+.info-container .collapsible-block-folded .collapsible-block-link, .info-container .collapsible-block-link {
+    -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 103 205.3' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23FFFFFF' d='M4.2,75.6c24.1-2.6,48.2-5.2,74.9-8.1c0,15.6,0,29.4,0,43.3c0,20.8,0.4,41.6-0.2,62.3 c-0.3,10.5,4,16.3,13.4,20c4,1.5,7.1,5.3,10.6,8c-0.8,1.4-1.6,2.8-2.4,4.3c-32.4,0-64.8,0-97.3,0c-0.9-1.1-1.7-2.3-2.6-3.4 c3.3-2.7,6.2-7,9.9-7.8c11.4-2.3,15.3-9,15.2-19.9c-0.2-20.3-0.6-40.5,0.1-60.8c0.4-11.8-4.4-18.1-15-22.3c-4.4-1.8-7.4-7.2-11-11 C1.4,78.6,2.8,77.1,4.2,75.6z'/%3E%3Cpath fill='%23FFFFFF' d='M79.6,27c0,16.3-11,26.9-27.5,26.7c-16.5-0.2-26.2-9.9-26.2-26c0-17,10.1-27.7,26.5-27.7 C68.6-0.1,79.6,10.8,79.6,27z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 103 205.3' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23FFFFFF' d='M4.2,75.6c24.1-2.6,48.2-5.2,74.9-8.1c0,15.6,0,29.4,0,43.3c0,20.8,0.4,41.6-0.2,62.3 c-0.3,10.5,4,16.3,13.4,20c4,1.5,7.1,5.3,10.6,8c-0.8,1.4-1.6,2.8-2.4,4.3c-32.4,0-64.8,0-97.3,0c-0.9-1.1-1.7-2.3-2.6-3.4 c3.3-2.7,6.2-7,9.9-7.8c11.4-2.3,15.3-9,15.2-19.9c-0.2-20.3-0.6-40.5,0.1-60.8c0.4-11.8-4.4-18.1-15-22.3c-4.4-1.8-7.4-7.2-11-11 C1.4,78.6,2.8,77.1,4.2,75.6z'/%3E%3Cpath fill='%23FFFFFF' d='M79.6,27c0,16.3-11,26.9-27.5,26.7c-16.5-0.2-26.2-9.9-26.2-26c0-17,10.1-27.7,26.5-27.7 C68.6-0.1,79.6,10.8,79.6,27z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-size: 0.5em;
+    mask-size: 0.5em;
+    -webkit-mask-position: top center;
+    mask-position: top center;
+    mask-position-y: 3px;
+    -webkit-mask-position-y: 3px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background: var(--linkColour);
+    text-decoration: none;
+}
+
+.info-container .collapsible-block-unfolded-link {
+    display: block;
+    margin: 0 auto;
+    height: 1.5em;
+    width: 100%;
+}
+
+.info-container .collapsible-block-unfolded {
+    border: 1px solid #BBB;
+    border-top: none;
+}
+
+.info-container .collapsible-block-content {
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.info-container .collapsible-block-content > div:nth-child(1) > p {
+    margin: 2em;
+}
+
+.u-faq a:link {
+    font-size: 80%;
+}
+
+#u-author_block > div a {
+    display: inline;
+    padding: 0.8em;
+    background: var(--barColour);
+    color: var(--linkColour);
+    border-radius: 0.25vw;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0);
+    transition: -webkit-backdrop-filter .3s, backdrop-filter .3s, box-shadow .3s;
+}
+
+#u-author_block > div a:hover {
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, .8);
+    text-decoration: none;
+}
+
+.translation_block {
+    display: block;
+    margin: 0 2em;
+    width: calc(100% - 4em);
+    text-align: center;
+}
+
+.translation_block iframe{
+    width: 17.2em;
+}
+
+.translation_block > p > iframe {
+    margin: 0 auto;
+    width: 19em;
+    display: block;
+}
+.translation_block > p {
+    margin: 0;
+}
+</style>
+<style>
+/* 必要布局样式css */
+.vehicle-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+.vehicle-example-item {
+    float: left;
+    width: 286px;
+    height: 315px;
+    overflow: hidden;
+    margin: 0 18px 18px 0;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    transition: all .2s;
+}
+.vehicle-example-item a .case-pad {
+    width: 286px;
+    height: 180px;
+}
+.vehicle-item-info {
+    height: 135px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transition: all .2s;
+}
+.vehicle-info-logo {
+    margin-top: 0;
+    margin-bottom: 8px;
+    height: 80px;
+    transition: all .2s;
+}
+.vehicle-info-title {
+    font-size: 14px;
+    color: #646466;
+    margin-bottom: 35px;
+}
+.vehicle-info-text {
+    font-size: 14px;
+    color: #666;
+    padding: 0 30px;
+    text-align: left;
+    line-height: 1.8;
+}
+.vehicle-index-content .vehicle-example-item:hover .vehicle-item-info {
+    height: 325px;
+}
+</style>
+<style>
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.photocard-container {
+  position: relative;
+  width: 65vmin;
+  height: 80vmin;
+}
+
+.photocard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#F8F8FF;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(17, 17, 17, 0.35);
+  -webkit-transition: -webkit-transform .35s ease-out;
+  transition: -webkit-transform .35s ease-out;
+  transition: transform .35s ease-out;
+  transition: transform .35s ease-out, -webkit-transform .35s ease-out;
+  -webkit-transform: translate(var(--x), var(--y)) scale(0.35) rotate(var(--angle));
+          transform: translate(var(--x), var(--y)) scale(0.35) rotate(var(--angle));
+  will-change: transform;
+}
+.photocard:hover {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  z-index: 1;
+}
+.photocard:hover:before {
+  opacity: 1;
+}
+
+.photocard:before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 80%;
+  margin: 5%;
+  background: var(--image) center center no-repeat;
+  background-size: cover;
+  link: var(--link)
+  box-shadow: inset 0 0 5px rgba(34, 34, 34, 0.35);
+  border-radius: 2px;
+  -webkit-filter: sepia(0.2) brightness(0.9) contrast(1.2);
+          filter: sepia(0.2) brightness(0.9) contrast(1.2);
+  -webkit-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+  opacity: .5;
+  will-change: opacity;
+}
+
+.photocard:after {
+  display: block;
+  content: var(--caption);
+  font-weight: 500;
+  color: #555;
+  font-size: 3vmin;
+  opacity: .75;
+  text-align: center;
+}
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
+</style>
+<style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+</style>
+<style>
+.infobox {
+ display:inline-box;
+ overflow:hidden;
+ position:fixed;
+ right: 1em;
+ bottom: 2em;
+ width: 21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:#ffffff;
+ opacity: 1;
+ transition: all 0.5s ease-out;
+}
+
+.infobox:hover {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+.preview{
+ color:grey;
+ width:100%;
+ display: inline-block;
+ padding-left:1%;
+ transition: box-shadow 1s ease-out;
+}
+
+.preview:hover{
+ box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
+ transition: box-shadow 0.3s ease-out;
+}
+
+.preview.yes:hover, .preview.true:hover{
+  background: url('http://scpsandboxcn.wikidot.com/local--files/asriel3/logo.png') 80% 50% fixed no-repeat;
+}
+
+.preview .span { 
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease-in-out;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ position:fixed;
+ z-index: 11;
+ right: 1em;
+ bottom: 2em;
+ width:21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ color:grey;
+ text-size:0.9em;
+ font-family:微软细黑, Segoe UI Light,Verdana,sans-serif;
+}
+
+.preview:hover .span { 
+ opacity: 1;
+ background-color:#ffffff;
+}
+
+.collab-header{
+ display:none;
+}
+
+.imagepre{
+ background:#fff;
+ max-width:19%;
+ max-height:40%;
+ position:fixed;
+ right: 2em;
+ bottom:calc(23% + 3em);
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagepre.\{\$image\} {
+display:none
+}
+
+.translation.\{\$translation\} {
+display:none
+}
+
+.sortbar.no{
+display:none
+}
+
+@media screen and (max-width:992px) {
+    .preview .span{
+        display: none;
+    }
+    .infobox {
+        position: relative;
+        margin: 1em auto;
+        right: 0;
+        bottom: 0;
+        height: 9em;
+    }
+}
+
+#page-options-container {
+ background: transparent;
+ position: relative;
+ z-index: 10;
+}
+
+#action-area { position: relative; z-index: 20; }
 </style>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap&amp;subset=latin-ext');
@@ -657,7 +1644,7 @@ background-color: rgb(var(--white-monochrome, 252, 252, 252));
     background-position: center center;
 }
 
-.anom-bar-container.{$secondary-class} .text-part > .main-class::after {
+.anom-bar-container.none .text-part > .main-class::after {
     background-image: url("{$secondary-icon}");
 }
 
@@ -1640,7 +2627,7 @@ background-color: rgb(var(--one-color));
     background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/notice-icon.svg");
 }
 
-.anom-bar-container.{$secondary-class} .danger-diamond > .bottom-icon::before {
+.anom-bar-container.none .danger-diamond > .bottom-icon::before {
     background-image: url("{$secondary-icon}");
     background-size: contain;
 }
@@ -2283,86 +3270,9 @@ background-color: rgb(var(--one-color));
     display: none;
 }
 </style>
-<style>
-.fillpg {
-    margin: auto;
-    overflow: auto;
-   -webkit-user-drag: none;
-   -khtml-user-drag: none;
-   -moz-user-drag: none;
-   -o-user-drag: none;
-   user-drag: none;
-   -webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-}
-
-.fillpg:hover{
-    cursor: zoom-in;
-}
-
-.fillpg:active{
-    background-color: #fff;
-    height: 100% !important;
-    width: auto !important;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto;
-    z-index: 200;
-    outline: solid 10000px rgba(0,0,0,0.8);
-    padding: none;
-    cursor: zoom-out;
-    object-fit: contain;
-}
-</style>
-<style>
-.fillpg {
-    margin: auto;
-    overflow: auto;
-   -webkit-user-drag: none;
-   -khtml-user-drag: none;
-   -moz-user-drag: none;
-   -o-user-drag: none;
-   user-drag: none;
-   -webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-}
-
-.fillpg:hover{
-    cursor: zoom-in;
-}
-
-.fillpg:active{
-    background-color: #fff;
-    height: 100% !important;
-    width: auto !important;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto;
-    z-index: 200;
-    outline: solid 10000px rgba(0,0,0,0.8);
-    padding: none;
-    cursor: zoom-out;
-    object-fit: contain;
-}
-</style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -2709,7 +3619,7 @@ background-color: rgb(var(--one-color));
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-5451" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-cn-1724" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -2731,7 +3641,7 @@ background-color: rgb(var(--one-color));
                     
                     
                         <div id="page-title">
-                            SCP-5451
+                            SCP-CN-1724
                         </div>
                     
 
@@ -2750,16 +3660,269 @@ background-color: rgb(var(--one-color));
 <div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="creditRate">
+<div class="rateBox">
+<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+7</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
+<div class="creditButton">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6285604&amp;amp;size=small&amp;amp;timestamp=1607524342" alt="Chris Evertworth" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6285604)" /></a><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;">Chris Evertworth</a></span></p>
+<hr />
+<p><strong>图片来源：</strong><br />
+<a href="https://pixabay.com/zh/photos/insect-nature-garden-firefly-5151913/">https://pixabay.com/zh/photos/insect-nature-garden-firefly-5151913/</a></p>
+<hr />
+<p><strong>更多作品：</strong></p>
+
+
+
+<div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/wanderers:persecutory-type">随机作品传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6285604&amp;amp;size=small&amp;amp;timestamp=1607524374" alt="Chris Evertworth" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6285604)" /></a><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;">Chris Evertworth</a></span></strong></tt></p>
+<p style="text-align: center;">共3篇</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/wanderers:persecutory-type">随机页面传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6285604&amp;amp;size=small&amp;amp;timestamp=1607524374" alt="Chris Evertworth" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6285604)" /></a><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;">Chris Evertworth</a></span></strong></tt></p>
+<p style="text-align: center;">共4个页面</p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="sortbar {$sortbar}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-cn-1724/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/scp-cn-1724/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/scp-cn-1724/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/scp-cn-1724/order/updated_at%20desc/category/*">最近编辑</a></p>
+</div>
+    
+    
+    
+    </div></div>
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
+<div style="text-align: center;">
+<hr />
+<h2><span>原创SCP</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1724">SCP-CN-1724</a></strong><br />
++<strong><tt>7</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>1</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Chris Evertworth</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607515185 format_%25D%20%25H%3A%25M">09 Dec 2020 11:59</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Chris Evertworth</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607524250 format_%25D%20%25H%3A%25M">09 Dec 2020 14:30</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：Chris&#32;Evertworth&#32;&#32;图...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp site-cn-82 光照影响 原创 反熵 夜之子 工具 昆虫 活物 生殖性 生物性 种群 自我复制</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1732">SCP-CN-1732</a></strong><br />
++<strong><tt>15</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>10</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Ferrom</tt></strong> <em>于</em> <strong><tt><span class="odate time_1601893765 format_%25D%20%25H%3A%25M">05 Oct 2020 10:29</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Chris Evertworth</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607344579 format_%25D%20%25H%3A%25M">07 Dec 2020 12:36</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-cn-1732/757px-Hypothenemus.jpg" class="imagepre {$image}" alt="757px-Hypothenemus.jpg" /><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：Chris&#32;Evertworth——一个在思考生物如何在当今社会生存下去的小写手&#32;特别鸣谢：&#32;Cool_Heart&#32;一直陪伴我的空气&#32;让我活下去的饮用水&#32;让我有动力写文的咖啡&#32;让我有这个点子的班级同学与老师&#32;&#32;警告：&#32;本文最后段“音频记录”&#32;由&#32;为真实事件&#32;改编而成&#32;，文中人名均为胡编乱造。&#32;若有雷同，纯属巧合。&#32;&#32;图片来源：...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid k级情景 scp site-cn-82 动物 化学性 原创 夜之子 昆虫 活物 生物性 种群 节肢动物</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-625-ex">SCP-CN-625-EX</a></strong><br />
++<strong><tt>42</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>16</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Simonlsp</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606199229 format_%25D%20%25H%3A%25M">24 Nov 2020 06:27</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Chris Evertworth</tt></strong> <em>于</em> <strong><tt><span class="odate time_1604325963 format_%25D%20%25H%3A%25M">02 Nov 2020 14:06</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">Info&#32;&#32;&#32;&#32;&#32;作者：Chris&#32;Evertworth——一个在思考生物如何在当今社会生存下去的小写手&#32;特别鸣谢：&#32;pokm&#32;Kcorena&#32;BruceWu0463&#32;&#32;作者的话：&#32;如果实在看不懂的话，可以先行移步前往讨论区，pokm佬的解读十分正确。&#32;2018年6月25日并非是无意，可以去查一下这天到底发生了什么与导弹、国际机场、首都有关的新闻。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> k级情景 scp site-cn-82 军事 原创 已解明 放射性 未收容 机密分级 武器 生物危害</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创图书馆页面</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/wanderers:persecutory-type">曾经有一个人……</a></strong><br />
++<strong><tt>6</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
+<em>最新评论：</em> <strong><tt>A Salt Fish</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606519295 format_%25D%20%25H%3A%25M">27 Nov 2020 23:21</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Chris Evertworth</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606382959 format_%25D%20%25H%3A%25M">26 Nov 2020 09:29</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> wanderers 原创 苍树与血</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div>
+<div class="translation {$translation}"><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div></div>
+<div class="collab-header" style="text-align: center;">
+<hr />
+<h2 id="toc0"><span>更多页面</span></h2>
+<hr /></div>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+<div class="creditBottomRate" style="position:relative;height:30px;">
+<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+7</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+</div>
+</div>
+</div>
+</div>
 
 
 
-<div class="anom-bar-container item-5451 clear-2 safe {$secondary-class} dark 待观察 {$american} lang-cn">
+<div class="anom-bar-container item-CN-1724 clear-3 euclid none vlam 待观察 {$american} lang-cn">
 <div class="anom-bar">
 <div class="top-box">
-<div class="top-left-box"><span class="item"><span class="lang-cn">项目编号：</span><span class="lang-tr">項目編號：</span></span><span class="number">5451</span></div>
+<div class="top-left-box"><span class="item"><span class="lang-cn">项目编号：</span><span class="lang-tr">項目編號：</span></span><span class="number">CN-1724</span></div>
 <div class="top-center-box">
 <div class="bar-one"></div>
 <div class="bar-two"></div>
@@ -2769,7 +3932,7 @@ background-color: rgb(var(--one-color));
 <div class="bar-six"></div>
 </div>
 <div class="top-right-box">
-<div class="level"><span class="lang-cn">等级</span><span class="lang-tr">等級</span>2</div>
+<div class="level"><span class="lang-cn">等级</span><span class="lang-tr">等級</span>3</div>
 <div class="clearance"></div>
 </div>
 </div>
@@ -2778,16 +3941,16 @@ background-color: rgb(var(--one-color));
 <div class="main-class">
 <div class="contain-class">
 <div class="class-category"><span class="lang-cn">收容等级：</span><span class="lang-tr">收容等級：</span></div>
-<div class="class-text">safe</div>
+<div class="class-text">euclid</div>
 </div>
 <div class="second-class">
 <div class="class-category"><span class="lang-cn">次要等级：</span><span class="lang-tr">次要等級：</span></div>
-<div class="class-text">{$secondary-class}</div>
+<div class="class-text">none</div>
 </div>
 </div>
 <div class="disrupt-class">
 <div class="class-category"><span class="lang-cn">扰动等级：</span><span class="lang-tr">擾動等級：</span></div>
-<div class="class-text">dark</div>
+<div class="class-text">vlam</div>
 </div>
 <div class="risk-class">
 <div class="class-category"><span class="lang-cn">风险等级：</span><span class="lang-tr">風險等級：</span></div>
@@ -2813,544 +3976,55 @@ background-color: rgb(var(--one-color));
 </div>
 </div>
 </div>
-<p><br /></p>
-
-
-
-<div class="scp-image-block block-center" style="width:300px;"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/ad-113.png" title="Click and hold to enlarge." style="width:300px;" class="fillpg" alt="ad-113.png" />
-<div class="scp-image-caption" style="width:300px;">
-<p>SCP-5451-2B</p>
-</div>
-</div>
-<p><strong>特殊收容措施：</strong>SCP-5451-2A应被存放在安全收容柜中。任何企鹅科的动物都不得接触该类广告。被发现具有模因效应的SCP-5451-2B实例将被<a class="newpage" href="/scp-5863">基金会网络爬虫Πουλί</a>封锁。SCP-5451发布的所有材料将作为基金会掩盖故事R621（“线上角色扮演”）进行传播。除此之外，一只基金会网络爬虫将持续追踪SCP-5451-1个体的帖子和对话，以检测任何异常活动。</p>
-<p><strong>描述：</strong>SCP-5451是一所虚拟学校，主要由企鹅科的动物就读。网站主页域名为“penguinschool.aq”<sup class="footnoteref"><a id="footnoteref-13575-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13575-1')">1</a></sup>，学生能使用语音聊天与老师进行交流，并通过“消息”功能发送作业。</p>
-<p>SCP-5451-1是一群具有感知能力，并会说英语的企鹅，它们能通过异常方式访问互联网。它们会在网站论坛“forum.penguinschool.aq”与其它SCP-5451-1个体互相交流。非异常企鹅在接触到SCP-5451-1个体制作的广告后，会转变为SCP-5451-1个体。这些强化型模因广告（以下简称为SCP-5451-2）有两种形式，分别为传单（SCP-5451-2A）和网幅广告（SCP-5451-2B）。</p>
-<p>SCP-5451-2A实例是由被尿素覆盖的羽毛组成的传单。在企鹅的交配季节过后，它们能在交配地点被找到。与SCP-5451-2A接触的企鹅会转变成SCP-5451-1个体。在一学年后，它们会被SCP-5451录取。</p>
-<p>SCP-5451-2B实例是互联网上的网幅广告。其样式通常为一只企鹅站在前景，旁边并有一条标语：“（企鹅名称）企鹅学校，全国最好的大学！”，或者是其它不同版本的标语。接触到SCP-5451-2B实例的对象有25%的几率通过论坛来参与企鹅保护工作。</p>
-
-
-
-<div class="scp-image-block block-center" style="width:300px;"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/forum.png" title="Click and hold to enlarge." style="width:300px;" class="fillpg" alt="forum.png" />
-<div class="scp-image-caption" style="width:300px;">
-<p>用于SCP-5451-1个体交流的论坛</p>
-</div>
-</div>
-<p><strong>附录1.1：对SCP-5451-1个体的采访尝试</strong></p>
-<p>2021年2月1日，初级研究员Cook被指派安排一次对SCP-5451-1个体的采访，以收集关于SCP-5451和SCP-5451-2的基本信息。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示采访尝试</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏采访尝试</a></div>
-<div class="collapsible-block-content">
-<blockquote>
-<p>主题：关于这所学校？</p>
-</blockquote>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>哈喽，我是刚来这里的一名新生，我真的非常非常想了解有关我们学校的事情，比如它背后的历史、文化，以及其它诸如此类有意思的事情。</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>唉，像你这样的小白成天在论坛里发帖“关于这所学校？这里的食物怎么样？”，不停地问不停地问<br />
-你就不能在发帖之前做做作业，阅读FAQ（常见问题），再多潜水观察一下吗？</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>嘿，没必要这么激动吧<br />
-我只是在问问题，老哥</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>嗯，非常经典的借口<br />
-“<tt>我只是在问问题</tt>”<br />
-听着憨憨，如果你潜水久一点，你的大部分问题都会得到解答<br />
-@Forster，请关闭本讨论串。这都快成垃圾帖了。</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/pingu-bot.png" alt="pingu-bot.png" class="image" /><br />
-<span style="color: #000000"><tt>Pingu-Bot</tt></span><br />
-<span style="color: #ff5500">机器人</span></div>
-<div class="two">
-<blockquote>
-<p>该讨论串由于以下原因被关闭：</p>
-<blockquote>
-<p>请在发帖问这样的问题之前阅读FAQ。<br />
-- <span style="color: #000000">Forster</span> | <span style="color: #004670">员工</span></p>
-</blockquote>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p><strong>附录1.2：建立与SCP-5451-1个体之间的关系</strong></p>
-<p>由于SCP-5451-1个体否定了他们的询问，初级研究员Cook得先在SCP-5451-1树立自己的声誉。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示讨论记录</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏讨论记录</a></div>
-<div class="collapsible-block-content">
-<blockquote>
-<p>讨论串发起人：beep beep lettuce</p>
-</blockquote>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>我对上次的行为感到抱歉</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>可能是有点苟刻<br />
-但是新人并不尊重我们的文化和其它一些东西<br />
-言归正传，欢迎你！</p>
 <hr />
-<p>BS<sup class="footnoteref"><a id="footnoteref-13575-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13575-2')">2</a></sup> 体育科学 | “购物和聚会的破坏者”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/bluekorora.png" alt="bluekorora.png" class="image" /><br />
-<span style="color: #000000">BlueKorora</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="two">
-<blockquote>
-<p>没关系，同学，有时候我们也会忘了这儿的规矩</p>
-<hr />
-<p>BS 捕鱼学 | “是只小可爱啦 uwu”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://www.scpwiki.com/local--files/scp-5451/noot-noot-2.png" alt="noot-noot-2.png" class="image" /><br />
-<span style="color: #000000">noot-noot</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>欢迎<br />
-嘿，你也是新人呐！:D</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p><em>回复noot-noot：</em>你好，同辈新人！<br />
-说到这里，你们有人有校园地图吗？我还没到学校，但我不想一到校园里就迷路了</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/bluekorora.png" alt="bluekorora.png" class="image" /><br />
-<span style="color: #000000">BlueKorora</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="two">
-<blockquote>
-<p>当然，这是我的地图。它的内容挺全的，还包括一些……不错的景点，你懂我意思吧 ;) ;) ;)</p>
-<blockquote>
-<p><em>上传文件：</em><span style="text-decoration: underline;">地图.png</span><sup class="footnoteref"><a id="footnoteref-13575-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13575-3')">3</a></sup></p>
-</blockquote>
-<hr />
-<p>BS 捕鱼学 | “是只小可爱啦 uwu”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>谢谢你的地图，BlueKorora。如果没有这个，那我可能要在校园里迷路了。<br />
-这对我来说是一次全新的经历；我还从未离开家去上学呢</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>谢谢你的地图，BlueKorora。如果没有这个，那我可能要在校园里迷路了。<br />
-这对我来说是一次全新的经历；我还从未离开家去上学呢</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>抱歉，重复发了两次。这里的网络不太行</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>不用这么拘谨，伙计。我们都是从新人过来的，所以别太担心。</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/grape-kun.png" alt="grape-kun.png" class="image" /><br />
-<span style="color: #000000">MsGrapeBoi</span><br />
-<span style="color: #0066ff">2年级生</span></div>
-<div class="two">
-<blockquote>
-<p>嗨，欢迎来到敝校！希望你能在这过得愉快！</p>
-<p><em>回复beep beep lettuce：</em>所以，你是什么专业的？我的是人类社会学</p>
-<hr />
-<p>BS 人类社会学 | “保持友好；你永远都不知道它什么时候会发挥作用”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/crimson.png" alt="crimson.png" class="image" /><br />
-<span style="color: #000000">DC143C</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>嗨，beep beep lettuce，欢迎来到学校！<br />
-别担心，你会适应这里的</p>
-<hr />
-<p>BS 飞行学 | “我们终会再次飞翔，不管是出自魔法还是决心”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>感谢大家的欢迎。我希望能和这里的人成为好朋友</p>
-<p><em>回复MsGrapeBoi：</em>我目前选的是营销学</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/adelle.png" alt="adelle.png" class="image" /><br />
-<span style="color: #000000">Adelle</span><br />
-<span style="color: #004670">员工</span></div>
-<div class="two">
-<blockquote>
-<p>欢迎来到我们的线上学校和论坛，beep beep lettuce。希望你能在这过得很好，并开始了解这个世界。</p>
-<p>如果你对我们的学校、论坛、或者是其他人有任何问题，请反馈给<span style="color: #004670">员工</span><br />
-只要确保他们在线 &lt;3</p>
-<hr />
-<p><span style="color: #004670">员工</span> | “自2000年起就热爱我的工作” | <span style="text-decoration: underline;">点击这里联系员工！</span></p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏讨论记录</a></div>
-</div>
-</div>
-<p><strong>附录1.3：SCP-5451-2的信息</strong></p>
-<p>以学校课题作为理由，初级研究员Cook就SCP-5451-2的特性采访了一只SCP-5451-1个体。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示消息记录</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏消息记录</a></div>
-<div class="collapsible-block-content">
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #2266ff">2年级生</span></div>
-<div class="two">
-<blockquote>
-<p>你在做那些广告，对吗？</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="eno"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/chiffon.png" alt="chiffon.png" class="image" /><br />
-<span style="color: #000000">Chiffon</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="owt">
-<blockquote>
-<p>是的！我是营销学的，这也是我们的工作 :D</p>
-<hr />
-<p>BS 营销学 | “行你热爱之事”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #2266ff">2年级生</span></div>
-<div class="two">
-<blockquote>
-<p>我很好奇，你总是能够说服其他人加入我们学校。你是怎么办到的？</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="eno"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/chiffon.png" alt="chiffon.png" class="image" /><br />
-<span style="color: #000000">Chiffon</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="owt">
-<blockquote>
-<p>呃，这没什么，真的。我们学校本来就声名远扬……以及我们注入其中的一些魔法</p>
-<hr />
-<p>BS 营销学 | “行你热爱之事”——佚名</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #2266ff">2年级生</span></div>
-<div class="two">
-<blockquote>
-<p>哇哦，你们还能使用魔法？</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="eno"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/chiffon.png" alt="chiffon.png" class="image" /><br />
-<span style="color: #000000">Chiffon</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="owt">
-<blockquote>
-<p>玩笑而已。我们只是把我们对学校的爱倾注在每一件事上。<br />
-我的意思是，没有学校，我们的生活就会失去目标，有谁想要这样的生活呢？</p>
-<hr />
-<p>BS 营销学 | “行你热爱之事”——佚名</p>
-</blockquote>
-</div>
-</div>
-<p>对各种SCP-5451-2A实例的分析显示其未发生奇术转化。</p>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏消息记录</a></div>
-</div>
-</div>
-<p><strong>附录1.4：SCP-5451-1个体的文化</strong></p>
-<p>为更多地了解SCP-5451-1个体的文化，初级研究员Cook以“beep beep lettuce”作为用户名，以学校课题的名义，历时数月采访了多只SCP-5451-1个体。10个月后，初级研究员Cook发表了一篇题为《SCP-5451文化：通过线上学校观察异常企鹅的生活》的文章。以下是该文章的节选，以及初级研究员Cook对SCP-5451-1个体的采访节选。</p>
-<p>关于文章和采访记录的完整文件可以从初级研究员Cook或高级研究员Drake处获取。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;SCP-5451-1个体的文化</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;SCP-5451-1个体的文化</a></div>
-<div class="collapsible-block-content">
-<div class="blockquote">
-<p>1. <strong>家庭生活</strong></p>
-<p>尽管SCP-5451-1个体拥有非异常人类的习性，但个体与它们的家人关系密切，与正常企鹅并无什么不同。从某种意义上说，它们与家人的关系就像是非异常人类与企鹅的融合。</p>
-<p>SCP-5451-1个体甚至与它们的三代表亲拥有明显的密切关系，因为它们大多数都群居在一起，就像非异常企鹅一样。然而，当SCP-5451-1要离开家开始自己的世系时，它们会得到一份父母共同制作的食谱。</p>
-<p>事实上，对SCP-5451-1个体来说，在没有父母帮助的情况下第一次做饭是一种成人仪式。</p>
-<p>两只SCP-5451-1个体间的求婚包括做一道它们家的家传菜，并把这道菜呈给新娘/新郎。</p>
-<p>由于它们的食谱是世代相传的，因此SCP-5451-1个体对它们的血统感到非常自豪。</p>
-<p>成为一名厨师被认为是SCP-5451-1个体中的最高荣誉，而学会做家传菜并加入一点它们自己的创意被认为是SCP-5451长辈个体必须教给孩子的重要内容之一。</p>
-<p>2. <strong>菜肴</strong></p>
-<p>尽管SCP-5451个体的食谱主要受到美式菜肴的启发，但其中明显有鱼，还加入了一些海藻来鲜味。</p>
-<p>大多数被SCP-5451-1个体称为“传统”的菜肴是因纽特人的食谱，这表明因纽特文化和SCP-5451-1个体之间存在联系。此外，大多数传统的SCP-5451-1菜肴都涉及某种食物保存技术，无论是发酵还是干燥食物。</p>
-<p>由于全球化，SCP-5451-1个体得到了其它烹饪食物的方法。而年轻的SCP-5451-1个体面对着发展得如此丰富的烹饪方法，很难制作出自己的食谱。</p>
-<p>SCP-5451-1使用的一些值得注意的食物传统制备方法有：</p>
+<p><strong>特殊收容措施：</strong>目前已知的所有SCP-CN-1724已被收容至Site-CN-82-β的左翼4号单元的中型仿生态循环收容舱中。对项目进行实验的实验的申请，应提前获取至少4名3级人员或项目主管的书面许可。</p>
+<p>项目所在的收容舱及其环境应满足以下条件：</p>
 <ul>
-<li>发酵鱼</li>
-<li>冷冻鱼，用以生吃</li>
-<li>将海藻放于太阳下晒干，用以食用</li>
-<li>烟熏</li>
+<li>舱内温度应维持在23~25℃。</li>
+<li>舱内pH值应维持在6.5~7.5。</li>
+<li>舱内应保持空气流通。</li>
+<li>舱内应保持流动的清洁水源，同时过滤并移除水源中的SCP-CN-1724-C个体。</li>
+<li>舱内应种植至少5棵无异常的非食虫植物。</li>
+<li>舱内应模拟正常的昼夜交替与降水。</li>
+<li>收容舱所处单元应保持密闭，未获得书面许可的人员被禁止开启单元入口。</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;初级研究员Cook对SCP-5451-1个体有关菜肴的采访节选（烹饪话题）</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;初级研究员Cook对SCP-5451-1个体有关菜肴的采访节选（烹饪话题）</a></div>
-<div class="collapsible-block-content">
-<blockquote>
-<p>每日话题讨论（页数 5/7）</p>
-</blockquote>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>你们真的生吃冻鱼吗？不用加工的？</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/bluekorora.png" alt="bluekorora.png" class="image" /><br />
-<span style="color: #000000">BlueKorora</span><br />
-<span style="color: #0077ff">3年级生</span></div>
-<div class="two">
-<blockquote>
-<p>没错！我发誓是真的！</p>
-<p>难道你没有生吃过冻鱼吗？</p>
+<p>收容舱在该站点发生收容失效后，立即锁死单元入口，直至站点主管使用刻章重启站点单元。</p>
 <hr />
-<p>BS 捕鱼学 | “是只小可爱啦 uwu”</p>
-</blockquote>
+<p><strong>描述：</strong></p>
+<div class="scp-image-block block-right" style="width:300px;"><img src="https://cdn.pixabay.com/photo/2020/05/10/01/20/insect-5151913_960_720.jpg" style="width:300px;" alt="insect-5151913_960_720.jpg" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>一只SCP-CN-1724-A个体</p>
 </div>
 </div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>别管他们——他们都是些传统主义者</p>
-<p>就我个人而言，我更喜欢用啤酒腌制，然后油炸。你应该去试下，非常好吃。</p>
+<p>SCP-CN-1724为一种外观类似鞘翅目<em>（Coleoptera）</em>萤科<em>（Lampyridae）</em>的异常生物种群，目前已在热带、亚热带及温带等地区均发现该项目种群。</p>
+<p>与正常的萤科不同的是，所有的SCP-CN-1724成虫个体（编号SCP-CN-1724-A）均不具有口器，即项目无法通过正常的方式进食。尽管如此，通过使用标记EVE粒子的运动趋向后发现，项目幼虫（编号SCP-CN-1724-C）在成为SCP-CN-1724-B个体（即成蛹）时，其不间断地吸收周围环境的EVE粒子；该举动持续进行，直至成为无上颚的SCP-CN-1724-A个体；所有的成虫个体不再进行交配繁殖，同时项目不再需要进食。</p>
+<p>SCP-CN-1724-C外观与无异常的纹胸黑翅萤幼虫相一致，二者食性均一致，但其生长速度较于后者更为快速；SCP-CN-1724-C个体在其从卵中脱离后，在12小时内蜕皮1~2次，并以此为一周期，重复3~6次；该行为在另一方面被认为是项目独有的无性繁殖，即项目蜕去的外骨骼中包含了多种SCP-CN-1724-C个体的干细胞，这使得项目蜕去的外骨骼在离开项目后，能够继续繁殖、分化，并形成新的SCP-CN-1724-C个体。在该过程中，仅有部分外骨骼能够成功发育并形成新的个体，多数外骨骼在发育过程中，由于外骨骼所含生长因子过低而导致干细胞死亡。因此在多数情况下可观察到由于上述原因而死亡的、未成功发育的畸形SCP-CN-1724-C个体，统计后，这一概率约为87%。</p>
+<p>同时在其最后一次蜕皮结束后，其通过口器分泌某种目前尚未解明的黏液覆盖自身，并成为SCP-CN-1724-B个体。经过解剖多只处于不同时间的SCP-CN-1724-B个体后发现，其口器不断退化，内部消化组织同时退化直至消失；在此过程中，SCP-CN-1724-B通过吸收EVE粒子，强化其尾部（即发光器）中含有的萤光素。</p>
+<p>SCP-CN-1724-A个体具有的另一异常性质为，其发光违反了正常发光放热现象；项目发光器通过荧光素与氧气反应发出可见光，但项目于该过程为发光吸热，原理暂时不明确。对正在发光吸热的项目个体的解剖实验证明了，项目荧光素在其死亡后立即失效，发光细胞死亡。成虫个体的发光器在进行上述行为时，其温度始终低于周围环境的温度，其差值约为2℃；在其温度低于项目可存活的最适温度后，即发光器温度低于12℃，项目生命体征消失，释放大量EVE粒子，同时放出大量热能，热能大小与项目成虫存活时发光吸收的热量相同。</p>
 <hr />
-<p>BS 体育科学 | “购物和聚会的破坏者”</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/Arctique.png" alt="Arctique.png" class="image" /><br />
-<span style="color: #000000">Arctique</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
+<p><strong>附录1：</strong></p>
+<p>首个SCP-CN-1724-A的疑似个体被发现于法国中世纪。根据当时资料记载，发现项目时，其均与墓地、森林、鬼灵等异常事件有关。当时的多数目击报告表示，在发现SCP-CN-1724时，周围环境同时出现温度骤降、无预兆的鬼火、异常的声响，且在此类记录中，均记载了一种外形与人类相似，但体型大于正常成年男性的生物。</p>
+<p>该生物毛发浓密，且通体偏黑，类似于人科<em>（Hominidae）</em>黑猩猩<em>（Pan troglodytes）</em>。以下为当时记载中有关该个体与SCP-CN-1724的目击报告节选：</p>
 <blockquote>
-<p>鉴于你“食物推荐”的结果，我想还是不了谢谢</p>
+<p>……我发誓我用我的弓射中它的左腿了，我发誓！它的眼睛像是想要吃了我一般……它瞪了我一眼，然后朝我嘶吼，那火焰就像有了生命一样，朝我冲了过来……寒冷，等我再次睁开的时候，它已经不见了……</p>
 </blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
 <blockquote>
-<p>别这样，没那么糟的</p>
-<hr />
-<p>BS 体育科学 | “购物和聚会的破坏者”</p>
+<p>……我看不到它的脸——我连它的头都看不见。它的左腿似乎受了伤，右手举着一个灯笼一样的东西，但是里面什么也没有。除了在它四周闪耀的、飘荡的鬼火，以及那令人冷到颤抖光，我其它什么都记不住了，我的大脑只告诉我，快跑……</p>
 </blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://www.scpwiki.com/local--files/scp-5451/noot-noot-2.png" alt="noot-noot-2.png" class="image" /><br />
-<span style="color: #000000">noot-noot</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
 <blockquote>
-<p>我最喜欢的菜是我妈妈给我做的</p>
-<p>她说这是从曾祖母那传下来的</p>
+<p>……我就这样躲在那个草丛里，看着一只黑色的右手拨开那堆杂乱的树枝，慢慢地走了出来，而左腿用叶子包了起来。它移动的声音很轻，就像是怕吸引起别的什么东西的注意力。然后，我看见一个个飞舞的火焰从树枝里跟着它出来……它的眼睛看向哪里，那堆火焰就飞向哪里——那简直就像是在用眼睛喷火……我发誓我说的是真的……</p>
 </blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
 <blockquote>
-<p>嗨，noot-noot，你能给我一份那份食谱吗？我想试一下</p>
+<p>……是的，我见过那团飞舞的鬼火，那简直令我诧异。火焰的跃动非但没让我感到温暖，更让我感觉到了刺骨的寒冷。这还不是最可怕的，我能感受到，在那不远处的黑暗之中，就像有一双眼睛在看着我，甚至还传出了幽幽的、有节奏的敲击声，就像是我奶奶拄着拐杖那样的声音……</p>
 </blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://www.scpwiki.com/local--files/scp-5451/noot-noot-2.png" alt="noot-noot-2.png" class="image" /><br />
-<span style="color: #000000">noot-noot</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>没问题，稍等</p>
-<blockquote>
-<p><em>上传文件：</em><span style="text-decoration: underline;">鱼.txt</span><sup class="footnoteref"><a id="footnoteref-13575-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13575-4')">4</a></sup></p>
-</blockquote>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/beep-beep-lettuce.png" alt="beep-beep-lettuce.png" class="image" /><br />
-<span style="color: #000000">beep beep lettuce</span><br />
-<span style="color: #0055ff">新生</span></div>
-<div class="two">
-<blockquote>
-<p>谢谢你的食谱，noot-noot。我想会很好吃的</p>
-</blockquote>
-</div>
-</div>
-<div class="post">
-<div class="one"><img src="http://scp-sandbox-3.wikidot.com/local--files/collab:basicskipreader/cody.png" alt="cody.png" class="image" /><br />
-<span style="color: #000000">Cody</span><br />
-<span style="color: #00aaff">4年级生</span></div>
-<div class="two">
-<blockquote>
-<p>哦，你们在发食谱吗？这是我的</p>
-<blockquote>
-<p><em>上传文件：</em><span style="text-decoration: underline;">食谱.txt</span><sup class="footnoteref"><a id="footnoteref-13575-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13575-5')">5</a></sup></p>
-</blockquote>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;初级研究员Cook对SCP-5451-1个体有关菜肴的采访节选（烹饪话题）</a></div>
-</div>
-</div>
-<br />
-<br />
-<div style="border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;">
-<div style="text-align: center;">
-<div style="text-align: right;">
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-5451/offset/1">本文档有新迭代！</a></p>
-</div>
-</div>
-</div>
-<div class="footnotes-footer">
-<div class="title">脚注</div>
-<div class="footnote-footer" id="footnote-13575-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13575-1')">1</a>. <strong>译注：</strong>.aq域名是南极洲域名国家的顶级域名。</div>
-<div class="footnote-footer" id="footnote-13575-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13575-2')">2</a>. <strong>译注：</strong>Bachelor of Science，理学学士的英文缩写。</div>
-<div class="footnote-footer" id="footnote-13575-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13575-3')">3</a>. 虽然上传的文件是PNG格式，但未能有一款看图软件能打开该地图，其原因不是软件崩溃，就是弹出文件已损坏的通知。</div>
-<div class="footnote-footer" id="footnote-13575-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13575-4')">4</a>. 该文件描述了因纽特人狩猎、准备和烹饪红点鲑的传统方法。</div>
-<div class="footnote-footer" id="footnote-13575-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13575-5')">5</a>. 该文件描述了用啤酒腌制北极鳕鱼，并撒上面包屑和油炸的方法。</div>
-</div>
-</div>
-    
-    
-    
-    </div>
-<p><br /></p>
-<p><br /></p>
+<p>根据以上报告及更多相关资料提供的信息，基本可确定记载中的人形生物即为<a href="http://scp-wiki-cn.wikidot.com/scp-1000">夜之子</a>或其子代分支。SCP-CN-1724更可能为夜之子在外行动时，用来照明的生物工具，此推论在附录2中被证实。</p>
+<p><strong>附录2：</strong></p>
+<p>从法国████地区洞窟中发现的夜之子文明壁画记载，夜之子大量培育SCP-CN-1724，并利用其进行夜晚外出的探索活动。夜之子在壁画中使用与表示太阳的符号相接近的符号来表示此类使用项目照明的行为，因此基金会史前文明学部将该类活动命名为“提灯”。</p>
+<p>此类活动范围并不局限于法国中世纪，在亚洲、非洲等地区均可发现有关夜之子及SCP-CN-1724的目击报告，但更多的仅记载了SCP-CN-1724及其导致的异常温度骤降现象与灵异鬼火现象，目前不排除项目在直至被收容前，大部分项目脱离了夜之子的控制，并处于自由繁衍的状态；若为此，亦无法排除项目的变异物种未被收容的可能性。</p>
+<p>值得注意的是，有关项目的目击报告目前仅能追溯至法国中世纪，因此同样无法排除夜之子的幸存者在未被发现的情况下，仍在不断研制生物工具的可能性；若为此，则基金会应时刻保持警惕，避免夜之子发动SK级末日情景。</p>
 <div class="footer-wikiwalk-nav">
 <div style="text-align: center;">
-<p>&#171; <a href="/scp-5450">SCP-5450</a> | SCP-5451 | <a class="newpage" href="/scp-5452">SCP-5452</a> &#187;</p>
+<p>&#171; <a href="/scp-cn-1723">SCP-CN-1723</a> | SCP-CN-1724 | <a href="/scp-cn-1725">SCP-CN-1725</a> &#187;</p>
 </div>
 </div>
 
@@ -3381,7 +4055,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/%E5%8A%A8%E7%89%A9#pages">动物</a><a href="/system:page-tags/tag/%E5%BC%BA%E8%BF%AB%E6%80%A7#pages">强迫性</a><a href="/system:page-tags/tag/%E6%84%9F%E7%9F%A5%E5%8A%9B#pages">感知力</a><a href="/system:page-tags/tag/%E6%96%87%E4%BB%B6#pages">文件</a><a href="/system:page-tags/tag/%E6%97%A0%E6%95%88%E5%8C%96#pages">无效化</a><a href="/system:page-tags/tag/%E6%A8%A1%E5%9B%A0#pages">模因</a><a href="/system:page-tags/tag/%E7%B2%BE%E7%A5%9E%E5%BD%B1%E5%93%8D#pages">精神影响</a><a href="/system:page-tags/tag/%E7%BA%BF%E4%B8%8A#pages">线上</a><a href="/system:page-tags/tag/%E8%A7%86%E8%A7%89%E6%80%A7#pages">视觉性</a><a href="/system:page-tags/tag/%E8%AE%A4%E7%9F%A5%E5%8D%B1%E5%AE%B3#pages">认知危害</a><a href="/system:page-tags/tag/%E9%B8%9F%E7%B1%BB#pages">鸟类</a>
+                                <a href="/system:page-tags/tag/euclid#pages">euclid</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/site-cn-82#pages">site-cn-82</a><a href="/system:page-tags/tag/%E5%85%89%E7%85%A7%E5%BD%B1%E5%93%8D#pages">光照影响</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%8F%8D%E7%86%B5#pages">反熵</a><a href="/system:page-tags/tag/%E5%A4%9C%E4%B9%8B%E5%AD%90#pages">夜之子</a><a href="/system:page-tags/tag/%E5%B7%A5%E5%85%B7#pages">工具</a><a href="/system:page-tags/tag/%E6%98%86%E8%99%AB#pages">昆虫</a><a href="/system:page-tags/tag/%E6%B4%BB%E7%89%A9#pages">活物</a><a href="/system:page-tags/tag/%E7%94%9F%E6%AE%96%E6%80%A7#pages">生殖性</a><a href="/system:page-tags/tag/%E7%94%9F%E7%89%A9%E6%80%A7#pages">生物性</a><a href="/system:page-tags/tag/%E7%A7%8D%E7%BE%A4#pages">种群</a><a href="/system:page-tags/tag/%E8%87%AA%E6%88%91%E5%A4%8D%E5%88%B6#pages">自我复制</a>
                             </span>
                         </div>
                     
@@ -3389,12 +4063,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 3, 最后编辑于: <span class="odate time_1606962236 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">03 Dec 2020 02:23</span></div>
+                            <div id="page-info">页面版本: 10, 最后编辑于: <span class="odate time_1607524250 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">09 Dec 2020 14:30</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+3</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+7</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13814814/scp-5451" class="btn btn-default" id="discuss-button">讨论 (4)</a>
+<a href="/forum/t-13899992/scp-cn-1724" class="btn btn-default" id="discuss-button">讨论 (1)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -3461,45 +4135,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://comux.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/comux.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://maegica.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/maegica.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://comux.wikidot.com">CoMUX</a></h3>
+            <h3><a target="_blank" href="http://maegica.wikidot.com">Maegica Wiki</a></h3>
             <div class="desc">          
-              Realities Combined
+              Maegica Order In Chaos Online
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://historynewmedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/historynewmedia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://sons-of-athena.obscurative.ru">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sons-of-athena.obscurative.ru/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://historynewmedia.wikidot.com">History in the New Media</a></h3>
+            <h3><a target="_blank" href="http://sons-of-athena.obscurative.ru">ВИК &quot;Сыны Афины&quot;</a></h3>
             <div class="desc">          
-              Digital Project Design in Archives and Public History
+              ​
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://is2216.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/is2216.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ageofthestars.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ageofthestars.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://is2216.wikidot.com">IS2216 - JAVA WIKI</a></h3>
+            <h3><a target="_blank" href="http://ageofthestars.wikidot.com">Age of the Stars</a></h3>
             <div class="desc">          
-              Java for beginners
+              Adventures in Science Fantasy
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://apmoderneuro.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/apmoderneuro.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://energyclub4samvedna.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/energyclub4samvedna.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://apmoderneuro.wikidot.com">Apmoderneuro</a></h3>
+            <h3><a target="_blank" href="http://energyclub4samvedna.wikidot.com">Save Energy, Save Future</a></h3>
             <div class="desc">          
-              
+              &quot;The collabrative efforts for Energy saving&quot;
             </div>
           </div>
         </div>
