@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342261;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "system:page-tags";
-        OZONE.request.timestamp = 1607671207;
+        OZONE.request.timestamp = 1607698491;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "system:page-tags";
@@ -609,7 +609,7 @@
 					style="font-size: 101%; color: rgb(128, 128, 192);"
 					>uiu</a>
 							<a class="tag" href="/system:page-tags/tag/wanderers"
-					style="font-size: 117%; color: rgb(123, 123, 187);"
+					style="font-size: 116%; color: rgb(123, 123, 187);"
 					>wanderers</a>
 							<a class="tag" href="/system:page-tags/tag/wondertainment%E5%8D%9A%E5%A3%AB"
 					style="font-size: 103%; color: rgb(127, 127, 191);"
@@ -1241,10 +1241,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://uniofbeds.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/uniofbeds.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://livesupport.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/livesupport.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://uniofbeds.wikidot.com">Uniofbeds</a></h3>
+            <h3><a target="_blank" href="http://livesupport.wikidot.com">Wikidot Live Support</a></h3>
             <div class="desc">          
               
             </div>
@@ -1252,34 +1252,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://kindiy.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kindiy.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://echobazaar.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/echobazaar.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://kindiy.wikidot.com">kinDIY</a></h3>
+            <h3><a target="_blank" href="http://echobazaar.wikidot.com">Echo Bazaar</a></h3>
             <div class="desc">          
-              for the DIY kindie community
+              Come to Fallen London
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sfugamedev.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sfugamedev.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-sh.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-sh.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sfugamedev.wikidot.com">SFU Game Developers Club</a></h3>
+            <h3><a target="_blank" href="http://scp-sh.wikidot.com">SCP Fondacija</a></h3>
             <div class="desc">          
-              
+              Bosansko-Hrvatsko-Crnogorsko-Srpski Ogranak
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://typesets.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/typesets.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-yerko-4.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-yerko-4.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://typesets.wikidot.com">Type Set Coin Collecting</a></h3>
+            <h3><a target="_blank" href="http://scp-yerko-4.wikidot.com">Yerko&#039;s Sandbox IV</a></h3>
             <div class="desc">          
-              
+              ¿Cuatro ya? LeL
             </div>
           </div>
         </div>
