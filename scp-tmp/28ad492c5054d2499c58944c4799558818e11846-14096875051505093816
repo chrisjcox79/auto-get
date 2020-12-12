@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<body>
+<style type="text/css">
+body
+{
+   font-family:verdana,arial,helvetica,sans-serif;
+   font-size:12.8px;
+   color:#333;
+   line-height:141%
+}
+blockquote
+{
+  border:1px dashed #999;
+  padding: 0 12.8px;
+  background-color:#f4f4f4
+}
+a {
+    color: #7e2a2a;
+    text-decoration: none;
+    background: transparent;
+}
+a.newpage {
+    color: #d61;
+    text-decoration: none;
+    background: transparent;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+.collapsed {
+  display: none;
+}
+.vanished {
+  display: none;
+}
+.image-cap {
+    background-color: #eee;
+    border-top: solid 1px #666;
+    padding: 2px 0;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+}
+.redcontainer {
+    background-color: #ff8080;
+    border: 3px solid #cccccc;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+.blue {
+    color: blue;
+}
+</style>
+<script type="text/javascript">
+function addEvent(element, eventName, callback) {
+    if (element.addEventListener) {
+        element.addEventListener(eventName, callback, false);
+    } else if (element.attachEvent) {
+        element.attachEvent("on" + eventName, callback);
+    } else {
+        element["on" + eventName] = callback;
+    }
+}
+window.toggle = function(cls) {
+  var collapsed = document.querySelectorAll("." + cls + ".collapsed");
+  var expanded = document.querySelectorAll("." + cls + ":not(.collapsed)");
+  var i;
+  for(i = 0; i < collapsed.length; i++) {
+    collapsed[i].classList.remove("collapsed");
+  }
+  for(i = 0; i < expanded.length; i++) {
+    expanded[i].classList.add("collapsed");
+  }
+};
+
+var originalStrings = [];
+
+window.censorTheHidden = function(reveal) {
+  var hiddenElems = document.getElementsByClassName('hidden');
+  var i = 0;
+  for (i = 0; i < hiddenElems.length; i++) {
+    var elem = hiddenElems[i];
+    if (reveal === -1) {
+      originalStrings[i] = elem.innerHTML;
+    }
+    if (reveal < 1) {
+      var valOfElem = elem.innerHTML;
+      var censoredString = '';
+      var j = 0;
+      for (j = 0; j < valOfElem.length; j++) {
+        var chr = valOfElem[j];
+        censoredString += (chr === ' ' || chr === '-' || chr === ',' || chr === '.' || chr === '"' ? chr : '█');
+      }
+      elem.innerHTML = censoredString;
+      elem.classList.remove('blue');
+    }
+    else {
+      elem.innerHTML = originalStrings[i];
+      elem.classList.add('blue');
+    }
+  }
+  var archNotices = document.getElementsByClassName('archwarning');
+  for (i = 0; i < archNotices.length; i++) {
+    var elem = archNotices[i];
+    if (reveal < 1) {
+      elem.classList.remove('vanished');
+    }
+    else {
+      elem.classList.add('vanished');
+    }
+  }
+};
+
+var selTabs = [];
+window.onload = function() {
+
+};
+
+var initSelTabs = function() {
+  selTabs = [
+    document.getElementsByClassName('selTab1')[0],
+    document.getElementsByClassName('selTab2')[0],
+    document.getElementsByClassName('selTab3')[0],
+    document.getElementsByClassName('selTab4')[0],
+    document.getElementsByClassName('selTab5')[0]
+  ];
+};
+
+window.onload = function()  {
+  document.getElementById('selector').classList.remove('vanished');
+  censorTheHidden(-1);
+};
+
+window.addTextToBox = function(text) {
+  document.getElementById('togoto').value = text;
+};
+
+window.showSelTab = function(num) {
+  if (selTabs.length === 0) {
+    initSelTabs();
+  }
+  var selTab = selTabs[num];
+  for (i = 0; i < selTabs.length; i++) {
+    var st = selTabs[i];
+    if (!(st.classList.contains('vanished')))
+      st.classList.add('vanished');
+  }
+  if (selTab)
+    selTab.classList.remove('vanished');
+};
+
+window.displayFile = function() {
+  var name = document.getElementById('togoto').value.toLowerCase();
+  var index = -1;
+  var reveal = 0;
+  switch (name) {
+    case 'news_report.pdf':
+      index = 0;
+      break;
+    case 'eventlog_4800_lvl4.docx':
+      index = 1;
+      break;
+    case 'eventlog_4800_lvl5.docx':
+      index = 1;
+      reveal = 1;
+      break;
+    case 'analysis_4800_signal.odt':
+      index = 2;
+      break;
+    case 'diary_5034_katie.rtf':
+      index = 3;
+      break;
+    case 'history_5034_lvl4.thd':
+      index = 4;
+      break;
+    case 'history_5034_lvl5.thd':
+      index = 4;
+      reveal = 1;
+      break;
+    default:
+      index = -1;
+  }
+  showSelTab(index);
+  var error = document.getElementById('error');
+  var beginning = document.getElementById('beginning');
+  if (index === -1) {
+    error.classList.remove('vanished');
+    beginning.classList.add('vanished');
+  }
+  else {
+    error.classList.add('vanished');
+    beginning.classList.remove('vanished');
+  }
+  document.getElementById('name').innerHTML = name;
+  censorTheHidden(reveal);
+  return false;
+};
+</script>
+
+<div class="redcontainer">
+<center><h2 style="color: #7e2a2a">SCiPNET文档查看器 v1.2.1</h2></center>
+<div id="selector" class="vanished">
+<p>
+<tt>/mnt/scp/4800/attachments<br />
+├── <a onclick="addTextToBox('news_report.pdf')">news_report.pdf</a><br />
+├── <a onclick="addTextToBox('eventlog_4800_lvl4.docx')">eventlog_4800_lvl4.docx</a><br />
+├── <a onclick="addTextToBox('analysis_4800_signal.odt')">analysis_4800_signal.odt</a><br />
+├── <a onclick="addTextToBox('diary_5034_katie.rtf')">diary_5034_katie.rtf</a><br />
+└── <a onclick="addTextToBox('history_5034_lvl4.thd')">history_5034_lvl4.thd</a><br /></tt>
+</p>
+<form onsubmit="return displayFile();" id="theForm">
+<label for="togoto">文件标题：</label>
+<input type="text" id="togoto" />&nbsp;&nbsp;<input type="submit" value="查看" />
+</form>
+</div>
+<noscript>
+<p><center><b>错误：文档选择器v1.2.1需要JavaScript才能正常运行。请关闭所有阻止JavaScript的插件。</b></center></p>
+</noscript>
+
+<div id="error" class="vanished" style="color: red;"><center><tt><p>错误404：未找到文件。</p></tt></center></div>
+
+<div id="beginning" class="vanished">
+<p><center><h3 id="name"></h3></center></p>
+<hr />
+</div>
+
+<!-- seltabs -->
+<div class="selTab1 vanished">
+<p><b>前言：</b>以下为SCP-4800事件开始后不久BBC新闻频道的直播。 直播开始后很快由基金会监控机器人拦截；但据估计，仍有800万百姓看到了这段直播。</p>
+<hr />
+<p><i>&lt;记录开始&gt;</i></p>
+<p><i>播放BBC新闻剧的简介动画。简介结束后，出现两位新闻主播（Robert Traskton与Shelly Ferdinand）坐在桌旁的画面。</i></p>
+<p><b>Traskton：</b>晚……上好，我，我是Robert Traskton，我们BBC新闻有一些，唔，非常紧急的消息！</p>
+<p><b>Ferdinand：</b>没错。 世界各地都报道天空过早地变成了黑夜。 此外，部分人报告卫星电视、电话和互联网的连接断开。</p>
+<p><b>Traskton：</b>是的，我们与一位天文学家取得了联系，他能够告诉我们发生了什么。我指的是，发生了什么。让我们欢迎天文学家，哦，Jerry Sprinkler，和我们今日的采访员！</p>
+<p><i>镜头切换至天文台。采访员Tracy Skullard正在同Jerry Sprinkler交谈。</i></p>
+<p><b>Skullard：</b>您能告诉我们什么，关于，嗯，外面发生了什么？</p>
+<p><b>Sprinkler：</b>就我们所知，太阳的光停止照耀我们，因为没有更好的词描述了。 因为某些原因我们还没有到头，热量还在涌过来，我们还在活着，但是光线没有进入地球的大气层，它没法出来了。</p>
+<p><b>Skullard：</b>这就是恒星消失的原因吗？</p>
+<p><b>Sprinkler：</b>是的，这也是网络瘫痪的原因。 我们无法收到卫星信号也是因为它们在地球大气层之外。 我猜你是用座机给总部打电话的？ 这个唯一的例外，似乎，是一个循环的无线电信号，只是说相同的——</p>
+<p><i>ERIS.AIC检测到直播中的机密信息并将其中断。</i></p>
+<p><i>&lt;记录结束&gt;</i></p>
+</div>
+<div class="selTab2 vanished">
+<div class="archwarning"><p><center><i><b>档案管理员请注意：此文档包含5级权限限制的信息。已为您提供经过修订的文档。具有恰当审查许可的人员可查看未修改文档。</b></i></center></p></div>
+<p><b>前言：</b>以下为基金会观察到正在进行的SCP-4800事件中发生所有现象的日志。由于目前真空空间对光线的限制，观测地球外的现象非常困难。</p>
+<hr />
+<p><b>时间：</b>04/05/2016</p>
+<p><b>描述：</b>UTC时间8时17分，天空突然毫无预兆转为黑暗。所有外星物体，包括恒星、其他行星、太阳和非地心卫星都不再可见。</p>
+<p><b>笔记：</b>宣告SCP-4800事件开始。</p>
+<hr />
+<p><b>时间：</b>04/06/2016</p>
+<p><b>描述：</b>所有连接到互联网的设备出现全局故障。据推测是由于对互联网至关重要的卫星受到干扰。</p>
+<p><b>笔记：</b>N/A</p>
+<hr />
+<p><b>时间：</b>11/12/2016</p>
+<p><b>描述：</b>一颗流星坠落到地球，在下曼哈顿（Lower Manhattan）造成了严重破坏。世贸中心因此被摧毁。</p>
+<p><b>笔记：</b>N/A</p>
+<hr />
+<p><b>时间：</b>05/12/2017</p>
+<p><b>描述：</b>根本上由于世界各国政府和平民百姓之间对SCP-4800事件缺乏沟通，暴乱开始在世界各地发生。大多数地区仍有政府管制。</p>
+<p><b>笔记：</b>基金会将撤出原先名为俄罗斯联邦的国家。</p>
+<hr />
+<p><b>时间：</b>08/10/2017</p>
+<p><b>描述：</b><span class="hidden">由于使用接受虹光身培养的D级人员</span>，一个大型<span class="hidden">C类</span>“<span class="hidden">破碎入口</span>”<span class="hidden">虫洞</span>在银河系中心被发现。</p>
+<p><b>笔记：</b>现象被标记为SCP-4800-1。</p>
+<hr />
+<p><b>时间：</b>01/20/2018</p>
+<p><b>描述：</b>美国东部的暴动者开始组织一场名为“苹果运动”的起义（The Apple Movement）。他们被观察到在暴乱中发展了高级细胞技术。</p>
+<p><b>笔记：</b>Site-13及Site-22被认为是败给了苹果运动。</p>
+<hr />
+<p><b>时间：</b>12/09/2018</p>
+<p><b>描述：</b><span class="hidden">地球的休谟值突然从基准水平下降为恒定21休谟</span>。<span class="hidden">低级别的现实扭曲</span>成为普遍现象。</p>
+<p><b>笔记：</b>MTF Omega-12（“阿喀琉斯之踵”）已被部署以协助遏制由此产生的异常现象。</p>
+<hr />
+<p><b>时间：</b>09/08/2019</p>
+<p><b>描述：</b>SCP-4800-1周围区域的休谟水平为绝对零值，导致其半径范围内的物质溶解。该区域的半径仍在逐渐增大。</p>
+<p><b>笔记：</b>N/A</p>
+<hr />时间：</b>01/01/2020</p>
+<p><b>描述：</b>SCP-4800-1开始产生无线电信号，尽管对光有限制，信号依然设法到达地球。信号由一系列点和破折号组成。</p>
+<p><b>笔记：</b>加密部门正在对其进行分析。</p>
+</div>
+<div class="selTab3 vanished">
+<p><b>前言：</b>在地球各地检测到了由重复的摩尔斯点和破折号序列组成的信号（详细信息请参阅文档 4800-EL3）。以下为该序列的记录和翻译。</p>
+<p style="word-wrap: break-word;"><b>序列：</b>...........-...........-..............-.......-..............-.....-.........-.........-..........-...............-........-...............-........-...-..............-........-..............-......-...........-.............-........-.........-...........-......-........-...............-..............-.....-..............-.....-........-..........-...........--........-........-.........-..........-..............-.......-..............-....-........-....-...........-..........-...........-..........-..-.............-..--..............-........-..--.........-.........-...........-...............-.........-........-..............-......-..............-.....-..........-...............-...........-..........-.........-...............-........-.......-..............-.........-..............-....-.........-.-.........-..........-...........-............-..........-..............-..............-.....-..............-.....-........-.......-.........-.........-..........-..............-......-.-...-..-......-.....-...--......-.-...-........-...-..-...-.-......-..-...-.........-.........-......-..............-......-..............-.....-..........-...............-........-...........-........-.....-........-.....-..............-.....-..............-.........-...........--...........-...............-..........-.-........-..............-..............-.......-..............-.....-...........--.........-..............-..........-..............-..........-........-..............-.......-..............-.....-...........-...-.........-..........-..........-..............-.........-....-..............-.........-..............-........-.........-..........-..........-..........-........-.......-........-..........-..............-.....-..............-.....-..........-........-...........-...............-...........-.........-.........-..-..............-......-..............-.......-..........-.............-........-....-.........-..........-...........-...............-..............-....-..............-......-..........-.-..........-...............-........-.-..-.............-..--..............-.....-..--........-..-..........-......-.........-..............-..............-......-..............-....-.........-............-..........--...........-.............-.........-....-..............-......-..............-.....-...........-......-...........--........-........-...........-...............-..............-........-..............-......-.........-.........-..........-.-.........-.............-...........-...............-..............-....-..............-......-..........-.-..........-...............-........-.-........-..-..............-.........-..............-....-..........-...-........-........-...........-.........-...........-...............-..............-........-..............-....-.........-.........-..........-..........-...........-........-..........-..............-..............-.....-..............-.....-........-.......-.........-.........-..........-..............-..........-.............-..............-......-..............-.....-..........-...-........-....-..........-....-...........-..........-..............-....-..............-.....-........-..............-...........-.-........-.............-.........-.........-..............-.........-..............-....-..........-.........-........-...........-...........-.........-...........-........-..............-....-..--..........-.............-..--..-.............-..........-...............-..............-........-..............-.....-...........-.......-...........-.............-...........--...........-...............-..............-.....-..............-......-..........-...........-..........-....-.........-..-..........-......-..............-.......-..............-....-...........-...........-..........-.....-...........-...........-.........-.........-..............-.........-..............-....-........-.............-........-..............-...........-.............-.........-.............-..............-.....-..............-.....-........-.............-........-............-..........-.-...........-..........-..............-....-..............-....-........-...........-...........-......-...........-...........-........-...............-..............-.....-..............-.......-.........-.-.........-...............-.........-....-.........-..........-..............-.......-..............-.....-........-....-..........-...............-........-...............-........-...-..............-........-..--...........-.............-..--..-.............-........-....-..............-......-..............-........-.........-...............-..........-..-...........--...........-.............-..............-....-..--..........--..-.............-..-.............-..............-......-..--..........-.....-.........-.............-........-.......-..............-........-.....--..........-..........-.......-..-......-.-......-.......-......-.-......-..............-......-...............</p>
+<p style="word-wrap: break-word;"><b>大致翻译：</b>ESIHRHEISBEHIESTSHTEIISHERHTIEHITESHAESHINHSIEEVIHFISEHEVSHASNIEHIESTSIVEEIHSILSEDHSITHEISIREHUIESEFSIHEBILSSNIHEISERISHIEREIENSHSIETHRESILHIUHSEIWHSLESFEHIRESHLSEIHELHREIHSVSETIHFSTIESEIERSIHBSHEDHIEETIDSIESFWEIHSIUESEILMESHLSHBIEIVSESEIHASEHLISRHIEHFEIUSHIESAIVHESINISEIEHLSIHTEEHIINEIHRSEIHEIRHSTHSTIESHIEAESIVHHESFIAEISVRSIVEEHSLHSEAISIEHNIEHUEIHSEILSHEHDSNIHIESRSENISELEHBSEUSIHBESIEBSIHEREIUAVUHELEIBMSVEDAIHERFEBTLHXEITHSIDEHFIVSEIEHSDIEASHESIREVSIESLSHEIVIESFHIESNISEEDVSIEUIVISEHIERSLEHISUESIVIHSEABSEESTHIHEIUSESIRTHIERHESISDIEHSUEIHNHSIHTSFIEEISATSEIVIHSEHNSHUIEHIESASEHINHVEISEIHLHLESIHFIUESEHFUIHIEDEHVISIEUSHEIHTSIEILIDHEIESAHIEUSHESILHFHESTIEISFHHRSEISBHETESILHERIESIEDSEISVISBEHIEVSIDEHIASESAIHEESNIHSIEUSEHIAISEILESVIBHHIRSEAHIESEIREHEDISVHISHNEISEDFISEUIEHVSSHRIEISEHAIESHEVHTHISEIERHLSISNTHHITESISEHLEHRTEAIEHSEINANHIHVESRETBSFLSEIUHFIEHASSHEIAHISEIELESBIHIEELFHIELHHFEISSTDEISEFHISEFSEHBAEIHHEFSIBHESEFSLIEHELIFSHEIZESVSEHNISIVESIEHEVSIHEIIBHAESHSEITHIDHIEDHEFSIEIRDISUEHESHNSHILEEIHSELSHIEFVHIEHSTISAIEHVLEHSNIEIHSUEHSCISFEBISHFSHAEIISEHLIBESSTSNHVESHDEISEUHHAIEIHFESIEHVEHISIFESVEISEIHLFHIEEDISEAIHSLEIHASHSEBIEFIHEELHSIEIDHSHETIVHSEIIFHBSERIHDHSNIEHAIESIFEHSIEUEHISBESHFISIEHLEILESSEHTHETSIISTVHIELELSHETIUEIHSENSESFIHHEUSLHEHILEUSEHTISHISTISEHEKSEIFHSHEDISFIESFISESIERHSETHISSITESDIEISNHSLIEEFSIHLSIEIAESEHBEHSNIISDEHSIELERPSIIUSHESFEMINSIHEUSIEHTIEHSIVHSEIESNESIAEHIESSTSFHEISBIEREHIIEDSHHBISEUTSHIERSHEHUSIESIVHAISHEHBIETSIEHBHSLESHBAIHSXESHEAISAEHIIESEBHTSEIHIUEVSIEHRHIESDSIVESRHEISBIHUISEVEHSRISEHIREHVSIEHEVIFSHBEIHEINSEVIESIEHLSESINHSISDESEUISEHVIEIHSERHDESEIHEBITEHILSEIHLSSBEIHUISEHTLEHIELSESAEISHHTSLEIHSELFESIAHESILHESLIFEISHNIEISUSIEFESISHAEIESHIAHRIEHESFIIELIESRNIIHDESHESLHSNSBEHASHIETSHEIIUHEINEIHSEFSRIEHDERSHIBEEISHASIEFISHEEIASHLRSEHSUEIEIFEZSHIENHSEIITEAXISHEIETHIUSLEHSIEAHIDHSEEIRHILESILEHHEILSHLDEHEIPSISELIHESASEIHEVSAEPSESIZLHISEAIDSHEIEBIHSUIESDTDSIEERIUSHIBEISHBIEFSIEBHISELSVEIIMSHEUHIHBSEDTEIVASIEBSEBVRESRIHSIUEISTEISHIEI</p>
+<p><b>结语：</b>据认为，上述序列可以编码为一种尚未识别的摩尔斯代码形式。加密部门的翻译工作正在进行中。</p>
+</div>
+<div class="selTab4 vanished">
+<p><b>5/29/2020</b></p>
+<p>我已经盯着这个该死的序列好几个小时了。这可能会让我们摆脱困境。这可能是SCP-4800的<i>关键</i>。我们也许甚至可以利用它。可是，我甚至没法开始破解这个序列。</p>
+<p>它可能是摩尔斯电码，但我自己也听过这个信号。它一直是来来回回的长脉冲，没有任何停顿。我们可能漏掉了一些停顿，但我试过所有的组合，结果都是一锅乱炖的字母汤。都试过了，但是什么都没有得到。</p>
+<p>我得先好好考虑一下，不然我会发疯的。</p>
+<p><b>5/30/2020</b></p>
+<p>又是盯着那个序列无果而终的一天。我都记住它了，每次闭上眼睛都能看到。依然什么都没破译出来。</p>
+<p>溶解场开始接近地球。要快点了，免得它先把我们蒸发掉。站点里所有人都惊慌失措。我从没想过会看到Calvin精神崩溃，可是这次我看到了。</p>
+<p>我把密码打印出来贴在床头，一整天都在看。为什么没有用？为什么我搞不清楚到底在发生什么？</p>
+<p><b>6/02/2020</b></p>
+<p>密码还是没被破解。我已经和其他人谈过密码了，还是没结果。</p>
+<p>我老是会忘记电子邮件系统罢工的事情。这样交流就更困难了。</p>
+<p>加油啊，脑子。别让我失望。</p>
+<p><b>6/12/2020</b></p>
+<p>我今天顿悟了。这绝对不是摩尔斯电码，但如果它根本就<i>不是</i>代码呢？我把它转到侧面，它看起来更像是因为撞向我而分开的一组点。它传达的不是字母，它传达的只是<i>数字</i>。</p>
+<p>有了这个突破，我再解码的时候，整天都兴高采烈的。对的，就是一堆数字。看起来也有规律，但我现在还找不出来。</p>
+<p>我本来想把它发送到其它加密部成员，不过电子邮件还是用不了。今天上班的时候和他们谈谈吧。</p>
+<p><b>6/13/2020</b></p>
+<p>没有一个数字超过16。我可能有点想法了。</p>
+</div>
+<div class="selTab5 vanished">
+<div class="archwarning"><p><center><i><b>档案管理员请注意：此文档包含5级权限限制的信息。已为您提供经过修订的文档。具有恰当审查许可的人员可查看未修改文档。</b></i></center></p></div>
+<p><b>knewmans@5034_s19: </b> <tt>sed -v -i "s/-/ /g" transmission.dat</tt></p>
+<p><tt>sed: 用“ ”替换所有出现的字符串“-”。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>./hexconvert.py -i transmission.dat -o hexnums.txt</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>hexdump -C hexnums.txt</tt></p>
+<p>
+<table border="0">
+<tr>
+<td><tt>
+00000000  e7 bb 99 e5 8f af e8 83 bd e6 b6 89 e5 8f 8a e5  <br />
+00000010  88 b0 e7 9a 84 e4 ba ba 20 2d 20 e8 bf 99 e6 98  <br />
+00000020  af e5 9f ba e9 87 91 e4 bc 9a e5 ae 87 e5 ae 99  <br />
+00000030  32 61 30 65 38 61 31 32 39 62 e6 96 af e5 85 8b  <br />
+00000040  e5 85 b0 e9 a1 bf e7 8e b0 e5 ae 9e e7 a8 b3 e5  <br />
+00000050  ae 9a e9 94 9a e8 87 aa e5 8a a8 e5 b9 bf e6 92  <br />
+00000060  ad e7 9a 84 e4 bf a1 e6 81 af 20 2d 20 e5 a6 82  <br />
+00000070  e6 9e 9c e4 bd a0 e6 94 b6 e5 88 b0 e8 bf 99 e6  <br />
+00000080  9d a1 e4 bf a1 e6 81 af e9 82 a3 e4 b9 88 e8 bf  <br />
+00000090  99 e4 b8 aa e5 ae 87 e5 ae 99 e6 ad a3 e5 a4 84  <br />
+000000a0  e4 ba 8e e5 8d b1 e9 99 a9 e4 b9 8b e4 b8 ad 20  <br />
+000000b0  2d 20 e8 af b7 e5 b0 bd e5 bf ab e6 92 a4 e7 a6  <br />
+000000c0  bb e4 bb a5 e9 99 8d e4 bd 8e e5 9d 8d e5 a1 8c  <br />
+000000d0  e4 ba 8b e4 bb b6 e5 8f 91 e7 94 9f e7 9a 84 e5  <br />
+000000e0  8f af e8 83 bd 20 2d 20 e6 84 9f e8 b0 a2 e4 bd  <br />
+000000f0  a0 20 2d 2d 20 e6 9d a5 e8 87 aa 50 61 72 61 67  <br />
+00000100  6f 6e  <br />
+00000102  <br />
+</tt></td>
+<td><tt>
+|<span class="hidden">给可能涉及</span><br />
+|<span class="hidden">到的人 - 这是</span><br />
+|<span class="hidden">基金会宇宙</span><br />
+|<span class="hidden">2a0e8a129b斯克</span><br />
+|<span class="hidden">兰顿现实稳</span><br />
+|<span class="hidden">定锚自动广播</span><br />
+|<span class="hidden">的信息 - 如</span><br />
+|<span class="hidden">果你收到这</span><br />
+|<span class="hidden">条信息那么这</span><br />
+|<span class="hidden">个宇宙正处</span><br />
+|<span class="hidden">于危险之中 </span><br />
+|<span class="hidden">- 请尽快撤离</span><br />
+|<span class="hidden">以降低坍塌</span><br />
+|<span class="hidden">事件发生的</span><br />
+|<span class="hidden">可能 - 感谢你</span><br />
+|<span class="hidden"> -- 来自Parag</span><br />
+|<span class="hidden">on</span><br />
+<br />
+</tt></td>
+<td><tt>
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+|<br />
+<br />
+</tt></td>
+</tr>
+</table>
+</p>
+<p><b>knewmans@5034_s19: </b> <tt>scipnet --email --to directorscott@foundation.scp</tt></p>
+<p><tt>scipnet: 无法连接到SCiPNET，请联系系统管理员。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>ping -c 3 8.8.8.8</tt></p>
+<p><tt>connect: 网络无法访问系统管理员。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>cat >> diary.txt << "EOF"</tt></p>
+<p><tt>操</tt></p>
+<p><tt>EOF</tt></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b>knewmans@5034_s19: </b> <tt>uptime -p</tt></p>
+<p><tt>运行时间：2年5小时3分钟。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>ping -c 3 $(scipnet --get-ip "Site-32 Main Server")</tt></p>
+<p><tt>scipnet: 服务器“Site-32 Main Server”处于未联网状态。原因：“已毁坏”。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>ping -c 3 $(scipnet --get-ip "Site-19 Main Server")</tt></p>
+<p><tt>scipnet: 服务器“Site-19 Main Server”处于未联网状态。原因：“基本部件已解体”。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>ping -c 3 $(scipnet --get-ip "Site-01 Primary Ping Server")</tt></p>
+<p><tt>scipnet: 服务器“Site-01 Primary Ping Server”处于未联网状态。原因：“由O5-1断开连接”。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>summary -p ~/world_history_collection.d > summary.txt</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>diff --preview summary.txt /mnt/deepwell/987/summary.txt</tt></p>
+<p><tt>diff: 发现405个差异，是否查看？（是/否）</tt><b>否</b></p>
+<p><b>knewmans@5034_s19: </b> <tt>grep "Katie Newmans" /usr/scp/personnel_directory.csv</tt></p>
+<p><tt>grep: “personnel_directory.csv”中没有相关“Katie Newmans”字符串的事件被找到。</tt></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b>knewmans@5034_s19: </b> <tt>sed -v -i "s/lvl4/lvl5/g" filenames.txt</tt></p>
+<p><tt>sed: 用字符串“lvl5”替换所有出现的字符串“lvl4”。</tt></p>
+<p><b>knewmans@5034_s19: </b> <tt>logout</tt></p>
+<p><tt>正在登出……</tt></p>
+</div>
+</div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

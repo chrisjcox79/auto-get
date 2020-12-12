@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<style>
+#forScarletKing {
+    font-size:150%;
+    font-family: 'Zhi Mang Xing', '华文行楷';
+    text-align:center;
+    color:#b01;
+    height:35rem;
+}
+
+@media (max-width: 300px) {
+#forScarletKing {
+  font-size:120% ;
+}
+}
+
+.OurBlood{
+    top:0px;
+position:absolute;
+transition: all 4s;
+-moz-transition: all 4s; /* Firefox 4 */
+-webkit-transition: all 4s; /* Safari 和 Chrome */
+-o-transition: all 4s;
+
+}
+
+</style>
+
+</head>
+
+<body onload="Maskers()">
+
+<div id="forScarletKing" >
+<div class="OurBlood" onmousemove="Hanged()">
+<p>那吞噬阿拉卡达城的腐化之蛹</p>
+<p>那开凿于缢王之体的神性空洞</p>
+<p>必将低语着凝视一切</p>
+<p>必将焚烧尽十方世界</p>
+<br>
+<p>~ 愚者</p>
+</div>
+</div>
+
+<script>
+var i = 0;
+var limit=5;
+
+function Maskers() {
+        delayVar = setTimeout(Masked, 1000);
+}
+
+function Masked(){
+var Alagadda= document.getElementById("forScarletKing");
+for(n=0;n < limit;n++){
+Alagadda.innerHTML = Alagadda.innerHTML + Alagadda.innerHTML+ Alagadda.innerHTML;
+}
+}
+
+var knell=document.getElementById("forScarletKing");
+var FallingWorld=knell.getElementsByTagName('div');
+
+function Hanged(){
+var timer = setInterval(King, 100);
+}
+
+function King() {
+ if (FallingWorld > i) {
+        clearInterval(timer);
+    } else {
+     FallingWorld[i].style.top="250px";
+     FallingWorld[i].style.opacity="0";
+     FallingWorld[i].style.color="#2d0303";
+     i++ ;
+    }
+}
+
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
