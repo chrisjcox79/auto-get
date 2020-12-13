@@ -51,6 +51,10 @@
     --medium-accent:grey;
     --dark-accent:0,0,0;
       
+      --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+      
    
 
                 --white-monochrome: 3, 3, 3;
@@ -86,7 +90,7 @@
                         --very-dark-accent: 91,5,4;
                   /*↑ 非常深的红色 ↑*/
 
-                  --alt-accent: 221, 102, 17;
+    --alt-accent: 221, 102, 17;
             /*↑ 橘色，页面不存在的链接颜色 ↑*/
 
                   --very-dark-accent: 91,5,4;
@@ -94,8 +98,14 @@
 
                   --alt-accent: 204,102,0;
             /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+                  --alt-accent: 204,102,0;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
     
     --hover-link-color:171,58,55;
+    --visited-link-color:171,58,55;
+    --sel-color:90,16,14;
+    --purple-color:43,17,76, 0.85;
 
    /* 版头 */
     --header-gradient-color-bottom: var(--black-monochrome);
@@ -142,14 +152,49 @@
 
 body{
    color:#e8e8e8;
-    
+}
+
+  #page-content{
+       letter-spacing:1px;
+  }
+
+@media (max-width: 479px) {    
+  #page-content{
+       letter-spacing:auto;
+  }
+}
+
+/* 
+------------------
+鼠标选择
+--------------------
+ */
+::selection { 
+    color: #cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
 }
 
 
+::-moz-selection { 
+    color:#cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
+}
+
+
+/* 
+------------------
+其他
+--------------------
+ */
 #toc{
     background: #232222;  
     color:grey;
 }
+
 
 
 
@@ -282,13 +327,14 @@ background-color: #CC6600 !important;
 #side-bar .heading p ,
 #side-bar .side-block > .collapsible-block .collapsible-block-link {
     --text-shadow: rgb(0,0,0);
-    color: #Cc6600;
+     color: #Cc6600;
      color: rgb(var(--alt-accent)) ;
 }
 
 #side-bar div.menu-item a::before, 
 #side-bar div.menu-item a:hover::before {
     background-color: rgba(43,17,76, 0.85);
+    background-color: rgba(var(--purple-color));
 }
 
 
@@ -316,6 +362,89 @@ background-color: #CC6600 !important;
     font-size: 200% ;
     text-align: center ;
 }
+
+
+
+/* 
+============================================
+标签
+============================================
+ */
+#main-content .page-tags {
+    border-top: 2px solid rgb(var(--medium-accent));
+}
+ 
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background:rgb(var(--dark-gray-monochrome));
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+ 
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--dark-gray-monochrome, 45, 70, 45))
+     transparent
+     transparent; 
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+ 
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+ 
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: #fff;
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+ 
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+ 
+
+#main-content .page-tags a:hover{
+    background-color:  rgb(var(--purple-color)); 
+    text-decoration: none;
+}
+
+#main-content .page-tags a:hover:before {
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--purple-color, 45, 70, 45))
+     transparent
+     transparent; 
+}
+
+
 
 
 /* 
@@ -347,7 +476,7 @@ background-color: #CC6600 !important;
     transition: all 0.5s;
           border: 3px solid  rgb(var(--dark-accent));  
           background-color: transparent;
-            color: rgb(var(--dark-accent));
+            color: rgb(var(--medium-accent));
 }
  
 #main-content .page-options-bottom  a:hover {
@@ -394,21 +523,6 @@ background: #000;
 color: #fff;
 }
 
-/* 
-============================================
-鼠标选择
-============================================
- */
-::selection { 
-    color: #cc6600;
-    color: rgb(var(--alt-accent)) ;
-    background:#5a100e; 
-}
-::-moz-selection { 
-    color:#cc6600;
-    color: rgb(var(--alt-accent)) ;
-    background:#ab3a37; 
-}
 
 /* 
 ============================================
@@ -571,7 +685,7 @@ blockquote .cn-hr hr::after,
 
 /* 
 ============================================
-脚注
+脚注和注释
 ============================================
  */
 /* 鼠标移过注释框 */
@@ -585,8 +699,7 @@ blockquote .cn-hr hr::after,
             background-size: contain;
     }
 
-
-
+ 
 
 /* 
 ============================================

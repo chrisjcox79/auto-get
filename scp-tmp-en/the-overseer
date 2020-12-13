@@ -54,7 +54,7 @@ googletag.enableServices();
         WIKIREQUEST.info.categoryId = 366566;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "the-overseer";
-        OZONE.request.timestamp = 1607870811;
+        OZONE.request.timestamp = 1607890580;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "the-overseer";
@@ -152,6 +152,169 @@ googletag.enableServices();
 <style>
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/black-highlighter.min.css");
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
+</style>
+<style>
+:root{
+--cutColour: #fafafa;
+--barColour: #590505;
+}
+
+.info-container .collapsible-block-folded a{
+color: #FFF;}
+.info-container .collapsible-block-unfolded-link a{
+color: #FFF;
+}
+
+#page-title {
+    text-align: center;
+}
+#page-content > .collapsible-block {
+    display: block;
+    text-align: center;
+    padding: 0.75em;
+    background-color: lightgrey;
+    border-top: 0.125rem dashed slategrey;
+    border-bottom: 0.125rem dashed slategrey;
+}
+
+#page-content > .collapsible-block .collapsible-block-content {
+    text-align: left;
+}
+
+.addendum {
+    border:solid 2px #999999;
+    background:#F5F5F5;
+    width:84%;
+    padding:1px 15px;
+    margin: 10px auto;
+}
+
+#main-content .page-tags {
+    border-top: 2px solid rgba(var(--swatch-menubg-medium-color),.5);
+}
+
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background: rgb(48, 48, 52);
+    background: rgb(var(--swatch-menubg-dark-color, 48, 48, 52));
+    color: rgb(252, 252, 22);
+    color: rgb(var(--swatch-menutxt-light-color, 252, 252, 252));
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent
+     rgb(48, 48, 52)
+     transparent
+     transparent;
+    border-color:
+     transparent
+     rgb(var(--swatch-menubg-dark-color,  48, 48, 52))
+     transparent
+     transparent;
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--swatch-menubg-dark-color,  48, 48, 52));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: rgb(252, 252, 252);
+    background-color: rgb(var(--swatch-background, 252, 252, 252));
+    box-shadow: -0.0625rem -0.0625rem 0.125rem rgb(48, 48, 52);
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+</style>
+<style>
+@import url(http://topia.wdfiles.com/local--code/cqb%3Aflow/1);
+@import url("http://topia.wdfiles.com/local--code/cqb%3Aflow/1");
 </style>
 <style>
 :root {
@@ -659,6 +822,12 @@ padding-bottom: 4px;
 
 
 
+
+
+
+
+
+
 <div class="info-container">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;</a></div>
@@ -691,7 +860,7 @@ padding-bottom: 4px;
 </div>
 </div>
 </div>
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+11</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+12</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 <p>&quot;How did we get here?&quot;</p>
 <p>Daniel Asheworth had no idea. As he looked from the window of the rescue helicopter, he thought of everything that went down in the last 8 years.<br />
 He thought about how the Foundation failed.<br />
@@ -749,10 +918,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 13, last edited: <span class="odate time_1605185064 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">12 Nov 2020 12:44</span></div>
+                            <div id="page-info">page revision: 15, last edited: <span class="odate time_1607877582 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">13 Dec 2020 16:39</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+11</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+12</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
 <a href="/forum/t-13452808/the-overseer" class="btn btn-default" id="discuss-button">Discuss (3)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">History</a>
@@ -821,45 +990,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://wiki.metrixcreatespace.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wiki.metrixcreatespace.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.gustrength.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.gustrength.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://wiki.metrixcreatespace.com">Metrix Create:Space</a></h3>
+            <h3><a target="_blank" href="http://www.gustrength.com">Ground Up Strength</a></h3>
             <div class="desc">          
-              
+              A strength training site with lots of other stuff.
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://paradoxhaze.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/paradoxhaze.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://signaturbogen.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/signaturbogen.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://paradoxhaze.wikidot.com">Paradox Haze</a></h3>
+            <h3><a target="_blank" href="http://signaturbogen.wikidot.com">Signaturbogen 2.0</a></h3>
             <div class="desc">          
-              
+              4.000 signaturer, 2.500 kunstnere
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://cpp-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cpp-wiki.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://fortean.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fortean.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://cpp-wiki.wikidot.com">C++ Wiki</a></h3>
+            <h3><a target="_blank" href="http://fortean.wikidot.com">Forteana: The Fortean Wiki</a></h3>
             <div class="desc">          
-              
+              The World of Strange Phenomena
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://alveslima-edu.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/alveslima-edu.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://rpc-tr-wiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rpc-tr-wiki.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://alveslima-edu.wikidot.com">WIKEDUCAÇÃO</a></h3>
+            <h3><a target="_blank" href="http://rpc-tr-wiki.wikidot.com">RPC</a></h3>
             <div class="desc">          
-              
+              Araştır, Koru, Sakla
             </div>
           </div>
         </div>

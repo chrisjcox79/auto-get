@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>最近修改的页面 - SCP基金会</title>
+    <title>Esperanza_Cai的冷门翻译们 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "most-recently-edited";
-        OZONE.request.timestamp = 1607867493;
+        WIKIREQUEST.info.requestPageName = "esperanza-s-translations";
+        OZONE.request.timestamp = 1607891079;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "most-recently-edited";
-        WIKIREQUEST.info.pageId = 21397569;
+                WIKIREQUEST.info.pageUnixName = "esperanza-s-translations";
+        WIKIREQUEST.info.pageId = 999670719;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,40 +117,106 @@
     </script>
         
 <style>
-.content-panel .content-type-title > p {
-  margin: 0;
-}
-.content-panel .content-type-title {
-  font-size: 120%;
-  font-weight: bold;
-  padding: 5px 20px;
-  background-color: #666;
-  color: #fff;
-  border-radius: 8px 8px 0 0;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,.8),
-    inset 0 15px 1px rgba(255,255,255,.2),
-    inset 0 15px 10px rgba(255,255,255,.2);
-}
-.content-panel .content-type-description {
-padding: 0 20px;
-text-align: justify;
-}
-.content-panel.content-row .content-type-description {
-padding: 5px 20px;
-}
-.content-panel.content-row .content-type-description-2 {
-padding: 0 20px;
-text-align: justify;
+@import url(http://topia.wdfiles.com/local--code/cqb%3Aflow/1);
+@import url("http://topia.wdfiles.com/local--code/cqb%3Aflow/{$speed}");
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+:root {
+  --more-text: "更多信息";
+  --triangle-url: url(http://topia.wdfiles.com/local--files/cqb%3Apage-info-slider-deep/slider.png)
 }
 
-td.wanderers img.wanderers {
-display: block !important;
-width: 16px;
-height: 11px;
-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+table.wiki-content-table { margin: 0 -1px 0 0; width: 100%; }
+table.wiki-content-table:not(:nth-of-type(1)) { margin-top: -1px; }
+table.wiki-content-table td { background-color: #fff; }
+table.wiki-content-table th { background-color: #eee; }
+
+.avatar-hover { z-index: 30; }
+
+.page-box .table .shade { position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; opacity: 0.1; background-color: none;}
+
+.page-box { position: relative; width: 90%; margin: 0 auto 2em auto; z-index: 20; overflow: hidden; }
+.page-box::after { content: ""; position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-shadow: inset 0 0.5px 3px 1px rgba(0,0,0,0.3); z-index: 19; pointer-events: none; }
+
+.table { position: relative; top: 0; left: 0; height: 100%; width: 100%; }
+
+.page-cover { position: absolute; top: 0; left: 0; height: 100%; width: calc(100% - 93px); z-index: 10; background-color: white; display: flex; flex-direction: column; justify-content: space-around; padding: 20px 0 20px 25px; box-sizing: border-box; transform: translate(0,0); transition: transform 0.6s ease-in-out; will-change: transform; }
+.page-cover::after { content: var(--more-text); position: absolute; top: 50%; right: -70px;  color: rgba(0,0,0,0.2); font-weight: bold; font-size: 0.8em; transform: translate(0,-50%); pointer-events: none; }
+.page-cover::before { content: ""; position: absolute; top: 0; right: -102px; width: 103px; height: 100%; background-image: var(--triangle-url); background-position: center; pointer-events: none; }
+
+@media only screen and (max-width: 767px) {
+  .page-cover { display: none; }
+}
+
+.page-cover .cover-title { width: 100%; font-size: 50px; font-family: Montserrat,Verdana,sans-serif; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.page-cover .cover-title.medium { font-size: 30px; }
+.page-cover .cover-title.long { font-size: 20px; }
+.page-cover .cover-title a { background-color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
+
+.page-cover .cover-tagline { color: rgba(0,0,0,0.75); margin-bottom: 0; flex: 0; }
+.page-cover .cover-title.no-truncate + .cover-info .cover-tagline { margin: 1em 0; }
+
+.page-cover .cover-info .page-info { display: flex; }
+.page-cover .cover-info .page-info div { color: rgba(0,0,0,0.5); margin: 0 6em 0 0; }
+
+.page-box:hover .page-cover:not(:hover) { transform: translate(calc(-100% - 70px),0); }
+
+.page-cover .cover-title.no-truncate { flex: 1; white-space: normal; }
+
+.page-cover > img { max-height: 70%; max-width: 120px; position: absolute; top: 50%; right: 60px; transform: translate(50%,-50%); }
+
+/* BLACK HIGHLIGHTER COMPATIBILITY */
+table.wiki-content-table { border-collapse: collapse; }
+table.wiki-content-table tbody { margin: 0; display: table-row-group; }
+table.wiki-content-table th { color: black; }
+table.wiki-content-table td { border-color: inherit; }
+</style>
+<style>
+@import url(http://scp-wiki-cn.wikidot.com/theme:ar/code/2);
+</style>
+<style>
+#side-bar { overscroll-behavior: none; }
+#header h1 a::before {
+    content: "烂文列表";
+}
+#header h2 span::before {
+    content: "Croquembouche的作者页" !important;
+}
+#header {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/cone/delta.png);
+}
+#header::before {
+    display: none;
+}
+h1 {
+
+  text-align: center;
+
+  margin: 1em 0;
+}
+.creditButtonStandalone p a{
+    background: #295183 !important;
 }
 </style>
-<link rel="alternate" type="application/rss+xml" title="Most Recently Edited" href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-edited/category/-fragment/order/updated_at+desc/limit/30/t/Most+Recently+Edited"/><script src="https://s.nitropay.com/ads-143.js"></script>
+<style>
+.random { text-align: center; }
+.random p { margin: 2em auto; }
+.random a { position: relative; box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19); padding: 1em; transition: all 0.3s ease-in-out; }
+.random a:hover { box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19); }
+.random a::after { content: ""; position: absolute; top: 0; right: 0; left: 0; bottom: 0; pointer-events: none; background: url(http://scp-wiki.wdfiles.com/local--files/cone/redarrow.png); animation: bg-slide 1s infinite linear; opacity: 0; transition: opacity 0.2s ease-in-out; }
+.random a:hover::after { opacity: 1; }
+
+@keyframes bg-slide {
+ 0% { background-position: 0px center; }
+ 100% { background-position: 74px center; }
+}
+</style>
+<style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+</style>
+<script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
 </head>
 <body id="html-body">
@@ -498,7 +564,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=most-recently-edited" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=esperanza-s-translations" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -520,7 +586,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
                     
                     
                         <div id="page-title">
-                            最近修改的页面
+                            Esperanza_Cai的冷门翻译们
                         </div>
                     
 
@@ -533,252 +599,1277 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
                     <div id="page-content">
                         
 
+<div class="blockquote">
+<p style="text-align: center;">我的作者页×</p>
+<p style="text-align: center;">cone的作者页√</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">这是我</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">（卑微）</a></div>
+<div class="collapsible-block-content"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-
-<div class="content-panel standalone content-row">
-<div class="content-type-title">
-<p>最近修改的页面</p>
+<p><a href="/nobody-in-their-right-mind">无人在此铭记时</a></p>
 </div>
-<div class="content-type-description-2">
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff; background-color: #666;">
-<td style="padding: 0 2px; width: 50%;">页面</td>
-<td style="padding: 0 2px; width: 25%; text-align: center;">最后更新</td>
-<td style="padding: 0 2px; text-align: center;">更新者</td>
-</tr>
-</table>
+<div class="list-pages-item">
+
+
+<p><a href="/scp-tldr-j">SCP-太长不看-J</a></p>
 </div>
-<div class="content-type-description"><div class="list-pages-box">    
+<div class="list-pages-item">
 
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff;">
-<td style="padding: 0 2px; width: 50%;"></td>
-<td style="padding: 0 2px; width: 25%; text-align: center;"></td>
-<td style="padding: 0 2px; text-align: center;"></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/featured-scp-archive">精品原创SCP归档</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607600831 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 11:47</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/w-asriel" onclick="WIKIDOT.page.listeners.userInfo(3317001); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3317001&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="W Asriel" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3317001)" /></a><a href="http://www.wikidot.com/user:info/w-asriel" onclick="WIKIDOT.page.listeners.userInfo(3317001); return false;">W Asriel</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/the-first-starourenk-retreat">第一次斯達歐倫克撤退戰</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607592913 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 09:35</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wupaispanda" onclick="WIKIDOT.page.listeners.userInfo(5223229); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5223229&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Wupaispanda" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5223229)" /></a><a href="http://www.wikidot.com/user:info/wupaispanda" onclick="WIKIDOT.page.listeners.userInfo(5223229); return false;">Wupaispanda</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-323-jp">SCP-323-JP</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607592010 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 09:20</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mint-chocolate" onclick="WIKIDOT.page.listeners.userInfo(4106733); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4106733&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Mint chocolate" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4106733)" /></a><a href="http://www.wikidot.com/user:info/mint-chocolate" onclick="WIKIDOT.page.listeners.userInfo(4106733); return false;">Mint chocolate</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-5353">SCP-5353</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607591489 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 09:11</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="wanderers" style="vertical-align: top;"><a href="/wanderers:zhejichensha-103">《朝颜文学报特刊》：折戟沉沙第103期 麦尔彦之梦——阿黑赖哈里发国的乌托邦实验</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607589947 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 08:45</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-2347">SCP-2347</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607589434 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 08:37</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/estrellayoshte">EstrellaYoshte的作者页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607587721 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 08:08</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1426">SCP-CN-1426-J</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607586333 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 07:45</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/winter-round">冬月轮回木中书</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607585400 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 07:30</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-250-j">SCP-CN-250-J</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607576000 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 04:53</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ag2so4" onclick="WIKIDOT.page.listeners.userInfo(3974469); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3974469&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Ag2SO4" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3974469)" /></a><a href="http://www.wikidot.com/user:info/ag2so4" onclick="WIKIDOT.page.listeners.userInfo(3974469); return false;">Ag2SO4</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/site-cn-75">中国分部Site-CN-75简介</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607574950 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 04:35</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hbkouki" onclick="WIKIDOT.page.listeners.userInfo(6083676); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6083676&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="HBkouki" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6083676)" /></a><a href="http://www.wikidot.com/user:info/hbkouki" onclick="WIKIDOT.page.listeners.userInfo(6083676); return false;">HBkouki</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1724">SCP-CN-1724</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607566179 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 02:09</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6285604&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Chris Evertworth" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6285604)" /></a><a href="http://www.wikidot.com/user:info/chris-evertworth" onclick="WIKIDOT.page.listeners.userInfo(6285604); return false;">Chris Evertworth</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/the-radd-zone">Radd基地</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607565083 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 01:51</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-4755">SCP-4755</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607563891 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 01:31</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-249-j">SCP-CN-249-J</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607558496 format_%25Y-%25m-%25d%20%25R%7Cagohover">10 Dec 2020 00:01</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/bigpengpeng" onclick="WIKIDOT.page.listeners.userInfo(4859899); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4859899&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="bigpengpeng" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4859899)" /></a><a href="http://www.wikidot.com/user:info/bigpengpeng" onclick="WIKIDOT.page.listeners.userInfo(4859899); return false;">bigpengpeng</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/larmina-7">层流--其七</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607554007 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 22:46</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/agt-leazov" onclick="WIKIDOT.page.listeners.userInfo(3006394); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3006394&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Agt_LEAZOV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3006394)" /></a><a href="http://www.wikidot.com/user:info/agt-leazov" onclick="WIKIDOT.page.listeners.userInfo(3006394); return false;">Agt_LEAZOV</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/air-land-rhapsody">空地狂想曲 中心页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607553689 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 22:41</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/agt-leazov" onclick="WIKIDOT.page.listeners.userInfo(3006394); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3006394&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Agt_LEAZOV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3006394)" /></a><a href="http://www.wikidot.com/user:info/agt-leazov" onclick="WIKIDOT.page.listeners.userInfo(3006394); return false;">Agt_LEAZOV</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/no-one-dies-alone">没有人会独自死去</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607545026 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 20:17</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jeffreycc" onclick="WIKIDOT.page.listeners.userInfo(5913267); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5913267&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="JeffreyCC" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5913267)" /></a><a href="http://www.wikidot.com/user:info/jeffreycc" onclick="WIKIDOT.page.listeners.userInfo(5913267); return false;">JeffreyCC</a></span></td>
-</tr>
-<tr>
-<td class="wanderers" style="vertical-align: top;"><a href="/wanderers:the-tianya-pavilion">天涯阁记</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607538610 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 18:30</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/virgil-n" onclick="WIKIDOT.page.listeners.userInfo(5661227); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5661227&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Virgil_N" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5661227)" /></a><a href="http://www.wikidot.com/user:info/virgil-n" onclick="WIKIDOT.page.listeners.userInfo(5661227); return false;">Virgil_N</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/zhongfenshouhezuo">中分兽同人创作！</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607530388 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 16:13</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)" /></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;">WOrs Obrine</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/dingir">Dingir:SCP-076</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607528355 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 15:39</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4055881&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Etinjat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4055881)" /></a><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;">Etinjat</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-series-cn">SCP-CN系列</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607527884 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 15:31</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4183058&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="zhugan" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4183058)" /></a><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;">zhugan</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-916">SCP-CN-916</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607527729 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 15:28</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4183058&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="zhugan" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4183058)" /></a><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;">zhugan</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1419">SCP-CN-1419</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607522321 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 13:58</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/komeijicat" onclick="WIKIDOT.page.listeners.userInfo(5834551); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5834551&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="KomeijiCat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5834551)" /></a><a href="http://www.wikidot.com/user:info/komeijicat" onclick="WIKIDOT.page.listeners.userInfo(5834551); return false;">KomeijiCat</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/rat-s-nest-hub">鼠巢中心页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607522080 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 13:54</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/xanarchy-militia" onclick="WIKIDOT.page.listeners.userInfo(6910500); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6910500&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="XANARCHY MILITIA" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6910500)" /></a><a href="http://www.wikidot.com/user:info/xanarchy-militia" onclick="WIKIDOT.page.listeners.userInfo(6910500); return false;">XANARCHY MILITIA</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/a-small-bundle-of-letters">书札残页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607519933 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 13:18</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-2733-jp">SCP-2733-JP</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607517848 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 12:44</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mint-chocolate" onclick="WIKIDOT.page.listeners.userInfo(4106733); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4106733&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="Mint chocolate" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4106733)" /></a><a href="http://www.wikidot.com/user:info/mint-chocolate" onclick="WIKIDOT.page.listeners.userInfo(4106733); return false;">Mint chocolate</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-5006">SCP-5006</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607516703 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 12:25</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/m-element" onclick="WIKIDOT.page.listeners.userInfo(2941964); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2941964&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="M Element" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2941964)" /></a><a href="http://www.wikidot.com/user:info/m-element" onclick="WIKIDOT.page.listeners.userInfo(2941964); return false;">M Element</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/dream-or-real">这是梦的一环</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607514509 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 11:48</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6603529&amp;amp;size=small&amp;amp;timestamp=1607867492" alt="djpieplus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6603529)" /></a><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;">djpieplus</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/yixue794">异学柒玖肆 玉脂灯台</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607511709 format_%25Y-%25m-%25d%20%25R%7Cagohover">09 Dec 2020 11:01</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eurya" onclick="WIKIDOT.page.listeners.userInfo(4369343); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4369343&amp;amp;size=small&amp;amp;timestamp=1607867493" alt="Eurya" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4369343)" /></a><a href="http://www.wikidot.com/user:info/eurya" onclick="WIKIDOT.page.listeners.userInfo(4369343); return false;">Eurya</a></span></td>
-</tr>
-</table>
 
+<p><a href="/such-a-shame-it-didn-t-work">大计未成，呜呼哀哉</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/director-bold-s-proposal-j">Bold主管的提案-J</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/westrinsauthorpage">Westrin的人事档案</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/reimagining-contest">重新想象竞赛</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/aethris-art">Aethris的艺术作品</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/scp-4186">SCP-4186</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/blood-in-the-water">水中之血</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/scp-4879">SCP-4879</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/i-thought-you-would-leave-even-the-reaper-for-me">我所希冀的一切；我所应得的一切</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/scp-4563">SCP-4563</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/the-slow-asphyxiation-of-undiluted-ardor">溺爱窒息</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/doctor-s-s-personnel-file">S███████博士的人事档案</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/coolpage-funpage">超酷超有趣的页面</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/the-hitchhiker-s-guide-to-the-library">图书馆搭车客指南</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/finding-asmodeus-hub">寻找阿斯蒙蒂斯</a></p>
+</div>
+<div class="list-pages-item">
+
+
+<p><a href="/cool-guys-dont-look-at-explosions">真男人从不回头看爆炸</a></p>
+</div>
     
-    <div class="pager"><span class="pager-no">page 5 of 530</span><span class="target"><a href="/most-recently-edited/p/4">&laquo; previous</a></span><span class="target"><a href="/most-recently-edited/p/1">1</a></span><span class="target"><a href="/most-recently-edited/p/2">2</a></span><span class="target"><a href="/most-recently-edited/p/3">3</a></span><span class="target"><a href="/most-recently-edited/p/4">4</a></span><span class="current">5</span><span class="target"><a href="/most-recently-edited/p/6">6</a></span><span class="target"><a href="/most-recently-edited/p/7">7</a></span><span class="dots">...</span><span class="target"><a href="/most-recently-edited/p/529">529</a></span><span class="target"><a href="/most-recently-edited/p/530">530</a></span><span class="target"><a href="/most-recently-edited/p/6">next &raquo;</a></span></div>
+    <div class="pager"><span class="pager-no">page 5 of 5</span><span class="target"><a href="/esperanza-s-translations/p/4">&laquo; previous</a></span><span class="target"><a href="/esperanza-s-translations/p/1">1</a></span><span class="target"><a href="/esperanza-s-translations/p/2">2</a></span><span class="target"><a href="/esperanza-s-translations/p/3">3</a></span><span class="target"><a href="/esperanza-s-translations/p/4">4</a></span><span class="current">5</span></div>
     
-            <div class="feedinfo">
-            <span class="rss-icon"><img src="/common--theme/base/images/feed/feed-icon-14x14.png" alt="rss icon"/></span>
-            <a href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-edited/category/-fragment/order/updated_at+desc/limit/30/t/Most+Recently+Edited">RSS 消息来源</a>
-        </div>
     </div></div>
 </div>
+</div>
+</div>
+<hr />
 
+
+
+
+
+
+
+
+
+<div class="blockquote">
+<p>投票并不能帮到作者。但讨论和批评可以。I'm trying to leave critique with more of my votes, especially when they're downvotes.</p>
+<div style="text-align: center;">
+<p>我的理论在此：<br />
+<a class="newpage" href="/abolish-the-no-vote-downvote-your-friends-and-other-scp-crit">Abolish The No Vote, Downvote Your Friends, and Other Musings</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rjb-r" onclick="WIKIDOT.page.listeners.userInfo(1229263); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1229263&amp;amp;size=small&amp;amp;timestamp=1607877567" alt="RJB_R" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1229263)" /></a><a href="http://www.wikidot.com/user:info/rjb-r" onclick="WIKIDOT.page.listeners.userInfo(1229263); return false;">RJB_R</a></span></p>
+</div>
+<p>若你也同意，请在评分后留下讨论和批评来帮助作者。</p>
+<hr />
+<p>Previously, I'd vowed to leave critique with <em>every</em> downvote I made. Having spent several months doing that, I don't think it's always healthy approach. There's an ideal middle ground. Sometimes your opinions just aren't helpful, and they'll only hurt the author without helping them improve. You don't <em>always</em> have to explain yourself. Just help out when you can.</p>
+<hr />
+<p>你能在这一页的底部找到一系列我为什么可能不喜欢你的作品的理由。</p>
+<hr />
+<p>如果你读过我的一篇文章，感觉有什么话要说，请留下评论！正面的、负面的或者两者之间的，我很乐意知道我的写作让你感觉到/想到了什么。</p>
+</div>
+
+
+
+<div class="random">
+<p><strong><a href="/cone">随机浏览一个我的作品</a></strong></p>
+</div>
+<hr />
+
+
+
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: center;">
+<h1 id="toc0"><span>作品</span></h1>
+</div>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-e557f5be631f09c09e1e05afb6628a52" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>原创</em></a></li>
+<li><a href="javascript:;"><em>合著作品</em></a></li>
+<li><a href="javascript:;"><em>参赛作品</em></a></li>
+<li><a href="javascript:;"><em>主题和组件</em></a></li>
+<li><a href="javascript:;"><em>其他</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<h1 id="toc1"><span>原创</span></h1>
+<p style="text-align: center;">和竞赛或者设定或者合著无关的单机文章。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/scp-3939">SCP-3939</a></div>
+<div class="cover-info">
+<div class="cover-tagline">一个多重选择的故事。艺作来自/u/VirtualKidAvenue</div>
+<div class="page-info">
+<div>+35 · 19 讨论数</div>
+<div><span class="odate time_1522930697 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Apr 2018 12:18</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/scp-3939">SCP-3939</a></td>
+<th>标题</th>
+<td>[编号保留，以待研究员]</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+35</td>
+<th>笔记</th>
+<td>March 2018 #2; 最多迭代页的作品 (65)</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1522930697 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Apr 2018 12:18</span></td>
+<th>格式破坏？</th>
+<td>哦 是的</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一个多重选择的故事，你，████ ████████，一个不光彩的研究员，必须探明SCP-3939究竟是什么。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>“我退出”，他告诉你。：“我他妈的退出，我受够了。我受够你了。我受够基金会了。我受够这帮屌逼的四级了。你们总会成为一名伟大的O5的你知道吗？操，操你妈，████。”</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#19 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/icat996" onclick="WIKIDOT.page.listeners.userInfo(6404594); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6404594&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="icat996" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6404594)" /></a><a href="http://www.wikidot.com/user:info/icat996" onclick="WIKIDOT.page.listeners.userInfo(6404594); return false;">icat996</a></span> 于 <span class="odate time_1599873449 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Sep 2020 01:17</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: grey;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/scp-3211">SCP-3211</a></div>
+<div class="cover-info">
+<div class="cover-tagline">逆模因搞乱了你的脑子。艺作来自pastarasta1</div>
+<div class="page-info">
+<div>+18 · 29 讨论数</div>
+<div><span class="odate time_1524734781 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Apr 2018 09:26</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/scp-3211">SCP-3211</a></td>
+<th>标题</th>
+<td>一无二随</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+18</td>
+<th>笔记</th>
+<td>最长的SCP（按页面源代码的字数计算）</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1524734781 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Apr 2018 09:26</span></td>
+<th>格式破坏？</th>
+<td>可不</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>对于在手机或者电脑屏幕后的你，通常不受逆模因类SCP威胁。<br />
+但是3211？不，不，不。3211是不同的。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>继续阅读本文件意味着你确定并接受将被暴露在异常效应之下。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#29 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hhkkyy" onclick="WIKIDOT.page.listeners.userInfo(6539868); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6539868&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="hhkkyy" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6539868)" /></a><a href="http://www.wikidot.com/user:info/hhkkyy" onclick="WIKIDOT.page.listeners.userInfo(6539868); return false;">hhkkyy</a></span> 于 <span class="odate time_1601463450 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Sep 2020 10:57</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: grey;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/scp-5251">SCP-5251</a></div>
+<div class="cover-info">
+<div class="cover-tagline">一个不会掩盖故事的谜题</div>
+<div class="page-info">
+<div>+20 · 14 讨论数</div>
+<div><span class="odate time_1598121353 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2020 18:35</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/scp-5251">SCP-5251</a></td>
+<th>标题</th>
+<td>亚麻纤维</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+20</td>
+<th>笔记</th>
+<td>冷帖</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1598121353 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2020 18:35</span></td>
+<th>格式破坏？</th>
+<td>你说呢</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>我们知道它是什么。曾经。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>不要谈论它。不要描述它。如果你看到了它，给我站好然后闭嘴。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#14 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/reisende" onclick="WIKIDOT.page.listeners.userInfo(4514720); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4514720&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Reisende" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4514720)" /></a><a href="http://www.wikidot.com/user:info/reisende" onclick="WIKIDOT.page.listeners.userInfo(4514720); return false;">Reisende</a></span> 于 <span class="odate time_1607688360 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Dec 2020 12:06</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: grey;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-1" style="display:none">
+<h1 id="toc2"><span>合著作品</span></h1>
+<p style="text-align: center;">我和朋友们共同创作的文章（不包括竞赛原因的合著）。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/scp-3790">SCP-3790</a></div>
+<div class="cover-info">
+<div class="cover-tagline">与<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1888434&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="djkaktus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1888434)" /></a><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;">djkaktus</a></span>合著</div>
+<div class="page-info">
+<div>+15 · 7 讨论数</div>
+<div><span class="odate time_1553662984 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">27 Mar 2019 05:03</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/scp-3790">SCP-3790</a></td>
+<th>标题</th>
+<td>异常部</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+15</td>
+<th>合著者</th>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1888434&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="djkaktus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1888434)" /></a><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;">djkaktus</a></span></td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1553662984 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">27 Mar 2019 05:03</span></td>
+<th>格式破坏？</th>
+<td>不</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>在走廊的尽头，电梯将会带你去一个寂静的，黑暗的地方。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>一个基架放置在室中央。尘土上的四条平行线与指印一致，表明无论它上面放置的曾经是什么，最近都已被移走。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#7 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span> 于 <span class="odate time_1598758761 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Aug 2020 03:39</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: grey;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-2" style="display:none">
+<h3 id="toc3"><span>2020设定复兴竞赛</span></h3>
+<p style="text-align: center;">为<a href="/rat-s-nest-hub">鼠巢</a>设定的重生而写作。</p>
+<div class="list-pages-box">    
+    
+    
+    
+    </div>
+<h3 id="toc4"><span>2018末日竞赛</span></h3>
+<p style="text-align: center;">为<a href="/end-of-death-hub">死亡终结</a>设定的启动而写作。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium yes-truncate"><a href="/end-of-death-hub">死亡终结中心页</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><a href="/doomsday-contest">末日竞赛</a>参赛作品 &#8212; 第二名！</div>
+<div class="page-info">
+<div>+11 · 12 讨论数</div>
+<div><span class="odate time_1529057481 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Jun 2018 10:11</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/end-of-death-hub">死亡终结中心页</a></td>
+<th>合著者</th>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/captain-kirby" onclick="WIKIDOT.page.listeners.userInfo(3440103); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3440103&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Captain Kirby" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3440103)" /></a><a href="http://www.wikidot.com/user:info/captain-kirby" onclick="WIKIDOT.page.listeners.userInfo(3440103); return false;">Captain Kirby</a></span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/othellothecat" onclick="WIKIDOT.page.listeners.userInfo(3213383); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3213383&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="OthellotheCat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3213383)" /></a><a href="http://www.wikidot.com/user:info/othellothecat" onclick="WIKIDOT.page.listeners.userInfo(3213383); return false;">OthellotheCat</a></span>以及<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/veiedhimaedhr" onclick="WIKIDOT.page.listeners.userInfo(3737554); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3737554&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Veiedhimaedhr" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3737554)" /></a><a href="http://www.wikidot.com/user:info/veiedhimaedhr" onclick="WIKIDOT.page.listeners.userInfo(3737554); return false;">Veiedhimaedhr</a></span></td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+11</td>
+<th>属于</th>
+<td>2018末日竞赛</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1529057481 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Jun 2018 10:11</span></td>
+<th>格式破坏？</th>
+<td>不，但艺作好看</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一天，人类停止了死亡。Joyce Michaels对此表示很生气。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em><strong>情景指定：</strong>ΩK级。<strong>可能性：</strong>接近不可能。<strong>严重性：</strong>生存可延续。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#12 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4183058&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="zhugan" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4183058)" /></a><a href="http://www.wikidot.com/user:info/zhugan" onclick="WIKIDOT.page.listeners.userInfo(4183058); return false;">zhugan</a></span> 于 <span class="odate time_1599890535 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Sep 2020 06:02</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: green;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/scp-3984">SCP-3984</a></div>
+<div class="cover-info">
+<div class="cover-tagline">属于<a href="/end-of-death-hub">死亡终结</a>。</div>
+<div class="page-info">
+<div>+11 · 6 讨论数</div>
+<div><span class="odate time_1541775503 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Nov 2018 14:58</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/scp-3984">SCP-3984</a></td>
+<th>标题</th>
+<td>用棍戳死神</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+11</td>
+<th>属于</th>
+<td><a href="/end-of-death-hub">死亡终结</a></td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1541775503 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Nov 2018 14:58</span></td>
+<th>格式破坏？</th>
+<td>Yeah</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>死神要是休息了……那我们就用棍戳他。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>一次由Young博士执行的、以标准配置安保用枪的枪击，子弹由前额射入D-10273。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#6 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/luna-phosphophyllite" onclick="WIKIDOT.page.listeners.userInfo(6646091); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6646091&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="luna_phosphophyllite" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6646091)" /></a><a href="http://www.wikidot.com/user:info/luna-phosphophyllite" onclick="WIKIDOT.page.listeners.userInfo(6646091); return false;">luna_phosphophyllite</a></span> 于 <span class="odate time_1598353226 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Aug 2020 11:00</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: grey;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover"><img src="http://scp-wiki-cn.wdfiles.com/local--files/omega-k/1_2020.png" alt="1_2020.png" class="image" />
+<div class="cover-title short yes-truncate"><a href="/omega-k">ΩK</a></div>
+<div class="cover-info">
+<div class="cover-tagline">属于<a href="/end-of-death-hub">死亡终结</a>。</div>
+<div class="page-info">
+<div>+12 · 4 讨论数</div>
+<div><span class="odate time_1529579442 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Jun 2018 11:10</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/omega-k">ΩK</a></td>
+<th>长度</th>
+<td>4688个单词</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+12</td>
+<th>属于</th>
+<td><a href="/end-of-death-hub">死亡终结</a></td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1529579442 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Jun 2018 11:10</span></td>
+<th>格式破坏？</th>
+<td>这是个故事</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>这是末日，但你仍旧需要早晨起床去上班。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>“我觉得这被分类为一次K级情景很有趣，平凡的日常生活仍在继续着。”</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#4 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/feather-aleige" onclick="WIKIDOT.page.listeners.userInfo(6674985); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6674985&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Feather_Aleige" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6674985)" /></a><a href="http://www.wikidot.com/user:info/feather-aleige" onclick="WIKIDOT.page.listeners.userInfo(6674985); return false;">Feather_Aleige</a></span> 于 <span class="odate time_1599985248 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Sep 2020 08:20</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: saddlebrown;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium no-truncate"><a href="/the-foundation-wants-a-robot-army">伦理委员会怪谈志：5个基金会需要机器人军队的理由</a></div>
+<div class="cover-info">
+<div class="cover-tagline">属于<a href="/end-of-death-hub">死亡终结</a></div>
+<div class="page-info">
+<div>+2 · 3 讨论数</div>
+<div><span class="odate time_1542015826 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Nov 2018 09:43</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/the-foundation-wants-a-robot-army">伦理委员会怪谈志：5个基金会需要机器人军队的理由</a></td>
+<th>合著者</th>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/captain-kirby" onclick="WIKIDOT.page.listeners.userInfo(3440103); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3440103&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Captain Kirby" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3440103)" /></a><a href="http://www.wikidot.com/user:info/captain-kirby" onclick="WIKIDOT.page.listeners.userInfo(3440103); return false;">Captain Kirby</a></span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/othellothecat" onclick="WIKIDOT.page.listeners.userInfo(3213383); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3213383&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="OthellotheCat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3213383)" /></a><a href="http://www.wikidot.com/user:info/othellothecat" onclick="WIKIDOT.page.listeners.userInfo(3213383); return false;">OthellotheCat</a></span>以及<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/veiedhimaedhr" onclick="WIKIDOT.page.listeners.userInfo(3737554); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3737554&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Veiedhimaedhr" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3737554)" /></a><a href="http://www.wikidot.com/user:info/veiedhimaedhr" onclick="WIKIDOT.page.listeners.userInfo(3737554); return false;">Veiedhimaedhr</a></span></td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+2</td>
+<th>属于</th>
+<td><a href="/end-of-death-hub">死亡终结</a></td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1542015826 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Nov 2018 09:43</span></td>
+<th>格式破坏？</th>
+<td>是故事啦</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>三个异常组织齐聚一堂试图讨论出一个长期的解决方案。如同真正的聊天，只有少数字句被转录。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em><strong>Young：</strong>为了这种产品能够具有市场，我甚至得承认我们会为这些产品保持一些人性。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#3 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/xkong-ggggg" onclick="WIKIDOT.page.listeners.userInfo(5573535); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5573535&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Xkong ggggg" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5573535)" /></a><a href="http://www.wikidot.com/user:info/xkong-ggggg" onclick="WIKIDOT.page.listeners.userInfo(5573535); return false;">Xkong ggggg</a></span> 于 <span class="odate time_1579238698 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Jan 2020 05:24</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: saddlebrown;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-3" style="display:none">
+<h1 id="toc5"><span>CSS主题</span></h1>
+<p style="text-align: center;">定制的主题，用以给任何页面泼上视觉风格。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium no-truncate"><a href="/theme:ar">安德森机器人 版式（Sigma-9）</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+25 · 11 讨论数</div>
+<div><span class="odate time_1538399444 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Oct 2018 13:10</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/theme:ar">安德森机器人 版式（Sigma-9）</a></td>
+<th>页面类型</th>
+<td>主题</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+25</td>
+<th>写作语言</th>
+<td>CSS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1538399444 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">01 Oct 2018 13:10</span></td>
+<th>写给</th>
+<td>你猜</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>为安德森机器人文章制作的CSS主题。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>div[style=&quot;display: none;&quot;] {<br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;</span>display: block !important;<br />
+}</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#11 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4055881&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Etinjat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4055881)" /></a><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;">Etinjat</a></span> 于 <span class="odate time_1564400473 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Jul 2019 11:41</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: yellow;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium no-truncate"><a href="/theme:swirling-ashes">余烬旋流 主题版式（黑标）</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+7 · 2 讨论数</div>
+<div><span class="odate time_1601111120 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Sep 2020 09:05</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/theme:swirling-ashes">余烬旋流 主题版式（黑标）</a></td>
+<th>页面类型</th>
+<td>主题</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+7</td>
+<th>写作语言</th>
+<td>CSS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1601111120 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Sep 2020 09:05</span></td>
+<th>写给</th>
+<td>鼠巢</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>俯瞰世界尽头烟雾弥漫的城市。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>0%, 85%, 96%, 100% { opacity: var(&#8212;ashes-opacity); } 88.66%, 92.33% { opacity: 0.1; }</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#2 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/justaswelljar-pepper" onclick="WIKIDOT.page.listeners.userInfo(4301969); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4301969&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="JustAswellJar Pepper" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4301969)" /></a><a href="http://www.wikidot.com/user:info/justaswelljar-pepper" onclick="WIKIDOT.page.listeners.userInfo(4301969); return false;">JustAswellJar Pepper</a></span> 于 <span class="odate time_1601473024 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Sep 2020 13:37</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: yellow;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium no-truncate"><a href="/theme:inkblot">墨迹 主题版式（Sigma-9）</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+7 · 7 讨论数</div>
+<div><span class="odate time_1601787047 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Oct 2020 04:50</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/theme:inkblot">墨迹 主题版式（Sigma-9）</a></td>
+<th>页面类型</th>
+<td>主题</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+7</td>
+<th>写作语言</th>
+<td>CSS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1601787047 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Oct 2020 04:50</span></td>
+<th>写给</th>
+<td>安布罗斯</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一个给遭受不公对待的安布罗斯的新格式。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>{$quote}</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#7 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3396110&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Kcorena" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3396110)" /></a><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;">Kcorena</a></span> 于 <span class="odate time_1601874000 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Oct 2020 05:00</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: yellow;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+<h1 id="toc6"><span>组件</span></h1>
+<p style="text-align: center;">模块化工具，用以为文章添加功能。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium yes-truncate"><a href="/component:earthworm">Earthworm系列导航条</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+2 · 0 讨论数</div>
+<div><span class="odate time_1528183141 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Jun 2018 07:19</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/component:earthworm">Earthworm系列导航条</a></td>
+<th>页面类型</th>
+<td>版式</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+2</td>
+<th>写作语言</th>
+<td>CSS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1528183141 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Jun 2018 07:19</span></td>
+<th>格式破坏？</th>
+<td>何不</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一个装饰性更强的导航栏，以取代廉价的纯文本版。使用说明在作者的评论中</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>.earthworm div:nth-child(2).no a, .earthworm a[href=&quot;/&quot;] { color: #333; text-decoration: none; cursor: text; pointer-events: none; }</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#0 由 于</td>
+</tr>
+</table>
+<div class="shade" style="background-color: blue;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium yes-truncate"><a href="/component:theme-squares">主题版式方块</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+4 · 0 讨论数</div>
+<div><span class="odate time_1600438926 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2020 14:22</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/component:theme-squares">主题版式方块</a></td>
+<th>页面类型</th>
+<td>版式</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+4</td>
+<th>写作语言</th>
+<td>CSS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1600438926 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2020 14:22</span></td>
+<th>干嘛费心？</th>
+<td>不想再翻颜色代码了</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)" /></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;">Woedenaz</a></span>的主题颜色方块的组件版。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>&gt;[!-{$-}</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#0 由 于</td>
+</tr>
+</table>
+<div class="shade" style="background-color: blue;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title medium no-truncate"><a href="/component:pages">报纸、书页和便利贴</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+5 · 0 讨论数</div>
+<div><span class="odate time_1603596920 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Oct 2020 03:35</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/component:pages">报纸、书页和便利贴</a></td>
+<th>页面类型</th>
+<td>样板</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+5</td>
+<th>写作语言</th>
+<td>CSS + JS</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1603596920 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Oct 2020 03:35</span></td>
+<th>干嘛费心？</th>
+<td>分页是好的</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一个（大概）能用在各种格式上的分页生成器。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>{$quote}</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#0 由 于</td>
+</tr>
+</table>
+<div class="shade" style="background-color: blue;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-4" style="display:none">
+<h1 id="toc7"><span>其他文章</span></h1>
+<p style="text-align: center;">我可不乐意为这些东西再加一个新分页。</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover">
+<div class="cover-title short yes-truncate"><a href="/cone">cone</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+5 · 1 讨论数</div>
+<div><span class="odate time_1559327441 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 May 2019 18:30</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/cone">cone</a></td>
+<th>页面类型</th>
+<td>作者页</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+5</td>
+<th>请投票吧！</th>
+<td><em>求你力</em></td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1559327441 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 May 2019 18:30</span></td>
+<th>格式破坏？</th>
+<td>不知道呀</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>的作品集。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>的作品集。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#1 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pokm" onclick="WIKIDOT.page.listeners.userInfo(3662223); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3662223&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="pokm" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3662223)" /></a><a href="http://www.wikidot.com/user:info/pokm" onclick="WIKIDOT.page.listeners.userInfo(3662223); return false;">pokm</a></span> 于 <span class="odate time_1559327790 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">31 May 2019 18:36</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: red;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="page-box author">
+<div class="page-cover"><img src="http://scp-wiki-cn.wdfiles.com/local--files/listpages-magic-and-you/parenting2.png" alt="parenting2.png" class="image" />
+<div class="cover-title medium yes-truncate"><a href="/listpages-magic-and-you">Listpages 魔法与你</a></div>
+<div class="cover-info">
+<div class="cover-tagline"><span style="white-space: pre-wrap;">&#32;</span></div>
+<div class="page-info">
+<div>+27 · 12 讨论数</div>
+<div><span class="odate time_1552271730 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2019 02:35</span></div>
+</div>
+</div>
+</div>
+<div class="table">
+<table class="wiki-content-table">
+<tr>
+<th>页面名称</th>
+<td><a href="/listpages-magic-and-you">Listpages 魔法与你</a></td>
+<th>页面类型</th>
+<td>&quot;指导&quot;</td>
+</tr>
+<tr>
+<th>页面评分</th>
+<td>+27</td>
+<th>写作语言</th>
+<td>英语</td>
+</tr>
+<tr>
+<th>发布日期</th>
+<td><span class="odate time_1552271730 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Mar 2019 02:35</span></td>
+<th>格式破坏？</th>
+<td>没</td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>简要说明</th>
+<td>一则使用ListPages的指南，同时指点了页面统计和制作迭代。</td>
+</tr>
+<tr>
+<th>引用</th>
+<td><em>不知道这些都意味着什么？别担心，这篇指导就是为此而准备的。</em></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<th>最新评论</th>
+<td>#12 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lan-muda" onclick="WIKIDOT.page.listeners.userInfo(6898801); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6898801&amp;amp;size=small&amp;amp;timestamp=1607891078" alt="lan_muda" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6898801)" /></a><a href="http://www.wikidot.com/user:info/lan-muda" onclick="WIKIDOT.page.listeners.userInfo(6898801); return false;">lan_muda</a></span> 于 <span class="odate time_1606573497 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">28 Nov 2020 14:24</span></td>
+</tr>
+</table>
+<div class="shade" style="background-color: white;"></div>
+</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div></div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabViewe557f5be631f09c09e1e05afb6628a52 = new YAHOO.widget.TabView('wiki-tabview-e557f5be631f09c09e1e05afb6628a52');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
+<hr />
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;其他Cone做过的事</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">–&nbsp;hide&nbsp;block</a></div>
+<div class="collapsible-block-content">
+<ul>
+<li>申请了<a href="http://scp-wiki.wikidot.com/system:page-tags/tag/interactive">interactive</a>（<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E4%BA%92%E5%8A%A8%E6%80%A7#pages">互动性</a>）标签</li>
+<li>为2018骄傲月制造了<a href="http://www.scp-wiki.net/forum/t-6086502#post-3829009">站点标志</a></li>
+<li>Javascript技术人员（2018年6月25日 - 2019年2月18日）</li>
+<li>为<a href="/gru-p-hub">格鲁乌“P”部门</a>制作了横幅</li>
+<li>申请了<a href="http://www.scp-wiki.net/system:page-tags/tag/theme">theme</a>（版式）标签</li>
+<li>制作了<a href="http://scp-wiki.wikidot.com/lily">一个工具</a>用以查看那些页面需要_image标签</li>
+<li>与<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/w-asriel" onclick="WIKIDOT.page.listeners.userInfo(3317001); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3317001&amp;amp;size=small&amp;amp;timestamp=1607877567" alt="W Asriel" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3317001)" /></a><a href="http://www.wikidot.com/user:info/w-asriel" onclick="WIKIDOT.page.listeners.userInfo(3317001); return false;">W Asriel</a></span>协同创建了<a href="/component:author-page">作者页工具</a>（<a href="/author-page-tool">模块</a>）</li>
+<li>修复了<a href="http://scp-wiki-cn.wikidot.com/usertools">SCP 维基上的用户工具</a></li>
+<li>从日本/德国分部搬运了<a href="http://scp-wiki.wikidot.com/info:start">著作信息模块</a>至英文站</li>
+<li>技术支持职员（2018年2月18日 - 2020年3月4日）</li>
+<li>协助开发了<a href="/component:black-highlighter-theme-dev">黑色高光笔 版式</a></li>
+<li>修订了<a href="http://05command.wikidot.com/forum/t-12884000/proposal:amendment-to-css-policy-again">CSS政策</a></li>
+<li>目前正在制作一个<a href="https://github.com/rossjrw/tars">IRC机器人</a>（进展缓慢！）（加入#tars以查看进度）</li>
+<li>技术主管(2020年3月4日 - 至今)</li>
+</ul>
+</div>
+</div>
+</div>
+<hr />
+<p style="text-align: center;"><a href="http://scp-sandbox-3.wikidot.com/cone">沙盒页</a></p>
+<p style="text-align: center;"><a href="http://topia.wikidot.com/conical-hub">Topia</a></p>
+<hr />
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-2da0b1cf246b6da8ca43cd9f0fb83e61" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>工房</em></a></li>
+<li><a href="javascript:;"><em>差评指南</em></a></li>
+<li><a href="javascript:;"><em>标签管理</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p style="text-align: center;"><img src="http://scp-wiki.wdfiles.com/local--files/cone/image2.png" alt="image2.png" class="image" /></p>
+<p style="text-align: center;"><img src="http://scp-wiki.wdfiles.com/local--files/cone/image3.png" alt="image3.png" class="image" /></p>
+<p style="text-align: center;"><img src="http://scp-wiki.wdfiles.com/local--files/cone/image4.png" alt="image4.png" class="image" /></p>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
+<p style="text-align: center;"><strong>我投差评的常见原因</strong></p>
+<p>我的规则是：只要在你的页面源代码里，我就能据此投票。</p>
+<p>一般来说我没有看到就差评的东西，但有很多东西会让我以负面的态度看待你写的文章。这些是描述我个人观点的指南——它们并不是硬道理，而且它们<strong>绝对</strong>不<em>决定</em>我的观点。I don't really have any instant-downvote triggers, but there's a bunch of things that'll make me see your article in a negative light. These are guidelines that describe my opinions - they are not hard rules, and they <strong>definitely</strong> do not <em>define</em> my opinions.</p>
+<p style="text-align: center;"><strong>给大多数文章的指南</strong></p>
+<p><strong>难看/偷懒的格式：Poor/lazy formatting:</strong>这个可能适用于网站上70%的文章，但如果你的文章只是一页文字的话，我就会先入为主地产生负面印象。如果你不能花时间让你的页面看起来在视觉上有趣一点，我又为什么要花时间去看呢？一张图是一个很好的打破单调的方式，可以让我在看之前就被吸引。 This probably applies to a good 70% of articles on the site, but if your article is just a page of text, I'm already looking at it in a negative light. If you couldn't take the time to make your page visually interesting, why should I take the time to read it? An image is a great way to break the monotony and get me invested without even having to make me read anything.</p>
+<p><strong>警告：Caveat:</strong>你的格式需要和你的内容相匹配。一篇短的、简单的文章需要简单的格式。一篇长的、更详细的文章可以在“我就想这么弄”的格式上宽容一点。不要戴高礼帽穿T恤。 Your formatting should match the content. A short, simple article should have simple formatting. A longer, more elaborate article can get away with a bit more 'just because I want to' formatting. Don't wear a top hat and a t-shirt.</p>
+<p><strong>排除别人：Excluding people:</strong>这个网站的主要构成人员是美国人，所以如果一篇文章直接假设我就住在美国，而我其实住在英国，我就会感觉被排挤了。比如说，如果你说“SCP-XXXX位于北卡罗来纳”而没有点明“美国北卡罗来纳”，你在预设看这篇SCP文档的人在美国，引申开来整个基金会也就在美国，所以作为英国读者，我就没有被算在里面了。请确保你的地点是国际化的，我们就没事了。The majority of the site's userbase is from the US, so when I see an article that assumes that I'm also in the US, as a UK resident, I immediately feel ostracised. For example, if you say &quot;SCP-XXXX is located in North Carolina&quot; without specifying &quot;North Carolina, US&quot;, you're expecting that the person accessing this SCP document is in the US, and by extension the Foundation is US-only, and therefore as a UK reader, I don't count. Make your locations international and we're good.</p>
+<p>请不要排除任何人，哪怕是无意的。Try not to exclude anyone, even unintentionally.</p>
+<p><strong>缺乏视觉描述：Lack of visual description:</strong>如果你在告诉我某个东西——它可能是一个物体、一个地点，什么都好——<em>求求你</em>把它详细描述。视觉描述，对我来说，是看文的时候最重要的东西：我个人必须得在脑海里看见它才能恰当地理解它。如果你不描述它，我就会开始假设；而如果你打破了这些假设（一定会这样，因为你不知道我假设了什么），我就会感到疑惑。 if you're telling me about something - be it an object, an action, a location, or literally anything - <em>please please please</em> describe it in detail. Visual description is the single most important thing to me when it comes to enjoying your article: I personally have to be able to see it in my mind to understand it properly. If you don't describe it, I'll assume things; and when you break those assumptions (which you will, because you don't know what they are), I get confused.</p>
+<p>很简单但也很容易遗漏——如果你的角色走进了一家咖啡店，我可能会假设收银台在右边，而当你说到你的角色对左边的收银员说话的时候我就会感到疑惑。描述房间的时候，请点出收银台在左边，我们就没事了。It's simple but easy to miss things - if your character walks into a coffee shop, I may assume that the cashier is on the right, and then get confused when you say your character talks to the cashier on the left. When you describe the room, specify that the cashier is on the left, and we're good.</p>
+<p><strong>没有让我产生感情：Not making me feel something:</strong>有很多写得很好的文章都很无聊。你可以讲述一个优雅、美丽的故事，但如果我没有感觉到什么情感或者我的观点没有改变的话，就很难得到好评了。如果我感觉我的时间被浪费在读一系列词语而不是令人信服的故事的话，我就很有可能会差评。 there's a lot of very well-written articles out there that are just dull. You can tell an elegant, beautiful story, but if I don't come away from that having felt something or having had my opinion changed, the chance of getting an upvote is very slim. If I feel like my time has been wasted reading a series of words rather than a compelling story, there's a big chance I'll downvote.</p>
+<p><strong>文章末尾的评分模块：A rating module at the end of the article:</strong>我坚信评分对于质量完全没有意义。所以，在文章末尾加上一个评分模块，就说明你不仅不同意我的看法，而且不相信我会记得评分。如果评分对你来说那么重要的话，你可能会需要这个。 I firmly believe that ratings are meaningless as a measure of quality. So, by sticking another rating module at the end of your article, you're telling me not only that you disagree, but also that you don't trust me to remember to vote. If votes are so important to you, maybe you'll enjoy another.</p>
+<p><strong>让我失去兴趣：Losing my interest:</strong>如果我发现我不想继续看一篇文章，我不是那种会想“好吧，如果我不读完整篇文章，我就没资格评分”的人。我会评分。 If I find myself not wanting to continue an article, I am not one of those people who thinks &quot;well, I didn't read the whole thing, so I have no right to vote.&quot; I will.</p>
+<p style="text-align: center;"><strong>给SCP的指南</strong></p>
+<p><strong>用巨大的标题告诉我安保等级：Big headers telling me about a clearance level:</strong>安保等级对你SCP的叙事几乎没有重要性，而如果你一上来就给我一张巨大的图片告诉我我需要4级权限什么的，我的心态会迅速从“开始体验一个有趣的SCP”转变成悲观主义模式。99.9%的所有SCP都有权限限制，那么为什么你的SCP需要特别标注权限？用你的大标题告诉我基本上<em>什么</em>别的都好—— <a href="/scp-3211">我必须马上知道的事情</a>，<a href="/taboo">会影响作为读者的我的重要收容措施</a>，或者用它<a href="/scp-3448">给你的叙事提供语境</a>。 Clearance levels are <em>very rarely</em> important to your SCP's narrative, and when you open with a big image that tells me I need level 4 clearance or whatever, my mindset immediately switches from &quot;open to experiencing an interesting SCP&quot; to pessimist mode. 99.9% of all SCPs have a clearance restriction, why does your SCP's clearance level need special attention? Use your big header to tell me about <em>literally</em> anything else - <a href="/scp-3211">something I need to know immediately</a>, <a href="/taboo">important containment procedures that affect me as a reader</a>, or use it to <a href="/scp-3448">give context to your narrative</a>.</p>
+<p><strong>作为一个常见物品的SCP：SCP is a common object:</strong>如果我发现你的SCP是基于我家里能找到的一件东西，那你就有被差评的风险了。如果我感觉你的SCP<em>完全</em>就是“我能把什么写成异常呢？”那么你的差评基本上就没跑了。同样，如果你告诉我这是一个异常物品但你不告诉我它的起源，那么也会给差评的天平上加上一块砝码。 If I could find the item that your SCP is based on in my house, you're on track for a downvote. If I feel <em>at all</em> that the origin of your SCP is &quot;what could I make anomalous?&quot; then your downvote is pretty much guaranteed. Equally, if you're telling me about an anomalous object but you're not telling about its origin, then that's a big weight on the downvote scale.</p>
+<p>反过来说，如果你的SCP是什么不寻常的东西——比如说一个概念，一个地点，一个抽象的东西，那我就很有兴趣了。On the flipside, if your SCP is something unusual - like a concept, or a location, or something abstract, then I'm all ears.</p>
+<p><strong>“会”这个词：The word &quot;will&quot;:</strong>毫无缘由的强制效果是偷懒的写法。SCP-XXXX会做这个，然后对象会做那个，然后X发生了，然后SCP会这样。你已经让我失去了兴趣。 Compulsion effects for the sake of them are lazy writing. SCP-XXXX will do this, the subject will then do this, then X happens, then the SCP will do this. You've already lost my interest.</p>
+<p><strong>测试测试测试：Testing testing testing:</strong>基金会是收容的。我们不是光圈科技——一旦你做了足够收容某件东西的测试之后，就停手。 the Foundation contains. We're not Aperture Science - once you've done enough tests to establish the most effective way to contain something, <em>stop</em>.</p>
+<p><strong>编辑：Redaction:</strong>我在[这里]解释得更加清楚，但要义就是不要编辑掉任何东西，除非你已经清楚地解释了（或者即将在接下来的文章里清楚解释）为什么这里被编辑掉了。编辑人名和地名毫无意义（就随便编个名字不就好了！），而把编辑当成内容的一部分（“SCP-XXXX接着[已编辑]”）会得到即时的差评。 I explained my opinion better <a href="http://www.scp-wiki.net/forum/t-7159089/your-unpopular-scp-opinions#post-3940816">here</a>, but the gist is don't redact anything unless you've clearly explained (or will clearly explain, later in the article) why it's being redacted. Redacted names of people and places is meaningless (just pick a name/a random place!), and redaction as a substitute for content (&quot;SCP-XXXX then proceeded to [redacted]&quot;) can be an instant downvote.</p>
+<p><strong>结尾的吓人笔记：Spooky notes at the end:</strong>有太多的文章结尾是哦哦哦这笔记好吓人或者是乱码折叠或者之类的了。请缩成一团圆润地离开。给我想些更有创意的东西。 There are <em>so, so many</em> articles that conclude with <em>oooo a spooky note</em> or a corrupted-text collapsible or something. Please just fuck off. Come up with something more original.</p>
+<p style="text-align: center;"><strong>给001提案的指南</strong></p>
+<p><strong>无论如何我都可能会差评它：</strong>001提案数目的膨胀，尤其是有些做作想写不止一篇，已经贬值了这个曾经对我来说价值非凡的格式。因此，我对001的标准高得不正常，基本上什么都是差评。让我震惊。任何一个我给出去的好评都是无比反复无常的——如果我读完了然后好评了，我可能会在一个月后回来，然后发现我其实没有被惊艳到，我就会取消好评。 Inflation in 001 proposal numbers, especially with some authors making more than one proposal, has cheapened the once-valuable meaning of the format for me. As a result, my standards are so ridiculously high for 001s that a downvote is basically guaranteed. Amaze me. Any upvotes that I do give out are extremely volatile - if I read it and upvote, then I come back a month later and find that I'm not amazed any more, that upvote disappears.</p>
+<p style="text-align: center;"><strong>给搞笑文章的指南</strong></p>
+<p>对于搞笑文章，其他所有指南都可以无视，只需要重视一件事：</p>
+<p><strong>它不好笑：</strong>如果我笑了，我就给好评，没有笑，就差评。就是这样。如果我还想说什么深刻的发言的话，我就会留下评论。</p>
+<p style="text-align: center;"><strong>给中心页的指南</strong></p>
+<p><strong>没有解释中心页的用途：</strong>要是我读下来，你的中心页没有很好地让我知道我要写什么来给它做出贡献，你就会得到差评。要不然就是好评。</p>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<p><strong>最近的主题</strong></p>
+<div class="list-pages-box">    
+
+<ol>
+<li><a href="/theme:xmas">圣诞节 版式</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span> on <span class="odate time_1607155805 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Dec 2020 08:10</span></li>
+<li><a href="/theme:goc">职责所在 主题</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4055881&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="Etinjat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4055881)" /></a><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;">Etinjat</a></span> on <span class="odate time_1605366460 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Nov 2020 15:07</span></li>
+<li><a href="/theme:paperstack">纸堆 版式</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span> on <span class="odate time_1604889911 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Nov 2020 02:45</span></li>
+<li><a href="/theme:fmd-bhl-theme">FMD 黑标主题版式</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ai-mayca" onclick="WIKIDOT.page.listeners.userInfo(4485997); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4485997&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="AI_Mayca" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4485997)" /></a><a href="http://www.wikidot.com/user:info/ai-mayca" onclick="WIKIDOT.page.listeners.userInfo(4485997); return false;">AI_Mayca</a></span> on <span class="odate time_1604828010 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Nov 2020 09:33</span></li>
+<li><a href="/theme:technoblast">科技爆破 版式</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4055881&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="Etinjat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4055881)" /></a><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;">Etinjat</a></span> on <span class="odate time_1602216474 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Oct 2020 04:07</span></li>
+</ol>
+
+    
+    
+    
+    </div>
+<p><strong>最近的版式</strong></p>
+<div class="list-pages-box">    
+
+<ol>
+<li><a href="/component:parawatch-forum">观谬维基论坛组件</a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1607891079" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span> on <span class="odate time_1606621024 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Nov 2020 03:37</span></li>
+</ol>
+
+    
+    
+    
+    </div></div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabView2da0b1cf246b6da8ca43cd9f0fb83e61 = new YAHOO.widget.TabView('wiki-tabview-2da0b1cf246b6da8ca43cd9f0fb83e61');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
                     </div>
 
                             
@@ -806,7 +1897,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E7%AE%A1%E7%90%86#pages">管理</a>
+                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a>
                             </span>
                         </div>
                     
@@ -814,12 +1905,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 14, 最后编辑于: <span class="odate time_1593164111 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">26 Jun 2020 09:35</span></div>
+                            <div id="page-info">页面版本: 57, 最后编辑于: <span class="odate time_1607877567 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">13 Dec 2020 16:39</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+12</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-5386923/most-recently-edited" class="btn btn-default" id="discuss-button">讨论 (0)</a>
+<a href="/forum/t-13110528/esperanza-s-translations" class="btn btn-default" id="discuss-button">讨论 (11)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -886,45 +1977,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://halfmoonbay.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/halfmoonbay.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://wychwood.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wychwood.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://halfmoonbay.wikidot.com">Half Moon Bay Weyr</a></h3>
+            <h3><a target="_blank" href="http://wychwood.wikidot.com">Wikiwood</a></h3>
             <div class="desc">          
-              Join us at paper.mudmagic.com Port:2211
+              Wychwood Warriors Wiki
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://excelencia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/excelencia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-jp-archive.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-jp-archive.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://excelencia.wikidot.com">EXCELENCIA</a></h3>
+            <h3><a target="_blank" href="http://scp-jp-archive.wikidot.com">SCP日本財団中枢資料室。</a></h3>
             <div class="desc">          
-              exploring, describing and promoting  great websites!
+              収用
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chaoscomplexityineducation.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chaoscomplexityineducation.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://05command.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/05command.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chaoscomplexityineducation.wikidot.com">Chaos &amp; Complexity Theories in Education Group</a></h3>
+            <h3><a target="_blank" href="http://05command.wikidot.com">O5 Command</a></h3>
             <div class="desc">          
-              Also a Special Interest Group of the American Educational Research Association
+              Why they changed it I can&#039;t say. People just liked it better that way
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://alicebot.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/alicebot.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://archthrones-mod.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/archthrones-mod.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://alicebot.wikidot.com">Alicebot</a></h3>
+            <h3><a target="_blank" href="http://archthrones-mod.wikidot.com">DS3 Archthrones Wiki</a></h3>
             <div class="desc">          
-              Free AIML chat bot content
+              
             </div>
           </div>
         </div>
