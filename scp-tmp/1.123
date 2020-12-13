@@ -1,266 +1,256 @@
-@import url('http://scp-wiki.wdfiles.com/local--files/theme%3Awilsons/national-park.css');
-
 /*
-    Wilson's Wildlife Theme
-    [2019 Wikidot Theme]
-    Theme by stormbreath.
-    Originally by stormbreath and DarkStuff.
-    The WWS logo was created by DrAnnoyingDog.
+    Alexylva University Theme
+    [2018 Wikidot Theme]
+    Created by Uncle Nicolini, cleaned by ROUNDERHOUSE.
+    Logo created by MingoMongo, under CC BA SA 3.0: https://www.deviantart.com/mingomongo/art/SCP-Alexylva-University-Simple-Logo-750830216
+    Paper Textures created by Jojo-ojoj, under CC BY SA 3.0: https://www.deviantart.com/jojo-ojoj/art/Old-paper-seamless-textures-1-531542908
+    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan, and MC&D Theme created by Randomini.
 */
 
-@supports(--css:variables) {
+   /* FONTS */
 
-:root {
-/* Intro */
-    --theme-base: "nuscp"
-    --theme-id: "wilderness-theme"
-    --theme-name: "Wilderness Theme";
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=GFS+Neohellenic');
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil:700');
 
-/* Header */
-    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Awilsons/WWS_Logo_2.2_abrv.png");
-    --header-title: "威尔逊野生动物应对组";
-    --header-subtitle: "欢迎所有小动物之地！";
-    --header-font: 'national_parkregular', sans-serif;
-    --header-gradient-color-bottom: 81, 181, 75;
-    --header-gradient-color-middle: 170, 220, 131;
-    --header-gradient-color-top: 209, 237, 154;
-    --gradient-header: linear-gradient(to top,
-          rgb(var(--header-gradient-color-bottom)) 0%,
-          rgb(var(--header-gradient-color-middle)) 70%,
-          rgb(var(--header-gradient-color-top)) 100%);
-    --diagonal-stripes: unset;
+   /* HEADER */
 
-/* Colors */
-    --pale-gray-monochrome: 220, 242, 176; /* Wilson's Quote Color (Light Green)*/
-    --gray-monochrome: 80, 68, 37; /* dark brown */
-    --dark-gray-monochrome: 66, 56, 31; /* darker brown */
-    --bright-accent: 35, 180, 35; /* bright green */
-    --medium-accent: 20, 140, 20; /* medium green */
-    --dark-accent: 20, 100, 20; /* dark green */
-    --newpage-color: 102, 221, 102; /* pale green */
-
-    --wilson-header: 163, 193, 98; /* Wilson's Format Header */
-    --wilson-subtitle: 200, 226, 147; /* Wilson's Format Subtitle */
-    --wilson-body: 209, 237, 154; /* Wilson's Format Body */
-    --wilson-text: 102, 87, 49; /* Wilson's Format Text */
-
-    --swatch-topmenu-bg-color: var(--gray-monochrome);
-    --rating-module-button-color: var(--wilson-text);
-    --rating-module-text-color: var(--wilson-text);
-    --sidebar-links-text: var(--wilson-text);
-    --pale-accent: var(--dark-accent);  /* Visited Link Color*/
-    --barColour: var(--wilson-header); /* Ayer's Info Module */
+#header {
+    height: 140px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30px; /* for menu */
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/alexyvalogo.png) 10px 35px no-repeat;
 }
 
-/* FONTS */
-#header h2 span:before,
-#top-bar,
-#side-bar {
-    font-family: var(--header-font); /*Makes subtitle/top-bar/side-bar National Park */
+#header h1 span {
+    display: none;
 }
 
-/* HEADER */
-@media only screen and (max-width: 768px) {
-    #header {
-        background-size: 0.625rem 2.500rem;
-        background-repeat: no-repeat;
-        background-position: left 0.75rem top 1.1875rem;
-        background-clip: border-box;
-        background-size: auto 5.375rem;
-    }
-} /* Fixes mobile sizing issue */
-
-#page-title {
-    color: rgb(var(--wilson-text));
-    border-color: rgb(var(--wilson-text));
+#header h2 span {
+    color: transparent;
+    text-shadow: none;
 }
 
-#top-bar > div.mobile-top-bar > div.open-menu > p > a {
-    color: rgb(var(--white-monochrome)) !important;
+#header h2 span::before {
+    content: "西哥特人冲啊！";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-/* SEARCH-BAR */
-#search-top-box-input,
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    background: rgb(var(--wilson-header)) !important;
-    color: rgb(var(--wilson-text)) !important;
-} /* Recolors part of searchbar where text is typed, !importants used in Nu. */
-
-#search-top-box-form input[type="submit"],
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-    background: rgb(var(--gray-monochrome)) !important;
-} /* Recolors searchbar button, !important used in Nu. */
-
-/* LOGIN STUFF */
-#login-status {
-    color: rgba(var(--white-monochrome));
-}
-#login-status a {
-    color: rgba(var(--white-monochrome));
-}
-#login-status ul a {
-    color: rgba(var(--gray-monochrome));
-}
-#account-topbutton {
-    color: rgba(var(--wilson-text));
+#header h1 a::before {
+    content: "Alexylva大学";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    color: white;
+    font-style: normal;
+    text-shadow: none;
 }
 
-/* Page Rating Module */
-.page-rate-widget-box {
-    background: linear-gradient(to top,
-     rgba(var(--pale-gray-monochrome),1) 0%,
-     rgba(var(--pale-gray-monochrome), 1) 100%);
-    border-color: rgb(var(--gray-monochrome));
-}
-#page-content .rate-box-with-credit-button {
-    background: linear-gradient(to top,
-     rgba(var(--pale-gray-monochrome),1) 0%,
-     rgba(var(--pale-gray-monochrome), 1) 100%);
-    border-color: rgb(var(--gray-monochrome));
-}
-#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
-    background-color: rgb(var(--wilson-text));
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/header2.png) top left repeat-x;
+    background-size: 105px;
 }
 
-#page-content .rate-box-with-credit-button > .creditButton:hover {
-    background: rgba(var(--bright-accent), 0.8);
+/*
+div#page-content {
+    color: white;
+    transform: rotatez(1deg);
+    background-image: url("https://i.imgur.com/igf22s1.gif");
+}
+*/
+
+   /* LINKS */
+
+a {
+    color: #9c3111;
+    text-decoration: bold;
 }
 
-#page-content .modalbox {
-     background: rgb(var(--pale-gray-monochrome)) !important;
-     color: rgb(var(--wilson-text));
-     border-radius: 0;
-     box-shadow: 0 2px 6px rgba(var(--bright-accent), 0.5);
+a.newpage {
+    color: #d68c53;
+    text-decoration: bold;
 }
 
-/* RECOLOR THE QUOTEBLOCK */
-blockquote,
-.blockquote {
-    border-color: transparent;
-    color: rgb(var(--wilson-text));
+#side-bar a:visited {
+    color: #9c3111;
 }
 
-#toc {
-    border-color: transparent;
-    color: rgb(var(--wilson-text));
-    background-color: rgb(var(--pale-gray-monochrome));
-    box-shadow: 0em 0.063em 0.125em rgba(0, 0, 0, 0.1);
-    padding: 0 1em;
+a:visited {
+    color: #4c3c26;
+}
+
+   /* MISC & WIDGET STYLING */
+
+#login-status, #login-status a {
+    color: #fff;
+    border-color: #fff;
+}
+
+.scp-image-block .scp-image-caption {
+   font-family: 'Oswald', sans-serif;
+   background-color: #9c3111;
+   color: white;
 }
 
 hr {
-    border-top: 0.063rem solid rgba(var(--wilson-text));
+  background-color: #9c3111;
 }
 
-/* Image Caption */
-.scp-image-block .scp-image-caption {
-  border-color: rgb(var(--wilson-text));
-  color: rgb(var(--wilson-text)); /*Recolors Image captions */
+#page-title {
+    font-family: 'Oswald', sans-serif;
+    color: #9c3111;
 }
 
-/* TRANSLATION BLOCK */
-iframe.scpnet-interwiki-frame {
-  filter: hue-rotate(140deg) brightness(150%);
-  -webkit-filter: hue-rotate(140deg) brightness(150%);
-}
-
-/* RECOLOR THE TABLES */
-#page-content .wiki-content-table tr th {
-    background-color: rgb(var(--wilson-header));
-    color: white;
-    border-color: rgb(var(--wilson-text));
-}
-
-/* TABS */
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: rgb(var(--gray-monochrome));
-    box-shadow: 0 calc(0.0625rem * 5) 0 0 rgb(var(--gray-monochrome));
-}
-
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-color: rgb(var(--wilson-body));
-    /* tab background */
-    border-color: transparent! important;
-    color: rgb(var(--wilson-text));
-}
-
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background-color: rgb(var(--wilson-header));
-    color: rgb(var(--white-monochrome));
-}
-
-.yui-navset .yui-nav li,
-.yui-navset .yui-navset-top .yui-nav li {
-    background-color: rgb(var(--wilson-body));
-    border-color: transparent;
-    box-shadow: 0 0 0 0.0625rem rgb(var(--wilson-header));
-}
-
-/* Selected Tab */
-.yui-navset .yui-nav .selected,
-.yui-navset .yui-navset-top .yui-nav .selected {
-    background-color: rgb(var(--wilson-header));
-}
-
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:active {
-    background-color: rgb(var(--wilson-header));
-    color: rgb(var(--white-monochrome));
-}
-
-.yui-navset .yui-nav .selected a:hover {
-    background-color: rgb(var(--wilson-subtitle));
-    color: rgb(var(--white-monochrome));
-}
-
-.yui-navset .yui-content {
-    background-color: rgba(var(--wilson-body),0.25);
-    color: rgb(var(--wilson-text));
-    /* content background color */
-}
-
-.yui-navset .yui-content,
-.yui-navset .yui-navset-top .yui-content {
-    border-color: rgb(var(--gray-monochrome));
-    /* content border */
-}
-
-.yui-navset-left .yui-content {
-    border-left-color: rgb(var(--gray-monochrome));
-    /* different border color */
-}
-}
-
-/* Wilson's Divs */
-div.wilson-border {
-    border: 0.063em solid rgb(102, 87, 49);
-    box-shadow: 0em 0.063em 0.125em rgba(0, 0, 0, 0.1);
-}
-
-div.wilson-header {
-    color: white;
-    background: rgb(163, 193, 98);
-    padding: 1em;
-    font-size: 150%;
-    font-weight: bold;
-    text-align: center;
-}
-
-div.wilson-subtitle {
-    color: rgb(102, 87, 49);
-    background: rgba(200, 226, 147);
-    padding: 0.313em;
-    text-align: right;
+h1, h2, h3, h4, h6, h7 {
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-style: italic;
+    color: black;
     font-weight: bold;
 }
 
-div.wilson-body {
-    color: rgba(102, 87, 49);
-    background: rgb(209, 237, 154);
-    padding: 1em;
+#page-title {
+    border-color: black;
+}
+
+.blockquote, blockquote {
+    background-color: #9c3111;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    border: 4px solid #d84519;
+}
+
+.borders {
+    display: block;
+    margin: auto;
+    border: 6px double #9c3111;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/4.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.main-body-div{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px 25px;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/3.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+/* RATING MODULE */
+
+.page-rate-widget-box .rate-points {
+     background-color: #a38b65 !important;
+     border: solid 1px #ffe4af;
+}
+
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
+     background-color: a38b65;
+     border-top: solid 1px #ffe4af;
+     border-bottom: solid 1px #ffe4af;
+     font-weight: bold;
+}
+
+.page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a {
+     background: a38b65;
+     color: #ffe4af;
+     padding: 0 4px;
+     margin: 0 1px;
+}
+
+.page-rate-widget-box .rateup a:hover, .page-rate-widget-box .ratedown a:hover {
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
+}
+
+.page-rate-widget-box .cancel {
+     background-color: #a38b65;
+     border: solid 1px #ffe4af;
+     border-left: 0;
+     border-radius: 0 5px 5px 0;
+}
+
+.page-rate-widget-box .cancel a {
+     background: transparent;
+     text-transform: uppercase;
+     color: #ffe4af;
+}
+
+.page-rate-widget-box .cancel a:hover {
+     border-radius: 0 3px 3px 0;
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
+}
+
+   /* SIDEBAR */
+
+/* bonus: .side-block {transform: skew(3deg, 4deg);} */
+
+#side-bar .side-block {
+    padding: 10px;
+    border: 3px double #9c3111;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(102,0,0,.5);
+    background: #fff;
+}
+
+#side-bar div.menu-item img {
+    filter: hue-rotate(50deg);
+}
+
+   /* Search Bar */
+
+#search-top-box-input, #search-top-box input.empty,
+#search-top-box-form input[type=submit] {
+    transition: 0.2s linear;
+}
+
+#search-top-box-input, #search-top-box input.empty {
+    background-color: #B4935D;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+}
+
+#search-top-box-input:hover, #search-top-box-input:focus,
+#search-top-box input.empty:hover, #search-top-box input.empty:focus {
+    outline: 0;
+    border: 1px solid #fff;
+    background-color: #B4935D;
+    box-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+#search-top-box-form input[type=submit] {
+    outline: 0;
+    height: 1.65em;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
+
+    position: relative;
+    top: -1px;
+
+    box-shadow: none;
+}
+
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: 1px solid #fff;
+    border-radius: 0;
+    background: #B6925E;
+}
+
+#search-top-box-form input[type=submit]:active {
+    padding: 0 0.5em;
+    border: 2px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        //data.setProperty('allowCollapse', 'true');
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          // - Command
+          [{v:'O5', f:'<b>O5</b></br><i>SCP基金会的指挥官</i>'}, '', ''],
+
+          // - Sovrintendenza
+          [{v:'IT-Command', f:'<b>S5</b></br><i>监督意大利分部</i>'}, 'O5', ''],
+
+          // - Dipartimenti
+          [{v:'DS', f:'<b>DS</b></br>科学部门'}, 'IT-Command', 'Doppio click per espandere'],
+          [{v:'DAIeD', f:'<b>DAIeD</b></br>内部和外交部'}, 'IT-Command', 'Doppio click per espandere'],
+          [{v:'DM', f:'<b>DM</b></br>军事部门'}, 'IT-Command', 'Doppio click per espandere'],
+          [{v:'DE', f:'<b>DE</b></br>神秘系部门'}, 'IT-Command', 'Doppio click per espandere'],
+
+          // - Sezioni
+          [{v:'SB', f:'<b>SB</b></br>生物部门'}, 'DS', 'Doppio click per espandere'],
+          [{v:'SS-A', f:'<b>SS-A</b></br>历史和考古部门'}, 'DS', ''],
+          [{v:'SPA', f:'<b>SPA</b></br>高级设计部门'}, 'DS', 'Doppio click per espandere'],
+          [{v:'SRE-M', f:'<b>SRE-M</b></br>道德-道德规范部门'}, 'DAIeD', 'Doppio click per espandere'],
+          [{v:'SIR', f:'<b>SIR</b></br>监管和科研部门'}, 'DAIeD', 'Doppio click per espandere'],
+          [{v:'SPeV', f:'<b>SPeV</b></br>保护和监督部门'}, 'DM', 'Doppio click per espandere'],
+          [{v:'SSM', f:'<b>SSM</b></br>特遣部队部门'}, 'DM', 'Doppio click per espandere'],
+          [{v:'SRSE', f:'<b>SRSE</b></br>研究和发展部门'}, 'DE', 'Doppio click per espandere'],
+          [{v:'SCSE', f:'<b>SCSE</b></br>收容和部署部门'}, 'DE', 'Doppio click per espandere'],
+
+          // - Divisioni
+          [{v:'DSsMM', f:'<b>DSsMM</b></br>心灵研究部门'}, 'SB', ''],
+          [{v:'DRIA', f:'<b>DRIA</b></br>机器人和人工智能部门'}, 'SPA', ''],
+          [{v:'ULIS', f:'<b>ULIS</b></br>新人培训部门'}, 'SRE-M', ''],
+
+          // - Squadre Operative
+          [{v:'SSM-X', f:'<b>SSM-<i>X</i></b></br>特殊特遣部队'}, 'SSM', ''],
+          [{v:'SIR-X', f:'<b>SIR-<i>X</i></b></br>秘密调查特遣队'}, 'SIR', ''],
+          [{v:'SPeV-X', f:'<b>SPeV-<i>X</i></b></br>固定收容站点的警卫'}, 'SPeV', ''],
+
+          // Add new nodes at the end!!
+        ]);
+
+        // Set the border color
+        data.setRowProperty(1, 'style', 'border: 1px solid blue;'); //S5
+        data.setRowProperty(2, 'style', 'border: 1px solid green;'); //DS
+        data.setRowProperty(3, 'style', 'border: 1px solid green;'); //DAIeD
+        data.setRowProperty(4, 'style', 'border: 1px solid green;'); //DM
+        data.setRowProperty(5, 'style', 'border: 1px solid green;'); //DE
+        data.setRowProperty(6, 'style', 'border: 1px solid orange;'); //SB
+        data.setRowProperty(7, 'style', 'border: 1px solid orange;'); //SS-A
+        data.setRowProperty(8, 'style', 'border: 1px solid orange;'); //SPA
+        data.setRowProperty(9, 'style', 'border: 1px solid orange;'); //SRE-M
+        data.setRowProperty(10, 'style', 'border: 1px solid orange;'); //SIR
+        data.setRowProperty(11, 'style', 'border: 1px solid orange;'); //SPeV
+        data.setRowProperty(12, 'style', 'border: 1px solid orange;'); //SSM
+        data.setRowProperty(13, 'style', 'border: 1px solid orange;'); //SRSE
+        data.setRowProperty(14, 'style', 'border: 1px solid orange;'); //SCSE
+        data.setRowProperty(15, 'style', 'border: 1px solid red;'); //DSsM
+        data.setRowProperty(16, 'style', 'border: 1px solid red;'); //DRIA
+        data.setRowProperty(17, 'style', 'border: 1px solid red;'); //ULIS
+        data.setRowProperty(18, 'style', 'border: 1px solid red;'); //SIR-X
+        data.setRowProperty(19, 'style', 'border: 1px solid red;'); //SPeV-X
+        data.setRowProperty(20, 'style', 'border: 1px solid red;'); //SSM-X
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {allowHtml: true, allowCollapse: true, size: 'small',});
+        // Collapse nodes.
+        //chart.collapse(1, false); //S5
+        //chart.collapse(2, true); //DS
+        //chart.collapse(3, true); //DAIeD
+        //chart.collapse(4, true); //DM
+        //chart.collapse(5, true); //SB
+        //chart.collapse(7, true); //SPA
+        //chart.collapse(8, true); //SRE-M
+        //chart.collapse(9, true); //SIR
+        //chart.collapse(10, true); //SPeV
+        //chart.collapse(11, true); //SSM
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div"></div>
+  <script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

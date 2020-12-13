@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style type="text/css">
+@import url(http://scp-jp.wdfiles.com/local--files/japanese-syntax/scp-WikidotCss.css);
+.pseudoPlay{
+    width: 30px;
+    height: 30px;
+    position:relative;
+    border:none;
+    background: -webkit-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -moz-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -o-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -ms-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: linear-gradient(to right bottom, #EEEEEE 4%, #888888 100%);
+    cursor:pointer;
+    border-radius: 100%;
+}
+
+.pseudoPlay:hover{
+    width: 30px;
+    height: 30px;
+    position:relative;
+    background: -webkit-linear-gradient(left top, #CCCCCC 4%, #666666 100%);
+    background: -moz-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: -o-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: -ms-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: linear-gradient(to right bottom, #CCCCCC 4%, #66666 100%);
+    cursor:pointer;
+}
+
+.pseudoPlay:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    top:4px;
+    left:4px;
+    width:0px;
+    height:0px;
+    border-style: solid;
+    border-width: 11px 0 11px 22px;
+    border-color: transparent transparent transparent #000000;
+}
+
+.pseudoPlay:hover:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    top:6px;
+    left:6px;
+    width:0px;
+    height:0px;
+    border-style: solid;
+    border-width: 9px 0 9px 18px;
+    border-color: transparent transparent transparent #000000;
+}
+
+.pseudoStop{
+    width: 30px;
+    height: 30px;
+    position:relative;
+    border:none;
+    background: -webkit-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -moz-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -o-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: -ms-linear-gradient(left top, #EEEEEE 4%, #888888 100%);
+    background: linear-gradient(to right bottom, #EEEEEE 4%, #888888 100%);
+    cursor:pointer;
+    border-radius: 100%;
+}
+
+.pseudoStop:hover{
+    width: 30px;
+    height: 30px;
+    position:relative;
+    background: -webkit-linear-gradient(left top, #CCCCCC 4%, #666666 100%);
+    background: -moz-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: -o-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: -ms-linear-gradient(left top, #CCCCCC 4%, #66666 100%);
+    background: linear-gradient(to right bottom, #CCCCCC 4%, #66666 100%);
+    cursor:pointer;
+}
+
+.pseudoStop:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    top:5px;
+    left:6px;
+    width:6px;
+    height:20px;
+    border-style: solid;
+    border-width: 0px 6px 0px 6px;
+    border-color: #000000;
+}
+
+.pseudoStop:hover:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    top:7px;
+    left:6px;
+    width:6px;
+    height:16px;
+    border-style: solid;
+    border-width: 0px 6px 0px 6px;
+    border-color: #000000;
+}
+
+.pseudoControlerDevice{
+    width:80%;
+    position:relative;
+    margin:auto;
+    height:36px;
+    background: -webkit-linear-gradient(left top, #000000 4%, #999999 100%);
+    background: -moz-linear-gradient(left top, #000000 4%, #999999  100%);
+    background: -o-linear-gradient(left top, #000000 4%, #999999  100%);
+    background: -ms-linear-gradient(left top, #000000 4%, #999999  100%);
+    background: linear-gradient(to right bottom, #000000 4%, #999999  100%);
+    border-radius: 5px;
+    color:#FFF;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.bufferLine{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #474747), color-stop(1.00, #bababa));
+    background: -webkit-linear-gradient(#474747, #bababa);
+    background: -moz-linear-gradient(#474747, #bababa);
+    background: -o-linear-gradient(#474747, #bababa);
+    background: -ms-linear-gradient(#474747, #bababa);
+    background: linear-gradient(#474747, #bababa);
+    cursor:pointer;
+
+}
+
+.volumeUpButtom{
+    width:1em;
+    position:relative;
+    cursor:pointer;
+}
+
+.volumeUpButtom:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.5em 1em 0.5em;
+    border-color: transparent transparent #FFF transparent;
+    top:0px;
+    left:0px;
+}
+
+.volumeUpButtom:hover:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.5em 1em 0.5em;
+    border-color: transparent transparent #AAA transparent;
+    top:0px;
+    left:0px;
+}
+
+.volumeDownButtom{
+    width:1em;
+    position:relative;
+    cursor:pointer;
+}
+
+.volumeDownButtom:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1em 0.5em 0em 0.5em;
+    border-color: #FFF transparent transparent transparent;
+    top:0px;
+    left:0px;
+}
+
+.volumeDownButtom:hover:before{
+    content:" ";
+    display:block;
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1em 0.5em 0em 0.5em;
+    border-color: #AAA transparent transparent transparent;
+    top:0px;
+    left:0px;
+}
+</style>
+<script type="text/javascript" src="http://scp-jp.wdfiles.com/local--files/japanese-syntax/scpHTMLblockCtrl_ver1_ex.js"></script>
+<script type="text/javascript">
+isHTMLblockHide = false;
+</script>
+<div id="pseudoBGMControler" class="pseudoControlerDevice"><div style="color:#FFF;text-align:center;">-音楽ファイル読み込み中-</div></div>
+<span class="fake-link" id="reload" style="display:none;">音楽を再ロード</span>
+<div id="scpHTMLblockResizeSwitch"></div>
+
+<script type="text/javascript">
+var forPseudoControlerBGM;
+var pseudoPlayandPause;
+var pseudoPlaySeekBar;
+var pseudoPlayisMouseDown = false;
+var VolumeInt = 100;
+var volumeCtrPush = 0;
+var watchMusicState;
+var Browser;
+var retryCount = 0;
+var autoplay = false
+document.addEventListener( 'DOMContentLoaded',function() {
+    forPseudoControlerBGM = new Audio("");
+    //ここに流したいBGMを記述↓
+    forPseudoControlerBGM.src = "http://scp-jp.wdfiles.com/local--files/scp-1139-jp/arigatou.mp3";
+    Browser = getBrowserForMusicPlayer();
+    //偽装コントローラー設置
+            var check = isUseSmartPhone();
+        if(!check){
+            document.addEventListener("mousedown",function(){pseudoPlayisMouseDown = true;});
+            document.addEventListener("mouseup",function(){pseudoPlayisMouseDown = false;});
+        }else{
+            document.addEventListener("touchend",function(){pseudoPlayisMouseDown = false;});
+        }
+    forPseudoControlerBGM.addEventListener("loadeddata",function(){
+
+        //プレイボタン
+        var pseudoControrler = document.getElementById("pseudoBGMControler");
+        pseudoControrler.removeChild(pseudoControrler.firstChild);
+        if(check){
+            pseudoControrler.style.width = "98%";
+        }else{
+            var window_w = window.innerWidth;
+            if(window_w < 500){
+                pseudoControrler.style.width = "98%";
+            }else if(window_w < 680){
+                pseudoControrler.style.width = "90%";
+            }else if(window_w < 750){
+                pseudoControrler.style.width = "80%";
+            }
+        }
+        setTimeout(function(){pseudoControrler.style.width = (pseudoControrler.getBoundingClientRect().width) + "px";},10);
+        var Base = document.createElement("div");
+        Base.setAttribute("style","position:absolute;left:0px;top:0px;padding:3px;width:36px;height:36px;");
+        pseudoPlayandPause = document.createElement("button");
+        pseudoPlayandPause.setAttribute("class","pseudoPlay");
+        Base.appendChild(pseudoPlayandPause);
+        pseudoControrler.appendChild(Base);
+        pseudoPlayandPause.setAttribute("onclick","controlBGMbyPseudoControler(1,this,event)");
+        //シークバー設置
+        Base = document.createElement("div");
+        var client = pseudoControrler.getBoundingClientRect();
+        Base.setAttribute("style","width:80px;height:36px;position:absolute;left:45px;top:0px;");
+        setTimeout(function(){Base.style.width = (pseudoControrler.getBoundingClientRect().width - 45) + "px";},13);
+
+        var Base2 = document.createElement("div");
+        Base2.setAttribute("style","position:relative;width:100%;height:36px;");
+        pseudoPlaySeekBar = document.createElement("div");
+        pseudoPlaySeekBar.setAttribute("style","position:absolute;height:6px;width:80%;top:8px;left:0px;background-color:#000;border-radius:6px;");
+        Base2.appendChild(pseudoPlaySeekBar);
+
+        seekBar = document.createElement("div");
+        seekBar.setAttribute("style","position:absolute;height:6px;width:0px;top:8px;left:0px;background-color:#00F;z-index:10;border:solid #00f 1px;cursor:pointer;");
+        Base2.appendChild(seekBar);
+        setEvent(seekBar);
+
+        var Buffer = document.createElement("div");
+        Buffer.setAttribute("style","position:absolute;height:6px;width:0px;top:8px;left:0px;");
+        Buffer.setAttribute("class","bufferLine");
+        Base2.appendChild(Buffer);
+        setEvent(Buffer);
+        var timeView = document.createElement("div");
+        timeView.setAttribute("style","position:absolute;bottom:2px;left:3px;color:#FFF;font-size:10px;z-index:11;");
+
+        Base2.appendChild(timeView);
+        var pointer = document.createElement("div");
+        pointer.setAttribute("style","border-radius:100%;width:10px;height:10px;background-color:#EEE;top:6px;left:0px;position:absolute;z-index:20;cursor:pointer;");
+        Base2.appendChild(pointer);
+        setEvent(pointer);
+
+        Base.appendChild(Base2);
+        pseudoControrler.appendChild(Base);
+
+        //音量ボタン
+        var volumeControlerSwitch = document.createElement("div");
+        volumeControlerSwitch.setAttribute("style","width:14em;height:1.2em;position:absolute;bottom:0px;right:0px;");
+        Base2.appendChild(volumeControlerSwitch);
+
+        var volumeControler = document.createElement("div");
+        volumeControler.setAttribute("style","height:1em;width:100%;position:relative;");
+        volumeControlerSwitch.appendChild(volumeControler);
+
+        var switchOne = document.createElement("div");
+        switchOne.setAttribute("style","width:1em;height:1em;position:absolute;left:2.5em;top:0px;");
+        var switchTwo = document.createElement("div");
+        switchTwo.setAttribute("class","volumeDownButtom");
+        switchOne.appendChild(switchTwo);
+        volumeControler.appendChild(switchOne);
+        switchOne.setAttribute("onclick","(function(){if(VolumeInt <= 0){return;}VolumeInt--;})()");
+        if(check){
+            switchOne.addEventListener("touchstart",function(event){volumeCtrPush = -1;event.preventDefault();});
+            switchOne.addEventListener("touchend",function(){volumeCtrPush = 0;});
+        }else{
+            switchOne.setAttribute("onmousedown","(function(){volumeCtrPush = -1})()");
+            switchOne.setAttribute("onmouseup","(function(){volumeCtrPush = 0;})()");
+            switchOne.setAttribute("onmouseout","(function(){volumeCtrPush = 0})()");
+        }
+
+        switchOne = document.createElement("div");
+        switchOne.setAttribute("style","color:#FFF;font-weight:bold;width:6em;height:1.5em;position:absolute;left:4em;top:0px;");
+        switchOne.innerHTML = "Volume:";
+        volumeControler.appendChild(switchOne);
+
+        var volumeView = document.createElement("div");
+        volumeView.setAttribute("style","color:#FFF;font-weight:bold;width:4em;height:1em;position:absolute;left:9em;top:0px;");
+        volumeView.innerHTML = VolumeInt;
+        volumeControler.appendChild(volumeView);
+        controlPseudoBGMControlerSeekBar(seekBar,timeView,pointer,Buffer,forPseudoControlerBGM.duration,volumeView,100,0);
+
+        switchOne = document.createElement("div");
+        switchOne.setAttribute("style","width:1em;height:1em;position:absolute;right:1em;top:0px;");
+        switchTwo = document.createElement("div");
+        switchTwo.setAttribute("class","volumeUpButtom");
+        switchOne.appendChild(switchTwo);
+        volumeControler.appendChild(switchOne);
+        switchOne.setAttribute("onclick","(function(){if(VolumeInt >= 100){return;alert(check)}VolumeInt++;})()");
+
+        if(check){
+            switchOne.addEventListener("touchstart",function(event){volumeCtrPush = 1;event.preventDefault();});
+            switchOne.addEventListener("touchend",function(){volumeCtrPush = 0;});
+        }else{
+            switchOne.setAttribute("onmousedown","(function(){volumeCtrPush = 1})()");
+            switchOne.setAttribute("onmouseup","(function(){volumeCtrPush = 0})()");
+            switchOne.setAttribute("onmouseout","(function(){volumeCtrPush = 0})()");
+        }
+
+        //ループボタン
+        switchOne = document.createElement("div");
+var loop = false;
+var color = (loop)?"#DD7":"#F55";
+    switchOne.setAttribute("style","color:"+color+";width:6em;height:1em;position:absolute;right:5px;top:0px;cursor:pointer;text-align:right;");
+        switchOne.innerHTML = (loop)?"loop:on":"loop:off";
+        forPseudoControlerBGM.loop = loop;
+        Base2.appendChild(switchOne);
+        switchOne.setAttribute("onclick",'(function(elm){if(forPseudoControlerBGM.loop){forPseudoControlerBGM.loop=false;elm.innerHTML = "loop:off";elm.style.color="#F55";}else{forPseudoControlerBGM.loop=true;elm.innerHTML = "loop:on";elm.style.color="#DD7";}})(this)');
+
+        function setEvent(target){
+            if(check){
+                target.addEventListener("touchmove",function(event){controlBGMbyPseudoControler(4,pseudoPlayandPause,event)});
+                target.addEventListener("touchstart",function(event){controlBGMbyPseudoControler(4,pseudoPlayandPause,event)});
+            }else{
+                target.setAttribute("onclick","controlBGMbyPseudoControler(3,this,event)");
+                target.setAttribute("onmousemove","controlBGMbyPseudoControler(2,this,event)");
+                target.setAttribute("onmouseover","controlBGMbyPseudoControler(2,this,event)");
+            }
+        }
+            if(autoplay){
+                        pseudoPlayandPause.removeAttribute("class");
+            pseudoPlayandPause.setAttribute("class","pseudoStop");
+            pseudoPlayandPause.removeAttribute("onclick");
+            pseudoPlayandPause.setAttribute("onclick","controlBGMbyPseudoControler(0,pseudoPlayandPause)");
+            forPseudoControlerBGM.play();
+            }
+    });
+        function isUseSmartPhone(){
+            return (((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0));
+        }
+    if(Browser == "firefox" || Browser == 'chrome' || Browser == 'safari'){
+        forPseudoControlerBGM.addEventListener("canplay",function(){
+            if(forPseudoControlerBGM.paused &&(pseudoPlayandPause.getAttribute("class") == "pseudoStop")){
+                replayBGM();
+            }
+            function replayBGM(){
+                if(pseudoPlayandPause.getAttribute("class") == "pseudoStop"){
+                    if(!pseudoPlayisMouseDown){
+                        forPseudoControlerBGM.play();
+                    }else{
+                        setTimeout(replayBGM,20);
+                    }
+                }
+            }
+            Browser = true;//I love you.
+
+        });
+    }else{
+        Browser = false;//It means your selecting Browser. 
+    }
+    function getBrowserForMusicPlayer() {
+        /*Fuck you!Edge!I hate you!Fuck!*/
+        var ua = navigator.userAgent;
+        var result = 'unknown';
+        if ( ua.indexOf('Edge') !== -1 ) {
+            result = 'edge';
+        } else if ( ua.indexOf('Chrome') !== -1 ) {
+            result = 'chrome';
+        } else if ( ua.indexOf('Safari') !== -1 ) {
+            result = 'safari';
+        }
+        if ( ua.indexOf('Firefox') !== -1 ) {
+            result = 'firefox';
+        }
+        if ( ua.indexOf('MSIE 8') !== -1 ) {
+            result = 'ie8';
+        } else if ( ua.indexOf('MSIE 9') !== -1 ) {
+            result = 'ie9';
+        } else if ( ua.indexOf('MSIE 10') !== -1 ) {
+            result = 'ie10';
+        } else if ( ua.indexOf('Trident') !== -1 ) {
+            result = 'ie11';
+        }
+        return result;
+    }
+        if(check){
+            window.addEventListener( 'resize',function(){
+                var width_W = window.innerWidth;
+                var target = document.getElementById("pseudoBGMControler");
+                target.style.width = Math.floor(width_W * 0.98) + "px";
+                if(target.childNodes.length > 1)target.childNodes[1].style.width = (Math.floor(width_W * 0.98)-45)+"px";
+            });
+        }else{
+            window.addEventListener( 'resize',function(){
+                var base = 0.8;
+                var width_W = window.innerWidth;
+                if(width_W < 500){
+                    base = 0.98;
+                }else if(width_W < 680){
+                    base = 0.9;
+                }else if(width_W < 750){
+                    base = 0.85;
+                }
+                var target = document.getElementById("pseudoBGMControler");
+                target.style.width = Math.floor(width_W * base) + "px";
+                if(target.childNodes.length > 1)target.childNodes[1].style.width = (Math.floor(width_W * base)-45)+"px";
+            });
+        }
+    forPseudoControlerBGM.addEventListener("error",function(){
+    retryCount++;
+    if(retryCount < 3){
+    document.getElementById('pseudoBGMControler').innerHTML = '<center>音楽再ロード</center>';
+forPseudoControlerBGM.load();
+return;
+}
+retryCount = 3;
+    document.getElementById('pseudoBGMControler').innerHTML = "<center style='color:#F00;'>-  読み込みエラー -</center>";
+        if(watchMusicState != undefined)clearTimeout(watchMusicState);
+        var reload = document.getElementById("reload");
+        reload.style.display="inline";
+        reload.setAttribute("onclick","(function(elm){document.getElementById('pseudoBGMControler').innerHTML = '<center>音楽再ロード</center>';forPseudoControlerBGM.load();elm.style.display='none';correctIframeSize();})(this)");
+        correctIframeSize();
+    });
+    forPseudoControlerBGM.addEventListener("ended",function(){
+        if(!forPseudoControlerBGM.loop){
+            pseudoPlayandPause.removeAttribute("class");
+            pseudoPlayandPause.setAttribute("class","pseudoPlay");
+            pseudoPlayandPause.removeAttribute("onclick");
+            pseudoPlayandPause.setAttribute("onclick","controlBGMbyPseudoControler(1,pseudoPlayandPause)");
+        }
+    });
+    forPseudoControlerBGM.load();
+});
+
+function controlBGMbyPseudoControler(type,elm,event){
+    switch(type){
+        case 0:
+            if(forPseudoControlerBGM.paused)return;
+            forPseudoControlerBGM.pause();
+            changeMode();
+        break;
+        case 1:
+        if(retryCount < 3)retryCount = 3;
+            forPseudoControlerBGM.play();
+            changeMode();
+        break;
+        case 2:
+            if(!pseudoPlayisMouseDown)return;
+        case 3:
+            forPseudoControlerBGM.pause();
+            var bar_w = pseudoPlaySeekBar.getBoundingClientRect();
+            controlCurrentTime(event.pageX);
+        break;
+        case 4:
+            pseudoPlayisMouseDown = true;
+            forPseudoControlerBGM.pause();
+            controlCurrentTime(event.touches[0].pageX);
+            event.preventDefault();
+        break;
+    }
+    function controlCurrentTime(pos){
+        var bar_w = pseudoPlaySeekBar.getBoundingClientRect();
+        pos -=  bar_w.left;
+        if(pos < 0)pos = 0;
+        if(pos > bar_w.width)pos = bar_w.width;
+        var newCurrent = forPseudoControlerBGM.duration * (pos/bar_w.width);
+        if(newCurrent > forPseudoControlerBGM.buffered.end(0))newCurrent = forPseudoControlerBGM.buffered.end(0);
+        forPseudoControlerBGM.currentTime = newCurrent;
+    }
+    function changeMode(){
+        elm.removeAttribute("class");
+        var nextClass = (type < 1)?"pseudoPlay":"pseudoStop";
+        elm.setAttribute("class",nextClass);
+        elm.removeAttribute("onclick");
+        elm.setAttribute("onclick","controlBGMbyPseudoControler("+((type+1)%2)+",this,event)");
+
+    }
+}
+
+function controlPseudoBGMControlerSeekBar(track,timeView,pointer,Buffer,TimeLimit,switchOne,preVolume,volumeCount){
+    var bar_w = pseudoPlaySeekBar.getBoundingClientRect();
+    bar_w = bar_w.width;
+    var current = forPseudoControlerBGM.currentTime;
+    var persent = Math.floor(bar_w *(current / TimeLimit));
+    track.style.width = persent + "px";
+    pointer.style.left = (persent - 5) + "px";
+    persent = Math.floor(bar_w *(forPseudoControlerBGM.buffered.end(0) / TimeLimit));
+    Buffer.style.width = persent + "px";
+    TimeLimit = insertPriod(TimeLimit,0);
+    current = insertPriod(current,1);
+    timeView.innerHTML = current + "/" + TimeLimit;
+    if(volumeCtrPush != 0){
+        volumeCount ++;
+        if(volumeCount >= 10){
+            if(volumeCount == 10 || ((volumeCount > 10) && (volumeCount%5 == 0)) || (volumeCount >50)){
+                if(volumeCount > 50)volumeCount = 50;
+                VolumeInt += volumeCtrPush;
+                if(VolumeInt >= 100)VolumeInt = 100;
+                if(VolumeInt <= 0)VolumeInt = 0;
+            }
+        }
+    }else{
+        volumeCount = 0;
+    }
+    if(preVolume != VolumeInt){
+        forPseudoControlerBGM.volume = VolumeInt/100;
+        switchOne.innerHTML = VolumeInt;
+        preVolume = VolumeInt;
+    }
+    if(!Browser){
+        if(forPseudoControlerBGM.paused &&(pseudoPlayandPause.getAttribute("class") == "pseudoStop") && !forPseudoControlerBGM.ended && !pseudoPlayisMouseDown){    
+            forPseudoControlerBGM.play();
+        }
+    }
+    watchMusicState = setTimeout(function(){controlPseudoBGMControlerSeekBar(track,timeView,pointer,Buffer,TimeLimit,switchOne,preVolume,volumeCount)},100);
+
+    function insertPriod(n,type){
+        n ++;
+        n = Math.floor(n * 100);
+        n = String(n);
+        n = (Number(n.slice(0,n.length-2))-1) + "." + n.slice(n.length-2,n.length);
+        if(type == 1){
+            while(n.length < TimeLimit.length)n = "0"+n;
+        }
+        return n;
+    }
+}
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

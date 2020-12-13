@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>一次琐碎又日常的基金会任务 - SCP基金会</title>
+    <title>自动化无源记忆删除系统 Ver.17.09 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "4";
-        OZONE.request.timestamp = 1607805100;
+        WIKIREQUEST.info.requestPageName = "apas";
+        OZONE.request.timestamp = 1607825010;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "4";
-        WIKIREQUEST.info.pageId = 1237198291;
+                WIKIREQUEST.info.pageUnixName = "apas";
+        WIKIREQUEST.info.pageId = 1035263844;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,9 +65,6 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
-
-
         
                 
         /* theme */
@@ -119,9 +116,201 @@
         });
     </script>
         
+<style>
+/* Centered breadcrumbs */
+#breadcrumbs{
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+/* Bold breadcrumbs */
+#breadcrumbs a {
+  font-weight: bold;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extended SCP page bottom */
+.footer-wikiwalk-nav {
+  margin-top: 100px;
+}
+
+/* Centered title */
+#page-title {
+  display: block;
+  text-align: center;
+}
+
+/* Content warning box */
+.warning {
+  border: double 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: inline-block;
+  width: 75%;
+}
+.warning a.collapsible-block-link {
+  font-weight: bold;
+}
+/* Hidden footnotes */
+.footnotes-footer {
+  display: none;
+}
+
+/* Extended bottom rating module */
+.page-rate-widget-box {
+  margin-bottom: 25px;
+}
+
+.rateBox {
+  margin-bottom: 20px;
+}
+
+/* Green terminal */
+.terminal {
+  border: solid 3px #BBBBBB;
+  border-radius: 16px;
+  background-color: #131;
+/* black shadow at the top of the terminal */
+  background-image: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+/* shadow around the terminal */
+  box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+  overflow: hidden;
+  color: rgba(128,255,128,0.8);
+  padding: 2em;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+.terminal blockquote {
+  background-color: black;
+  border: double 3px #80FF80;
+}
+
+.terminal a {
+  color: #90EE90;
+  text-decoration: none;
+  background: transparent;
+}
+.terminal a:hover, .terminal .green-header {
+  color: #131;
+  text-decoration: underline;
+  background-color: #80FF80;
+  padding: 1px;
+}
+.terminal .green-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.terminal a:hover::before {
+  content: "> ";
+}
+.terminal blockquote a:hover {
+  word-break: break-all;
+}
+.terminal .collapsible-block-link, .terminal .collapsible-block-unfolded-link, .terminal .collapsible-block-folded {
+  text-align: center;
+  font-weight: bold;
+}
+.terminal .collapsible-block-link:hover::before, .terminal .collapsible-block-unfolded-link:hover::before, .terminal .collapsible-block-folded:hover::before {
+  content: none;
+}
+
+/* What is APAS? */
+.fake-blockquote a {
+  color: #b01;
+}
+.fake-blockquote a.visited {
+  color: #824;
+}
+.fake-blockquote a:hover {
+  color: #b01;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: initial;
+}
+.fake-blockquote a.visited:hover {
+  color: #824;
+}
+.fake-blockquote a:hover::before {
+  content: none;
+}
+.fake-blockquote a:hover {
+  word-break: initial;
+}
+
+/* Secret text stuff */
+.hover {
+  color: black;
+}
+.hover .hover-text {
+   position: absolute;
+   display: none;
+   margin: 20px 0px;
+   height: auto;
+   width: auto;
+   background: white;
+   border: 1px solid black;
+   color: black;
+   padding: 0.5em;
+}
+.hover:hover {
+  text-decoration: none;
+  border-bottom: none;
+  color: blue;
+}
+.hover:hover .hover-text {
+  display: inline;
+}
+
+/* MDP table fixes */
+.first-table th:nth-child(1) {
+  width: 20%;
+}
+.first-table td:nth-child(1), .second-table td:nth-child(1), .second-table td:nth-child(2) {
+  text-align: center;
+}
+
+/* LOGO */
+div#header {
+background-image: url(http://scp-wiki.wdfiles.com/local--files/site-17-hub/header17);
+}
+
+/* 头部 */
+div#header h1 a span {
+font-size: 0px;
+}
+div#header h1 a:before {
+content: "Site-17数据库";
+color: #eee;
+
+}
+div#header h2 span {
+font-size:0px;
+padding: 4px;
+}
+div#header h2:after {
+content: "活过我们的终结";
+font-weight: bold;
+color: #f0f0c0;
+padding: 19px 0;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+white-space: pre;
+}
+</style>
+<style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+</style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -468,7 +657,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=4" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=apas" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -490,10 +679,14 @@
                     
                     
                         <div id="page-title">
-                            一次琐碎又日常的基金会任务
+                            自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
+                    
+                        <div id="breadcrumbs">
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/site-17-hub">Site-17 深井目录</a> &raquo; 自动化无源记忆删除系统 Ver.17.09
+                        </div>
                     
 
                     
@@ -503,131 +696,219 @@
                     <div id="page-content">
                         
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+32</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-<div style="border:solid 2px #112211; background:#DDEEDD; padding:25px; margin-bottom: 25px;">
-<p><span style="font-size:150%;"><em><strong>狱卒又一恶劣罪行</strong></em></span></p>
-<div style="text-align: right;">
-<p><em><strong>革命拂晓、牢房中高呼只有自己自由的可怜人、镇压与焚毁、一次琐碎又日常的基金会任务、事件#Δ1527-CN</strong></em></p>
+
+
+
+
+
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
 </div>
-<div style="overflow:auto">
-<div style="border:solid 1px #112211; background:#EEF6EE; padding: 20px; margin-bottom: 3px;">
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
 <div style="text-align: center;">
-<p><strong>概要</strong></p>
+<h2><span>著作信息</span></h2>
 </div>
-<p>SCP基金会——异常世界的狱卒、人类文明的守护者之一<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup>、“黑暗”之中的守望者之一、必要之恶的执行者之一、拱卫眼中仅次于焚书人的可憎存在<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>、一个在座诸位耳熟能详的组织。</p>
-<p>在人类文明与敌意超自然力量的漫长战争中，SCP基金会为守护这脆弱的文明总是站在最前线。各位可还记得那些漆黑幽森的监牢？充满敌意与憎恨的目光在铁栏后闪烁<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup><br />
-，直视着看门的狱卒，而狱卒们，虽和常人一样恐惧，虽有时仍会止不住战栗，但依然握紧手中的武器，坚定地守望在黑暗之中。用一次又一次的牺牲、绝望与罪恶守住牢门。</p>
-<p>因此，虽然图书馆与蛇之手中的相当一部分智慧体曾受过他们的监禁甚至惨无人道的迫害，但仍然对他们保有最后一丝尊敬，有时愿意尊称他们为“典狱长”<sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup>。</p>
-<p>但就在最近，狱卒们用实际行动告诉了我们，他们可笑又可恨，可怜但不可敬<sup class="footnoteref"><a id="footnoteref-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-5')">5</a></sup><sup class="footnoteref"><a id="footnoteref-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-6')">6</a></sup>。他们亲手毁了能解放所有人，包括他们自己的钥匙，然后自顾自地再次坚守在牢笼前，让所已发生和将要发生的牺牲、绝望和罪恶变得毫无意义。<sup class="footnoteref"><a id="footnoteref-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-7')">7</a></sup></p>
-</div>
-<div style="border:solid 1px #112211; background:#EEF6EE; padding: 20px; margin-bottom: 3px;">
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
 <div style="text-align: center;">
-<p><strong>情报</strong></p>
+<h1 id="toc0"><span>自动化无源记忆删除系统 Ver.17.09</span></h1>
+<p><strong><a href="http://scpper.com/page/789889960">scpper上的作者</a> <span style="color: grey">|</span> <a href="http://scpexplained.wikidot.com/apas">解释</a></strong></p>
 </div>
-<p>2020年4月30日，一位名为王柳思的中国科学家与他的团队正式开启了一项分子生物学的有关研究。这位王先生与他的团队全部都是被狱卒定义为“平民”的人，在此之前他们从未触及过那笼罩整个世界的帷幕。由于狱卒的所做所为，很遗憾无法得知王柳思博士最开始的研究课题是什么。唯一能肯定的是，此次实验的研究对象是人类。</p>
-<p>而在他的研究对象中，有一位尚未觉醒的II级现实扭曲者，即于雅女士<sup class="footnoteref"><a id="footnoteref-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-8')">8</a></sup>。王思柳博士在研究中发现了于雅的异常之处，她似乎能对周围人的精神进行一定的影响。王博士开始并未太关心这个发现，认为这种现象只是由于她的人格魅力。但或是出于敏锐的直觉，或是感到特别的新奇，王博士还是记录下了这个发现，并将此发现以玩笑的态度告知了于女士。</p>
-<p>说者或许无意，听者却是有心。于雅对自己的异于常人之处早有察觉，她明明不擅社交且自认为容貌一般，但身边的朋友总是围着她转<sup class="footnoteref"><a id="footnoteref-9" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-9')">9</a></sup>。在听到王博士的话后，她更加在意自己的这方面异常，这位现实扭曲者的觉醒因此加速。当一切发展到了想找东西时失物一定在她认为的地方出现，即使跟本就不放在那里时，她决定将这一切告诉王博士。<sup class="footnoteref"><a id="footnoteref-10" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-10')">10</a></sup></p>
-<p>谨慎的王博士在听完于雅的讲述后并未完全质疑，但要求于雅用实验证明。在亲眼目睹并肯定了这不是魔术一类的手法后，王博士相信了她的描述。于雅的现实扭曲能力也在一系列实验中彻底觉醒。王柳思转变了他的研究方向，开始研究于雅的现实扭曲能力，同时通过唐•吉诃德<sup class="footnoteref"><a id="footnoteref-11" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-11')">11</a></sup>等民间组织所提供的途径又找到数位现实扭曲者。尽管有了足够研究对象，但由于他们未进行任何非人道实验<sup class="footnoteref"><a id="footnoteref-12" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-12')">12</a></sup><sup class="footnoteref"><a id="footnoteref-13" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-13')">13</a></sup>，所以直到2026年一位研究对象自然死亡，他们都未能在器官层面发现现实扭曲者与普通人的差异。这位现实扭曲者将遗体自愿捐赠给王博士的研究小组，这使得研究产生了突破性进展。这也使得王博士的研究小组决定公开这一发现，他们相信在事实与实验结果面前，科学界会接受这一“超自然现象”<sup class="footnoteref"><a id="footnoteref-14" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-14')">14</a></sup>。</p>
-<p>2028年，王博士的论文《关于部分功能性器官变异可能使生命体具有通过主观意识控制客观事实的能力的研究》<sup class="footnoteref"><a id="footnoteref-15" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-15')">15</a></sup>撰写完成，此论文中虽然对于现实扭曲者有大量的误解与错误推断<sup class="footnoteref"><a id="footnoteref-16" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-16')">16</a></sup>，但基本正确地预测了各个等级的现实扭曲者的能力表现效果与上限。同时文中提及的“交互性粒子”也可以肯定就是指产生现实扭曲的本质——EVE粒子，虽然王博士未深入研究“交互性粒子”，但也提到“交互性粒子的实际意义可能远大于本论文所发现的”。</p>
-<p>由于在实验过程中受到过唐•吉诃德的协助，王博士在正式发表前对唐吉诃德中的部分朋友透露了大致内容，这在唐•吉诃德的官网引起了一定骚动，整个帷幕后社会<sup class="footnoteref"><a id="footnoteref-17" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-17')">17</a></sup><sup class="footnoteref"><a id="footnoteref-18" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-18')">18</a></sup><sup class="footnoteref"><a id="footnoteref-19" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-19')">19</a></sup>也因此注意到了王博士。不明确狱卒在此期间对王博士的不作为是因为没有发现还是因为其他原因。<sup class="footnoteref"><a id="footnoteref-20" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-20')">20</a></sup></p>
-<p>2028年12月1日，王博士预计正式发布论文的前夜。他与已经成为他妻子的于雅正待在家中等候论文的审核结果，可以肯定他们整个晚上都未入眠。狱卒在凌晨时分联系了王柳思博士，邀请他加入SCP基金会。但他在得知狱卒打算继续掩盖超自然力量的存在的意图之后，拒绝了他们的邀请，执意要公开论文<sup class="footnoteref"><a id="footnoteref-21" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-21')">21</a></sup>。</p>
-<p>在他第三次表明拒绝意图的同时，一只狱卒的机动特遣队破门而入<sup class="footnoteref"><a id="footnoteref-22" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-22')">22</a></sup>。他们劫走了于小姐，删除了王博士8年以来的全部研究成果与相关记忆，与此次实验有关的所有人与设备均遭遇了同样的命运。《关于部分功能性器官变异可能使生命体具有通过主观意识控制客观事实的能力的研究》未能发布。</p>
-<p>对于王思柳博士，他失去了8年里所有研究成果、揭开帷幕的机会、因为此实验结交的所有朋友、与他的家庭；对于狱卒，他们亲手折断了解放自己的钥匙，至少是铸造钥匙的模具；而对于整个世界，什么都没有改变。</p>
-<p><strong>性质：</strong>控制、收容、保护，这是狱卒们常常挂在嘴边的口号，是他们的“性质”。过去，出于对他们“保护”原则的尊重，图书馆中以蛇之手为代表的大部分智慧体尚能理解并尊重他们的存在。但如今看来，“控制”和“收容”所带来的负面影响最终会覆盖“保护”的积极作用。狱卒们已然成为阻碍人类文明进步的绊脚石。</p>
-<p>这是狱卒的使命宣言</p>
-<blockquote>
-<p>我们的任务有三方面：</p>
-<p>控制<br />
-基金会控制异常以防止它们落入平民或敌对组织手中，透过广泛观察及监测并采取行动尽早拦截它们。</p>
-<p>收容<br />
-基金会收容异常以防止它们的影响或效应散播，通过迁移，掩饰，或拆除它们或通过抑制或阻止公众传播它们的知识进行。</p>
-<p>保护<br />
-基金会保护人类免受异常的影响并保护异常本身直至它们被完全理解以及出现自它们的特性及行为上制定的新科学定理为止。如果异常被收容时被判定为过度危险，基金会或也会以将异常无效化或摧毁作为最后手段。</p>
-</blockquote>
-<p>这宣言看似合理，实则自相矛盾。他们一方面期望人类有一天能理解异常，另一方面却阻止人类接触异常与异常的相关知识。如果一个猿人从未见过火，他怎么可能发现维持燃烧的三要素？而那第一个发现火的猿人，因为火会烧死人而打着保护的名义藏起它，自己却在偷偷研究火。现在终于有一个猿人发现了钻木可以取火，这本应该是文明的一大进步，可那个都已经能造出打火机的猿人却毁了这一切。</p>
-<p>就算从狱卒自己的宣言的角度的出发，这次的行为在他们自己的原则上也是站不住脚的。使命宣言里狱卒声称他们会保护异常<em>直至它们被完全理解以及出现自它们的特性及行为上制定的新科学定理为止。</em>但王博士的研究已经从客观的角度分析了现实扭曲，任何科学定理被制定前显然都需要经过对某一事实的分析。看见了事实才会进行分析，有了分析才会做出猜测，验证猜测后才会总结出定理。</p>
-<p>狱卒的“性质”真的是一个保护人类文明的组织吗。</p>
-<p><strong>历史&amp;相关势力：</strong> 狱卒（“SCP基金会”）、唐•吉诃德（“观谬维基”）、求道者（“王柳思博士”）、拱卫（“蛇之手”）</p>
-<p><strong>对策：</strong>尽管图书馆从不干预文明发展，但此行为的目的是为了服务于图书馆的最终原则——保护一切文化、知识与智慧的产物与进步。现在，狱卒的存在已然成为了阻碍人类文明进步的绊脚石，整个人类文明将会因为他们和焚书人所制造的帷幕而停滞不前，经过大量学者<sup class="footnoteref"><a id="footnoteref-23" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-23')">23</a></sup>的讨论，被放逐者之图书馆决定对帷幕状态进行干预。目前大致分为以下几种思路。<sup class="footnoteref"><a id="footnoteref-24" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-24')">24</a></sup></p>
-<blockquote>
-<p><strong>提案一：较温和对策</strong><br />
-大致思路：不直接对狱卒或其它帷幕主义组织进行干预，而是扶持或指引更多类似王博士的求道者与类似唐•吉诃德的组织发现帷幕状态。最后使得狱卒等帷幕主义组织放弃维护帷幕状态。</p>
-<p>优势：必须明确，任何一个组织，包括狱卒、焚书人以及蛇之手中部分成员的个人想法未必与其组织的信念一致，他们加入所处组织可能是被逼无奈<sup class="footnoteref"><a id="footnoteref-25" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-25')">25</a></sup>或生活所迫。他们可能未必执行过所处组织的主旨任务。这一对策可以减少无辜者的伤亡。</p>
-<p>缺陷：在此对策执行的最后，狱卒必然会发现是图书馆在引导，无法肯定狱卒此时的反应<sup class="footnoteref"><a id="footnoteref-26" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-26')">26</a></sup>。</p>
-</blockquote>
-<blockquote>
-<p><strong>提案二：较激进对策</strong></p>
-<p>大致思路：图书馆在本数学系下的分区将在一定程度上支持以蛇之手为代表的组织直接大规模武力进攻狱卒与焚书人，即对所有维护帷幕的组织宣战，用武力迫使其放弃维护帷幕状态。</p>
-<p>优势：考虑到图书馆可以提供的“铜蛇”、“沙柳”与“The Book”，狱卒的失败是必然的。同时商旅、盗火者、织梦师、艺术家、慈善家、园丁、虔信徒等<sup class="footnoteref"><a id="footnoteref-27" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-27')">27</a></sup>利益受帷幕损害的组织都可以在帷幕破碎后进一步发展并得以分担狱卒与焚书人的遗产与一些遗留问题。</p>
-<p>缺陷：大规模开战必然导致大量非图书馆方的伤亡，如果在战争中严重波及帷幕前世界，可能导致人类社会对异常的恐惧。同时，狱卒与焚书人手中留有大量可导致世界末日的物品，他们可能在自认为危急的情况下以此进行威慑，在他们解体后这些高危物品的交接处理也将复杂而危险。<sup class="footnoteref"><a id="footnoteref-28" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-28')">28</a></sup></p>
-</blockquote>
-<blockquote>
-<p><strong>提案三：激进对策</strong></p>
-<p>大致思路：图书馆将提供类似因果律武器等高危性武器，使帷幕状态本身直接消失或不曾存在。</p>
-<p>优势：如果不出现意外，这是最有效的手段。</p>
-<p>缺陷：由于因果律的复杂性，此方案变数极大，极有可能出现不可预测的意外。<sup class="footnoteref"><a id="footnoteref-29" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-29')">29</a></sup></p>
-</blockquote>
-<p>欢迎本数学系下所有关注此事的馆员进行投票，同时如果您有其它大方向上有别于这三种对策的想法，欢迎讨论。</p>
-<p><strong>其它细节：</strong> 经过Q.R.的提醒，拱卫们对狱卒进行了进一步调查，目前可以肯定这不是狱卒第一次的类似行为。</p>
+<hr />
+<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>，现在建了<strong><a class="newpage" href="/nagiros">一个作者页</a></strong>.</p>
+<p><strong>感谢：</strong></p>
+<ul>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>，他写了对我非常有帮助的<a href="http://scp-wiki-cn.wikidot.com/listpages-magic-and-you">Listpages 魔法与你</a>这篇指导。</li>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4780073&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="calamitous1" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4780073)" /></a><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;">calamitous1</a></span>，他在<a href="http://scp-wiki.wikidot.com/forum/t-11168832/tale:site-wide-behavioral-control#post-4220273">草稿与批判</a>里给我的作品进行了点评。</li>
+</ul>
+<hr />
+<p><strong>图像使用权限：</strong></p>
+<ul>
+<li>文件名“dro-0001”来自于<a href="https://www.flickr.com/photos/nve/8733992389/">NVE的Flickr</a>，那里所有的照片都有cc协议。</li>
+</ul>
+<hr />
+<p><strong>你也可能喜欢的东西：</strong><span style="font-size:75%;">对于这篇文章来说，更像是我“把格式割裂了的东西”。</span></p>
+<ul>
+<li><a href="/scp-2798">SCP-2798</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2203795&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Kalinin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2203795)" /></a><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;">Kalinin</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/tanhony-s-proposal">SCP-001 - 死人</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=776854&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Tanhony" style="background-image:url(http://www.wikidot.com/userkarma.php?u=776854)" /></a><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;">Tanhony</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/scp-3942">未定义</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1618170&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Jack Ike" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1618170)" /></a><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;">Jack Ike</a></span></li>
+</ul>
+<hr />
+<p>多谢了，大家！</p>
 </div>
-<div style="border:solid 1px #112211; background:#EEF6EE; padding: 20px; margin-bottom: 3px;">
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="terminal">
 <div style="text-align: center;">
-<p><strong>投票&amp;疑问</strong></p>
+<p><span style="font-size:120%;"><span style="text-decoration: underline;">紧急启动：模因传播程序</span></span></p>
 </div>
-<p><em>支持提案二。类似提案一的行为蛇之手早就试过了，狱卒只是加紧了对我们的打压。可能还有人会说这只是因为我们引导的规模不够大吧？好吧我相信稍微深入了解过狱卒的馆员们都问不出这个问题，无伦多少个体或团体接触到帷幕，狱卒都有能力将其镇压。无论多少。 ～收藏家</em></p>
-<p><em>支持提案二。我注意到狱卒对此事件的编号是Δ开头的，按照狱卒的章程，这说明此事对他们而言不过是一件不得不花时间处理的日常琐事。我怀疑他们是不是还干过类似的事，建议调查一下。 ～Q.R.</em></p>
-<p><em>支持提案二。哈哈哈哈哈哈哈如果上面那位说的是真的，所以原来别人整整8年的心血和幸福的家庭只是“不得不花些时间的日常琐事”？哈哈哈哈哈哈哈那我简直能想像到他们得知图书馆向他们宣战理由时的表情。哈哈哈哈哈哈大快人心！ ～I.P.</em></p>
-<p><em>我……能支持提案一吗……我很想回家，但打仗总是不好的吧…… ～Y.Y.</em></p>
-<p><em>支持提案二。开始，我们将他们当做抵触伽利略的教皇，现在看来他们比教皇更不可理喻。他们连牛顿三定律都知道了，却不允许人类发现力不是维持物体运动的原因，而这么做的理由居然是想保护人类。～RO</em></p>
-<p><em>老实说，那些异常确实是很麻烦的东西。比如狱卒所谓“人形异常”，即那些具有异常的人们真的能很好地融入社会吗？他们与普通人之间几乎必然产生的歧视与偏见最后会演化至何种程度？再比如那些确实该被关起来的人怎么办？那些确实该被毁掉的异常呢？公众真的能在一个随时可能世界末日的世界安然生活吗？这都是些麻烦的问题。但回避问题不能解决问题，正如拱卫们所说，把危险的知识藏起来只会让其更危险。我支持提案二，帷幕的存在只是推迟了这些问题并让它们在爆发时更加危险。～陈述</em></p>
-<p><em>支持提案一。身为前狱卒，我想说的是大部分底层狱卒，甚至是高层在经历了无数同伴的生离死别与亲手犯下重重罪孽后，内心其实相当脆弱，“我们是人类文明最后的守护者”、“控制收容保护是最正确的”、“就算我死了也是英雄”等等是最后支撑着他们的东西。如果这时候告诉他们“你们所做的一切毫无意义，甚至是在阻碍人类”，大规模的心理失衡是必然的。一个悲伤的疯子会做什么很难预测。我乞求各位仁慈些，给他们一个“我们尽职了，人类终于开窍不需要我们了”的安心结局吧。大部分狱卒都并未犯过滔天大罪不是吗，这对我们也好啊。～H.M</em></p>
-<p><em>支持提案二。我有一个可能引起H.M.和其他前狱卒馆员不适的猜测……狱卒高层真的没有想到过帷幕状态的持续只会让帷幕更加厚实吗？他们——这里只指狱卒高层——可能本就不是怀着保护人类的目的而建立帷幕，他们真正的目的是垄断，他们想垄断异常，等到他们自己能完全理解异常之后，人类等到的也不会是被掀起的帷幕，而是一个天降的独裁者。～调音师</em></p>
-<p><em>支持提案二。哪有革命是不流血的？如果真的开战，那大概会死很多人，会失去很多东西，但都会是值得的。战争本身是很可怕，但战争不是没有意义。～S.Q.</em></p>
-<p><em>支持提案二。怂个鬼打他丫的！到时候我要冲到最前面干死这些破坏了我原有的一切的日狗东西！我就想问——子弹管够不？～K.O.</em></p>
-<p><em>提案二！提案二！提案二！到时记得通知dado来捧场哦(๑•̀ㅂ•́)و✧dado到时也会全力帮助你们哒！～dado</em></p>
-<p><em>图书馆尊重馆内所有智慧体的发言权与所持观点，但对于如此严肃的事件，参与投票的学者们都应该以严肃理性的态度阐明自己的观点并投票，虽然虽然目前各位馆员大都选择开战，但我们还是不应该也不能如同军国主义份子一样被愤怒与狂热驱使着高呼战争。无论支持支持武力解决还是和平解决，都请说明理由。K.O.小姐与dado，你们的投票作废。请理解。～讲解员东-安KV0</em></p>
-<p><em>支持提案二……综合上面几位说的，这是唯一的选择了……哎，我们终归是学者，没想到有一天会去支持一场战争。～B</em></p>
-<p><em>支持提案二。别太自责了B，你要明白这并非我们的错。我们选择开战是因为我们没有别的选择。就像收藏家说的，更加柔和的方案行根本不通。要么等着狱卒把整个世界关进监狱，要么在那之前阻止他们。～A</em></p>
-<p><em>支持提案二。这不是战争，而是像S.Q.所说的——这是一场革命。所有智慧与知识都应该有沐浴在阳光下的权利，我本以为狱卒只是帮他们暂时保管这权利，现在看来……那还是自己争取回来吧。～C</em></p>
-<p><em>不投票。只是感慨一下，你们日之子果然在这方面出其地团结。第一次在图书馆的讨论区里见到这么压倒性的票型。～N.S.</em></p>
-<p><em>支持提案二。各位似乎对提案二有所误解，在此我想有必要说明一下：这三个提案只是提供一个大方向，具体手段可还没有定，并不一定会开战。就算要开战，具体怎么打，打到什么程度算够，怎么在狱卒和焚书人完蛋后解决那些遗留问题，这些都需要讨论。以图书馆的能力，完全可以打一场不流血的战争。～J.W.</em></p>
-<p><em>支持提案三。狱卒压根没有你们想的那么重要，我去另一个不存在狱卒的世界玩过，那个世界照常转，帷幕照样有。必要之恶啥的丢给人类政府他们都会干信不？咱们不能治标不治本。～I.I.T.</em></p>
-<p><em>支持提案二。狱卒的迷惑行为还少吗，天知道什么时候他们又会干出什么奇葩事。～收录司西-齐TG1</em></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>正在存取文件……</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>请稍后，不要断开显示器……</p>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<div style="display: block ; border : dashed 1px #444444 ; background :#F5F5F5 ; margin-left : auto ; margin-right : auto ; width : auto ; padding:10px">
+<div style="text-align: center;">
+<h3><span><span style="font-size:150%;"><strong>模因传播程序与你</strong></span></span></h3>
+<h4><span><span style="font-size:90%;"><span style="color: blue">如何确保你站点成员的潜意识内都进行了适当的接种，就在今天！</span></span></span></h4>
+</div>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span class="hover"><span class="hover-text"><strong>下面几条是强加于本文件读者的合同义务</strong>：<span style="text-decoration: underline;">（1）</span>你不能有意识地承认本文中的模因媒介，直到它们被明确引用。<span style="text-decoration: underline;">（2）</span>你不能与任何未经适当接种的人员或实体谈论这些媒介（即存取并阅读本文件）。<span style="text-decoration: underline;">（3）</span>你不能认为这些模因所揭示的逆模因属于其他可能或可能不存在的逆模因实体。</span>Dr.Weathers，</span></p>
+<p>你的站点最近经历了一段长时间的维修，在此期间，自动化无源记忆删除系统在站点范围内启用。恭喜你！你的站点现在已经百分百安全了。</p>
+<p>但是这个系统是什么，它又是怎么保护你的员工的呢？这些问题的答案包含在了综合用户手册的第二份文件里，它已被发送至你的站点，仅供持有4级权限者阅览。在这份指南中，我们会带你过一遍APAS中最复杂也是最基础的那部分：<span class="ruby">模因传播程序<span class="rt">Memetic Dissemination Process</span></span>（简称为MDP！）。</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<div style="text-align: center;">
+<h4><span>第一部分：什么样的材料会携带潜在模因媒介？</span></h4>
+</div>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span class="hover"><span class="hover-text"><strong>阿尔法百夫长（ALPHA-CENTURION）接种系统已被关键词“携带”激活。等待进一步指示。</strong></span>包含模因媒介的材料类型各不相同；别忘了，没有两个相同的模因！</span>为了使这些模因对观察者效用最强，观察者应被不重要、重复或无用的信息麻痹，并进入一种自满状态。这使得办公室备忘录、教学视频以及普通报告成为模因接种媒介的理想选择。请注意，电子媒介并不理想，因为隐藏文本可通过将文本内容复制粘贴至外部文字处理器的方式被轻易发现。</p>
+<p>由于浏览潜意识接种内容既枯燥又乏味，其通常由可用的D级人员进行分析。很可能不会要求你作为现场主管查看这些材料。</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<div style="text-align: center;">
+<h4><span>第二部分：模因媒介是怎样隐藏在内文中的？</span></h4>
+</div>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span class="hover"><span class="hover-text"><strong>阿尔法百夫长（ALPHA-CENTURION）接种程序已确认78%完成。等待进一步指示。</strong></span>问得好！</span>模因出身低微，它诞生于你站点机房里收藏着的一个人工智能工作员的硅脑中。Site-17内部涉及到模因制作的人工智能工作员是<em>Galileo.aic</em>，每分钟能生成5条可使用的模因！</p>
+<p>你们的局域AIC会拿来一份输入文档，并把产生的模因缩小规模到人类思维只可在潜意识内感受到的极微尺寸。在文档被修改后，它就能像其他的通知一样发给人员了。</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<div style="text-align: center;">
+<h4><span>第三部分：MDP会保护我的Site免于什么造成的损伤呢？</span></h4>
+</div>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>简而言之：那些企图伤害你站点内成员的模因与逆模因实体。</p>
+<p>模因实体通常会在站点内收容，因为他们的影响可以在交互者身上表现出来，而且能被记入文档。然而，由于逆模因实体与物品的性质，你一般没法把它记入文档。</p>
+<p>不幸的是，基金会没有一个能理论上应对这些威胁实体的真正逆模因部门。事实上，Site-17甚至有可能藏着一些你不知道的实体或物品。</p>
+<p>但不全是坏消息！这里有一个MDP运行结果的例子，它能说明MDP对你的站点极为有利的原因！感谢大众化应用人工智能工作员<em>Indomitable.aic</em><span class="hover"><span class="hover-text">你好，Dr.Weathers。</span>，这份文档一直在秘密对你进行接种</span>。没错，这些文字中隐藏着一些特殊的模因，比你用肉眼能看到的字要小！</p>
+<p>下面是存于Site-17内的逆模因异常清单，那些异常你以前不可能记得：</p>
+<div class="first-table">
+<table class="wiki-content-table">
+<tr>
+<th>实体</th>
+<th colspan="2">性质概述</th>
+</tr>
+<tr>
+<td>DRO<sup class="footnoteref"><a id="footnoteref-806747-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-806747-1')">1</a></sup>-0045</td>
+<td colspan="2"><span class="hover"><span class="hover-text">Natalie，如果你能听到我的话，我很好，就像你说的那样。我只是想再听听你的声音。你在这吗？这的一切都那么模糊。我怎么会变成这样？有人能听到吗？</span>类人非物质实体，穿着标准配给特遣队服装，无法与物质实体交互。</span></td>
+</tr>
+<tr>
+<td>DRO-0355</td>
+<td colspan="2"><span class="hover"><span class="hover-text">地狱王眼乃全视，其裁未夺。他见于黑火中，于地下带上正义。</span>大量未知黑色皮质物质，位于生物学研究部的入口。</span>在其附近停留超过29分钟会使其表面出现数个孔洞。孔洞将向附近实体发出声音，声音细节未知。</td>
+</tr>
+<tr>
+<td>DRO-0678</td>
+<td colspan="2"><span class="hover"><span class="hover-text">一张纸可算不上什么“文档”。但没错，我就是DRO-0678。我现在位于υ57号收容柜内，仅限持有4/DRO-0678级权限的人访问；有个叫Dr.Skyler的人推测，阻止我影响的唯一方法就是让我远离她的物质伙伴。但有趣的是，你知道你也有4/DRO-0678级权限吗？你桌子下面那个保险箱里也有一把钥匙。我想知道它能打开点啥。</span>一份于未知时间点变为逆模因实体的认知危害文档。</span>对上述文档的测试无结果，尽管已证实受试者在阅读文件后无法被观察到。</td>
+</tr>
+<tr>
+<td>DRO-0002</td>
+<td colspan="2"><span class="hover"><span class="hover-text"><strong>来自INDOMITABLE.AIC的信息：</strong>DRO-0001并不存在。DRO-0002是一个孤立的现象。</span>一种逆模因现象，内容为未知来源的地震活动将影响到Site-17，通常会在设施经受严重结构破坏前停止。</span>受地震活动影响的区域内的人员将不会观察到该事件。</td>
+</tr>
+</table>
+</div>
+<p>好的，现在你已经知道了要保护你的下属免除什么的伤害了，你可以相信<em>Galileo.aic</em>会帮你做这件事。你AIC做出来的模因旨在刺激你的员工，让他们在任何时候都能在潜意识里意识到大多数逆模因实体。如果一个隐身威胁实体在走廊里走向你的员工，他们会感觉到有什么不对劲，并且希望可以以最快的速度离开那里。</p>
+<p>但模因实体要怎么办呢？好问题，主管！因为模因实体不会具有记述与观察阻抗性，站内AIC目前致力于缓和模因实体通常能对受害者造成的灾难性影响。</p>
+<p>这里有一份很有用的清单，列出了AIC们经常用来对抗模因危害的模因。</p>
+<table class="wiki-content-table">
+<tr>
+<th>呼号</th>
+<th>名称</th>
+<th>效果</th>
+</tr>
+<tr>
+<td>MC-A23</td>
+<td>“官能矫正”</td>
+<td><span class="hover"><span class="hover-text">她立于摩瑞亚山上，辽阔的人类社会在她下前进，从生至死。</span>防止受到可引诱出杀人倾向的强迫性作用影响。</span></td>
+</tr>
+<tr>
+<td>MC-D86</td>
+<td>“咖啡因增浓”</td>
+<td><span class="hover"><span class="hover-text">他们甚至还未开始怀疑其中的巨大欺骗。我的子孙戴着一百个面具，在其下，是一残忍且狡猾的笑。</span>防止受到自接种者处抽出能量类型的模因影响。</span></td>
+</tr>
+<tr>
+<td>MC-S34</td>
+<td>“防火墙”</td>
+<td><span class="hover"><span class="hover-text">他们的小世界是由有序的墙壁组成的，墙壁旨在增加一点对即将到来的混乱的防御时间。他们用烟雾构成的障壁保护自己。</span>防止受到被接种者的信息、记忆或情感吸引的模因影响。</span></td>
+</tr>
+<tr>
+<td>MC-V52</td>
+<td>“哪个阿拉莫？”</td>
+<td><span class="hover"><span class="hover-text">那也包括你，Dr.Weathers。</span>阻挡MDP系统的调查或了解。</span></td>
+</tr>
+</table>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<div style="text-align: center;">
+<h4><span>第四部分：如果有一名站点内成员怀疑MDP系统，我该怎么办？</span></h4>
+</div>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>关于如何最大限度地减少信息收容失效对整个APAS造成损害的详细说明，请参阅随附文件：“APAS的道德准则和你：为了你Site的利益！”。但是，当一名或多名站点内成员在分发的资料中发现了模因媒介（不管是否接种上述的MC-V52）的话，有几个你作为站点主管可使用的选择项。</p>
+<p><span class="hover"><span class="hover-text">一会儿见，监督者。</span>如果你发现你正处于这种不幸的情况中时，去看看随附文件“高级MDP应用程序以及有效的掩盖措辞”，找一些有用的信息。</span></p>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<div class="terminal">
+<div class="collapsible-block">
+<div class="collapsible-block-folded" style="display:none"><a class="collapsible-block-link" href="javascript:;">[+]&nbsp;存取&nbsp;Site-17内APAS启用记录？&nbsp;[+]</a></div>
+<div class="collapsible-block-unfolded">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+<div class="collapsible-block-content">
+<blockquote>
+<p><a href="/apas/offset/3">紧急启动：对电磁设备的校正</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/0">返回 启动屏幕</a></p>
+</blockquote>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+</div>
 </div>
 </div>
 <div class="footnotes-footer">
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 有意思的是，狱卒在对外宣传和对内洗脑中，总是有意无意地忽略这个“之一” 。～T.Z.</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. 现在他们一样了。：）～P.P .</div>
-<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. 这些目光中有多少本不该被关押的存在？～L.S.</div>
-<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. 这么说起来确实还是图书馆好，如果是狱卒或焚书人中的一员夸一句拱卫们……我简直不敢想下场会怎样。 ～B</div>
-<div class="footnote-footer" id="footnote-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-5')">5</a>.</div>
-<div class="footnote-footer" id="footnote-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-6')">6</a>. 我删除了您的过激言论，E.F先生。我们都能理解您的愤怒，但还请保持克制，记住无论在何种意义上，这里都是图书馆。～收录司南-迁TB0</div>
-<div class="footnote-footer" id="footnote-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-7')">7</a>. 这怕是当狱卒当上头了。～司书NET</div>
-<div class="footnote-footer" id="footnote-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-8')">8</a>. 大家好，我就是于雅。感谢图书馆里各位的相助。～Y.Y.</div>
-<div class="footnote-footer" id="footnote-9"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-9')">9</a>. 现在想想，她们有多少不是因为我的能力才成为我朋友的呢…… ～Y.Y.</div>
-<div class="footnote-footer" id="footnote-10"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-10')">10</a>. 抱歉抱歉！我不知道这些想法会出现在这上面，我这就把不该出现的都删了，抱歉打扰了！～Y.Y.</div>
-<div class="footnote-footer" id="footnote-11"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-11')">11</a>. 这个名字是他们自己起的吧？独自冲向风车的骑士，还真配他们。～司书Yellewng</div>
-<div class="footnote-footer" id="footnote-12"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-12')">12</a>. 和某些人形成鲜明对比。～讲解员东-参DR7</div>
-<div class="footnote-footer" id="footnote-13"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-13')">13</a>. 有一说一，狱卒们也不会没事进行非人道实验。～R.F</div>
-<div class="footnote-footer" id="footnote-14"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-14')">14</a>. 这就是我们和狱卒的差别了，他们似乎一直觉得全世界就他们的科学家能客观理智地看待异常，实际上任何一位科学家都明白尊重客观事实的原则。如果亲眼看到异常，整个帷幕前科学界就算崩溃也不会持续太久的。新的体系将被建立，本数学系下的每个文明的科学史都是如此。～OR</div>
-<div class="footnote-footer" id="footnote-15"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-15')">15</a>. 这份论文已被我及时回收，有兴趣者可以前往西-蝶TA1书架浏览。～收录司西-蝶TA1</div>
-<div class="footnote-footer" id="footnote-16"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-16')">16</a>. 探路者难免出错，但我们不能否认亚里士多德的伟大。 ～OR</div>
-<div class="footnote-footer" id="footnote-17"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-17')">17</a>. 该死！当时看到那论文时我还以为终于能离开这鬼地方回家了！去他妈的狱卒，去他妈的图书馆！我</div>
-<div class="footnote-footer" id="footnote-18"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-18')">18</a>. 冷静姐！冷静！抱歉各位，我姐她对图书馆没别的意思，她就只是……其实不喜欢看书。我们都是被狱卒逼进来的。～F.O.</div>
-<div class="footnote-footer" id="footnote-19"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-19')">19</a>. 无需拘谨，正如这里的名字一样，被放逐者之图书馆不仅欢迎典籍，也欢迎被所处世界流放之人。我们并不介意被放逐者们将这里当做难民营，或是归宿。～收录司西-齐TG1</div>
-<div class="footnote-footer" id="footnote-20"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-20')">20</a>. 现在看来是后者了，那他们当时可能在忙“那件事” ～P.L.</div>
-<div class="footnote-footer" id="footnote-21"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-21')">21</a>. 有这种觉悟早些遇到蛇之手该多好……～Bright.R</div>
-<div class="footnote-footer" id="footnote-22"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-22')">22</a>. 人类历史中上一个能做到这种程度的，是魏忠贤。每个人在自己家里时讲话都要小心翼翼，一句埋怨出口，就可能会被门外的特务抓走。～李</div>
-<div class="footnote-footer" id="footnote-23"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-23')">23</a>. 方先生，我建议你收回那狭隘而物种主义的言论。这次讨论有相当一部分本数学系下的非人类学者参与，包括我。我们都希望人类能创造出更灿烂的文明，而不是被自己的一部分所阻碍。～P.H</div>
-<div class="footnote-footer" id="footnote-24"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-24')">24</a>. 还是声明一下， 这里所提的只是大致方向，具体的实施方案需要进一步讨论。～J.M.</div>
-<div class="footnote-footer" id="footnote-25"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-25')">25</a>. 得了吧，除了拱卫们中确实有相当一部分是被逼进来的，狱卒和焚书人怎么就还能“被逼无奈”？～TC</div>
-<div class="footnote-footer" id="footnote-26"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-26')">26</a>. 其实还是可以肯定的。因为我们试过。～收藏家</div>
-<div class="footnote-footer" id="footnote-27"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-27')">27</a>. 帷幕状态会限制经济类组织的市场、艺术类组织的展示平台、宗教类组织的信徒招募。这……仔细一想好像就三巨头中的狱卒、焚书人和利己类组织是帷幕主义的，就连捧杯人都属于立场不明。～司书Mukleter</div>
-<div class="footnote-footer" id="footnote-28"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-28')">28</a>. 关于这一点，蛇之手已经做好了准备，无论是心理上的还是具体措施上的。我们会继承所有必要之恶，从用于镇压深红之王那七位新娘的仪式，到对巫女之女的折磨，我们都已经知晓并做好了执行的准备。与狱卒不同的是，我们会让必要的罪恶变得有所意义。～质疑</div>
-<div class="footnote-footer" id="footnote-29"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-29')">29</a>. 相信大家都还记得那次灾难……因果律武器过于复杂且不确定，还是不要动用比较好。～赞助商-匿名</div>
+<div class="title">脚注</div>
+<div class="footnote-footer" id="footnote-806747-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-806747-1')">1</a>. <span class="ruby">记述阻抗类实体<span class="rt">Documentation-Resistant Object</span></span>（DRO）为一种分配给复杂逆模因实体的机密项目分级，该类实体无法被存储于标准SCiPNet数据库中。</div>
 </div>
-<div style="clear:both; height: 0px; font-size: 1px"></div>
 </div>
+    
+    
+    
+    </div>
+<div style="height: 100px"></div>
 
                     </div>
 
@@ -656,7 +937,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/goi%E6%A0%BC%E5%BC%8F#pages">goi格式</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E7%8B%B1%E5%8D%92#pages">狱卒</a><a href="/system:page-tags/tag/%E8%9B%87%E4%B9%8B%E6%89%8B#pages">蛇之手</a><a href="/system:page-tags/tag/_%E8%9B%87%E4%B9%8B%E6%89%8B#pages">_蛇之手</a><a href="/system:page-tags/tag/%E8%A2%AB%E6%94%BE%E9%80%90%E8%80%85%E4%B9%8B%E5%9B%BE%E4%B9%A6%E9%A6%86#pages">被放逐者之图书馆</a><a href="/system:page-tags/tag/%E8%A7%82%E8%B0%AC%E7%BB%B4%E5%9F%BA#pages">观谬维基</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%B7%B1%E4%BA%95%E7%9B%AE%E5%BD%95#pages">深井目录</a>
                             </span>
                         </div>
                     
@@ -664,12 +945,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 6, 最后编辑于: <span class="odate time_1596100057 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">30 Jul 2020 09:07</span></div>
+                            <div id="page-info">页面版本: 9, 最后编辑于: <span class="odate time_1601618791 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Oct 2020 06:06</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+32</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13586528/4" class="btn btn-default" id="discuss-button">讨论 (10)</a>
+<a href="/forum/t-13298810/apas" class="btn btn-default" id="discuss-button">讨论 (7)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -736,10 +1017,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ltt.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ltt.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://elogee-chamber.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/elogee-chamber.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ltt.wikidot.com">Living Through Technology</a></h3>
+            <h3><a target="_blank" href="http://elogee-chamber.wikidot.com">Elogee Chamber</a></h3>
+            <div class="desc">          
+              Ike for President
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://philippines.actor-atlas.info">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/philippines.actor-atlas.info/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://philippines.actor-atlas.info">Philippines        #tagcoding</a></h3>
             <div class="desc">          
               
             </div>
@@ -747,34 +1039,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://nimin.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/nimin.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpcommune.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpcommune.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://nimin.wikidot.com">Nimin Wiki</a></h3>
+            <h3><a target="_blank" href="http://scpcommune.wikidot.com">The SCP Commune</a></h3>
             <div class="desc">          
-              The best text-based mature RPG database that anyone can edit!
+              Satirize, Collectivize, Politicize
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://roboticspedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/roboticspedia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ecomind.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ecomind.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://roboticspedia.wikidot.com">Roboticspedia</a></h3>
+            <h3><a target="_blank" href="http://ecomind.wikidot.com">Ecology, Mind, &amp; Systems</a></h3>
             <div class="desc">          
-              All that you want to know about making robots
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://ci-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ci-wiki.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://ci-wiki.wikidot.com">Chaos Insurgency</a></h3>
-            <div class="desc">          
-              
+              Personal, Social, Cultural, Technological, and Ecological Explorations
             </div>
           </div>
         </div>
