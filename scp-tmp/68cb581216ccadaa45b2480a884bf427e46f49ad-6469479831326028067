@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<script type="text/javascript">
+
+function blink()
+{
+    var blinking = document.getElementById("blinking");
+
+    if (blinking.style.visibility == "visible")
+    {
+        blinking.style.visibility = "hidden";
+    }
+    else
+    {
+        blinking.style.visibility = "visible";
+    }
+}
+
+function openHide()
+{
+    if (timer)
+    {
+        clearInterval(timer);
+    }
+
+    var message = document.getElementById("message");
+    var blinking =  document.getElementById("blinking");
+
+    if (message.style.display == "block")
+    {
+        message.style.display = "none";
+    }
+    else
+    {
+        message.style.display = "block";
+    }
+
+        blinking.innerHTML = "";
+
+    if (blinking.style.visibility == "hidden")
+    {
+        blinking.style.visibility = "visible";
+    }
+}
+
+var timer = setInterval(blink, 1000);
+
+</script>
+
+<div id="blinking" style="font-family: verdana,arial,helvetica,sans-serif; font-size: 0.8em; color: #b01" onClick="openHide();"> !你有一封机密信息送达</div><div id="message" style="display: none; font-family: verdana,arial,helvetica,sans-serif; font-size: 0.8em; color: #333"><strong></strong><br>
+<br>
+<a href="http://scp-wiki-cn.wikidot.com/scp-cn-1223/offset/2" target="_blank" >那么现在黑月是否嗥叫？</a>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
