@@ -54,7 +54,7 @@ googletag.enableServices();
         WIKIREQUEST.info.categoryId = 366566;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "main";
-        OZONE.request.timestamp = 1608042106;
+        OZONE.request.timestamp = 1608065514;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "main";
@@ -191,45 +191,184 @@ googletag.enableServices();
     margin: 0;
 }
 
-.international-block .panel-body {
+.c_international-container .panel-body {
     padding: 0;
 }
-.international-entry {
-    padding: 5px 10px;
+.c_international-body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    *background: rgba(255,255,255,.9) url(http://www.scp-wiki.net/local--files/component:theme/panel-bg-gradient-reverse.png) bottom repeat-x;
+    padding: 5px 0;
 }
-.international-entry:nth-child(even),
-.alternate:nth-child(even) {
-    background-color: rgba(255,255,255,.9);
-    border-top: solid 1px #eeeee0;
-    border-bottom: solid 1px #eeeee0;
+.c_international-box {
+    margin: 5px 4px;
+    text-align: center;
+    min-width: 12em;
 }
+.c_international-box div > p,
 .international-entry div > p {
     margin: 0;
 }
-.international-entry .international-title {
-    font-weight: bold;
-    font-size: 110%;
+.c_international-box .c_international-text {
+    margin: 5px 0;
+    font-size: 99%;
 }
-.international-entry .international-title img {
-    width: 16px;
-    height: 11px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+.international-entry {
+    padding: 10px 10px 5px 10px;
+    border-top: 1px solid #eeeee0;
 }
 .international-entry .international-description {
-    font-size: 90%;
-    font-style: italic;
     margin: 5px 20px;
+    font-size: 99%;
 }
-.international-entry .international-footer {
-    font-size: #333;
-    font-size: 80%;
-    margin: 5px 0;
+.c_international-box .c_international-logo img {
+    height: 90px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .c_international-box .c_international-logo img {
+        height: 80px;
+    }
+    .c_international-box {
+        min-width: 10em;
+    }
+}
+@media (min-width: 581px) and (max-width: 767px) {
+    .c_international-box .c_international-logo img {
+        height: 70px;
+    }
+    .c_international-box {
+        min-width: 10em;
+    }
+}
+@media (min-width: 480px) and (max-width: 580px) {
+    .c_international-box .c_international-logo img {
+        height: 60px;
+    }
+    .c_international-box {
+        min-width: 10em;
+    }
+}
+@media (max-width: 479px) {
+    .c_international-box .c_international-logo img {
+        height: 50px;
+    }
+    .c_international-box {
+        min-width: 10em;
+    }
 }
 
 .content-panel p { padding: 0 0.75em; }
 
 div.content-panel.centered.standalone p span{
     line-height: 1;
+}
+:root {
+  --c_international-img-height: 90px;
+  --c_international-box-width: 12em;
+}
+
+.c_international-container .panel-body {
+    padding: 0;
+}
+.c_international-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.c_international-box {
+    text-align: center;
+    width: var(--c_international-box-width);
+}
+.c_international-box:first-of-type {
+    width: calc(2 * var(--c_international-box-width));
+}
+.c_international-box div > p {
+    margin: 0;
+}
+.c_international-box .c_international-text {
+    margin: 5px 0;
+    font-size: 99%;
+}
+.c_international-box .c_international-logo img {
+    height: var(--c_international-img-height);
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  :root {
+    --c_international-img-height: 80px;
+    --c_international-box-width: 10em;
+  }
+}
+@media (min-width: 581px) and (max-width: 767px) {
+  :root {
+    --c_international-img-height: 70px;
+    --c_international-box-width: 10em;
+  }
+}
+@media (min-width: 480px) and (max-width: 580px) {
+  :root {
+    --c_international-img-height: 60px;
+    --c_international-box-width: 10em;
+  }
+}
+@media (max-width: 479px) {
+  :root {
+    --c_international-img-height: 50px;
+    --c_international-box-width: 10em;
+  }
+}
+</style>
+<style>
+@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
+@import url("https://use.typekit.net/tqr1skr.css");
+
+a.library {
+    display: block;
+    box-sizing: border-box;
+    border: 2vw solid rgba(0,0,0,0.5);
+    border-image: url(http://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_border.png) 600 round;
+    border-image-width: 6;
+    background: url(http://wanderers-library.wdfiles.com/local--files/component%3Atheme/wlheader_bg.png);
+    border-radius: 1.5rem;
+padding: 0 0 0.5rem;
+    color: rgb(255, 219, 90);
+    text-align: center;
+font-family: adelle-sans, sans-serif;
+font-size: 1.15em;
+}
+
+a.library .fake-h4 {
+    font-family: 'zuijinregular', sans-serif;
+    margin-bottom: 0.7em;
+    margin-top: -0.5em;
+    display: inline-block;
+    font-size: 120%;
+    letter-spacing: 1px;
+}
+
+a.library .fake-h2 {
+    font-family: 'zuijinregular', sans-serif;
+    margin-bottom: 0.4em;
+    display: inline-block;
+    font-size: 150%;
+    color: rgb(255, 219, 90);
+    letter-spacing: 1px;
+}
+
+.logo {
+    float:left;
+    margin-right: 0.5rem;
+    margin-top: 0.6rem;
+    padding: 0.7rem 0;
+}
+
+@media (max-width: 767px) {
+    .logo {
+        float: none;
+        margin-right: none;
+    }
 }
 </style>
 <style>
@@ -542,6 +681,8 @@ div.content-panel.centered.standalone p span{
 
 
 
+
+
 <div style="text-align: center;"><img src="https://scp-wiki.wdfiles.com/local--files/main/250_logo.png" height="0" width="0" alt="250_logo.png" class="image" /></div>
 <div style="text-align: center; color: #600;">
 <div class="unmargined">
@@ -635,18 +776,7 @@ PERPETRATORS WILL BE TRACKED, LOCATED, AND DETAINED</p>
 </div>
 </div>
 </div>
-<p><br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br /></p>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
 <div class="news-block content-panel">
 <div class="panel-heading">
 <p>News</p>
@@ -698,165 +828,120 @@ PERPETRATORS WILL BE TRACKED, LOCATED, AND DETAINED</p>
 </div>
 </div>
 <hr />
+<a class="library" href="http://wanderers-library.wikidot.com"><img src="http://wanderers-library.wdfiles.com/local--files/component%3Atheme/wl_logo.png" class="logo" width="125px" alt="wl_logo.png" /><br />
+<span class="fake-h4">Official Sister Site</span><br />
+<span class="fake-h2">↬ The Wanderer's Library ↫</span><br />
+The Wanderer's Library is the Foundation's sister site and features the endless fantastical stories contained within the Library, home to the Serpents Hand and readers of all shapes and sizes. Stories should inspire Wonder - a sense that there is a larger world beyond the one we know.<br /></a>
 <div class="international-block content-panel">
 <div class="panel-heading">
-<p>Official Sister Sites</p>
+<p>Branches of the SCP Foundation</p>
 </div>
 <div class="panel-body">
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" alt="SerpHand.png" class="image" /> <a href="http://wanderers-library.wikidot.com/system:join">The Wanderers Library</a> &#8212; Fiction From Another World.</div>
-<div class="international-description">
-<p>The Wanderers Library is the Foundation's sister site and features the endless stories contained within the Library, home to the Serpents Hand and readers of all shapes and sizes.</p>
-</div>
-<div class="international-footer">
-<p>Admins: &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;">Rounderhouse</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/rumetzen" onclick="WIKIDOT.page.listeners.userInfo(209204); return false;">rumetzen</a></span></p>
-</div>
+<div class="c_international-body">
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-int.wikidot.com"><img src="http://scp-wiki.wdfiles.com/local--files/scp-international/scp-logo-int.png" alt="scp-logo-int.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-int.wikidot.com/">SCP-INT</a><br />
+<em>International Translation Archive</em></p>
 </div>
 </div>
-<div class="panel-footer">
-<p> </p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-ru.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-ru-400.png" alt="scp-logo-ru-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-ru.wikidot.com/">Фонд SCP</a><br />
+<em>Russian</em></p>
 </div>
 </div>
-<div class="international-block content-panel">
-<div class="panel-heading">
-<p>SCP International</p>
-</div>
-<div class="panel-body">
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/int.png" alt="int.png" class="image" /> <a href="http://scp-int.wikidot.com/">SCP-INT</a> &#8212; International Translation Archive</div>
-<div class="international-description">
-<p>A gathering place for the International Community of the SCP Foundation</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-grym" onclick="WIKIDOT.page.listeners.userInfo(1838016); return false;">Dr Grym</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-grom" onclick="WIKIDOT.page.listeners.userInfo(2026083); return false;">Dr_Grom</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://ko.scp-wiki.net/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-ko-400.png" alt="scp-logo-ko-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://ko.scp-wiki.net/">SCP 재단</a><br />
+<em>Korean</em></p>
 </div>
 </div>
-</div>
-<div class="panel-footer">
-<p> </p>
-</div>
-</div>
-<div class="international-block content-panel">
-<div class="panel-heading">
-<p>International Sites</p>
-</div>
-<div class="panel-body">
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/ru.png" alt="ru.png" class="image" /> <a href="http://scp-ru.wikidot.com/">SCP-RU</a> &#8212; SCP Foundation (Russian Branch)</div>
-<div class="international-description">
-<p>Russian Counterpart! Translation available <strong><a href="http://translate.google.ca/translate?hl=en&amp;sl=ru&amp;tl=en&amp;u=http%3A%2F%2Fscp-ru.wikidot.com%2F">here</a></strong>.<br />
-The Russian site is the oldest of the translation sites active on the web.</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/gene-r" onclick="WIKIDOT.page.listeners.userInfo(634139); return false;">Gene R</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/osobist" onclick="WIKIDOT.page.listeners.userInfo(993772); return false;">Osobist</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/resure" onclick="WIKIDOT.page.listeners.userInfo(716422); return false;">Resure</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-wiki-cn.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-cn-400.png" alt="scp-logo-cn-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-wiki-cn.wikidot.com/">SCP基金会</a><br />
+<em>Chinese</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/kr.png" alt="kr.png" class="image" /> <a href="http://ko.scp-wiki.net/">SCP-KO</a> &#8212; SCP 재단</div>
-<div class="international-description">
-<p>Our Korean Colleagues! Translation available <strong><a href="http://translate.google.com/translate?sl=ko&amp;tl=en&amp;js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;u=http%3A%2F%2Fscpkoreahq.wikidot.com%2F">here</a></strong>.</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/salamander724" onclick="WIKIDOT.page.listeners.userInfo(1486450); return false;">Salamander724</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/qaz135" onclick="WIKIDOT.page.listeners.userInfo(1415555); return false;">QAZ135</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/shfoakdls" onclick="WIKIDOT.page.listeners.userInfo(1411238); return false;">shfoakdls</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://fondationscp.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-fr-400.png" alt="scp-logo-fr-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://fondationscp.wikidot.com/">Fondation SCP</a><br />
+<em>French</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/cn.png" alt="cn.png" class="image" /> <a href="http://scp-wiki-cn.wikidot.com/">SCP-CN</a> &#8212; SCP基金会</div>
-<div class="international-description">
-<p>Our Chinese Branch! Translation available <strong><a href="http://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;tl=en&amp;prev=_dd&amp;u=http%3A%2F%2Fscp-wiki-cn.wikidot.com%2F">here</a></strong>.</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/areyoucrazytom" onclick="WIKIDOT.page.listeners.userInfo(1476662); return false;">Areyoucrazytom</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/sunnyclockwork" onclick="WIKIDOT.page.listeners.userInfo(1621343); return false;">SunnyClockwork</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-wiki.net.pl"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-pl-400.png" alt="scp-logo-pl-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-wiki.net.pl">Fundacja SCP</a><br />
+<em>Polish</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/fr.png" alt="fr.png" class="image" /> <a href="http://fondationscp.wikidot.com/">SCP-FR</a> &#8212; Fondation SCP</div>
-<div class="international-description">
-<p>The French have joined! Translation available <strong><a href="http://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;eotf=1&amp;u=http%3A%2F%2Ffondationscp.wikidot.com%2F&amp;act=url">here</a></strong>.</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/mafiew" onclick="WIKIDOT.page.listeners.userInfo(2035452); return false;">Mafiew</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/drjohannes" onclick="WIKIDOT.page.listeners.userInfo(1449809); return false;">DrJohannes</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/neremsa" onclick="WIKIDOT.page.listeners.userInfo(1602291); return false;">Neremsa</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://lafundacionscp.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-es-400.png" alt="scp-logo-es-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://lafundacionscp.wikidot.com/">La Fundación SCP</a><br />
+<em>Spanish</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/pl.png" alt="pl.png" class="image" /> <a href="http://scp-wiki.net.pl">SCP-PL</a> &#8212; SCP Polska Filia</div>
-<div class="international-description">
-<p>The Polish Branch of the site! Translation available <strong><a href="http://translate.google.com/translate?hl=en&amp;sl=pl&amp;tl=en&amp;u=http://scp-pl.wikidot.com/">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/mefioo9" onclick="WIKIDOT.page.listeners.userInfo(1926458); return false;">Mefioo9</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/wanna-amigo" onclick="WIKIDOT.page.listeners.userInfo(2364809); return false;">wanna-amigo</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-blackpeace" onclick="WIKIDOT.page.listeners.userInfo(2052536); return false;">Dr_Blackpeace</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-th.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-th-400.png" alt="scp-logo-th-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-th.wikidot.com/">สถาบัน SCP</a><br />
+<em>Thai</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/es.png" alt="es.png" class="image" /> <a href="http://lafundacionscp.wikidot.com/">SCP-ES</a> &#8212; La Fundación SCP</div>
-<div class="international-description">
-<p>The Spanish Branch! Translation available <strong><a href="http://translate.google.com/translate?hl=en&amp;sl=es&amp;tl=en&amp;u=http%3A%2F%2Flafundacionscp.wikidot.com%2F&amp;sandbox=1">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-merlin-vi" onclick="WIKIDOT.page.listeners.userInfo(2008469); return false;">Dr Merlin - VI</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/dc-yerko" onclick="WIKIDOT.page.listeners.userInfo(1780049); return false;">Dc_Yerko</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-jp.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-jp-400.png" alt="scp-logo-jp-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-jp.wikidot.com/">SCP財団</a><br />
+<em>Japanese</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/th.png" alt="th.png" class="image" /> <a href="http://scp-th.wikidot.com/">SCP-TH</a> &#8212; สถาบัน SCP</div>
-<div class="international-description">
-<p>The Thai Translators! Translation available <strong><a href="http://translate.google.com/translate?hl=en&amp;sl=th&amp;tl=en&amp;u=http%3A%2F%2Fscp-th.wikidot.com%2F&amp;sandbox=1">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/drsss" onclick="WIKIDOT.page.listeners.userInfo(1594121); return false;">DrSSS</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/slang" onclick="WIKIDOT.page.listeners.userInfo(1719714); return false;">Slang</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/kuruni" onclick="WIKIDOT.page.listeners.userInfo(1344496); return false;">Kuruni</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-wiki-de.wikidot.com/"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-de-400.png" alt="scp-logo-de-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch</a><br />
+<em>German</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/jp.png" alt="jp.png" class="image" /> <a href="http://scp-jp.wikidot.com/">SCP-JP</a> &#8212; SCP財団</div>
-<div class="international-description">
-<p>The Japanese branch! Translation available <strong><a href="http://translate.google.ca/translate?hl=en&amp;sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fscp-jp.wikidot.com%2F&amp;sandbox=1">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/ikr-4185" onclick="WIKIDOT.page.listeners.userInfo(1969312); return false;">Ikr_4185</a></span> — <span class="printuser"><a href="http://www.wikidot.com/user:info/nanimono-demonai" onclick="WIKIDOT.page.listeners.userInfo(1703549); return false;">Nanimono Demonai</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://fondazionescp.wikidot.com"><img src="http://o5command-int.wdfiles.com/local--files/tech-team:graphic-templates/scp-logo-it-400.png" alt="scp-logo-it-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://fondazionescp.wikidot.com/">Fondazione SCP</a><br />
+<em>Italian</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/de.png" alt="de.png" class="image" /> <a href="http://scp-wiki-de.wikidot.com/">SCP-DE</a> &#8212; SCP Deutschland</div>
-<div class="international-description">
-<p>Our German branch! Translation available <strong><a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Fscp-wiki-de.wikidot.com%2F&amp;edit-text=&amp;act=url">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-grom" onclick="WIKIDOT.page.listeners.userInfo(2026083); return false;">Dr_Grom</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/thepencilwriter" onclick="WIKIDOT.page.listeners.userInfo(1917140); return false;">ThePencilwriter</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-ukrainian.wikidot.com/"><img src="http://scp-wiki.wdfiles.com/local--files/scp-international/scp-logo-ua-400.png" alt="scp-logo-ua-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-ukrainian.wikidot.com/">Фонд SCP</a><br />
+<em>Ukrainian</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/it.png" alt="it.png" class="image" /> <a href="http://fondazionescp.wikidot.com/">SCP-IT</a> &#8212; Fondazione SCP</div>
-<div class="international-description">
-<p>The Italian Stallions! Translation available <strong><a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Ffondazionescp.wikidot.com%2F&amp;edit-text=&amp;act=url">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-voker" onclick="WIKIDOT.page.listeners.userInfo(1541341); return false;">Dr Voker</a></span> — <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-pisy" onclick="WIKIDOT.page.listeners.userInfo(1542036); return false;">Dr Pisy</a></span> — <span class="printuser"><a href="http://www.wikidot.com/user:info/afro-gufo" onclick="WIKIDOT.page.listeners.userInfo(1713965); return false;">Afro Gufo</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-pt-br.wikidot.com/"><img src="http://scp-wiki.wdfiles.com/local--files/scp-international/scp-logo-pt-400.png" alt="scp-logo-pt-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-pt-br.wikidot.com/">Fundação SCP</a><br />
+<em>Portuguese</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/ua.png" alt="ua.png" class="image" /> <a href="http://scp-ukrainian.wikidot.com/">SCP-UA</a> &#8212; SCP Foundation(Фонд SCP)</div>
-<div class="international-description">
-<p>Our Ukrainian Associates! Translation available <strong><a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Fscp-ukrainian.wikidot.com%2F&amp;edit-text=&amp;act=url">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/murzei-chaos" onclick="WIKIDOT.page.listeners.userInfo(2815284); return false;">murzei_chaos</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/fishstealer" onclick="WIKIDOT.page.listeners.userInfo(2986504); return false;">FishStealer</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/dr-bushroot" onclick="WIKIDOT.page.listeners.userInfo(3025315); return false;">Dr Bushroot</a></span></p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-cs.wikidot.com/"><img src="http://scp-int.wdfiles.com/local--files/main/scp-logo-cs-400.png" alt="scp-logo-cs-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-cs.wikidot.com/">SCP Nadace</a><br />
+<em>Czech</em></p>
 </div>
 </div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/pt.png" alt="pt.png" class="image" /> <a href="http://scp-pt-br.wikidot.com/">SCP-PT/BR</a> &#8212; Lusófona Branch</div>
-<div class="international-description">
-<p>Our Portuguese Pals! Translation available <strong><a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Fscp-pt-br.wikidot.com%2F&amp;edit-text=&amp;act=url">here</a></strong>!</p>
+<div class="c_international-box">
+<div class="c_international-logo"><a href="http://scp-zh-tr.wikidot.com/"><img src="http://scp-int.wdfiles.com/local--files/main/scp-logo-zh-400.png" alt="scp-logo-zh-400.png" class="image" /></a></div>
+<div class="c_international-text">
+<p><a href="http://scp-zh-tr.wikidot.com/">SCP基金會</a><br />
+<em>Traditional Chinese</em></p>
 </div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/slashannemoo" onclick="WIKIDOT.page.listeners.userInfo(4250866); return false;">slashannemoo</a></span> &#8212; <span class="printuser"><a href="http://www.wikidot.com/user:info/zeroman" onclick="WIKIDOT.page.listeners.userInfo(3078493); return false;">ZeroMan</a></span></p>
-</div>
-</div>
-<div class="international-entry">
-<div class="international-title"><img src="http://scp-wiki.wdfiles.com/local--files/main/cz.png" alt="cz.png" class="image" /> <a href="http://scp-cs.wikidot.com/">SCP-CZ</a> &#8212; SCP Nadace</div>
-<div class="international-description">
-<p>Our Czech Companions! Translation available <strong><a href="http://translate.google.com/translate?hl=en&amp;sl=cs&amp;tl=en&amp;u=http%3A%2F%2Fscp-cs.wikidot.com%2F&amp;sandbox=1">here</a></strong>!</p>
-</div>
-<div class="international-footer">
-<p>Admins: <span class="printuser"><a href="http://www.wikidot.com/user:info/hawkeyevole" onclick="WIKIDOT.page.listeners.userInfo(3693282); return false;">HawkeyeVole</a></span></p>
 </div>
 </div>
 </div>
@@ -867,7 +952,7 @@ The Russian site is the oldest of the translation sites active on the web.</p>
 <hr />
 <p><span style="font-size:90%;">The SCP Foundation Wiki <strong>Sigma-9</strong> theme and style was designed by <span class="printuser"><a href="http://www.wikidot.com/user:info/aelanna" onclick="WIKIDOT.page.listeners.userInfo(334454); return false;">Aelanna</a></span>,<br />
 and used under the Creative Commons Attribution-ShareAlike 3.0 license (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>).<br /></span></p>
-<p><iframe src="/main/html/b1d22cc85b51d15945223af54b75485a71d34523-13368833491110589240" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
+<p><iframe src="/main/html/b1d22cc85b51d15945223af54b75485a71d34523-21293849691650030627" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
 
                     </div>
 
@@ -897,7 +982,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 1237, last edited: <span class="odate time_1607036646 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">03 Dec 2020 23:04</span></div>
+                            <div id="page-info">page revision: 1242, last edited: <span class="odate time_1608056678 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">15 Dec 2020 18:24</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+458</span>)</a>
@@ -969,45 +1054,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://mis213-2.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mis213-2.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://caosinsurgente.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/caosinsurgente.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://mis213-2.wikidot.com">MIS 213-2</a></h3>
+            <h3><a target="_blank" href="http://caosinsurgente.wikidot.com">La Insurgencia del Caos</a></h3>
             <div class="desc">          
-              Intro to IS
+              Creando la Lógica De lo Ilógico
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://colbycriminaljustice.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/colbycriminaljustice.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://bozic-nation.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bozic-nation.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://colbycriminaljustice.wikidot.com">Criminal Justice Collaboratory</a></h3>
+            <h3><a target="_blank" href="http://bozic-nation.wikidot.com">Bozic Nation</a></h3>
             <div class="desc">          
-              Colby Community College
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sunnybrook-academy.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sunnybrook-academy.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://morningsidemicro.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/morningsidemicro.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sunnybrook-academy.wikidot.com">Fifth Sanctum School for The Supernatural</a></h3>
+            <h3><a target="_blank" href="http://morningsidemicro.wikidot.com">Microbiology@Morningside</a></h3>
             <div class="desc">          
-              fun and friendship in a semi-serious roleplay about teens in a school for supernatural
+              The wiki for students in BIO 252 at Morningside
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://solpadeinehelp.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/solpadeinehelp.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://fullrp.funclub.pro">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fullrp.funclub.pro/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://solpadeinehelp.wikidot.com">Solpadeine Help</a></h3>
+            <h3><a target="_blank" href="http://fullrp.funclub.pro">FUNCLUB FullRP</a></h3>
             <div class="desc">          
-              Help and information about Solpadeine addiction
+              База данных зоны 81F
             </div>
           </div>
         </div>
