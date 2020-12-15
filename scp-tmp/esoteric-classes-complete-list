@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "esoteric-classes-complete-list";
-        OZONE.request.timestamp = 1607997808;
+        OZONE.request.timestamp = 1608016328;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "esoteric-classes-complete-list";
@@ -117,51 +117,64 @@
     </script>
         
 <style>
-/* 折叠 */
-.list {
-  padding: 7px;
-  margin: 20px 3px;
+#toc-list div[style="margin-left: 2em;"] {    /* 问题，为什么他妈的wikidot要把style属性分配给每个toc-list的div里而不是直接把list本身留出2em的margin？ */
+  margin-right: 2em;
+}
+
+.top-banner {
+  border: solid 1px #000000;
+  background: #f2f2c2;
+  margin: 10px 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+/*  折叠  */
+.eso-list {
   background-color: #fafafa;
-  box-shadow: 0 2px 4px rgba(75, 75, 75, .5);
+  border: 1px solid #CCC;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(75, 75, 75, .5);
+  margin: 20px 3px;
+  padding: 7px;
 }
 .collapsible-block-link, .collapsible-block-unfolded-link, .collapsible-block-folded {
     text-align: center;
 }
 
-/* 目录 */
-#toc {
-    padding-right: 25px;
-}
-
-/* 移动端大小调整 */
-@media (max-width: 1250px) {
-  .eso-resources {
-    margin: 50px 0 !important;
-}
-}
-
-/* 资源 */
+/*  资源  */
 .eso-resources {
   border: 2px solid black;
   padding: 5px 10px;
-  margin: 50px;
+  margin: 50px 0;
 }
 .eso-resources a.collapsible-block-link {
   font-weight: bold;
 }
 
-/* 页眉 */
-h2 {
+/*  版头  */
+#page-content h2 {
   margin-top: 50px;
 }
-.list h3 {
+.eso-list h3 {
   margin-top: 20px;
 }
 
-/* 名称中置 */
+/*  中置分级  */
 table.wiki-content-table td:nth-child(1) {
   text-align: center;
+}
+
+span.4428-lie {
+  font-family: 'Courier', monospace;
+  font-weight: bold;
+  margin: 2px 1px 1px 1px;
+  background-color: #a3cef1;
+  overflow-wrap: break-word;
+}
+
+.footnotes-footer {
+  margin-top: 2em;
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -562,10 +575,10 @@ table.wiki-content-table td:nth-child(1) {
 <div style="margin-left: 2em;"><a href="#toc4">非本部机密分级</a></div>
 </div>
 </div>
-<p>基金会的基本任务是通过给予实例四位数编码与对应的收容措施来将异常们纳入秩序的掌控。实现这一点的手段之一是项目等级，这是一种根据收容难度将异常分门别类的过程。<a href="/object-classes">想进一步了解项目等级本身的档案管理者可访问其完整档案。</a></p>
+<p>基金会的基本任务是通过给予实例四位数编码与对应的收容措施来将异常们纳入秩序的掌控。实现这一点的手段之一是项目等级，这是一种根据收容难度将异常分门别类的过程。<a href="/object-classes">想进一步了解项目等级本身的档案读者可访问其完整档案。</a></p>
 <p>尽管如此，部分异常仍然被证明应被分类为Safe，Euclid，Keter三级以外的全新分级，甚至部分情况下也不能用Thaumiel，Neutralized或者Explained分级去归纳它们。这些机密分级极为罕见，由于其专业性，它们中的许多也不适用于标准文件。以下列表为对这些分级的一份归纳文件。</p>
 <hr />
-<div style="border: solid 1px #000000; background: #f2f2c2; padding: 5px 10px; margin: 10px 5px; text-align: center">
+<div class="top-banner">
 <h4><span>这是一个开放的合作项目。如果你发现一个分级缺失或分类不正确，请随意添加。</span></h4>
 </div>
 <div class="eso-resources">
@@ -615,7 +628,7 @@ table.wiki-content-table td:nth-child(1) {
 <p>鉴于本指导得到内容是手动添加的，一些分级很可能会被遗漏。如果您发现本指导中某个分级的标签不正确，则可以适当地更新！</p>
 <hr />
 <h4><span>如何编辑</span></h4>
-<p>想要更改某些东西的话，向下滚动到页面底部的“编辑”按钮并打开编辑窗口。<strong>请在“本次编辑的简要说明：”窗口处列出本次更改的描述。</strong>如果你不这样做，可以期待一下来自<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1607447836" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>的私信以说明更改了。</p>
+<p>想要更改某些东西的话，向下滚动到页面底部的“编辑”按钮并打开编辑窗口。<strong>请在“本次编辑的简要说明：”窗口处列出本次更改的描述。</strong>如果你不这样做，可以期待一下来自<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1608001105" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>的私信以说明更改了。</p>
 <p>还有，不要更改Scarf的分级定义中的拼写错误，这是故意的。</p>
 <h4><span>添加新分级</span></h4>
 <p>这里是条目的代码；把它按字母顺序放在适当的条目中。<br /></p>
@@ -655,7 +668,7 @@ table.wiki-content-table td:nth-child(1) {
 <li>根据作者的要求，将<a class="newpage" href="/scp-5708">SCP-5708</a>列在-prodest的子类分级下，尽管其本身并未被用作子类。</li>
 </ul>
 <hr />
-<p>如果您需要说明或有任何问题，通过Wikidot联系<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1607447836" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span><sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>。无论如何，她不是这个页面的“所有者”，但是她一直是主要贡献者。</p>
+<p>如果您需要说明或有任何问题，通过Wikidot联系<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1608001105" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span><sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>。无论如何，她不是这个页面的“所有者”，但是她一直是主要贡献者。</p>
 </div>
 </div>
 </div>
@@ -663,7 +676,7 @@ table.wiki-content-table td:nth-child(1) {
 <hr />
 <h2 id="toc0"><span>公认机密分级</span></h2>
 <p>以下分级于基金会创建并用于描述认为适用于异常或是异常自身的收容。</p>
-<div class="list">
+<div class="eso-list">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">►&nbsp;公认机密分级&nbsp;◄</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -691,9 +704,9 @@ table.wiki-content-table td:nth-child(1) {
 <td><a href="/i-h-p-proposal">I.H.Pickman的提案</a>，<a href="/scp-1661">SCP-1661</a>，<a href="/scp-3310">SCP-3310</a>，<a href="/scp-3455">SCP-3455</a>，<a class="newpage" href="/scp-3787">SCP-3787</a>，<a href="/scp-4043">SCP-4043</a>，<a href="/scp-4052">SCP-4052</a>，<a href="/scp-4200">SCP-4200</a>，<a class="newpage" href="/scp-4223">SCP-4223</a>，<a class="newpage" href="/scp-4246">SCP-4246</a>，<a href="/scp-4494">SCP-4494</a>，<a href="/scp-4634">SCP-4634</a>，<a href="/scp-4778">SCP-4778</a>，<a href="/scp-5009">SCP-5009</a>，<a class="newpage" href="/scp-5015">SCP-5015</a>，<a class="newpage" href="/scp-5122">SCP-5122</a>，<a href="/scp-5520">SCP-5520</a></td>
 </tr>
 <tr>
-<td>Cernnunos（塞努诺斯<sup class="footnoteref"><a id="footnoteref-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-6')">6</a></sup>）</td>
+<td>Cernunnos（塞努诺斯<sup class="footnoteref"><a id="footnoteref-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-6')">6</a></sup>）</td>
 <td>项目于技术上可被收容，但由于所需程序的性质，基金会拒绝这么做。</td>
-<td><a href="/scp-4971">SCP-4971</a>，<a href="/scp-5431">SCP-5431</a>，<a href="/scp-5699">SCP-5699</a>，<a href="/scp-5721">SCP-5721</a></td>
+<td><a href="/scp-4971">SCP-4971</a>，<a href="/scp-5431">SCP-5431</a>，<a href="/scp-5699">SCP-5699</a>，<a href="/scp-5721">SCP-5721</a>，<a class="newpage" href="/scp-5751">SCP-5751</a></td>
 </tr>
 <tr>
 <td>已收容</td>
@@ -813,7 +826,7 @@ table.wiki-content-table td:nth-child(1) {
 <tr>
 <td>None（无）</td>
 <td></td>
-<td><a class="newpage" href="/r-00x-s-proposal">R-00X的提案（日分）</a>，<a href="/scp-048">SCP-048</a>，<a href="/scp-1763-ex">SCP-1763-EX</a>，<a href="/scp-2165">SCP-2165</a>，<a href="/scp-2508">SCP-2508</a>，<a href="/scp-2786">SCP-2786</a></td>
+<td><a class="newpage" href="/scp-0000-ex">SCP-0000-EX</a>，<a class="newpage" href="/r-00x-s-proposal">R-00X的提案（日分）</a>，<a href="/scp-048">SCP-048</a>，<a href="/scp-1763-ex">SCP-1763-EX</a>，<a href="/scp-2165">SCP-2165</a>，<a href="/scp-2508">SCP-2508</a>，<a href="/scp-2786">SCP-2786</a></td>
 </tr>
 <tr>
 <td>Principalis<sup class="footnoteref"><a id="footnoteref-19" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-19')">19</a></sup></td>
@@ -843,7 +856,7 @@ table.wiki-content-table td:nth-child(1) {
 <tr>
 <td>Tiamat（提亚马特）</td>
 <td>项目对人类构成直接威胁，但可通过公开战争或其他面纱破碎式行动加以“收容”<sup class="footnoteref"><a id="footnoteref-21" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-21')">21</a></sup>。</td>
-<td><a class="newpage" href="/scp-es-244">SCP-ES-244</a>，<a href="/scp-3396">SCP-3396</a>，<a href="/scp-3895">SCP-3895</a>，<a class="newpage" href="/scp-4568">SCP-4568</a>，<a href="/scp-5034">SCP-5034</a></td>
+<td><a class="newpage" href="/scp-es-244">SCP-ES-244</a>，<a href="/scp-3396">SCP-3396</a>，<a href="/scp-3895">SCP-3895</a>，<a class="newpage" href="/scp-4568">SCP-4568</a>，<a href="/scp-5034">SCP-5034</a>，<a class="newpage" href="/scp-5866">SCP-5866</a></td>
 </tr>
 <tr>
 <td>Ticonderoga（提康德罗加<sup class="footnoteref"><a id="footnoteref-22" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-22')">22</a></sup>）</td>
@@ -897,7 +910,7 @@ table.wiki-content-table td:nth-child(1) {
 </div>
 <h2 id="toc1"><span>子类分级</span></h2>
 <p>由于某些异常并不完全符合标准收容分级——同时保证不自己创建一个新的分级——一些子类分级已被创建以用于进一步描述它们的属性和/或它们的收容。</p>
-<div class="list">
+<div class="eso-list">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">►&nbsp;子类分级&nbsp;◄</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -1200,7 +1213,7 @@ table.wiki-content-table td:nth-child(1) {
 </div>
 <h2 id="toc2"><span>系统分级</span></h2>
 <p>以下分级不描述分配给它们的异常，而是占位符或系统错误的结果。</p>
-<div class="list">
+<div class="eso-list">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">►&nbsp;系统分级&nbsp;◄</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -1225,7 +1238,7 @@ table.wiki-content-table td:nth-child(1) {
 <tr>
 <td>[数据删除]</td>
 <td></td>
-<td><a href="/pedantique-s-proposal">Pedantique的提案</a>，<a href="/scp-2317">SCP-2317</a>，<a href="/scp-5790">SCP-5790</a></td>
+<td><a class="newpage" href="/scp-0000-ex">SCP-0000-EX</a>，<a href="/pedantique-s-proposal">Pedantique的提案</a>，<a href="/scp-2317">SCP-2317</a>，<a href="/scp-5790">SCP-5790</a></td>
 </tr>
 <tr>
 <td>存在争议</td>
@@ -1263,7 +1276,7 @@ table.wiki-content-table td:nth-child(1) {
 <td><a href="/scp-1463">SCP-1463</a></td>
 </tr>
 <tr>
-<td><span style="font-family: 'Courier', monospace; font-weight: bold; margin: 2px 1px 1px 1px; background-color: #a3cef1; overflow-wrap: break-word;">Safe</span></td>
+<td><span class="4428-lie">Safe</span></td>
 <td>项目等级为假。</td>
 <td><a href="/scp-4428">Michaels博士</a></td>
 </tr>
@@ -1289,7 +1302,7 @@ table.wiki-content-table td:nth-child(1) {
 </div>
 <h2 id="toc3"><span>非正式机密分级</span></h2>
 <p>以下分级被假定受到异常属性或其他第三方的影响；一般来说，它们是传染性模因或信息危害的结果。</p>
-<div class="list">
+<div class="eso-list">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">►&nbsp;非正式机密分级&nbsp;◄</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -1483,8 +1496,8 @@ table.wiki-content-table td:nth-child(1) {
 </div>
 <h2 id="toc4"><span>非本部机密分级</span></h2>
 <p>以下为基金会非英语支部中被认为“已建立”而创建的机密分级。<sup class="footnoteref"><a id="footnoteref-28" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-28')">28</a></sup></p>
-<p>感谢原作者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ziakial" onclick="WIKIDOT.page.listeners.userInfo(2291501); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2291501&amp;amp;size=small&amp;amp;timestamp=1607447837" alt="Ziakial" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2291501)" /></a><a href="http://www.wikidot.com/user:info/ziakial" onclick="WIKIDOT.page.listeners.userInfo(2291501); return false;">Ziakial</a></span>创建该列表。</p>
-<div class="list">
+<p>感谢原作者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ziakial" onclick="WIKIDOT.page.listeners.userInfo(2291501); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2291501&amp;amp;size=small&amp;amp;timestamp=1608001106" alt="Ziakial" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2291501)" /></a><a href="http://www.wikidot.com/user:info/ziakial" onclick="WIKIDOT.page.listeners.userInfo(2291501); return false;">Ziakial</a></span>收集该列表。</p>
+<div class="eso-list">
 <div class="collapsible-block">
 <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">►&nbsp;非本部机密分级&nbsp;◄</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
@@ -1611,14 +1624,13 @@ table.wiki-content-table td:nth-child(1) {
 </div>
 </div>
 </div>
-<div style="height: 25px"></div>
 
 
 
 <div class="footnotes-footer">
 <div class="title">脚注</div>
 <div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. <strong>译注：</strong>请自备梯子。</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. <strong>译注：</strong>也可以联系本页面的原译者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/oeowo3o" onclick="WIKIDOT.page.listeners.userInfo(3496678); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3496678&amp;amp;size=small&amp;amp;timestamp=1607447837" alt="OEOWO3O" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3496678)" /></a><a href="http://www.wikidot.com/user:info/oeowo3o" onclick="WIKIDOT.page.listeners.userInfo(3496678); return false;">OEOWO3O</a></span>或现译者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1607447837" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></div>
+<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. <strong>译注：</strong>也可以联系本页面的原译者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/oeowo3o" onclick="WIKIDOT.page.listeners.userInfo(3496678); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3496678&amp;amp;size=small&amp;amp;timestamp=1608001106" alt="OEOWO3O" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3496678)" /></a><a href="http://www.wikidot.com/user:info/oeowo3o" onclick="WIKIDOT.page.listeners.userInfo(3496678); return false;">OEOWO3O</a></span>或现译者<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608001106" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></div>
 <div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. 在有些外国分部中被翻译为“Abnormal”</div>
 <div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. <strong>译注：</strong>圣经启示录中出现的恶魔之王，来自无底深坑的使者。其在希伯来/希腊语中分别被称作亚巴顿/亚坡伦。参见<a href="https://zh.wikipedia.org/wiki/%E4%BA%9E%E5%B7%B4%E9%A0%93">维基百科</a>。</div>
 <div class="footnote-footer" id="footnote-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-5')">5</a>. <strong>译注：</strong>希腊词语，意为“统治者”，通常被用作特定公职的头衔。参见<a href="https://zh.wikipedia.org/wiki/%E5%9F%B7%E6%94%BF%E5%AE%98_(%E9%9B%85%E5%85%B8)">维基百科</a></div>
@@ -1644,7 +1656,7 @@ table.wiki-content-table td:nth-child(1) {
 <div class="footnote-footer" id="footnote-25"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-25')">25</a>. 原语言版本为：Ты - аномалия, опухоль миров</div>
 <div class="footnote-footer" id="footnote-26"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-26')">26</a>. <strong>译注：</strong>Best Friend Forever，一辈子的好朋友。</div>
 <div class="footnote-footer" id="footnote-27"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-27')">27</a>. <strong>译注：</strong>德国数学家，参见项目内文。</div>
-<div class="footnote-footer" id="footnote-28"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-28')">28</a>. 一些翻译错误可能会持续存在;如果知情的档案管理员同意作者的观点，或者确信有更好的定义，他们可以更新某些支部分级的定义。</div>
+<div class="footnote-footer" id="footnote-28"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-28')">28</a>. 一些翻译错误可能会持续存在;如果知情的读者同意作者的观点，或者确信有更好的定义，他们可以更新某些支部分级的定义。</div>
 <div class="footnote-footer" id="footnote-29"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-29')">29</a>. 原语言版本为：Атлант。</div>
 <div class="footnote-footer" id="footnote-30"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-30')">30</a>. <strong>译注：</strong>参照原文注释改写，下同。</div>
 </div>
@@ -1684,7 +1696,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 102, 最后编辑于: <span class="odate time_1607447836 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">08 Dec 2020 17:17</span></div>
+                            <div id="page-info">页面版本: 103, 最后编辑于: <span class="odate time_1608001105 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">15 Dec 2020 02:58</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+12</span>)</a>
@@ -1756,10 +1768,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://opencascade.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/opencascade.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://darksouls3.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/darksouls3.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://opencascade.wikidot.com">Open CASCADE Wiki</a></h3>
+            <h3><a target="_blank" href="http://darksouls3.wikidot.com">Darksouls3</a></h3>
+            <div class="desc">          
+              Your trusted source of information for Dark Souls 3
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://knightswrite.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/knightswrite.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://knightswrite.wikidot.com">KnightsWrite</a></h3>
             <div class="desc">          
               
             </div>
@@ -1767,34 +1790,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://lspr.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/lspr.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://evilhat.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/evilhat.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://lspr.wikidot.com">Lopside Raccoons</a></h3>
+            <h3><a target="_blank" href="http://evilhat.wikidot.com">Evil Hat Productions Wiki</a></h3>
             <div class="desc">          
-              Not Rightside, But Lopside!
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://fpt.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fpt.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://osx86.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/osx86.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://fpt.wikidot.com">Parameterized Complexity</a></h3>
+            <h3><a target="_blank" href="http://osx86.wikidot.com">InfiniteMac Wiki</a></h3>
             <div class="desc">          
-              Did you say NP-hard?
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://chaoscomplexityineducation.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chaoscomplexityineducation.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://chaoscomplexityineducation.wikidot.com">Chaos &amp; Complexity Theories in Education Group</a></h3>
-            <div class="desc">          
-              Also a Special Interest Group of the American Educational Research Association
+              
             </div>
           </div>
         </div>
