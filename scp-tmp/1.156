@@ -1,385 +1,719 @@
-/* Wanderer's Station Theme */
-/* 2019 Wikidot Theme */
-/* By Rounderhouse, based off Dustjacket by Woedenaz and Croquembouche */
-/* Logo by Rounderhouse, using art from SunnyClockwork, licensed under CC BY SA 3.0 */
-/* Header background by NASA, public domain. */
+/*
+=========================================================
+              🐉 羽天一的异学夜行BHL版主题 🐉
+       ------------------------------------------------
+           异学会标志由 Freedom Koo 绘制
+           CN分部标志由 Deer Kylin 设计
+         分割线代码参考自 Woednaz 设计的主题
+                   遵循CC-BY-SA协议
+==========================================================
+*/
 
-/* Fonts */
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900|PT+Mono|Poppins:600,800');
-@import url('https://fonts.googleapis.com/css?family=Iceland&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
-
-/* All Vars Used */
 
 :root {
-    /* S-CSS-P Integration */
-    /* If you're making a new CSS theme, please include the following three variables at minimum. */
-    --theme-base: "nuscp";
-    /* must be either "nuscp" or "sigma9" */
-    --theme-id: "WandererStation";
-    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-    --theme-name: "Wanderer's Station";
-    /* set this to your theme's full name */
+   --theme-base: "black-highlighter";
+--theme-id: " piaoxiang-bhl";
+--theme-name: "夜行主题";
 
-    /* Header */
-    --logo-image: url("http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/spacelogo.png");
-    --header-title: "流浪者站";
-    --header-subtitle: "欢迎回港，流浪者01。";
+/* 图片 */
 
-    /* Typefaces */
-    --body-font: 'Lato', '微软雅黑', sans-serif;
-    --header-font: 'Audiowide', '方正姚体', cursive;
-    --title-font: 'Gugi', '等线', '幼圆', cursive;
-    --mono-font: "PT Mono", "Andale Mono", "Courier New", '仿宋', Courier, monospace;
 
-    /* Standard Colors */
-    --white-monochrome: 252, 252, 252;
-    /* white */
-    --pale-gray-monochrome: 244, 244, 244;
-    /* v light gray for blockquotes and stuff */
-    --light-gray-monochrome: 170, 170, 170;
-    /* light accent gray for login status */
-    --gray-monochrome: 66, 66, 72;
-    /* gray */
-    --dark-gray-monochrome: 48, 48, 52;
-    /* dark accent gray for sidebar background */
-    --black-monochrome: 12, 12, 12;
-    /* black */
-    --bright-accent: 255, 219, 90;
-    /* bright yellow */
-    --medium-accent: 36, 38, 114;
-    /* blue */
-    --dark-accent: 220, 185, 53;
-    /* dark yellow */
-    --newpage-color: 221, 102, 17;
-    /* pale orange */
-    --mid-black: 39, 39, 39;
-    /* pale black */
-    --mid-black: 39, 39, 39;
-    /* pale black */
+--header-image:url(http://scp-wiki-cn.wdfiles.com/local--files/theme:walk-in-the-dark/Header-yxh-dark.png);
 
-    /* Primary Theme Colors */
-    --swatch-background: var(--mid-black);
-    --swatch-primary: var(--medium-accent);
-    --swatch-primary-darker: var(--bright-accent);
-    --swatch-primary-darkest: var(--bright-accent);
-    /* Primary Text Colors */
-    --swatch-text-dark: var(--white-monochrome);
-    --swatch-text-light: var(--black-monochrome);
-    --swatch-important-text: var(--bright-accent);
+--yxh-red-image:url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-the-dark/Logo-YXH-red.png);
 
-    /* Primary Menu Colors */
-    --swatch-menubg-color: var(--gray-monochrome);
-    --swatch-menubg-light-color: var(--gray-monochrome);
-    --swatch-menubg-medium-color: var(--gray-monochrome);
-    --swatch-menubg-medium-dark-color: var(--black-monochrome);
-    --swatch-menubg-dark-color: var(--medium-accent);
-    --swatch-menubg-black-color: var(--black-monochrome);
-    --swatch-menubg-hover-color: var(--gray-monochrome);
-    --swatch-menutxt-dark-color: var(--bright-accent);
-    --swatch-menutxt-light-color: var(--bright-accent);
-    --swatch-border-color: var(--bright-accent);
-    /* Primary Header Colors */
+--hr-image:url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-the-dark/Logo-CNhub-white.png);
+
+ /* 著作信息文件夹 */    
+--linkColour:#CC6600  ;
+ --barColour:  linear-gradient(30deg,#151e3b,#2d1053,#291342 );
+
+
+
+/* 字体 */
+    --body-font: '新宋体',kaiti,monospace;
+    --header-font: '思源宋体 CN',lisu,kaiti,sans-serif;
+    --sub-header-font:'思源宋体 CN', lisu, kaiti,sans-serif;
+    --page-title-font: '楷体', kaiti,sans-serif;
+    --title-font: '思源宋体 CN', lisu,kaiti,sans-serif;
+    --mono-font: '仿宋', monospace;
+    --hdmemu-font: kaiti, monospace;/* 顶栏文字 */
+    --hdlist-font: '等线', monospace;/* 顶栏列表 */
+
+    
+/* 版头文字 */
+    --header-title:" ";
+    --header-subtitle:" ";
+ 
+ 
+/* 基准色以及其他 */    
+    --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+      
+      --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+      
+   
+
+                --white-monochrome: 3, 3, 3;
+            /*↑ 白色 ↑*/
+                  --pale-gray-monochrome:50, 50, 50;
+            /*↑ 非常浅的灰色，用于引用块 ↑*/
+      
+              --light-pale-gray-monochrome: 150,150,150;/**/
+            /*↑ 浅灰色 ↑*/
+               --very-light-gray-monochrome:190,187,156;/**/
+            /*↑ 浅灰色 ↑*/
+
+      
+                  --light-pale-gray-monochrome: 205, 205, 205;
+            /*↑ 浅灰色 ↑*/
+                  --very-light-gray-monochrome: 215, 215, 215;
+            /*↑ 浅灰色 ↑*/
+                  --light-gray-monochrome: 240, 230, 230;
+            /*↑ 浅灰色 ↑*/
+                  --black-monochrome: 240, 240, 240;
+            /*↑ 黑色 ↑*/
+
+
+              --pale-accent: 210,107,92;/**/
+            /*↑ 浅红色，链接颜色 ↑*/
+                  --bright-accent: 133, 0, 5;/**/
+            /*↑ 亮红色 ↑*/
+                  --medium-accent:173,29,25;
+            /*↑ 红色 - 基准颜色 ↑*/
+                  --dark-accent: 132,8,5;
+            /*↑ 深红色 ↑*/
+      
+                        --very-dark-accent: 91,5,4;
+                  /*↑ 非常深的红色 ↑*/
+
+    --alt-accent: 221, 102, 17;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+                  --very-dark-accent: 91,5,4;
+                  /*↑ 非常深的红色 ↑*/
+
+                  --alt-accent: 204,102,0;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+                  --alt-accent: 204,102,0;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+    
+    --hover-link-color:171,58,55;
+    --visited-link-color:171,58,55;
+    --sel-color:90,16,14;
+    --purple-color:43,17,76, 0.85;
+
+   /* 版头 */
+    --header-gradient-color-bottom: var(--black-monochrome);
+    --header-gradient-color-middle: var(--dark-gray-monochrome);
+    --header-gradient-color-top: var(--dark-gray-monochrome);
     --swatch-headerh1-color: var(--white-monochrome);
     --swatch-headerh2-color: var(--white-monochrome);
-    --swatch-topmenu-border-color: var(--bright-accent);
-    --swatch-topmenu-bg-color: var(--medium-accent);
+    
+ --gradient-header: linear-gradient(0deg, #151515, #141414,#3b3b3b,#222,#111);  
+      
+         
+    /* 顶栏 */
+      --swatch-topmenu-bg-color: var(--very-dark-accent); 
+      --swatch-topmenu-border-color: 42,12,4;
+      
+        --background-gradient-color:var(--pale-gray-monochrome);
 
-    --rating-module-button-color: var(--bright-accent);
-    --rating-module-text-color: var(--bright-accent);
+    /* 按钮 */
+      --swatch-menubg-dark-color:5,5,5;
 
-    /* Spacing Measurements */
+     --swatch-menubg-medium-color: var(--light-pale-gray-monochrome,10,10,10);/* 表格~样式颜色 */
 
-    --offset-from-page-top: 1.2rem;
-    /* space between the top of the page and the start of the header */
-    --body-width-on-desktop: 44.25rem;
-    --sidebar-width-on-desktop: calc(var(--base-font-size)*19);
-    --sidebar-width-on-mobile: 14rem;
-    --scrollbar-width: 0.5625rem;
-    --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
-    --border-radius-width: 0.0625rem;
 
-    /* Box-Shadow 1px Borders */
-    --box-border-bottom: 0 0.0625rem 0 0 rgb(var(--swatch-border-color));
-    --box-border-top: 0 -0.0625rem 0 0 rgb(var(--swatch-border-color));
-    --box-border-left: -0.0625rem 0 0 0 rgb(var(--swatch-border-color));
-    --box-border-right: 0.0625rem 0 0 0 rgb(var(--swatch-border-color));
-    --box-border-all: 0 0 0 0.0625rem rgb(var(--swatch-border-color));
+    /* 分割线 */
+--hr-color:41,19,66;
 
-    /* Sidebar */
-    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
-    --sidebar-internal-border-thickness: 0.125rem;
+ /* 评分 */
 
-    --background-gradient-color: 36, 38, 114;
-    --background-gradient-distance: 10rem;
+       --rating-module-button-plus-color: 204,102,0;
+      --rating-module-text-hover-color: 0,0,0; 
 
-    /* Dynamic Font Sizing */
-    /* This set of vars will make the base font size vary with screen width */
-    /* base font size ranges */
-    --unitless-min-font-size: 0.8;
-    --unitless-max-font-size: 1;
-    /* base viewport size ranges */
-    --unitless-min-viewport: 768;
-    --unitless-max-viewport: 900;
-    /* base line height size ranges */
-    --min-lineheight: 1.2;
-    --max-lineheight: 1.5;
-    /* calculating size differences */
-    --font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
-    --lineheight-difference: calc(var(--max-lineheight) - var(--min-lineheight));
-    --viewport-range-difference: calc(var(--unitless-max-viewport) - var(--unitless-min-viewport));
-    --min-viewport-difference: calc(100vw - (var(--unitless-min-viewport) * 1px));
-    /* responsive fluid type formula */
-    --font-calc: calc((var(--unitless-min-font-size) * 1rem) + var(--font-size-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
-    --line-calc: calc(var(--min-lineheight) + var(--lineheight-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
-    /* final values */
-    --base-font-size: var(--font-calc);
-    --base-line-height: var(--line-calc);
+    /* 滚轮 */
+          scrollbar-color: #6e1310 #2d0908   ;
+
+
+
 }
 
-.page-rate-widget-box {
-    border-radius: 0px 15px 0px 15px !important;
+/* 
+============================================
+主体
+============================================
+*/
+
+body{
+   color:#e8e8e8;
 }
 
-#top-bar div.top-bar > ul > li > ul {
-    background: rgba(var(--medium-accent), 1);
+  #page-content{
+       letter-spacing:1px;
+  }
+
+@media (max-width: 479px) {    
+  #page-content{
+       letter-spacing:auto;
+  }
 }
 
-#login-status, #my-account {
-   color: rgb(var(--bright-accent)) !important;
+/* 
+------------------
+鼠标选择
+--------------------
+ */
+::selection { 
+    color: #cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
 }
 
-#login-status a {
-   color: rgb(var(--bright-accent)) !important;
+
+::-moz-selection { 
+    color:#cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
 }
 
-#login-status > a > strong {
-   color: rgb(var(--bright-accent)) !important;
+
+/* 
+------------------
+其他
+--------------------
+ */
+#toc{
+    background: #232222;  
+    color:grey;
 }
 
-#toc {
-     background-color: rgba(var(--medium-accent));
-     color: rgba(var(--bright-accent));
+
+
+
+/* 
+============================================
+版头 
+============================================
+*/
+
+div#header {
+    background:var(--header-image);
+    background-position:10px 20px;
+    background-repeat: no-repeat;
+    background-size:300px;
 }
 
-#top-bar div.top-bar div.newpage_dropdown div.new-page-box input {
-    background-color: rgba(var(--bright-accent));
-    color: rgba(var(--medium-accent));
+@media screen and (min-width: 475px){
+    background: url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-dark-nights/Header-yxh-dark.png) 10px 20px no-repeat;
+background-size:16em;
+}
+ 
+div#container-wrap {
+    background-image: var(--gradient-header-line) ;
 }
 
-#top-bar div.top-bar div.newpage_dropdown div.new-page-box input.button:hover {
-    color: rgba(var(--bright-accent));
-    border: solid 2px rgba(var(--bright-accent));
+#header {
+    filter: none;
 }
 
-#top-bar div.mobile-top-bar > ul > li > ul > li:hover > a, #top-bar div.top-bar > ul > li > ul > li:hover > a {
-    color: rgba(var(--medium-accent));
+
+/* 
+============================================
+搜索和用户 
+============================================
+*/
+
+
+#search-top-box-form input[type="submit"], 
+    #search-top-box-input , #search-top-box-input   {
+    border: 1px solid #000  ;
+        
 }
 
-.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {
-   color: rgba(var(--bright-accent));
+#search-top-box-input {
+       background-color: var(--gradient-header-line) ;  
+        color: #555;
+
 }
 
-.yui-navset-bottom .yui-nav li a, .yui-navset-top .yui-nav li a, .yui-navset .yui-nav li a {
-    background-color: rgba(var(--medium-accent));
+#search-top-box-input:hover, #search-top-box-input:focus {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; /* Safari */
+}
+ 
+
+#search-top-box-form input[type="submit"] {
+    color: #CC6600;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; /* Safari */
 }
 
-.yui-navset .yui-nav li a em:hover, .yui-navset-top .yui-nav li a em:hover, .yui-navset-bottom .yui-nav li a em:hover {
-    color: rgba(var(--medium-accent));
+/*
+@media (max-width: 479px) {
+   #search-top-box-input{
+     display: none;
+    }
+}
+ */
+#login-status a{
+          font-family: var( --page-title-font);
+ color: SaddleBrown;     
 }
 
-.yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a em {
-    color: rgba(var(--medium-accent));
+#account-options {
+  background-color:rgba(5,5,5,0.95); 
+      border:rgb(var(--very-dark-accent)) solid 2px;
 }
 
-#skrollr-body {
-    width: 100%;
-    height: 7.625rem;
+
+#account-options a:hover{
+color: SaddleBrown !important;
+      text-decoration:none;
+}
+
+
+/* 
+============================================
+顶栏
+============================================
+*/
+
+.top-bar ul a,
+.mobile-top-bar ul a{
+     color:#CC6600 !important; 
+    color: rgb(var(--alt-accent)) !important; 
+    font-family:var(--hdmemu-font);  
+    font-size: 120%;
+}
+
+.top-bar ul:first-child :not(li) a,
+.mobile-top-bar ul:first-child :not(li) a {
+    color:#fff !important; 
+          font-family:var(--hdlist-font) ;  
+ background-color: rgb(var(--white-accent)) !important;
+}
+
+.top-bar  ul:first-child li a:hover,
+.mobile-top-bar ul:first-child li a:hover
+{
+     color: #000 !important;
+background-color: #CC6600 !important;
+     background-color: rgb(var(--alt-accent)) !important;
+      transition: all 0.5s;
+}
+
+#top-bar div.top-bar  > ul > li > ul,
+#top-bar  .mobile-top-bar > ul > li > ul
+{
+      border: rgb(var(--very-dark-accent)) double 4px  ;      
+}
+
+/* 
+============================================
+侧边栏
+============================================
+*/
+
+#side-bar .heading p ,
+#side-bar .side-block > .collapsible-block .collapsible-block-link {
+    --text-shadow: rgb(0,0,0);
+     color: #Cc6600;
+     color: rgb(var(--alt-accent)) ;
+}
+
+#side-bar div.menu-item a::before, 
+#side-bar div.menu-item a:hover::before {
+    background-color: rgba(43,17,76, 0.85);
+    background-color: rgba(var(--purple-color));
+}
+
+
+
+/* 鼠标移过 */
+#side-bar div.menu-item a:hover {
+    background-color: rgba(66,66,72,.15);
+}
+
+#side-bar div.menu-item a:hover:after{
+    content: " 🐉";
+}
+
+/* 侧边栏菜单纯文字 */
+#side-bar, #side-bar div.menu-item .sub-text {
+    color: #37076e;
+}
+
+/* 
+============================================
+标题 
+============================================
+*/
+#page-title {
+    font-size: 200% ;
+    text-align: center ;
+}
+
+
+
+/* 
+============================================
+标签
+============================================
+ */
+#main-content .page-tags {
+    border-top: 2px solid rgb(var(--medium-accent));
+}
+ 
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background:rgb(var(--dark-gray-monochrome));
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+ 
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--dark-gray-monochrome, 45, 70, 45))
+     transparent
+     transparent; 
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+ 
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+ 
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: #fff;
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+ 
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+ 
+
+#main-content .page-tags a:hover{
+    background-color:  rgb(var(--purple-color)); 
+    text-decoration: none;
+}
+
+#main-content .page-tags a:hover:before {
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--purple-color, 45, 70, 45))
+     transparent
+     transparent; 
+}
+
+
+
+
+/* 
+============================================
+底部按钮 
+============================================
+*/
+.page-options-bottom a {
+    display: inline-block;
+    white-space: nowrap;
+      font-family: lisu;
+      font-size: 120%;
+}
+
+@media screen and (min-width: 475px){
+.page-options-bottom a {
+    display: inline-block;
+    white-space: nowrap;
+      font-size: 100%;
+}
+}
+ 
+/* 因为nu主题受修改 */
+#main-content .page-options-bottom a {
+    cursor: pointer;
+    padding: 0.3em;
+    margin: 0.1em;
+    text-decoration:none;
+    transition: all 0.5s;
+          border: 3px solid  rgb(var(--dark-accent));  
+          background-color: transparent;
+            color: rgb(var(--medium-accent));
+}
+ 
+#main-content .page-options-bottom  a:hover {
+    color: #CC6600;
+    color: rgb(var(--alt-accent)) ;
+    border: 3px solid red;   
+    background-color: rgb(var(--very-dark-accent));
+}
+
+
+#main-content #action-area div #edit-page-form .buttons.alignleft input{
+          color: #CC6600;
+          color: rgb(var(--alt-accent)) ;
+          border: 3px solid rgb(var(--dark-accent));   
+          background-color: rgb(var(--very-dark-accent));  
+          cursor:pointer;
+}
+
+#main-content #action-area div #edit-page-form .buttons.alignleft input:hover{
+          color: #fff;
+}
+
+/* 
+============================================
+编辑
+============================================
+*/
+
+#lock-info {
+    background-color: #1B0909;
+    border: 4px double #8d5f13;
+}
+
+.change-textarea-size a {
+color:#000;
+}
+
+#edit-page-form{
+background: radial-gradient(#2f2c2c, #393737,#141514);
+}
+
+#edit-page-title,#edit-page-textarea,#edit-page-comments{
+background: #000;
+color: #fff;
+}
+
+
+/* 
+============================================
+手机--侧边栏用了，这个就不用了
+============================================
+
+.mobile-top-bar .open-menu a::after{
+  content: "🐉";
+  font-size: 50%;
+}
+ */
+
+
+/* 
+============================================
+多语言框
+============================================
+ */
+iframe.scpnet-interwiki-frame {
+    filter: invert(0.8) hue-rotate(190deg) saturate(7.5) contrast(2);
+    }
+ 
+
+
+
+/* 
+============================================
+分割线，来自woednaz
+============================================
+ */
+
+hr {
+border-top:1px solid transparent ;
+background: #514d62;   
+background: linear-gradient(to right,transparent,#514d62,transparent);
+}
+
+blockquote  hr{
+border-top:1px solid transparent ;
+background: #6d6b82;   
+background: linear-gradient(to right,transparent,#6d6b82,transparent);
+}
+
+
+.yui-navset hr{
+border-top:1px solid transparent ;
+background: #504967;   
+background: linear-gradient(to right,transparent,#504967,transparent);
+}
+
+
+.cn-hr hr {
+    border-top:1px solid #000 ;
+    background: rgb(0, 0, 0, 0);
+    border: 0;
+    height: 1.5rem;
+    width: 90%;
+    position: relative;
+    margin: 1.875rem auto;
+    }
+
+.cn-hr hr::before {
+    content: " ";
+    background-image: var(--hr-image);
+    color: rgb(var(--hr-color));
+    display: inline-block;
     position: absolute;
-    top: 0;
+    top: 0.1em;
     left: 0;
-    background-image: url(http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/space.png);
-    background-repeat: repeat-x;
+    margin: 0 0 0 -0.188rem;
+        margin-left: -0.188rem;
+    font-size: 0.938rem;
+    line-height: 0;
+    height: 1.5rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: -webkit-calc(50% - 2rem);
+    margin-left: -moz-calc(50% - 2rem);
+    margin-left: calc(50% - 2rem);
+    background-color: transparent;
+    z-index: 1;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
     background-size: contain;
 }
 
-#search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"], #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"]:hover {
-    background-color: rgb(var(--medium-accent));
-}
-
-#search-top-box:not(:focus-within)::before {
-    color: rgb(var(--bright-accent));
-}
-
-#page-title {
-    grid-area: page-title;
-    border-color: rgb(var(--bright-accent,66,66,72));
-    color: rgb(var(--bright-accent,12,12,12));
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: rgba(var(--bright-accent));
-}
-
-#lock-info {
-    background-color: rgba(var(--medium-accent));
-    color: rgba(var(--bright-accent));
-}
-
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-    background-color: rgba(178, 210, 180, 0.25);
-    background-color: rgba(var(--swatch-menubg-light-color), 0.25);
-    border: 0.0625rem solid rgba(255, 219, 90, 1);
-    border: 0.0625rem solid rgba(var(--swatch-primary), 1);
-    color: rgba(var(--bright-accent));
-}
-
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-    background-color: rgba(30, 55, 30, 1);
-    background-color: rgba(var(--swatch-menubg-dark-color), 1);
-    color: rgba(255, 219, 90, 1);
-    color: rgba(var(--bright-accent), 1);
-}
-
-.wl-translations {
-    border: 1px solid rgba(var(--bright-accent), 1);
-    border-radius: 2px;
-}
-
-.wl-translations a {
-    color: rgba(var(--bright-accent), 1);
-}
-
-.blockquote, blockquote {
-    background-color: rgba(var(--medium-accent));
-    color: rgba(var(--bright-accent));
-    border: .063em solid rgba(var(--bright-accent),.25)
-}
-
-table.wiki-content-table th {
-    background-color: rgb(var(--medium-accent));
-}
-
-table.wiki-content-table th, table.wiki-content-table tr {
-    border: .075rem solid rgba(var(--bright-accent),.50) !important;
-}
-
-/* terminal by ayers */
-
-div.terminal{
-    border: 1px solid black;
-    border: solid 3px #BBBBBB;
-    border-radius: 16px;
-    background-color: #00183C;
-/* black shadow at the top of the terminal */
-    background-image:
-        -o-radial-gradient(50% 90%, ellipse 1000% 100%, transparent, #00183C);
-    background-image:
-        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #00183C);
-    background-position: center;
-    display: block;
-/* shadow around the terminal */
-    -webkit-box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
-            box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
-/* prevents scanline from forming a scrollwheel */
-    overflow:hidden;
-}
-div.terminal blockquote {
-    color: rgba(22,115,255,0.8) !important;
-    background-color: black;
-    border: double 3px #1E78FF
-}
-div.scanline{
-    margin-top: -40%;
+.cn-hr hr::after {
+    content: " ";
+    height: 0.125rem;
     width: 100%;
-    height: 60px;
-    position: relative;
-    pointer-events: none;
-/* Safari 4.0 - 8.0 */
-    -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
-    animation: scan 12s linear 0s infinite; /* Same as above */
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 112, 82,0)), to(rgba(56, 112, 82,0.1))) !important;
-    background: -o-linear-gradient(top, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
-    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+    position: absolute;
+    margin: 0 auto;
+    background: rgb(var(--hr-color));
+    left: 0;
+    top: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: 43.375rem auto;
+    mask-size: 43.375rem auto;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+}
+ 
+ /**/
+.yui-navset .cn-hr hr::before,
+.cn-hr blockquote hr::before{
+    content: " ";
+    background-image: var(--hr-image);
+    color: rgb(var(--very-light-gray-monochrome));
+    display: inline-block;
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    margin: 0 0 0 -0.188rem;
+        margin-left: -0.188rem;
+    font-size: 0.938rem;
+    line-height: 0;
+    height: 1.5rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: -webkit-calc(50% - 2rem);
+    margin-left: -moz-calc(50% - 2rem);
+    margin-left: calc(50% - 2rem);
+    background-color: transparent;
+    z-index: 1;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
-div.text{
-    color: rgba(22,115,255,0.8);
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 40%;
-    font-family: monospace;
-    font-size: 1.2em;
-    }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes scan{
-    from{ -webkit-transform: translateY(-10%); transform: translateY(-10%);}
-    to{  -webkit-transform: translateY(5000%);  transform: translateY(5000%);} /* You may need to change this depending on the length of your terminal. If the scanline stops halfway, increase the second number.*/
+
+blockquote .cn-hr hr::after,
+.yui-navset .cn-hr hr::after {
+    background: rgb(var(--very-light-gray-monochrome));
+ content: " ";
+    height: 0.125rem;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    top: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: 43.375rem auto;
+    mask-size: 43.375rem auto;
+    -webkit-mask-position: center center;
+    mask-position: center center;
 }
 
-@keyframes scan{
-    from{ -webkit-transform: translateY(-10%); transform: translateY(-10%);}
-    to{  -webkit-transform: translateY(5000%);  transform: translateY(5000%);} /* Same as above.*/
+/* 
+============================================
+脚注和注释
+============================================
+ */
+/* 鼠标移过注释框 */
+ .hovertip {
+      background-color: #1B0909 !important;
+    border: 4px double SaddleBrown !important;
+    color: #8d5f13;
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    }
+
+ 
+
+/* 
+============================================
+著作信息文件夹
+============================================
+*/
+
+.info-container{
+background:transparent;
 }
-
-div.text a {
-    color: #00B6AC;
-    text-decoration: none;
-    background: transparent;
-}
-div.text a.newpage {
-    color: #03fff1;
-}
-
-div.text a:hover {
-    color: #00d0c4;
-    text-decoration: underline;
-    background-color: #272727;
-    padding: 1px;
-}
-div.text a:hover::before{
-content: "> ";
-}
-
-/* mobile */
-
-@media only screen and (max-width: 768px) {
-    #header h1 a,
-    #header h2 span {
-        margin-left: 7.75rem;
-        margin-top: 0.35em;
-    }
-
-    #header h1 a {
-        line-height: 1;
-    }
-
-    #header h2 span {
-        margin-top: calc(5.5rem + var(--offset-from-page-top));
-    }
-
-    div#extrac-div-1 {
-        background-image: url(http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/space.png);
-        background-size: 31.250rem;
-        z-index: 3;
-    }
-
-    body {
-        background:rgba(var(--swatch-background), 1);
-    }
-
-    #main-content {
-        margin-left: inherit;
-    }
-
-    div#page-options-bottom {
-        width: 90%;
-    }
+ 
+.info-container .list-pages-item iframe{
+  background: var(--yxh-red-image); 
+  background-size: contain;
+  border: 0.5em groove #333;
+    width: auto;
 }

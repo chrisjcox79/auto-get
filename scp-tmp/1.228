@@ -1,523 +1,83 @@
 /*
-    Sigma-9 SCP Offices Theme
+    Powered on 2020/04/20 07:31:42
     [2020 Wikidot Theme]
-    By Dr Lekter and DrMacro
-    Adapted from BHL SCP Offices Theme by Woedenaz
-    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan
+    Created by AanaMalsageco
+    Logo made by breaddddd
+    CC BY-SA 3.0
 */
 
-@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 
-:root {
-    --body-font: 'IBM Plex Mono', '等线', monospace;
-    --header-font: 'IBM Plex Mono', '等线', sans-serif;
-    --title-font: 'IBM Plex Mono', '等线', monospace;
-    --mono-font: "IBM Plex Mono", '等线', monospace;
-    --white-monochrome: 238, 238, 216;
-    --pale-gray-monochrome: 233, 231, 204;
-    --light-gray-monochrome: 147, 147, 147;
-    --gray-monochrome: 127, 127, 127;
-    --dark-gray-monochrome: 101, 101, 101;
-    --black-monochrome: 25, 20, 16;
-    --bright-accent: 145, 179, 153;
-    --medium-accent: 145, 179, 153;
-    --dark-accent: 105, 133, 111;
 
-    --gradient-header: linear-gradient(0deg,rgb(var(--medium-accent)) 0%,rgb(var(--black-monochrome)) 90%,rgb(var(--black-monochrome)));
-    --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--medium-accent), 0.45), rgba(var(--medium-accent), 0.55));
+div#header h1 a span {
+    font-size: 0px;
+}
+div#header h1 a:before {
+    content: "Nirvana";
+    color:rgb(128, 120, 120);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
 
-    scrollbar-color: rgba(var(--white-monochrome), 1) rgba(var(--bright-accent), 0.50);
 }
-
-/* HEADER */
-div#container-wrap {
-    background-image:
-        repeating-linear-gradient(45deg,hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        repeating-linear-gradient(180deg,
-        hsla(0, 0%, 100%, 0),
-        hsla(0, 0%, 100%, 0) 0.25vh,
-        rgba(88, 88, 88, 0.1) 0.35vh,
-        rgba(88, 88, 88, 0.2) 0.5vh),
-
-        linear-gradient(to bottom,
-        rgba(var(--black-monochrome), 1) 8.75rem,
-        rgba(var(--light-gray-monochrome), 1) 7.625rem,
-        rgba(var(--gray-monochrome), 1) calc(91% - 0.125rem),
-        rgba(var(--dark-gray-monochrome), 1) calc(99% - 0.125rem));
-
-    background-size: 100% 8.7rem, 100% 8.7rem, 100% 10.08rem;
-    background-repeat: no-repeat;
+div#header h2 span {
+    font-size:0px;
+    padding: 4px;
 }
-
-#header {
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme:scp-offices-sigma/scpoffices_logo.svg) 13px 41px no-repeat;
-    background-size: 94px 94px;
-}
-
-#header h1 a {
-    font-size: 150%;
-    color: rgb(var(--white-monochrome));
-    font-family: var(--title-font);
-    font-weight: 900;
-    text-shadow: .063rem .063rem .063rem #0c0c0c;
-    letter-spacing: -.02em;
-    line-height: 0;
-}
-
-#header h2 span {
-    color: rgb(var(--bright-accent));
-    font-family: var(--title-font);
-    text-shadow: .063rem .063rem .063rem #0c0c0c;
-    font-weight: 400;
-    line-height: 0;
-    font-size: .945rem;
-}
-
-@media (max-width: 767px) {
-    #header {
-        background: url(http://scp-wiki.wdfiles.com/local--files/theme:scp-offices-sigma/scpoffices_logo.svg) 2px 72px no-repeat;
-        background-size: 50px 50px;
-    }
-    #header h1 a {
-        font-size: 80%;
-    }
-    #header h2 span {
-        font-size: .700rem;
-    }
-}
-
-/* LOG-IN INFO */
-#login-status {
-    color: rgb(var(--white-monochrome));
-}
-#login-status a {
-    color: rgb(var(--white-monochrome));
-}
-
-#login-status ul a {
-    color: rgb(var(--bright-accent));
-    background: rgb(var(--white-monochrome));
-}
-
-#login-status ul a:hover {
-   color: rgb(var(--dark-accent));
-   font-weight: bold;
-}
-
-/* SEARCH BAR */
-#search-top-box-input {
-    background-color: rgb(var(--gray-monochrome));
-}
-#search-top-box-input:hover, #search-top-box-input:focus {
-    border: solid 1px rgb(var(--white-monochrome));
-    color: rgb(var(--white-monochrome));
-    background-color: rgb(var(--light-gray-monochrome));
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,.8);
-}
-#search-top-box-form input[type=submit] {
-    background: rgb(var(--bright-accent));
-    color: rgb(var(--white-monochrome));
-    transition: background 0.25s;
-}
-#search-top-box-form input[type=submit]:hover, #search-top-box-form input[type=submit]:focus {
-    background: rgb(var(--dark-accent));
-    color: rgb(var(--white-monochrome));
-}
-
-/* TITLE */
-#page-title {
-    font-size: 210%;
-    font-family: 'IMB Plex Mono', '等线';
-    font-weight: 600;
-}
-
-h1, h2, h3, h4, h5, h6, #page-title {
-    font-family: var(--title-font);
-    color: rgb(var(--black-monochrome));
-}
-h1 {
-    margin: .7em 0 .6em;
-    padding: 0 0 .25em;
-    font-weight: 700;
-}
-h2, h3, h4, h5, h6 {
-    margin: .5em 0 .4em;
-    padding: 0;
-    font-weight: 900;
-    letter-spacing: .063rem;
-}
-
-@media (max-width: 767px) {
-    #page-title {
-        font-size: 180%
-    }
-}
-
-/* TOP-BAR SETTINGS */
-#top-bar ul li ul {
-    border: 0px;
-}
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    border-top: 1px solid transparent;
-    padding: 0.3em;
-    padding-left: 0.5em;
-    color: rgb(var(--white-monochrome));
-}
-#top-bar ul li a {
-    color: rgb(var(--white-monochrome));
-}
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: rgb(var(--dark-gray-monochrome));
-    color: rgb(var(--white-monochrome));
-}
-#top-bar ul li ul a, #top-bar a:hover {
-    color: rgb(var(--pale-grey-monochrome));
-}
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover {
-    background: rgb(var(--dark-gray-monochrome));
-}
-#top-bar ul li ul.sfhover a:hover,
-#top-bar ul li ul:hover a:hover {
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--white-monochrome));
+div#header h2:after {
+    content: "No matter what, end the pain";
     font-weight: bold;
+    color: rgb(128, 120, 120);
+    padding: 19px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+    white-space: pre;
 }
-.c_topbar_arrow {
-    color: rgb(var(--white-monochrome));
+div#side-bar div.side-block div.heading,
+div#side-bar div.collapsible-block-unfolded-link,
+div#side-bar div.collapsible-block-unfolded-link div.collapsible-block-link {
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
 }
-
-/* SIDE-BAR SETTINGS */
-#side-bar .side-block {
-    border-color: rgb(var(--dark-accent));
-    background-color: rgb(var(--white-monochrome));
-    box-shadow: 0 2px 6px rgba(var(--dark-accent),.5);
-}
-
-#side-bar .side-block[style="background-color: #e7e5e8;"],
-#side-bar .side-block[style="background-color: #e5e5ff;"] {
-    background-color: rgb(var(--pale-gray-monochrome)) !important;
-}
-
-#side-bar .side-block[style="background-color: #f0fff6;"],
-#side-bar .side-block[style="background-color: #fff0f0;"],
-#side-bar .side-block[style="background-color: #f0f0f0;"] {
-    background-color: rgb(232, 229, 197) !important;
-}
-
 div.scpnet-interwiki-wrapper {
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(185deg) saturate(40%) brightness(86%);
 }
-
-#side-bar .heading {
-    color: rgb(var(--dark-accent));
-    border-bottom-color: rgb(var(--dark-accent));
+div.yui-navset ul.yui-nav .selected a,
+div.yui-navset ul.yui-nav .selected a:focus,
+div.yui-navset ul.yui-nav .selected a:hover {
+    background: rgb(102, 102, 102);
+    color: rgb(0, 0, 0);
 }
-
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom-color: rgb(var(--dark-accent));
+div.page-rate-widget-box,
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel {
+    background-color: rgb(102, 102, 102)!important;
+    border: solid rgb(102, 102, 102) 1px!important;
 }
-
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: rgb(var(--dark-accent));
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+    border: solid rgb(102, 102, 102)!important;
+    border-width: 1px 0!important;
 }
-
-/* SIDE-BAR IMAGES */
-.side-block .menu-item > .image {
-    filter: hue-rotate(-171deg);
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel a,
+div.page-rate-widget-box span.cancel a:hover {
+    color: rgb(0, 0, 0);
 }
-
-#side-bar .collapsible-block-folded {
-    background-image: none;
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+    background-color: rgb(255, 255, 255)!important;
 }
-
-/* Patch pour hover imbriqué */
-#top-bar ul li ul li ul {
-    left: 159px;
+div.page-rate-widget-box span.rateup a,
+div.page-rate-widget-box span.ratedown a {
+    color: rgb(0, 0, 0)!important;
 }
-
-/* MOBILE SIDE-BAR */
-@media (max-width: 767px) {
-#side-bar {
-    background-color: rgb(var(--white-monochrome))
+div.page-rate-widget-box span.cancel a:hover,
+div.page-rate-widget-box span.rateup a:hover,
+div.page-rate-widget-box span.ratedown a:hover {
+    background: transparent!important;
+    color: transparent!important;
 }
-.open-menu a {
-    border: 0.2em solid rgb(var(--bright-accent)) !important;
-    background-color: rgb(var(--white-monochrome)) !important;
-    color: rgb(var(--bright-accent)) !important;
-    }
+div#container-wrap {
+    background: url(http://scp-wiki-cn.wdfiles.com/local--files/yutu-data/G.png) top left repeat-x;
 }
-
-/* BODY */
-body {
-    background-color: rgb(var(--white-monochrome));
-    font-family: var( --body-font);
-}
-
-/* FOOTER */
-#footer {
-    background: rgb(var(--dark-accent));
-}
-
-/* OTHER STRUCTURAL ELEMENTS */
-
-/* LINKS */
-a {
-    color: rgb(var(--bright-accent));
-    font-weight: bold;
-}
-a:visited {
-    color: rgb(var(--dark-accent));
-}
-#side-bar a,
-#side-bar a:visited,
-#side-bar a.newpage {
-    color: rgb(var(--dark-accent));
-}
-
-/* POP-UP WINDOWS */
-.owindow {
-    background-color: rgb(var(--white-monochrome));
-}
-
-.owindow .modal-header {
-    background-color: rgb(var(--white-monochrome));
-}
-
-.owindow .modal-body img {
-    background-color: transparent !important;
-}
-
-.owindow .title {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-.owindow .button-bar a {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-/* CODE */
-.code {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-/* RATING MODULE */
-.page-rate-widget-box .rate-points {
-    background-color: rgb(var(--dark-accent)) !important;
-    border-color: rgb(var(--dark-accent));
-    color: rgb(var(--pale-gray-monochrome));
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: rgb(var(--pale-gray-monochrome));
-    border-top-color: rgb(var(--dark-accent));
-    border-bottom-color: rgb(var(--dark-accent));
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: rgb(var(--dark-accent));
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: rgb(var(--dark-accent));
-    color: rgb(var(--pale-gray-monochrome));
-}
-.page-rate-widget-box .cancel {
-    background: transparent;
-    background-color: rgb(var(--dark-accent));
-    border-color: rgb(var(--dark-accent));
-}
-.page-rate-widget-box .cancel a {
-    color: rgb(var(--bright-accent));
-}
-.page-rate-widget-box .cancel a:hover {
-    background-color: rgb(var(--dark-accent));
-    color: rgb(var(--pale-gray-monochrome));
-}
-
-/* CREDIT MODULE */
-#page-content .rate-box-with-credit-button {
-    background-color: rgb(var(--dark-accent));
-    border-color: rgb(var(--dark-accent));
-}
-#page-content .rate-box-with-credit-button .creditButton p a {
-    border-left-color: rgb(var(--bright-accent))
-}
-#page-content .rate-box-with-credit-button .creditButton a {
-    color: rgb(var(--white-monochrome));
-}
-#page-content .rate-box-with-credit-button .creditButton a:hover {
-    color: rgb(var(--bright-accent));
-}
-
-#page-content .modalbox {
-     background: rgb(var(--white-monochrome)) !important;
-     color: rgb(var(--black-monochrome));
-     box-shadow: 0 2px 6px rgba(var(--dark-accent),.5);
-}
-
-.close-credits,
-.credit-back {
-    filter: hue-rotate(-171deg);
-}
-
-/* PAGE ELEMENTS */
-
-/* BLOCKQUOTES */
-blockquote,
-div.blockquote {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-/* TABLES */
-table.wiki-content-table th {
-    color: rgb(var(--white-monochrome));
-    background-color: rgb(var(--light-gray-monochrome));
-}
-
-/* TABVIEW */
-.yui-navset .yui-content {
-    background-color: rgb(237, 236, 213);
-    font-weight: normal;
-}
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-image: none;
-    background-color: rgb(var(--pale-gray-monochrome));
-    font-weight: normal;
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background: rgb(var(--dark-accent));
-    color: rgb(var(--white-monochrome));
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* Pas d'effet focus/hover pour tab sélectionné */
-.yui-navset .yui-nav .selected a:hover {
-    background-image: none !important;
-    background: rgb(var(--bright-accent));
-    border-color: rgb(var(--dark-accent));
-    color: rgb(var(--white-monochrome));
-}
-.yui-navset li {
-    line-height: normal;
-}
-
-/* IMAGE BLOCK */
-.scp-image-block .scp-image-caption {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-/* ANIMATIONS */
-
-#header h1 *,
-#page-title * {
-    will-change: opacity;
-    transition: opacity 0.2s ease-in-out;
-}
-
-#header h1 a:hover,
-#page-title:hover {
-    -webkit-animation: flicker 20s linear infinite;
-    -moz-animation: flicker 20s linear infinite;
-    animation: flicker 20s linear infinite;
-}
-
-@-webkit-keyframes flicker {
-    0% {
-        opacity: .2;
-    }
-
-    5% {
-        opacity: .9;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: .4;
-    }
-
-    11.25% {
-        opacity: .6;
-    }
-
-    11.5% {
-        opacity: .4;
-    }
-
-    18% {
-        opacity: 1;
-    }
-
-    18.5% {
-        opacity: .9;
-    }
-
-    22% {
-        opacity: 1;
-    }
-
-    38.5% {
-        opacity: 1;
-    }
-
-    39% {
-        opacity: .8;
-    }
-
-    42% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    60.5% {
-        opacity: 0;
-    }
-
-    62% {
-        opacity: 0;
-    }
-
-    63% {
-        opacity: .2;
-    }
-
-    63.25% {
-        opacity: 0;
-    }
-
-    65% {
-        opacity: 1;
-    }
-
-    73% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: .8;
-    }
-
-    79% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
+#header {
+    background-image: url(http://scp-wiki-cn.wdfiles.com/local--files/yutu-data/bantou-nirvana.png);
+    background-repeat: no-repeat;
 }
