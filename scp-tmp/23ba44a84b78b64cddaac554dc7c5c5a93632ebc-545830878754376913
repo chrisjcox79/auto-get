@@ -1,13 +1,166 @@
-A nasty error has occurred. If the problem repeats, please fill (if possible) a bug report.<br/><br/>exception 'OzoneDatabaseException' with message 'error: 
-' in /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/lib/ozone/php/core/database/PgConnection.php:57
-Stack trace:
-#0 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/lib/ozone/php/core/database/PgConnection.php(86): PgConnection->_init()
-#1 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/lib/ozone/php/core/database/BaseDBPeer.php(105): PgConnection->query('SELECT html_blo...')
-#2 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/lib/ozone/php/core/database/BaseDBPeer.php(118): BaseDBPeer->selectByExplicitQuery(' WHERE block_id...')
-#3 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/lib/ozone/php/core/database/BaseDBPeer.php(520): BaseDBPeer->selectOneByExplicitQuery(' WHERE block_id...')
-#4 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/php/utils/UploadedFileFlowController.php(498): BaseDBPeer->selectByPrimaryKey('23ba44a84b78b64...')
-#5 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/php/utils/UploadedFileFlowController.php(95): UploadedFileFlowController->serveHtml(Object(DB_Site), 'html/reimaginin...')
-#6 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/php/utils/UploadedFileFlowController.php(58): UploadedFileFlowController->serveStuff(Object(DB_Site), 'html/reimaginin...')
-#7 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/web/local.php(32): UploadedFileFlowController->process()
-#8 /wikidot/app/releases/7bebdeb5e3f8dc127e91066345e57e34175c847c/web/router.php(255): require_once('/wikidot/app/re...')
-#9 {main}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<html>
+<head>
+<style type="text/css">
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--50456838fc8c/common--theme/base/css/style.css);
+@import url(http://www.scp-wiki.net/component:theme/code/1);
+
+#times
+{
+margin-top: 10px;
+}
+</style>
+<script type="text/javascript">
+
+function showTimes(postBegin,postEnd,end)
+{
+var times = document.getElementById('times');
+postBegin = new Date(postBegin*1000);
+postEnd = new Date(postEnd*1000);
+end = new Date(end*1000);
+postBegin = formatDate(postBegin);
+postEnd = formatDate(postEnd);
+end = formatDate(end);
+html = "发布日期开始于" + postBegin + "。<br>";
+html += "发布日期截止于" + postEnd + "。<br>";
+html += "胜者将于" + end + "公布。";
+times.innerHTML = html;
+}
+
+function getWeekDay(num)
+{
+var day;
+
+switch (num)
+{
+case 1:
+day = "周一";
+break;
+case 2:
+day = "周二";
+break;
+case 3:
+day = "周三";
+break;
+case 4:
+day = "周四";
+break;
+case 5:
+day = "周五";
+break;
+case 6:
+day = "周六";
+break;
+default:
+day = "周日";
+}
+
+return day;
+}
+
+function getMonthVerbose(num)
+{
+var month;
+
+switch (num)
+{
+case 1:
+month = "二月";
+break;
+case 2:
+month = "三月";
+break;
+case 3:
+month = "四月";
+break;
+case 4:
+month = "五月";
+break;
+case 5:
+month = "六月";
+break;
+case 6:
+month = "七月";
+break;
+case 7:
+month = "八月";
+break;
+case 8:
+month = "九月";
+break;
+case 9:
+month = "十月";
+break;
+case 10:
+month = "十一月";
+break;
+case 11:
+month = "十二月";
+break;
+default:
+month = "一月";
+}
+
+return month;
+}
+
+function formatDate(d)
+{
+var dateFormatted = getWeekDay(d.getDay()) + "，" + getMonthVerbose(d.getMonth()) + "<strong>";
+var dayOfMonth = d.getDate();
+var suffix;
+
+switch (dayOfMonth)
+{
+case 1:
+case 21:
+case 31:
+suffix = "日";
+break;
+case 2:
+case 22:
+suffix = "日";
+break;
+case 3:
+case 23:
+suffix = "日";
+break;
+default:
+suffix = "日";
+}
+
+dateFormatted +=dayOfMonth + suffix + "</strong>";
+
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var timeString = "";
+if (minutes == 0)
+{
+minutes = "00";
+}
+if (hours > 12 || (hours == 12 && minutes > 0))
+{
+timeString = (hours - 12) + ":" + minutes + " PM";
+}
+else
+{
+timeString = hours + ":" + minutes + " AM";
+}
+
+dateFormatted += timeString;
+
+return dateFormatted;
+}
+
+</script>
+</head>
+<body onLoad="showTimes(1424419200,1425715140,1426057140);">
+
+<div><strong>注意：以下显示的时间是你当地的时间：</strong></div>
+
+<div id="times"></div>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</html>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
