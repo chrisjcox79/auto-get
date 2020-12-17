@@ -1,1013 +1,572 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
-<head>
-    <title>最近修改的页面 - SCP基金会</title>
-    
-    
-    
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
-    <script  type="text/javascript">
-        var URL_HOST = 'www.wikidot.com';
-        var URL_DOMAIN = 'wikidot.com';
-        var USE_SSL =  true ;
-        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
-        // global request information
-        
-        var WIKIREQUEST = {};
-        WIKIREQUEST.info = {};
-        
-        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
-        WIKIREQUEST.info.siteId = 530812;
-        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 3342264;
-        WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "most-recently-edited";
-        OZONE.request.timestamp = 1608147987;
-        OZONE.request.date = new Date();
-        WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "most-recently-edited";
-        WIKIREQUEST.info.pageId = 21397569;
-                        WIKIREQUEST.info.lang = "cn";
-        OZONE.lang = "cn";
-        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    </script>
-    
-    
+/* Set the font size back to normal */
+#page-content { font-size: 1rem; }
+body { font-family: 'Libre Baskerville', serif; }
+
+/* Hide the page title. I'll make my own damned title */
+#page-title { display: none; }
 
 
-    
-        <script  type="text/javascript">
-    
-        require.config({
-            baseUrl: URL_STATIC + '/common--javascript',
-            paths: {
-                'jquery.ui': 'jquery-ui.min',
-                'jquery.form': 'jquery.form'
-            }
-        });
-    
-    </script>
-    
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-                            <meta name="robots" content="index,follow"/>
-                                <meta name="language" content="zh,zh-cn"/>
-                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                            
-    
-    
-    
-    
-    <meta http-equiv="content-language" content="zh,zh-cn"/>
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
-        
-    
-    <style type="text/css" id="internal-style">
-        
-        /* modules */
-        
-                
-        /* theme */
-                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
-                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
-            </style>
-    
-        
-        
-        
-    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
-    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
-    
-            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
-        
-            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
-                
-            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
-    
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-18234656-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+/* - == === CUSTOM SYNTAX === == - */
 
-        _gaq.push(['old._setAccount', 'UA-68540-5']);
-        _gaq.push(['old._setDomainName', 'none']);
-        _gaq.push(['old._setAllowLinker', true]);
-        _gaq.push(['old._trackPageview']);
-
-            </script>
-    
-    <script type="text/javascript">
-        window.google_analytics_uacct = 'UA-18234656-1';
-        window.google_analytics_domain_name = 'none';
-    </script>
-    
-        <link rel="manifest" href="/onesignal/manifest.json" />
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-          OneSignal.init({
-            appId: null,
-          });
-        });
-    </script>
-        
-<style>
-.content-panel .content-type-title > p {
-  margin: 0;
+/* The inkblot header contains the title and the info box thingy */
+.inkblot-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 1rem 0 3rem;
+  width: 100%;
+  left: 0;
+  max-width: none !important; /* override #page-content div */
 }
-.content-panel .content-type-title {
-  font-size: 120%;
-  font-weight: bold;
-  padding: 5px 20px;
-  background-color: #666;
-  color: #fff;
-  border-radius: 8px 8px 0 0;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,.8),
-    inset 0 15px 1px rgba(255,255,255,.2),
-    inset 0 15px 10px rgba(255,255,255,.2);
-}
-.content-panel .content-type-description {
-padding: 0 20px;
-text-align: justify;
-}
-.content-panel.content-row .content-type-description {
-padding: 5px 20px;
-}
-.content-panel.content-row .content-type-description-2 {
-padding: 0 20px;
-text-align: justify;
-}
-
-td.wanderers img.wanderers {
-display: block !important;
-width: 16px;
-height: 11px;
-box-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-</style>
-<link rel="alternate" type="application/rss+xml" title="Most Recently Edited" href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-edited/category/-fragment/order/updated_at+desc/limit/30/t/Most+Recently+Edited"/><script src="https://s.nitropay.com/ads-143.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-</head>
-<body id="html-body">
-<div id="skrollr-body">
-<a name="page-top"></a>
-
-
-
-
-
-<div id="container-wrap-wrap">
-    <div id="container-wrap">
-        <div id="container">
-            <div id="header">
-              <h1><a href="/"><span>SCP基金会</span></a></h1>
-                
-                    <h2><span>控制，收容，保护</span></h2>
-                
-                
-                <!-- google_ad_section_start(weight=ignore) -->
-                
-                <div id="search-top-box" class="form-search">
-    <form id="search-top-box-form" action="dummy" class="input-append">
-        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
-    </form>
-</div>
-                
-                
-                    <div id="top-bar">
-                        
-
-<div class="top-bar">
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>SCP-CN系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-</ul>
-</li>
-<li>SCP国际
-<ul>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
-<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
-<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
-<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
-<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
-<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
-<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
-<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
-<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
-<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
-<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
-<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
-<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="mobile-top-bar">
-<div class="open-menu">
-<p><a href="#side-bar">≡</a></p>
-</div>
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-                    </div>
-                
-                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
-                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
-            </div>
-            
-            <div id="content-wrap">
-                
-                    <div id="side-bar">
-                        
-
-
-                        
-
-<div class="side-block" style="background-color: #f0fff6;">
-<div class="heading">
-<p>新人资讯</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
-</div>
-<div class="side-block">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
-<div class="heading">
-<p>SCP-CN系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
-<div class="heading">
-<p>SCP系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
-<div class="heading">
-<p>SCP系列故事</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
-<div class="heading">
-<p>SCP图书馆</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
-<div class="heading">
-<p>网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
-<div class="heading">
-<p>社交</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
-<div class="heading">
-<p>相关网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
-</div>
-<div class="side-block resources" style="background-color: #e7e5e8;">
-<div class="heading">
-<p>写作指导</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
-</div>
-<div class="side-block" style="background-color: #fff0f0;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-content">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="side-block media" style="background-color: #e5e5ff;">
-<div class="heading">
-<p>相关媒体</p>
-</div>
-<div class="menu-item">
-<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
-</div>
-</div>
-<div class="side-block" style="background-color: #f0f0f0;">
-<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
-<span style="font-size:80%;">© SCP基金会<br />
-<a href="/licensing-guide">授权指南</a></span></div>
-</div>
-<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=most-recently-edited" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
-</div>
-    
-    
-    
-    </div></div>
-<div style="clear:both; height: 0px; font-size: 1px"></div>
-<a class="close-menu" href="###"><br />
-<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
-                        
-
-
-                    </div>
-                
-                
-                <!-- google_ad_section_end -->
-                
-                <div id="main-content">
-                    <div id="action-area-top"></div>
-                    
-                    
-                        <div id="page-title">
-                            最近修改的页面
-                        </div>
-                    
-
-                    
-
-                    
-
-
-
-                    <div id="page-content">
-                        
-
-
-
-
-<div class="content-panel standalone content-row">
-<div class="content-type-title">
-<p>最近修改的页面</p>
-</div>
-<div class="content-type-description-2">
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff; background-color: #666;">
-<td style="padding: 0 2px; width: 50%;">页面</td>
-<td style="padding: 0 2px; width: 25%; text-align: center;">最后更新</td>
-<td style="padding: 0 2px; text-align: center;">更新者</td>
-</tr>
-</table>
-</div>
-<div class="content-type-description"><div class="list-pages-box">    
-
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff;">
-<td style="padding: 0 2px; width: 50%;"></td>
-<td style="padding: 0 2px; width: 25%; text-align: center;"></td>
-<td style="padding: 0 2px; text-align: center;"></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1409">SCP-CN-1409</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608142721 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 18:18</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/x-art">Xashf的艺作</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608142289 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 18:11</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/xashf" onclick="WIKIDOT.page.listeners.userInfo(2893376); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893376&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="XashF" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893376)" /></a><a href="http://www.wikidot.com/user:info/xashf" onclick="WIKIDOT.page.listeners.userInfo(2893376); return false;">XashF</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/klakkr-art">Klakkr的艺作页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608138396 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 17:06</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="theme" style="vertical-align: top;"><a href="/theme:inkblot">墨迹 主题版式（Sigma-9）</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608138209 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 17:03</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-5520">SCP-5520</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608138016 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 17:00</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-3000-j">SCP-3000-J</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608135768 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 16:22</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/esperanza-s-translations">Esperanza_Cai的冷门翻译们</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608135656 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 16:20</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4113182&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Esperanza_Cai" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4113182)" /></a><a href="http://www.wikidot.com/user:info/esperanza-cai" onclick="WIKIDOT.page.listeners.userInfo(4113182); return false;">Esperanza_Cai</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-3380">SCP-3380</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608135581 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 16:19</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/waifu-fhtagn">关于和邪神的恋爱小指南！</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608134241 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 15:57</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/carbon-ink" onclick="WIKIDOT.page.listeners.userInfo(3180885); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3180885&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Carbon_Ink" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3180885)" /></a><a href="http://www.wikidot.com/user:info/carbon-ink" onclick="WIKIDOT.page.listeners.userInfo(3180885); return false;">Carbon_Ink</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/moyo-s-personnel-file">Moyoooooog的人事档案</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608132806 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 15:33</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/moyo" onclick="WIKIDOT.page.listeners.userInfo(2538335); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2538335&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Moyo" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2538335)" /></a><a href="http://www.wikidot.com/user:info/moyo" onclick="WIKIDOT.page.listeners.userInfo(2538335); return false;">Moyo</a></span></td>
-</tr>
-<tr>
-<td class="wanderers" style="vertical-align: top;"><a href="/wanderers:rainer">水调歌头·霖霖歌</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608131476 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 15:11</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/virgil-n" onclick="WIKIDOT.page.listeners.userInfo(5661227); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5661227&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Virgil_N" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5661227)" /></a><a href="http://www.wikidot.com/user:info/virgil-n" onclick="WIKIDOT.page.listeners.userInfo(5661227); return false;">Virgil_N</a></span></td>
-</tr>
-<tr>
-<td class="theme" style="vertical-align: top;"><a href="/theme:broken-world">破碎的世界 BHL 主题</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608129149 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:32</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4055881&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Etinjat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4055881)" /></a><a href="http://www.wikidot.com/user:info/etinjat" onclick="WIKIDOT.page.listeners.userInfo(4055881); return false;">Etinjat</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scpdeclassified">解密SCP中心页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608128890 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:28</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ahshow" onclick="WIKIDOT.page.listeners.userInfo(1418801); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1418801&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="ahshow" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1418801)" /></a><a href="http://www.wikidot.com/user:info/ahshow" onclick="WIKIDOT.page.listeners.userInfo(1418801); return false;">ahshow</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-2626-jp">SCP-2626-JP (SCP-262-IE)</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608128631 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:23</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5374263&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Backlight SH" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5374263)" /></a><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;">Backlight SH</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/ambrose-the-way">安布罗斯餐厅的被放逐者专供菜单</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608128418 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:20</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/keyest" onclick="WIKIDOT.page.listeners.userInfo(7027379); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=7027379&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Keyest" style="background-image:url(http://www.wikidot.com/userkarma.php?u=7027379)" /></a><a href="http://www.wikidot.com/user:info/keyest" onclick="WIKIDOT.page.listeners.userInfo(7027379); return false;">Keyest</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/gyakkou-s-workbench">逆光特工的工作台</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608128191 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:16</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5374263&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Backlight SH" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5374263)" /></a><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;">Backlight SH</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/mrhashidume-memorial">原桥诘████逝世之悼念会</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608127691 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 14:08</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5374263&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Backlight SH" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5374263)" /></a><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;">Backlight SH</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-international">国外SCP系列</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608124694 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 13:18</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5374263&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Backlight SH" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5374263)" /></a><a href="http://www.wikidot.com/user:info/backlight-sh" onclick="WIKIDOT.page.listeners.userInfo(5374263); return false;">Backlight SH</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-008">SCP-CN-008</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608124367 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 13:12</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/iflwlou" onclick="WIKIDOT.page.listeners.userInfo(2941188); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2941188&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="iflwlou" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2941188)" /></a><a href="http://www.wikidot.com/user:info/iflwlou" onclick="WIKIDOT.page.listeners.userInfo(2941188); return false;">iflwlou</a></span></td>
-</tr>
-<tr>
-<td class="component" style="vertical-align: top;"><a href="/component:mega-cool-author-page-tool">超酷作者页工具（现在包含电池）</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608121830 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 12:30</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/css-previewer">CSS 预览器</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608120037 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 12:00</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/kcorena-s-personnel-file">工具盒</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608119946 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:59</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3396110&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Kcorena" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3396110)" /></a><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;">Kcorena</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/contest-archive-cn">中文分部征文竞赛</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608119121 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:45</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-ex-cn">已解明SCP-CN</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608118078 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:27</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6603529&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="djpieplus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6603529)" /></a><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;">djpieplus</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/djpieplus-s-scps">UPVOTE DJPIEPLUS</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608117680 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:21</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6603529&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="djpieplus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6603529)" /></a><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;">djpieplus</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-4210">SCP-4210</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608117651 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:20</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/a-little-creeper" onclick="WIKIDOT.page.listeners.userInfo(6372745); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6372745&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="A Little Creeper" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6372745)" /></a><a href="http://www.wikidot.com/user:info/a-little-creeper" onclick="WIKIDOT.page.listeners.userInfo(6372745); return false;">A Little Creeper</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/prime-contest-hub">“新起之秀”新人竞赛 中心页</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608117054 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 11:10</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-<tr>
-<td class="log-of-anomalous-items-cn" style="vertical-align: top;"><a href="/log-of-anomalous-items-cn:00485">00485</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608115789 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 10:49</span></td>
-<td style="vertical-align: top; text-align: left;"><span class="fa fa-check-circle" style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/bilibili05-3" onclick="WIKIDOT.page.listeners.userInfo(6701183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6701183&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="bilibili05-3" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6701183)" /></a><a href="http://www.wikidot.com/user:info/bilibili05-3" onclick="WIKIDOT.page.listeners.userInfo(6701183); return false;">bilibili05-3</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-673">SCP-673</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608115737 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 10:48</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/x09" onclick="WIKIDOT.page.listeners.userInfo(4030607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4030607&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="x09" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4030607)" /></a><a href="http://www.wikidot.com/user:info/x09" onclick="WIKIDOT.page.listeners.userInfo(4030607); return false;">x09</a></span></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/prime-sponsor-list">赞助列表</a>
-<div class="image-container floatright"><img src="http://www.scp-wiki.net/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1608114651 format_%25Y-%25m-%25d%20%25R%7Cagohover">16 Dec 2020 10:30</span></td>
-<td style="vertical-align: top; text-align: left;"><span style="color: #5cb85c"><span style="white-space: pre-wrap;">&nbsp;</span></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4476849&amp;amp;size=small&amp;amp;timestamp=1608147987" alt="Sekai_s" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4476849)" /></a><a href="http://www.wikidot.com/user:info/sekai-s" onclick="WIKIDOT.page.listeners.userInfo(4476849); return false;">Sekai_s</a></span></td>
-</tr>
-</table>
-
-    
-    <div class="pager"><span class="pager-no">page 1 of 531</span><span class="current">1</span><span class="target"><a href="/most-recently-edited/p/2">2</a></span><span class="target"><a href="/most-recently-edited/p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/most-recently-edited/p/530">530</a></span><span class="target"><a href="/most-recently-edited/p/531">531</a></span><span class="target"><a href="/most-recently-edited/p/2">next &raquo;</a></span></div>
-    
-            <div class="feedinfo">
-            <span class="rss-icon"><img src="/common--theme/base/images/feed/feed-icon-14x14.png" alt="rss icon"/></span>
-            <a href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-edited/category/-fragment/order/updated_at+desc/limit/30/t/Most+Recently+Edited">RSS 消息来源</a>
-        </div>
-    </div></div>
-</div>
-
-                    </div>
-
-                            
-            <!-- wikidot_bottom_300x250 -->
-<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
-<script type='text/javascript'>
-nads.createAd('wad-scp-wiki-cn-below-content', {
-  "refreshLimit": 10,
-  "refreshTime": 83,
-  "sizes": [ [ 300, 250 ] ],
-  "report": {
-    "enabled": true,
-    "wording": "Report Ad",
-    "position": "bottom-right"
+@media (min-width: 768px) {
+  /* On desktop, header expands over the top of the sidebar */
+  .inkblot-header {
+    width: calc(100% + 18 * 0.82rem);
+    left: calc(-18 * 0.82rem);
   }
-  });
-</script>
-        
-    
+}
 
-                    
+/* The inkblot title is a grid */
+.inkblot-title {
+  flex: 1 1 0;
+  font-size: min(4rem, 10vw);
+  font-family: 'Prata', serif;
+  display: inline-grid;
+  grid-template-areas:
+    "one two"
+    "three four";
+  grid-gap: 0.1em;
+  max-width: 100%;
+  position: relative;
+  margin: 1rem;
+}
+.inkblot-title::before {
+  content: "";
+  border-radius: 74% 26% 27% 77% / 74% 38% 73% 38%;
+  background-color: var(--inkblot-accent, transparent);
+  position: absolute;
+  height: 40%; width: 100%; top: 50%; left: 50%;
+  transform: translate(-50%, -50%) skewY(-6deg);
+  max-width: min(50vw, 80%);
+}
+.inkblot-title > * { z-index: 1; white-space: nowrap; }
+.inkblot-title .title-1 { grid-area: one; place-self: start end; }
+.inkblot-title .title-2 { grid-area: two; place-self: start start; }
+.inkblot-title .title-3 { grid-area: three; place-self: start end; }
+.inkblot-title .title-4 { grid-area: four; place-self: start start; }
+.inkblot-title p { margin: 0; line-height: 1em; text-align: center; }
+/* Italics encroach to the right a bit, so push them back */
+.inkblot-title > em, .inkblot-title .title-1 em, .inkblot-title .title-3 em {
+  position: relative;
+  left: -0.1em;
+}
 
+@media (max-width: 767px) {
+  .inkblot-title {
+    flex-basis: 100%;
+  }
+}
 
+/* The info box is itself a flex container */
+.inkblot-info {
+  flex: 1 1 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.inkblot-info > p {
+  min-width: 12.5rem;
+}
+/* On desktop, if the header overflows onto two rows, it will overlap the sidebar.
+ * The max-width of the info thingy is reduced so it won't be wider than #page-content.
+ * justify-content:flex-end on .inkblot-header pushes it to the right.
+ * !important to override wikidot's default max-width on everything
+ */
+@media (min-width: 768px) {
+  .inkblot-info {
+    max-width: calc(100% - 18 * 0.82rem) !important;
+  }
+}
 
-                    
-                        <div class="page-tags">
-                            <span>
-                                <a href="/system:page-tags/tag/%E7%AE%A1%E7%90%86#pages">管理</a>
-                            </span>
-                        </div>
-                    
+/* The image should only be styled fancy inside the info section.
+ * It could be easily modified to allow a fancy image outside of the info
+ * section, but I don't want to do that, because this arrangement is necessary
+ * for proper line-wrapping on mobile, and the misformatted image acts as a
+ * good indicator that something has gone wrong.
+ */
+.inkblot-info .inkblot-image { flex: 0 1 10rem; min-width: 10rem; }
+.inkblot-info .inkblot-image img {
+  border-radius: 65% 35% 43% 57% / 41% 35% 65% 59%;
+  box-shadow: 0.5rem 0 var(--inkblot-accent, transparent);
+  /* The height is 8rem, but I want it slightly bigger */
+  height: 10rem; width: 10rem;
+  margin: -1rem 0;
+}
 
-                    <div id="page-info-break"></div>
-                    
-                        <div id="page-options-container">
-                            <div id="page-info">页面版本: 14, 最后编辑于: <span class="odate time_1593164111 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">26 Jun 2020 09:35</span></div>
-            <div id="page-options-bottom"  class="page-options-bottom">
-            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
-<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-5386923/most-recently-edited" class="btn btn-default" id="discuss-button">讨论 (0)</a>
-<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
-<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
-<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
-<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
-<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
-</div>
-<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
-    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
-    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
-    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
-    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
-    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
-    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
-    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
-    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
-</div>
-<div id="page-options-area-bottom">
-</div>
-
-                        </div>
-                    
-                    <div id="action-area" style="display: none;"></div>
-                </div>
-            </div>
-            
-            
-            
-            <div id="footer" style="display: block; visibility: visible;">
-                <div class="options" style="display: block; visibility: visible;">
-    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
-    &nbsp;|
-    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
-    &nbsp;|
-    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
-</div>
-基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
-            </div>
-            
-                <div id="license-area" class="license-area">
-                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
-                </div>
-            
-            
-            
-
-
-
-            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
-            
-            
-            
-            
-                <div id="footer-bar">
-  <div>
-     </div>
-  <h2>其它有趣的网站</h2>
-  
-  <div class="units">
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://psyc101.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/psyc101.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://psyc101.wikidot.com">Intro to Psychology (PSYC 101)</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://artemachia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/artemachia.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://artemachia.wikidot.com">BattleSpace Wiki</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://fmiseria3.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fmiseria3.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://fmiseria3.wikidot.com">Portalul Seriilor de Informatica</a></h3>
-            <div class="desc">          
-              Facultatea de Matematica si Informatica, Universitatea din Bucuresti
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://scpsandbox-pl.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpsandbox-pl.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://scpsandbox-pl.wikidot.com">SCP-PL Sandbox II</a></h3>
-            <div class="desc">          
-              Do pracy rodacy!
-            </div>
-          </div>
-        </div>
-        </div>
-  </div>
-
-            
-        </div>
-        
-    </div>
-<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
-<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
-<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
-</div>
+/* The inksplot class makes anything blobby */
+.inksplot {
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: var(--inkblot-accent); /* if no accent, will not override */
+  padding: 2rem 4rem;
+  margin: 1rem -3rem;
+  border-radius: 38% 95% 94% 42% / 62% 56% 84% 75%;
+}
+/* On mobile, the inkblot is rectangular and boring to save space */
+@media (max-width: 960px) and (min-width: 767px), (max-width: 650px) {
+  .inksplot {
+    padding: 1rem;
+    border-radius: 5rem / 3rem;
+    margin: 1rem -1rem;
+  }
+}
 
 
+/* - == === DISTRIBUTED BLOBS === == - */
+
+/* I want some blobs of colour down the page.
+ * Thankfully, Wikidot gives me some extra dives to play with:
+ * 6 in #container-wrap-wrap and 3 in #container.
+ * They are #extra(c?)-div-[1-6]. That's a lot of selectors. */
+
+#container-wrap-wrap, #container { position: relative; overflow: hidden; }
+
+/* Based on CSS by Murray Smith (CC BY-SA 3.0)
+ * https://stackoverflow.com/a/14451916/4958427 */
+
+[id^=extra][id*=-div-] {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  --content-width: min(1040px, 100vw);
+  --content-margin: calc(50vw - var(--content-width) / 2);
+  --blob-width: 30rem;
+  --blob-radius: calc(var(--blob-width) * 0.67);
+  background-color: var(--inkblot-accent, transparent);
+  top: var(--top-offset);
+  transform: rotate(var(--rotation))
+             translate(calc(var(--sin-rotation) * 0.866 * var(--blob-radius) / 2),
+                       calc(-1 * var(--cos-rotation) * 0.866 * var(--blob-radius) / 2))
+             skewX(-30deg)
+             scale(1, 0.866);
+}
+[id^=extra][id*=-div-]:before,
+[id^=extra][id*=-div-]:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+[id^=extra][id*=-div-],
+[id^=extra][id*=-div-]:before,
+[id^=extra][id*=-div-]:after {
+  width: var(--blob-width); height: var(--blob-width);
+  border-top-right-radius: 95%;
+}
+[id^=extra][id*=-div-]:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0,-50%);
+}
+[id^=extra][id*=-div-]:after {
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
+/* A lot of maths went into this.
+ * To centre a triangle onto its container, it needs the following translation:
+ * where A is the angle of rotation:
+ * x:
+ *   sin(N)
+ *   * 0.866 (scale offset)
+ *   * radius
+ *   / 2
+ * y:
+ *   -1
+ *   * cos(N)
+ *   * 0.866 (scale offset)
+ *   * radius
+ *   / 2
+ * Triangles have an order of symmetry around 120deg, so any angles above that
+ * are pointless.
+ */
+#extra-div-1,
+#extra-div-3,
+#extra-div-5,
+#extrac-div-1,
+#extrac-div-3 {
+  right: calc(var(--blob-radius) * -2 + var(--content-margin));
+}
+#extra-div-2,
+#extra-div-4,
+#extra-div-6,
+#extrac-div-2 {
+  left: calc(var(--blob-radius) * -2 + var(--content-margin));
+}
+#extra-div-1 {
+  --blob-width: 30rem;
+  --top-offset: 500px;
+  --rotation: 53.33deg; --sin-rotation: 0.802; --cos-rotation: 0.597;
+}
+#extra-div-2 {
+  --blob-width: 30rem;
+  --top-offset: 1300px;
+  --rotation: 40deg; --sin-rotation: 0.642; --cos-rotation: 0.766;
+}
+#extra-div-3 {
+  --blob-width: 20rem;
+  --top-offset: 2100px;
+  --rotation: 66.66deg; --sin-rotation: 0.918; --cos-rotation: 0.396;
+}
+#extra-div-4 {
+  --blob-width: 15rem;
+  --top-offset: 2900px;
+  --rotation: 13.33deg; --sin-rotation: 0.231; --cos-rotation: 0.973;
+}
+#extra-div-5 {
+  --blob-width: 40rem;
+  --top-offset: 3700px;
+  --rotation: 26.66deg; --sin-rotation: 0.448; --cos-rotation: 0.893;
+}
+#extra-div-6 {
+  --blob-width: 25rem;
+  --top-offset: 4500px;
+  --rotation: 106.66deg; --sin-rotation: 0.958; --cos-rotation: -0.286;
+}
+#extrac-div-1 {
+  --blob-width: 15rem;
+  --top-offset: 5300px;
+  --rotation: 93.33deg; --sin-rotation: 0.998; --cos-rotation: -0.058;
+}
+#extrac-div-2 {
+  --blob-width: 10rem;
+  --top-offset: 6100px;
+  --rotation: 120deg; --sin-rotation: 0.855; --cos-rotation: -0.500;
+}
+#extrac-div-3 {
+  --blob-width: 7rem;
+  --top-offset: 6900px;
+  --rotation: 80deg; --sin-rotation: 0.984; --cos-rotation: 0.173;
+}
 
 
-</div>
-<div id="dummy-ondomready-block" style="display: none;" ></div>
-    <!-- Google Analytics load -->
-    <script type="text/javascript">
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+/* - == === HEADER === == - */
 
-    <!-- Quantcast -->
-    <script type="text/javascript">
-    _qoptions={
-        qacct:"p-edL3gsnUjJzw-"
-    };
-    (function() {
-        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
-        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
-    })();
-    </script>
-    <noscript>
-        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
-    </noscript>
+/* Replace the header background */
+/* 324px is twice the height of the default header */
+div#container-wrap { background: url(http://topia.wdfiles.com/local--files/cqb%3Areview-theme/inkblot-header.svg) top left/100% 648px no-repeat; }
+
+#header { background: radial-gradient(circle at left 75px top 90px, var(--inkblot-accent, transparent) 42px, transparent 42.5px); }
+
+/* Replace the header text */
+/* Centre the text into the middle of the header */
+#header h1, #header h2 { margin-left: 0; float: none; text-align: center; }
+/* Move the subtitle down a smidge */
+#header h2 { margin-top: 0.3rem; }
+/* Hide the existing text */
+#header h1 span, #header h2 span { font-size: 0; }
+/* Style the new text */
+#header h1 a::before, #header h2::before {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: none;
+}
+/* Set the new text's content from variable */
+#header h1 a::before {
+  content: var(--header-title, "WALDON STUDIO");
+  font-weight: 300;
+}
+#header h2::before {
+  content: var(--header-subtitle, "connoisseurs of the unknown");
+  font-weight: 600;
+}
+
+/* Hide the search box and tuck the button next to the login */
+#search-top-box { top: 10px; transform: translateY(-7%); }
+#search-top-box-form > input[type=text] { display: none; }
+#search-top-box-form > input[type=submit] {
+  background:
+    url(http://topia.wdfiles.com/local--files/cqb%3Areview-theme/magnifying-glass.svg) 50%/0.8rem no-repeat,
+    var(--inkblot-accent, transparent)
+    !important /* don't revert on mouseover */;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  height: 1.5rem; width: 1.5rem;
+}
+#login-status { right: calc(10px + 2rem); color: #333a; }
+#login-status a { color: #b01a; }
 
 
+/* - == === TOPBAR === == - */
+
+#top-bar { display: flex; justify-content: center; right: 0; }
+#top-bar a { color: #333d; }
 
 
-<div id="page-options-bottom-tips" style="display: none;">
-    <div id="edit-button-hovertip">
-        请点此编辑本页内容。    </div>
-</div>
-<div id="page-options-bottom-2-tips"  style="display: none;">
-    <div id="edit-sections-button-hovertip">
-        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
-    <div id="edit-append-button-hovertip">
-        在不编辑整个页面源代码的情况下添加内容。    </div>
-    <div id="history-button-hovertip">
-        看看本页过去是如何沿革的。    </div>
-    <div id="discuss-button-hovertip">
-        若您想要讨论本页内容 - 这是最简单的方法。    </div>
-    <div id="files-button-hovertip">
-        检视并管理本页附件。    </div>
-    <div id="site-tools-button-hovertip">
-        管理网站的实用工具。    </div>
-    <div id="backlinks-button-hovertip">
-        检视链接至本页或引用本页的页面。    </div>
-    <div id="rename-move-button-hovertip">
-        变更页面名称（及URL 位址，或许会影响分类）。    </div>
-    <div id="view-source-button-hovertip">
-        在不编辑的情形下检视维基原始码。    </div>
-    <div id="parent-page-button-hovertip">  
-        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
-            <div id="abuse-report-button-hovertip">
-            向管理员举报本页有令人反感的内容。        </div>
-        <div id="bug-report-button-hovertip">
-            事情不如预期？看看您可以做些什么。        </div>
-        <div id="wikidot-help-button-hovertip">
-            一般的 Wikidot.com 文件与说明。        </div>
-        <div id="wikidot-tos-button-hovertip">
-            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
-        <div id="wikidot-privacy-button-hovertip">
-            Wikidot.com 隐私政策。          
-        </div>
-    </div>
-</body>
-</html>
+/* - == === SIDEBAR === == - */
+
+/* Move the side bar down, out of the way of the inkblot header */
+@media (min-width: 768px) {
+  #side-bar { top: 12rem; }
+}
+
+/* Make the sidebar look pretty */
+/* Keep the side block colours - I like them */
+#side-bar .side-block {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+
+#side-bar .heading {
+  margin: 0.6rem 0 0.5rem;
+  padding: 0;
+  color: #000a;
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+}
+#side-bar .heading::before, #side-bar .heading::after {
+  content: "";
+  height: 1px;
+  box-sizing: border-box;
+  border-bottom: 1px dotted #333;
+  margin: 0.1rem 0.5rem 0;
+  flex: 1 1 0;
+}
+#side-bar .menu-item > img {
+  visibility: hidden;
+}
+
+/* !important to override wikidot style */
+#top-bar .open-menu a {
+  border-radius: 1px;
+  border: none;
+  border-left: 0.25rem solid var(--inkblot-accent, #333);
+  border-right: 1px dotted #333;
+}
+@media (max-width: 767px) {
+  #side-bar {
+    background-image:
+      radial-gradient(
+        circle at left 10% top 90%,
+        var(--inkblot-accent, white) 25%,
+        transparent 25%
+      ),
+      linear-gradient(-75deg, #ccc 30%, white 30%);
+    border-right: 4px dotted #444 !important;
+    background-clip: padding-box;
+  }
+}
+
+
+/* - == === RATING MODULE === == - */
+
+.page-rate-widget-box { box-shadow: none; }
+.page-rate-widget-box {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 0;
+  border-width: 1px 0;
+  border-style: dotted;
+  border-color: #333;
+  padding: 0.1rem;
+  margin-right: 3rem;
+}
+.page-rate-widget-box .rate-points,
+.page-rate-widget-box .cancel {
+  background-color: transparent !important;
+  border-radius: 0;
+  border: none;
+  color: #333 !important; /* override reset when bottom rating opened */
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown,
+.page-rate-widget-box .cancel {
+  background-color: var(--inkblot-accent, transparent);
+  border-radius: 50%;
+  border: none;
+  color: #333;
+  height: 1.5rem; width: 1.5rem;
+  position: relative;
+  margin-left: 0.25rem;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a,
+.page-rate-widget-box .cancel a {
+  position: absolute;
+  display: block;
+  top: 0; left: 0; height: 100%; width: 100%;
+  text-align: center; line-height: 1.5rem;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+.page-rate-widget-box .cancel a { color: transparent; }
+.page-rate-widget-box .cancel a::after {
+  content: "✖";
+  position: absolute;
+  color: #333;
+  top: 0; left: 0; height: 100%; width: 100%;
+}
+.page-rate-widget-box .rateup a:hover { background-color: limegreen; }
+.page-rate-widget-box .ratedown a:hover { background-color: tomato; }
+.page-rate-widget-box .cancel a:hover {
+  color: transparent;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Info module compatibility */
+/* More specific because will probably be imported before the info module */
+#page-content .rate-box-with-credit-button {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-width: 1px 0;
+  border-style: dotted;
+  border-color: #333;
+  display: flex;
+  align-items: center;
+}
+.rate-box-with-credit-button .page-rate-widget-box {
+  border: none;
+}
+.creditButton {
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--inkblot-accent, transparent);
+  border-radius: 50%;
+}
+#page-content .creditButton p a {
+  color: #333;
+  border: none;
+  line-height: 1rem;
+  margin-left: 0;
+}
+
+
+/* - == === IMAGE BLOCKS === == - */
+
+.scp-image-block {
+  border: none;
+  border-top: 1px dotted #333;
+  box-shadow: none;
+}
+.scp-image-block .scp-image-caption {
+  background: none;
+  border-top: solid 0.25rem var(--inkblot-accent, transparent);
+  padding-top: 0.5rem;
+  font-weight: normal;
+}
+.scp-image-block img {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .scp-image-block.block-left {
+    margin-left: -100px;
+  }
+}
+@media (min-width: 1250px) {
+  .scp-image-block.block-right {
+    margin-right: -100px;
+  }
+}
+@media (max-width: 600px) {
+  .scp-image-block.block-left, .scp-image-block.block-right {
+    float: none; clear: both; margin-left: auto; margin-right: auto;
+  }
+}
+
+
+/* - == === OTHER STUFF === == - */
+
+#page-content h1, #page-content h2, #page-content h3,
+#page-content h4, #page-content h5, #page-content h6 {
+  font-family: 'Libre Baskerville', serif;
+  color: #333;
+  margin: 1em 0 0.5em 0;
+  letter-spacing: 0;
+}
+#page-content h1 {
+  font-family: 'Prata', serif; font-size: 3rem; text-align: center;
+}
+#page-content h2 { font-size: 2rem; font-weight: bold; }
+
+hr {
+  margin: 3rem;
+  height: 1rem;
+  background: radial-gradient(circle at center, var(--inkblot-accent, transparent) 0.375rem, transparent calc(0.375rem + 0.5px));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+hr::before, hr::after {
+  content: "";
+  height: 1px;
+  box-sizing: border-box;
+  border-bottom: 1px dotted #333;
+  width: calc(50% - 3rem);
+}
+
+.page-tags span {
+  border-top: 1px dotted #333;
+}
+
+.footnotes-footer {
+  margin-top: 2rem;
+}
+
+#page-content {
+  margin-bottom: 2rem;
+}
+
+#footer {
+  background: transparent;
+}
+
+#footer a {
+  color: black;
+}
+
+#breadcrumbs {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 0;
+  margin-top: -1rem;
+}
+#breadcrumbs a {
+  font-size: 0.82rem;
+  margin-left: 0.3rem;
+}
+#breadcrumbs a::before {
+  content: "«";
+  margin-right: 0.3rem;
+}
+
+.licensebox22 {
+  font-size: 0.82rem;
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 1rem 0 -1.5rem;
+}
+
+span, a {
+  word-break: normal;
+}
+
+blockquote, div.blockquote {
+  border: none;
+  border-left: thick solid var(--inkblot-accent, #eee);
+  background: none;
+}
