@@ -1,513 +1,465 @@
-@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
-@import url("https://use.typekit.net/tqr1skr.css");
+/*
+    Technoblast Theme
+    [2020 Wikidot Theme]
+    By EstrellaYoshte
+    Based on:
+        Simple Yonder Theme by EstrellaYoshte
+        Anderson Robotics Theme by Croquembouche
+        Flopstyle CSS by Lt Flops
+*/
 
- @supports(--css:variables) {
-:root {
-    /* S-CSS-P Integration */
-    --theme-base: "nuscp";
-    --theme-id: "dustjacket-theme";
-    --theme-name: "Dustjacket Theme";
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
 
-    /* Header */
-    --logo-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_logo.png");
-    --header-title: "被放逐者之图书馆";
-    --header-subtitle: " ";
-    --diagonal-stripes: unset;
+#page-content { font-size: 0.91rem; }
 
-    /* Typefaces */
-    --body-font: adelle-sans, 'Lato', '微软雅黑', sans-serif;
-    --header-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
-    --title-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
-    --mono-font: adaptive-mono, "PT Mono", "Andale Mono", "Courier New", Courier, NSimSun, monospace;
-
-    /* Standard Colors */
-    --pale-gray-monochrome: 178, 210, 180;
-    --light-gray-monochrome: 130, 160, 135;
-    --gray-monochrome: 45, 70, 45;
-    --dark-gray-monochrome: 30, 55, 30;
-    --bright-accent: 255, 219, 90;
-    --medium-accent: 228, 180, 28;
-    --dark-accent: 185, 150, 17;
-    --newpage-color: 221, 102, 17;
-
-    /* Primary Menu Colors */
-    --swatch-menubg-hover-color: var(--dark-gray-monochrome);
-    --swatch-menutxt-dark-color: var(--dark-gray-monochrome);
-    --swatch-menutxt-light-color: var(--bright-accent);
-    --swatch-border-color: var(--medium-accent);
-
-   /* Primary Header Colors */
-    --swatch-topmenu-border-color: var(--bright-accent);
-    --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
-
-   /* Link Colors */
-    --link-color: var(--pale-accent);
-
-    --rating-module-button-color: var(--bright-accent);
-    --rating-module-text-color: var(--bright-accent);
-    --gradient-sidemenu-header: linear-gradient(10deg,
-        rgba(var(--dark-gray-monochrome), 0.65) 0%,
-        rgba(var(--dark-gray-monochrome), 0.75) 100%);
-
-   --barColour: rgb(var(--gray-monochrome));
-    --linkColour: rgb(var(--medium-accent));
+body {
+    color: #000000;
+    font-family: 'Cairo', '等线', sans-serif;
+    word-break: unset;
 }
 
-/* HIGHLIGHTING */
-::-moz-selection {
-    background: rgba(var(--bright-accent), 0.5);
+.page-source, .code pre, .code p, .code, tt{ /* ---- Code by Croquembouche ---- */
+    font-family: "Fira Code", '幼圆', monospace;
 }
 
-::selection {
-    background: rgba(var(--bright-accent), 0.5);
-}
-
-/* LINKS */
 a {
-    color: rgb(var(--swatch-primary-darker));
+    color: #00AAB3;
 }
 
-a:hover,
-a:active,
 a:visited {
-    color: rgb(var(--swatch-primary-darkest));
+    color: #013737;
 }
 
-/* HEADER */
-div#extra-div-1,
-div#extra-div-2 {
-        position: absolute;
-    display: block;
-    width: 100%;
-    height: 7.5rem;
-    top: 0;
-    left: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #013737;
+    font-family: 'Orbitron', '黑体', sans-serif;
+    font-weight: bold;
 }
 
-div#extra-div-1 {
-    background-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png");
-    background-size: 31.250rem;
-    z-index: -1;
-    mix-blend-mode: hard-light;
+#account-topbutton{
+    border: 0px solid #000;
 }
 
-div#extra-div-2 {
-    background: var(--gradient-header);
-    background-size: var(--header-background-image-size);
-    background-repeat: repeat;
-    z-index: -2;
+/* ---- PAGE WRAP ---- */
+ div#container-wrap{
+     background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/bg.png);
 }
 
-#header h1 a {
-    margin-left: 7.75rem;
-    margin-top: 0.6em;
-    font-size: 175%;
-    overflow-wrap: normal;
+div#header {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/logoaiad.png);
+    background-size: 12.5%;
 }
 
-#header h1 a::before {
-    content: "被放逐者之图书馆";
-    content: var(--header-title);
-    color: rgb(var(--bright-accent));
-    text-shadow: inherit;
-    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow-wrap: normal;
+#page-title {
+    font-family: 'Orbitron', '黑体', sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #013737;
 }
 
-#header h2 {
-    display: none;
+#login-status,
+#login-status a {
+    color: white;
+    font-weight: bold;
 }
 
-/* Search Bar */
-#search-top-box-form * {
-    font-family: var(--header-font);
-    font-weight: 600 !important;
-    letter-spacing: 0.05em;
-}
 
-#search-top-box-form {
-    display: inline-flex;
-    justify-content: center;
-    position: absolute;
-    height: 1.3rem;
-    top: 47%;
-    right: 3%;
-    width: auto;
-    text-align: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    padding-top: 0.4rem !important;
-}
 
-#search-top-box input.empty {
-    color: rgba(var(--swatch-menutxt-light-color), 0.5);
-}
-
-#search-top-box-form > input,
-#search-top-box-form > input[type="submit"] {
-    min-height: 1.3rem;
-    height: 1.3rem;
-    padding: .25rem;
-    margin: 0;
-    box-sizing: border-box;
-    flex-grow: 1;
-    display: flex;
-    font-weight: 500;
-}
-
-input.button.btn {
-    padding-top: 0.1em !important;
-}
-
-/* Log-In Info */
-#login-status {
-    color: rgb(var(--swatch-menubg-light-color));
-    font-weight: 600;
-    letter-spacing: 0.05em;
-}
-
-#login-status * {
-    font-family: var(--header-font);
-    letter-spacing: 0.05em;
-}
-
-/* TOPBAR */
-#top-bar div.top-bar > ul > li > a,
-#top-bar div.mobile-top-bar > ul > li > a {
-    font-family: var(--header-font);
-    text-transform: uppercase;
-}
-
-#top-bar div.top-bar > ul > li > ul > li > a,
-#top-bar div.mobile-top-bar > ul > li > ul > li > a {
-    font-weight: 700;
-    color: rgb(var(--swatch-menutxt-dark-color));
-}
-
-#top-bar div.top-bar > ul > li > ul,
-#top-bar div.mobile-top-bar > ul > li > ul {
-    background: rgba(var(--pale-gray-monochrome), 0.93);
-}
-
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a:hover,
-#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li > a:hover {
+#footer {
     background: transparent;
 }
 
-#top-bar div.top-bar > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > a:hover::before {
-    background-color: rgba(var(--bright-accent), 1);
+#search-top-box-input,
+#search-top-box-input:hover,
+#search-top-box-input:focus,
+#search-top-box-form input[type=submit],
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: none;
+    background: #282828;
+    box-shadow: none;
+    border-radius: 3px;
+    color: #f4f4f4;
 }
 
-#top-bar > div.mobile-top-bar > div.open-menu > p > a {
-    color: rgb(var(--medium-accent)) !important;
+#search-top-box input.empty {
+    color: #bbbbbb;
 }
 
-/* SIDEBAR */
-/* 中文调整 */
-#side-bar {
-      box-shadow: inherit;
-      border-radius: inherit;
+#top-bar a,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a,
+#login-status ul a:hover {
+    color: #00AAB3;
 }
 
-#side-bar .side-block {
-      background-color: rgba(0, 0, 0, 0) !important;
+div#header h1 a span {
+    font-family: 'Orbitron', '黑体', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #00ffff;
+    text-shadow: 0px 0px 0px #000;
+}
+div#header h2 span {
+    font-family: 'Cairo', '等线', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff9944;
+    padding: 17px 0;
+    text-shadow: 0px 0px 0px #000;
+    white-space: pre;
 }
 
-#side-bar .heading {
-      font-family: var(--header-font);
-      /* 中文调整 */
-      width: inherit;
-      margin: inherit;
+.scp-image-block.block-right {
+    margin: 0 2em 1em;
 }
 
-#side-bar div.menu-item a::before,
-#side-bar div.menu-item a:hover::before {
-    background-color: rgb(var(--gray-monochrome),0.25);
+@media (min-width: 767px) {
+     #header {
+             background-position: 0em 1.8em;
+     }
 }
 
-/* Page-Options */
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-    background-color: rgba(var(--swatch-menubg-dark-color), 1);
-    border: 0.08rem solid rgba(var(--swatch-primary), 1);
-    color: rgba(var(--swatch-primary), 1);
-    font-weight: 700;
+/* ---- SIDE BAR ---- */
+
+ #side-bar .side-block{
+     border: none;
+     border-radius: 3px;
+     box-shadow: none;
+     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png')!important;
+     color: #00ffff;
 }
 
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-    background-color: rgba(var(--swatch-menubg-light-color), 0.85);
-    border: 0.08rem solid rgba(var(--swatch-primary-darkest),1);
-    color: rgba(var(--swatch-primary), 1);
+ #side-bar .heading{
+     color: #ff9944;
+     border-bottom: solid 2px #ff9944;
+}
+
+#side-bar .menu-item > img {
+  display: none;
+}
+
+#side-bar .menu-item > a:hover {
+    background-color: #00ffff;
+    color: #013737;
+    text-decoration: none;
+}
+
+#top-bar div.open-menu a {
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
+    color: #00ffff;
+    border: none;
+}
+
+#side-bar a,
+#side-bar a:visited {
+    color: #00ffff;
+}
+
+#side-bar .collapsible-block-folded {
+    background: none;
+}
+
+#side-bar .collapsible-block-link {
+    margin-left: 0;
+}
+
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 2px #ff9944;
+    padding-left: 15px;
+}
+
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #ff9944;
+}
+
+@media (max-width: 767px) {
+    #main-content {
+        padding: 0;
+        margin: 0 5%;
+        border-left: none;
+    }
+    #page-title {
+        margin-top: 0.7em;
+    }
+    #side-bar {
+        background-color: #013737;
+        left: -19em;
+    }
+    #side-bar:target {
+        border: none;
+        box-shadow: 3px 0 1px -2px rgba(0,0,0,0.04), 1px 0 5px 0 rgba(0,0,0,0.2);
+    }
+    #side-bar .close-menu {
+        transition: width 0.5s ease-in-out 0.1s,
+                    opacity 1s ease-in-out 0s;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(0,0,0,0.3);
+        background-position: 19em 50%;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+    #side-bar:target .close-menu {
+        width: calc(100% - 19em);
+        right: 0;
+        left: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #page-content > hr, #page-content > .list-pages-box > .list-pages-item > hr {
+        margin: 3em -5.5%;
+    }
+    #side-bar {
+        top: 0;
+    }
+    #side-bar .heading,
+    #side-bar .collapsible-block-folded,
+    #side-bar .collapsible-block-unfolded-link {
+        padding-left: 1em;
+        margin-left: -1em;
+    }
+    #search-top-box {
+        top: 107px;
+    }
+}
+
+/* ---- TABS ---- */
+
+/* ---- YUI TAB BASE ---- */
+.yui-navset .yui-nav a,.yui-navset .yui-navset-top .yui-nav a{background-color:inherit;background-image:inherit}.yui-navset .yui-nav a:hover,.yui-navset .yui-nav a:focus{background:inherit;text-decoration:inherit}.yui-navset .yui-nav .selected a,.yui-navset .yui-nav .selected a:focus,.yui-navset .yui-nav .selected a:hover{color:inherit;background:inherit}.yui-navset .yui-nav,.yui-navset .yui-navset-top .yui-nav{border-color:inherit}.yui-navset li{line-height:inherit}
+
+/* ---- YUI TAB CUSTOMIZATION ----*/
+
+ .yui-navset .yui-nav,
+ .yui-navset .yui-navset-top .yui-nav{
+     display: flex;
+     flex-wrap: wrap;
+     width: calc(100% - .125rem);
+     margin: 0 auto;
+     border-color: #013737;
+     box-shadow: none;
+}
+ .yui-navset .yui-nav a, /* ---- Link Modifier ---- */
+ .yui-navset .yui-navset-top .yui-nav a{
+     color: #013737;
+    /* ---- Tab Background Colour | [UNSELECTED] ---- */
+     background-color: #f4f4f4;
+     border: unset;
+}
+ .yui-navset .yui-nav a:hover,
+ .yui-navset .yui-nav a:focus{
+     color: #f4f4f4;
+    /* ---- Tab Background Colour | [HOVER] ---- */
+     background-color: #00AAB3;
+}
+ .yui-navset .yui-nav li, /* ---- Listitem Modifier ---- */
+ .yui-navset .yui-navset-top .yui-nav li{
+     position: relative;
+     display: flex;
+     flex-grow: 2;
+     max-width: 100%;
+     margin: 0;
+     padding: 0;
+     color: #00ffff;
+     background-color: #f4f4f4;
+     border-color: transparent;
+     box-shadow: none;
+}
+ .yui-navset .yui-nav li a,
+ .yui-navset-top .yui-nav li a,
+ .yui-navset-bottom .yui-nav li a{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+}
+ .yui-navset .yui-nav li em{
+     border: unset;
+}
+ .yui-navset .yui-nav a em,
+ .yui-navset .yui-navset-top .yui-nav a em{
+     padding: .35em .75em;
+
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+}
+ .yui-navset .yui-nav .selected, /* ---- Selection Modifier ---- */
+ .yui-navset .yui-navset-top .yui-nav .selected{
+     flex-grow: 2;
+     margin: 0;
+     padding: 0;
+    /* ---- Tab Background Colour | [SELECTED] ---- */
+     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
+}
+ .yui-navset .yui-nav .selected a,
+ .yui-navset .yui-nav .selected a em{
+     border: none;
+}
+ .yui-navset .yui-nav .selected a{
+     width: 100%;
+     color: #00ffff;
+}
+ .yui-navset .yui-nav .selected a:focus,
+ .yui-navset .yui-nav .selected a:active{
+     color: #00ffff;
+     background-color: #013737;
+}
+ .yui-navset-left .yui-content{
+    /* ---- Content Background ---- */
+     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
+}
+ .yui-navset .yui-content,
+ .yui-navset .yui-navset-top .yui-content{
+     padding: .5em;
+     border: none;
+}
+
+/* ---- TOP MENU ---- */
+
+#top-bar a {
+    color: #f4f4f4;
+    font-weight: normal;
 }
 
 
-/* Footer */
-#footer {
-    width: calc(100% - 1.25rem);
-    color: rgb(var(--swatch-menubg-dark-color));
+/* ---- INFO BAR ---- */
+ body{
+     --barColour: #013737;
 }
 
-#footer a {
-    color: inherit;
+ .info-container .collapsible-block-content{
+     padding: 0 .5em 30px;
+}
+ .info-container .collapsible-block-content .wiki-content-table{
+     width: 100%;
 }
 
-/* Page-Tags */
-#main-content .page-tags {
-    border-top: 2px solid rgb(var(--dark-accent));
-}
+/* ---- INFO PANE ---- */
 
-#main-content .page-tags a {
-    display: inline-block;
-    height: 0.8125rem;
-    line-height: 13px;
-    line-height: 0.8125rem;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    margin: 0 0 .5rem .75rem;
-    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+#page-content .creditRate{
+     margin: unset;
 }
-
-#main-content .page-tags a:before {
-    top: -0.1875rem;
-    left: -0.625rem;
-    width: 0;
-    height: 0;
-    border-color:
-     transparent
-     rgb(48, 48, 52)
-     transparent
-     transparent;
-    border-color:
-     transparent
-     rgb(var(--gray-monochrome, 45, 70, 45))
-     transparent
-     transparent;
-    border-style: solid;
-    border-width: 0.5rem 0.5rem 0.5rem 0;
-    padding: 0 0.0625rem 0.1875rem;
-}
-
-#main-content .page-tags a:before,
-#main-content .page-tags a:after {
-    content: "";
-    float: left;
-    position: relative;
-}
-
-#main-content .page-tags a:after {
-    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
-    top: 0.28125rem;
-    left: -0.5rem;
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0.125rem;
-    background-color: rgb(var(--bright-accent, 255, 219, 90));
-    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
-}
-
-.page-tags span {
-    border-top: .5rem solid transparent;
-}
-
-/* Rating and Info Modules */
-.page-rate-widget-box,
 #page-content .rate-box-with-credit-button {
-    background: linear-gradient(to top,
-        rgba(var(--swatch-menubg-dark-color), 1) 0,
-        rgba(var(--swatch-menubg-medium-color), 1) 100%);
-    font-family: var(--header-font);
-    letter-spacing: 0.05em;
+    background-color: #013737;
+    border: solid 1px #013737;
+    box-shadow: none;
+    border-radius: 0;
 }
 
-.page-rate-widget-box .rate-points,
+#page-content .rate-box-with-credit-button .fa-info {
+    border: none;
+    color: #ff9944;
+}
+
+#page-content .rate-box-with-credit-button .fa-info:hover {
+    background: #ff9944;
+    color: #013737;
+}
+
+.rate-box-with-credit-button .cancel {
+    border: solid 1px #013737;
+}
+
+/* ---- PAGE RATING ---- */
+
+.page-rate-widget-box {
+    box-shadow: none;
+    margin: unset;
+    border-radius: 0;
+}
+
+.page-rate-widget-box .rate-points {
+    background-color: #013737 !important;
+    color: #00ffff !important;
+    border: solid 1px #013737;
+    border-radius: 0;
+}
 .page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown,
-.page-rate-widget-box .cancel,
+.page-rate-widget-box .ratedown {
+    background-color: #013737;
+    border-top: solid 1px #013737;
+    border-bottom: solid 1px #013737;
+}
+
 .page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: #00ffff;
+}
+
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: #00ffff;
+    color: #013737;
+}
+
+.page-rate-widget-box .cancel {
+    background: transparent;
+    background-color: #013737;
+    border: solid 1px #013737;
+    border-radius: 0;
+}
+
 .page-rate-widget-box .cancel a {
-    font-weight: 500;
+    color: #00ffff;
+}
+.page-rate-widget-box .cancel a:hover {
+    background: #00ffff;
+    color: #013737;
+    border-radius: 0;
 }
 
-#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
-    background-color: rgb(var(--rating-module-button-color));
+/* ---- PAGE ELEMENTS ---- */
+
+#page-content .wiki-content-table tr th {
+    border: solid 1px #013737;
+    color: #f4f4f4;
+    background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
+    /* set border for table title */
 }
 
-/* Blockquotes, Horizontal Rules and Special Divs*/
-.blockquote,
-blockquote {
-       background: rgb(var(--pale-gray-monochrome));
-       border: 3px outset rgb(var(--medium-accent));
+#page-content .wiki-content-table tr td {
+    border: solid 1px #013737;
+    /* set border for table content */
 }
+
+blockquote,
+div.blockquote,
+#toc,
+.code {
+     background-color: #f5f5f5;
+     border: solid 1px #013737;
+}
+
+.scp-image-block {
+    border: solid 1px #013737;
+    box-shadow: none;
+}
+.scp-image-block .scp-image-caption {
+    background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
+    border-top: solid 1px #013737;
+    color: #f4f4f4;
+}
+
+/* ---- Horizontal Rules ---- */
 
 hr {
-    height: .125rem;
-    border: 0;
-    border-top: .063rem solid transparent;
-    background-color: rgba(var(--bright-accent));
-    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-    background-size: cover;
-}
-
-.fancyhr hr {
-    border-top: 2vw solid transparent;
-    background-color: rgba(var(--bright-accent), 0);
-    height: 0;
-    box-sizing: border-box;
-    border-image-source: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_hr.png);
-    border-image-repeat: round round;
-    background: none;
-    border-image-slice: 80 500 80 500 fill;
-    border-image-width: 10em 80em 10em 80em;
-}
-
-.fancyborder {
-    box-sizing: border-box;
-    border: 2vw solid rgba(0,0,0,0.5);
-    border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-    border-image-width: 6;
-    padding: 2vw;
-}
-
-/* footnote by 7happy7 */
-span:not([class]):not([style]) > sup.footnoteref:first-child > a.footnoteref:before,
-sup.footnoteref > a.footnoteref:before {
-content: "(";
-}
-span:not([class]):not([style]) > sup.footnoteref > a.footnoteref:before {
-content: ",";
-}
-
-/* Adjusts footnote block at bottom to fit the Hand format better, rather than BHL Default */
-.footnotes-footer {
-        width: unset;
-    margin: unset;
-    padding: 20px;
-    background-color: #EEF6EE;
-        border: solid 1px #112211;
-}
-
-/* MOBILE ELEMENTS */
-@media only screen and (max-width: 768px) {
-    #header h1 a,
-    #header h2 span {
-        margin-left: 7.75rem;
-        margin-top: 0.35em;
-    }
-
-    #header h1 a {
-        line-height: 1;
-    }
-
-    #header h2 span {
-        margin-top: calc(3.4rem + var(--offset-from-page-top));
-    }
-
-    div#extrac-div-1 {
-        background-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png);
-        background-size: 31.250rem;
-        z-index: 3;
-    }
-
-    div#extrac-div-1,
-    div#extrac-div-2 {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 7.5rem;
-        top: 0;
-        left: 0;
-    }
-
-    div#extrac-div-3::before {
-        text-shadow: inherit;
-        background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        content: var(--header-title);
-        font-family: var(--header-font);
-        font-size: 170%;
-        width: 95%;
-        height: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: transparent;
-        text-align: center;
-        font-weight: 700;
-    }
-
-    div#extrac-div-3 {
-        display: block;
-        position: static;
-        z-index: 1;
-        background-color: transparent;
-    }
-
-    div#extrac-div-2 > span {
-        display: flex;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 3rem;
-        box-sizing: inherit;
-        background: var(--gradient-topmenu-mobile, linear-gradient(to bottom,
-            rgba(var(--swatch-topmenu-border-color), 1) 0,
-            rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
-            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-            rgba(var(--swatch-topmenu-border-color), 1) 3rem));
-        background-size: 100% 10.375rem;
-        align-items: center;
-        position: sticky;
-        margin-top: 7.5rem;
-        background-color: transparent;
-    }
-
-    div#extra-div-2::before {
-        content: " ";
-        width: 100%;
-        height: 100%;
-    }
-
-    div#extrac-div-2 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    #search-top-box {
-        width: 12.5rem;
-    }
-
-   #search-top-box-form {
-        top: 0;
-        right: 0;
-        align-items: initial;
-    }
-}
+  background-color: rgba(1,55,55,0.46);
 }
