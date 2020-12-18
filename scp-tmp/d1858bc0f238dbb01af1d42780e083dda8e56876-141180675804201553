@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style>
+body {font-family: verdana, arial, helvetica, sans-serif; font-size: 12.8px; color: #333; line-height: 141%;}
+</style>
+服务器于<span id="date"></span>遭到入侵，记录到对本文档的非法访问，此页面可能已被篡改，请在维护完成前不要编辑本文档。<br/ ><br />
+已对黑客进行逆向追踪，怀疑其来源于<span id="textchange"></span><br /><br />
+<script type="text/javascript">
+var _date = new Date();
+_date.setHours(_date.getHours() - 3);
+document.getElementById("date").innerText = _date.getFullYear()+"年"+(_date.getMonth() + 1)+"月"+_date.getDate()+"日"+ ("0"+_date.getHours()).substr(-2)+":"+("0"+_date.getMinutes()).substr(-2);
+
+var _span = document.getElementById("textchange");
+var _str = ["“医院”。","我们会处理叛徒","请不要来打扰"];
+var _m = 0;
+
+function _change(){
+var _n = Math.round(Math.random());
+if (_m > _n){
+_m = _n;
+} else {
+_m = _n + 1;
+};
+_span.innerText= _str[_m];
+if (_m > 0){
+_span.style.color = '#F00';
+} else {
+_span.style.color = '#333';
+};
+setTimeout('_reset()', 300);
+};
+
+function _reset(){
+_span.innerText= "y^锟斤拷#:t";
+_span.style.color = '#333';
+setTimeout('_change()', 1500);
+};
+
+_reset();
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

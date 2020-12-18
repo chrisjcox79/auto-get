@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style type="text/css">
+body {font-family: verdana, arial, helvetica, sans-serif; font-size: 0.8em; color: #333;}
+a {
+  color: #b01;
+  text-decoration: none;
+  background: transparent;
+}
+a:hover {
+  text-decoration: underline;
+}
+#outputWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+#outputWrap > div {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+#outputText > div:not(#outputResult) {
+  display: none;
+}
+.page-rate-widget-box {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  margin-bottom: 10px;
+  margin-right: 2em;
+}
+.page-rate-widget-box .rate-points {
+  background-color: #633;
+  border: solid 1px #633;
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: #fff6f0;
+  border-top: solid 1px #633;
+  border-bottom: solid 1px #633;
+  font-weight: bold;
+}
+.page-rate-widget-box a {
+  text-decoration: none;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  background: transparent;
+  margin: 0 1px;
+  padding: 0 4px;
+  color: #633;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: #633;
+  color: #fffff0;
+}
+.page-rate-widget-box .cancel {
+  background: #633;
+  border: solid 1px #633;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+  padding: 0 5px;
+}
+.page-rate-widget-box .cancel a {
+  background: transparent;
+  text-transform: uppercase;
+  color: #966;
+}
+.page-rate-widget-box .cancel a:hover {
+  border-radius: 0 3px 3px 0;
+  color: #fffff0;
+}
+.footer-wikiwalk-nav {
+  font-weight: bold;
+  font-size: 75%;
+  text-align: center;
+}
+</style>
+<div style="padding: 0 0.625rem; border: 0.125rem solid #333; text-align: center;">
+<p style="font-size: 1.75em;">SCP-CN-648-J限时概率UP中！</p>
+<p>剩余次数：<span id="Num">10</span>回</p>
+<br />
+<p><button type="button" style="width: 80%; font-size: 1.25em;" onclick="draw()">抽取一回</button></p>
+</div>
+<div id="outputWrap">
+<div>
+<div id="outputStar" style="padding: 0.625rem; font-size: 3em; text-shadow: 1px 2px 3px rgba(0,0,0,.5);"><span>☆☆☆☆☆</span></div>
+<div id="outputText" style="height: 530px; padding: 0.625rem; overflow: auto;"></div>
+</div>
+<div id="Mask" style="position: relative; left: -100%; background-color: #eee;"></div>
+</div>
+<script type="text/javascript">
+var outputData = [
+{"weight":1, "star":1, "text":"<br /><p><div class='page-rate-widget-box'><span class='rate-points'>评分:&nbsp;😂</span><span class='rateup'><a href='#'>+</a></span><span class='ratedown'><a href='#'>&#8211;</a></span><span class='cancel'><a href='#'>x</a></span></div></p><br /><br /><p><i>Uuuuuuuuuuuuuup!!</i></p>"},
+{"weight":1, "star":5, "text":"<br /><p><b>测试用的5星</b></p><br /><br /><p><i>正式发布前别忘了删掉</i></p>"},
+{"weight":1, "star":1, "text":"<br /><p><b>项目编号：</b>SCP-CN-648-J</p><br /><br /><p><i>那是谁？是谁？是谁？<br />那正是CN-648-J，CN-648-J人，CN-648-J人！</i></p>"},
+{"weight":1, "star":1, "text":"<br /><p><b>项目编号：</b>被封印SCP-CN-648-J的左腕</p><p><b>描述：</b>攻击：200&emsp;&emsp;防御：300</p><br /><br /><p><i>被封印者的左腕，封印解开后将得到无限的力量。</i></p>"},
+{"weight":1, "star":1, "text":"<br /><p><b>项目等级：</b>看上去很Euclid</p><br /><br /><p><i>对，我从不在周末上班，只要到了周一，那些项目要么就跑了，要么就死了</i></p>"},
+{"weight":1, "star":1, "text":"<br /><p><div class='footer-wikiwalk-nav'><p>&#171; <a href='#'>SCP-CN-328-J</a> | SCP-CN-648-J | <a href='#'>SCP-CN-再来一单-J</a> &#187;</p></div></p>"},
+{"weight":1, "star":1, "text":"<br /><p><div style='border-radius: 10px; border: dashed 1px #444444; background: #F5F5F5; width: 92%; margin: 0 auto; padding: 10px; text-align: center'><b><p style='font-size: 22px'>！！ 认知危害警告 ！！<p><hr /><p>以下的文件包含带有异常认知危害影响的图片和文字，必须确保​所有访问此文件的人员……呃……好像已经迟了……</p></b></div></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>特殊收容措施：</b>放那儿就好了，就在《吉尔伽美食》和《在基金会寻求爱情是否搞错了什么》之间。</p><br /><br /><p><i>建议零售价：648元</i></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>特殊收容措施：</b><span style='color: #f00;'>鼓励！你会充分理解这些收容措施并亲自动手执行这些操作。并没有实施任何用于有效收容SCP-CN-648-J的自动化系统！</span></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>特殊收容措施：</b><br />&emsp;&emsp;&emsp;&ensp;手<br />&emsp;&emsp;^^凹口口一<br />&emsp;&emsp;&emsp;&ensp;手<br />&emsp;^^口凹口一<br />&emsp;&emsp;&emsp;&ensp;手<br />^^口口凹一<br />&emsp;&emsp;&emsp;&ensp;手<br />口口口一</p><br /><br /><p><i>快！叫！收！容！小！组！</i></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>特殊收容措施：</b>由于具有类似抽奖机制的游戏以极快的速度增加，SCP-CN-648-J无法被收容。</p><br /><br /><p><i>老婆！.jpg</i></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>描述：</b><br />I have some money, I have an SCP-CN-648-J<br />Uhh~</p><br /><br /><p><i>???</i></p>"},
+{"weight":1, "star":2, "text":"<br /><p><b>描述：</b>SCP-CN-648-J具有认知危害，反复与项目互动的对象会出现<b>怎么又双叒叕是两星？</b></p>"},
+{"weight":1, "star":3, "text":"<br /><p>SCP-CN-648-J是<s>每一发单抽</s></p><p>SCP-CN-648-J是<s>每一次十连</s></p><p>SCP-CN-648-J是<s>你期待的眼神</s></p><p>SCP-CN-648-J是<s>你唯一想要的卡</s></p><p>SCP-CN-648-J是<s>奇迹</s></p><p>SCP-CN-648-J是<s>以上所有，沉船、出货、氪金、豹跳，每一个激动人心的时刻</s></p><p>SCP-CN-648-J是<b>希望</b></p><br /><br /><p><i>下一发肯定能……</i></p>"},
+{"weight":1, "star":3, "text":"<br /><p><b>特殊收容措施：</b>SCP-CN-648-J目前收容于Site-CN-06的加密数据库中，任何直接访问SCP-CN-648-J的人员需接受反模因训练。若受SCP-CN-648-J异常效应影响，移除手部是有效的紧急措施。</p><br /><br /><p><i>不，用舌头也不行，更不允许用脚！</i></p>"},
+{"weight":1, "star":3, "text":"<br /><p><b>描述：</b>SCP-CN-648-J目前是一台扭蛋机，内有数个扭蛋，共计一套六种样式。当对象试图使用SCP-CN-648-J进行抽奖时，对象会被施加强烈的异常精神影响，导致其无法抑制地不断投入金钱试图抽齐全套样式。到目前为止，仍未有人能够抽出第六种样式。</p>"},
+{"weight":1, "star":3, "text":"<br /><p><b>描述：</b>SCP-CN-648-J是一种现象。当一名对象个体在概率性抽奖活动中只花费了较少次数便获得稀有结果并向其他对象大肆炫耀后，对象会在一小时至一日不等时间后消失，其他对象对此均表示不知情（笑）。</p><p>另一方面，SCP-CN-648-J可能引发异常认知影响。当对象抽取时发生某些极端情况，包括超过[权限不足]次连续的低稀有度结果或单次获得高稀有度结果，对象将认为其国籍与人种发生了改变。新的国籍通常为欧洲或非洲国家，偶尔会出现南极洲。</p>"},
+{"weight":1, "star":4, "text":"<br /><p><div style='margin: 0 auto 20px; background-color: #b01; border: solid 1px #b01; border-radius: 20px; box-shadow: 0 1px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.8), inset 0 10px 1px rgba(255,255,255,.6), inset 0 -15px 30px rgba(0,0,0,.2); text-align: center; width: 96.5%; max-width: 500px;'><div style='margin: 20px 0; font-size: 250%; color: #fff; font-weight: bold; text-shadow: 1px 2px 3px rgba(0,0,0,.5);'>网络连接中断！！</div><div style='margin: 20px 0; color: #ff6;'>你的扭蛋结果被吞掉惹</div><div style='margin: 20px 0; font-size: 120%; color: #fff; font-weight: bold; text-shadow: 1px 2px 3px rgba(0,0,0,.25);'>亲爱的玩家，我是你爹，请尝试重新连接</div></div></p>"},
+{"weight":1, "star":4, "text":"<br /><p><b>描述：</b>6费，4/8</p><p><b>嘲讽，圣盾。</b></p><br /><br /><p><i>这太超模了！</i></p>"},
+{"weight":1, "star":4, "text":"<br /><p><img src='http://scp-sandbox-3.wikidot.com/local--files/breaddddd/SCP-CN-648-J.png' alt='SCP-CN-648-J.png' style='width: 98%;'></p>"},
+{"weight":1, "star":4, "text":"<br /><p><img src='http://scp-sandbox-3.wikidot.com/local--files/breaddddd/niudan.png' alt='niudan.png' style='width: 98%;'></p><br /><br /><p><span style='font-size: .75em;'><i>*图片仅供参考，请以实物为准。</i></span></p>"},
+{"weight":1, "star":4, "text":"<br /><p><b>项目编号：</b>SCP-CN-648-J</p><p><b>项目等级：</b><s>Thaumiel</s> Explained</p><p><b>特殊收容措施：</b><s>基金会网络爬虫需监视网络和媒体，任何提及SCP-CN-648-J的内容需立即被删除或限制访问。应散布传言“玄不救非”阻止公众使用SCP-CN-648-J。</s></p><p>SCP-CN-648-J已被证实系捏造，相关特殊收容措施已终止并归档。</p><p><b>描述：</b><s>SCP-CN-648-J是一系列仪式性行为的统称，包括：</p><p><ul><li>烧香、跪拜等传统宗教具有的崇拜仪式。</li><li>对于不明实体“玄学之神”、“扭蛋之神”、“抽卡之神”形象的想象与绘制，通常为少女外貌。</li><li>清洁面部或/和手部。</li><li>搭建祭祀场所，通常为将数个电子产品依照某种特定图形放置。</li><li>12:00AM时在洗手间内打坐。</li><li>寻找特定的个体并让其说出与期望事实相反的内容，即“毒奶”。</li><li>[权限不足]</li></ul></p><p>一旦充分了解SCP-CN-648-J的性质并完成这些行为，会令对象拥有短暂的现实扭曲能力，能使对象在概率性事件中更倾向于得到理想的结果。</p><p>SCP-CN-648-J的性质首先由见习研究员Crossiant发现，Croissant已被提拔为正式研究员并负责SCP-CN-648-J项目的研究。</s></p><p>2018-[权限不足]凌晨3:00，Croissant一边做俯卧撑一边用香肠抽取手机游戏[权限不足]中的卡牌、并连续[权限不足]次没有抽到当期Pick Up。随后Croissant痛哭流涕地向站点主管承认SCP-CN-648-J是她捏造以骗取研究经费用来抽卡。相关调查已证明SCP-CN-648-J不具备异常性质，项目研究已被中止，研究员Croissant已受革职处分。</p><br /><br /><p><i>玄不救非，氪不改命啊！——研究员Bread</i></p>"},
+{"weight":1, "star":5, "text":"<br /><p><b>项目编号：</b>SCP-CN-648-J</p><p><b>项目等级：</b>Euclid</p><p><b>特殊收容措施：</b>SCP-CN-648-J目前收容于Site-CN-06的加密数据库中，相关文档记录应保留纸面副本以备查阅，任何直接访问SCP-CN-648-J的人员需接受反模因训练。</p><p>由基金会前台公司[权限不足]所运营的[权限不足]向公众开放，“牵线木偶”程序已被植入其抽奖系统中，以间接的方式满足SCP-CN-648-J对于互动的需要。[权限不足]的运营收入用作Site-CN-06的运作资金。</p><p><b>描述：</b>SCP-CN-648-J是一个不明来源的、存在于信息网络中的实体。SCP-CN-648-J可以在信息之间移动，受影响的信息片段无法保持原有完整形态，而是会形成碎片化的段落，这些碎片相互叠加并以概率性的形式出现。</p><p>SCP-CN-648-J中混杂有大量的错误、误导性或不属于原信息片段的内容，这使得个体对象无法或难以获得真正的信息。SCP-CN-648-J同样具有读取并复制其他信息内容及形式的能力，目前SCP-CN-648-J表现出的是类似“扭蛋”抽奖界面的模式，根据信息的完整程度以“星级”的形式大致分为五种等级。</p><p>SCP-CN-648-J对接触的对象具有认知危害，大大增加了对象对于最高等级结果的渴望，从而使其重复进行抽取和筛选行为。即使输出结果对于对象没有实质上的意义，无法获得所需的结果依然会导致对象的焦虑、情绪低落和/或情绪激动、愤怒，令对象无法集中精力于正常的日常活动中，严重情况下甚至会使得对象忽视其生理需求。</p><p>若SCP-CN-648-J与对象之间互动的总次数过低（低于[权限不足]次/日），将从当前位置上消失，并移动到随机的新位置上，任何阻止SCP-CN-648-J移动的尝试均以失败告终。SCP-CN-648-J表现出对于具有抽奖性质游戏的明显青睐，推测为对象在游戏中无法抽取到理想的物品或角色时产生的极端情绪能够使SCP-CN-648-J感到极大的满足。经研究发现，与SCP-CN-648-J互动的对象人数越多就能明显减少对单个对象个体所产生的影响。适当增加互动的代价也能抑制SCP-CN-648-J对对象的认知危害影响，例如需要投入金钱。</p>"}
+];
+var outputDiv = [];
+var hideMaskSpd = -1;
+var indexA = [];
+var indexB = [];
+var indexMax = 0;
+var indexResult = -1;
+
+(function() {
+  for (var i = 0; i < outputData.length; i++) {
+    indexA[i] = indexMax;
+    indexMax += outputData[i].weight;
+    indexB[i] = indexMax;
+    outputDiv[i] = document.createElement("div");
+    outputDiv[i].innerHTML = outputData[i].text;
+    document.getElementById("outputText").appendChild(outputDiv[i]);
+  }
+  outputDiv[0].id = "outputResult";
+  hideMask(document.getElementById("outputWrap").clientHeight);
+})();
+
+function draw() {
+  if (hideMaskSpd < 0) {
+    document.getElementById("Num").innerText = parseInt(document.getElementById("Num").innerText) - 1;
+    showOutputResult();
+    hideMaskSpd = 0;
+    hideMask(document.getElementById("outputWrap").clientHeight);
+    hideMaskStep();
+  }
+}
+
+function hideMask(h) {
+  document.getElementById("Mask").style.height = h + "px";
+}
+
+function hideMaskStep() {
+  hideMaskSpd += 0.2;
+  hideMask(Math.max(0, (document.getElementById("Mask").offsetHeight - hideMaskSpd)));
+  if (document.getElementById("Mask").offsetHeight > 0) {
+    setTimeout("hideMaskStep()", 20);
+  } else {
+    hideMaskSpd = -1;
+  }
+}
+
+function showOutputResult() {
+  var indexRandom = Math.random() * indexMax;
+  for (var n = 0; n < outputData.length; n++) {
+    if (indexRandom >= indexA[n] && indexRandom < indexB[n]) {
+      break;
+    }
+  }
+  if (indexResult != n) {
+    indexResult = n;
+    switch(outputData[n].star) {
+      case 1:document.getElementById("outputStar").innerHTML = "<span style='color: #c6c6c6;'>★☆☆☆☆</span>";
+      break;
+      case 2:document.getElementById("outputStar").innerHTML = "<span style='color: #b9e285;'>★★☆☆☆</span>";
+      break;
+      case 3:document.getElementById("outputStar").innerHTML = "<span style='color: #56b4cc;'>★★★☆☆</span>";
+      break;
+      case 4:document.getElementById("outputStar").innerHTML = "<span style='color: #8f54a6;'>★★★★☆</span>";
+      break;
+      case 5:document.getElementById("outputStar").innerHTML = "<span style='color: #f8b60d;'>★★★★★</span>";
+      break;
+    }
+    document.getElementById("outputText").scrollTop = 0;
+    document.getElementById("outputText").scrollLeft = 0;
+    document.getElementById("outputResult").id = "";
+    outputDiv[n].id = "outputResult";
+  }
+}
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

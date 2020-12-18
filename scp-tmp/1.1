@@ -1,50 +1,62 @@
-@import url(http://scp-wiki-cn.wikidot.com/component:theme/code/1);
-@import url(http://scp-wiki-cn.wikidot.com/theme:wanderers/code/1);
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="content-language" content="zh-cn"/>
+<meta charset="UTF-8"/>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+/*!
+ * jQuery JavaScript Library v3.2.1
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2017-03-20T18:59Z
+ */
+//---------------------------
+//ProjectName: Credit Module
+//FunctionName: Back Module
+//CreatedBy C-take , sinazugawa
+//License MIT
+//---------------------------
+$(function() {
+    var ua = navigator.userAgent.toLowerCase();
+    var bReload= true;
+    if ( ( ua.indexOf("applewebkit") >= 0 || ua.indexOf("firefox") >= 0 ) && ua.indexOf("edge") == -1 )
+        bReload= false;
 
-/* GLOBAL WIDTH */
-.mobile-top-bar {
-    left: auto;
-    right: 1em;
-}
+    $('.fader').on("click",closeCredit);
+    function closeCredit() {
+        if ( bReload ) {
+            history.go(-1);
+            parent.location.href = document.referrer.split('#')[0];
+        } else {
+            history.go(-1);
+        }
 
-/* HEADER TEXT */
-#header h2 span {
-    display: none;
-}
-
-/* TRANSLATION BLOCK */
-iframe.scpnet-interwiki-frame {
-  width: 16em;
-  margin-left: 0.5em;
-  filter: none;
-  -webkit-filter: none;
-}
-
-.fancyhr hr {
-    border-top: 2vw solid transparent;
-    background-color: rgba(255, 219, 90, 0);
-    height: 0;
+        $('.fader').off("click");
+        setTimeout(function(){
+            $('.fader').on("click",closeCredit);
+        },1200);
+    }
+});
+</script>
+<style>
+.fader {
     width: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    border-image-source: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_hr.png);
-    border-image-repeat: round round;
-    background: none;
-    border-image-slice: 80 500 80 500 fill;
-    border-image-width: 10em 80em 10em 80em;
-    margin: 1em 0;
+    height: 100%;
+    position: fixed;
 }
-
-.fancyborder {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 2vw solid rgba(0,0,0,0.5);
-    -webkit-border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-       -moz-border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-         -o-border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-            border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-    border-image-width: 6;
-    padding: 2vw;
-}
+</style>
+</head>
+<body>
+<div class='fader'></div>
+</body>
+</html>

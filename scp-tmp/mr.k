@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342261;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "system:page-tags";
-        OZONE.request.timestamp = 1608259036;
+        OZONE.request.timestamp = 1608275644;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "system:page-tags";
@@ -1241,10 +1241,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.startup-australia.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.startup-australia.org/80.jpg"/>
+            <a target="_blank" class="image" href="http://techcomm.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/techcomm.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.startup-australia.org">Startup Australia</a></h3>
+            <h3><a target="_blank" href="http://techcomm.wikidot.com">TechnicalCommunication</a></h3>
             <div class="desc">          
               
             </div>
@@ -1252,32 +1252,32 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://cosmerezh.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cosmerezh.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://alveslima-edu.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/alveslima-edu.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://cosmerezh.wikidot.com">山德森寰宇祕典</a></h3>
+            <h3><a target="_blank" href="http://alveslima-edu.wikidot.com">WIKEDUCAÇÃO</a></h3>
             <div class="desc">          
-              星河之間，無垠之上
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://rpc-tr-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rpc-tr-wiki.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://kharon.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kharon.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://rpc-tr-wiki.wikidot.com">RPC</a></h3>
+            <h3><a target="_blank" href="http://kharon.wikidot.com">CEC Kharon</a></h3>
             <div class="desc">          
-              Araştır, Koru, Sakla
+              bsgkharon.com 5102
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://mainframes.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mainframes.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://pagi.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pagi.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://mainframes.wikidot.com">Mainframes</a></h3>
+            <h3><a target="_blank" href="http://pagi.wikidot.com">pagi</a></h3>
             <div class="desc">          
               
             </div>
