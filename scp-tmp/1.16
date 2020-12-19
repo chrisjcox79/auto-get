@@ -1,427 +1,367 @@
-/* All Vars Used */
+@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+
+@supports(--css: variables) {
 
 :root {
-    /* S-CSS-P Integration */
-    /* If you're making a new CSS theme, please include the following three variables at minimum. */
-    --theme-base: "nuscp";
-    /* must be either "nuscp" or "sigma9" */
-    --theme-id: "nuscp";
-    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-    --theme-name: "i57-theme";
-    /* set this to your theme's full name */
-
-    /* Header */
-    --logo-image:url("http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57logo.png");
-
-    --header-title: '57號設施';
-    --header-subtitle: '控制，收容，保護';
-
     /* Typefaces */
-    --body-font: "Noto Sans SC", sans-serif;
-    --header-font: "ZCOOL QingKe HuangYou", cursive;
-    --title-font: "Noto Sans SC", sans-serif;
-    --mono-font: 'PT Mono', 'Andale Mono', 'Courier New', Courier, '仿宋', monospace;
+    --body-font: 'IBM Plex Mono', '等线', monospace;
+    --header-font: 'IBM Plex Mono', '等线', sans-serif;
+    --title-font: 'IBM Plex Mono', '等线', monospace;
+    --mono-font: "IBM Plex Mono", '等线', monospace;
 
     /* Standard Colors */
-    --white-monochrome: 252, 252, 252;
-    /* white */
-    --pale-gray-monochrome: 244, 244, 244;
-    /* v light gray for blockquotes and stuff */
-    --light-gray-monochrome: 170, 170, 170;
-    /* light accent gray for login status */
-    --gray-monochrome: 66, 66, 72;
-    /* gray */
-    --dark-gray-monochrome: 48, 48, 52;
-    /* dark accent gray for sidebar background */
-    --black-monochrome: 12, 12, 12;
-    /* black */
-    --bright-accent: 243,207,0;
-    /* bright yellow */
-    --medium-accent: 221,188,0;
-    /* medium yellow 4 header */
-    --dark-accent: 18,20,17;
-    /* dark blue */
-    --link-color: 131, 115, 15;
-    /* blue */
 
-    /* Primary Theme Colors */
-    --swatch-background: 240, 240, 240;
-    --swatch-primary: var(--medium-accent);
-    --swatch-primary-darker: var(--bright-accent);
-    --swatch-primary-darkest: var(--bright-accent);
-    /* Primary Text Colors */
-    --swatch-text-dark: var(--black-monochrome);
-    --swatch-text-light: var(--white-monochrome);
-    --swatch-important-text: var(--bright-accent);
+    --white-monochrome: 238, 238, 216;
+    --pale-gray-monochrome: 233, 231, 204;
+    --light-gray-monochrome: 147, 147, 147;
+    --gray-monochrome: 127, 127, 127;
+    --dark-gray-monochrome: 101, 101, 101;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 145, 179, 153;
+    --medium-accent: 145, 179, 153;
+    --dark-accent: 105, 133, 111;
 
-    /* Primary Menu Colors */
-    --swatch-menubg-color: var(--dark-accent);
-    --swatch-menubg-light-color: var(--white-monochrome);
-    --swatch-menubg-medium-color: var(--medium-accent);
-    --swatch-menubg-medium-dark-color: var(--black-monochrome);
-    --swatch-menubg-dark-color: var(--medium-accent);
-    --swatch-menubg-black-color: var(--black-monochrome);
-    --swatch-menubg-hover-color: var(--gray-monochrome);
-    --swatch-menutxt-dark-color: var(--white-monochrome);
-    --swatch-menutxt-light-color: var(--white-monochrome);
-    --swatch-border-color: var(--medium-accent);
-    /* Primary Header Colors */
-    --swatch-headerh1-color: var(--bright-accent) !important;
-    --swatch-headerh2-color: var(--bright-accent) !important;
-    --swatch-topmenu-border-color: var(--dark-accent);
-    --swatch-topmenu-bg-color: var(--dark-accent);
 
-    --rating-module-button-color: var(--black-monochrome);
-    --rating-module-text-color: var(--black-monochrome);
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Ascp-offices-theme/scpoffices_logo.svg");
 
-     --diagonal-stripes: none;
+    --background-gradient-color: 215, 215, 215;
+    --background-gradient-distance: 40rem;
 
-     --cutColour: rgb(var(--bright-accent));
-     --barColour: rgb(var(--dark-accent));
+    /* Link Colors */
+	--link-color: var(--bright-accent);
+	--visited-link-color: var(--dark-accent);
+	--hover-link-color: var(--dark-accent);
+	--newpage-color: 221, 102, 17;
 
+    scrollbar-color: rgba(var(--white-monochrome), 1) rgba(var(--bright-accent), 0.50);
 }
 
-html,
-body,
-#side-bar:hover {
-    scrollbar-color: rgb(var(--bright-accent)) rgb(var(--dark-accent));
+#container-wrap-wrap {
+
+    background-image:
+        -webkit-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -webkit-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        -moz-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -moz-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        repeating-linear-gradient(180deg,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -webkit-gradient(linear,
+        left top, left bottom,
+        color-stop(7.5rem, rgba(var(--black-monochrome), 1)),
+        color-stop(7.625rem, rgba(var(--gray-monochrome), 1)),
+        color-stop(rgba(var(--gray-monochrome), 1)),
+        color-stop(rgba(var(--gray-monochrome), 1)),
+        to(rgba(var(--black-monochrome), 1)));
+
+    background-image:
+        -o-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -o-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        repeating-linear-gradient(180deg,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        linear-gradient(to bottom,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+    -webkit-background-size: 100% 7.5rem, 100% 9.375rem;
+       -moz-background-size: 100% 7.5rem, 100% 9.375rem;
+         -o-background-size: 100% 7.5rem, 100% 9.375rem;
+            background-size: 100% 7.5rem, 100% 9.375rem;
+    background-repeat: no-repeat;
 }
 
- ::-webkit-scrollbar,
-#side-bar:hover::-webkit-scrollbar {
-    background-color: rgb(var(--dark-accent));
-}
-
-::-webkit-scrollbar-thumb,
-#side-bar:hover::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--bright-accent));
-}
-
-#header {
-     filter: none;
-}
-#header h1 a::before {
-     color: rgb(var(--medium-accent));
-   --text-shadow: none;
-}
-
-#search-top-box-form input[type="submit"], #search-top-box-form input[type="submit"]:focus, #search-top-box-form input[type="submit"]:hover {
-    background: rgb(var(--black-monochrome));
-    color: rgb(var(--medium-accent));
-}
-
-@media only screen and (max-width: 768px) {
-    #search-top-box:not(:focus-within)::before {
-          color: rgb(var(--medium-accent));
-     }
-
-    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
-         background-color: #181a17;
-    }
-}
-
-
-
-hr {
-    border-top: 1px solid #272727;
-    border-bottom: 1px solid #272727;
-    border-left: 30px solid rgb(var(--bright-accent));
-    border-right: 30px solid rgb(var(--bright-accent));
-    background: #272727;
-}
-
-.scp-image-block {
-background: #272727;
-border: none;
-border-radius: 5px;
-}
-
-.scp-image-block .scp-image-caption {
-background-color: rgb(var(--dark-accent));
-color: rgb(var(--bright-accent));
-}
-
-blockquote,
-.blockquote {
-     border: 2px dashed rgba(var(--light-gray-monochrome),0.7);
-     background-color: rgba(var(--light-gray-monochrome),0.3);
-}
-
-.footnotes-footer {
-     background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     background-size: contain;
-     background-repeat: repeat;
-     border-left: .35em solid transparent;
-     border-right: .35em solid transparent;
-     color: rgb(var(--bright-accent));
-     transition: border-right 300ms ease-in-out, border-left 300ms ease-in-out;
-}
-
-.footnotes-footer:hover {
-     border-right: .35em solid rgb(var(--medium-accent));
-     border-left: .35em solid rgb(var(--medium-accent));
-}
-
-.footnotes-footer .title {
-     border-bottom: 2px dashed rgb(var(--bright-accent));
-}
-
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-     background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     background-size: contain;
-     background-repeat: repeat;
-    border: 0.125rem solid rgba(var(--bright-accent), 1);
-    color: rgba(var(--bright-accent), 1);
-}
-
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-    background: rgba(var(--medium-accent), 1) !important;
-    color: rgba(var(--dark-accent), 1);
-}
+#skrollr-body {}
 
 a {
-    color: rgb(var(--link-color));
+    font-weight: 900;
 }
-#main-content a:hover {
-    background-color: rgb(var(--link-color));
-    color: rgb(var(--white-monochrome));
-}
-a:visited {
-    color: #40401f;
-}
-a.newpage{
+
+#header h2 span::before {
     color: rgb(var(--bright-accent));
 }
 
-.report {
-    background: url(http://scp-yerko.wdfiles.com/local--files/almacen-de-archivos/SCP%20LOGO%20PNG%20HD%20DEGRADE%202%20chico.png) center center no-repeat;
-    display: block;
-    border: dashed 1px #999999;
-    width:84%;
-    padding: 5px 15px;
-    margin: 10px auto;
+#header h1 *,
+#top-bar *,
+#page-title * {
+    will-change: opacity;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.mac {
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/MAC-1.png) top no-repeat;
-    background-color: white;
-    background-size: 200px;
-    display: block;
-    border: solid 3px rgb(var(--dark-accent));
-    width: 84%;
-    padding: 195px 15px 15px 15px;
-    margin: 10px auto;
+#header h1 a:hover::before,
+#top-bar a:hover,
+#page-title:hover,
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
 }
 
-.mac p {
-    border-top: 2px solid black;
-    padding-top: 4px;
+#top-bar li:hover ul,
+#top-bar li:focus-within ul,
+#top-bar li.sfhover ul,
+#top-bar li ul {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
 }
 
-#extra-div-2 {
-     display: block;
-     width: 100%;
-     height: 7.5rem;
-     top: 0;
-     left: 0;
-     position: absolute;
-     background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png");
-     background-position: top;
-     background-repeat: repeat;
-     -webkit-background-size: contain;
-     -moz-background-size: contain;
-     -o-background-size: contain;
-     background-size: contain;
-     pointer-events: none;
+#search-top-box-form input[type="submit"] {
+    background: rgb(var(--bright-accent)) !important;
+}
+
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+	background: rgb(var(--dark-accent)) !important;
+}
+	
+#side-bar img {
+	display: none;
+}
+	
+#side-bar .collapsible-block-unfolded {
+	background: unset;
+}
+	
+#side-bar div.menu-item a.collapsible-block-link,
+#side-bar .side-block>.collapsible-block a.collapsible-block-link {
+	background: rgba(var(--medium-accent),0.5);	
+}
+
+#side-bar div.menu-item a,
+#side-bar div.menu-item .text {
+    font-weight: 900;
+}
+
+#side-bar div.menu-item a:hover {
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
+}
+
+.page-rate-widget-box {
+    background:
+        -webkit-gradient(linear,
+        left top, left bottom,
+        from(rgb(var(--bright-accent))),
+        color-stop(30%, rgb(var(--dark-accent))),
+        to(rgb(var(--dark-accent)))) !important;
+    background:
+        -webkit-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        -moz-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        -o-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        linear-gradient(to bottom,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+}
+
+.page-rate-widget-box > span.rate-points,
+.page-rate-widget-box > span.rateup,
+.page-rate-widget-box > span.ratedown,
+.page-rate-widget-box > span.cancel,
+.page-rate-widget-box > span.rate-points > a,
+.page-rate-widget-box > span.rateup > a,
+.page-rate-widget-box > span.ratedown > a,
+.page-rate-widget-box > span.cancel > a {
+    color: rgb(var(--white-monochrome));
+    mix-blend-mode: unset;
+    -webkit-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.page-rate-widget-box > span.rate-points:hover,
+.page-rate-widget-box > span.rate-points:active {
+    color: rgb(var(--white-monochrome)) !important;
+    mix-blend-mode: unset !important;
+}
+
+.page-rate-widget-box > span.rateup:hover,
+.page-rate-widget-box > span.rateup:active,
+.page-rate-widget-box > span.ratedown:hover,
+.page-rate-widget-box > span.ratedown:active,
+.page-rate-widget-box > span.cancel:hover,
+.page-rate-widget-box > span.cancel:active {
+    color: rgb(var(--black-monochrome));
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
+}
+	
+.info-container .collapsible-block-folded,
+.info-container .collapsible-block-unfolded-link {
+	background: rgb(var(--bright-accent))!important;	
+}
+	
+iframe.scpnet-interwiki-frame {
+	-webkit-filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
+	        filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
+}	
+
+@media only screen and (max-width: 768px) {
+	#header {
+		background-position: left -webkit-calc(5vw + 5.5rem - 10.4rem) top -webkit-calc(4% - var(--offset-from-page-top) / 2),top center;
+		background-position: left -moz-calc(5vw + 5.5rem - 10.4rem) top -moz-calc(4% - var(--offset-from-page-top) / 2),top center;
+		background-position: left calc(5vw + 5.5rem - 10.4rem) top calc(4% - var(--offset-from-page-top) / 2),top center;
+		-webkit-background-size: -webkit-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		   -moz-background-size: -moz-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		     -o-background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		        background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		background-repeat: no-repeat,repeat;
+	}
+}
+
+@-webkit-keyframes flicker {
+    0% {
+        opacity: .2;
     }
 
+    5% {
+        opacity: .9;
+    }
 
+    6% {
+        opacity: 1;
+    }
 
+    11% {
+        opacity: .4;
+    }
 
-/* TABVIEW - Abandon All Hope Ye Who Enter Here */
+    11.25% {
+        opacity: .6;
+    }
 
-.yui-navset * {
-    -webkit-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    -o-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    11.5% {
+        opacity: .4;
+    }
+
+    18% {
+        opacity: 1;
+    }
+
+    18.5% {
+        opacity: .9;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    38.5% {
+        opacity: 1;
+    }
+
+    39% {
+        opacity: .8;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    60.5% {
+        opacity: 0;
+    }
+
+    62% {
+        opacity: 0;
+    }
+
+    63% {
+        opacity: .2;
+    }
+
+    63.25% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .8;
+    }
+
+    79% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
-
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    zoom: unset;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    border-color: rgb(var(--bright-accent));
-    width: -webkit-calc(100% - 0.125rem);
-    width: calc(100% - 0.125rem);
-    margin: 0 auto;
-    border: 0;
-    -webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 rgb(var(--bright-accent));
-    box-shadow: 0 calc(0.0625rem * 5) 0 0 rgb(var(--bright-accent));
-}
-
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    zoom: unset;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     -webkit-background-size: contain;
-     -moz-background-size: contain;
-     -o-background-size: contain;
-     background-size: contain;
-     background-repeat: repeat;
-    border: unset;
-    color: rgb(var(--bright-accent));
-    font-weight: bold;
-}
-
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    zoom: unset;
-    background-image: none;
-    background: rgba(var(--bright-accent), 0.5);
-    color: rgb(var(--dark-accent));
-    font-weight: bold;
-}
-
-.yui-navset .yui-nav li,
-.yui-navset .yui-navset-top .yui-nav li {
-    background: rgb(244, 244, 244);
-    border-color: transparent;
-    max-width: 100%;
-    padding: 0;
-    margin: 0 0.25em 0.5em;
-    zoom: unset;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-flex-basis: 7vw;
-    -ms-flex-preferred-size: 7vw;
-    flex-basis: 7vw;
-    -webkit-box-flex: 2;
-    -webkit-flex-grow: 2;
-    -moz-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    -webkit-box-shadow: 0 0 0 0.0625rem rgba(var(--dark-accent), 0.5);
-    box-shadow: 0 0 0 0.0625rem rgba(var(--dark-accent), 0.5);
-    transition: all 300ms cubic-bezier(0.4,0.0,0.2,1);
-}
-
-.yui-navset .yui-nav li a,
-.yui-navset-top .yui-nav li a,
-.yui-navset-bottom .yui-nav li a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    vertical-align: bottom;
-    zoom: unset;
-    width: 100%;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.yui-navset .yui-nav a em,
-.yui-navset .yui-navset-top .yui-nav a em {
-    padding: 0.35em 0.75em;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.yui-navset .yui-nav li em {
-    /* Undoes border set by wikidot's default layout */
-    border: unset !important;
-}
-
-/* Selected Tab */
-
-.yui-navset .yui-nav .selected,
-.yui-navset .yui-navset-top .yui-nav .selected,
-.yui-navset .yui-nav .selected:hover,
-.yui-navset .yui-navset-top .yui-nav .selected:hover {
-    padding: 0;
-    margin: -0.25em 0 0.25em 0;
-    -webkit-box-flex: 2;
-    -webkit-flex-grow: 2;
-    -moz-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    color: rgb(var(--dark-accent));
-    background-image: none;
-}
-
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a em {
-    border: none !important;
-    border-color: transparent;
-     color: rgb(var(--dark-accent));
-}
-
-.yui-navset .yui-nav .selected a {
-    /* Undoes a color set by wikidot's default layout */
-    color: rgb(252, 252, 252) !important;
-    width: 100%;
-    background-image: none;
-}
-
-.yui-navset .yui-content {
-    background-color: rgba(var(--light-gray-monochrome),0.5);
-    /* content background color */
-}
-
-.yui-navset .yui-content,
-.yui-navset .yui-navset-top .yui-content {
-    border-color: rgb(var(--light-gray-monochrome));
-    /* content border */
-}
-
-.yui-navset-left .yui-content {
-    border-left-color: rgba(var(--dark-accent),1);
-    /* different border color */
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:hover {
-        background-image: none;
-        background-color:rgb(var(--medium-accent));
-        color: rgb(var(--dark-accent));
-        cursor: default;
-        margin-bottom: -2px;
-        font-weight: bold;
-}
-
-/* Reduced Animations */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.001s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001s !important;
-  }
 }

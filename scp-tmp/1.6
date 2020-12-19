@@ -1,233 +1,336 @@
 /*
-    The Way Out Theme
-    [2019 Wikidot Theme]
-    Created by Rounderhouse, with massive help from Woedenaz.
-    Based on Black Highlighter Theme created by Woedenaz and Croquembouche.
-    The O5 Command logo was created by djkaktus. Licensed under CC BY SA 3.0.
+    Y2K Theme
+    [2020 Wikidot Theme]
+    By etoisle
+    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan
 */
 
-/* Fonts */
-
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
-
-/* All Vars Used */
-
-:root {
-    /* S-CSS-P Integration */
-    /* If you're making a new CSS theme, please include the following three variables at minimum. */
-    --theme-base: "nuscp";
-    /* must be either "nuscp" or "sigma9" */
-    --theme-id: "nuscp";
-    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-    --theme-name: "nu-SCP Theme";
-    /* set this to your theme's full name */
-
-    /* Header */
-    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Athe-way-out/wtf.svg");
-    --header-title: "監督者指揮部";
-    --header-subtitle: "SITE-01 內部資料庫";
-
-    /* Typefaces */
-    --body-font: "Noto Sans SC", sans-serif;
-    --header-font: "Noto Sans SC", sans-serif;
-    --title-font: "Noto Sans SC", sans-serif;
-    --mono-font: "PT Mono", "Andale Mono", "Courier New", Courier, '仿宋', monospace;
-
-    /* Standard Colors */
-    --white-monochrome: 252, 252, 252;
-    /* white */
-    --pale-gray-monochrome: 244, 244, 244;
-    /* v light gray for blockquotes and stuff */
-    --light-gray-monochrome: 170, 170, 170;
-    /* light accent gray for login status */
-    --gray-monochrome: 66, 66, 72;
-    /* gray */
-    --dark-gray-monochrome: 48, 48, 52;
-    /* dark accent gray for sidebar background */
-    --black-monochrome: 12, 12, 12;
-    /* black */
-    --bright-accent: 14, 65, 102;
-    /* blue */
-    --medium-accent: 60, 100, 120;
-    /* medium blue */
-    --dark-accent: 12, 36, 54;
-    /* dark blue */
-    --newpage-color: 99, 190, 255;
-    /* bright blue */
-
-    /* Primary Theme Colors */
-    --swatch-background: var(--white-monochrome);
-    --swatch-primary: var(--medium-accent);
-    --swatch-primary-darker: var(--bright-accent);
-    --swatch-primary-darkest: var(--bright-accent);
-    /* Primary Text Colors */
-    --swatch-text-dark: var(--black-monochrome);
-    --swatch-text-light: var(--white-monochrome);
-    --swatch-important-text: var(--bright-accent);
-
-    /* Primary Menu Colors */
-    --swatch-menubg-color: var(--gray-monochrome);
-    --swatch-menubg-light-color: var(--gray-monochrome);
-    --swatch-menubg-medium-color: var(--gray-monochrome);
-    --swatch-menubg-medium-dark-color: var(--black-monochrome);
-    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
-    --swatch-menubg-black-color: var(--black-monochrome);
-    --swatch-menubg-hover-color: var(--gray-monochrome);
-    --swatch-menutxt-dark-color: var(--white-monochrome);
-    --swatch-menutxt-light-color: var(--white-monochrome);
-    --swatch-border-color: var(--black-monochrome);
-    /* Primary Header Colors */
-    --swatch-headerh1-color: var(--white-monochrome);
-    --swatch-headerh2-color: var(--white-monochrome);
-    --swatch-topmenu-border-color: var(--dark-gray-monochrome);
-    --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
-
-    --rating-module-button-color: var(--black-monochrome);
-    --rating-module-text-color: var(--black-monochrome);
-
-       /* Link Colors */
-    --link-color: 27, 65, 94 ;
-    --visited-link-color: 133, 193, 233;
-    --hover-link-color: 133, 193, 233;
-
-    /* Header Gradients */
-
-    --gradient-header: linear-gradient(to bottom,
-     rgba(var(--black-monochrome),0.97) 10%,
-     rgb(var(--black-monochrome)) 65%,
-     rgb(var(--dark-gray-monochrome)) 100%);
-    --gradient-topmenu: linear-gradient(to bottom,
-     white 0%,
-     white 7.5rem,
-     rgba(var(--swatch-topmenu-border-color), 1) 7.5rem,
-     rgba(var(--swatch-topmenu-bg-color), 1) 7.625rem,
-     rgba(var(--swatch-topmenu-bg-color), 0.95) calc(100% - 0.125rem),
-     rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - 0.125rem),
-     rgba(var(--swatch-topmenu-border-color), 1) 100%);
-    --gradient-topmenu-mobile: linear-gradient(to bottom,
-     rgba(var(--swatch-topmenu-border-color), 1) 0,
-     rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
-     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-     rgba(var(--swatch-topmenu-border-color), 1) 3rem);
-    --diagonal-stripes: repeating-linear-gradient(25deg,
-     hsla(0, 0%, 100%, 0),
-     hsla(0, 0%, 100%, 0) 0.25vh,
-     rgba(88, 88, 88, 0.1) 0.35vh,
-     rgba(88, 88, 88, 0.2) 0.5vh);
-    --gradient-sidemenu-header: linear-gradient(10deg,
-     rgba(var(--medium-accent), 0.45) 0%,
-     rgba(var(--medium-accent), 0.55) 100%);
-    --gradient-background: linear-gradient(to bottom,
-     rgba(var(--background-gradient-color), 1) calc(calc(0 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.987) calc(calc(0.8 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.951) calc(calc(2.9 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.896) calc(calc(6.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.825) calc(calc(11 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.741) calc(calc(16.6 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.648) calc(calc(23.1 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.55) calc(calc(30.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.45) calc(calc(38.3 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.352) calc(calc(46.7 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.259) calc(calc(55.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.175) calc(calc(64.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.104) calc(calc(73.5 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.049) calc(calc(82.5 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.013) calc(calc(91.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0) calc(calc(100 / 100) * var(--background-gradient-distance)));
-    --header-background-image-size: 100% 7.5rem;
-
-    /* Spacing Measurements */
-    --offset-from-page-top: 1.2rem;
-    /* space between the top of the page and the start of the header */
-    --body-width-on-desktop: 44.25rem;
-    --sidebar-width-on-desktop: calc(var(--base-font-size)*19);
-    --sidebar-width-on-mobile: 14rem;
-    --scrollbar-width: 0.5625rem;
-    --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
-    --border-radius-width: 0.0625rem;
-
-    /* Sidebar */
-    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
-    --sidebar-internal-border-thickness: 0.125rem;
-
-    --background-gradient-color: 12, 36, 54;
-    --background-gradient-distance: 40rem;
-
-    /* Dynamic Font Sizing */
-    /* This set of vars will make the base font size vary with screen width */
-    /* base font size ranges */
-    --unitless-min-font-size: 0.8;
-    --unitless-max-font-size: 1;
-    /* base viewport size ranges */
-    --unitless-min-viewport: 768;
-    --unitless-max-viewport: 900;
-    /* base line height size ranges */
-    --min-lineheight: 1.2;
-    --max-lineheight: 1.5;
-    /* calculating size differences */
-    --font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
-    --lineheight-difference: calc(var(--max-lineheight) - var(--min-lineheight));
-    --viewport-range-difference: calc(var(--unitless-max-viewport) - var(--unitless-min-viewport));
-    --min-viewport-difference: calc(100vw - (var(--unitless-min-viewport) * 1px));
-    /* responsive fluid type formula */
-    --font-calc: calc((var(--unitless-min-font-size) * 1rem) + var(--font-size-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
-    --line-calc: calc(var(--min-lineheight) + var(--lineheight-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
-    /* final values */
-    --base-font-size: var(--font-calc);
-    --base-line-height: var(--line-calc);
+.scp-image-block.block-right {
+	margin: 0 2em 1em;
 }
 
-#side-bar div.menu-item a,
-#side-bar div.menu-item .text,
-#side-bar div.menu-item a:visited,
-#side-bar div.menu-item a:active {
-        color: white;
+body {
+	background-attachment: fixed;
+	color: #000000;
+	font-family: "Microsoft Sans Serif", "宋体";
+	font-size: 14px;
+	image-rendering: pixelated;
+	word-break: unset;
+	--themeColor: #008484;
+	--accentColor: #008484;
+}
+
+a {
+	color: rgb(0, 0, 255);
+}
+
+a:visited {
+	color: #800080;
+}
+
+h1 {
+	color: #000084;
+	font-family: "Microsoft Sans Serif", "宋体";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Microsoft Sans Serif", "宋体";
+}
+
+blockquote, 
+div.blockquote {
+	border: #DFDFDF outset 2px;
+	background-color: #C0C0C0;
+	color: black;
+	color: #000;
+}
+
+#account-topbutton{
+	border: 1px solid #000 !important;
+}
+
+div#container-wrap {
+	background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ay2k/bg.png);
+}
+
+div#header {
+	background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ay2k/logo.png);
+	image-rendering: pixelated;
 }
 
 .scp-image-block {
-   color: rgb(var(--white-monochrome));
-}
-#side-bar div.menu-item .sub-text {
-   color: rgb(var(--white-monochrome));
-}
-#login-status {
-   color: rgb(var(--medium-accent));
-}
-blockquote {
-    background-color: rgb(var(--light-gray-monochrome));
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0;
+	margin: 0 2em 1em;
 }
 
-.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {
-   color: white;
+div#side-bar div.side-block {
+	background: #C0C0C0;
+	border: #DFDFDF outset 2px;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0;
 }
+
+div#side-bar div.side-block div.heading,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link:hover {
+	color: black;
+	border-color: black;
+}
+
+div#side-bar div.collapsible-block-folded {
+        background-image: none;
+}
+
+div.yui-navset div.yui-content {
+	color: #000000;
+	background: #C0C0C0;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-bottom: #DFDFDF outset 2px;
+	border-top: transparent 0;
+}
+
+.yui-navset .yui-nav a,
+div.yui-navset div.yui-navset-top .yui-nav a {
+	/* protect nested tabviews from other orientations */
+	border: #DFDFDF outset 2px;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em,
+.yui-navset .yui-nav a em,
+.yui-navset .yui-navset-top .yui-nav a em {
+	border-color: transparent;
+}
+
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+	border-color: #008484;
+}
+
+div.yui-navset ul.yui-nav a,
+div.yui-navset div.yui-navset-top ul.yui-nav a {
+	background: #C0C0C0;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-top: #DFDFDF outset 2px;
+	border-bottom: transparent 0;
+}
+
+div.yui-navset ul.yui-nav a:hover,
+div.yui-navset ul.yui-nav a:focus {
+	background: #C0C0C0;
+	border-left: #DFDFDF inset 2px;
+	border-right: #DFDFDF inset 2px;
+	border-top: #DFDFDF inset 2px;
+	border-bottom: transparent 0;
+}
+
+div.yui-navset ul.yui-nav .selected a,
+div.yui-navset ul.yui-nav .selected a:focus,
+div.yui-navset ul.yui-nav .selected a:hover {
+	background: #008484;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-top: #DFDFDF outset 2px;
+	border-bottom: transparent 0;
+}
+
+div.open-menu a {
+	color: black!important;
+	border-color: black!important;
+}
+
+div.page-rate-widget-box {
+	box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0 !important;
+}
+
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel {
+	background-color: #C0C0C0!important;
+	border: #DFDFDF outset 2px !important;
+	border-radius: 0 !important;
+}
+
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+	border: #DFDFDF outset 2px!important;
+}
+
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel a,
+div.page-rate-widget-box span.cancel a:hover {
+	color: #000000;
+}
+
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+	background-color: #C0C0C0!important;
+}
+
+div.page-rate-widget-box span.rateup a,
+div.page-rate-widget-box span.ratedown a {
+	color: #000000!important;
+}
+
+div.page-rate-widget-box span.cancel a:hover,
+div.page-rate-widget-box span.rateup a:hover,
+div.page-rate-widget-box span.ratedown a:hover {
+	background: transparent!important;
+	color: #008484!important;
+}
+
+
+/* Info Pane */
+
+.rate-box-with-credit-button {
+	background-color: #C0C0C0!important;
+	border: #DFDFDF outset 2px !important;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2) !important;
+	border-radius: 0 !important;
+}
+
+.rate-box-with-credit-button .fa-info {
+	border: transparent 0px !important;
+	border-radius: 0 !important;
+	color: #000000 !important;
+}
+
+.rate-box-with-credit-button .fa-info:hover {
+	background: transparent!important;
+	color: #008484!important;
+}
+
+.rate-box-with-credit-button .cancel {
+	border: #DFDFDF outset 2px !important;
+}
+
+.close-credits,
+.credit-back {
+	filter: hue-rotate(288deg);
+}
+
+.modalbox{
+    background: #fff !important;
+    border: #000 solid 1px !important;
+    border-radius: 0px !important;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+#side-bar a:visited,
+#top-bar a,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a,
+#login-status ul a:hover {
+	color: #800080;
+}
+
+#page-title {
+	color: #000084;
+}
+
+#login-status,
+#login-status a {
+	color: white;
+}
+
+table.wiki-content-table td {
+	border: 1px solid #000;
+	background-color: #FFFFFF;
+}
+
+table.wiki-content-table th {
+	border: 1px solid #000;
+	background-color: #DFDFDF;
+}
+
+@media (max-width: 767px) {
+	#side-bar {
+		background-color: #C0C0C0;
+	}
+}
+
+.side-block .menu-item>.image {
+	filter: hue-rotate(250deg);
+}
+
+#footer {
+	background: transparent;
+}
+
+#search-top-box-input,
+#search-top-box-input:hover,
+#search-top-box-input:focus,
+#search-top-box-form input[type=submit],
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+	border: #DFDFDF outset 2px;
+	background: #C0C0C0;
+	box-shadow: none;
+	border-radius: 0;
+	color: #000000;
+}
+
+#search-top-box input.empty {
+	color: #8b8b8b;
+}
+
+hr {
+	margin: 1em 2em;
+	padding: 0;
+	height: 0;
+	border-top: #F0F0F0 groove 2px;
+	/*color: #555545;*/
+	/*background-color: #555545;*/
+}
+
+#header h1 span {
+	font-family: "Microsoft Sans Serif", "宋体";
+	color: #ffffff;
+	text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+#header h2 span::before {
+	font-family: "Microsoft Sans Serif", "宋体";
+	content: '安保的新千年';
+	color: #ffffff;
+	text-shadow: none;
+}
+
+#header h1 a,
+#header h2 span {
+	color: transparent;
+	text-shadow: none;
+}
+
+.scp-image-block.block-right {
+	margin: 0 2em 1em;
+}
+
 .code {
-  background-color: rgb(var(--light-gray-monochrome)) !important;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+	padding: 3px;
+	margin: 0.2em 0;
+	overflow: auto;
 }
-iframe.scpnet-interwiki-frame {
-        filter: invert(0.8) saturate(0.25) hue-rotate(50deg);
-}
-@media only screen and (max-width: 768px) {
-    #header h1 a,
-    #header h2 span {
-        margin-left: 7.75rem;
-        margin-top: 0.35em;
-    }
 
-    #header h1 a {
-        line-height: 1;
-    }
+.interwiki {
+	font-family: "Microsoft Sans Serif", "宋体";
+	background-color: #C0C0C0;
+	border: #DFDFDF outset 2px;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+}
 
-    #header h2 span {
-        margin-top: -webkit-calc(5.5rem + var(--offset-from-page-top));
-        margin-top: calc(5.5rem + var(--offset-from-page-top));
-    }
-}
-#header {
-    filter: drop-shadow(.042rem .042rem .042rem rgb(150,150,150));
-}
-@media only screen and (max-width: 768px) {
-    #header {
-        background-position: calc(7.4rem - var(--size)) calc(((var(--size) * -1) + 7.5rem + var(--y-offset)) / 2);
-    }
+#top-bar ul li ul {
+    border: solid 1px #000;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
 }

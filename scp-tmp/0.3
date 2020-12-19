@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>Noir Box 的提案 - SCP基金会</title>
+    <title>自动化无源记忆删除系统 Ver.17.09 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "jack-ike-s-proposal-ii";
-        OZONE.request.timestamp = 1608384678;
+        WIKIREQUEST.info.requestPageName = "apas";
+        OZONE.request.timestamp = 1608407266;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "jack-ike-s-proposal-ii";
-        WIKIREQUEST.info.pageId = 930580551;
+                WIKIREQUEST.info.pageUnixName = "apas";
+        WIKIREQUEST.info.pageId = 1035263844;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,19 +117,197 @@
     </script>
         
 <style>
-.customlink a{
-    color: #90ff00;
-.bblock:hover {color: #00FF00;}
-.bblock a {
-    color: #000000;
-    text-decoration: none;
-    background: transparent;
+/* Centered breadcrumbs */
+#breadcrumbs{
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 4px;
 }
-.bblock a:hover {
-    color: #00FF00;
-    text-decoration: underline;
-    background: transparent;
+
+/* Bold breadcrumbs */
+#breadcrumbs a {
+  font-weight: bold;
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extended SCP page bottom */
+.footer-wikiwalk-nav {
+  margin-top: 100px;
+}
+
+/* Centered title */
+#page-title {
+  display: block;
+  text-align: center;
+}
+
+/* Content warning box */
+.warning {
+  border: double 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: inline-block;
+  width: 75%;
+}
+.warning a.collapsible-block-link {
+  font-weight: bold;
+}
+/* Hidden footnotes */
+.footnotes-footer {
+  display: none;
+}
+
+/* Extended bottom rating module */
+.page-rate-widget-box {
+  margin-bottom: 25px;
+}
+
+.rateBox {
+  margin-bottom: 20px;
+}
+
+/* Green terminal */
+.terminal {
+  border: solid 3px #BBBBBB;
+  border-radius: 16px;
+  background-color: #131;
+/* black shadow at the top of the terminal */
+  background-image: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+/* shadow around the terminal */
+  box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+  overflow: hidden;
+  color: rgba(128,255,128,0.8);
+  padding: 2em;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+.terminal blockquote {
+  background-color: black;
+  border: double 3px #80FF80;
+}
+
+.terminal a {
+  color: #90EE90;
+  text-decoration: none;
+  background: transparent;
+}
+.terminal a:hover, .terminal .green-header {
+  color: #131;
+  text-decoration: underline;
+  background-color: #80FF80;
+  padding: 1px;
+}
+.terminal .green-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.terminal a:hover::before {
+  content: "> ";
+}
+.terminal blockquote a:hover {
+  word-break: break-all;
+}
+.terminal .collapsible-block-link, .terminal .collapsible-block-unfolded-link, .terminal .collapsible-block-folded {
+  text-align: center;
+  font-weight: bold;
+}
+.terminal .collapsible-block-link:hover::before, .terminal .collapsible-block-unfolded-link:hover::before, .terminal .collapsible-block-folded:hover::before {
+  content: none;
+}
+
+/* What is APAS? */
+.fake-blockquote a {
+  color: #b01;
+}
+.fake-blockquote a.visited {
+  color: #824;
+}
+.fake-blockquote a:hover {
+  color: #b01;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: initial;
+}
+.fake-blockquote a.visited:hover {
+  color: #824;
+}
+.fake-blockquote a:hover::before {
+  content: none;
+}
+.fake-blockquote a:hover {
+  word-break: initial;
+}
+
+/* Secret text stuff */
+.hover {
+  color: black;
+}
+.hover .hover-text {
+   position: absolute;
+   display: none;
+   margin: 20px 0px;
+   height: auto;
+   width: auto;
+   background: white;
+   border: 1px solid black;
+   color: black;
+   padding: 0.5em;
+}
+.hover:hover {
+  text-decoration: none;
+  border-bottom: none;
+  color: blue;
+}
+.hover:hover .hover-text {
+  display: inline;
+}
+
+/* MDP table fixes */
+.first-table th:nth-child(1) {
+  width: 20%;
+}
+.first-table td:nth-child(1), .second-table td:nth-child(1), .second-table td:nth-child(2) {
+  text-align: center;
+}
+
+/* LOGO */
+div#header {
+background-image: url(http://scp-wiki.wdfiles.com/local--files/site-17-hub/header17);
+}
+
+/* 头部 */
+div#header h1 a span {
+font-size: 0px;
+}
+div#header h1 a:before {
+content: "Site-17数据库";
+color: #eee;
+
+}
+div#header h2 span {
+font-size:0px;
+padding: 4px;
+}
+div#header h2:after {
+content: "活过我们的终结";
+font-weight: bold;
+color: #f0f0c0;
+padding: 19px 0;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+white-space: pre;
+}
+</style>
+<style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -479,7 +657,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=jack-ike-s-proposal-ii" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=apas" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -501,13 +679,13 @@
                     
                     
                         <div id="page-title">
-                            Noir Box 的提案
+                            自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
                     
                         <div id="breadcrumbs">
-                            <a href="/scp-001">SCP-001</a> &raquo; Noir Box 的提案
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/site-17-hub">Site-17 深井目录</a> &raquo; 自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
@@ -520,23 +698,173 @@
 
 
 
+
+
+
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+<div style="text-align: center;">
+<h1 id="toc0"><span>自动化无源记忆删除系统 Ver.17.09</span></h1>
+<p><strong><a href="http://scpper.com/page/789889960">scpper上的作者</a> <span style="color: grey">|</span> <a href="http://scpexplained.wikidot.com/apas">解释</a></strong></p>
+</div>
+<hr />
+<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>，现在建了<strong><a class="newpage" href="/nagiros">一个作者页</a></strong>.</p>
+<p><strong>感谢：</strong></p>
+<ul>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>，他写了对我非常有帮助的<a href="http://scp-wiki-cn.wikidot.com/listpages-magic-and-you">Listpages 魔法与你</a>这篇指导。</li>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4780073&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="calamitous1" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4780073)" /></a><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;">calamitous1</a></span>，他在<a href="http://scp-wiki.wikidot.com/forum/t-11168832/tale:site-wide-behavioral-control#post-4220273">草稿与批判</a>里给我的作品进行了点评。</li>
+</ul>
+<hr />
+<p><strong>图像使用权限：</strong></p>
+<ul>
+<li>文件名“dro-0001”来自于<a href="https://www.flickr.com/photos/nve/8733992389/">NVE的Flickr</a>，那里所有的照片都有cc协议。</li>
+</ul>
+<hr />
+<p><strong>你也可能喜欢的东西：</strong><span style="font-size:75%;">对于这篇文章来说，更像是我“把格式割裂了的东西”。</span></p>
+<ul>
+<li><a href="/scp-2798">SCP-2798</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2203795&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Kalinin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2203795)" /></a><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;">Kalinin</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/tanhony-s-proposal">SCP-001 - 死人</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=776854&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Tanhony" style="background-image:url(http://www.wikidot.com/userkarma.php?u=776854)" /></a><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;">Tanhony</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/scp-3942">未定义</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1618170&amp;amp;size=small&amp;amp;timestamp=1604559823" alt="Jack Ike" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1618170)" /></a><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;">Jack Ike</a></span></li>
+</ul>
+<hr />
+<p>多谢了，大家！</p>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="customlink" style="border:solid 1px #808080; background:#000000; color:#00FF00; padding:5px; margin-bottom: 10px;">
-<p>错误：发现多个文件！请联系系统管理员。<br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">-rwx2r---&#32;O/001&#32;1&#32;KB&#32;1970&#32;年&#32;01&#32;月&#32;01&#32;日</span> <a href="http://scp-wiki-cn.wikidot.com/jack-ike-s-proposal-ii/offset/1">SCP-001（凯撒憎恶 · HATED CAESAR）</a><br />
-<span style="white-space: pre-wrap;">-rwx2r---&#32;O/001&#32;1&#32;KB&#32;1970&#32;年&#32;01&#32;月&#32;01&#32;日</span> <a href="http://scp-wiki-cn.wikidot.com/jack-ike-s-proposal-ii/offset/2">SCP-001（领主谴责 · OVERLORD CENSURE）</a><br />
-<span style="white-space: pre-wrap;">-rwx2r---&#32;O/001&#32;1&#32;KB&#32;1970&#32;年&#32;01&#32;月&#32;01&#32;日</span> <a href="http://scp-wiki-cn.wikidot.com/jack-ike-s-proposal-ii/offset/3">SCP-001（压抑拒绝 · OPPRESS WITHHOLD）</a><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<a href="http://scp-wiki-cn.wikidot.com/jack-ike-s-proposal-ii/offset/0">返回上层</a></p>
+<div style="text-align: center;">
+<div class="warning">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">[+]&nbsp;内容警告</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;内容警告</a></div>
+<div class="collapsible-block-content">
+<p><span style="font-size:110%;"><strong>作者的话：</strong></span>下文包含了一些关于失败者，虐待与制度性煤气灯效应的讨论。</p>
+<p>按你自己的节奏去读，想读多少读多少。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="terminal">
+<div style="text-align: center;">
+<p><span style="font-size:120%;"><span class="green-header"><span style="text-decoration: underline;">终端016</span></span></span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">------</span></p>
+<p>欢迎，站点主管Weathers</p>
+<p><span style="white-space: pre-wrap;">------</span></p>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">通风系统</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>在线</strong></th>
+</tr>
+</table>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">Galileo.aic</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>在线</strong></th>
+</tr>
+</table>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">Indomitable.aic</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>在线</strong></th>
+</tr>
+</table>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">电磁触媒</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>在线</strong></th>
+</tr>
+</table>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">地震活动</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>N/A</strong></th>
+</tr>
+</table>
+<table>
+<tr>
+<th style="float: left; white-space: nowrap; padding-right: 5px;">Omega-09</th>
+<th style="background:url('https://i.imgur.com/D8UeRYC.png') repeat-x bottom; width: 100%;"></th>
+<th style="float: right; white-space: nowrap; padding-left: 5px;"><strong>已停止</strong></th>
+</tr>
+</table>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>您目前安装于<strong>Site-17</strong>的<span class="ruby">自动化无源记忆删除系统<span class="rt">Automated Passive Amnestization System</span></span>（APAS）为最新版本，系统全部上线。请问您要执行什么操作？</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<blockquote>
+<p><a href="/apas/offset/1">存取 APAS 版本09？</a></p>
+</blockquote>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<div style="text-align: center;">
+<p><span style="white-space: pre-wrap;">------</span></p>
+</div>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">[+]&nbsp;存取&nbsp;Site-17内APAS启用记录？&nbsp;[+]</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+<div class="collapsible-block-content">
+<blockquote>
+<p><a href="/apas/offset/2">紧急启动：通过站点内通风系统散布记忆删除药剂</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/4">紧急启动：模因传播程序</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/3">紧急启动：对电磁设备的校正</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/0">返回 启动屏幕</a></p>
+</blockquote>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+</div>
+</div>
+<div style="text-align: center;">
+<p><span style="white-space: pre-wrap;">------</span></p>
+</div>
 </div>
 </div>
     
     
     
     </div>
+<div style="height: 100px"></div>
+
                     </div>
 
                             
@@ -564,7 +892,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/001%E6%8F%90%E6%A1%88#pages">001提案</a><a href="/system:page-tags/tag/k%E7%BA%A7%E6%83%85%E6%99%AF#pages">k级情景</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/the-administrator#pages">the-administrator</a><a href="/system:page-tags/tag/%E5%BE%AA%E7%8E%AF#pages">循环</a><a href="/system:page-tags/tag/%E6%97%A0%E6%95%88%E5%8C%96#pages">无效化</a><a href="/system:page-tags/tag/%E6%97%B6%E9%97%B4%E5%BD%B1%E5%93%8D#pages">时间影响</a><a href="/system:page-tags/tag/%E6%9C%AA%E6%9D%A5#pages">未来</a><a href="/system:page-tags/tag/%E8%B6%85%E7%BB%B4%E5%BA%A6#pages">超维度</a><a href="/system:page-tags/tag/%E9%A2%84%E6%B5%8B%E6%80%A7#pages">预测性</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%B7%B1%E4%BA%95%E7%9B%AE%E5%BD%95#pages">深井目录</a>
                             </span>
                         </div>
                     
@@ -572,12 +900,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 3, 最后编辑于: <span class="odate time_1578201208 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">05 Jan 2020 05:13</span></div>
+                            <div id="page-info">页面版本: 9, 最后编辑于: <span class="odate time_1601618791 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Oct 2020 06:06</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+13</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-12777283/jack-ike-s-proposal-ii" class="btn btn-default" id="discuss-button">讨论 (20)</a>
+<a href="/forum/t-13298810/apas" class="btn btn-default" id="discuss-button">讨论 (7)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -644,45 +972,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ten-sb.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ten-sb.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://eldritch00.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/eldritch00.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ten-sb.wikidot.com">The Employment Network of SB</a></h3>
+            <h3><a target="_blank" href="http://eldritch00.wikidot.com">A Shining Brainless Beacon</a></h3>
             <div class="desc">          
-              &quot;Don&#039;t Just Find A Job...Get a Job!!!&quot;
+              I Have a Special Plan for This World
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://bzhlab.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bzhlab.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.wikidot.com">Wikidot - Free and Pro Wiki Hosting</a></h3>
+            <h3><a target="_blank" href="http://bzhlab.wikidot.com">BZHLab</a></h3>
             <div class="desc">          
-              your place on the web
+              Makers goes west!
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sandboxscpfr.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sandboxscpfr.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://f650cs.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/f650cs.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sandboxscpfr.wikidot.com">SCP Sandbox</a></h3>
+            <h3><a target="_blank" href="http://f650cs.wikidot.com">F650CS FAQ</a></h3>
             <div class="desc">          
-              Réservé aux auteurs et traducteurs du Wiki
+              Alternative / Supplement  to Black Belt Gang FAQ&#039;s for the BMW Scarver
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://mis213-2.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mis213-2.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://morningside-genetics.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/morningside-genetics.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://mis213-2.wikidot.com">MIS 213-2</a></h3>
+            <h3><a target="_blank" href="http://morningside-genetics.wikidot.com">Morningside Genetics</a></h3>
             <div class="desc">          
-              Intro to IS
+              
             </div>
           </div>
         </div>
