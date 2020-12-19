@@ -1,0 +1,2024 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Anomaly Classification System (ACS) Guide - SCP Foundation</title>
+    
+    	<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+    // DEFINE DFP SLOTS
+googletag.defineSlot('/1030917/wikidot_free_sites_bottom_300x250', [300, 250], 'div-gpt-ad-1410946564449-0').addService(googletag.pubads());
+
+// googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs(true, true);
+googletag.pubads().setTargeting("w_name", "scp-wiki");
+googletag.pubads().setTargeting("w_domain", "com.scpwiki.www");
+googletag.pubads().setTargeting("w_verified", "true");
+if(null){googletag.pubads().setTargeting("w_cats", null);}
+if(true){googletag.pubads().setTargeting("w_mn", "true");}
+googletag.enableServices();
+});
+</script>
+<script type="text/javascript" src="http://www.wikidot.com/default__flow/login__CustomDomainScript?site_id=66711"></script>
+
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "www.scpwiki.com";
+        WIKIREQUEST.info.siteId = 66711;
+        WIKIREQUEST.info.siteUnixName = "scp-wiki";
+        WIKIREQUEST.info.categoryId = 370849;
+        WIKIREQUEST.info.themeId = 1;
+        WIKIREQUEST.info.requestPageName = "forum:thread";
+        OZONE.request.timestamp = 1608349851;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'en';
+                WIKIREQUEST.info.pageUnixName = "forum:thread";
+        WIKIREQUEST.info.pageId = 107456884;
+                        WIKIREQUEST.info.lang = "en";
+        OZONE.lang = "en";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                            
+        <link rel="canonical" href="/anomaly-classification-system-guide" />
+
+    
+    
+    
+    <meta http-equiv="content-language" content="en"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
+                    @import url(https://scp-wiki.wdfiles.com/local--code/component%3Atheme/1);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+                _gaq.push(['userTracker._setAccount', 'UA-27317769-1']);
+        _gaq.push(['userTracker._trackPageview']);
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="/onesignal/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+<link rel="alternate" type="application/rss+xml" title="Posts in the discussion thread &quot;Anomaly Classification System (ACS) Guide&quot;" href="/feed/forum/t-12364081.xml"/><script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/ForumViewThreadModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/ForumViewThreadPostsModule.js"></script>
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>SCP Foundation</span></a></h1>
+                
+                    <h2><span>Secure, Contain, Protect</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Search this site" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Search"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<div class="top-bar">
+<ul>
+<li>SCP Series
+<ul>
+<li><a href="/scp-series-6">Series VI</a></li>
+<li><a href="/scp-series-5">Series V</a></li>
+<li><a href="/scp-series-5-tales-edition">» Series V Tales</a></li>
+<li><a href="/scp-series-4">Series IV</a></li>
+<li><a href="/scp-series-4-tales-edition">» Series IV Tales</a></li>
+<li><a href="/scp-series-3">Series III</a></li>
+<li><a href="/scp-series-3-tales-edition">» Series III Tales</a></li>
+<li><a href="/scp-series-2">Series II</a></li>
+<li><a href="/scp-series-2-tales-edition">» Series II Tales</a></li>
+<li><a href="/scp-series">Series I</a></li>
+<li><a href="/scp-series-1-tales-edition">» Series I Tales</a></li>
+</ul>
+</li>
+<li>Tales
+<ul>
+<li><a href="/foundation-tales">Foundation Tales</a></li>
+<li><a href="/series-archive">Series Archive</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">Incident Reports</a></li>
+<li><a href="/creepy-pasta">CreepyPasta Archive</a></li>
+</ul>
+</li>
+<li>Library
+<ul>
+<li><a href="/user-curated-lists">User-Curated Lists</a></li>
+<li><a href="/joke-scps">Joke SCPs</a></li>
+<li><a href="/joke-scps-tales-edition">» Joke SCPs Tales</a></li>
+<li><a href="/scp-ex">Explained SCPs</a></li>
+<li><a href="/explained-scps-tales-edition">» Explained SCPs Tales</a></li>
+<li><a href="/goi-formats">GoI Formats</a></li>
+<li><a href="/audio-adaptations">Audio Adaptations</a></li>
+<li><a href="/scp-artwork-hub">SCP Artwork Hub</a></li>
+<li><a href="/contest-archive">Contest Archive</a></li>
+</ul>
+</li>
+<li>Universe
+<ul>
+<li><a href="/canon-hub">Canons</a></li>
+<li><a href="/groups-of-interest">Groups of Interest</a></li>
+<li><a href="/log-of-anomalous-items">Anomalous Items</a></li>
+<li><a href="/log-of-extranormal-events">Extranormal Events</a></li>
+<li><a href="/log-of-unexplained-locations">Unexplained Locations</a></li>
+</ul>
+</li>
+<li>SCP Global
+<ul>
+<li><a href="http://scp-int.wikidot.com">International Translation Archive</a></li>
+<li><a href="http://scp-ru.wikidot.com">Russian Branch(-RU)</a></li>
+<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
+<li><a href="http://scp-wiki-cn.wikidot.com">SCP基金会(-CN)</a></li>
+<li><a href="http://fondationscp.wikidot.com">Fondation SCP(-FR)</a></li>
+<li><a href="http://scp-wiki.net.pl">SCP Polska Filia(-PL)</a></li>
+<li><a href="http://lafundacionscp.wikidot.com">La Fundación SCP(-ES)</a></li>
+<li><a href="http://scp-th.wikidot.com">สถาบัน SCP(-TH)</a></li>
+<li><a href="http://scp-jp.wikidot.com">SCP財団(-JP)</a></li>
+<li><a href="http://scp-wiki-de.wikidot.com">SCP Deutschland(-DE)</a></li>
+<li><a href="http://fondazionescp.wikidot.com">Fondazione SCP(-IT)</a></li>
+<li><a href="http://scp-ukrainian.wikidot.com">Ukrainian Branch(-UA)</a></li>
+<li><a href="http://scp-pt-br.wikidot.com/">Lusófona Branch(-PT/BR)</a></li>
+<li><a href="http://scp-cs.wikidot.com">SCP Nadace(-CZ)</a></li>
+</ul>
+</li>
+<li>Background
+<ul>
+<li><a href="/about-the-scp-foundation">About the Foundation</a></li>
+<li><a href="/object-classes">Object Classes</a></li>
+<li><a href="/personnel-and-character-dossier">Personnel Dossier</a></li>
+<li><a href="/security-clearance-levels">Security &amp; Clearance</a></li>
+<li><a href="/secure-facilities-locations">Secure Facilities</a></li>
+<li><a href="/task-forces">Task Forces</a></li>
+</ul>
+</li>
+<li>Info Pages
+<ul>
+<li><a href="/guide-hub">Guide Hub</a></li>
+<li><a href="/usertools">User Tools</a></li>
+<li><a href="/tag-search">Tag Search</a></li>
+<li><a href="/meet-the-staff">Meet The Staff</a></li>
+<li><a href="/criticism-policy">Criticism Policy</a></li>
+<li><a href="/licensing-guide">Licensing Guide</a></li>
+<li><a href="/image-use-policy">Image Use Policy</a></li>
+<li><a href="/chat-guide">Chat Guidelines</a></li>
+<li><a href="/deletions-guide">Deletions Guidelines</a></li>
+<li><a href="/seminars-hub">Seminars and Workshops</a></li>
+<li><a href="/donations-policy">Donations Policy</a></li>
+<li><a href="/links">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mobile-top-bar">
+<div class="open-menu">
+<p><a href="#side-bar">≡</a></p>
+</div>
+<ul>
+<li>SCPs
+<ul>
+<li><a href="/scp-series-6">Series VI</a></li>
+<li><a href="/scp-series-5">Series V</a></li>
+<li><a href="/scp-series-5-tales-edition">» Series V Tales</a></li>
+<li><a href="/scp-series-4">Series IV</a></li>
+<li><a href="/scp-series-4-tales-edition">» Series IV Tales</a></li>
+<li><a href="/scp-series-3">Series III</a></li>
+<li><a href="/scp-series-3-tales-edition">» Series III Tales</a></li>
+<li><a href="/scp-series-2">Series II</a></li>
+<li><a href="/scp-series-2-tales-edition">» Series II Tales</a></li>
+<li><a href="/scp-series">Series I</a></li>
+<li><a href="/scp-series-1-tales-edition">» Series I Tales</a></li>
+</ul>
+</li>
+<li>Tales
+<ul>
+<li><a href="/foundation-tales">Foundation Tales</a></li>
+<li><a href="/series-archive">Series Archive</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">Incident Reports</a></li>
+<li><a href="/creepy-pasta">CreepyPasta Archive</a></li>
+</ul>
+</li>
+<li>Library
+<ul>
+<li><a href="/user-curated-lists">User Curated Lists</a></li>
+<li><a href="/joke-scps">Joke SCPs</a></li>
+<li><a href="/joke-scps-tales-edition">» Joke SCPs Tales</a></li>
+<li><a href="/scp-ex">Explained SCPs</a></li>
+<li><a href="/explained-scps-tales-edition">» Explained SCPs Tales</a></li>
+<li><a href="/goi-formats">GoI Formats</a></li>
+<li><a href="/audio-adaptations">Audio Adaptations</a></li>
+<li><a href="/scp-artwork-hub">Artwork Hub</a></li>
+<li><a href="/contest-archive">Contest Archive</a></li>
+</ul>
+</li>
+<li>Universe
+<ul>
+<li><a href="/canon-hub">Canon Hub</a></li>
+<li><a href="/groups-of-interest">GoIs</a></li>
+<li><a href="/log-of-anomalous-items">Anomalous Items</a></li>
+<li><a href="/log-of-extranormal-events">Extranormal Events</a></li>
+<li><a href="/log-of-unexplained-locations">Unexplained Locations</a></li>
+<li><a href="/object-classes">Object Classes</a></li>
+<li><a href="/personnel-and-character-dossier">Personnel Dossier</a></li>
+<li><a href="/security-clearance-levels">Security &amp; Clearance</a></li>
+<li><a href="/secure-facilities-locations">Secure Facilities</a></li>
+<li><a href="/task-forces">Task Forces</a></li>
+</ul>
+</li>
+<li>Guides
+<ul>
+<li><a href="/guide-hub">Guide Hub</a></li>
+<li><a href="/guide-for-newbies">Guide for Newbies</a></li>
+<li><a href="/how-to-write-an-scp">How to Write an SCP</a></li>
+<li><a href="/image-use-policy">Image Use Policy</a></li>
+<li><a href="/chat-guide">Chat Guidelines</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/site-rules">Site Rules</a></li>
+<li><a href="/deletions-guide">Deletions Guidelines</a></li>
+<li><a href="/criticism-policy">Criticism Policy</a></li>
+<li><a href="/seminars-hub">Seminars and Workshops</a></li>
+<li><a href="/links">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Create account</a> <span>or</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Sign in</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<div class="side-block media" style="padding: 10px 0;">
+<div style="text-align: center;"><a href="http://scp-foundation.deviantart.com"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-deviantart.png" alt="SCP DeviantArt" class="image" /></a><a href="https://www.facebook.com/scpfoundation"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-facebook.png" alt="Facebook" class="image" /></a><a href="https://twitter.com/scpwiki"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-twitter.png" alt="Twitter" class="image" /></a><a href="http://www.reddit.com/r/SCP"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-reddit.png" alt="Reddit" class="image" /></a><a href="http://scp-wiki-official.tumblr.com"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-tumblr.png" alt="Tumblr" class="image" /></a><a href="https://www.instagram.com/scpfoundationwiki"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-instagram.png" alt="Instagram" class="image" /></a><a href="https://www.twitch.tv/scpwiki"><img src="https://scp-wiki.wdfiles.com/local--files/nav:side/social-twitch.png" alt="Twitch" class="image" /></a></div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<div class="side-block">
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">Main</a></div>
+<div class="heading">
+<p>SCP by Series</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
+<div class="heading">
+<p>SCP Tales by Series</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
+<div class="heading">
+<p>SCP Library</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">Tales</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">Canons</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">International SCP Hub</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI Formats</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-ex">Explained SCPs</a></div>
+<div class="heading">
+<p>Discover Content</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages-this-month">Top Rated New Pages</a></div>
+<div class="menu-item sub-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/new-pages-feed">Newly Created Pages</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">Random SCP</a> | <a href="/random:random-tale">Tale</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:recent-changes">Recent Changes</a> | <a href="/most-recently-edited">Edits</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">Lowest Rated Pages</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/guide-hub">Guides &amp; Essays</a></div>
+<div class="menu-item sub-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/contribute">Contribute</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/young-and-under-30">Underread &amp; Underrated</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/seminars-hub">Seminars &amp; Workshops</a></div>
+<div class="heading">
+<p>SCP Community</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">Site Rules</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">Join the Site!</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">Forum</a> | <a href="/forum:recent-posts">New Posts</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/chat-guide">Chat With Us!</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/authors-pages">Authors' Pages</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/news">Site News Hub</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://05command.wikidot.com/staff-policy-hub">Policy Hub</a></div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<div class="side-block resources">
+<div class="heading">
+<p>User Resources</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">How to Write an SCP</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">Tag Search</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/usertools">User Tools</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://www.wikidot.com/doc:start">Wiki Syntax</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/sandbox">Sandbox</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command.wikidot.com">Staff Site</a></div>
+<div class="menu-item"><img src="http://scp-wiki.wdfiles.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/contact-staff">Contact Staff</a></div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<a class="close-menu" href="#"><br />
+<img src="http://scp-wiki.wdfiles.com/local--files/nav:side/black.png" style="z-index:-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
+<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><iframe src="https://interwiki.scpdb.org/?wiki=scp-wiki&amp;lang=en&amp;page=forum:thread" align="" frameborder="" height="" scrolling="" width="" class="scpnet-interwiki-frame" style=""></iframe></p>
+</div>
+    
+    
+    
+    </div></div>
+
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title"><a href="/anomaly-classification-system-guide">Anomaly Classification System (ACS) Guide</a> / Discussion</h1></div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+
+<div class="forum-thread-box "> 
+	<div  class="forum-breadcrumbs">
+		<a href="/forum/start">Forum</a>
+        &raquo; <a href="/forum/c-50742/per-page-discussions">Per Page Discussions / Per page discussions</a>
+		&raquo; Anomaly Classification System (ACS) Guide
+	</div>
+	
+	<div class="description-block well">
+		<div class="statistics">
+			Started by: <span class="printuser">Wikidot</span><br/>
+			Date:  <span class="odate time_1566321842 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:24</span><br/>
+			Number of posts: 95<br/>
+			<span class="rss-icon"><img src="http://www.wikidot.com/common--theme/base/images/feed/feed-icon-14x14.png" alt="rss icon"/></span>
+			RSS: <a href="/feed/forum/t-12364081.xml">New posts</a>
+		</div>
+					This is the discussion related to the wiki page			<a href="/anomaly-classification-system-guide">Anomaly Classification System (ACS) Guide</a>.
+				
+	</div>
+	
+	<div class="options">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.unfoldAll(event)" class="btn btn-default btn-small btn-sm">Unfold All</a> 
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.foldAll(event)" class="btn btn-default btn-small btn-sm">Fold All</a>
+		<a href="javascript:;" id="thread-toggle-options" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)" class="btn btn-default btn-small btn-sm"><i class="icon-plus"></i> More Options</a>
+	</div>
+	<div id="thread-options-2" class="options" style="display: none">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.editThreadBlock(event)" class="btn btn-default btn-small btn-sm">Lock Thread</a>
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.moveThread(event)" class="btn btn-default btn-small btn-sm">Move Thread</a>
+			</div>
+	
+	<div id="thread-action-area" class="action-area well" style="display: none"></div>
+
+    <div id="thread-container" class="thread-container">
+        <div id="thread-container-posts" style="display: none">
+            
+
+<div class="pager"><span class="pager-no">page 1 of 5</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(3)">3</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(4)">4</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(5)">5</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">next &raquo;</a></span></div>
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335833">
+                      
+		<div class="post" id="post-4335833">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335833)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335833">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4187885&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Rounderhouse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4187885)"/></a><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;" >Rounderhouse</a></span> <span class="odate time_1566321871 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:24</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335833">
+									
+
+<p>this is it chief</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335833)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335833)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335833" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335833)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335833)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4187885&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Rounderhouse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4187885)"/></a><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;" >Rounderhouse</a></span>, <span class="odate time_1566321871 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:24</span>
+		</div>
+	</div>
+ 
+                
+                	
+
+
+        
+                      
+    <div class="post-container" id="fpc-4335857">
+                      
+		<div class="post" id="post-4335857">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335857)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335857">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566322978 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335857">
+									
+
+<p>Yea yea yea.</p>
+<p>Here it be, my dood</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335857)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335857)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335857" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335857)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335857)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566322978 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335840">
+                      
+		<div class="post" id="post-4335840">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335840)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335840">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ihp" onclick="WIKIDOT.page.listeners.userInfo(1267048); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1267048&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Ihp" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1267048)"/></a><a href="http://www.wikidot.com/user:info/ihp" onclick="WIKIDOT.page.listeners.userInfo(1267048); return false;" >Ihp</a></span> <span class="odate time_1566322261 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:31</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335840">
+									
+
+<p>If a piece of formatting needs three different pages explaining and/or justifying its use and existence, maybe it shouldn't exist.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335840)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335840)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335840" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335840)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335840)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ihp" onclick="WIKIDOT.page.listeners.userInfo(1267048); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1267048&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Ihp" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1267048)"/></a><a href="http://www.wikidot.com/user:info/ihp" onclick="WIKIDOT.page.listeners.userInfo(1267048); return false;" >Ihp</a></span>, <span class="odate time_1566322261 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:31</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335848">
+                      
+		<div class="post" id="post-4335848">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335848)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335848">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1888434&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="djkaktus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1888434)"/></a><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;" >djkaktus</a></span> <span class="odate time_1566322632 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:37</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335848">
+									
+
+<p>It's unfortunate that you've chosen to be this demeaning and unkind about this. I certainly hope nobody ever treats you this way.</p>
+<p>But, since you brought it up:</p>
+<ul>
+<li>the first page was the actual module page,</li>
+<li>the second page was a fun in-universe doc to introduce people to this thing we were doing,</li>
+<li>the third page (this one!) is a more in-depth clarification document that a lot of people have asked for.</li>
+</ul>
+<p>Your comment here is unhelpful and unproductive, and I fail to see any reason other than spite that you would've made it. It's just not very cool my guy.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335848)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335848)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335848" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335848)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335848)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1888434&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="djkaktus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1888434)"/></a><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;" >djkaktus</a></span>, <span class="odate time_1566322632 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:37</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4561699">
+                      
+		<div class="post" id="post-4561699">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4561699)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4561699">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-bread-man-man" onclick="WIKIDOT.page.listeners.userInfo(6047179); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6047179&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="The Bread Man Man" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6047179)"/></a><a href="http://www.wikidot.com/user:info/the-bread-man-man" onclick="WIKIDOT.page.listeners.userInfo(6047179); return false;" >The Bread Man Man</a></span> <span class="odate time_1584998108 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2020 21:15</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4561699">
+									
+
+<p>What were the previous pages, sorry got here from google while trying to classify a skip I'm working on (great work by the way!)</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4561699)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4561699)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4561699" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4561699)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4561699)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-bread-man-man" onclick="WIKIDOT.page.listeners.userInfo(6047179); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6047179&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="The Bread Man Man" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6047179)"/></a><a href="http://www.wikidot.com/user:info/the-bread-man-man" onclick="WIKIDOT.page.listeners.userInfo(6047179); return false;" >The Bread Man Man</a></span>, <span class="odate time_1584998108 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2020 21:15</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4561709">
+                      
+		<div class="post" id="post-4561709">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4561709)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4561709">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/barredowl" onclick="WIKIDOT.page.listeners.userInfo(6001754); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6001754&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="barredowl" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6001754)"/></a><a href="http://www.wikidot.com/user:info/barredowl" onclick="WIKIDOT.page.listeners.userInfo(6001754); return false;" >barredowl</a></span> <span class="odate time_1584998702 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2020 21:25</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4561709">
+									
+
+<p>The first page is <a href="http://scp-wiki.wikidot.com/component:anomaly-class-bar">this</a> component template, and the second page is <a href="http://scp-wiki.wikidot.com/classification-committee-memo">this</a> in-universe memo.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4561709)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4561709)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4561709" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4561709)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4561709)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/barredowl" onclick="WIKIDOT.page.listeners.userInfo(6001754); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6001754&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="barredowl" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6001754)"/></a><a href="http://www.wikidot.com/user:info/barredowl" onclick="WIKIDOT.page.listeners.userInfo(6001754); return false;" >barredowl</a></span>, <span class="odate time_1584998702 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2020 21:25</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+                      
+    <div class="post-container" id="fpc-4335851">
+                      
+		<div class="post" id="post-4335851">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335851)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335851">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566322787 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:39</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335851">
+									
+
+<p>I honestly do not appreciate this tone and would absolutely never say something like this about anything you've put a lot of work in to.</p>
+<p>I really do not understand why you feel the need to be so antagonistic against this but it seems entirely unreasonable.</p>
+<p>There are only TWO pages describing this system, one that is out-of-universe and one that is in-universe. I will be removing this duplicated information from my component page and linking to this page.</p>
+<p>Thank you.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335851)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335851)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335851" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335851)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335851)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566322787 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:39</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+                      
+    <div class="post-container" id="fpc-4335856">
+                      
+		<div class="post" id="post-4335856">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335856)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335856">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4187885&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Rounderhouse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4187885)"/></a><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;" >Rounderhouse</a></span> <span class="odate time_1566322951 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335856">
+									
+
+<p>In terms of ways to phrase one's thoughts on this, that certainly humps the line between harsh and unnecessarily rude.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335856)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335856)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335856" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335856)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335856)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4187885&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Rounderhouse" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4187885)"/></a><a href="http://www.wikidot.com/user:info/rounderhouse" onclick="WIKIDOT.page.listeners.userInfo(4187885); return false;" >Rounderhouse</a></span>, <span class="odate time_1566322951 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+                      
+    <div class="post-container" id="fpc-4363049">
+                      
+		<div class="post" id="post-4363049">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4363049)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4363049">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/monteparnas" onclick="WIKIDOT.page.listeners.userInfo(2926286); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=2926286&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Monteparnas" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2926286)"/></a><a href="http://www.wikidot.com/user:info/monteparnas" onclick="WIKIDOT.page.listeners.userInfo(2926286); return false;" >Monteparnas</a></span> <span class="odate time_1568444531 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Sep 2019 07:02</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4363049">
+									
+
+<p>If it needed, maybe. But it seems more to benefit from it than needing it.</p>
+<p>On the other side, there are a lot of essays about the standard format, so maybe it shouldn't exist either, by this logic.</p>
+<p>Just on the background menu on the top of the page we have 4 out of 6 pages all about explaining the standard format, and that is just the basic stuff.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4363049)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4363049)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4363049" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4363049)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4363049)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/monteparnas" onclick="WIKIDOT.page.listeners.userInfo(2926286); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=2926286&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Monteparnas" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2926286)"/></a><a href="http://www.wikidot.com/user:info/monteparnas" onclick="WIKIDOT.page.listeners.userInfo(2926286); return false;" >Monteparnas</a></span>, <span class="odate time_1568444531 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Sep 2019 07:02</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335842">
+                      
+		<div class="post" id="post-4335842">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335842)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335842">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5028224&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Crashington" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5028224)"/></a><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;" >Crashington</a></span> <span class="odate time_1566322333 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:32</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335842">
+									
+
+<p>I don't think the look of this fits my headcanon for foundation documents and I do not see myself using these anytime soon either way.</p>
+<p>That said, the work put into this is great, detached from my headcanon the icons look very pleasing, and I am a sucker for this from a lore point of view. +1</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335842)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335842)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335842" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335842)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335842)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5028224&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Crashington" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5028224)"/></a><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;" >Crashington</a></span>, <span class="odate time_1566322333 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:32</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335854">
+                      
+		<div class="post" id="post-4335854">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335854)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335854">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566322901 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:41</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335854">
+									
+
+<p>Thank you! I definitely understand not using in if it doesn't fit your headcanon.</p>
+<p>Regardless, I appreciate the kind words! :)</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335854)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335854)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335854" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335854)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335854)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566322901 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:41</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+                      
+    <div class="post-container" id="fpc-4335958">
+                      
+		<div class="post" id="post-4335958">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335958)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335958">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1895233&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="MarqFJA87" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1895233)"/></a><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;" >MarqFJA87</a></span> <span class="odate time_1566330167 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:42</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335958">
+									
+
+<p>Putting aside my personal opinion on the page, I think that even if it doesn't fit anyone's headcanon, it provides a good template and maybe even a good starting point for anyone who wants to devise an SCP classification system that actually looks like something an organization like the Foundation would use.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335958)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335958)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335958" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335958)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335958)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1895233&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="MarqFJA87" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1895233)"/></a><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;" >MarqFJA87</a></span>, <span class="odate time_1566330167 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:42</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335845">
+                      
+		<div class="post" id="post-4335845">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335845)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335845">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566322377 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:32</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335845">
+									
+
+<p>In retrospect, this is something I really should have had ready to post along with Kaktus' post, but better late than never!</p>
+<p>Please leave feedback here! I appreciate all well reasoned and meaningful critique :]</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335845)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335845)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335845" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335845)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335845)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566322377 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:32</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335855">
+                      
+		<div class="post" id="post-4335855">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335855)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335855">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3487700&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Uncle Nicolini" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3487700)"/></a><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;" >Uncle Nicolini</a></span> <span class="odate time_1566322944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335855">
+									
+
+<p>Today I learned 'Cosmic Top Secret' is not only a thing, but it's used by NATO too.</p>
+<p>I guess truth is stranger than fiction sometimes.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335855)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335855)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335855" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335855)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335855)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3487700&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Uncle Nicolini" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3487700)"/></a><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;" >Uncle Nicolini</a></span>, <span class="odate time_1566322944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:42</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335960">
+                      
+		<div class="post" id="post-4335960">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335960)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335960">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1895233&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="MarqFJA87" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1895233)"/></a><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;" >MarqFJA87</a></span> <span class="odate time_1566330284 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:44</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335960">
+									
+
+<p>I suspect that NATO is using &quot;cosmic&quot; in the sense of &quot;infinitely or inconcievably extended; vast&quot; (because yes, that's an actual possible meaning of the word that I didn't know it had).</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335960)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335960)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335960" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335960)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335960)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1895233&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="MarqFJA87" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1895233)"/></a><a href="http://www.wikidot.com/user:info/marqfja87" onclick="WIKIDOT.page.listeners.userInfo(1895233); return false;" >MarqFJA87</a></span>, <span class="odate time_1566330284 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:44</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335870">
+                      
+		<div class="post" id="post-4335870">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335870)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335870">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rattles" onclick="WIKIDOT.page.listeners.userInfo(4377609); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4377609&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="rattles" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4377609)"/></a><a href="http://www.wikidot.com/user:info/rattles" onclick="WIKIDOT.page.listeners.userInfo(4377609); return false;" >rattles</a></span> <span class="odate time_1566323666 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:54</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335870">
+									
+
+<p>Debate to be rehashed in this thread in 3, 2&#8230;</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335870)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335870)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335870" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335870)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335870)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rattles" onclick="WIKIDOT.page.listeners.userInfo(4377609); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4377609&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="rattles" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4377609)"/></a><a href="http://www.wikidot.com/user:info/rattles" onclick="WIKIDOT.page.listeners.userInfo(4377609); return false;" >rattles</a></span>, <span class="odate time_1566323666 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 17:54</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335879">
+                      
+		<div class="post" id="post-4335879">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335879)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335879">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735419&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Lt Flops" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735419)"/></a><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;" >Lt Flops</a></span> <span class="odate time_1566324224 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:03</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335879">
+									
+
+<p>Now that there are <em>textual</em> examples of this? Yeah, I'm on-board.</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><a href="http://www.scpwiki.com/floppyphoenix">http://www.scpwiki.com/floppyphoenix</a></p>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335879)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335879)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335879" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335879)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335879)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735419&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Lt Flops" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735419)"/></a><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;" >Lt Flops</a></span>, <span class="odate time_1566324224 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:03</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335907">
+                      
+		<div class="post" id="post-4335907">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335907)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335907">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/absentmindednihilist" onclick="WIKIDOT.page.listeners.userInfo(2812984); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=2812984&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="AbsentmindedNihilist" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2812984)"/></a><a href="http://www.wikidot.com/user:info/absentmindednihilist" onclick="WIKIDOT.page.listeners.userInfo(2812984); return false;" >AbsentmindedNihilist</a></span> <span class="odate time_1566326158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:35</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335907">
+									
+
+<p>yes. I'm much more likely to use this now.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335907)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335907)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335907" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335907)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335907)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/absentmindednihilist" onclick="WIKIDOT.page.listeners.userInfo(2812984); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=2812984&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="AbsentmindedNihilist" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2812984)"/></a><a href="http://www.wikidot.com/user:info/absentmindednihilist" onclick="WIKIDOT.page.listeners.userInfo(2812984); return false;" >AbsentmindedNihilist</a></span>, <span class="odate time_1566326158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:35</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335880">
+                      
+		<div class="post" id="post-4335880">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335880)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335880">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ayers" onclick="WIKIDOT.page.listeners.userInfo(1856789); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1856789&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Ayers" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1856789)"/></a><a href="http://www.wikidot.com/user:info/ayers" onclick="WIKIDOT.page.listeners.userInfo(1856789); return false;" >Ayers</a></span> <span class="odate time_1566324374 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:06</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335880">
+									
+
+<p>After some consideration, I've come to like this. It's nice to see a class set for each part of the acronym. I especially like the hybrid examples which deals with all of my previous complaints.</p>
+<p>A few nitpicks:</p>
+<ul>
+<li>I feel like &quot;Disruption&quot; blends into &quot;Risk&quot; near the end. Just because something has affected the entire world wouldn't necessarily mean the Foundation would &quot;declare war&quot; on it&#8212; in fact, at that point it'd probably be easier to deem it consensus reality.</li>
+<li>If Disruption Class is supposed to be related to light, why is &quot;Vlam&quot; blue? Blue is predominantly either a very cold or very hot colour. Having it be the second-weakest of the bunch seems&#8230; out-of-place. I get that there's a colour scheme here but, well, it's just odd to my eye.</li>
+</ul>
+<p>Other than that: real good job on this you guys. This looks slick as hell.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335880)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335880)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335880" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335880)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335880)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ayers" onclick="WIKIDOT.page.listeners.userInfo(1856789); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1856789&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Ayers" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1856789)"/></a><a href="http://www.wikidot.com/user:info/ayers" onclick="WIKIDOT.page.listeners.userInfo(1856789); return false;" >Ayers</a></span>, <span class="odate time_1566324374 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:06</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335942">
+                      
+		<div class="post" id="post-4335942">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335942)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335942">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566329357 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:29</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335942">
+									
+
+<blockquote>
+<p>I feel like &quot;Disruption&quot; blends into &quot;Risk&quot; near the end. Just because something has affected the entire world wouldn't necessarily mean the Foundation would &quot;declare war&quot; on it— in fact, at that point it'd probably be easier to deem it consensus reality.</p>
+</blockquote>
+<p>This is more related to the Anomaly's imminent destruction of the veil and/or normalcy. Essentially, that the anomaly's influence is so far reaching that it <em>is</em> threatening to become the norm. The idea is that the Foundation would find this far and away unacceptable and do everything in their power to stop it.</p>
+<p>Really, this is only if The Foundation is aware that the anomaly has that sort of influence.</p>
+<p>Of course, people are allowed to interpret that as they would like but I wanted to make sure Amida in particular was reserved for specific and dire situations.</p>
+<blockquote>
+<p>If Disruption Class is supposed to be related to light, why is &quot;Vlam&quot; blue?</p>
+</blockquote>
+<p>Pretty much entirely for consistency's sake. I did initially consider making Disruption Class purely based around &quot;warm&quot; colors (Yellow -&gt; Red) but I ultimately decided that consistency was more important.</p>
+<p>Thank you for the kind words as well!</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335942)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335942)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335942" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335942)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335942)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566329357 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:29</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4336027">
+                      
+		<div class="post" id="post-4336027">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4336027)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4336027">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5028224&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Crashington" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5028224)"/></a><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;" >Crashington</a></span> <span class="odate time_1566335419 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 21:10</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4336027">
+									
+
+<p>I am pretty confused why it goes green &gt; blue &gt; yellow instead of blue &gt; green &gt; yellow</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4336027)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4336027)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4336027" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4336027)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4336027)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5028224&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Crashington" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5028224)"/></a><a href="http://www.wikidot.com/user:info/crashington" onclick="WIKIDOT.page.listeners.userInfo(5028224); return false;" >Crashington</a></span>, <span class="odate time_1566335419 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 21:10</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4337262">
+                      
+		<div class="post" id="post-4337262">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4337262)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4337262">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/melissanoma" onclick="WIKIDOT.page.listeners.userInfo(3260593); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3260593&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Melissanoma" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3260593)"/></a><a href="http://www.wikidot.com/user:info/melissanoma" onclick="WIKIDOT.page.listeners.userInfo(3260593); return false;" >Melissanoma</a></span> <span class="odate time_1566453694 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2019 06:01</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4337262">
+									
+
+<p><a href="https://en.wikipedia.org/wiki/Homeland_Security_Advisory_System">Blame US Homeland Security</a>.</p>
+<p>I don't know if that was the reason this color order was chosen, but it was one common (if minor) complaint about the system.</p>
+
+							</div>
+
+								
+							<div class="changes">
+					Last edited on <span class="odate time_1566453856 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2019 06:04</span>
+					by <span class="printuser"><a href="http://www.wikidot.com/user:info/melissanoma" onclick="WIKIDOT.page.listeners.userInfo(3260593); return false;" >Melissanoma</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,4337262)"><i class="icon-plus"></i> Show more</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4337262)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4337262)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4337262" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4337262)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4337262)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/melissanoma" onclick="WIKIDOT.page.listeners.userInfo(3260593); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3260593&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Melissanoma" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3260593)"/></a><a href="http://www.wikidot.com/user:info/melissanoma" onclick="WIKIDOT.page.listeners.userInfo(3260593); return false;" >Melissanoma</a></span>, <span class="odate time_1566453694 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2019 06:01</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4337515">
+                      
+		<div class="post" id="post-4337515">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4337515)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4337515">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566483421 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2019 14:17</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4337515">
+									
+
+<p>Truthfully, I picked Green &gt; Blue &gt; Yellow because I just personally associate Green with the lowest level of something. Really, though, it's entirely arbitrary and I wouldn't blame anyone if they decided to change it for their own article.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4337515)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4337515)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4337515" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4337515)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4337515)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566483421 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Aug 2019 14:17</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335892">
+                      
+		<div class="post" id="post-4335892">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335892)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335892">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pedantique" onclick="WIKIDOT.page.listeners.userInfo(3118444); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3118444&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Pedantique" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3118444)"/></a><a href="http://www.wikidot.com/user:info/pedantique" onclick="WIKIDOT.page.listeners.userInfo(3118444); return false;" >Pedantique</a></span> <span class="odate time_1566325154 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:19</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335892">
+									
+
+<p>I am still mostly ambivalent about the system itself, but I do want to note my appreciation for how much effort you've put in the clarifying everything for readers, especially in this piece. I imagine this all is here to stay for the long term, so the clarifying document will be useful until I actually remember things. God knows when that will be.</p>
+
+							</div>
+
+								
+							<div class="changes">
+					Last edited on <span class="odate time_1566325313 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:21</span>
+					by <span class="printuser"><a href="http://www.wikidot.com/user:info/pedantique" onclick="WIKIDOT.page.listeners.userInfo(3118444); return false;" >Pedantique</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,4335892)"><i class="icon-plus"></i> Show more</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335892)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335892)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335892" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335892)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335892)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pedantique" onclick="WIKIDOT.page.listeners.userInfo(3118444); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3118444&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Pedantique" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3118444)"/></a><a href="http://www.wikidot.com/user:info/pedantique" onclick="WIKIDOT.page.listeners.userInfo(3118444); return false;" >Pedantique</a></span>, <span class="odate time_1566325154 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:19</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4335908">
+                      
+		<div class="post" id="post-4335908">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335908)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335908">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566326255 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:37</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335908">
+									
+
+<p>Thanks! I'm happy to hear that.</p>
+<p>The intent for this is to be used when it is appropriate. I know some authors (like DJKaktus and CadaverCommander) are putting this on all their articles, but I don't expect that to be the norm.</p>
+<p>I'm a big advocate for author choice and I would never create anything that I feel should be forced on anyone. I just hope this makes for some interesting articles in the future! :D</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335908)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335908)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335908" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335908)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335908)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566326255 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:37</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4335911">
+                      
+		<div class="post" id="post-4335911">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335911)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335911">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/thebluehour" onclick="WIKIDOT.page.listeners.userInfo(4078000); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4078000&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="TheBlueHour" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4078000)"/></a><a href="http://www.wikidot.com/user:info/thebluehour" onclick="WIKIDOT.page.listeners.userInfo(4078000); return false;" >TheBlueHour</a></span> <span class="odate time_1566326819 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:46</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335911">
+									
+
+<p>I overall am not really feeling this but I love the risk class. It seems like something the Foundation would need like how we use the Hazard Diamond on real life. If this was just the Containment and Risk class I'd like it more, but having the disruption class to seems unnecessary and provides too much unnecessary information. (Though my main issue is how much space this takes up and how the bright colors contrast horrifically with the website).</p>
+<p>Having said that though I'll updoot just for the new Apollyon object class symbol.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335911)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335911)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335911" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335911)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335911)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/thebluehour" onclick="WIKIDOT.page.listeners.userInfo(4078000); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4078000&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="TheBlueHour" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4078000)"/></a><a href="http://www.wikidot.com/user:info/thebluehour" onclick="WIKIDOT.page.listeners.userInfo(4078000); return false;" >TheBlueHour</a></span>, <span class="odate time_1566326819 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 18:46</span>
+		</div>
+	</div>
+ 
+                
+                	
+
+
+        
+                      
+    <div class="post-container" id="fpc-4335938">
+                      
+		<div class="post" id="post-4335938">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4335938)" class="btn btn-default btn-small btn-sm">Fold</a>
+					</div>
+								<div class="title" id="post-title-4335938">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span> <span class="odate time_1566328978 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:22</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4335938">
+									
+
+<blockquote>
+<p>Having said that though I'll updoot just for the new Apollyon object class symbol.</p>
+</blockquote>
+<p>Pfft, well, I'll take what I can get :p</p>
+<p>On another note, you are more than welcome to just use Containment and Risk classes while ignoring Disruption classes all together. That'd be your choice as an author and I see no issue with it at all.</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4335938)" class="btn btn-primary btn-small btn-sm">Reply</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4335938)" class="btn btn-default btn-small btn-sm">Options</a>
+							</div>
+									
+			<div id="post-options-4335938" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4335938)" c>Unfold</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4335938)"></a> by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=1404096&amp;amp;size=small&amp;amp;timestamp=1608349851" alt="Woedenaz" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1404096)"/></a><a href="http://www.wikidot.com/user:info/woedenaz" onclick="WIKIDOT.page.listeners.userInfo(1404096); return false;" >Woedenaz</a></span>, <span class="odate time_1566328978 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Aug 2019 19:22</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+
+<div class="pager"><span class="pager-no">page 1 of 5</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(3)">3</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(4)">4</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(5)">5</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">next &raquo;</a></span></div>
+        </div>
+    </div>
+
+	<div class="new-post">
+		<a href="javascript:;" id="new-post-button" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.newPost(event,null)" class="btn btn-default">New Post</a>
+	</div>
+	
+	<div style="display:none" id="post-options-template">
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showPermalink(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">Permanent Link</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.editPost(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">Edit</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.deletePost(event,'%POST_ID%')"class="btn btn-danger btn-small btn-sm">Delete</a>
+	</div>
+	
+	<div style="display:none" id="post-options-permalink-template">/forum/t-12364081/anomaly-classification-system-acs-guide#post-</div>
+</div>
+
+<script type="text/javascript">
+	WIKIDOT.forumThreadId = 12364081;
+</script>
+                    </div>
+
+                                    <!-- wikidot_bottom_300x250 -->
+<div id="div-gpt-ad-1410946564449-0" style="display: none" class="wd-adunit wd-adunit-dfp wd-adunit-below_content">
+
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0'); });
+</script>
+</div>
+
+            
+    
+
+                    
+
+
+
+                    
+                        <div class="page-tags">
+                            <span>
+                                <a href="/system:page-tags/tag/forum#pages">forum</a>
+                            </span>
+                        </div>
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">page revision: 7, last edited: <span class="odate time_1605593798 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">17 Nov 2020 06:16</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
+<a href="/forum/t-7588255/forum:thread" class="btn btn-default" id="discuss-button">Discuss (42)</a>
+<a href="javascript:;" class="btn btn-default" id="history-button">History</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Site tools</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Options</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edit Sections</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Append</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edit Meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Watchers</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Backlinks</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Page Source</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Parent</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Lock Page</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Rename</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Delete</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Help</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Terms of Service</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Privacy</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Report a bug</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Flag as objectionable</a>
+</div>
+Powered by <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    Unless otherwise stated, the content of this page is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                <div id="footer-bar">
+  <div>
+     </div>
+  <h2>Other interesting sites</h2>
+  
+  <div class="units">
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://www.nycmush.net">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.nycmush.net/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://www.nycmush.net">NYC: Veil of Shadows</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://sharecokecodes.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sharecokecodes.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://sharecokecodes.wikidot.com">Share Coke Codes</a></h3>
+            <div class="desc">          
+              Sharing happiness by sharing Coke rewards codes.
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://cunefc2.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cunefc2.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://cunefc2.wikidot.com">CUNEF Group C2</a></h3>
+            <div class="desc">          
+              For Your Work, Opinions and Discoveries!
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://wqa.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wqa.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://wqa.wikidot.com">.</a></h3>
+            <div class="desc">          
+              wqa wiki
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Click here to edit contents of this page.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Append content without editing the whole page source.    </div>
+    <div id="history-button-hovertip">
+        Check out how this page has evolved in the past.    </div>
+    <div id="discuss-button-hovertip">
+        If you want to discuss contents of this page - this is the easiest way to do it.    </div>
+    <div id="files-button-hovertip">
+        View and manage file attachments for this page.    </div>
+    <div id="site-tools-button-hovertip">
+        A few useful tools to manage this Site.    </div>
+    <div id="backlinks-button-hovertip">
+        See pages that link to and include this page.    </div>
+    <div id="rename-move-button-hovertip">
+        Change the name (also URL address, possibly the category) of the page.    </div>
+    <div id="view-source-button-hovertip">
+        View wiki source for this page without editing.    </div>
+    <div id="parent-page-button-hovertip">  
+        View/set parent page (used for creating breadcrumbs and structured layout).    </div>
+            <div id="abuse-report-button-hovertip">
+            Notify administrators if there is objectionable content in this page.        </div>
+        <div id="bug-report-button-hovertip">
+            Something does not work as expected? Find out what you can do.        </div>
+        <div id="wikidot-help-button-hovertip">
+            General Wikidot.com documentation and help section.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com Terms of Service - what you can, what you should not etc.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com Privacy Policy.          
+        </div>
+    </div>
+</body>
+</html>

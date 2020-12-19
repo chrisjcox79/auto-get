@@ -1,1 +1,635 @@
-No such page
+/* Black Highlightyear | To The Stars */
+/* 2019 Wikidot Theme */
+/* By Rounderhouse, based off Ad Astra theme by Stormbreath and NatVoltaic*/
+/* Logo licensed under CC BY SA 3.0 */
+/* Header background by NASA, public domain. */
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,800');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+/* All Vars Used */
+
+:root {
+    /* S-CSS-P Integration */
+    /* If you're making a new CSS theme, please include the following three variables at minimum. */
+    --theme-base: "nuscp";
+    /* must be either "nuscp" or "sigma9" */
+    --theme-id: "black-highlightyear-theme";
+    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+    --theme-name: "Black Highlightyear";
+    /* set this to your theme's full name */
+
+    /* Header */
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aad-astra/logo.svg");
+    --header-title: "Ad Astra Per Aspera";
+    --header-subtitle: "循此苦旅直抵群星";
+
+    /* Typefaces */
+    --body-font: "Noto Sans SC", sans-serif;
+    --header-font: 'Russo One', sans-serif;
+    --title-font: 'Exo', sans-serif;
+    --mono-font: "PT Mono", "Andale Mono", "Courier New", Courier, '仿宋', monospace;
+
+    /* Standard Colors */
+    --white-monochrome: 252, 252, 252;
+    /* white */
+    --pale-gray-monochrome: 244, 244, 244;
+    /* v light gray for blockquotes and stuff */
+    --light-gray-monochrome: 170, 170, 170;
+    /* light accent gray for login status */
+    --gray-monochrome: 66, 66, 72;
+    /* gray */
+    --dark-gray-monochrome: 48, 48, 52;
+    /* dark accent gray for sidebar background */
+    --black-monochrome: 12, 12, 12;
+    /* black */
+    --bright-accent: 255, 185, 97;
+    /* gold */
+    --medium-accent: 86, 23, 23;
+    /* maroon */
+    --dark-accent: 36, 65, 103;
+    /* idk */
+    --newpage-color: 221, 102, 17;
+    /* pale orange */
+    --bg: 16, 29, 46;
+    /* background */
+
+    /* Primary Theme Colors */
+    --swatch-background: var(--bg);
+    --swatch-primary: var(--medium-accent);
+    --swatch-primary-darker: var(--bright-accent);
+    --swatch-primary-darkest: var(--bright-accent);
+    /* Primary Text Colors */
+    --swatch-text-dark: transparent;
+    --swatch-text-light: var(--white-monochrome);
+    --swatch-important-text: var(--bright-accent);
+
+    /* Primary Menu Colors */
+    --swatch-menubg-color: var(--bg);
+    --swatch-menubg-light-color: var(--dark-accent);
+    --swatch-menubg-medium-color: var(--dark-accent);
+    --swatch-menubg-medium-dark-color: var(--black-monochrome);
+    --swatch-menubg-dark-color: var(--medium-accent);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--dark-accent);
+    --swatch-menutxt-dark-color: var(--bright-accent);
+    --swatch-menutxt-light-color: var(--bright-accent);
+    --swatch-border-color: var(--bright-accent);
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--bright-accent);
+    --swatch-topmenu-border-color: var(--bright-accent);
+    --swatch-topmenu-bg-color: var(--medium-accent);
+
+    --rating-module-button-color: var(--bright-accent);
+    --rating-module-text-color: var(--bright-accent);
+
+    /* Spacing Measurements */
+
+    --offset-from-page-top: 1.2rem;
+    /* space between the top of the page and the start of the header */
+    --body-width-on-desktop: 44.25rem;
+    --sidebar-width-on-desktop: calc(var(--base-font-size)*19);
+    --sidebar-width-on-mobile: 14rem;
+    --scrollbar-width: 0.5625rem;
+    --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
+    --border-radius-width: 0.0625rem;
+
+    /* Box-Shadow 1px Borders */
+    --box-border-bottom: 0 0.0625rem 0 0 rgb(var(--swatch-border-color));
+    --box-border-top: 0 -0.0625rem 0 0 rgb(var(--swatch-border-color));
+    --box-border-left: -0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+    --box-border-right: 0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+    --box-border-all: 0 0 0 0.0625rem rgb(var(--swatch-border-color));
+
+    /* Sidebar */
+    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+    --sidebar-internal-border-thickness: 0.125rem;
+
+    --background-gradient-color: 36, 38, 114;
+    --background-gradient-distance: 10rem;
+
+    /* Dynamic Font Sizing */
+    /* This set of vars will make the base font size vary with screen width */
+    /* base font size ranges */
+    --unitless-min-font-size: 0.8;
+    --unitless-max-font-size: 1;
+    /* base viewport size ranges */
+    --unitless-min-viewport: 768;
+    --unitless-max-viewport: 900;
+    /* base line height size ranges */
+    --min-lineheight: 1.2;
+    --max-lineheight: 1.5;
+    /* calculating size differences */
+    --font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
+    --lineheight-difference: calc(var(--max-lineheight) - var(--min-lineheight));
+    --viewport-range-difference: calc(var(--unitless-max-viewport) - var(--unitless-min-viewport));
+    --min-viewport-difference: calc(100vw - (var(--unitless-min-viewport) * 1px));
+    /* responsive fluid type formula */
+    --font-calc: calc((var(--unitless-min-font-size) * 1rem) + var(--font-size-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
+    --line-calc: calc(var(--min-lineheight) + var(--lineheight-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
+    /* final values */
+    --base-font-size: var(--font-calc);
+    --base-line-height: var(--line-calc);
+
+    --diagonal-stripes: none;
+}
+
+#skrollr-body {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ablack-highlightyear/hubble.png);
+    background-repeat: repeat-x;
+    background-size: inherit;
+}
+
+body {
+    color: #ccc;
+}
+
+::selection {
+    background: rgba(255, 199, 128,0.5);
+}
+
+#top-bar div.top-bar>ul>li>ul>li>a:before,
+#top-bar div.top-bar>ul>li>ul>li>a:hover:before,
+#top-bar div.top-bar>ul>li>ul>li>ul>li>a:before {
+     background: rgba(var(--dark-accent),1);
+}
+
+html,
+body,
+#side-bar:hover {
+    scrollbar-color: rgb(var(--bright-accent)) rgb(var(--dark-accent));
+}
+
+ ::-webkit-scrollbar,
+#side-bar:hover::-webkit-scrollbar {
+    background-color: rgb(var(--dark-accent));
+}
+
+ ::-webkit-scrollbar-thumb,
+ #side-bar:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--bright-accent));
+}
+
+.scp-image-block .scp-image-caption {
+    font-size: .8em;
+    background-color:rgb(var(--dark-accent));
+    color: rgb(var(--bright-accent));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--bright-accent));
+}
+
+#search-top-box input.empty{
+    background-color:rgb(var(--medium-accent));
+    color: rgb(var(--bright-accent));
+}
+
+#search-top-box-input, #search-top-box-input {
+    background: rgb(var(--medium-accent));
+}
+
+span.printuser {
+    color: rgb(var(--bright-accent));
+}
+
+span.h-span {
+    color: #ffb961;
+    font-weight: bold;
+    word-break: unset;
+}
+
+#page-title {
+    border-color: rgb(var(--bright-accent));
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: rgb(var(--bright-accent));
+}
+
+#lock-info {
+    background-color: rgb(var(--medium-accent));
+    border: 3px double rgb(var(--bright-accent));
+    color: rgb(var(--bright-accent));
+}
+
+div#page-options-bottom-2 > a, div#page-optionssea-bottom > a, div#page-options-bottom > a, div#page-optionssea-bottom > a {
+    border: .125rem solid rgba(var(--swatch-primary-darkest),1);
+    background-color: rgba(var(--swatch-menubg-dark-color),1);
+    color: rgb(var(--bright-accent));
+}
+
+div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:hover, div#page-options-bottom > a:hover, div#page-options-bottom > a:hover {
+    border: .125rem solid rgba(var(--swatch-menubg-dark-color),1);
+    background-color: rgba(var(--swatch-primary-darkest),1);
+    color: rgb(var(--medium-accent));
+}
+
+@media only screen and (max-width: 768px) {
+    #header h2 {
+        overflow: hidden;
+    height: 100%;
+    pointer-events: none;
+    }
+    #header h1 span {
+    font-size: 75%;
+    }
+    #top-bar {
+        font-size: calc(var(--base-font-size)*0.70);
+    }
+    #skrollr-body {
+        width: 100%;
+        background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ablack-highlightyear/hubblemobile.png);
+        background-size: inherit;
+        overflow: hidden;
+    }
+}
+
+element > .img {
+    border: 2px solid rgb(var(--bright-accent))!important;
+    background-color: transparent!important;
+}
+
+/* Code */
+.code {
+    border: 1px dashed #666;
+    background-color: transparent;
+
+    font-family: "Consolas", "Courier New", "Roboto Mono", '仿宋', monospace;
+    font-size: 14px;
+}
+
+/* code highlighter stuff */
+
+.hl-identifier, .hl-code, .hl-brackets {
+    color: #ccc;
+}
+
+.hl-var {
+    color: #21ff00;
+}
+
+.hl-special {
+    color: #ffff00;
+}
+
+.hl-reserved {
+    color: #00b2ff;
+}
+
+.hl-number, .hl-string {
+    color: #ff0020;
+}
+
+del {
+    color: #333;
+}
+ins {
+    color: #333;
+}
+
+/* RATING AND INFO MODULES */
+.page-rate-widget-box {
+     box-shadow: 0px 0px 0px 2px #ffb961;
+     background-color: #5C1D24 !important;
+     padding: .1em;
+     border-radius: 0px 10px 0px 10px;
+}
+
+.page-rate-widget-box .rate-points {
+    background: #5C1D24;
+    border: none;
+    color: #ffb961 !important;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: #5C1D24;
+    border-top: none;
+    border-bottom: none;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: #ffb961;
+}
+.page-rate-widget-box .cancel {
+    background: transparent;
+    background-color: #5C1D24;
+    border: none;
+}
+
+.page-rate-widget-box .cancel a {
+    color: #ffb961;
+}
+
+
+/* Credit Module */
+#page-content .rate-box-with-credit-button {
+    background-color: rgb(var(--medium-accent));
+    border: 1px solid rgb(var(--medium-accent));
+     border-radius: 0px 10px 0px 10px;
+    box-shadow: 0px 0px 0px 2px #ffb961;
+}
+#page-content .rate-box-with-credit-button .creditButton p a {
+    border-left-color: #ffb961;
+}
+
+#page-content .rate-box-with-credit-button .page-rate-widget-box .cancel {
+    border-radius: 0;
+}
+#page-content .rate-box-with-credit-button .page-rate-widget-box .rate-points {
+    border-left: 0;
+}
+
+#page-content .rate-box-with-credit-button .fa-info {
+     border-color: #ffb961 ;
+     color: #ffb961 ;
+}
+#page-content .rate-box-with-credit-button .fa-info:hover {
+     color: white;
+}
+
+#page-content .modalbox {
+     background: #101d2e !important;
+     color: #ccc;
+     box-shadow: 0px 0px 0px 2px #ffb961;
+}
+
+.close-credits,
+.credit-back {
+    filter: hue-rotate(60deg) brightness(400%);
+}
+
+/* TABVIEW - Abandon All Hope Ye Who Enter Here */
+
+.yui-navset * {
+    -webkit-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -o-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    zoom: unset;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-color: #ffb961;
+    width: -webkit-calc(100% - 0.125rem);
+    width: calc(100% - 0.125rem);
+    margin: 0 auto;
+    border: 0;
+    -webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 #ffb961;
+    box-shadow: 0 calc(0.0625rem * 5) 0 0 #ffb961;
+}
+
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    zoom: unset;
+    background-image: none;
+    background-color: #26152e;
+    border: unset;
+    color: #ffb961;
+    font-weight: bold;
+}
+
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    zoom: unset;
+    background-image: none;
+    background: #5C1D24;
+    font-weight: bold;
+}
+
+.yui-navset .yui-nav li,
+.yui-navset .yui-navset-top .yui-nav li {
+    background: rgb(244, 244, 244);
+    border-color: transparent;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    zoom: unset;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-flex-basis: 7vw;
+    -ms-flex-preferred-size: 7vw;
+    flex-basis: 7vw;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -moz-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -webkit-box-shadow: 0 0 0 0.0625rem #ffb961;
+    box-shadow: 0 0 0 0.0625rem #ffb961;
+}
+
+.yui-navset .yui-nav li a,
+.yui-navset-top .yui-nav li a,
+.yui-navset-bottom .yui-nav li a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: bottom;
+    zoom: unset;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.yui-navset .yui-nav a em,
+.yui-navset .yui-navset-top .yui-nav a em {
+    padding: 0.35em 0.75em;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.yui-navset .yui-nav li em {
+    /* Undoes border set by wikidot's default layout */
+    border: unset !important;
+}
+
+/* Selected Tab */
+
+.yui-navset .yui-nav .selected,
+.yui-navset .yui-navset-top .yui-nav .selected,
+.yui-navset .yui-nav .selected:hover,
+.yui-navset .yui-navset-top .yui-nav .selected:hover {
+    padding: 0;
+    margin: 0;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -moz-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    color: #ffb961;
+    background-image: none;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em {
+    border: none !important;
+    border-color: transparent;
+    color: #ffb961;
+}
+
+.yui-navset .yui-nav .selected a {
+    /* Undoes a color set by wikidot's default layout */
+    color: rgb(252, 252, 252) !important;
+    width: 100%;
+    background-image: none;
+}
+
+.yui-navset .yui-content {
+    background-color: #1b304d;
+    /* content background color */
+}
+
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: #ffb961;
+    /* content border */
+}
+
+.yui-navset-left .yui-content {
+    border-left-color: #ffb961;
+    /* different border color */
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+        background-image: none;
+        background-color: #1b304d;
+        color: #ffb961;
+        cursor: default;
+        margin-bottom: -2px;
+        font-weight: bold;
+}
+
+.hovertip {
+    border: solid 3px #BBBBBB!important;
+    border-radius: 16px!important;
+    background-color: #1b304d!important;
+/* black shadow at the top of the terminal */
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent,#1b284d)!important;
+    background-position: center!important;
+    display: block;
+/* shadow around the terminal */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5)!important;
+}
+
+.footnotes-footer > .title, .hovertip > .title {
+    text-decoration: underline;
+}
+
+.footnotes-footer {
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #1b304d;
+/* black shadow at the top of the terminal */
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #1b284d);
+    background-position: center;
+    display: block;
+/* shadow around the terminal */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+    overflow:hidden;
+}
+
+a,
+a.newpage,
+a:visited,
+#side-bar a:visited {
+    color: #ffbe3d;
+}
+
+a:hover {
+    color: #ffd88a;
+    text-decoration: underline;
+    background-color: #272727;
+    padding: 1px;
+}
+
+#page-content a:hover::before{
+content: "> ";
+color: inherit;
+}
+
+/* Ayer's Info Module */
+:root {
+    --barColour: #5C1D24;
+    --linkColour: #ffb961;
+}
+
+.info-container .collapsible-block-unfolded {
+    border-color: #ffb961;
+}
+
+/* PAGE ELEMENTS */
+blockquote,
+div.blockquote {
+    margin: 1em 0;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(33,33,45);
+}
+
+.blue blockquote {
+     background-color: #1b304d;
+}
+
+.pink blockquote {
+     background-color: #5c1d24;
+}
+
+.gold blockquote {
+      background-color: #442f03;
+}
+
+.purp blockquote {
+    background-color: #26152e;
+}
+
+.scp-image-block .scp-image-caption {
+    background-color: #1b304d;
+}
+
+.wiki-content-table tr th {
+     background: #1b304d;
+     color: #ffb961;
+     border-color: #ffb961;
+}
+
+table.wiki-content-table th, table.wiki-content-table tr {
+    border: .0625rem solid rgba(var(--bright-accent),.5) !important;
+}

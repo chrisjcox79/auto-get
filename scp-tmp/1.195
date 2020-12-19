@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "scp-cn-1409";
-        OZONE.request.timestamp = 1608320590;
+        OZONE.request.timestamp = 1608344533;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "scp-cn-1409";
@@ -289,6 +289,7 @@ div#extra-div-1 {
 }
 #top-bar, #top-bar a {
      color: #ededed;
+     transition: color 0s;
 }
 #top-bar ul li ul {
     border-color: var(--accentColor);
@@ -307,6 +308,7 @@ div#extra-div-1 {
 #top-bar ul li:hover a:hover {
     background: #21252E; /* top bar hover background color */
     color: var(--accentColor);
+    transition: color 0.1s linear;
 }
 
 /* ---- SIDE BAR ---- */
@@ -754,6 +756,13 @@ div.blockquote,
     border: solid 4px #21252E;
     color: #ededed;
     font-size: 0.84rem;
+}
+.scp-image-block.block-left { margin-left: 0; }
+.scp-image-block.block-right { margin-right: 0; }
+@media (max-width: 540px) {
+  .scp-image-block.block-left, .scp-image-block.block-right {
+    float: none; clear: both; margin-left: auto; margin-right: auto;
+  }
 }
 
 #page-content .wiki-content-table tr th {
@@ -1628,6 +1637,7 @@ opacity:1;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-identifier">#top-bar</span><span class="hl-code">, </span><span class="hl-identifier">#top-bar</span><span class="hl-code"> </span><span class="hl-identifier">a</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
      </span><span class="hl-reserved">color:</span><span class="hl-code"> </span><span class="hl-var">#ededed</span><span class="hl-code">;
+     </span><span class="hl-reserved">transition:</span><span class="hl-code"> color </span><span class="hl-number">0</span><span class="hl-code">s</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-identifier">#top-bar</span><span class="hl-code"> </span><span class="hl-identifier">ul</span><span class="hl-code"> </span><span class="hl-identifier">li</span><span class="hl-code"> </span><span class="hl-identifier">ul</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
     </span><span class="hl-reserved">border-color:</span><span class="hl-code"> var(--accentColor)</span><span class="hl-code">;
@@ -1646,6 +1656,7 @@ opacity:1;
 </span><span class="hl-identifier">#top-bar</span><span class="hl-code"> </span><span class="hl-identifier">ul</span><span class="hl-code"> </span><span class="hl-identifier">li</span><span class="hl-special">:hover</span><span class="hl-code"> </span><span class="hl-identifier">a</span><span class="hl-special">:hover</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
     </span><span class="hl-reserved">background:</span><span class="hl-code"> </span><span class="hl-var">#21252E</span><span class="hl-code">; /</span><span class="hl-identifier">*</span><span class="hl-code"> </span><span class="hl-identifier">top</span><span class="hl-code"> </span><span class="hl-identifier">bar</span><span class="hl-code"> </span><span class="hl-identifier">hover</span><span class="hl-code"> </span><span class="hl-identifier">background</span><span class="hl-code"> </span><span class="hl-identifier">color</span><span class="hl-code"> </span><span class="hl-identifier">*</span><span class="hl-code">/
     </span><span class="hl-reserved">color:</span><span class="hl-code"> var(--accentColor)</span><span class="hl-code">;
+    </span><span class="hl-reserved">transition:</span><span class="hl-code"> color </span><span class="hl-number">0.1</span><span class="hl-code">s linear</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
  
 /</span><span class="hl-identifier">*</span><span class="hl-code"> ---- </span><span class="hl-identifier">SIDE</span><span class="hl-code"> </span><span class="hl-identifier">BAR</span><span class="hl-code"> ---- </span><span class="hl-identifier">*</span><span class="hl-code">/
@@ -2094,6 +2105,13 @@ opacity:1;
     </span><span class="hl-reserved">color:</span><span class="hl-code"> </span><span class="hl-var">#ededed</span><span class="hl-code">;
     </span><span class="hl-reserved">font-size:</span><span class="hl-code"> </span><span class="hl-number">0.84</span><span class="hl-code">rem</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-identifier">.scp-image-block.block-left</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-reserved">margin-left:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">; </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-identifier">.scp-image-block.block-right</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-reserved">margin-right:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">; </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-var">@media</span><span class="hl-code"> (max-width: 540</span><span class="hl-identifier">px</span><span class="hl-code">) </span><span class="hl-brackets">{</span><span class="hl-code">
+  </span><span class="hl-identifier">.scp-image-block.block-left</span><span class="hl-code">, </span><span class="hl-identifier">.scp-image-block.block-right</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">float:</span><span class="hl-code"> </span><span class="hl-string">none</span><span class="hl-code">; </span><span class="hl-reserved">clear:</span><span class="hl-code"> </span><span class="hl-string">both</span><span class="hl-code">; </span><span class="hl-reserved">margin-left:</span><span class="hl-code"> </span><span class="hl-string">auto</span><span class="hl-code">; </span><span class="hl-reserved">margin-right:</span><span class="hl-code"> </span><span class="hl-string">auto</span><span class="hl-code">;
+  </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span><span class="hl-code">
  
 </span><span class="hl-identifier">#page-content</span><span class="hl-code"> </span><span class="hl-identifier">.wiki-content-table</span><span class="hl-code"> </span><span class="hl-identifier">tr</span><span class="hl-code"> </span><span class="hl-identifier">th</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
     </span><span class="hl-reserved">border:</span><span class="hl-code"> </span><span class="hl-string">solid</span><span class="hl-code"> </span><span class="hl-number">1</span><span class="hl-string">px</span><span class="hl-code"> var(--accentColor)</span><span class="hl-code">;
@@ -2308,7 +2326,7 @@ opacity:1;
 
 <div class="creditRate">
 <div class="rateBox">
-<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+30</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
+<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+29</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
 <div class="creditButton">
 <p><a class="fa fa-info" href="#u-credit-view"></a></p>
 </div>
@@ -2330,7 +2348,7 @@ opacity:1;
 <p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
 <p><span style="white-space: pre-wrap;">&#32;</span><br />
 <strong>SCP-CN-1409：</strong>4200006200<br />
-作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608274680" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></p>
+作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608329163" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span></p>
 <p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/hoah2333">点击发现更多作品</a></p>
 <p><span style="white-space: pre-wrap;">&#32;</span></p>
 <div class="blockquote" style="border-radius: 10px; margin: 10px;">
@@ -2349,7 +2367,7 @@ opacity:1;
 <tr>
 <td style="display:table-cell;" colspan="2">
 <div class="wrap">
-<div class="cir" style="transform: rotate(-25.7142857143deg)">
+<div class="cir" style="transform: rotate(-26.3414634146deg)">
 <div class="rad uv"></div>
 <div class="rad dv"></div>
 </div>
@@ -2364,9 +2382,9 @@ opacity:1;
 </td>
 </tr>
 <tr style="display:table-row;">
-<td style="text-align: left;">85.72%<br />
-(+36)</td>
-<td style="text-align: right;">14.28%<br />
+<td style="text-align: left;">85.37%<br />
+(+35)</td>
+<td style="text-align: right;">14.63%<br />
 (-6)</td>
 </tr>
 <tr style="display:none;">
@@ -2387,7 +2405,7 @@ opacity:1;
 <p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
 </div>
 <div class="creditBottomRate" style="position:relative;height:30px;">
-<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+30</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+29</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 </div>
 </div>
 </div>
@@ -2397,9 +2415,9 @@ opacity:1;
 <div class="sidebox">
 <div style="text-align: center;">
 <p><strong>SCP-CN-1409：</strong>4200006200<br />
-作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608274680" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span><br />
+作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915183&amp;amp;size=small&amp;amp;timestamp=1608329163" alt="hoah2333" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915183)" /></a><a href="http://www.wikidot.com/user:info/hoah2333" onclick="WIKIDOT.page.listeners.userInfo(4915183); return false;">hoah2333</a></span><br />
 <a href="http://scp-wiki-cn.wikidot.com/hoah2333">点击发现更多作品</a></p>
-<div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+30</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+29</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 </div>
 </div>
 <div class="list-pages-box">    <div class="list-pages-item">
@@ -2555,7 +2573,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                             <div id="page-info">页面版本: 20, 最后编辑于: <span class="odate time_1608274680 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">18 Dec 2020 06:58</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+30</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+29</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
 <a href="/forum/t-13894618/scp-cn-1409" class="btn btn-default" id="discuss-button">讨论 (3)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
@@ -2624,45 +2642,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://elogee-chamber.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/elogee-chamber.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://sandbox.scpfoundation.ru">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sandbox.scpfoundation.ru/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://elogee-chamber.wikidot.com">Elogee Chamber</a></h3>
+            <h3><a target="_blank" href="http://sandbox.scpfoundation.ru">The SCP Sandbox</a></h3>
             <div class="desc">          
-              Ike for President
+              Осторожно! Идут испытания!
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://biol-117.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/biol-117.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://backrooms-sandbox.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/backrooms-sandbox.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://biol-117.wikidot.com">Principles of Biology II</a></h3>
+            <h3><a target="_blank" href="http://backrooms-sandbox.wikidot.com">Backrooms Sandbox</a></h3>
             <div class="desc">          
-              
+              When your Sandbox just gets too Backrooms
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://spartanfleet.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/spartanfleet.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.larpard.cz">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.larpard.cz/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://spartanfleet.wikidot.com">Spartan Fleet</a></h3>
+            <h3><a target="_blank" href="http://www.larpard.cz">Larpard</a></h3>
             <div class="desc">          
-              Excellence in Simming.
+              Vše nejen o larpech ve východních Čechách
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://uniofbeds.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/uniofbeds.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://uniofbeds.wikidot.com">Uniofbeds</a></h3>
+            <h3><a target="_blank" href="http://www.wikidot.com">Wikidot - Free and Pro Wiki Hosting</a></h3>
             <div class="desc">          
-              
+              your place on the web
             </div>
           </div>
         </div>

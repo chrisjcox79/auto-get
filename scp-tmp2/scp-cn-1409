@@ -150,6 +150,7 @@ div#extra-div-1 {
 }
 #top-bar, #top-bar a {
      color: #ededed;
+     transition: color 0s;
 }
 #top-bar ul li ul {
     border-color: var(--accentColor);
@@ -168,6 +169,7 @@ div#extra-div-1 {
 #top-bar ul li:hover a:hover {
     background: #21252E; /* top bar hover background color */
     color: var(--accentColor);
+    transition: color 0.1s linear;
 }
 
 /* ---- SIDE BAR ---- */
@@ -615,6 +617,13 @@ div.blockquote,
     border: solid 4px #21252E;
     color: #ededed;
     font-size: 0.84rem;
+}
+.scp-image-block.block-left { margin-left: 0; }
+.scp-image-block.block-right { margin-right: 0; }
+@media (max-width: 540px) {
+  .scp-image-block.block-left, .scp-image-block.block-right {
+    float: none; clear: both; margin-left: auto; margin-right: auto;
+  }
 }
 
 #page-content .wiki-content-table tr th {
