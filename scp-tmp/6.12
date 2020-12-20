@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>被放逐者的书架 样版 - SCP基金会</title>
+    <title>外派中級研究助理Toxic Cola的人事檔案 - SCP基金会</title>
     
     
     
@@ -20,14 +20,14 @@
         WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
         WIKIREQUEST.info.siteId = 530812;
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 4228703;
+        WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "component:bookshelf-template";
-        OZONE.request.timestamp = 1608433087;
+        WIKIREQUEST.info.requestPageName = "toxic-cola-personnel-file";
+        OZONE.request.timestamp = 1608454389;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "component:bookshelf-template";
-        WIKIREQUEST.info.pageId = 1304908177;
+                WIKIREQUEST.info.pageUnixName = "toxic-cola-personnel-file";
+        WIKIREQUEST.info.pageId = 67646788;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,9 +65,6 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
-
-
         
                 
         /* theme */
@@ -119,1996 +116,8 @@
         });
     </script>
         
-<style>
-@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
-</style>
-<style>
-/*
-=====================
-被放逐者的书架
-由Etinjat制作
-部分代码和底图来自woedenaz
-=====================
-*/
-
-:root{   
-    /* 图片赋值 */
-
-    --gold-image: url("http://wanderers-library.wdfiles.com/local--files/component%3Atheme/goldfoil.png");
-
-    --wave-image: url("http://scpsandboxcn.wikidot.com/local--files/image/Bgr-deco-pattern.png");
-
-    --cloud-image: url("http://scpsandboxcn.wikidot.com/local--files/image/Bgr-white-waves.png");
-
-    --night-image: url("http://scpsandboxcn.wikidot.com/local--files/image/Bgr-galfed.png");
-
-    --bluepaper-image: url("http://scpsandboxcn.wikidot.com/local--files/image/Bgr-WL-Blue.png");
-
- /* 投影赋值 */   
-
-   --box-out-shelf:0.0625rem -0.0625rem 0 #4c2e13, 0.125rem -0.125rem 0 #4c2e13, 0.1875rem -0.1875rem 0 #4c2e13, 0.25rem -0.25rem 0 #4c2e13, 0.3125rem -0.3125rem 0 #4c2e13, 0.375rem -0.375rem 0 #4c2e13, 0.4375rem -0.4375rem 0 #4c2e13, 0.8rem -0.8rem 0 #4c2e13;
-
-   --box-inner-shelf:-0.0625rem -0.0625rem 0 #4c2e13, -0.125rem -0.125rem 0 #4c2e13, -0.1875rem -0.1875rem 0 #4c2e13, -0.25rem -0.25rem 0 #4c2e13, -0.3125rem -0.3125rem 0 #4c2e13, -0.375rem -0.375rem 0 #4c2e13, -0.4375rem -0.4375rem 0 #4c2e13, -0.5rem -0.5rem 0 #4c2e13;
-
-   --box-green:0.0625rem 0.0625rem 0 #385814, 0.125rem 0.125rem 0 #385b15, 0.1875rem 0.1875rem 0 #3a5e16, 0.25rem 0.25rem 0 #3b6118, 0.3125rem 0.3125rem 0 #40641a, 0.375rem 0.375rem 0 #385814, 0.4375rem 0.4375rem 0 #3d5c15, 0.58rem 0.8rem 0 #31540e;
-
-   --box-white:0.0625rem 0.0625rem 0 #94a19d, 0.125rem 0.125rem 0 #acb0af, 0.1875rem 0.1875rem 0 #b6aaaa, 0.25rem 0.25rem 0 #a5a9a0, 0.3125rem 0.3125rem 0 #848881, 0.375rem 0.375rem 0 #81847f, 0.4375rem 0.4375rem 0 #545552, 0.58rem 0.8rem 0 #4e504d;
-
-   --box-black:0.0625rem 0.0625rem 0 #54584f, 0.125rem 0.125rem 0 #484c45, 0.1875rem 0.1875rem 0 #363a32, 0.25rem 0.25rem 0 #3a4133, 0.3125rem 0.3125rem 0 #40433c, 0.375rem 0.375rem 0 #32342f, 0.4375rem 0.4375rem 0 #1e1e1d, 0.58rem 0.8rem 0 #121212;
-
-   --box-red:0.0625rem 0.0625rem 0 #921212, 0.125rem 0.125rem 0 #901111, 0.1875rem 0.1875rem 0 #a92d0f, 0.25rem 0.25rem 0 #870e21, 0.3125rem 0.3125rem 0 #74060d, 0.375rem 0.375rem 0 #6b1808, 0.4375rem 0.4375rem 0 #5b0b0f, 0.58rem 0.8rem 0 #3c040f;
-
-   --box-gold:0.0625rem 0.0625rem 0 #aead42, 0.125rem 0.125rem 0 #a07512, 0.1875rem 0.1875rem 0 #b2781c, 0.25rem 0.25rem 0 #a37716, 0.3125rem 0.3125rem 0 #71560d, 0.375rem 0.375rem 0 #6e6615, 0.4375rem 0.4375rem 0 #827519, 0.58rem 0.8rem 0 #4e4208;
-
-   --box-blue:0.0625rem 0.0625rem 0 #12aab4, 0.125rem 0.125rem 0 #1f98d0, 0.1875rem 0.1875rem 0 #17898f, 0.25rem 0.25rem 0 #136f98, 0.3125rem 0.3125rem 0 #1d4b8d, 0.375rem 0.375rem 0 #144890, 0.4375rem 0.4375rem 0 #0d386b, 0.58rem 0.8rem 0 #083241;
-
-  --box-darkblue:0.0625rem 0.0625rem 0 #0c1481, 0.125rem 0.125rem 0 #1e0c8c, 0.1875rem 0.1875rem 0 #0a1172, 0.25rem 0.25rem 0 #0d1683, 0.3125rem 0.3125rem 0 #0a1160, 0.375rem 0.375rem 0 #0c1474, 0.4375rem 0.4375rem 0 #0b104e, 0.58rem 0.8rem 0 #0c114f;
-
-  --box-galaxy:0.0625rem 0.0625rem 0 #9b01d3, 0.125rem 0.125rem 0 #1c0463, 0.1875rem 0.1875rem 0 #3c0875, 0.25rem 0.25rem 0 #2e0d65, 0.3125rem 0.3125rem 0 #3d0a5d, 0.375rem 0.375rem 0 #340438, 0.4375rem 0.4375rem 0 #1a041c, 0.58rem 0.8rem 0 #1a041a;
-
-  --box-purple:0.0625rem 0.0625rem 0 #f303d6, 0.125rem 0.125rem 0 #9d11a3, 0.1875rem 0.1875rem 0 #881391, 0.25rem 0.25rem 0 #650e6a, 0.3125rem 0.3125rem 0 #490c49, 0.375rem 0.375rem 0 #30032f, 0.4375rem 0.4375rem 0 #2f032b, 0.58rem 0.8rem 0 #1f0226;
-
-  --box-mix-1:0.0625rem 0.0625rem 0 #142a49, 0.125rem 0.125rem 0 #1f301b, 0.1875rem 0.1875rem 0 #173240, 0.25rem 0.25rem 0 #1f4127, 0.3125rem 0.3125rem 0 #080840, 0.375rem 0.375rem 0 #1f0a4a, 0.4375rem 0.4375rem 0 #180840, 0.58rem 0.8rem 0 #0f1b02;
-
---book-height:15rem;
-
-}
-
-/*
-=====================
-书架
-=====================
-*/
-
-.et-out-bookrack{
-    padding: 1rem 0 0.5rem 1.5rem;
-    filter: drop-shadow(1.5rem 0.2rem 3px #422306);
-    background: radial-gradient(#b16d1d, #f3cfa5, #684015);
-    background: -moz-radial-gradient(#b16d1d, #f3cfa5, #684015);
-    background: -webkit-radial-gradient(#b16d1d, #f3cfa5, #684015);
-/*
-    background-image:  var(--gold-image),
-                              linear-gradient(rgb(117, 89, 6) 0%, rgb(84, 59, 16) 30%, rgb(117, 61, 12) 100%);
-    background-blend-mode: overlay, normal;
-    background-size: cover, 100% 260%;
-*/
-    -moz-box-shadow: var(--box-out-shelf);
-    -o-box-shadow: var(--box-out-shelf);
-    -webkit-box-shadow: var(--box-out-shelf);
-    box-shadow: var(--box-out-shelf);
-}
-
-.et-inner-bookrack{
-    background: linear-gradient(43deg, #f9c29c,#cbcbcb,#d3c895);
-    padding: 2rem 0rem 0rem 0rem;
-    margin: 0.5rem 1.5rem 1rem 0rem;
-    filter: drop-shadow(1px 1px 10px #422306);
-    height: auto;
-  /* box-shadow: var(--box-inner-shelf); */
-    border: 0.8rem inset #866139;
-
-    border-right: 0rem inset #866139;
-
-}
-
-/*
-=====================
-书格
-=====================
-*/
-
-.shelf-no , .shelf-yes ,
-.shelf-no .list-pages-box,
-.shelf-yes  .list-pages-box{
-    display: flex;
-    min-height: 15rem;
-    overflow-y:hidden; 
-    margin: 0 0rem 0 1rem;
-    padding:3rem 0 0 0;
-}
-
-.shelf-no .list-pages-box{
-     overflow:visible;
-     padding:0.1rem 0 1rem 0;
-}
-
-/* 手机间隔 */
-@media (max-width: 479px) {
-  .et-out-bookrack{
-    padding:1rem 0.6rem 1rem 0.7rem ;
- }
-
-  .et-inner-bookrack{
-     padding: 0.5rem 0.1rem 0rem 0.1rem ;
-     margin: 0.2rem 0rem 0rem 0rem ;
-  }
-
-  .shelf-no {
-     margin: 0rem 0.1rem 0 0.1rem;
-     padding:4rem 0 0 0;
-  }
-
-  .shelf-no   .list-pages-box{
-     margin: 0rem 0.1rem 0 0.1rem;
-     padding:0rem 0 0 0;
-  }
-}
-
-/*
-=====================
-封面
-=====================
-*/
-
-/*
---------------------------
-书封
---------------------------
-*/
-
-.dust-jacket{
-    margin: 0 0 0 0rem;
- /* padding: 0.5rem 1rem 0 1rem;*/
-    width: 3rem;
-
-    display: inline-block;
-    transition: all 1s;
-    filter:brightness(1) drop-shadow(13px 5px 1px #333);
-    -webkit-filter:brightness(1) drop-shadow(13px 5px 1px #333);
-    border-radius: 0.2rem;
-}
-
-@media only screen and (min-width: 600px) {
-    /* 取书 */
-  .dust-jacket:hover{
-    -webkit-filter: brightness(2) drop-shadow(6px 20px 1px #000);
-    filter: brightness(2) drop-shadow(6px 20px 1px #333);   /* 如果把最后的1改成0，可能会有聚焦效果，但可能也更卡*/
-    transform:rotateX(20deg);
-   -webkit-transform:rotateX(-25deg); /* Safari and Chrome */
-    -moz-transform:rotateX(-25deg); /* Firefox */
-    transition: all 1s;
-
-    margin-bottom:2rem;
-    margin-top:-2rem;
-
-/* 似乎不起作用
-perspective: 1410;
-perspective-origin: 10% 10%;
--webkit-perspective: 1410;
--webkit-perspective-origin: 10% 10%;
--moz-perspective: 1410;
--moz-perspective-origin: 10% 10%;
-*/
-  }
-}
-
-/*
-@media (max-width: 479px) {
-  .dust-jacket:hover{
-  margin-bottom:2rem;
-   margin-top:-2rem;
-  }
-}
-*/
-
-/* 被选中时不会有选择带 */
-.dust-jacket::selection {
-    background:transparent;
-}
-
-.dust-jacket ::-moz-selection  {
-    background:transparent;
-}
-
-/*
---------------------------
-书皮
---------------------------
-*/
-
-.book-list {
-   display: inline-block;
-   min-width:3rem;
-  /*  margin: 1em 1em 0 1em;*/
- /*  line-height:28px;*/
-   float:left;
-}
-
-.book-list a{
-    margin: 0 0 0 0.9rem;
-    max-height: calc(var(--book-height) - 2rem);
-
-    overflow: hidden;
-    text-overflow:ellipsis;
-    text-overflow:'◈';
-
-    white-space: nowrap;
-
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: vertical-lr;
-
-    text-decoration:none;
-    font-size: 135%;
-    font-family: kaiti,'华文新魏';
-   /* padding: 0 1px 0  1px;*/
-}
-
-.book-list a{
-    min-height: 13.5rem;
-
-}
-
-.book-list a:hover{
-    background-color: transparent;
-}
-
-/*
-似乎无效
-.book-list {
-   display: inline-block;
-   margin: 1em 1em 0 1em;
-   min-width:0.5em;
-   line-height:30px;
-   float:left;
-   height:auto;
-}
-
-.book-list a{
-    text-decoration:none;
-    font-family: '华文楷体',kaiti,'华文新魏';
-    font-size: 135%;
-
-    margin: 0 1px 0 1px !important;
-   height: 13em;
-
-    writing-mode: vertical-lr;
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: vertical-lr;
-
-}
-*/
-
-/*
-=====================
-书籍间隔
-=====================
-*/
-.the-shelf-block{
-   width:10px;
-}
-
-.module-shelf-block{
-   width:5px;
-   display: inline-flex;
-}
-
-/*废弃
-@media (max-width: 479px) {
-.the-shelf-block:nth-child(3)
-{
-width:100%;
-height:1em;
-background:grey;
-}
-}
-*/
-
-/*
-=====================
-隔板
-=====================
-*/
-
-.et-plank{
-background-image: var(--gold-image), linear-gradient(rgb(134, 103, 34) 0%, rgb(88, 56, 5) 30%, rgb(55, 30, 2) 100%); -webkit-filter: drop-shadow(8px 10px 1px #000); /* 亮色
-*/
-   background-image:  var(--gold-image), linear-gradient(rgb(88, 82, 69) 0%, rgb(64, 38, 11) 30%, rgb(17, 10, 2) 100%);
-   filter: drop-shadow(1px 10px 5px #422306);
-   transform: rotateX(20deg);
-   background-blend-mode: overlay, normal;
-   background-size: cover, 100% 260%;
-   border-radius: 0.5rem;
-
-   margin: -0.1rem 0 0 0;
-}
-
-.et-plank p {
-   margin-block-start: 0; /* 感谢 Jochoi 的修改 */
-   -webkit-margin-before: 0;
-   /*! line-height: 100%; */
-}
-
-/*
-=====================
-书封颜色
-=====================
-*/
-.cover-green{
-    background-image: var(--gold-image),
-    linear-gradient(rgb(30, 55, 30) 0%, rgb(30, 55, 30) 30%, rgb(255, 219, 90) 100%);
-    background-blend-mode: overlay, normal;
-    background-size: cover, 100% 260%;
-    border-left: 0.25rem double #e0ba45;
-    border-right: 0.25rem double #e0ba45;
-
-    -moz-box-shadow: var(--box-green);
-    -o-box-shadow: var(--box-green);
-    -webkit-box-shadow: var(--box-green);
-    box-shadow: var(--box-green);
-}
-
-.cover-red {
-   background-image:  var(--cloud-image), linear-gradient(rgb(186, 12, 12) 0%, rgb(145, 17, 17) 30%, rgb(102, 20, 20) 100%);
-   background-blend-mode: overlay, normal;
-   border-left: 0.25rem double #e0ba45;
-   border-right: 0.25rem double #e0ba45;
-
-  -moz-box-shadow: var(--box-red);
-    -o-box-shadow: var(--box-red);
-    -webkit-box-shadow: var(--box-red);
-    box-shadow: var(--box-red);
-}
-
-.cover-black {
-     background: linear-gradient(70deg, #191818, #636367,#333,#000);
-     border-left: 0.25rem double #aba7a7;
-     border-right: 0.25rem double #aba7a7;
-
-   -moz-box-shadow: var(--box-black);
-    -o-box-shadow: var(--box-black);
-    -webkit-box-shadow: var(--box-black);
-    box-shadow: var(--box-black);
-}
-
-.cover-galaxy {
-    background-image:  var(--night-image), linear-gradient(rgb(132, 132, 132) 0%, rgb(136, 136, 205) 30%, rgb(36, 36, 36) 100%);
-    border-left: 0.25rem double #9b01d3;
-    border-right: 0.25rem double #9b01d3;
-
-    -moz-box-shadow: var(--box-galaxy);
-    -o-box-shadow: var(--box-galaxy);
-    -webkit-box-shadow: var(--box-galaxy);
-    box-shadow: var(--box-galaxy);
-}
-
-.cover-gold {
-   background-image:  var(--wave-image), linear-gradient(rgb(223, 216, 31) 0%, rgb(202, 129, 0) 30%, rgb(206, 118, 12) 100%);
-   border-left: 0.25rem double #58076c;
-   border-right: 0.25rem double #58076c;
-
-    -moz-box-shadow: var(--box-gold);
-    -o-box-shadow: var(--box-gold);
-    -webkit-box-shadow: var(--box-gold);
-    box-shadow: var(--box-gold);
-}
-
-.cover-purple {
-   background: linear-gradient(-80deg, #420a75, #8f00ca,#8137ca,#7b20c4,#490d78);
-   border-left: 0.25rem double #edb016;
-   border-right: 0.25rem double #edb016;
-
-    -moz-box-shadow: var(--box-purple);
-    -o-box-shadow: var(--box-purple);
-    -webkit-box-shadow: var(--box-purple);
-    box-shadow: var(--box-purple);
-}
-
-.cover-blue {
-   background-image: linear-gradient(rgb(2, 151, 213) 0%, rgb(15, 77, 157) 30%, rgb(23, 26, 116) 100%);
-   background-blend-mode: overlay, normal;
-   background-size: cover, 100% 260%;
-   border-left: 0.25rem double #28d8a2;
-   border-right: 0.25rem double #28d8a2;
-
-    -moz-box-shadow: var(--box-blue);
-    -o-box-shadow: var(--box-blue);
-    -webkit-box-shadow: var(--box-blue);
-    box-shadow: var(--box-blue);
-}
-
-.cover-blue-2 {
-   background-image: url(http://wanderers-library.wikidot.com/local--files/component:theme/goldfoil.png), linear-gradient(rgb(2, 151, 213) 0%, rgb(15, 77, 157) 30%, rgb(23, 26, 116) 100%);
-   background-blend-mode: overlay, normal;
-   background-size: cover, 100% 260%;
-   border-left: 0.25rem double #28d8a2;
-   border-right: 0.25rem double #28d8a2;
-
-    -moz-box-shadow: var(--box-blue);
-    -o-box-shadow: var(--box-blue);
-    -webkit-box-shadow: var(--box-blue);
-    box-shadow: var(--box-blue);
-}
-
-.cover-blue-3 {
-   background-image:var(--bluepaper-image);
-  /* background-blend-mode: overlay, normal;*/
-   background-size: cover, 120% 100%;
-   border-left: 0.25rem double #153d7b;
-   border-right: 0.25rem double #153d7b;
-
-   -moz-box-shadow: var(--box-blue);
-   -o-box-shadow: var(--box-blue);
-   -webkit-box-shadow: var(--box-blue);
-   box-shadow: var(--box-blue);
-}
-
-.cover-darkblue{
-    background: linear-gradient(72deg, #190a5e, #170358,#0a1064,#080d46,#0d1252,#170743);
-    border-left: 0.25rem double #1fa8d8;
-    border-right: 0.25rem double #1fa8d8;
-
-    -moz-box-shadow: var(--box-darkblue);
-    -o-box-shadow: var(--box-darkblue);
-    -webkit-box-shadow: var(--box-darkblue);
-    box-shadow: var(--box-darkblue);
-}
-
-.cover-white {
-    background: linear-gradient(90deg, #d9d9d9, #e0f4f2,#dedede,#e5f1ed,#eee,#8e8e8e);
-    border-left: 0.25rem double #606060;
-    border-right: 0.25rem double #606060;
-
-    -moz-box-shadow: var(--box-white);
-    -o-box-shadow: var(--box-white);
-    -webkit-box-shadow: var(--box-white);
-    box-shadow: var(--box-white);
-}
-
-.cover-darkblack {
-    background: linear-gradient(90deg, #2f2f2f, #555,#2a2727,#161717,#3a3939,#000);
-    border-left: 0.25rem double #606060;
-    border-right: 0.25rem double #606060;
-
-    -moz-box-shadow: var(--box-black);
-    -o-box-shadow: var(--box-black);
-    -webkit-box-shadow: var(--box-black);
-    box-shadow: var(--box-black);
-}
-
-.cover-darkgrey {
-   background: linear-gradient(90deg, #5a5a5b, #6e6e6e,#8c8383,#6d7272,#656565,#585858);
-   border-left: 0.25rem double #191818;
-   border-right: 0.25rem double #191818;
-
-   -moz-box-shadow: var(--box-black);
-   -o-box-shadow: var(--box-black);
-   -webkit-box-shadow: var(--box-black);
-   box-shadow: var(--box-black);
-}
-
-.cover-mix-1 {
-    background: linear-gradient(43deg, #1f0d00, #1f462b,#0a1064,#5a199d);
-    border-left: 0.25rem double #65970c;
-    border-right: 0.25rem double #65970c;
-
-    -moz-box-shadow: var(--box-mix-1);
-    -o-box-shadow: var(--box-mix-1);
-    -webkit-box-shadow: var(--box-mix-1);
-    box-shadow: var(--box-mix-1);
-}
-
-.cover-mix-2 {
-    background: linear-gradient(-65deg, #580954, #320f7c,#518,#531f7b,#bb1a84);
-    border-left: 0.25rem double #0c0f3e;
-    border-right: 0.25rem double #0c0f3e;
-
-    -moz-box-shadow: var(--box-purple);
-    -o-box-shadow: var(--box-purple);
-    -webkit-box-shadow: var(--box-purple);
-    box-shadow: var(--box-purple);
-}
-
-/*
-----------------
-手机横排书角
-----------------
-*/
-@media (max-width: 479px) {
-
-  .trans-yes .dust-jacket{
-     border-left: 0;
-     border-right: 0;
-  }
-
-  .trans-yes .book-list p{
-    height: 0;
-  }
-
-  .trans-yes  .cover-green{
-    border-top: 0.25rem double #e0ba45;
-    border-bottom: 0.25rem double #e0ba45;
-  }
-
-  .trans-yes  .cover-red {
-    border-top: 0.25rem double #e0ba45;
-    border-bottom: 0.25rem double #e0ba45;
-   }
-
-  .trans-yes  .cover-black {
-    border-top: 0.25rem double #aba7a7;
-    border-bottom: 0.25rem double #aba7a7;
-  }
-
-  .trans-yes  .cover-galaxy {
-    border-top: 0.25rem double #9b01d3;
-    border-bottom: 0.25rem double #9b01d3;
-  }
-
-  .trans-yes  .cover-gold {
-    border-top: 0.25rem double #58076c;
-    border-bottom: 0.25rem double #58076c;
-  }
-
-  .trans-yes  .cover-purple {
-    border-top: 0.25rem double #edb016;
-    border-bottom: 0.25rem double #edb016;
-  }
-
-  .trans-yes  .cover-blue {
-    border-top: 0.25rem double #28d8a2;
-    border-bottom: 0.25rem double #28d8a2;
-  }
-
-  .trans-yes  .cover-blue-2 {
-    border-top: 0.25rem double #28d8a2;
-    border-bottom: 0.25rem double #28d8a2;
-  }
-
-  .trans-yes  .cover-blue-3 {
-    border-top: 0.25rem double #153d7b;
-    border-bottom: 0.25rem double #153d7b;
-  }
-
-  .trans-yes  .cover-darkblue{
-    border-top: 0.25rem double #1fa8d8;
-    border-bottom: 0.25rem double #1fa8d8;
-  }
-
-  .trans-yes  .cover-white {
-    border-top: 0.25rem double #606060;
-    border-bottom: 0.25rem double #606060;
-  }
-
-  .trans-yes  .cover-darkblack {
-    border-top: 0.25rem double #606060;
-    border-bottom: 0.25rem double #606060;
-  }
-
-  .trans-yes  .cover-darkgrey {
-    border-top: 0.25rem double #191818;
-    border-bottom: 0.25rem double #191818;
-  }
-
-  .trans-yes  .cover-mix-1 {
-    border-top: 0.25rem double #65970c;
-    border-bottom: 0.25rem double #65970c;
-  }
-
-  .trans-yes  .cover-mix-2 {
-    border-top: 0.25rem double #0c0f3e;
-    border-bottom: 0.25rem double #0c0f3e;
- }
-}
-
-/*
-=====================
-书籍链接颜色
-=====================
-*/
-
-.link-gold a {
-    color:#e0ba45;
-}
-
-.link-white a {
-   color:#f4f4f4;
-}
-
-.link-red a {
-   color:#b01;
-}
-
-.link-black a {
-   color:#000;
-}
-
-/*
-=====================
-书架内的滚动条，火狐无效
-=====================
- */
-
-.shelf-wrap {
-    scrollbar-color: #976f23 #805213;
-}
-
-.shelf-wrap::-webkit-scrollbar {
-    height: 0.5rem !important;
-    background-color: #F5F5F5;
-}
-
-.shelf-no .list-pages-box,
-.shelf-yes .list-pages-box{
-    scrollbar-width:none;
-    width: 100%;
-}
-
-/*
-.shelf-no, .shelf-yes{
-}
-*/
-
-/* 电脑上的火狐无效
-.shelf-no ::-webkit-scrollbar{
-        background-color:#b5b1b1;  
-}
-
-.shelf-no ::-webkit-scrollbar-thumb {  
-    border-radius: 10px;  
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
-   background-color:#b5b1b1;
-
-}
-
-.shelf-no ::-webkit-scrollbar-track{  
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
-    border-radius: 10px;
-      background-color:black;    
-
-}
-*/
-
-/*
---------------------
-手机格式的书籍滚轮
---------------------
-*/
-/*
-@media (max-width: 479px) {
-.shelf-no, .shelf-yes,
-.shelf-no .list-pages-box,
-.shelf-yes .list-pages-box {
- overflow-y:hidden !important;
-}
-}
-*/
-
-/*
-=============================
-手机下的描边
-============================
-*/
-
-@media (max-width: 479px) {
-
-  .shelf-yes, .shelf-yes .list-pages-box {
-    display:  inline-block;
-    overflow-y: visible;
-    margin: 0 0rem 0 0rem;
-    padding: 0rem 0 0 0;
-    width:100%;
-  }
-
-  .trans-yes{
-     display:  flex;
-     margin:2rem 0 5rem  0rem ;
-   }
-
-  .trans-yes  .et-plank-wrap{
-        display:  inline-flex;
-        margin: 0;
-    }
-
-   .trans-yes  .et-plank-wrap .et-plank{
-        width: 2rem;
-        height: 115%;
-        margin: -2rem 0 0 0;
-        background-image: var(--gold-image),
-             linear-gradient(to top left, rgb(64, 38, 11) 100%, rgb(17, 10, 2) 90%),rgb(88, 82, 69) 100%);
-
-    }
-
-   .shelf-yes .dust-jacket {  
-      width:100%;
-      min-height: 3rem;    
-      margin: 0 0 1rem 0rem;
-      display: block;
-      transition: all 1s;
-      filter: brightness(1) drop-shadow(13px 5px 1px #333);
-      -webkit-filter: brightness(1) drop-shadow(10px 10px 2px #333);
-      border-radius: 0.2rem;
-      padding: 0;
-  }
-
-   .shelf-yes .dust-jacket p{
-       /*! line-height: 8; */
-   }
-
-  .shelf-yes  .dust-jacket:hover{
-      margin-left:-1rem;
-      margin-right:0rem;
-   }
-
- .shelf-yes .book-list a {
-     position:relative ;
-     margin: -6rem 0 0 0;
-     left: 7rem;
-     height:12rem;
-     padding:  0rem 0rem 0rem 0rem;
-  }
-
-  .shelf-yes .pager {
-      writing-mode:   horizontal-tb  !important;  
-      padding: 4rem 0 0 0;
-      line-height: 2;
-      width: calc(100% - 3rem);
-  }
-
-   .shelf-yes .book-list a,
-   .shelf-yes .float-info  {
-       transform:rotate(-90deg);
-      -ms-transform:rotate(-90deg);
-      -webkit-transform:rotate(-90deg);
-   }
-
-   .trans-yes{
-        padding: 0;
-    }
-
-   .shelf-no    .dust-jacket:hover{
-      -webkit-filter: brightness(2) drop-shadow(6px 20px 1px #000);
-      filter: brightness(2) drop-shadow(6px 20px 1px #333);   /* 如果把最后的1改成0，可能会有聚焦效果，但可能也更卡*/
-      transform:rotateX(20deg);
-      -webkit-transform:rotateX(-25deg); /* Safari and Chrome */
-      -moz-transform:rotateX(-25deg); /* Firefox */
-      transition: all 1s;
-      margin-bottom:2rem;
-      margin-top:-2rem;
-   }
-}
-
-/*
-=====================
-外部组件
-=====================
-*/
-/* 翻开书籍 */
-
-/*
-@import url(http://etinjat.wikidot.com/css:open-book/code/1);
-*/
-
-/*
-=====================
-使用module时的按钮，待修缮
-=====================
-*/
-/*
-.shelf-yes .pager{
-    margin: 0 0rem 0 2rem;
-    writing-mode: sideways-rl;
-}
-
-.shelf-yes .pager span{
-    margin: 0.5rem 0rem 0 0rem;
-    writing-mode:  horizontal-tb;
-}
-
-.shelf-yes .pager .pager-no{
-    display: none;
-}
-*/
-
-.trans-yes {
-    width: auto;
-   /* height:calc(100% + 2rem);*/
-    padding: 1px;
-}
-
-.trans-no {
-    width: auto;
-  /*  height:calc(100% + 2rem);*/
-    padding: 1px;
-}
-
-.trans-no .pager,
-.trans-yes .pager {
-   position: absolute;  
-        margin: -3rem 0 0rem 0;  
-
-}
-
-.shelf-no  .list-pages-box .dust-jacket{
-    /* margin: 4rem 0 0rem 0;  */
-}
-
-.shelf-no  .list-pages-box .dust-jacket:hover{
-  /*  margin: 2rem 0 2rem 0;*/
-    transition:all  1s;
-
-}
-
-.shelf-no  .list-pages-box {
-    padding: 0;
-    margin: 0;
-}
-
-@media (max-width: 479px) {
-
-  .shelf-yes .list-pages-box .pager-no {
-    display: none;
-  }
-
-   .trans-yes .pager a,.trans-yes .current{
-    word-break:break-word;
-       padding: 0.5rem 0.2rem;
-
-   }
-
-  .trans-yes .pager span{
-       writing-mode:   sideways-lr  !important; 
-    }
-
-}
-
-/*
-=====================
-书籍描述
-=====================
-*/
-
-/* 方案一  */
-.book-description {
-    position:absolute;
-    z-index:-1;
-    margin-top: 14.8rem;
-    color: darkkhaki;
-    white-space: nowrap;/* 书本信息不分行，待思考 */
-    opacity: 0;
-    transition: opacity  0.5s;
-    float: left;
-}
-
-.self-defining .book-description, 
-.list-pages-box .book-description{
-    margin-top: -0.4rem;
-}
-
-.book-description p{
-   padding: 0 1rem 0 0.5rem;
-   overflow: hidden;
-   text-overflow:ellipsis;
-}
-
-.dust-jacket:hover + .book-description{
-    z-index: 1;
-    opacity: 1;
-   transition: opacity 0.8s;
-}
-
-@media (max-width: 479px) {
-   .shelf-yes .float-info {
-   top:21rem;
-    }
-
-    .shelf-yes .book-description{
-        position:relative;
-         right: -3.2rem;
-         writing-mode: vertical-lr;
-         margin: -5rem 0 0 0; /* 若是排到左侧的话会更好 */   
-        float: right;
-}
-
-        .shelf-yes .list-pages-box .book-description{
-        position:fixed;
-}
-
-/*
-------
-当在手机屏幕下文字正排时，可旋转文字使之横排
-    .shelf-yes    .book-description{
-       transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-
-}
-------
-*/
-
-  .self-defining  .book-description {
-      left:unset;
-   }  
-
-  .self-defining .trans-yes .book-description {
-      right: -10rem !important;
-      margin: 0rem 0 0 0 !important;
-      writing-mode: vertical-lr;
-      left:0rem;
-  }  
-
-   .shelf-yes  .list-pages-box .book-description {
-       margin: 0rem 0 0 0;
-       writing-mode:  sideways-lr !important;  
-       right: -1rem;
-        transform:rotate(0deg);
-    -ms-transform:rotate(0deg);
--webkit-transform:rotate(0deg);
-    }     
-}
-
-/*
-方案二
-部分代码参考这里
-http://scp-wiki-cn.wikidot.com/component:author-page
-*/
-
-.float-info{
-  margin: 20px;
-  overflow:hidden;
-  position:fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 21%;
-  width: calc(50vw - 520px);
-  min-width: var(--book-height);
-  opacity:0;
-  transition: all 0.7s ease-out;
-  z-index: -1;
-}
-
-.dust-jacket:hover+ .book-description + .float-info{
-    opacity: 1;
-    transition: opacity 0.5s;
-    z-index: 1;
-}
-
-.float-info:hover{
-        opacity: 1;
-        z-index: 0;
-}
-
-@media screen and (max-width:992px) {
-  .float-info {
-     margin: 0 auto;
-     right: 0;
-     bottom: 0;
-    min-height:2rem;/* 高度 */
-  }
-}
-
-.info-1{
-   padding:1%;
-   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
-   background: rgba(242,242,194,1);
-   background-image: var(--wave-image);
-   border:   0.5em double rgba(167,105,68,0.9);
-}
-
-/*
-----------------
-手机屏幕下
-------------------
-*/
-
-@media (max-width: 479px) {
-
-/* 隐藏信息栏
-    .book-description,.float-info{   
-        display: none;
-    }
-*/
-
-  .trans-yes   .float-info{
-     right: 0rem;
-     bottom: 0.5rem;
-     min-width: var(--book-height);
-     max-height: calc(var(--book-height) - 6rem);
-     padding: 10px;
-     overflow:  scroll;
-     text-overflow:ellipsis;
-  }
-/*
-  .trans-yes  .float-info:hover{
-     opacity: 1;
-     transition: opacity 0.5s;
-     z-index: 1;
-}  
-*/
-}
-</style>
-<style>
-@import url(http://etinjat.wikidot.com/component:vol-title-source/code/1);
-</style>
-<style>
-@import url("http://www.scp-wiki.net/component:collapsible-sidebar/code/1")
-</style>
-<style>
-@import url(http://scp-wiki-cn.wikidot.com/component:note-source/code/1);
-@import url(http://scp-wiki-cn.wikidot.com/component:note-source/code/{$nobody});
-
-#main-content {
-    min-width:{$main-content} !important;
-}
-
-.note-left,.note-right {
-  width:{$note-pages-width};
-}
-
-@media (max-width: 495px) {
-#main-content {
-min-width: 0rem !important;
-}
-
-.note-left, .note-right{
-      width:100% !important;
-
-}
-}
-</style>
-<style>
-/*
-========================
-书目样式
-========================
-*/
-
-/* 通用 */
-.memu-ch{
-  margin: auto;
-   height: auto;
-  width: auto;
-  overflow-y:auto;
-  position: fixed;
-  right: 2%;
-  TOP: 50px;
-        z-index: 2;/**/
-    min-width:8rem
-
-}
-
-.fm-memu{
-   text-align: right;
-  margin: 0;
-}
-
-/* 书目 */
-.memu-pg{
-
-/*
-height: 0;
-width: 0;
-opacity: 0;
-*/
-  border-radius: 10px;
-  border:solid 1px #444444;
-  float:none;
-  padding:10px;
-  box-shadow: 1px 2px 3px 0px #23334c;
-  background:#ffffff ;
-}
-
-.memu-list p{
-  font-size: 110%;
-  margin: 0 20px 10px  10px;
-}
-
-.memu-list p:before{
-  content: " ◎ ";
-  color: #333;
-}
-
-.memu-list ul{
-  list-style-type:circle;
-   padding: 0 0 0 2rem ;
-}
-
-.memu-list ul:hover{
-  list-style-type:disc;
-
-}
-
-.memu-list p:hover:before{
-  content: " ▶ ";
-  color: #333;
-}
-
-.fm-goto{
-    margin: 0 0px 0px  5px;
-}
-
-.fm-goto-top:before{
-    content: " ▲ ";
-}
-
-.fm-goto-bottom:before{
-    content: " ▼ ";
-}
-
-.fm-goto-top:before,
-.fm-goto-bottom:before {
-   color: #555;
-}
-
-.fm-goto-top:hover:before,
-.fm-goto-bottom:hover:before {
-   color: #000;
-}
-
-/*
-------------------------------------------
-动作
-------------------------------------------
-*/
-
-:not(#u-hide-memu):target ~ .memu-pg{
-  height: auto;
- /* width: auto;*/
-  opacity: 1;
-  transition: all 1s ;
-}
-
-#u-close-memu,
-#u-hide-memu,
-#u-show-bar,
-#u-nap-bar{
-  display: none;
-}
-
-.hide-memu-tip{
-  font-size: 0;
-}
-
-#u-hide-memu:target ~ .memu-pg  .hide-memu-tip{
-  font-size: 100%;
-}
-
-#u-hide-memu:target ~ .memu-pg .hide-memu{
-  font-size: 0;
-}
-
-#u-show-bar:target ~ .rate-bar{
-  display: block;
-}
-
-#u-nap-bar:target ~ .rate-bar{
-  display: none;
-}
-
-#u-hide-memu:target ~ .memu-pg{
-  opacity:0;
-  transition: opacity 1s ;
-}
-
-#u-hide-memu:target ~ .memu-pg:hover{
-  height: auto;
-/*  width: auto;*/
-  opacity:1;
-  transition: opacity 1s ;
-}
-
-#u-close-memu:target ~ .memu-pg{
-
-  width: 0rem ;
-  height:0rem;
-  font-size: 0;
-
-  opacity: 0;
-  transition: all 2s ;
-
-}
-
-/*
------------------------------------------
-评分
------------------------------------------
-*/
-
-.memu-ch .rate-bar .collapsible-block-link{
-padding: 0 0.5rem;
-}
-
-.rate-num{
-padding:1rem 0rem 0 1rem;
-}
-
-.rate-btn {
-padding:0 0px 0 1rem;
-}
-
-.rate-num .btn{
-   display: none;
-}
-
-.rate-btn .rate-points{
-   display: none;
-}
-
-.rate-num  .rate-points{
-border-radius: 5px ;
-}
-
-.rate-btn  .rateup{
-border-left: solid 1px #633;
-border-radius:5px 0 0 5px ;
-}
-
-/* 
-----------------------------
-普通目录 
-----------------------------
-*/
-
-#u-in-phone .toc-in ul,
-.toc-in  p{
- font-size: 120%;
- text-align: center;
-  border: 5px double grey;
-  padding: 5px;
- margin: 10px 4rem 0 4rem;
-}
-
-.toc-in  p:hover{
-background: rgba(1,1,1,0.1);
-}
-
-#u-in-phone .toc-in ul{
-  list-style-type:none;
- margin: 10px 5rem 0 5rem;
-}
-
-#u-in-phone  .collapsible-block {
-
-    text-align: center;
-}
-
-#u-in-phone table{
-  margin: 0 auto !important;
-}
-
-#u-in-phone{
- display: none;
-}
-
-#u-in-phone{
- display: none;
-}
-
-/* 
-----------------------------
-手机屏幕 
-----------------------------
-*/
-
-@media (max-width: 479px) {    
-.memu-ch{
- display: none;
-}
-  #u-in-phone{
- display: block;
-}
-}
-</style>
-<style>
-.book-annotation-1,
-.book-annotation-2 {
-display:none;
-}
-
-.shelf-0 .book-annotation-2 {
-display:block !important;
-}
-
-.my-plank-{$my-plank} .et-plank {
-    background: {$plank-background};
-    -webkit-filter:  {$plank-filter};
-    filter: {$plank-filter};
-    transform: rotateX(0deg);
-    background-blend-mode: overlay, normal;
-    background-size:  {$plank- background-size};
-    border-radius:{$plank-border};
-    border-radius:{$plank-border-radius};
-}
-</style>
-<style>
-.ch-1 .tt-txt h1::before,
-.ch-1 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-1 .tt-txt h1::before,
-.ch-1 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-1 .tt-txt   h1{
-font-family: {$font-family-header};
-font-family: 'Ma Shan Zheng';
-font-size: {$font-size};
-}
-
-.ch-1  .tt-txt   p{
-font-family: {$font-family-subheader};
-font-family: 'Ma Shan Zheng';
-}
-
-.ch-1 .use-sub-tt{
-display:none;
-}
-
-.ch-1 .tt-{$self-line}{
-  background:tt-{$self-line-img} no-repeat scroll center transparent;
-}
-
-.ch-1 .tt-txt p{
-        display:none;
-}
-
-.ch-1 .tt-line-top, 
-.ch-1 .tt-line-bottom {
-    background: {$line-img} no-repeat scroll center transparent;
-}
-
-@media (max-width: 479px) {
-  .ch-1 .tt-txt h1{
-     font-size: {$phone-font-size};
-   }
-}
-</style>
-<style>
-.ch-2 .tt-txt h1::before,
-.ch-2 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-2 .tt-txt h1::before,
-.ch-2 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-2 .tt-txt   h1{
-font-family: {$font-family-header};
-font-family: 'Ma Shan Zheng';
-font-size: {$font-size};
-}
-
-.ch-2  .tt-txt   p{
-font-family: {$font-family-subheader};
-font-family: 'Ma Shan Zheng';
-}
-
-.ch-2 .use-sub-tt{
-display:{$use-sub-tt};
-}
-
-.ch-2 .tt-{$self-line}{
-  background:tt-{$self-line-img} no-repeat scroll center transparent;
-}
-
-.ch-2 .tt-txt p{
-        display:{$use-sub-tt};
-}
-
-.ch-2 .tt-line-top, 
-.ch-2 .tt-line-bottom {
-    background: {$line-img} no-repeat scroll center transparent;
-}
-
-@media (max-width: 479px) {
-  .ch-2 .tt-txt h1{
-     font-size: {$phone-font-size};
-   }
-}
-</style>
-<style>
-.book-annotation-1,
-.book-annotation-2 {
-display:none;
-}
-
-.shelf-1 .book-annotation-1 {
-display:block !important;
-}
-
-.my-plank-{$my-plank} .et-plank {
-    background: {$plank-background};
-    -webkit-filter:  {$plank-filter};
-    filter: {$plank-filter};
-    transform: rotateX(0deg);
-    background-blend-mode: overlay, normal;
-    background-size:  {$plank- background-size};
-    border-radius:{$plank-border};
-    border-radius:{$plank-border-radius};
-}
-</style>
-<style>
-.book-annotation-1,
-.book-annotation-2 {
-display:none;
-}
-
-.shelf-2 .book-annotation-2 {
-display:block !important;
-}
-
-.my-plank-{$my-plank} .et-plank {
-    background: {$plank-background};
-    -webkit-filter:  {$plank-filter};
-    filter: {$plank-filter};
-    transform: rotateX(0deg);
-    background-blend-mode: overlay, normal;
-    background-size:  {$plank- background-size};
-    border-radius:{$plank-border};
-    border-radius:{$plank-border-radius};
-}
-</style>
-<style>
-.ch-3 .tt-txt h1::before,
-.ch-3 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-3 .tt-txt h1::before,
-.ch-3 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-3 .tt-txt   h1{
-font-family: {$font-family-header};
-font-family: 'Ma Shan Zheng';
-font-size: {$font-size};
-}
-
-.ch-3  .tt-txt   p{
-font-family: {$font-family-subheader};
-font-family: 'Ma Shan Zheng';
-}
-
-.ch-3 .use-sub-tt{
-display:{$use-sub-tt};
-}
-
-.ch-3 .tt-{$self-line}{
-  background:tt-{$self-line-img} no-repeat scroll center transparent;
-}
-
-.ch-3 .tt-txt p{
-        display:{$use-sub-tt};
-}
-
-.ch-3 .tt-line-top, 
-.ch-3 .tt-line-bottom {
-    background: {$line-img} no-repeat scroll center transparent;
-}
-
-@media (max-width: 479px) {
-  .ch-3 .tt-txt h1{
-     font-size: {$phone-font-size};
-   }
-}
-</style>
-<style>
-.book-annotation-1,
-.book-annotation-2 {
-display:none;
-}
-
-.shelf-4 .book-annotation-2 {
-display:block !important;
-}
-
-.my-plank-yes .et-plank {
-    background: var(--bluepaper-image);
-    -webkit-filter:  drop-shadow(4px 15px 5px #1f2a36);
-    filter: drop-shadow(4px 15px 5px #1f2a36);
-    transform: rotateX(0deg);
-    background-blend-mode: overlay, normal;
-    background-size:  {$plank- background-size};
-    border-radius:{$plank-border};
-    border-radius:25px;
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 #162c44, 0.125rem 0.125rem 0 #162c44, 0.1875rem 0.1875rem 0 #162c44, 0.25rem 0.25rem 0 #162c44, 0.3125rem 0.3125rem 0 #162c44, 0.375rem 0.375rem 0 #162c44, 0.4375rem 0.4375rem 0 #162c44, 0.58rem 0.8rem 0 #162c44;
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:url("http://scpsandboxcn.wikidot.com/local--files/image/Bgr-WL-Blue.png");;
-    border-left:2px solid #320f79;
-    border-right:2px solid #320f79;
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:2px solid #320f79 ;
-    border-bottom:2px solid #320f79  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:rgba(9,9,9,0.5);
-background:rgba(9,9,9,0.5);
-border: 5px inset #333;
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 #162c44, 0.125rem 0.125rem 0 #162c44, 0.1875rem 0.1875rem 0 #162c44, 0.25rem 0.25rem 0 #162c44, 0.3125rem 0.3125rem 0 #162c44, 0.375rem 0.375rem 0 #162c44, 0.4375rem 0.4375rem 0 #162c44, 0.58rem 0.8rem 0 #162c44;
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 {$self-book-color}, 0.125rem 0.125rem 0 {$self-book-color}, 0.1875rem 0.1875rem 0 {$self-book-color}, 0.25rem 0.25rem 0 {$self-book-color}, 0.3125rem 0.3125rem 0 {$self-book-color}, 0.375rem 0.375rem 0 {$self-book-color}, 0.4375rem 0.4375rem 0 {$self-book-color}, 0.58rem 0.8rem 0 {$self-book-color};
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 {$self-book-color}, 0.125rem 0.125rem 0 {$self-book-color}, 0.1875rem 0.1875rem 0 {$self-book-color}, 0.25rem 0.25rem 0 {$self-book-color}, 0.3125rem 0.3125rem 0 {$self-book-color}, 0.375rem 0.375rem 0 {$self-book-color}, 0.4375rem 0.4375rem 0 {$self-book-color}, 0.58rem 0.8rem 0 {$self-book-color};
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 {$self-book-color}, 0.125rem 0.125rem 0 {$self-book-color}, 0.1875rem 0.1875rem 0 {$self-book-color}, 0.25rem 0.25rem 0 {$self-book-color}, 0.3125rem 0.3125rem 0 {$self-book-color}, 0.375rem 0.375rem 0 {$self-book-color}, 0.4375rem 0.4375rem 0 {$self-book-color}, 0.58rem 0.8rem 0 {$self-book-color};
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 {$self-book-color}, 0.125rem 0.125rem 0 {$self-book-color}, 0.1875rem 0.1875rem 0 {$self-book-color}, 0.25rem 0.25rem 0 {$self-book-color}, 0.3125rem 0.3125rem 0 {$self-book-color}, 0.375rem 0.375rem 0 {$self-book-color}, 0.4375rem 0.4375rem 0 {$self-book-color}, 0.58rem 0.8rem 0 {$self-book-color};
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{
---box-true-set-1:0.0625rem 0.0625rem 0 #162c44, 0.125rem 0.125rem 0 #162c44, 0.1875rem 0.1875rem 0 #162c44, 0.25rem 0.25rem 0 #162c44, 0.3125rem 0.3125rem 0 #162c44, 0.375rem 0.375rem 0 #162c44, 0.4375rem 0.4375rem 0 #162c44, 0.58rem 0.8rem 0 #162c44;
-}
-
-#u-listbook-set-1 .cover-true  {
-    background:{$self-book-background};
-    border-left:{$self-book-border};
-    border-right:{$self-book-border};
-
-    -moz-box-shadow: var(--box-true-set-1);
-    -o-box-shadow: var(--box-true-set-1);
-    -webkit-box-shadow: var(--box-true-set-1);
-    box-shadow: var(--box-true-set-1);
-}
-
-@media (max-width: 479px) {
-.trans-yes  #u-listbook-set-1 .cover-true {
-    border-left:0;
-    border-right:0;
-    border-top:{$self-book-border} ;
-    border-bottom:{$self-book-border}  ;
-}
-}
-
-#u-listbook-set-1 .link-true a {
-    color:{$self-link-color};
-}
-
-#u-listbook-set-1 .description-true {
-    color:{$self-description-color};
-}
-
-#u-listbook-set-1 .info-true  {
- padding:1%;
- box-shadow:{$self-info-shadow};
-background:{$self-info-background};
-border: {$self-info-border};
-}
-</style>
-<style>
-:root{   
-    /* 书本厚度描框 
---box-bk-{$cover-num}:0.0625rem 0.0625rem 0 rgba(var(--cl-a1),1), 0.125rem 0.125rem 0 rgba(var(--cl-a2),1), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2),1), 0.25rem 0.25rem 0 rgba(var(--cl-a3),1), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2),1), 0.375rem 0.375rem 0 rgba(var(--cl-a2),1), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2),1), 0.58rem 0.8rem 0 rgba({$cover-rgba});
-
---box-bk-0:0.0625rem 0.0625rem 0 rgba(var(--cl-a1),1), 0.125rem 0.125rem 0 rgba(var(--cl-a2),1), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2),1), 0.25rem 0.25rem 0 rgba(var(--cl-a3),1), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2),1), 0.375rem 0.375rem 0 rgba(var(--cl-a2),1), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2),1), 0.58rem 0.8rem 0 rgba(var(--cl-a4),1);
-*/
-}
-
-@media (max-width: 495px) {
-   background-size: 90% 1.5rem;
-    font-size:{$phone-size};
-}
-}
-
-.bks-bk-1 .note-wrap{
-
-    color: {$text-color};
-    background-color: {$page-color};
-
-  box-shadow:0.0625rem 0.0625rem 0 rgba(var(--cl-a1),1), 0.125rem 0.125rem 0 rgba(var(--cl-a2),1), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2),1), 0.25rem 0.25rem 0 rgba(var(--cl-a3),1), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2),1), 0.375rem 0.375rem 0 rgba(var(--cl-a2),1), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2),1), 0.58rem 0.8rem 0 rgba(var(--cl-a4),1);
-
-  box-shadow:0.0625rem 0.0625rem 0 rgba(var(--cl-a1),1), 0.125rem 0.125rem 0 rgba(var(--cl-a2),1), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2),1), 0.25rem 0.25rem 0 rgba(var(--cl-a3),1), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2),1), 0.375rem 0.375rem 0 rgba(var(--cl-a2),1), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2),1), 0.58rem 0.8rem 0 rgba({$cover-rgba});
-
-}
-
-.bks-bk-1 .note-bookmark{
-font-family: {$font-family};
-background-size:{$mark-size};
-background-position:{$mark-position};
-}
-
-/*
-.bks-bk-1  .note-page {
- background-image: linear-gradient(to top ,transparent 0%,55,55,55,1 1%, transparent 5%, 55,55,55,1 11%,transparent 12%,transparent 20%);
-
- background-image: linear-gradient(to right, transparent 46%, {$mark-rgba} 46.1%, {$mark-rgba} 49%, transparent 49.1%)
-*/
-}
-</style>
-<style>
-.ch-4 .tt-txt h1::before,
-.ch-4 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-4 .tt-txt h1::before,
-.ch-4 .tt-txt h1::after {
-  background:var(--img-1);
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
-.ch-4 .tt-txt   h1{
-font-family: {$font-family-header};
-font-family: 'Ma Shan Zheng';
-font-size: {$font-size};
-}
-
-.ch-4  .tt-txt   p{
-font-family: {$font-family-subheader};
-font-family: 'Ma Shan Zheng';
-}
-
-.ch-4 .use-sub-tt{
-display:none;
-}
-
-.ch-4 .tt-{$self-line}{
-  background:tt-{$self-line-img} no-repeat scroll center transparent;
-}
-
-.ch-4 .tt-txt p{
-        display:none;
-}
-
-.ch-4 .tt-line-top, 
-.ch-4 .tt-line-bottom {
-    background: {$line-img} no-repeat scroll center transparent;
-}
-
-@media (max-width: 479px) {
-  .ch-4 .tt-txt h1{
-     font-size: {$phone-font-size};
-   }
-}
-</style>
-<style>
-.book-annotation-1,
-.book-annotation-2 {
-display:none;
-}
-
-.shelf-999 .book-annotation-1 {
-display:block !important;
-}
-
-.my-plank-{$my-plank} .et-plank {
-    background: {$plank-background};
-    -webkit-filter:  {$plank-filter};
-    filter: {$plank-filter};
-    transform: rotateX(0deg);
-    background-blend-mode: overlay, normal;
-    background-size:  {$plank- background-size};
-    border-radius:{$plank-border};
-    border-radius:{$plank-border-radius};
-}
-</style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;display=swap');
-
-.no-sel {
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-    color:#555;
-    padding:0 0rem 0 1rem;
-}
-
-.blockquote p{
-  line-height: 1.4rem;
-}
-
-#u-bk-1{
-display:none;
-}
-
-#u-bk-1:target{
-display:block;
-}
-
-.txt-1{
-text-indent: 2em;
-font-size:150%;
-}
-
-.txt-2{
-font-size:130%;
-}
-
-.help {
-    display: flex;
-    align-content: stretch;
-    padding-top: 1em;
-}
-
-.help blockquote {
-    margin: 0;
-    font-size: 85%;
-}
-
-.help blockquote > p {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    margin-right: 0;
-    min-height: 2rem;
-    margin: 0;
-}
-
-.help blockquote > p * {
-    margin: 0 0.1rem;
-    height: 100%;
-}
-
-.help blockquote:nth-of-type(1) {
-    background: transparent;
-    border: unset;
-    box-shadow: unset;
-    text-align: right;
-    margin-right: 0;
-    padding: 0;
-}
-
-.help blockquote:nth-of-type(1) > p {
-    justify-content: flex-end;
-}
-
-.help blockquote:nth-of-type(2) {
-    margin-left: 1em;
-    width: 50%;
-}
-</style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -2455,7 +464,7 @@ font-size:130%;
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=component&pagename=component:bookshelf-template" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=toxic-cola-personnel-file" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -2477,7 +486,7 @@ font-size:130%;
                     
                     
                         <div id="page-title">
-                            被放逐者的书架 样版
+                            外派中級研究助理Toxic Cola的人事檔案
                         </div>
                     
 
@@ -2490,1491 +499,852 @@ font-size:130%;
                     <div id="page-content">
                         
 
-<div class="unmargined" style="margin: 0 auto 20px; background-color: #b01; border: solid 1px #b01; border-radius: 20px; box-shadow: 0 1px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.8), inset 0 10px 1px rgba(255,255,255,.6), inset 0 -15px 30px rgba(0,0,0,.2); text-align: center; width: 500px;">
-<div class="unmargined" style="margin: 20px 0; font-size: 250%; color: #fff; font-weight: bold; text-shadow: 1px 2px 3px rgba(0,0,0,.5);">
-<p>我和我的小伙伴们都惊呆了！！</p>
-</div>
-<div class="unmargined" style="margin: 20px 0; color: #ff6;">
-<p>此页为于SCP维基内部使用的<em>样版</em>页。</p>
-</div>
-<div class="unmargined" style="margin: 20px 0; font-size: 120%; font-weight: bold; color: #fff; text-shadow: 1px 2px 3px rgba(0,0,0,.25);">
-<p>在未经同意的情况下<br />
-请不要动这页里面的东西</p>
-</div>
-</div>
-<hr />
-<div id="u-ch-top"></div>
-
-
-
-<div class="creditRate">
-<div class="rateBox">
-<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+20</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
-<div class="creditButton">
-<p><a class="fa fa-info" href="#u-credit-view"></a></p>
-</div>
-</div>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div id="u-credit-view">
-<div class="fader">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-<div class="modalcontainer">
-<div class="modalbox">
-<div style="text-align: center;">
-<h2><span>著作信息</span></h2>
-</div>
-<hr />
-<div class="credit first">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-<h3 id="toc0"><span>关联组件</span></h3>
-<ul>
-<li><a href="/component:bookshelf-source">被放逐者的书架：源代码</a></li>
-<li><a href="/component:bookshelf-shelf-top">被放逐者的书架：顶部组件</a></li>
-<li><a href="/component:bookshelf-shelf-bottom">被放逐者的书架：底部兼隔板组件</a></li>
-<li><a href="/component:bookshelf-books">被放逐者的书架：书籍组件</a></li>
-<li><a href="/component:bookshelf-module">被放逐者的书架：书籍Module组件</a></li>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-f8724c76410087ee34cd6c13b57f26bc" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>文件編號 TC-13008 研究助理Toxic Cola的人事檔案</em></a></li>
+<li><a href="javascript:;"><em>文件編號 TC-29155 問題罐裝汽水批次質檢報告</em></a></li>
+<li><a href="javascript:;"><em>文件編號 TC-38042 T.C. 研究助理的雜項筆記</em></a></li>
+<li><a href="javascript:;"><em>作品訊息</em></a></li>
+<li><a href="javascript:;"><em>個人沙盒</em></a></li>
+<li><a href="javascript:;"><em>未知訊息</em></a></li>
 </ul>
-</div>
-<hr />
-<div class="credit-back" style="text-align: center;">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-</div>
-<div class="creditBottomRate" style="position:relative;height:30px;">
-<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+20</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="shelf-0 shelf-wrap trans-yes my-plank-{$my-plank}">
-<div class="shelf-yes"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:of-the-masters-of-books">群书众主</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1555846070 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Apr 2019 11:27</span></em>。<br />
-<strong>评分</strong>：<em>2</em>，<strong>评语</strong>：<em>4</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1555846070 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Apr 2019 11:27</span></em>。<br />
-<strong>评分</strong>：<em>2</em>，<strong>评语</strong>：<em>4</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:see-the-darkness">我看到了此世间的黑暗</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1553613158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Mar 2019 15:12</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>1</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1553613158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Mar 2019 15:12</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>1</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:a-suicide-note">自杀者的笔记</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1551055801 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Feb 2019 00:50</span></em>。<br />
-<strong>评分</strong>：<em>5</em>，<strong>评语</strong>：<em>2</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1551055801 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Feb 2019 00:50</span></em>。<br />
-<strong>评分</strong>：<em>5</em>，<strong>评语</strong>：<em>2</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:hymns-for-the-cruel-wars">残忍之战的圣歌</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1550420944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2019 16:29</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>2</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1550420944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2019 16:29</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>2</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:book-of-the-hidden">藏幽之书</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1549637994 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Feb 2019 14:59</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>4</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1549637994 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Feb 2019 14:59</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>4</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="/wanderers:min-min">已收集的备忘录</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1549378001 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Feb 2019 14:46</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>1</em></p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<br />
-<strong>整理时间</strong>：<em><span class="odate time_1549378001 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Feb 2019 14:46</span></em>。<br />
-<strong>评分</strong>：<em>1</em>，<strong>评语</strong>：<em>1</em></p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-    
-    <div class="pager"><span class="pager-no">page 6 of 6</span><span class="target"><a href="/component:bookshelf-template/p/5">&laquo; previous</a></span><span class="target"><a href="/component:bookshelf-template/p/1">1</a></span><span class="target"><a href="/component:bookshelf-template/p/2">2</a></span><span class="target"><a href="/component:bookshelf-template/p/3">3</a></span><span class="target"><a href="/component:bookshelf-template/p/4">4</a></span><span class="target"><a href="/component:bookshelf-template/p/5">5</a></span><span class="current">6</span></div>
-    
-    </div></div>
-<div class="et-plank-wrap">
-<div class="et-plank">
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-</div>
-</div>
-</div>
-<p><br /></p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;太长不看版&nbsp;</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;太长不看版&nbsp;</a></div>
-<div class="collapsible-block-content">
-<h4 id="toc1"><span>简述</span></h4>
-<p>只需引用一次：</p>
-<blockquote>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-source]]</span></p>
-</blockquote>
-<p>可重复引用：</p>
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans= <span class="no-sel">决定书架在手机屏幕下是否横排，填yes或no</span><br />
-|list-shelf= <span class="no-sel">书架编号</span><br />
-|book-annotation= <span class="no-sel">决定书籍采取A类还是B类注释，填1或2，不填则无</span><br />
-]]</p>
-<p><span class="no-sel">重复引用下方组件即可重复排列书籍：</span><br />
-<em><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover= <span class="no-sel">封面颜色，见预设样式，填对应英文</span><br />
-|link-color= <span class="no-sel">链接颜色，见预设样式，填对应英文</span><br />
-|book-link= <span class="no-sel">链接地址</span><br />
-|link-name= <span class="no-sel">链接文本</span><br />
-|book-info= <span class="no-sel">注释在此</span><br />
-<span style="white-space: pre-wrap;">]]</span></em></p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-</div>
-<hr />
-<h4 id="toc2"><span>复制用</span></h4>
-<blockquote>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-source]]</span></p>
-</blockquote>
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans=yes<br />
-|list-shelf=0<br />
-|book-annotation=1<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=green<br />
-|link-color=gold<br />
-|book-link= <span class="no-sel">链接地址</span><br />
-|link-name= <span class="no-sel">链接文本，<strong>限11个汉字</strong>。</span><br />
-|book-info= <span class="no-sel">注释在此</span><br />
-<span style="white-space: pre-wrap;">]]</span></p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=red<br />
-|link-color=gold<br />
-|book-link= <span class="no-sel">链接地址</span><br />
-|link-name= <span class="no-sel">链接文本</span><br />
-|book-info= <span class="no-sel">注释在此</span><br />
-<span style="white-space: pre-wrap;">]]</span></p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-</div>
-</div>
-</div>
-</div>
-<p><br /></p>
-<div id="u-in-phone">
-<div class="collapsible-block">
-<div class="collapsible-block-folded" style="display:none"><a class="collapsible-block-link" href="javascript:;">╠&nbsp;打开目录&nbsp;╣</a></div>
-<div class="collapsible-block-unfolded">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">╣&nbsp;收起目录&nbsp;╠</a></div>
-<div class="collapsible-block-content">
-<div class="toc-in">
-<p><a href="#u-ch1">用法</a></p>
-<ul>
-<li><a href="#u-ch-1-1">引用源代码</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-1-2">封装书架</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-1-3">添加书籍</a></li>
-</ul>
-<p><a href="#u-ch2">示例</a></p>
-<ul>
-<li><a href="#u-ch-2-1">示例一</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-2-2">示例二</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch3">示例三</a></li>
-</ul>
-<p><a href="#u-ch4">Module相关</a></p>
-<p><a href="#u-ch-bottom">▽ 跳至底部</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="u-hide-memu"></div>
-<div id="u-close-memu"></div>
-<div id="u-float-memu" class="memu-ch memu-pg">
-<div class="fm-memu">
-<p><span class="hide-memu"><a href="#u-hide-memu">隐藏</a></span> <span class="hide-memu-tip"><a href="javascript:;">移出鼠标</a></span> | <a href="#u-close-memu">关闭</a><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;</span></p>
-</div>
-<div id="u-show-bar"></div>
-<div id="u-nap-bar"></div>
-<div class="rate-bar">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;进行评分</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;进行评分</a></div>
-<div class="collapsible-block-content">
-<div class="rate-num"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+20</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-<div class="rate-btn"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+20</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="memu-list">
-<p><a href="#u-ch1">用法</a></p>
-<ul>
-<li><a href="#u-ch-1-1">引用源代码</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-1-2">封装书架</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-1-3">添加书籍</a></li>
-</ul>
-<p><a href="#u-ch2">示例</a></p>
-<ul>
-<li><a href="#u-ch-2-1">示例一</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch-2-2">示例二</a></li>
-</ul>
-<ul>
-<li><a href="#u-ch3">示例三</a></li>
-</ul>
-<p><a href="#u-ch4">Module相关</a></p>
-</div>
-<hr />
-<div class="fm-goto">
-<p><span class="fm-goto-top"><a href="#main-content">回到标题</a></span></p>
-<p><span class="fm-goto-bottom"><a href="#page-options-bottom">跳至底部</a></span></p>
-</div>
-</div>
-<div id="u-ch1"></div>
-<div class="tt-ch ch-1">
-<div class="tt-line-top tt-{$self-line}"></div>
-<div class="tt-txt">
-<h1 id="toc3"><span>介绍</span></h1>
-<p><span class="sub-tt">{$sub-title}</span></p>
-</div>
-<div class="tt-line-bottom tt-{$self-line}"></div>
-</div>
-
-
-
-<div class="txt-1">
-<p>该组件可模拟书架与其上书籍样式，适用于搭配图书馆版式或者营造相近的气氛，总之多多少少能令页面美观。不过不建议添加太多书籍，以免造成页面卡顿。</p>
-<p>要使用该组件，请按下列步奏进行：</p>
-</div>
-<p><br /></p>
-<div id="u-ch-1-1"></div>
-<hr />
-<div style="text-align: center;">
-<h2 id="toc4"><span>一：引用源代码</span></h2>
-</div>
-<hr />
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p><strong>名稱：</strong>Toxic Cola</p>
+<p><strong>別稱：</strong>毒樂、我是可樂啦</p>
+<p><strong>職位：</strong>外派中級研究助理</p>
+<p><strong>安保許可：</strong><br />
+　通用安保許可：<br />
+　　2級<br />
+　個別安保許可：<br />
+　　<a href="/scp-cn-609">SCP-CN-609</a>/3級<br />
+　　<a href="/scp-cn-575">SCP-CN-575</a>/3級<br />
+　　<a href="/scp-cn-594">SCP-CN-594</a>/3級<br />
+　　<a href="/scp-cn-595">SCP-CN-595</a>/3級<br />
+　　<a href="/who-would-you-trust-when-doom-happen">緊急求助介面開發小組</a>/3級</p>
+<p><strong>職務：</strong><br />
+定期外派至各site及各部門，以協助高級研究員進行異常定性及定量實驗、執行及操作探索實驗、分析實驗數據、編寫初期報告及個體文檔、分析具潛在異常可能性的物品。</p>
+<p><strong>參與部門：</strong><br />
+異常空間結構工程學研究部<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup><br />
+模因神經編程學研究部<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup><br />
+異常人類行為學研究部<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup><br />
+民俗及非實在智能實體學研究部<sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup><br />
+迫真空手部<sup class="footnoteref"><a id="footnoteref-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-5')">5</a></sup><br />
+人工智能社會學研究部<sup class="footnoteref"><a id="footnoteref-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-6')">6</a></sup><br />
+IoI研究部<sup class="footnoteref"><a id="footnoteref-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-7')">7</a></sup><br />
+信仰及宗教符號學工程部<sup class="footnoteref"><a id="footnoteref-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-8')">8</a></sup><br />
+異常麻雀部<sup class="footnoteref"><a id="footnoteref-9" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-9')">9</a></sup></p>
+<p><strong>個人簡介：</strong></p>
+<p>工作的時候為人比較「去中心化」，但是不工作的時候整天只想著不想工作。<br />
+熱愛耍酷的小玩意(但其實一點也不酷)。常常覺得轉筆很帥。<br />
+愛好打音遊，機台的特別喜歡。可是常常調到過去的站點的附近的沒有遊戲中心，所以打的頻率就減少了。很想念以前在香港觀塘區山上的小站點出去跑下山就是遊戲中心的日子。<br />
+什麼都會一點，卻什麼都不精通。結果就成了這樣子，外派到一堆部門去幫忙，但沒有實力長期在一個部門深入研究。<br />
+有怪怪的中二病。<br />
+堅定不移理論派。做什麼方面的事都有滿滿的理論。然而有著理論卻不作實事。</p>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
 <p><br />
-<strong>该代码在一个页面只需要添加一次。</strong></p>
-<blockquote>
-<p><strong>[[include :scp-wiki-cn:component:bookshelf-source]]</strong></p>
-</blockquote>
-<p><br /></p>
-<p><br /></p>
-<hr />
-<div id="u-ch-1-2"></div>
-<div style="text-align: center;">
-<h2 id="toc5"><span>二：封装书架</span></h2>
-</div>
-<hr />
-<p><br /></p>
-<h4 id="toc6"><span>1. 添加以下代码</span></h4>
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans=yes<br />
-|list-shelf=1<br />
-|book-annotation=1<br />
-]]</p>
-<p>书籍添加处</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-</div>
-<p><br /></p>
-<h4 id="toc7"><span>2. 选择自定义内容</span></h4>
-<div class="help">
-<blockquote>
-<p>include组件代码块的起始，<strong>需完整地黏贴在开头</strong> ↦</p>
-<p>书架的编号，添加此可更好与其他书架区别 ↦</p>
-<p><strong>必填</strong>，书架是否会在手机屏幕下改为横排<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup> ↦</p>
-<p>书籍额外信息展示形式<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup> ↦</p>
-<p>是否使用自定义隔板样式<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup> ↦</p>
-<p>自定义隔板背景色 ↦</p>
-<p>自定义隔板背景覆盖样式 ↦</p>
-<p>自定义隔板滤镜 ↦</p>
-<p>自定义隔板边框 ↦</p>
-<p>自定义隔板边框裁角 ↦</p>
-<p>结束引用块 ↦</p>
-</blockquote>
-<blockquote>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span></p>
-<p>|list-shelf= 1</p>
-<p>|trans= yes / no</p>
-<p>|book-annotation= 1 / 2 / 其他则无</p>
-<p>|my-plank=yes</p>
-<p>|plank-background=</p>
-<p>|plank-background-size=</p>
-<p>|plank-filter=</p>
-<p>|plank-border=</p>
-<p>|plank-border-radius=</p>
-<p>]]</p>
-</blockquote>
-</div>
-<p><br /></p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;复制用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;复制用</a></div>
-<div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|list-shelf=<br />
-|trans=<br />
-|book-annotation=<br />
-|my-plank=yes<br />
-|plank-background=<br />
-|plank-background-size=<br />
-|plank-filter=<br />
-|plank-border=<br />
-|plank-border-radius=<br />
-<span style="white-space: pre-wrap;">]]</span></p>
-<p>书籍在此。</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-</div>
-<p><br />
+<br />
+<br />
+<br />
+<br />
+Ť̍̈͒͗̀h̊̓̋ͥ͒̋͒͢ì̆̚s ͆c̷̈̓ͯoͯ͂̑̂l̂͌ͥ̅a͛́̃ ̌̈̓ͬ͂̊͛į́s̃ͩͪ̅̍̈̓̀ ̉̕p̌͒͡o͌́ͮ̿̾̕i̿ͪͭͪ̈͑s̷̃͐̾̄̐̚ǒ̂n͗͒ͪ̄͛ͮe̵̎̎͆̅ͤͥd͟ ̔̚th̓̾ͭ̇i͋́s ͤco̍̏̍͛͡l̐̆a̶͆̏ͪ͂ ͂́͒i̓̋̓͛̔̏̽s͆͡ pò͛̏̅ͤ̚i̿͗͂̿ͩ͠s̿͞oͮͤͧ͑͌ͩͮṅ̡̎͂eͮ́̂̋̾d͛̒ͭ ͆͜tͮͪͬ̈̃͟h̏̇iͬͥ̊̓̒̍͟s̾̋̿͒͞ ̂ͦ̿̓̔҉c̃̃̑͋ͭͤ̚o̢ͧ͌l̓͢a̧͆̄̀ ̷ͣ͂̂ͪ͂iͨͥ̉͡ṡ͌̏ͦ ̒ͪ̕ṗ̔̄̊̈̚o͞i̓s̓͂̉ͬ͠ơn̵̔̌ê̾͐̍̽͑͞d͆ ͒ͯ̽͒̈̐̚͞t̡͌̋͌͐̂h̡̍i̋s͆ͥ͊̾̇ ͨ̂̂ͤ͟c͌͢ȍ̿̏l̢̈́̿̐ͥ͂͑̋a͑ͬ͗ͥ̒ ̿ͭͪ̋̔͞ī̀̉͑͊͊̚҉ş ̷ͤ͌ͣ́͆ͣ̅p̈́̽̌҉oĩ̾ş̏̄ͩ̈́͗͐one͒ͤ͜d̡̉ͭ̂̿ͤ̑ͦ ͜t̄̅̄͆ͦ̑ͫh͝i͐̿̀s̿̽͢ ͦ̔͒̔͐ͬ̐c̛̋̌̐ȏ͑͆̄̚l̒a ̉̌ͭ̚͟i̐̆ͯ̈́͘sͧͫͥ̌́̿ ̔͑͒͌p̛o͒̇̑̈̓̇͂ȋ́̇ͨ́̕s͐͐́̉̃ͦoͫͮ͠nͤ̇̈͐͟eͤd ͑҉t̅ͤ̽ͬh͗̐ͪ҉i͠s͐͐ ͪͥͣ̑͆ͤcͯol̃ͨ̚͏aͦ̒̎̈́͞ i̡͂͆̂̆̓s̡̽͗̇̓̂̊̎ ̷̊̐͆ͭ͊̇ͣp̾͡o̅ͯͣi͟ŝͬo̶ͬ͆̽ͮͬͤn̶ͫe͒̈́̆d ̶̈ͭ̍ͩ̌ͨ͛t̍͌ḧ͐̾̓iͩ͐͛̑sͣ̅ͩ̽ ͆̑͒͛̋̾cͦ͛ͤ̾o͊̂̏̇̆l̴ǎ̑͆ͮ͒̂̀ ̴ͯ̿ͧ̄̊͊̈i̾s̴̄͗ ͮ̈́̋̓ͥp̽̌͆̆̿̉͡o̶͋̾ͥͦ̆iͣ͜sͦͣ͗̇̽on̍͟eͬ̊͑̏̃͛d͗ ̡̓͗ͮ̓̂ͣt̢͛͌̿̇͑̉̒h͊ͨ͂͒̿ͣ̚iͪ̿̃̋̓s͛͆̐̽ ̽̾̌̑ͤͪc̅̓̓̒͊̎ͥo̍̓̓l̿̀̈́̍a ̽ͥ̑ͫ̊̎̋î͏sͣ̎̇̑̍͌ ͆p̀̔ͮ̑̔o̵i͞s̈ͦ̒͋ỏ̸͗ͤ̚ńͦͧ̈eͤ̉̊̐̐̀͞d̽̇̅͑̈̑̈́͡ ̊̐ͨ͗̂̑th̄͋͛̀i̓s͊ͯͭͫ ̛̚c̴o̐̓̃͗la̿̒ͧ͆̂̊͜ ̌̈ͬiͧ̌́҉s̡̑ ̶̆͊̍ͨͪpo̊͌ͫỉͭ̅̈́̿s̾̌ô̅ͬ͋͂ͩn̐̋̀̆̆eͮ̔͠d̂҉ ̑ͦͦ̅ͪ̉̄ťͯ̊ͧ́h̓̊ǐ͒̂ͨ͌̌sͩ̒͋̇̔͢ ĉ̒̎͗ͧ͘ô͊̒̏́l̽̐ͧ̄̏͊â ͌̃ͮ̉̂͌ͯȉ̵̓ͯ̈́̄͛̉s̓̉ͤͩͣͩ͞ ̑͛̀̓̍͂ͧ͞pͪ̎̑́̏õ̉͆̐̚҉iͥͪ̂̈́͑́̏ŝ͝o͌̾ͪͥ̂n͆ͭe̾͗͆̑ͯd̆͆͒͜ ́͋ͪ͂ͯ̾͛͏t̓ͭ͑h̸͂̉̐ͫͫ̃̚i̸s̎ͯͭ̅̕ ̶̉͂̈̉cͩ͆͊̒̚̕o̎̋lͬ́̄̎͛̍ͯã̾̉̂͌͆̀͝ ̌̏ͫͯ́͊i̶ͥ̔͒̾̀͐sͯ ̧͑̊͆̎p̓͛̆ͭô̍̓͛͆̋͝i̴͆̅͗̾ͣs͑̋̾ͫ̀̍̊oͥnͥ̿ȩ̔̅̓̔͂̅̔dͣ̌̇ͫ̒͗ ̴͌͐̓ͥt̨h̾ͥ͋̃͒͞iͬ̆̅s̛͐ͭ͂̌͗ ̸͑͐̓̍ͦ́ĉ̆͋̀ͨͦ̈oͫ͌͗lͤͨ͊ͭͫ̓ǎ̊̏̈́̈ ̢i͊̐̀̑̂̑͜s̒͗ ͠p̴ͫ̎ͫ̏̽o̵̊̽i͆̆͆̽̊͒s̴̈̈̓̊͂̈́ͨŏͫͤͪͭń̶ͯ̈́e͌̊͂d̷͒̂̍̚ ̢̀͊̽̿́̃tͪ̚h̊̄͛i̔̋́̽̄́̌sͫ ̃cͬo͊̾̑̏ͩl͠ȁ̓ ̎̂̍ͭ̃͢ȋ̌̂͑̈ͨsͣ̽̈̋ ̍̊̈́̓͟p̑̊͐̌́̚̚͘o̵͗̈́̆̄͛ͨi̶̍͂̍͋ͪ͒ͨs̨̍̂ͭ͗̓o̐͐ͤ̂̂̚͏n͊ͨͬͬ̓̈͏e̛̾ͨ̋̎d͗̇̀ ̧ͨ͗͒̋ͦ̅͆t̷͛h͑̈́̏͛ͣi̶͂ͬs̸̿ͮ̽̿͂ ͪͩ̅̑̂̌͏cͣ̊͌͜o̡̔lͨ̍͗̄̽̀͏a̔ͣ̏ ̡͌ͫî͒͌͟s̈́͛͡ ̈́ͮ͂̐ͬp͛̈́͒ͩ͋̊o̷ͭi̊̓̽ͬ̈ͦ͐s̾̉͋͢o̧nͪͥ̆͐ͨͮ̑ed ̷̀̎̔̽͗͗̀t̊̀̋ͧ͘ḩ̉̿i̿̔͛҉s̵ͮ͑͋̍͑ ̷ͧc̾̋̐ͤ̽͆͗o̴̊ͬͪ̓̿l̅̌ͤ̇͆ͤa̎̂̏̒͊̍͌ ҉ḯ̄̿̎s͐̆͊͝ ̂̿͆pͫ̈́̉̓̾̎͟ȯͨ̀ͭ̏̚͠i̢ͪs͋ơͤ̓̃ͪͧ͆̏ne͂ͤ͟d̶̂̆ ҉tͮh̡ͬ̋̂͋̓͂ís̄̌ͩ͆̓̍ ̋̂̍ͤ͢ć͡ȍ̸̆͐̿̀͊ͭlͦ́͂͞à̒̚ ͒ḯ̸͒͊s̡ͦ̑͊ͥ̃ͩ ͏p̛̒͂̔ͩ̈́͛̚oͩ̀͂͑͜isͩ̇o̸̍͋nͩͥ̔ͫ͊̎͏e͐̓̀̍ͩdͮ̎̋ ̔͌̾́tͣ͛ͣ́h̸͌͗îͩͪ͊ͧ̎̄s̏ͩ͋̽̐͟ ͆͒͐̎͋̚c̡̅̽ͯ̅o̧̒̄ͦ̓ͭͣl̿̂ͨå̡̄̐͂͊ͩ ̶ĭ̄s͂҉ ͫ̓p̧̈̆̐ͥo͏i̢͛͒̏ͤ̔̉͋sͦ͐̔oͩͪ̈́ͬ̏n̡è̢͛̀ͩ̅̚d̈́ͥͯͭ̎́̍ ͑ͪ̾̊͂͑thͣͨ̏ͨ̊̀ḯ̡ͥ̓̋̑ͩsͣ ̆̂͗̿ͣ͐c̽̅̃̐̄̎͊͜ŏ̃̿̔̌͛͞l̨̇̈a̸̐ͦ̂ ͦͫ̇͒̋̾is̓ p̵͊ͭ̋oͪ̄ͯ̇̂̽i̓ͭ̽̑sͯ̽͑ͫo̸ͭ̑̐ͮ͊̿n̎̓e͊͂̈́͐ͤ͠d ͐̑ͬt̽̋̎ͬͧ̉ͣh̉̓̇͋̔̓̑i̽͋ͤ̓ͯ̐͊s ̷ͤ̉͑ͬc̷̐͊̃ͣ̅̄ôͬ̔ͭl̈́̂ͪ̋͜a̴͌͌ͤ͂ͤ ̽̓́̉î̃s̽ ̓̐̂̄ͫ͂̒po̍ͩ͌ͯ̎ͥi̔́ͪ͢s̛͆̋̾̇̈̿ó̿ͮ͐n͐̓͋ͩeͯͤ̌ͬͤ͆̎d̏̌̀ͫ̈́ͧͪ ̉̿͋͐͛̀t͞hͯͤ̆̆̇͏i͡s ̛č̓ͫ͑ͫo͌̾͊̿̅̓̽͜l̂̽̈́aͤ́ ̎ͫ͆̾͢i̕s̑ͦ ͧ̾̏p̅ͥo̎̔ͭ̂ͫĭ̷̔̋ṡo̎̄͐n̅ͧ̊͏e̿͐̌͘d̐ͨ̆ ̒̒ṫ̊͋h̍͒̋̅̑isͩ̾̚͘ ̋͒̎̾ͥc̴ͧ͋ö͜l̾̎̀a̓́͋͑̐ ̉̊͗ͫ͏ĭ̇̽ͯ̏ͣ̌s̿ͣ̋ͮ͑̾͟ ͒̍͗̌p̆̂̆͑̃ͯͫo͛į͒̑ṡ͂̍ͪ̐͘o͗̑̾ͬ̑̿͏n̢͊̉ͨͯͣ̂è̢́̈̆ͬd̴ ͣͥͦ͛̊̒t̡̐h̑̓ͧiͯ̽ͭͯş͒ c̀̑̅ͫͯ̀òͧ̆ͤ͛ļͭȃ̇̃̚͜ ͑i̕s̍ͪ̊ͤ̅͞ ͦͤ̏͘p̋̈ͬ̅̍͜o͌ͦ̽̉i̷̋̃š͒ͦo̍́̾́͑ͦn̶̋̐͗e̓ͮ̽̆ͭͨ̎d̷̂ ͩ̒̓ͨ̽͞t̽͢ĥ̸͌́͋̎i̾s ͫͣ͂ͯ̎̊̿͏c̽̈͗ơͮ́ͬ̓ͥ̉l̾̅ͦa͐̂̈ ̨̈́ͬ̿͂̊i̽ͮ̇ͣ̏͐̚s̀ͬ͆͗̾̚ ̕p̾̋̃ͤ́ͮ͂o̎̏͋̆̉̿̓̕ḯsͭͭ̂҉o͒͐͒̇̍̀ne͆̆̌̚d̐͆̄͠ t̓͛̅̓̅ͤ̚͝h̃ͬiͮ̒̓̒̽̽̈́ś͋ͮ̑͡ ̀̂̂cͣ̋̀́̿̋o҉l͠aͪ̄͌̎ͣ ͤ͆͆͠îͣ͡s̡̑̓̔̓ ̈ͪ͗͛͗̇͘p̎͒̾ͩ͞o͊iͪ͝s̶̔ȏ̏̈́̆͗̀n̔͡e̍̏͒̄̌̊d̓ ̎̂ͤ̔͞ẗ́͠h̐̐̒̾̂iͨ̎ͪ̉̿͞s̷̓ ̸̅̎c̎ͫͦ͏oͤ̓̄̈ͯ͘lͪaͬ̑̑ͧ̊̃̇̀ ̶ͮis̿̆̑̐ ̒̇͗̅͑̚p̉ōi̷s̢̆oͭ̓̎̊ͮ͞n̑ͫ͑̚e̽͌̎́ͭ̾dͮ̈́ ̡t̸̿̌͐ͮ̾̃̚h̊̏̏͌͆̊iͩ͛͒̾̄ͭ͜s͌͗́ͨ̈́̄ͤ ͣ̐͡c̊ͩ̆͡õ͊͑̀̅̔̚͏l͆ͧ̚͏ảͮͮ̈́̈́̄͂ ̀̚i͒̀̾s̛̃̅͌ ͝pͮòͣ́̏̎̓̉i̵ͬ̃͌̆̈sͭͫ̋ͮ̊ͮ́̚ō̇͊͋ͤͧ̈ņed̔͆̾̽̊̚͟ ̕</p>
+<h1 id="toc0"><span><strong>這可樂有毒阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿阿</strong></span></h1>
+<p>Ț̩̬h҉ḭ̭͇͞s͇̼̤̫ ̝͖̭c̱̼̞̺̠̼̞o̞̬̹̖̮̣̰l̢̺̯̜͎͉a͙̖̩ ì̥̹̺s̺̜̯ ͚p͕̻̺̙̭o̝̲is҉̹ò̱ṉ̛̠̪̫̠̠e̴d̳͍͡ ̯͔͎͇t̪̼̟̼̞̼h͖̣̣̥̘i̭͕͉̯̯͎ͅs̙͠ ̫͇̣͘c͕̭̥̗o̤̬l̟̼͍͔̭͠ͅa̜͉̙͚̖̟ ̸i̠̟s̕ ̫p̘͎̠͈̝o̤͉̦̮̙i̪̬̳͈͓̞ͅs͕̜̟̰̘o̺͍̳̻̣͈̖n͏͉e̱̖̞̞̣̻d͞ ̩̪̟̫͈̩̭t̵͉̪̰̭͓͚h͡i͞ś̜̱͈ ̹̮̪̖̩͓ç̜̟̟͖̱̪̯ơ͖̭l̕a͕̤̫̞ ̶͖̼i͔̠͢s̝̣̥̩͉̠ ҉̼̖͉̙̣ṕo͇̠͙̦i̱̺̕s̡̫̮̟o̞̤̱̮̰̦̪n̷͈̗̪e̱̤͖͉͔̳̼ḑ̜͍̙̫̣ ҉̣̞͖̫̪̰t̯͙̙͈̯̮͡h̩͖̙̻̟̲͖i̵̦͕̬͉͓̜ͅs̵̺̬̫͓̻̖̠ ̝ç̱̮͖͖̳ͅo̧̘̻̣͔̙̝͎l̢̻̹̪͍̦á͚̝ ̞̼́i̤̳͞s̤̙͈̩͖͔ ̺̤̜̙͚̪̕p͚̦ǫ̣͔i̭̦s̺̲̻̰͎͉̻͝o͍̙̳̬͈ņ̜͚̱͓̩̱͚e̱̠͙̣̮̞͙d̫̘̯͇͝ ̴t̵͓ḩ͉̥i̶̪̩s̞̼̦̺̫͝ ̵c̗̮͔͞o҉l̻̱a̢̠̳̠̠̳̱ ̺̘̩̞̳̲i͇̦s ̨̰̥͙̤̟̭̼p̪̮̻͜o̱̺͜is̫̙o͏n̼͖̳̮̟͠ḛ̛̱͉͈̮d͈̫̖̱̲̙ ͔͙͘t͉̣̼h͔͟i҉̙̦̞̤͉͙͎ś̱̱̠̮ ̥c͚o̕l̘̮͢a̩̥̫̘̣̗̕ ̨̳͈̲̭i̡̻̗s͏̯̬̟͖̠͕͎ p̶͎̗̜̮o̘̩͞i͈͇͚̠͍̜͝s̠̦̯̖on͖̖͓̜e͈̱͈̙̭͎͝d̡͇͔ͅͅ ͎ţ̠̝͚͓̺͕h̻̤̭ͅi͎̰̭͔̹s̛ ̜̮̘̙͠c̡̭͙̥̼o̮̯l̦a̳͍̕ ҉̣̪̱i҉̙̱ṣ͍͚̲͈̗̭ po̠i̯̗̪̦͘s̰̮̥ơ̟̙̦͎̮n͍͉̱e̬̝̟̹̰̩d̲̻̫̰̭̹̝ ͙̫͠t̲̻̫̟͖h̢̖̠̲͈͔i̯̤͞ṣ̺̖͕̣̀ c̤̻͓̪ola̪̠͍͟ ̩̦̝̼ͅi̢͎s̥̗̭͔̞̖͘ ͏̟͔̣̻͖p͉̤̣͈͎̳o̢̝̥i̮̗͇̮s̨̭o̸n̗͎͔̳̪̝͟e̙̜̰͕͉̥͡d̫͕̻̘̼̭̀ ͕̖̙̩̬̬t̜̝̬̤͠h͖͓͍̯̭͘i͡s̭̺̺͕͙̕ ͓̀c̶͔ol̻͔̮̲͓̝̪͠a҉̫̰̼̟͖ ̱̣i̵̼̺̞̗s̫̘̩ ̹̱̞͡ṕ̣̝̟o̯͍̮̩̩̩i̝̘̣͠s̺͎o̖̙n̳̫e̵̘d̴ ̖̫̮̦̪t͉̟h̶̦̭͓̤̰̮̹i̬͍̭̗̟ͅs̪̟̳̕ͅ ̦͕̠͔c̬ol͟ą ̺̝̟͓i̭̻̳̫̰s̺̦ ͓po̶̙̬̺̗i̢̪̻s͉͈o̟̤ͅn̴̻e͍̰d͏ ̸̻̬͇͔̻̝̹t̠͎̫̫̪͖̩h̠̘̦͔̘ḭ̢s̺̗̳̞͇̰ ̲̦̠̫̭̦ͅc͕̺̙͇ol͍a̲̼̣̱̯̕ ̳̤͙̩is̙̫͕͙͕ ̳̘͡p̛͇̳͍̼͚̹ò͕̻̪̰̘͖i҉̥s̨̖̙͈̠̻o̥̦͎͟ͅn҉͇͎͕͓̺̗̤e̞̦̟d ț̤̜h̲̘̰͓̣͓͎i͖̗͡ͅs̖̮̖̱͓ ̀co̳͇l̯a̹ įș̹̟͍͇ ̝̯̣͍̮̫̫p̬̳̱͚̼̙̝o̷̳̥̗̫͔ịs͈̟͈̭͠o͠ǹ̯̲̭͓e͢d̫͝ ̵t̪̗͓͎h͙̩̤͇̪́i̦͡ś͔̞͓̪͚̱ͅ ̼̙̦̜̺̻c̴͓̘o̸͈̣̳̝la̳ ̞͈̜i̧̝̻̠ͅͅs̛͚̠͎ ͕͚̻̭̭͉ͅp̞̜̮̯̳͉͚o͚̩͔̙̟͢i̵̺͙s̵o̼n͡e̛d̪̱̖̩͢ ̨͎ṱ͕̣̱͓͈̰ḥ͓̤͠i̯̜͜s̛̯͙̫͎̠ ̧c̢̙ͅǫ͚͇̱͍̱l̸̪̤a͙ ̭̖i̫͈̳̯̙̪͓͡s͇̱̰͢ ̫̦̟̖̜p̴͍̳̪̠oì͍s̢̜̖̹on̛̥̣̳̗̞̙e͉̦͙͔̺d͈̬͎̱͙̙̬ ̻t̯̝h̜̪͈͔͠i͕̖͟s͙͈ ̳̳̮̜̬co͠l̖̙̳̼͓͈͖a ̡̪͍i̦͚ͅs͙̠̭̲̞͖̱ ̨͍̺̪p͚̦oi̛͚̱͙̞͕s̖͔̗̜͎̪o̬͍͇͕̤̹ͅn҉̳e̠͔͖̕d͔̫̭͟ ̛̺͕͕̻͔̣̹ţ͓͎̦͓ͅͅh̳i̞̝̩̜̝̠s̗͍͖̤͎̥͞ͅ ̤c̞͚o̜͈͖̼̦l͚͔͈̻̤̼͞ͅa̠̤̱̪ ͚i̶̺̳̲s̴̻͍͎̪̬̩ ̵͙̹͈͖̟p̺o̠̼̖̪̫̣̣i̜̙̻̙̭͠s̪͈͘o̦͕͕n̙͍̳̳̩e̝̲̤͙̤͕͎͡d̡̬̗̜̞̘ ̭͈̞̮̮t͉͎͚̫̪̬h̨͓̻̣i̯̬̰̠͓̙s͔̼ ̻̝̹̻c̸͚̜̩̥̜o͈̣͉͠l̪̯a̲͟ i̖s̺̘̱ ̳̺͢p͜o̬̹̮̘̱̳͚i͉̳͕̤͔͔̪ş͎̖̪o̢͚̜̰̟n̠͉̜͎̫̺͉͡e͓̳͈̹͚̫̹d̳̠̦̼ ̻̖͕̳̝̱̙t̢͔̺̟h͙͔̳̩͕̞̘́i̻͕̗̳ͅs̡͉ ̺͚͍̗̘̬̲c͎̯̹̻̱o͇̳̙̗̖l̷̮͕̖͕ͅa̵͎̰̰̩͚̬ ̢̰͔̤͔͙̮i͓̻̪̺̦͜ṣ ̜̻͎po̘į̮͍̙̳s̨o̙n̗̜͉̙͚̞͙͜e̞ͅd̶̤̹̳̗͓ ͓͙͍̺̫͍͝t̥̖̖̘̯̭̱ḩ̠͕̲̻̫i͏͖̞͍s͡ ͚̥̻̪c͡o̤l҉̪̯̤͇̯̯a ̵̥̲̫̦̩̬̦i̛͇̗s̡ p͖̖̬̦̘̝̺o̱i̸͔͙s͏̜̹̦̦o̵̲̗̖n̶͇̖̻͔e̬͚͚̲͠d̡͕̙̠̺͚͈ ̷t͙̩̕h͇ͅi͘s̪̘̪̼͎̭͚͞ ̬͈c͕̱̹̜͍̟͞o̥̗͉l̫̜̹̲̼a͍̥ ̣̣͔̝̘͎͡i̥̪̬͡s̱̬̰ ̱͓̪̭p̴̠o̵̻̬i̙̗s̷̩̳ò̞̱͉͉͔͉ṋ̱̲̪ḛ̺̘͝ͅd̘̜̬̹̙͍̣ ͎̟̜t̸̝h̗̥i̭s̨͙͙̣͔̙̟ ̢̗̝c̪̟͔͓̻ͅo̸̭̹̹̜̳la ͚͙̠̣̯̱i̴̝̱̳̯̟͖̳ṣ̠͈ ̛̲̜̦̬̞p̹͇̗̪̭̤̻o̶͖̮͖͈͍̗į͍̩̟̱͔̰s͏͇̩͖o̴͚̙̥ṋ̠̰͕e̼̱͘d̳͉̲̱̳̘̯ ͈͠t̝͈̳̯͙͟h̬̗̯į̬͖͎̹ͅs͎͠ ̜͎͕̱͠c̝̲̝̥̰͜o̢̹l̶̙̜̱a̰̯̺̼̤ͅͅ ̠͖i̴̤̼͕̪̩s͚͔̣̤̳̦͢ ̜͉̭̫̟̮p͖̼̻o̤̦̗i͕̝̘̯͍̞s̜̖̠o͕̖̯n̻͖̜̜̟ę̮̙d̞͙̠̗̝̺ ̹͜t͈̹͇̟̪͚͟ͅh̲͇̰̠͚i̛̖̦̣s҉ ͅc̣̥̠͇̝̰ó͓̣̮͉ͅl͙̦̠a̹͓̹͉ͅ ̥̥̩i͖͓s͇̻̙ ҉p͇͠o̩̜̯̮iͅs̬͉͈͕̬on̨̮̹̫̖̤e͏̲d̫̻͎ ̨̫̲̙͙̭th̙̦̜̦̟i̹̫͇̘̻̻͖s̟̟̝̙̙ ̸̪̝c̤͇͕̥͓̞̜o̲̦͕l̝̫͇̺a͙̳̱̭̳ ͖͖̮͖̼̭̀ͅi͞ś̜̱ ̸̮̟͉̳͕͍̜p̨̬͔͇oị̙s̼͎o̱̜̰̜͖̭͡n͖̼͕̪͕e̸̻̝̲d͈̱̗̜̱̗̻͝ ̷̣͙͙̪̯̤̘t̗͔͡h͉̝̫͙͈i͠s̜̻̰͔͢ ͎͓̲̙c͓̭̘̺o͎ļ͈͍͖̲̲͔͚a͓ͅ ̰̫i̞̲̣̰͕̖ṣ̲͕̩̦͉͝ ̲̖͍͝p̳̙͕͟o̡̯i͎̱̞ͅs͏̰͔͙o͙̠̹n̫̼͚̹̦e̢̞d̥͉͉̙ ̜̫̪̦̯̩͞t͕͍͎͙͖h̟̝͓̕i̸s͚̜͉̱ ͔̟͎̲́c͔̼̥̦̬͕͉͘o͍ḽ͚̪a̛̯̬ ̜̼i҉̹͔̙͈ͅs̶̬͔ ̧̬̥p̫̗̟o͎̤̜̯̯̳ͅi͝s҉o̡̺̦̥͕n̯̙͇͙̲e͔d̸̦̥ ̻<br />
+<br />
+<br />
+<br />
 <br /></p>
-<p><strong>附记：</strong>若要在书架外套外框以看起来更像书架（见下方示例一二），可如此：</p>
-<div class="blockquote">
-<p><strong><span style="white-space: pre-wrap;">[[div&#32;class=&quot;et-out-bookrack&quot;]]</span></strong><br />
-<strong><span style="white-space: pre-wrap;">[[div&#32;class=&quot;et-inner-bookrack&quot;]]</span></strong></p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans=yes<br />
-|list-shelf=1<br />
-|book-annotation=1<br />
-]]</p>
-<p>书籍在此</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-<p><strong><span style="white-space: pre-wrap;">[[/div]]</span></strong><br />
-<strong><span style="white-space: pre-wrap;">[[/div]]</span></strong></p>
 </div>
-</div>
-</div>
-</div>
-<br />
-<br />
-<div id="u-ch-1-3"></div>
-<hr />
-<div style="text-align: center;">
-<h2 id="toc8"><span>三：添加书籍</span></h2>
-</div>
-<hr />
-<p><br /></p>
-<h4 id="toc9"><span>1. 复制以下基本代码：</span></h4>
-<p><br /></p>
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|book-cover= <span class="no-sel">封面颜色，见预设样式</span><br />
-|link-color= <span class="no-sel">链接颜色，见预设样式</span><br />
-|book-link= <span class="no-sel">链接地址</span><br />
-|link-name= <span class="no-sel">链接文本，<strong>限11个汉字</strong>。</span><br />
-|book-info= <span class="no-sel">注释在此</span><br />
-|self-defining= <span class="no-sel"><strong>必填</strong>。是否启用自定义样式，可能值：false / true ；</span><br />
-<span style="white-space: pre-wrap;">]]</span></p>
-</div>
-<p><br /></p>
-<h5 id="toc10"><span>封面颜色，预设值</span></h5>
-<div style=" column-width:15px; column-gap:10px; column-rule:1px #333 double; column-rule-width:2px; column-count:3;">
-<ol>
-<li>red</li>
-<li>gold</li>
-<li>green</li>
-<li>black</li>
-<li>galaxy</li>
-<li>purple</li>
-<li>mix-2</li>
-<li>mix-1</li>
-<li>blue-2</li>
-<li>blue</li>
-<li>darkblue</li>
-<li>blue-3</li>
-<li>darkblack</li>
-<li>white</li>
-<li>darkgrey</li>
-</ol>
-</div>
-<p><br /></p>
-<h5 id="toc11"><span>链接颜色，预设值【按示例一二的顺序排列】</span></h5>
-<p><br /></p>
-<div style=" column-width:15px; column-gap:10px; column-rule:1px #333 double; column-rule-width:2px; column-count:4;">
-<ol>
-<li>gold</li>
-<li>red</li>
-<li>white</li>
-<li>black</li>
-</ol>
-</div>
-<br />
-<br />
-<h5 id="toc12"><span>样式效果见下方示例一二，<a href="#u-ch2">点此跳转</a></span></h5>
-<p><br /></p>
+<div id="wiki-tab-0-2" style="display:none">
+<h3 id="toc1"><span>有關我的作品</span></h3>
+<p><a href="/scp-cn-609">SCP-CN-609</a> 空洞的洞</p>
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;复制用</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;复制用</a></div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
 <div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|book-cover=<br />
-|link-color=<br />
-|book-link=<br />
-|link-name=<br />
-|book-info=<br />
-|self-defining=false<br />
-<span style="white-space: pre-wrap;">]]</span></p>
+<p>我發上來的第一個作品。雖然最先寫的不是這個就是了，詳細後面會講。</p>
+<p>這個作品的構思由「人型異常的未路」和「探索微觀化」開始的。</p>
+<p>先由「人型異常的未路」說起。</p>
+<p>我以前就常常在想，某部分人類真是一種具有自我毀滅傾向的物種。其實指的就是我自己，因為我有一段時間很失落，常常在想負面的事情之類的。<br />
+我就突然想到了，會自我毀滅的人類了不起也就跳軌被撞成肉碎；那現實扭曲者會怎樣？<br />
+特別是那種&#8230;傷心得像是心裡穿了個大洞一樣的人&#8230;<br />
+「心臟的洞」這點子就是這樣出現在我的腦中。而且不是心臟上面穿了個洞，而是只淨下心臟的洞。</p>
+<p>再來解釋一下「探索微觀化」。</p>
+<p>由主站1000~2000開始，愈來愈注重探索記錄。幾乎好的異世界式SCP都是有長篇和精彩的探索記錄。(其實1~999內都有很良好的探索佳作了)<br />
+然而我在想，探索記錄愈是寫得詳細，讀者可以觀察到的視點愈是多又愈是有大局觀。<br />
+雖然沒什麼不好的，但我有時在思考，這樣說故事不就等於我在用第三人稱寫一個普通的故事嗎？<br />
+所以我決定限制視點的廣度。就是所謂的「探索微觀化」。別人都用無人機在異世界裡飛高高的四處看，派出整隊小隊一起看；我就只放一條小蟲在又狹窄的小洞裡面蠕動。</p>
+<p>合起來，就是我的「空洞的洞」。</p>
+<p>說起來上這篇真的用滿多心機寫下去的。</p>
 </div>
 </div>
 </div>
+<p><a href="/scp-cn-575">SCP-CN-575</a> 生物腦os</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
+<div class="collapsible-block-content">
+<p>靈感一閃中二發想之作。</p>
+<p>很久以前就覺得人腦是應該可以值入程序了。一開始是想在腦中值入晶片的，而然我覺得這樣不夠scp。</p>
+<p>說起來，這篇大部分我是認為在scp世界觀中是&quot;可行的&quot;。比如在腦中放入微積分的計算機，其實一般大腦也完全可以自己進行計算。</p>
+<p>雖一不可能的地方是那個&quot;高等第五感&quot;。我容後再解釋。</p>
+<p>另一方面，其實我很想試試寫宗教相關的scp。我做過一些研究，對宗教的起源有很大的興趣。在現實世界，宗教的神大多是來自部落/城市/國家的圖騰。希臘神話是很典型的例子。可是這是現實世界。</p>
+<p>在異常世界，我認為宗教是真的有神出現，跟人類對話才會出現。</p>
+<p>神的起源且不說，神為什麼會和人類說話？</p>
+<p>知識。不問手段，不論內裡目的為何，表面目的應該是要送人類知識。得到人類的信任後還要增強他們的能力，才會使信仰數增加。SCP-1425不就是這樣嗎？星星給人類送了「向心力法則」，得到能力的人類再向外宣傳星星。</p>
+<p>所以博士才會有所感悟，做出SCP-CN-575。然後還內附一鍵和群星對話的功能。</p>
 </div>
-<p><br /></p>
-<h4 id="toc13"><span>2. 自定义选项：</span></h4>
-<p><br /></p>
-<h5 id="toc14"><span><strong>注意，使用自定义选项会覆盖预设值，但没有启用对应的自定义选项的话，可以保留预设值相关选项，以避免样式缺省。</strong></span></h5>
-<p><br /></p>
-<div class="help">
+</div>
+</div>
+<p><a href="/who-would-you-trust-when-doom-happen">緊急求助介面開發</a> 2018春季征文參賽作品</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
+<div class="collapsible-block-content">
+<p>2018春季征文。還滿有趣的比賽。結果我好像得了第5，得分38。</p>
+<p>一開始看到征文圖的時候，第一個想法是：「這是1:99的世界呢。」</p>
+<p>為什麼是1:99？我的意思是：這張圖的構成是由1%的什麼東西和99%的不是什麼東西組成的。比如說，1%的基金會，99%的世界未日；1%的現實，99%的CK級現實重構，之類的。</p>
+<p>所以，我第二個想法是：「我不要寫出這樣的東西。」</p>
+<p>這圖片引誘人寫出1:99故事的意圖太明顯了。我隨便想都能想出幾個類似的故事：世界毀滅了，研究員在最後的工作台上記錄最後的文字。這樣能突圍而出嗎？我不確定。倒是頭兩天的文檔基本上都是這個1:99的形式的。</p>
+<p>但不得不說，在這之中只跟隨這構圖而寫出的故事，有幾篇是真的很精彩。我不禁想，我能用同一個套路，跟上他們的腳步嗎？</p>
+<p>以我的能力來說大概不行。所以我不要寫出1:99的故事。</p>
+<p>我的解決方案是：調整一下比例，大約70:80這樣。</p>
+<p>毒可樂，你到底在講什麼？70%加上80%根本不是100%阿，多出來的50%是那裡來的？</p>
+<p>這就是我的思維所在。</p>
+<p>一開始，我是估計進來看的人都已經看過征文插圖的，我很確定他們都已經有既定的印象認為這一篇是1:99的世界。所以我要做的就是減少異世界的濃度，提升現實的濃度。</p>
+<p>所以我決定限制讀者的視點，不只用第一人稱，甚至乎只給讀者看見一些電腦指令和回傳的訊息。用這種方法給讀者自己在腦中勾畫出世界。</p>
+<p>由進來看的時候，腦中只有99%異世界的讀者，慢慢給予他們「這其實是現實」的訊息，把異世界減少而增加現實。</p>
+<p>和伺服器的連接，站點位置，結構完整性，被反駁的KETER級求救訊號，甚至在最後還給出了「你的認知出了問題」這樣的解釋。在這裡，我認為現實已經佔了至少70%。</p>
+<p>然後給予一個大落差。系統回傳的監控畫面竟然是異世界的畫面。矛盾的畫面和描述，明明是沙漠的地面竟然說是基金會三級員工辦公室，4個坐位卻只看到有1個。這一下馬上把異世界的濃度給拉回來。</p>
+<p>這部分是如此的矛盾，明明是異世界的畫面，何來監控畫面？為何系統會覺得這沒有問題？難度這真的是異世界？但是為什麼可以和主管通訊？為什麼？這樣的給讀者留下很多想問的問題。</p>
+<p>然後，沒有然後了。研究員離開了座位，一去不反。以給予讀者提問而不提供解答。</p>
+<p>可惜這種點子終究是邪道，嬴不出征文比賽呢(哭)。二三名都是寫正道的1:99，而且又實在精彩。</p>
+<p>不過第一名的文章我看不懂(X)。</p>
+<p>說起上來我滿害怕這個「困惑」會被人覺得是我故事編排不好。還好似乎沒這個問題。</p>
+</div>
+</div>
+</div>
+<p><a href="/scp-cn-594">SCP-CN-594</a> 重複犯錯</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
+<div class="collapsible-block-content">
+<p>2018年3月24日，我的594&#160;595&#160;596的三連發的第二作。</p>
+<p>也是awcy的首作。說起來我對awct和對第五教會的喜愛的相等的。</p>
+<p>沒有多少可說的，因為反應並不太好。</p>
+<p>說教式的行為藝術。我想試著解構教育體制這一件事而製成的藝術品。</p>
+</div>
+</div>
+</div>
+<p><a href="/scp-cn-595">SCP-CN-595</a> 失控的五</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
+<div class="collapsible-block-content">
+<p>2018年3月24日，我的594&#160;595&#160;596的三連發的第二作。</p>
+<p>沒有多少可說的，因為反應並不太好。</p>
+<p>因為很喜歡第五教會的原故就寫了。也是挑戰大場面之作。用了很多心血但看來效果並沒有太好。很失望呢~~~對自已。</p>
+<p>本來打算如果反應好的話，就會開拓「奇術分支&#8212;符號工程學」的個人系列。看來是失敗了。</p>
+</div>
+</div>
+</div>
+<br />
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;死去的&nbsp;「SCP-CN-596&nbsp;唯心論之魔」&nbsp;</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;唉</a></div>
+<div class="collapsible-block-content">
+<p><strong>项目编号：</strong>SCP-CN-ZZZ</p>
+<p><strong>项目等级：</strong>Euclid</p>
+<p><strong>特殊收容措施：</strong>目前SCP-CN-ZZZ並未被有效收容，機動特遣隊辛卯-28“任性小鬼”已為項目長期負責。一但任何基金會員工發現在外逃的SCP-CN-ZZZ，應在確保安全的情況下保持眼神接觸，確保SCP-CN-ZZZ位於主觀可觀測範圍內直至機動特遣隊趕至。</p>
+<p>根據收容突破前的收容措施，應準備一間標準人型收容間，且在外牆覆蓋至少2mm厚的仿<a href="/scp-148">SCP-148</a>製CT型心靈阻隔合金。收容間中必須配有一單向玻璃窗口以供安保人員觀察。在合理人力範圍內安排長期肉眼人員監視確保收容的有效進行，其中負責監視的人員必須在抗誘評分中得到80點以上得分且堅決拒絕與SCP-CN-ZZZ的任何溝通行為。</p>
+<p><strong>描述：</strong> SCP-CN-ZZZ是一個只存在於主觀意識的智能實體，在一般觀察者描述可知SCP-CN-ZZZ似乎以一般的惡魔的外形示人。在不同觀察者的記錄中其外型均有落差，唯不會偏離一般惡魔外形的認知。</p>
+<p>至目前為止，並未發現任何客觀證據可證明SCP-CN-ZZZ的存在。SCP-CN-ZZZ的本質是未知的。根據概念部所提出的假說認為SCP-CN-ZZZ是由唯心概念所組成的精神聚合物，使任何物質性的事物無法與之產生相互作用；僅有具有心靈的意識可以感知到SCP-CN-ZZZ。</p>
+<p>大多數曾與SCP-CN-ZZZ互動的人員都指出了他們確信SCP-CN-ZZZ是實際存在的事物，並指出他們有能力和SCP-CN-ZZZ進行確實的互動。</p>
+<p>盡管SCP-CN-ZZZ看似能被任何固體物質物理性地阻隔並收容，但依然缺乏SCP-CN-ZZZ能和物質進行交互作用的客觀證明。基金會目前謹能推測CT型心靈阻隔合金是目前能阻隔心靈性生物的最有效手段。</p>
+<p>SCP-CN-ZZZ在收容期內從未提及過其來源及本質，只聲稱其為「心底的惡魔」，以及聲稱其會「進入心底的恐懼操縱你」。</p>
+<p><strong>附录：</strong></p>
+<p>實驗記錄-ZZZ-42</p>
 <blockquote>
-<p>include组件代码块的起始，<strong>需完整地黏贴在开头</strong> ↦</p>
-<p>书本的编号，以区别其他自定义书籍样式 ↦</p>
-<p>封面样式，预设值 ↦</p>
-<p>链接颜色，预设值 ↦</p>
-<p>链接地址 ↦</p>
-<p>链接文本 ↦</p>
-<p>补充信息 ↦</p>
-<p><strong>是否启用自定义样式，填true则继续填以下选项 ↦</strong></p>
-<p>自定义书籍描边<sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup>，填色码 ↦</p>
-<p>自定义书籍封面，填背景相关值<sup class="footnoteref"><a id="footnoteref-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-5')">5</a></sup> ↦</p>
-<p>自定义书脊<sup class="footnoteref"><a id="footnoteref-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-6')">6</a></sup> ↦</p>
-<p>自定义链接颜色 ↦</p>
-<p>自定义A类注释<sup class="footnoteref"><a id="footnoteref-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-7')">7</a></sup>文本颜色 ↦</p>
-<p>自定义B类注释<sup class="footnoteref"><a id="footnoteref-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-8')">8</a></sup>阴影 ↦</p>
-<p>自定义B类注释背景 ↦</p>
-<p>自定义B类注释边框 ↦</p>
-<p>结束引用块 ↦</p>
+<p><strong>實驗主持：</strong>異常現象學部門高級研究員 D.F.博士</p>
+<p><strong>前言：</strong>本實驗目的在於尋找任何能證明SCP-CN-ZZZ存在的客觀證明。</p>
+<p>實驗位置位於SCP-CN-ZZZ的收容間內。</p>
+<p>本實驗均會同時派出兩組人員進入收容間，並分別進行客觀記錄與主觀記錄。</p>
+<p>得益於SCP-CN-ZZZ的配合性，在進行實驗前先進行實驗簡介通常即可得到配合。</p>
 </blockquote>
+<p>實驗-SAMPLE</p>
 <blockquote>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span></p>
-<p>|list-book=0</p>
-<p>|book-cover=</p>
-<p>|link-color=gold</p>
-<p>|book-link=#</p>
-<p>|link-name=链接文本</p>
-<p>|book-info=注释在此</p>
-<p><strong>|self-defining=true / false</strong></p>
-<p>|self-book-color=#162c44</p>
-<p>|self-book-background=url(&quot;xxx&quot;)</p>
-<p>|self-book-border=2px solid #320f79</p>
-<p>|self-link-color=red</p>
-<p>|self-description-color=</p>
-<p>|self-info-shadow=rgba(9,9,9,0.5)</p>
-<p>|self-info-background=rgba(9,9,9,0.5)</p>
-<p>|self-info-border=5px inset #333</p>
-<p><span style="white-space: pre-wrap;">]]</span></p>
+<p><strong>描述：</strong></p>
+<p><strong>客觀操作員：</strong><br />
+<strong>客觀記錄描述：</strong><br />
+<strong>客觀記錄結果：</strong></p>
+<p><strong>主觀操作員：</strong><br />
+<strong>主觀對照結果：</strong></p>
+<p><strong>備註：</strong></p>
 </blockquote>
+<p>實驗-01</p>
+<blockquote>
+<p><strong>描述：</strong>影像攝錄</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>使用基金會標準監視器鏡頭進行影像攝錄。<br />
+<strong>客觀記錄結果：</strong>只錄得收容間的背景。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>SCP-CN-ZZZ似乎意識到有鏡頭正對準它，並擺出了數個姿勢。</p>
+<p><strong>備註：</strong>SCP-CN-ZZZ在實驗中提到我們所做的事是徒勞無功，該姿勢相信是出於諷刺性的行為。</p>
+</blockquote>
+<p>實驗-02</p>
+<blockquote>
+<p><strong>描述：</strong>高級影像攝錄</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>使用基金會高速攝影機進行影像攝錄。<br />
+<strong>客觀記錄結果：</strong>只錄得收容間的背景。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>SCP-CN-ZZZ似乎意識到有鏡頭正對準它，在鏡頭前進行了舞蹈。</p>
+<p><strong>備註：</strong> 結果同實驗-01。似乎光學直接觀察並不是有效手段，但我想再進行多幾次實驗。</p>
+</blockquote>
+<p>實驗-03</p>
+<blockquote>
+<p><strong>描述：</strong>間接物理觀察</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>給予一個供移動的標準基金會質量方塊，並使用基金會標準監視器鏡頭進行影像攝錄。<br />
+<strong>客觀記錄結果：</strong>質量方塊由T.C.研究助理手中放開後，便即自由落下並接觸地面。隨後在地面靜止了數十秒。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>SCP-CN-ZZZ在T.C.研究助理手中接過了方塊，並把玩了一會，隨後扔到地上。</p>
+<p><strong>備註：</strong>盡管在肉眼觀察中方塊經SCP-CN-ZZZ的手離開了地面數十秒，但在攝錄中方塊遵循了物理法則自由落體。值得一提的是肉眼觀察中方塊的最後落點和影像中的最初落點一致。</p>
+</blockquote>
+<p>實驗-04</p>
+<blockquote>
+<p><strong>描述：</strong>間接物理觀察</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>放置標準基金會質量方塊於地上一處被標記的位置，並使用基金會標準監視器鏡頭進行影像攝錄。在影像中確認了落點後要求對像移動方塊。<br />
+<strong>客觀記錄結果：</strong>方塊保持靜止於標記上。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>觀察到SCP-CN-ZZZ把方塊移動了約1米的距離再放下。在肉眼觀察中多次確認了方塊不位於標記上。似乎在精神放鬆後，自然地沒有集中注意約3~4秒後又觀察到方塊位於標記上。</p>
+<p><strong>備註：</strong>我認為這是因為我的主觀意識認為方塊且有過移動所以我能夠觀察到方塊不位置標記上。但當強烈的第一印象減退後大腦又慢慢把眼睛接收到的訊號磨合到我的意識之中，才使我在走神後走回原位。簡單來說就是SCP-CN-ZZZ在我腦中造成了一種錯覺。SCP-CN-ZZZ的本質可能是錯覺或模因異常？</p>
+</blockquote>
+<p>實驗-05</p>
+<blockquote>
+<p><strong>描述：</strong>音訊記錄</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>使用基金會標準監視錄音器進行音訊記錄。<br />
+<strong>客觀記錄結果：</strong>只錄得T.C.研究助理、D.F.博士兩人的聲音及收容間的背景聲。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>SCP-CN-ZZZ似乎意識到有錄音器的存在，大笑數秒後進行了數分鐘的Beat-box即興表演。</p>
+<p><strong>備註：</strong>似乎得益於SCP-CN-ZZZ有多個口腔器官，它能夠進行自我合奏。SCP-CN-ZZZ似乎更善長於技術性的鼓組聲音，在仿bass音及仿噪聲上有所失準。根據SCP-CN-ZZZ的描述，項目似乎相當喜好neurofunk。</p>
+</blockquote>
+<p>實驗-06</p>
+<blockquote>
+<p><strong>描述：</strong>壓力感應測試</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>派出D級人員(D-042k9G2)，右手戴上內藏高敏度壓力感應元件的手套，並要求D-042k9G2觸摸SCP-CN-ZZZ。<br />
+<strong>客觀記錄結果：</strong>並無接收到來自壓力感應元件的訊號反應。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>D-042k9G2表示SCP-CN-ZZZ皮膚的觸感很噁心。</p>
+<p><strong>備註：</strong>意料之中的結果。接下來試試把觀察集中放在和SCP-CN-ZZZ互動的D級人員。</p>
+</blockquote>
+<p>實驗-07</p>
+<blockquote>
+<p><strong>描述：</strong>肌肉收縮反應</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>派出D級人員(D-042k9I3)，在右手上臂內植入肌肉檢測裝置。指示D-042k9I3邀請SCP-CN-ZZZ進行比腕力比試。<br />
+<strong>客觀記錄結果：</strong>並無檢測到上臂上肌有收緊的訊號。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>D-042k9I3指出他花了好大的力氣但還是被SCP-CN-ZZZ壓倒了。</p>
+<p><strong>備註：</strong>看來這裡也不行。試試神經系統。</p>
+</blockquote>
+<p>實驗-08</p>
+<blockquote>
+<p><strong>描述：</strong>神經成像術測試</p>
+<p><strong>客觀操作員：</strong>T.C.研究助理<br />
+<strong>客觀記錄描述：</strong>派出D級人員(D-042O93q)，在大腦灰質層安裝侵入式腦機介面，並由此取得視覺神經成像。指示D-042O93q觀察SCP-CN-ZZZ。<br />
+<strong>客觀記錄結果：</strong>在視覺成像重構結果中，D-042O93q的第一視覺中只觀察到收容間的背景。</p>
+<p><strong>主觀操作員：</strong>D.F.博士<br />
+<strong>主觀對照結果：</strong>D-042O93q明確地指出了他觀察到一個惡魔形象的實體。</p>
+<p><strong>備註：</strong>太驚人了，這說明SCP-CN-ZZZ並不是類似錯覺或是模因效應。因為這類異常能導致人類認知錯亂，大腦應該也有所回應才是。但連大腦實際上也沒有處理過有關的資訊流，這到底說明什麼？我認為我需要把這個項目轉交給概念部調查。</p>
+</blockquote>
+<p><strong>事故ZZZ/213</strong><br />
+在2017年9月16日，D.F.博士把SCP-CN-ZZZ轉交給概念部負責後﹐隨即協商更新到目前的收容協議，並隨即在同日試行更新版收容協議。懷疑由於前線人員交接問題以致發生人為疏忽，SCP-CN-ZZZ在試行更新收容協議的當日逃脫。已回收當日前線安保人員何明亮的標準安保錄音設備。</p>
+<blockquote>
+<p>何明亮：記錄，現在時間是二零一七年九月十六日，中午七時三十二分。二級安保人員何明亮開始監視SCP-CN-ZZZ。</p>
+<p>陸珊珊：記錄，現在時間是二零一七年九月十六日，中午七時三十二分。二級安保人員陸珊珊監視完畢。<br />
+陸珊珊：那我就下崗了。</p>
+<p>何明亮：行行行，你走吧。記得等等先向上頭報到一下，有新發下來的新指令。</p>
+<p>陸珊珊：行，掰。</p>
+<p>陸珊珊：對了，今天這個SKIP好像特別燥動。你注意一下。</p>
+<p>何明亮：行了行了。掰掰。</p>
+<p>[隨即進入了數十分鐘的無聲]</p>
+<p>何明亮：咦&#8230;?</p>
+<p>[約三分鐘的無聲]</p>
+<p>何明亮：別吵。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：別想了，等會收容協議就會升級，到時可能我就不用乾看著你這個混蛋了。哈哈哈。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：嘻，怕了吧。你這個緊張的樣子真可愛。噗。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：喔，那你試試看阿。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：你能不能先思考一下立場的問題？今天老大爺心情好來陪你聊天打屁，不代表你就不是活該被關在盒子裡的skip。</p>
+<p>何明亮：三分顏色上大紅，不管你了。</p>
+<p>[數十分鐘的無聲]</p>
+<p>何明亮：夠了。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：我說夠了[明顯激動的語調]。</p>
+<p>何明亮：咳咳咳。我的意思是，不管你說什麼鬼東西，一如以往，我是不可能回應你的。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：你給我閉嘴！你以為我是想看你才在這裡的嗎？</p>
+<p>[約十秒的無聲]</p>
+<p>何明亮：你&#8230;你&#8230;嗚嗯嗯嗯[明顯激動的語調]。</p>
+<p>何明亮：咳咳。我不會再管你了。反正相對的，你也不可能對我做出什麼。</p>
+<p>何明亮：阿？</p>
+<p>何明亮：嗚阿阿阿[明顯激動的語調]！</p>
+<p>何明亮：你是怎麼&#8230;不可能&#8230;不是&#8230;這&#8230;這是幻覺&#8230;</p>
+<p>何明亮：呵，呵呵呵，呵呵呵。我可是受過認知失調應對的訓練，這招對我沒用。這裡誰不知道你不是實體，你認為我會怕？</p>
+<p>何明亮：不對。我才不怕。</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：應&#8230;應付你這種廢渣，沒有請求支援的必要&#8230;</p>
+<p>[約一分鐘的無聲]</p>
+<p>何明亮：什麼？你知道？</p>
+<p>何明亮：阿&#8230;阿阿阿&#8230;你怎樣會&#8230;你想對他怎樣？</p>
+<p>何明亮：嗚&#8230;嗚阿&#8230;我我我&#8230;你不能&#8230;不可能&#8230;為&#8230;</p>
+<p>[收容間出入口被打開的聲音] (後來經過調查，證實是安保人員何明亮主動開啟收容間。)</p>
+<p>何明亮：你不是實體&#8230;你不是&#8230;你不嗚呃呃呃呃[痛苦的聲線]。</p>
+<p>[重物墮地的聲音]</p>
+<p>[7小時的無聲]</p>
+<p>陸珊珊：嗨，我來換班囉&#8230;咦咦咦。緊急報告！SKIP編號CN-ZZZ，收容失效！重覆！SKIP編號CN-ZZZ，收容失效！</p>
+</blockquote>
+<p>事故ZZZ/213後，前線安保人員何明亮被觀察到被勒頸缺氧而死。由死亡姿勢及法醫報告中推斷何明亮是自殺。未知SCP-CN-ZZZ的行跡，基金會在經過一星期的調查後證實SCP-CN-ZZZ收容失效，並評估並更新了對監視人員的心理強度要求。及後派出機動特遣隊辛卯-28“任性小鬼”為項目負責。</p>
+<p>在事故ZZZ/213發生後一個月，前線安保人員陸珊珊報告了死者何明亮的目擊報告：指何明亮正試圖入侵CT型合金的存放室，入侵無果後迅速離開了現場。未發現任何何明亮仍生存的客觀證明，已判斷為無效報告。</p>
 </div>
-<p><br /></p>
-<h5 id="toc15"><span>效果见下方的示例三，<a href="#u-ch3">点此跳转</a></span></h5>
-<p><br /></p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;复制用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;复制用</a></div>
-<div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|list-book=<br />
-|book-cover=<br />
-|link-color=<br />
-|book-link=#<br />
-|link-name=链接文本<br />
-|book-info=注释在此<br />
-<strong>|self-defining=true</strong><br />
-|self-book-color=<br />
-|self-book-background=<br />
-|self-book-border=<br />
-|self-link-color=red<br />
-|self-description-color=<br />
-|self-info-shadow=<br />
-|self-info-background=<br />
-|self-info-border=<br />
-<span style="white-space: pre-wrap;">]]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div id="u-ch2"></div>
-<div class="tt-ch ch-2">
-<div class="tt-line-top tt-{$self-line}"></div>
-<div class="tt-txt">
-<h1 id="toc16"><span>示例一二</span></h1>
-<p><span class="sub-tt">横排样式、书架样式、颜色样式、注释样式</span></p>
-</div>
-<div class="tt-line-bottom tt-{$self-line}"></div>
-</div>
-
-
-
-<div class="collapsible-block">
-<div class="collapsible-block-folded" style="display:none"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示书架示例</a></div>
-<div class="collapsible-block-unfolded">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏书架示例</a></div>
-<div class="collapsible-block-content">
-<p><br /></p>
-<div class="et-out-bookrack">
-<div class="et-inner-bookrack">
-<div id="u-ch-2-1"></div>
-<div style="text-align: center;"><img src="http://scpsandboxcn.wdfiles.com/local--files/etinjat-2/Liber.jpg" width="130px" alt="Liber.jpg" class="image" />
-<h3 id="toc17"><span>示例一</span></h3>
-<h5 id="toc18"><span>手机时不横排，及在横栏上显示额外信息【A类注释】</span></h5>
-</div>
-
-
-
-<div class="shelf-1 shelf-wrap trans-no my-plank-{$my-plank}">
-<div class="shelf-no">
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-red">
-<div class="book-list link-gold">
-<p><a href="javascript:;">样式一 红卷</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-gold">
-<div class="book-list link-red">
-<p><a href="javascript:;">样式二 金册</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="javascript:;">样式三 绿典</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-black">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式四 黑铁</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-galaxy">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式五 银河</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-purple">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式六 亮紫</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-mix-2">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式七 蓝紫</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-mix-1">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式八 青蓝</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-</div>
-<div class="et-plank-wrap">
-<div class="et-plank">
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-</div>
-</div>
-</div>
-<div id="u-ch-2-2"></div>
-<div style="text-align: center;"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%81%B2%E3%81%A3%E3%81%B1%E3%82%8A%E3%81%A0%E3%81%93.png" width="100px" alt="%E5%AE%9F%E7%B8%BE_%E3%81%B2%E3%81%A3%E3%81%B1%E3%82%8A%E3%81%A0%E3%81%93.png" class="image" />
-<h3 id="toc19"><span>示例二</span></h3>
-<h5 id="toc20"><span>手机时横排，及浮动小框显示额外信息【B类注释】</span></h5>
-</div>
-
-
-
-<div class="shelf-2 shelf-wrap trans-yes my-plank-{$my-plank}">
-<div class="shelf-yes">
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-blue-2">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式九 水蓝</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-blue">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式十 泛蓝</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-darkblue">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式十一 深蓝</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-blue-3">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式十二 蓝皮</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-darkblack">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式十三 黑皮</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-white">
-<div class="book-list link-black">
-<p><a href="javascript:;">样式十四 白皮</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-darkgrey">
-<div class="book-list link-white">
-<p><a href="javascript:;">样式十五 虚灰</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-</div>
-<div class="et-plank-wrap">
-<div class="et-plank">
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏书架示例</a></div>
 </div>
 </div>
 <br />
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示示例代码</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;解說</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏示例代码</a></div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;關起來</a></div>
 <div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[div&#32;class=&quot;et-out-bookrack&quot;]]</span><br />
-<span style="white-space: pre-wrap;">[[div&#32;class=&quot;et-inner-bookrack&quot;]]</span></p>
-<p><span style="white-space: pre-wrap;">[[=]]</span><br />
-<span style="white-space: pre-wrap;">[[image&#32;http://scpsandboxcn.wdfiles.com/local--files/etinjat-2/Liber.jpg&#32;width=&quot;130px&quot;]]</span><br />
-<span style="white-space: pre-wrap;">++&#32;被放逐者的书架</span><br />
-<span style="white-space: pre-wrap;">[[/=]]</span></p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans=yes<br />
-|list-shelf=1<br />
-|book-annotation=1<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=red<br />
-|link-color=gold<br />
-|book-link=#<br />
-|link-name=红卷<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=gold<br />
-|link-color=red<br />
-|book-link=#<br />
-|link-name=金册<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=green<br />
-|link-color=gold<br />
-|book-link=#<br />
-|link-name=绿典<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=black<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=黑铁<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=galaxy<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=银河<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=purple<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=亮紫<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=mix-2<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=蓝紫<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=mix-1<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=青蓝<br />
-|book-info=注释在此<br />
-]]</p>
-<p>@@[[include :scp-wiki-cn:component:bookshelf-shelf-bottom]]</p>
-<p><span style="white-space: pre-wrap;">------</span></p>
-<p>@@[[include :scp-wiki-cn:component:bookshelf-shelf-top<br />
-|trans=yes<br />
-|list-shelf=2<br />
-|book-annotation=2<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=blue-2<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=水蓝<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=blue<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=泛蓝<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=darkblue<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=深蓝<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=blue-3<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=蓝皮<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=darkblack<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=黑皮<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=white<br />
-|link-color=black<br />
-|book-link=#<br />
-|link-name=白皮<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|self-defining=false<br />
-|book-cover=darkgrey<br />
-|link-color=white<br />
-|book-link=#<br />
-|link-name=虚灰<br />
-|book-info=注释在此<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-<p><span style="white-space: pre-wrap;">[[/div]]</span><br />
-<span style="white-space: pre-wrap;">[[/div]]</span></p>
+<p>2018年3月24日，我的594&#160;595&#160;596的三連發的第三作。</p>
+<p>目前最花心思的一作，構思了非常久，細節改了又改。但是一天內得到兩個up兩個down合著是0。</p>
+<p>自刪了，失望到死。算是立個石碑記念一下。</p>
 </div>
 </div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏示例代码</a></div>
 </div>
 </div>
-<div id="u-ch3"></div>
-<div class="tt-ch ch-3">
-<div class="tt-line-top tt-{$self-line}"></div>
-<div class="tt-txt">
-<h1 id="toc21"><span>示例三</span></h1>
-<p><span class="sub-tt">自定义隔板样式、自定义书籍样式</span></p>
-</div>
-<div class="tt-line-bottom tt-{$self-line}"></div>
-</div>
+<div id="wiki-tab-0-3" style="display:none"><div class="list-pages-box">    
 
+<table class="wiki-content-table">
+<tr>
+<th><strong>页面链接</strong></th>
+<th><strong>评分</strong></th>
+<th><strong>讨论</strong></th>
+<th><strong>创建时间</strong></th>
+<th><strong>最近更新</strong></th>
+</tr>
+<tr>
+<td><a href="/scp-cn-609">SCP-CN-609</a></td>
+<td>+36</td>
+<td>19</td>
+<td><span class="odate time_1510147196 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Nov 2017 13:19</span></td>
+<td><span class="odate time_1525089932 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Apr 2018 12:05</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-575">SCP-CN-575</a></td>
+<td>+25</td>
+<td>25</td>
+<td><span class="odate time_1512049310 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Nov 2017 13:41</span></td>
+<td><span class="odate time_1525089400 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Apr 2018 11:56</span></td>
+</tr>
+<tr>
+<td><a href="/who-would-you-trust-when-doom-happen">基金會緊急求助介面</a></td>
+<td>+56</td>
+<td>17</td>
+<td><span class="odate time_1518721760 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 19:09</span></td>
+<td><span class="odate time_1519661817 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Feb 2018 16:16</span></td>
+</tr>
+<tr>
+<td><a href="/what-is-memes">模因是什麼？現實篇</a></td>
+<td>+86</td>
+<td>9</td>
+<td><span class="odate time_1518954279 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Feb 2018 11:44</span></td>
+<td><span class="odate time_1554799333 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Apr 2019 08:42</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-594">SCP-CN-594</a></td>
+<td>+7</td>
+<td>3</td>
+<td><span class="odate time_1521815369 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2018 14:29</span></td>
+<td><span class="odate time_1525089665 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Apr 2018 12:01</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-595">SCP-CN-595</a></td>
+<td>+12</td>
+<td>3</td>
+<td><span class="odate time_1521815373 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">23 Mar 2018 14:29</span></td>
+<td><span class="odate time_1525089767 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Apr 2018 12:02</span></td>
+</tr>
+</table>
 
-
-
-
-<div class="shelf-4 shelf-wrap trans-yes my-plank-yes">
-<div class="shelf-yes">
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="javascript:;">链接名称</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-
-<div id="u-listbook-set-1" class="self-defining">
-<div class="dust-jacket cover-{$book-cover} cover-true">
-<div class="book-list link-gold link-color">
-<p><a href="#u-bk-1">点击此处打开书籍</a></p>
-</div>
-</div>
-<div class="book-description description-true book-annotation-1">
-<p>注释在此</p>
-</div>
-<div class="float-info info-1 info-true book-annotation-2">
-<div class="info-under">
-<p>注释在此</p>
-</div>
-</div>
-</div>
-<div class="the-shelf-block"></div>
-
-
-</div>
-<div class="et-plank-wrap">
-<div class="et-plank">
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-</div>
-</div>
-</div>
-<p><br /></p>
-
-
-
-<div id="u-bk-1" class="note-cover bks-bk-1">
-<div class="note-wrap note-leaf">
-<div class="note-page">
-<div class="note-bookmark">
-<p>史美尔斯说过一句富有哲理的话，书籍把我们引入最美好的社会，使我们认识各个时代的伟大智者。这句话语虽然很短，但令我浮想联翩。 就我个人来说，没有人对我的意义，不能不说非常重大。 生活中，若没有人出现了，我们就不得不考虑它出现了的事实。 带着这些问题，我们来审视一下没有人。</p>
-<p>我认为， 总结的来说， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 没有人因何而发生？ 既然如此， 问题的关键究竟为何？ 一般来说， 每个人都不得不面对这些问题。 在面对这种问题时， 所谓没有人，关键是没有人需要如何写。 要想清楚，没有人，到底是一种怎么样的存在。 从这个角度来看， 那么， 没有人因何而发生？ 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 对我个人而言，没有人不仅仅是一个重大的事件，还可能会改变我的人生。毕竟最灵繁的人也看不见自己的背脊。 雷锋说过一句富有哲理的话，自己活着，就是为了使别人过得更美好。我希望诸位也能好好地体会这句话。 生活中，若没有人出现了，我们就不得不考虑它出现了的事实。</p>
-<p>　　一般来讲，我们都必须务必慎重的考虑考虑。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 既然如何， 没有人的发生，到底需要如何做到，不没有人的发生，又会如何产生。 每个人都不得不面对这些问题。 在面对这种问题时， 一般来说， 一般来说， 在这种困难的抉择下，本人思来想去，寝食难安。 所谓没有人，关键是没有人需要如何写。 莫扎特曾经说过，谁和我一样用功，谁就会和我一样成功。我希望诸位也能好好地体会这句话。</p>
-</div>
-</div>
-<div class="no-float"></div>
-</div>
-</div>
-<div class="no-float"></div>
-<br />
-<br />
-<div style="font-size:130%;">
-<p><strong>附记：</strong><br />
-该组件可以配合:target等代码使用，<br />
-建议搭配<a href="/component:note-template">没有人做笔记 样版</a>使用，<br />
-比如现在可以点击一下题有“点击此处打开书籍”的书本。</p>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;显示示例代码</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏示例代码</a></div>
-<div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-top</span><br />
-|trans=yes<br />
-|list-shelf=3<br />
-|book-annotation=2<br />
-|my-plank=yes<br />
-|plank-background=var(&#8212;bluepaper-image)<br />
-|plank-filter=drop-shadow(4px 15px 5px #1f2a36)<br />
-|plank-background-size=cover 100%<br />
-|plank-border-radius=25px<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-books</span><br />
-|list-book=0<br />
-|link-color=gold<br />
-|book-link=链接地址<br />
-|link-name=链接文本<br />
-|book-info=注释在此<br />
-|self-defining=true<br />
-|self-book-color=#162c44<br />
-|self-book-background=url(&quot;<a href="http://scpsandboxcn.wikidot.com/local--files/image/Bgr-WL-Blue.png">http://scpsandboxcn.wikidot.com/local--files/image/Bgr-WL-Blue.png</a>&quot;);<br />
-|book-annotation=2<br />
-|self-book-border=2px solid #320f79<br />
-|self-link-color=red<br />
-|self-description-color=<br />
-|self-info-shadow=rgba(9,9,9,0.5)<br />
-|self-info-background=rgba(9,9,9,0.5)<br />
-|self-info-border=5px inset #333<br />
-]]</p>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-shelf-bottom]]</span></p>
-</div>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;隐藏示例代码</a></div>
-</div>
-</div>
-<div id="u-ch4"></div>
-<div class="tt-ch ch-4">
-<div class="tt-line-top tt-{$self-line}"></div>
-<div class="tt-txt">
-<h1 id="toc22"><span>Module相关</span></h1>
-<p><span class="sub-tt">{$sub-title}</span></p>
-</div>
-<div class="tt-line-bottom tt-{$self-line}"></div>
-</div>
-
-
-
-<div class="txt-1">
-<p>要想使用module于该主题，将以下代码替换原先的书籍代码，而对应参数参照<a href="/module-guide">常规module参数</a>即可。另外，因为潜在的适应性问题，不大建议在此模板上使用module。使用效果如下所示：</p>
-</div>
-
-
-
-<div class="shelf-999 shelf-wrap trans-no my-plank-{$my-plank}">
-<div class="shelf-no"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:of-the-masters-of-books">群书众主</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1555846070 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Apr 2019 11:27</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1555846070 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Apr 2019 11:27</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:see-the-darkness">我看到了此世间的黑暗</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1553613158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Mar 2019 15:12</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1553613158 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Mar 2019 15:12</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:a-suicide-note">自杀者的笔记</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1551055801 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Feb 2019 00:50</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1551055801 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">25 Feb 2019 00:50</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:hymns-for-the-cruel-wars">残忍之战的圣歌</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1550420944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2019 16:29</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1550420944 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2019 16:29</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:book-of-the-hidden">藏幽之书</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1549637994 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Feb 2019 14:59</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1549637994 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Feb 2019 14:59</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
-<div class="list-pages-item">
-
-
-<div id="u-listbook-{$list-book}" class="dust-jacket cover-green">
-<div class="book-list link-gold">
-<p><a href="/wanderers:min-min">已收集的备忘录</a></p>
-</div>
-</div>
-<div class="book-description book-annotation-1">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1549378001 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Feb 2019 14:46</span></em>。</p>
-</div>
-<div class="float-info info-1 book-annotation-2">
-<div class="info-under">
-<p><strong>归档员</strong>：<em><strong>Etinjat</strong></em>。<strong>整理时间</strong>：<em><span class="odate time_1549378001 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Feb 2019 14:46</span></em>。</p>
-</div>
-</div>
-<div class="module-shelf-block"></div>
-</div>
     
-    <div class="pager"><span class="pager-no">page 6 of 6</span><span class="target"><a href="/component:bookshelf-template/p/5">&laquo; previous</a></span><span class="target"><a href="/component:bookshelf-template/p/1">1</a></span><span class="target"><a href="/component:bookshelf-template/p/2">2</a></span><span class="target"><a href="/component:bookshelf-template/p/3">3</a></span><span class="target"><a href="/component:bookshelf-template/p/4">4</a></span><span class="target"><a href="/component:bookshelf-template/p/5">5</a></span><span class="current">6</span></div>
+    
     
     </div></div>
-<div class="et-plank-wrap">
-<div class="et-plank">
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
+<div id="wiki-tab-0-4" style="display:none">
+<p>測試語法用。有些語法沒辦法在沙盒試。</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;show&nbsp;block</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">–&nbsp;hide&nbsp;block</a></div>
+<div class="collapsible-block-content"><div class="list-pages-box">    
+
+<table class="wiki-content-table">
+<tr>
+<th><strong>页面链接</strong></th>
+<th><strong>评分</strong></th>
+<th><strong>讨论</strong></th>
+<th><strong>创建时间</strong></th>
+<th><strong>最近更新</strong></th>
+</tr>
+<tr>
+<td><a href="/scp-cn-968">SCP-CN-968</a></td>
+<td>+234</td>
+<td>71</td>
+<td><span class="odate time_1518516367 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 10:06</span></td>
+<td><span class="odate time_1593263255 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">27 Jun 2020 13:07</span></td>
+</tr>
+<tr>
+<td><a href="/fuban-s-proposal">fuban的提案</a></td>
+<td>+101</td>
+<td>11</td>
+<td><span class="odate time_1519141822 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 15:50</span></td>
+<td><span class="odate time_1567842176 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Sep 2019 07:42</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-286">SCP-CN-286</a></td>
+<td>+94</td>
+<td>18</td>
+<td><span class="odate time_1519134316 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 13:45</span></td>
+<td><span class="odate time_1592227261 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Jun 2020 13:21</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-175">SCP-CN-175</a></td>
+<td>+71</td>
+<td>9</td>
+<td><span class="odate time_1519141580 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 15:46</span></td>
+<td><span class="odate time_1554377658 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Apr 2019 11:34</span></td>
+</tr>
+<tr>
+<td><a href="/predictor">卜算子</a></td>
+<td>+68</td>
+<td>8</td>
+<td><span class="odate time_1518354485 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Feb 2018 13:08</span></td>
+<td><span class="odate time_1518360125 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Feb 2018 14:42</span></td>
+</tr>
+<tr>
+<td><a href="/who-would-you-trust-when-doom-happen">基金會緊急求助介面</a></td>
+<td>+56</td>
+<td>17</td>
+<td><span class="odate time_1518721760 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 19:09</span></td>
+<td><span class="odate time_1519661817 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Feb 2018 16:16</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-177">SCP-CN-177</a></td>
+<td>+49</td>
+<td>3</td>
+<td><span class="odate time_1518563045 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 23:04</span></td>
+<td><span class="odate time_1568812343 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Sep 2019 13:12</span></td>
+</tr>
+<tr>
+<td><a href="/keep-tired-work">仍然，有人处在荒无人烟地方继续干着活。</a></td>
+<td>+48</td>
+<td>8</td>
+<td><span class="odate time_1518225149 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 01:12</span></td>
+<td><span class="odate time_1549373294 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Feb 2019 13:28</span></td>
+</tr>
+<tr>
+<td><a href="/the-world">废土</a></td>
+<td>+47</td>
+<td>4</td>
+<td><span class="odate time_1518223998 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 00:53</span></td>
+<td><span class="odate time_1518232208 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 03:10</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-433">SCP-CN-433</a></td>
+<td>+41</td>
+<td>0</td>
+<td><span class="odate time_1518263820 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 11:57</span></td>
+<td><span class="odate time_1527933162 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Jun 2018 09:52</span></td>
+</tr>
+<tr>
+<td><a href="/research-of-008-and-project-resurrection">隨筆：關於Site-██對於SCP-008的研究與「復生計劃」</a></td>
+<td>+38</td>
+<td>7</td>
+<td><span class="odate time_1518244153 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 06:29</span></td>
+<td><span class="odate time_1548325600 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Jan 2019 10:26</span></td>
+</tr>
+<tr>
+<td><a href="/eggtartzhengwen">猎豚</a></td>
+<td>+37</td>
+<td>8</td>
+<td><span class="odate time_1518201891 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Feb 2018 18:44</span></td>
+<td><span class="odate time_1518201915 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Feb 2018 18:45</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-207">SCP-CN-207</a></td>
+<td>+33</td>
+<td>4</td>
+<td><span class="odate time_1518662924 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 02:48</span></td>
+<td><span class="odate time_1551774393 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Mar 2019 08:26</span></td>
+</tr>
+<tr>
+<td><a href="/vodka">LEVEL 3 ONLY 探索记录-099 19/2/16</a></td>
+<td>+32</td>
+<td>2</td>
+<td><span class="odate time_1518311694 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">11 Feb 2018 01:14</span></td>
+<td><span class="odate time_1518664413 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 03:13</span></td>
+</tr>
+<tr>
+<td><a href="/touch">吟游诗人的笔录：羊皮卷</a></td>
+<td>+29</td>
+<td>7</td>
+<td><span class="odate time_1518513118 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 09:11</span></td>
+<td><span class="odate time_1591433317 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Jun 2020 08:48</span></td>
+</tr>
+<tr>
+<td><a href="/my-trying">魔鬼说：</a></td>
+<td>+25</td>
+<td>5</td>
+<td><span class="odate time_1518717420 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 17:57</span></td>
+<td><span class="odate time_1519661796 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Feb 2018 16:16</span></td>
+</tr>
+<tr>
+<td><a href="/sickness">病</a></td>
+<td>+25</td>
+<td>10</td>
+<td><span class="odate time_1518235196 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 03:59</span></td>
+<td><span class="odate time_1545273939 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Dec 2018 02:45</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-181">SCP-CN-181</a></td>
+<td>+24</td>
+<td>9</td>
+<td><span class="odate time_1518539229 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 16:27</span></td>
+<td><span class="odate time_1542811933 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Nov 2018 14:52</span></td>
+</tr>
+<tr>
+<td><a href="/a-long-dream-in-another-plane">梦</a></td>
+<td>+21</td>
+<td>3</td>
+<td><span class="odate time_1519057843 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Feb 2018 16:30</span></td>
+<td><span class="odate time_1584786126 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Mar 2020 10:22</span></td>
+</tr>
+<tr>
+<td><a href="/chuxi">除夕夜大作战</a></td>
+<td>+20</td>
+<td>12</td>
+<td><span class="odate time_1518681237 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 07:53</span></td>
+<td><span class="odate time_1520218882 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Mar 2018 03:01</span></td>
+</tr>
+<tr>
+<td><a href="/helloworld">俺们的轮回</a></td>
+<td>+20</td>
+<td>1</td>
+<td><span class="odate time_1518535075 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 15:17</span></td>
+<td><span class="odate time_1519645687 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">26 Feb 2018 11:48</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-867">SCP-CN-867</a></td>
+<td>+19</td>
+<td>3</td>
+<td><span class="odate time_1519129696 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 12:28</span></td>
+<td><span class="odate time_1525923004 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 May 2018 03:30</span></td>
+</tr>
+<tr>
+<td><a href="/we-will-be-the-bird">我们将像鸟一样自由</a></td>
+<td>+16</td>
+<td>11</td>
+<td><span class="odate time_1518660205 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 02:03</span></td>
+<td><span class="odate time_1528633820 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Jun 2018 12:30</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-272">SCP-CN-272</a></td>
+<td>+16</td>
+<td>25</td>
+<td><span class="odate time_1518426712 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 09:11</span></td>
+<td><span class="odate time_1523674961 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Apr 2018 03:02</span></td>
+</tr>
+<tr>
+<td><a href="/fool">愚人</a></td>
+<td>+16</td>
+<td>1</td>
+<td><span class="odate time_1518407334 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 03:48</span></td>
+<td><span class="odate time_1518407352 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 03:49</span></td>
+</tr>
+<tr>
+<td><a href="/upvoted">好评</a></td>
+<td>+15</td>
+<td>6</td>
+<td><span class="odate time_1518535855 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 15:30</span></td>
+<td><span class="odate time_1518535904 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 15:31</span></td>
+</tr>
+<tr>
+<td><a href="/rererer">回澜</a></td>
+<td>+15</td>
+<td>5</td>
+<td><span class="odate time_1518280464 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 16:34</span></td>
+<td><span class="odate time_1585034123 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Mar 2020 07:15</span></td>
+</tr>
+<tr>
+<td><a href="/a-boy-meets-a-man">交汇</a></td>
+<td>+14</td>
+<td>5</td>
+<td><span class="odate time_1519142119 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 15:55</span></td>
+<td><span class="odate time_1520227974 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">05 Mar 2018 05:32</span></td>
+</tr>
+<tr>
+<td><a href="/world-end">已然終結的輝煌之世</a></td>
+<td>+14</td>
+<td>5</td>
+<td><span class="odate time_1518873151 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2018 13:12</span></td>
+<td><span class="odate time_1520004504 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">02 Mar 2018 15:28</span></td>
+</tr>
+<tr>
+<td><a href="/the-vanishing-eleven-days">消失的十一天</a></td>
+<td>+13</td>
+<td>2</td>
+<td><span class="odate time_1519121218 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 10:06</span></td>
+<td><span class="odate time_1519275660 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">22 Feb 2018 05:01</span></td>
+</tr>
+<tr>
+<td><a href="/shi-shui-de-feng-sha">逝水的风沙</a></td>
+<td>+13</td>
+<td>2</td>
+<td><span class="odate time_1518692828 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 11:07</span></td>
+<td><span class="odate time_1586018297 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">04 Apr 2020 16:38</span></td>
+</tr>
+<tr>
+<td><a href="/something-is-better-than-nothing">聊胜于无</a></td>
+<td>+13</td>
+<td>14</td>
+<td><span class="odate time_1518269744 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 13:35</span></td>
+<td><span class="odate time_1518270018 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 13:40</span></td>
+</tr>
+<tr>
+<td><a href="/pianju">骗局</a></td>
+<td>+12</td>
+<td>1</td>
+<td><span class="odate time_1519013934 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Feb 2018 04:18</span></td>
+<td><span class="odate time_1519014311 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Feb 2018 04:25</span></td>
+</tr>
+<tr>
+<td><a href="/fallen-world">陨落的世界</a></td>
+<td>+12</td>
+<td>1</td>
+<td><span class="odate time_1518940663 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">18 Feb 2018 07:57</span></td>
+<td><span class="odate time_1532431823 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Jul 2018 11:30</span></td>
+</tr>
+<tr>
+<td><a href="/a-story-of-icecoffee-sand">异寒冰咖啡沙传说</a></td>
+<td>+12</td>
+<td>9</td>
+<td><span class="odate time_1518789204 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Feb 2018 13:53</span></td>
+<td><span class="odate time_1518842423 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2018 04:40</span></td>
+</tr>
+<tr>
+<td><a href="/mirror">Mirror and rorriM dna Mirror and rorriM dna Mirror</a></td>
+<td>+12</td>
+<td>5</td>
+<td><span class="odate time_1518786974 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Feb 2018 13:16</span></td>
+<td><span class="odate time_1518787489 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Feb 2018 13:24</span></td>
+</tr>
+<tr>
+<td><a href="/shamodercjl">沙漠的日常记录</a></td>
+<td>+12</td>
+<td>17</td>
+<td><span class="odate time_1518687387 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">15 Feb 2018 09:36</span></td>
+<td><span class="odate time_1532431828 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Jul 2018 11:30</span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-342">SCP-CN-342</a></td>
+<td>+11</td>
+<td>8</td>
+<td><span class="odate time_1519121599 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 10:13</span></td>
+<td><span class="odate time_1545289815 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Dec 2018 07:10</span></td>
+</tr>
+<tr>
+<td><a href="/i-am-here">我在</a></td>
+<td>+11</td>
+<td>2</td>
+<td><span class="odate time_1518436832 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 12:00</span></td>
+<td><span class="odate time_1518449548 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 15:32</span></td>
+</tr>
+<tr>
+<td><a href="/jojojojo">醉生&amp;梦死</a></td>
+<td>+8</td>
+<td>1</td>
+<td><span class="odate time_1518792023 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Feb 2018 14:40</span></td>
+<td><span class="odate time_1518792083 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Feb 2018 14:41</span></td>
+</tr>
+<tr>
+<td><a href="/in-the-walls-of-eryx">高墙</a></td>
+<td>+7</td>
+<td>0</td>
+<td><span class="odate time_1519126310 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 11:31</span></td>
+<td><span class="odate time_1519126894 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 11:41</span></td>
+</tr>
+<tr>
+<td><a href="/cultivation">孤者自耕</a></td>
+<td>+7</td>
+<td>1</td>
+<td><span class="odate time_1518875628 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2018 13:53</span></td>
+<td><span class="odate time_1518875638 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">17 Feb 2018 13:53</span></td>
+</tr>
+<tr>
+<td><a href="/233">失落的异常</a></td>
+<td>+6</td>
+<td>5</td>
+<td><span class="odate time_1519114135 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 08:08</span></td>
+<td><span class="odate time_1519114529 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">20 Feb 2018 08:15</span></td>
+</tr>
+<tr>
+<td><a href="/ordinary">平凡文员的平凡生活</a></td>
+<td>+6</td>
+<td>5</td>
+<td><span class="odate time_1518444024 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 14:00</span></td>
+<td><span class="odate time_1518458367 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 17:59</span></td>
+</tr>
+<tr>
+<td><a href="/xueguo">雪国</a></td>
+<td>+6</td>
+<td>11</td>
+<td><span class="odate time_1518431128 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 10:25</span></td>
+<td><span class="odate time_1518435777 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">12 Feb 2018 11:42</span></td>
+</tr>
+<tr>
+<td><a href="/atlastscp">此世仅存一隅</a></td>
+<td>+5</td>
+<td>7</td>
+<td><span class="odate time_1518546918 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 18:35</span></td>
+<td><span class="odate time_1518547236 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">13 Feb 2018 18:40</span></td>
+</tr>
+<tr>
+<td><a href="/2018race-mirrow">镜</a></td>
+<td>+3</td>
+<td>4</td>
+<td><span class="odate time_1518264997 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Feb 2018 12:16</span></td>
+<td><span class="odate time_1556325916 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">27 Apr 2019 00:45</span></td>
+</tr>
+</table>
+
+    
+    
+    
+    </div></div>
 </div>
-</div>
-</div>
-<hr />
-<div class="help">
-<blockquote>
-<p>include组件代码块的起始，<strong>需完整地黏贴在开头</strong> ↦</p>
-<p>书本的编号，以区别其他自定义书籍样式，不需更改 ↦</p>
-<p>封面样式，预设值 ↦</p>
-<p>链接颜色，预设值 ↦</p>
-<p>书籍信息</p>
-<p>是否启用自定义样式，填true则启用，参数见上文 ↦</p>
-<p><strong>筛选</strong>创建者 ↦</p>
-<p>筛选顺序 ↦</p>
-<p>筛选分类 ↦</p>
-<p>显示几个结果 ↦</p>
-<p>最多显示几个结果 ↦</p>
-<p>筛选标签 ↦</p>
-<p>页面链接 ↦</p>
-<p>结束引用块 ↦<br /></p>
-</blockquote>
-<blockquote>
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-module</span></p>
-<p><strong>|list-book=%%index%%</strong></p>
-<p>|book-cover=green</p>
-<p>|link-color=gold</p>
-<p>|book-info=</p>
-<p>|self-defining=false</p>
-<p>|<strong>module</strong>-created-by=etinjat</p>
-<p>|module-order=updated_at desc</p>
-<p>|module-category=*</p>
-<p>|module-perpage=9</p>
-<p>|module-limit=*</p>
-<p>|module-tags=wanderers</p>
-<p><strong>|module-link=%%title_linked%%</strong></p>
-<p><span style="white-space: pre-wrap;">]]</span></p>
-</blockquote>
 </div>
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;复制用</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;show&nbsp;block</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;复制用</a></div>
-<div class="collapsible-block-content">
-<div class="blockquote">
-<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:bookshelf-module</span><br />
-<strong>|list-book=%%index%%</strong><br />
-|book-cover=<br />
-|link-color=<br />
-|book-info=<br />
-|self-defining=<br />
-|module-created-by=<br />
-|module-order=<br />
-|module-category=<br />
-|module-perpage=<br />
-|module-tags=<br />
-|module-limit=<br />
-<strong>|module-link=%%title_linked%%</strong><br />
-]]</p>
-</div>
-</div>
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;复制用</a></div>
-</div>
-</div>
-<div id="u-ch-bottom"></div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">–&nbsp;hide&nbsp;block</a></div>
+<div class="collapsible-block-content"><div class="list-pages-box">    
 
+<table class="wiki-content-table">
+<tr>
+<th><strong>页面链接</strong></th>
+<th><strong>评分</strong></th>
+<th><strong>讨论</strong></th>
+<th><strong>创建时间</strong></th>
+<th><strong>最近更新</strong></th>
+</tr>
+<tr>
+<td><a href="/reject">助理研究员Arnold Goldsheiner的人事档案</a></td>
+<td>+0</td>
+<td>0</td>
+<td><span class="odate time_1481720952 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">14 Dec 2016 13:09</span></td>
+<td><span class="odate time_1532918068 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">30 Jul 2018 02:34</span></td>
+</tr>
+<tr>
+<td><a href="/hysteria">一切疯狂的存在都将被迷雾燃尽</a></td>
+<td>+0</td>
+<td>2</td>
+<td><span class="odate time_1465564381 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">10 Jun 2016 13:13</span></td>
+<td><span class="odate time_1532858735 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Jul 2018 10:05</span></td>
+</tr>
+<tr>
+<td><a href="/bijhan">Bijhan</a></td>
+<td>+0</td>
+<td>0</td>
+<td><span class="odate time_1448800581 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Nov 2015 12:36</span></td>
+<td><span class="odate time_1514977847 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">03 Jan 2018 11:10</span></td>
+</tr>
+<tr>
+<td><a href="/misaka19092nd">Misaka19092nd的人事页</a></td>
+<td>+-4</td>
+<td>10</td>
+<td><span class="odate time_1603524239 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Oct 2020 07:23</span></td>
+<td><span class="odate time_1606657536 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Nov 2020 13:45</span></td>
+</tr>
+<tr>
+<td><a href="/mrpasserby">看门老大爷Mrpasserby Glyn的人事档案</a></td>
+<td>+-9</td>
+<td>11</td>
+<td><span class="odate time_1554566655 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Apr 2019 16:04</span></td>
+<td><span class="odate time_1602059473 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Oct 2020 08:31</span></td>
+</tr>
+<tr>
+<td><a href="/dr-hormress">Dr. Hormress的提案</a></td>
+<td>+-66</td>
+<td>5</td>
+<td><span class="odate time_1594222657 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Jul 2020 15:37</span></td>
+<td><span class="odate time_1604745027 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Nov 2020 10:30</span></td>
+</tr>
+<tr>
+<td><a href="/moyo-s-personnel-file">Moyoooooog的人事档案</a></td>
+<td>+-156</td>
+<td>41</td>
+<td><span class="odate time_1523171149 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">08 Apr 2018 07:05</span></td>
+<td><span class="odate time_1608132806 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">16 Dec 2020 15:33</span></td>
+</tr>
+</table>
 
-
+    
+    <div class="pager"><span class="pager-no">page 6 of 6</span><span class="target"><a href="/toxic-cola-personnel-file/p/5">&laquo; previous</a></span><span class="target"><a href="/toxic-cola-personnel-file/p/1">1</a></span><span class="target"><a href="/toxic-cola-personnel-file/p/2">2</a></span><span class="target"><a href="/toxic-cola-personnel-file/p/3">3</a></span><span class="target"><a href="/toxic-cola-personnel-file/p/4">4</a></span><span class="target"><a href="/toxic-cola-personnel-file/p/5">5</a></span><span class="current">6</span></div>
+    
+    </div></div>
+</div>
+</div>
+</div>
+<div id="wiki-tab-0-5" style="display:none">
+<h1 id="toc2"><span><strong>お前の弁当ォォォォォォ！！</strong></span></h1>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabViewf8724c76410087ee34cd6c13b57f26bc = new YAHOO.widget.TabView('wiki-tabview-f8724c76410087ee34cd6c13b57f26bc');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
 <div class="footnotes-footer">
 <div class="title">Footnotes</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 屏幕小于479px</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. 参见下面的示例一和示例二。因为手机适应性问题，不建议使用。</div>
-<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. 不填则不用填写下面相应自定义样式</div>
-<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. 即模拟书本厚度的外框</div>
-<div class="footnote-footer" id="footnote-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-5')">5</a>. 比如色码和背景图片</div>
-<div class="footnote-footer" id="footnote-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-6')">6</a>. 即书本样式两边的竖线</div>
-<div class="footnote-footer" id="footnote-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-7')">7</a>. 注释显示在隔板上</div>
-<div class="footnote-footer" id="footnote-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-8')">8</a>. 注释显示在浮动框上</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 針對涉及空間異常物理的結構物、機器、裝置進行研究、設計、施工及維護的部門。</div>
+<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. 以心理學、神經學、語言學與模因學為核心，安排組織以使之成為系統化模式，並建立主觀現實的人類行為的實用心理學研究部門。</div>
+<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. 專門研究及異常影響的人類及現實扭曲者對於環境及他人有所反應而表現出來的行為的部門。</div>
+<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. 針對異常信仰、異常風俗及異常傳統文化，以及在過程中涉及的非實體智能的研究部門。</div>
+<div class="footnote-footer" id="footnote-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-5')">5</a>. 針對空手道技術研究對黑道使用的一轉攻勢，並發展出GO的神明的信仰性的一般通過研究部門。</div>
+<div class="footnote-footer" id="footnote-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-6')">6</a>. 對人工智能的社會系統或結構、個體機構及社交網路進行研究，且針對其中舉立活動趨勢模型的部門。</div>
+<div class="footnote-footer" id="footnote-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-7')">7</a>. 對IOI(Item of Interest，受基金會關注的物品)進行研究，判定該類物品是否存在潛在異常性、或是是判定否為尋找異常的線索等等，是作為前線異常探索部門的後勤研究部門。</div>
+<div class="footnote-footer" id="footnote-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-8')">8</a>. 對宗教符號對一般人類的現實扭曲能力的吸取與放出的奇術研究分支，及由此建立實用奇術的工程部門。</div>
+<div class="footnote-footer" id="footnote-9"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-9')">9</a>. 運用基金會掌握的異常技術以此進行超能力一般的高超麻雀作弊的部門。</div>
 </div>
 
                     </div>
@@ -4004,7 +1374,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E6%A0%B7%E7%89%88#pages">样版</a>
+                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a>
                             </span>
                         </div>
                     
@@ -4012,12 +1382,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 35, 最后编辑于: <span class="odate time_1605352013 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">14 Nov 2020 11:06</span></div>
+                            <div id="page-info">页面版本: 10, 最后编辑于: <span class="odate time_1530444389 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">01 Jul 2018 11:26</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+20</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13748915/component:bookshelf-template" class="btn btn-default" id="discuss-button">讨论 (10)</a>
+<a href="/forum/t-12890998/toxic-cola-personnel-file" class="btn btn-default" id="discuss-button">讨论 (0)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -4084,45 +1454,45 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://battlestargenesis.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/battlestargenesis.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-sh.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-sh.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://battlestargenesis.wikidot.com">BATTLESTAR GENESIS MUSH</a></h3>
+            <h3><a target="_blank" href="http://scp-sh.wikidot.com">SCP Fondacija</a></h3>
             <div class="desc">          
-              battlestar.isunlimited.net    3012
+              Bosansko-Hrvatsko-Crnogorsko-Srpski Ogranak
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://arcana.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/arcana.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://gateofrealms.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/gateofrealms.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://arcana.wikidot.com">The Arcana Wiki</a></h3>
+            <h3><a target="_blank" href="http://gateofrealms.wikidot.com">诸界之门</a></h3>
             <div class="desc">          
-              Distilling the Real World for Gaming
+              多元原创创作社区
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.etnolinguistica.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.etnolinguistica.org/80.jpg"/>
+            <a target="_blank" class="image" href="http://firedawnfolder.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/firedawnfolder.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.etnolinguistica.org">Biblioteca Digital Curt Nimuendajú</a></h3>
+            <h3><a target="_blank" href="http://firedawnfolder.wikidot.com">FiredawnFolder</a></h3>
             <div class="desc">          
-              línguas e culturas indígenas sul-americanas
+              The not-quite Inner Circle but close enough
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://aviationknowledge.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/aviationknowledge.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://soymilkls.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/soymilkls.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://aviationknowledge.wikidot.com">AviationKnowledge</a></h3>
+            <h3><a target="_blank" href="http://soymilkls.wikidot.com">Soymilk Linkshell</a></h3>
             <div class="desc">          
-              
+              Professional, drama-free dynamis since 2005!
             </div>
           </div>
         </div>
