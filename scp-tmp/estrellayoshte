@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "estrellayoshte";
-        OZONE.request.timestamp = 1608535652;
+        OZONE.request.timestamp = 1608556712;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "estrellayoshte";
@@ -355,37 +355,51 @@
 }
 </style>
 <style>
-.top-border {
+.infobox {
  display:inline-box;
- border-style:solid none none;
+ overflow:hidden;
+ position:fixed;
+ right: 1em;
+ bottom: 2em;
+ width: 21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:#ffffff;
+ opacity: 1;
+ transition: all 0.5s ease-out;
 }
-</style>
-<style>
+
+.infobox:hover {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
 .preview{
+ color:grey;
  width:100%;
  display: inline-block;
  padding-left:1%;
  transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
 }
 
 .preview:hover{
  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
  transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
 }
 
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
+.preview.noyes:hover{
+  background: url('http://scpsandboxcn.wikidot.com/local--files/asriel3/logo.png') 80% 50% fixed no-repeat;
 }
 
-.preview .span {
+.preview .span { 
  opacity: 0;
  pointer-events: none;
  transition: all 0.3s ease-in-out;
+ overflow:hidden;
  text-overflow:ellipsis;
  position:fixed;
  z-index: 11;
@@ -396,13 +410,13 @@
  min-width: 250px;
  height:23%;
  padding:1%;
- float:top;
+ float:top; 
  color:grey;
  text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
+ font-family:微软细黑, Segoe UI Light,Verdana,sans-serif;
 }
 
-.preview:hover .span {
+.preview:hover .span { 
  opacity: 1;
  background-color:#ffffff;
 }
@@ -411,86 +425,30 @@
  display:none;
 }
 
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
-</style>
-<style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
+.imagepre{
+ background:#fff;
+ max-width:19%;
+ max-height:40%;
  position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
+ right: 2em;
+ bottom:calc(23% + 3em);
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
+.imagepre.nono {
+display:none
 }
 
 @media screen and (max-width:992px) {
     .preview .span{
-     display: none;
+        display: none;
+    }
+    .infobox {
+        position: relative;
+        margin: 1em auto;
+        right: 0;
+        bottom: 0;
+        height: 9em;
     }
 }
 
@@ -501,794 +459,50 @@
 }
 
 #action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoficonic-im-on-it.\{\$rating\} {display: none;}
+ .collabnoteoficonic-im-on-it.\{\$note\} {display: none;}
 </style>
 <style>
-.top-border {
- display:inline-box;
- border-style:solid none none;
-}
+.ratingofflos.\{\$rating\} {display: none;}
+ .collabnoteofflos.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoficon-documents.\{\$rating\} {display: none;}
+ .collabnoteoficon-documents.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingofdesk-of-junior-designer-s-yvonne.\{\$rating\} {display: none;}
+ .collabnoteofdesk-of-junior-designer-s-yvonne.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoftheme:simple-yonder.\{\$rating\} {display: none;}
+ .collabnoteoftheme:simple-yonder.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoftheme:technoblast.\{\$rating\} {display: none;}
+ .collabnoteoftheme:technoblast.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoftheme:paperstack.\{\$rating\} {display: none;}
+ .collabnoteoftheme:paperstack.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoftheme:xmas.\{\$rating\} {display: none;}
+ .collabnoteoftheme:xmas.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingofestrellayoshte.\{\$rating\} {display: none;}
+ .collabnoteofestrellayoshte.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingofdark-achievement-badges.\{\$rating\} {display: none;}
+ .collabnoteofdark-achievement-badges.\{\$note\} {display: none;}
 </style>
 <style>
-.preview{
- width:100%;
- display: inline-block;
- padding-left:1%;
- transition: box-shadow 1s ease-out;
- border-radius: 7px;
- margin-bottom: 5px;
-}
-
-.preview:hover{
- box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
- transition: box-shadow 0.3s ease-out;
- background: url('http://scp-wiki.wdfiles.com/local--files/estrellayoshte/f.png') 80% 50% fixed no-repeat;
-}
-
-.preview.no:hover, .preview.false:hover{
- box-shadow: none;
- transition: none;
- background: none;
-}
-
-.preview .span {
- opacity: 0;
- pointer-events: none;
- transition: all 0.3s ease-in-out;
- text-overflow:ellipsis;
- position:fixed;
- z-index: 11;
- right: 1em;
- bottom: 2em;
- width:21%;
- width: calc(50vw - 520px);
- min-width: 250px;
- height:23%;
- padding:1%;
- float:top;
- color:grey;
- text-size:0.9em;
- font-family:Segoe UI Light,Verdana,sans-serif;
-}
-
-.preview:hover .span {
- opacity: 1;
- background-color:#ffffff;
-}
-
-.collab-header{
- display:none;
-}
-
-@media screen and (max-width:992px) {
-    .preview .span{
-     display: none;
-    }
-}
-
-#page-options-container {
- background: transparent;
- position: relative;
- z-index: 10;
-}
-
-#action-area { position: relative; z-index: 20; }
-
-.collab-header{
- display:initial;
-}
-
-.translations{
-  font-weight:bold;
-}
-
-.unbold{
-  font-weight:normal;
-}
+.ratingoftheme:penumbra.\{\$rating\} {display: none;}
+ .collabnoteoftheme:penumbra.\{\$note\} {display: none;}
 </style>
 <style>
 :root {
@@ -1775,7 +989,7 @@
 <div style="text-align: center;">
 <h3 id="toc0"><span><span style="text-decoration: underline;">最新页面：</span></span></h3>
 </div>
-<p><a href="/dark-achievement-badges">基金会炫酷成就徽章</a> [+29]</p>
+<p><a href="/dark-achievement-badges">基金会炫酷成就徽章</a> [+43]</p>
 <div style="text-align: center;">
 <h3 id="toc1"><span><span style="text-decoration: underline;">我推荐的页面：</span></span></h3>
 </div>
@@ -1814,501 +1028,322 @@
 <p><span style="white-space: pre-wrap;">&#32;</span></p>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
 </script>
-<div id="wiki-tabview-8640ba4655839cad5f82d6a9d2a3bdd8" class="yui-navset">
+<div id="wiki-tabview-10c01e48a4e69ba3f1991ff1f0463beb" class="yui-navset">
 <ul class="yui-nav">
 <li class="selected"><a href="javascript:;"><em>关于我，认真的</em></a></li>
 <li><a href="javascript:;"><em>我的文章</em></a></li>
 </ul>
 <div class="yui-content">
 <div id="wiki-tab-0-0">
-<p>你好，我是<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3781861&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="EstrellaYoshte" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3781861)" /></a><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;">EstrellaYoshte</a></span>，又名<strong>SYwaves</strong>，又名“那做了一大堆标志的人”，又名“主题多得数不过来的人”，而这是我的“作者”页。</p>
+<p>你好，我是<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3781861&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="EstrellaYoshte" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3781861)" /></a><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;">EstrellaYoshte</a></span>，又名<strong>SYwaves</strong>，又名“那做了一大堆标志的人”，又名“主题多得数不过来的人”，而这是我的“作者”页。</p>
 <p>从职业上看我可能更多是一个艺术家，极罕见的情况下会出现在wiki之外。</p>
 <p>其他用户对我的评价：</p>
 <div class="blockquote">
 <p>Estrella除了主题之外你还有3篇文章吗？<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3487700&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Uncle Nicolini" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3487700)" /></a><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;">Uncle Nicolini</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3487700&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Uncle Nicolini" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3487700)" /></a><a href="http://www.wikidot.com/user:info/uncle-nicolini" onclick="WIKIDOT.page.listeners.userInfo(3487700); return false;">Uncle Nicolini</a></span></p>
 </div>
 <div class="blockquote">
 <p>sywaves会做很好的标志。sywaves会做很好的图像和符号。sywaves会做很好的主题。sywaves会做很好的艺术。<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6536693&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Placeholder McD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6536693)" /></a><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;">Placeholder McD</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6536693&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Placeholder McD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6536693)" /></a><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;">Placeholder McD</a></span></p>
 </div>
 <div class="blockquote">
 <p>你真的有写过什么吗，Estrella？<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ralliston" onclick="WIKIDOT.page.listeners.userInfo(5986843); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5986843&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Ralliston" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5986843)" /></a><a href="http://www.wikidot.com/user:info/ralliston" onclick="WIKIDOT.page.listeners.userInfo(5986843); return false;">Ralliston</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ralliston" onclick="WIKIDOT.page.listeners.userInfo(5986843); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5986843&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Ralliston" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5986843)" /></a><a href="http://www.wikidot.com/user:info/ralliston" onclick="WIKIDOT.page.listeners.userInfo(5986843); return false;">Ralliston</a></span></p>
 </div>
 <div class="blockquote">
 <p>你给这个网站做的标志和主题已经足以让你享有家喻户晓的名声了<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735419&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Lt Flops" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735419)" /></a><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;">Lt Flops</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735419&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Lt Flops" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735419)" /></a><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;">Lt Flops</a></span></p>
 </div>
 <div class="blockquote">
 <p>我不造你是做了个主题还是啥的，但它很好很强大<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jakdragonx" onclick="WIKIDOT.page.listeners.userInfo(5588260); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5588260&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="JakdragonX" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5588260)" /></a><a href="http://www.wikidot.com/user:info/jakdragonx" onclick="WIKIDOT.page.listeners.userInfo(5588260); return false;">JakdragonX</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jakdragonx" onclick="WIKIDOT.page.listeners.userInfo(5588260); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5588260&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="JakdragonX" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5588260)" /></a><a href="http://www.wikidot.com/user:info/jakdragonx" onclick="WIKIDOT.page.listeners.userInfo(5588260); return false;">JakdragonX</a></span></p>
 </div>
 <div class="blockquote">
 <p>德国<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jackalrelated" onclick="WIKIDOT.page.listeners.userInfo(3207203); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3207203&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="JackalRelated" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3207203)" /></a><a href="http://www.wikidot.com/user:info/jackalrelated" onclick="WIKIDOT.page.listeners.userInfo(3207203); return false;">JackalRelated</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jackalrelated" onclick="WIKIDOT.page.listeners.userInfo(3207203); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3207203&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="JackalRelated" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3207203)" /></a><a href="http://www.wikidot.com/user:info/jackalrelated" onclick="WIKIDOT.page.listeners.userInfo(3207203); return false;">JackalRelated</a></span></p>
 </div>
 <div class="blockquote">
 <p>真好！dune说titties<br />
-- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/j-dune" onclick="WIKIDOT.page.listeners.userInfo(6682213); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6682213&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="J Dune" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6682213)" /></a><a href="http://www.wikidot.com/user:info/j-dune" onclick="WIKIDOT.page.listeners.userInfo(6682213); return false;">J Dune</a></span></p>
+- <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/j-dune" onclick="WIKIDOT.page.listeners.userInfo(6682213); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6682213&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="J Dune" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6682213)" /></a><a href="http://www.wikidot.com/user:info/j-dune" onclick="WIKIDOT.page.listeners.userInfo(6682213); return false;">J Dune</a></span></p>
 </div>
 </div>
 <div id="wiki-tab-0-1" style="display:none">
 
 
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="top-border"></div>
+<div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://www.scp-wiki.net/estrellayoshte">主站人事档案</a></strong></p>
+</div>
+    
+    
+    
+    </div>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3781861&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="EstrellaYoshte" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3781861)" /></a><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;">EstrellaYoshte</a></span></strong></tt></p>
+<p style="text-align: center;">共11篇</p>
+</div>
 <div style="text-align: center;">
-<h1 id="toc3"><span>故事</span></h1>
-<div class="list-pages-box">    
-    
-    
-    
-    </div>
+<hr />
+<h2 id="toc3"><span>故事</span></h2>
 <hr /></div>
 
 
-<div class="list-pages-box">    
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/iconic-im-on-it">Iconic, I'm on it</a></strong><br />
+<span class="ratingoficonic-im-on-it 20"><em>主站评分：</em>+<tt><strong>20</strong></tt></span><br />
+<span class="collabnoteoficonic-im-on-it {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/flos">Flos</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+6<br />
-<strong>评论：</strong>2<br />
-<strong>+/-：</strong>+6/-0<br />
-<strong>最新评论：</strong>Darkequation</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/thaumiel%E8%AE%A1%E5%88%92">thaumiel计划</a> <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B">故事</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&amp;pagename=flos" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/flos">Flos</a></strong><br />
+<span class="ratingofflos 44"><em>主站评分：</em>+<tt><strong>44</strong></tt></span><span class="collabnoteofflos {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Darkequation</tt></strong> <em>于</em> <strong><tt><span class="odate time_1597999296 format_%25D%20%25H%3A%25M">21 Aug 2020 08:41</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606880967 format_%25D%20%25H%3A%25M">02 Dec 2020 03:49</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">倒计时&#32;00:06:16&#32;|&#32;Site-15外部，东摄像头&#32;&#32;&#32;&#32;时间快到了，我最亲爱的朋友们&#32;&#32;&#32;&#32;&#32;（Nadir&#32;Shahid博士走向躺在湖边花田里的设计师Sonia&#32;Crowsworth。）&#32;Shahid博士：Crowsworth。&#32;设计师Crowsworth：嗨！你好呀，Nadir。来和我一起吗？...</span><br />
+<span style="color: #000000"><em>标签：</em></span> thaumiel计划 故事</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/flos">flos</a></strong><br />
+<span class="ratingofflos 44"><em>主站评分：</em>+<tt><strong>44</strong></tt></span><br />
+<span class="collabnoteofflos {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    
+
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    
     
     
     
     </div>
-
-
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="top-border"></div>
+<p><strong><a href="http://www.scp-wiki.net/icon-documents">Regular documents from the Iconography Division</a></strong><br />
+<span class="ratingoficon-documents 30"><em>主站评分：</em>+<tt><strong>30</strong></tt></span><br />
+<span class="collabnoteoficon-documents {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 <div style="text-align: center;">
-<h1 id="toc4"><span>其他</span></h1>
-<div class="list-pages-box">    
-    
-    
-    
-    </div>
+<hr />
+<h2 id="toc4"><span>其他</span></h2>
 <hr /></div>
 
 
-<div class="list-pages-box">    <div class="list-pages-item">
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/theme:penumbra">半影 版式</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+14<br />
-<strong>评论：</strong>2<br />
-<strong>+/-：</strong>+14/-0<br />
-<strong>最新评论：</strong>Sekai_s</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E7%89%88%E5%BC%8F">版式</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=theme&amp;pagename=theme:penumbra" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<p><strong><a href="/desk-of-junior-designer-s-yvonne">初级设计师S. Yvonne的办公桌</a></strong><br />
+<span class="ratingofdesk-of-junior-designer-s-yvonne 117"><em>主站评分：</em>+<tt><strong>117</strong></tt></span><span class="collabnoteofdesk-of-junior-designer-s-yvonne {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Kcorena</tt></strong> <em>于</em> <strong><tt><span class="odate time_1598681588 format_%25D%20%25H%3A%25M">29 Aug 2020 06:13</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Esperanza_Cai</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608485223 format_%25D%20%25H%3A%25M">20 Dec 2020 17:27</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/desk-of-junior-designer-s-yvonne/11RbtVW.png" class="imagepre nono" alt="11RbtVW.png" /><br />
+<span style="white-space: pre-wrap;">设计部门&#32;图像科&#32;&#32;&#32;从初级设计师S.&#32;Yvonne的办公桌上恢复的材料：&#32;&#32;&#32;&#32;&#32;基金会部门标志&#32;特遣队标志&#32;危险标志&#32;我们被██时的标志&#32;其他&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;&#32;&#32;▷&#32;设计部门◁&#32;设计部门&#32;&#32;&#32;见上。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;&#32;&#32;▷&#32;财务会计办公室◁&#32;财务会计办公室&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;&#32;&#32;▷&#32;鸟类部门◁&#32;鸟类部门&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_&#32;&#32;&#32;▷&#32;误传部◁&#32;误传部&#32;&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 艺术作品</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/desk-of-junior-designer-s-yvonne">desk-of-junior-designer-s-yvonne</a></strong><br />
+<span class="ratingofdesk-of-junior-designer-s-yvonne 117"><em>主站评分：</em>+<tt><strong>117</strong></tt></span><br />
+<span class="collabnoteofdesk-of-junior-designer-s-yvonne {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/dark-achievement-badges">基金会炫酷成就徽章</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+36<br />
-<strong>评论：</strong>11<br />
-<strong>+/-：</strong>+36/-0<br />
-<strong>最新评论：</strong>Kcorena</p>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    
+    
+    
+    
+    </div>
+<p><strong><a href="http://www.scp-wiki.net/theme:simple-yonder">Simple Yonder Theme</a></strong><br />
+<span class="ratingoftheme:simple-yonder 20"><em>主站评分：</em>+<tt><strong>20</strong></tt></span><br />
+<span class="collabnoteoftheme:simple-yonder �5849�"><span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>等待翻译&#8230;</em></p>
 </div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81">艺术作品</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&amp;pagename=dark-achievement-badges" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+
+
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/theme:technoblast">科技爆破 版式</a></strong><br />
+<span class="ratingoftheme:technoblast 23"><em>主站评分：</em>+<tt><strong>23</strong></tt></span><span class="collabnoteoftheme:technoblast �2917�">；<span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>最新评论：</em> <strong><tt>Swred</tt></strong> <em>于</em> <strong><tt><span class="odate time_1602237266 format_%25D%20%25H%3A%25M">09 Oct 2020 09:54</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608276176 format_%25D%20%25H%3A%25M">18 Dec 2020 07:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">评分：&#32;&#32;&#32;评分模块与著作信息模块：&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;著作信息&#32;&#32;&#32;&#32;&#32;页面信息&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;&#32;更多页面信息&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;这是由&#32;EstrellaYoshte&#32;为&#32;AIAD&#32;设定而制作的美学版式。&#32;在你的作品开头添加如下语法以应用此版式：&#32;&#32;[[include&#32;:scp-wiki-cn:theme:technoblast]]&#32;&#32;示例&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 版式</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/theme:technoblast">theme:technoblast</a></strong><br />
+<span class="ratingoftheme:technoblast 23"><em>主站评分：</em>+<tt><strong>23</strong></tt></span><br />
+<span class="collabnoteoftheme:technoblast �5851�"><span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/component:sybadge">炫酷成就徽章</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+2<br />
-<strong>评论：</strong>1<br />
-<strong>+/-：</strong>+2/-0<br />
-<strong>最新评论：</strong>hoah2333</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E6%A0%B7%E7%89%88">样版</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=component&amp;pagename=component:sybadge" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/theme:paperstack">纸堆 版式</a></strong><br />
+<span class="ratingoftheme:paperstack 30"><em>主站评分：</em>+<tt><strong>30</strong></tt></span><span class="collabnoteoftheme:paperstack �3347�">；<span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>最新评论：</em> <strong><tt>Dr Hormress</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607266596 format_%25D%20%25H%3A%25M">06 Dec 2020 14:56</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608546774 format_%25D%20%25H%3A%25M">21 Dec 2020 10:32</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：&#32;9999&#32;&#32;&#32;收容等级：&#32;版式-IEL&#32;&#32;&#32;&#32;&#32;grid-item&#32;div&#32;元素中的插图方块。推荐宽度为&#32;300px。&#32;&#32;&#32;&#32;&#32;&#32;浮动文本&#32;这些文本位于&#32;testbox&#32;div&#32;元素中。用于&#32;grid-item&#32;图片之后来填补左侧的空白。应当使用短篇幅的段落以避免文本重叠。&#32;请勿通过标准的&#32;CSS&#32;@import&#32;方式引入本版式。你当然完全可以这么做，但通过&#32;[[include]]...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 版式</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/theme:paperstack">theme:paperstack</a></strong><br />
+<span class="ratingoftheme:paperstack 30"><em>主站评分：</em>+<tt><strong>30</strong></tt></span><br />
+<span class="collabnoteoftheme:paperstack �5853�"><span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/estrellayoshte">EstrellaYoshte的作者页</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+2<br />
-<strong>评论：</strong>5<br />
-<strong>+/-：</strong>+2/-0<br />
-<strong>最新评论：</strong>Swred</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85">作者</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&amp;pagename=estrellayoshte" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/theme:xmas">圣诞节 版式</a></strong><br />
+<span class="ratingoftheme:xmas 38"><em>主站评分：</em>+<tt><strong>38</strong></tt></span><span class="collabnoteoftheme:xmas �3485�">；<span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>最新评论：</em> <em>于</em><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607695793 format_%25D%20%25H%3A%25M">11 Dec 2020 14:09</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">此版式最初由&#32;Dc_Yerko&#32;为西班牙语翻译站制作，并由&#32;stormbreath&#32;调整。雪花代码由&#32;EstrellaYoshte&#32;调整。&#32;在你的作品开头添加如下语法以应用此版式：&#32;&#32;[[include&#32;:scp-wiki-cn:theme:xmas&#32;|xmas-header=&#32;--]&#32;|xmas-snow=&#32;--]]]&#32;&#32;如果你只想应用页眉，使用如下代码：&#32;&#32;[[include...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 版式</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/theme:xmas">theme:xmas</a></strong><br />
+<span class="ratingoftheme:xmas 38"><em>主站评分：</em>+<tt><strong>38</strong></tt></span><br />
+<span class="collabnoteoftheme:xmas �5855�"><span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/theme:xmas">圣诞节 版式</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+7<br />
-<strong>评论：</strong>0<br />
-<strong>+/-：</strong>+7/-0<br />
-<strong>最新评论：</strong></p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E7%89%88%E5%BC%8F">版式</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=theme&amp;pagename=theme:xmas" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/estrellayoshte">EstrellaYoshte的作者页</a></strong><br />
+<span class="ratingofestrellayoshte 46"><em>主站评分：</em>+<tt><strong>46</strong></tt></span><span class="collabnoteofestrellayoshte {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Swred</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607594873 format_%25D%20%25H%3A%25M">10 Dec 2020 10:07</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Esperanza_Cai</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608541886 format_%25D%20%25H%3A%25M">21 Dec 2020 09:11</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">最新页面：&#32;&#32;基金会炫酷成就徽章&#32;[+43]&#32;&#32;我推荐的页面：&#32;&#32;我的艺桌页&#32;-&#32;我设计的所有标志都在这里。&#32;SCP-5552&#32;-&#32;我最爱的SCP之一。&#32;lynch的艺作屁作&#32;-&#32;一个很酷很有趣的3D艺作页！&#32;Flopstyle&#32;CSS&#32;-&#32;非常floppy。&#32;&#32;&#32;&#32;&#32;合格？&#32;完全&#32;&#32;&#32;项目等级：&#32;RADICAL&#32;&#32;&#32;&#32;&#32;一张所谓的自画像。&#32;&#32;&#32;&#32;&#32;&#32;&#32;我的自传：&#32;lol不要，那看起来好累...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 作者</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/estrellayoshte">estrellayoshte</a></strong><br />
+<span class="ratingofestrellayoshte 46"><em>主站评分：</em>+<tt><strong>46</strong></tt></span><br />
+<span class="collabnoteofestrellayoshte {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/theme:paperstack">纸堆 版式</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+10<br />
-<strong>评论：</strong>5<br />
-<strong>+/-：</strong>+10/-0<br />
-<strong>最新评论：</strong>Dr Hormress</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E7%89%88%E5%BC%8F">版式</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=theme&amp;pagename=theme:paperstack" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/dark-achievement-badges">基金会炫酷成就徽章</a></strong><br />
+<span class="ratingofdark-achievement-badges 43"><em>主站评分：</em>+<tt><strong>43</strong></tt></span><span class="collabnoteofdark-achievement-badges {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Kcorena</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608496187 format_%25D%20%25H%3A%25M">20 Dec 2020 20:29</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608525741 format_%25D%20%25H%3A%25M">21 Dec 2020 04:42</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 艺术作品</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
+<p><strong><a href="http://www.scp-wiki.net/dark-achievement-badges">dark-achievement-badges</a></strong><br />
+<span class="ratingofdark-achievement-badges 43"><em>主站评分：</em>+<tt><strong>43</strong></tt></span><br />
+<span class="collabnoteofdark-achievement-badges {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 
-<div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/theme:technoblast">科技爆破 版式</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+17<br />
-<strong>评论：</strong>1<br />
-<strong>+/-：</strong>+17/-0<br />
-<strong>最新评论：</strong>Swred</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E7%89%88%E5%BC%8F">版式</a></p>
-</div>
-</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=theme&amp;pagename=theme:technoblast" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/theme:penumbra">半影 版式</a></strong><br />
+<span class="ratingoftheme:penumbra 23"><em>主站评分：</em>+<tt><strong>23</strong></tt></span><span class="collabnoteoftheme:penumbra �5153�">；<span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>最新评论：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608367742 format_%25D%20%25H%3A%25M">19 Dec 2020 08:49</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608352805 format_%25D%20%25H%3A%25M">19 Dec 2020 04:40</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">评分：&#32;&#32;&#32;评分模块与著作信息模块：&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;著作信息&#32;&#32;&#32;&#32;&#32;页面信息&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;&#32;更多页面信息&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;这是由&#32;EstrellaYoshte&#32;制作的美学版式，由纸堆版式分化而来。&#32;在你的作品开头添加如下语法以应用此版式：&#32;&#32;[[include&#32;:scp-wiki-cn:theme:penumbra]]&#32;&#32;你可以在...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 版式</div>
+<br />
+<br />
+<br />
 </div>
     
     
     
     </div>
-
-<div class="list-pages-box">    
-    
-    
-    
-    </div>
-
-<div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div class="preview {$shadow}">
-<h2><span><strong><a href="/desk-of-junior-designer-s-yvonne">初级设计师S. Yvonne的办公桌</a></strong></span></h2>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<p><strong>评分：</strong>+14<br />
-<strong>评论：</strong>2<br />
-<strong>+/-：</strong>+14/-0<br />
-<strong>最新评论：</strong>Kcorena</p>
-</div>
-<div style="float:left; width: 45%; padding: 0 2%">
-<hr />
-<div class="translations">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;标签</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;标签</a></div>
-<div class="collapsible-block-content">
-<div class="unbold">
-<p><a href="/system:page-tags/tag/%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81">艺术作品</a></p>
+<p><strong><a href="http://www.scp-wiki.net/theme:penumbra">theme:penumbra</a></strong><br />
+<span class="ratingoftheme:penumbra 23"><em>主站评分：</em>+<tt><strong>23</strong></tt></span><br />
+<span class="collabnoteoftheme:penumbra �5857�"><span style="white-space: pre-wrap;">&#32;</span></span><br />
+<em>等待翻译&#8230;</em></p>
 </div>
 </div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;翻译</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;翻译</a></div>
-<div class="collapsible-block-content">
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&amp;pagename=desk-of-junior-designer-s-yvonne" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-</div>
-</div>
-<hr /></div>
-</div>
-</div>
-</div>
-    
-    
-    
-    </div></div>
 </div>
 </div>
 <script type="text/javascript">
 //<![CDATA[
 OZONE.dom.onDomReady(function(){
-        var tabView8640ba4655839cad5f82d6a9d2a3bdd8 = new YAHOO.widget.TabView('wiki-tabview-8640ba4655839cad5f82d6a9d2a3bdd8');
+        var tabView10c01e48a4e69ba3f1991ff1f0463beb = new YAHOO.widget.TabView('wiki-tabview-10c01e48a4e69ba3f1991ff1f0463beb');
                 }, "dummy-ondomready-block");
         
 //]]>
@@ -2323,7 +1358,7 @@ OZONE.dom.onDomReady(function(){
 </div>
 </div>
 <div class="hexabody">
-<p>和<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6536693&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Placeholder McD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6536693)" /></a><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;">Placeholder McD</a></span>合作，彻底翻新了视觉美学，让它更具流线型。导致了<a href="/theme:technoblast">科技爆破版式</a>的创作。</p>
+<p>和<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6536693&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Placeholder McD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6536693)" /></a><a href="http://www.wikidot.com/user:info/placeholder-mcd" onclick="WIKIDOT.page.listeners.userInfo(6536693); return false;">Placeholder McD</a></span>合作，彻底翻新了视觉美学，让它更具流线型。导致了<a href="/theme:technoblast">科技爆破版式</a>的创作。</p>
 </div>
 <div class="hexacontainer" style="margin-top: -0rem;">
 <div class="hexaheader">
@@ -2334,7 +1369,7 @@ OZONE.dom.onDomReady(function(){
 <blockquote>
 <p>在过去的六个月里，EstrellaYoshte在解密SCP中心页完成的工作比其他任何人都多。我的工作还没被抢的唯一原因就是人家在忙着做主题。</p>
 </blockquote>
-<p>– <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/elunerazim" onclick="WIKIDOT.page.listeners.userInfo(5226742); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5226742&amp;amp;size=small&amp;amp;timestamp=1608526762" alt="Elunerazim" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5226742)" /></a><a href="http://www.wikidot.com/user:info/elunerazim" onclick="WIKIDOT.page.listeners.userInfo(5226742); return false;">Elunerazim</a></span>，解密SCP的版主，他的工作可能要被抢了。</p>
+<p>– <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/elunerazim" onclick="WIKIDOT.page.listeners.userInfo(5226742); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5226742&amp;amp;size=small&amp;amp;timestamp=1608546775" alt="Elunerazim" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5226742)" /></a><a href="http://www.wikidot.com/user:info/elunerazim" onclick="WIKIDOT.page.listeners.userInfo(5226742); return false;">Elunerazim</a></span>，解密SCP的版主，他的工作可能要被抢了。</p>
 </div>
 <p><span style="white-space: pre-wrap;">&#32;</span></p>
 <hr />
@@ -2379,7 +1414,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 4, 最后编辑于: <span class="odate time_1608355727 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">19 Dec 2020 05:28</span></div>
+                            <div id="page-info">页面版本: 6, 最后编辑于: <span class="odate time_1608541886 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">21 Dec 2020 09:11</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+2</span>)</a>
@@ -2451,21 +1486,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://mathaerobics4samvedna.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mathaerobics4samvedna.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://viscomclass.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/viscomclass.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://mathaerobics4samvedna.wikidot.com">Math Aerobics</a></h3>
-            <div class="desc">          
-              ADIDAS - All Day I Dream About Sums..!!
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://daeren.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/daeren.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://daeren.wikidot.com">The Tales of Daeren</a></h3>
+            <h3><a target="_blank" href="http://viscomclass.wikidot.com">VisCom</a></h3>
             <div class="desc">          
               
             </div>
@@ -2473,23 +1497,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ipr11.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ipr11.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://hiddenprojectwiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/hiddenprojectwiki.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ipr11.wikidot.com">IPR11</a></h3>
+            <h3><a target="_blank" href="http://hiddenprojectwiki.wikidot.com">Hidden Project</a></h3>
             <div class="desc">          
-              
+              Welcome to Hidden Project Wiki
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://championsashes.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/championsashes.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://is2216.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/is2216.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://championsashes.wikidot.com">Champion&#039;s Ashes</a></h3>
+            <h3><a target="_blank" href="http://is2216.wikidot.com">IS2216 - JAVA WIKI</a></h3>
             <div class="desc">          
-              The Official Wiki For Dark Souls III: Champion&#039;s Ashes
+              Java for beginners
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://lspr.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/lspr.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://lspr.wikidot.com">Lopside Raccoons</a></h3>
+            <div class="desc">          
+              Not Rightside, But Lopside!
             </div>
           </div>
         </div>
