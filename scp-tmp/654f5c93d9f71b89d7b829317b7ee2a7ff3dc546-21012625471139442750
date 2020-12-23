@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<script type="text/javascript">
+/*一定時間経過でノイズが切れる*/
+var timelimitMin = 7;//ノイズが流れる時間（分）
+var valume = 0.06;//音量調整
+var gradientStop = 20;//ノイズの音量が徐々に小さくなり始める残り時間（秒）
+
+/*ここから触るな*/
+var MuteGradient;
+if(timelimitMin > 0){
+if(gradientStop > 0){
+gradientStop *= 10;
+MuteGradient = valume / gradientStop;
+gradientStop *= 100;
+}
+timelimitMin *= (1000 * 60);
+}
+
+var oldTime = new Date();
+oldTime = oldTime.getTime();
+
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContext;
+var bufferSize = 4096;
+var brownNoise = (function() {
+    var lastOut = 0.0;
+    var node = audioContext.createScriptProcessor(bufferSize, 1, 1);
+    node.onaudioprocess = function(e) {
+        var output = e.outputBuffer.getChannelData(0);
+        for (var i = 0; i < bufferSize; i++) {
+            var white = Math.random() * 2 - 1;
+            output[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = output[i];
+            output[i] *= valume; // 音量調整
+        }
+    }
+    return node;
+})();
+
+brownNoise.connect(audioContext.destination);
+if(timelimitMin > 0)stopNoise();
+function stopNoise(){
+var newTime = new Date();
+newTime = newTime.getTime();
+
+if((newTime - oldTime > (timelimitMin-gradientStop )) && (gradientStop!=0)){
+valume -= MuteGradient;
+brownNoise.connect(audioContext.destination);
+}
+
+if(newTime - oldTime < (timelimitMin)){
+setTimeout(stopNoise,100);
+}else{
+valume = 0;
+brownNoise.connect(audioContext.destination);
+}
+}
+</script>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
