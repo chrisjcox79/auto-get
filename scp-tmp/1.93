@@ -1,465 +1,186 @@
-/*
-    Technoblast Theme
-    [2020 Wikidot Theme]
-    By EstrellaYoshte
-    Based on:
-        Simple Yonder Theme by EstrellaYoshte
-        Anderson Robotics Theme by Croquembouche
-        Flopstyle CSS by Lt Flops
-*/
+/* - == === BHL VARIABLES === == - */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+/* This is a BHL theme, which is configuration-based, so the root element
+ * contains variables that will affect the whole theme
+ */
+:root {
+  /* S-CSS-P integration */
+  --theme-base: "black-highlighter";
+  --theme-id: "swirling-ashes";
+  --theme-name: "Swirling Ashes Theme";
 
-#page-content { font-size: 0.91rem; }
+  /* Colours */
+  --dark-gray-monochrome: 26, 24, 26;
+  --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
+  --dark-accent: 63, 9, 143;
+  --medium-accent: 81, 13, 181;
+  --bright-accent: 105, 49, 186;
+  --pale-accent: 128, 80, 200;
 
-body {
-    color: #000000;
-    font-family: 'Cairo', '等线', sans-serif;
-    word-break: unset;
-}
+  /* Sky */
+  --sky-at-dawn: 236, 112, 99;
+  --sky-at-morning: 174, 214, 241;
+  --sky-at-daytime: 249, 231, 159;
+  --sky-at-evening: 248, 196, 113;
+  --sky-at-dusk: 140, 50, 70;
+  --sky-at-night: 50, 40, 67;
+  --sky-length: 15;
+  --sky-time: 60s;
 
-.page-source, .code pre, .code p, .code, tt{ /* ---- Code by Croquembouche ---- */
-    font-family: "Fira Code", '幼圆', monospace;
-}
+  /* Header adjustments */
+  --header-title: "鼠巢";
+  --header-subtitle: "让我们从结局开始";
 
-a {
-    color: #00AAB3;
-}
-
-a:visited {
-    color: #013737;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #013737;
-    font-family: 'Orbitron', '黑体', sans-serif;
-    font-weight: bold;
+  /* Delete the default header background */
+  --gradient-header: linear-gradient(transparent, transparent);
+  --diagonal-stripes: linear-gradient(transparent, transparent);
 }
 
-#account-topbutton{
-    border: 0px solid #000;
+/* - == === HEADER BACKGROUNDS === == - */
+
+/* The header is made up of a million different stacked backgrounds.
+ * Instead of fucking about with z-index, I've added backgrounds to
+ * the ::before and ::after of various full-page elements in their
+ * natural stacking order.
+ */
+
+/* The following pseudoelements each contain a different part of the
+ * header background. They need to be drawn precisely over the header
+ * and made unclickable so they don't interfere with the links up there.
+ * They appear on the page in this order, so they'll also be drawn on
+ * top of each other in this order.
+ */
+body::before,
+div#container-wrap-wrap::before,
+div#container-wrap::before,
+div#container-wrap-wrap::after,
+body::after {
+  content: "";
+  position: absolute;
+  height: var(--header-height-on-desktop); width: 100%; top: 0; left: 0;
+  pointer-events: none;
 }
 
-/* ---- PAGE WRAP ---- */
- div#container-wrap{
-     background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/bg.png);
+/* The sky, which loops through a series of colours to evoke the
+ * unstoppable passing of time
+ */
+body::before {
+  background: linear-gradient(
+                to top,
+                rgb(var(--sky-at-morning)) 0%,
+                rgb(var(--sky-at-morning)) 11%,
+                rgb(var(--sky-at-daytime)) 22%,
+                rgb(var(--sky-at-daytime)) 33%,
+                rgb(var(--sky-at-evening)) 44%,
+                rgb(var(--sky-at-dusk)) 55%,
+                rgb(var(--sky-at-night)) 66%,
+                rgb(var(--sky-at-night)) 77%,
+                rgb(var(--sky-at-dawn)) 88%,
+                rgb(var(--sky-at-morning)) 100%
+              );
+  background-size: 100% calc(var(--header-height-on-desktop)
+                             * var(--sky-length));
+  animation: sky linear var(--sky-time) infinite;
+}
+@keyframes sky {
+  from { background-position: 0 0; }
+  to {
+    background-position: 0 calc(var(--header-height-on-desktop)
+                                * var(--sky-length));
+  }
 }
 
-div#header {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/logoaiad.png);
-    background-size: 12.5%;
+/* The city skyline */
+div#container-wrap-wrap::before {
+  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
+  background-size: auto var(--header-height-on-desktop);
 }
 
-#page-title {
-    font-family: 'Orbitron', '黑体', sans-serif;
-    font-size: 2.2em;
-    font-weight: bold;
-    color: #013737;
+/* Two backgrounds: a white and blurred shine on the buildings,
+ * taken from a brightness threshold of the original skyline
+ * image; and a white-to-transparent gradient that uses the
+ * original skyline image as a clipping mask. These appear in
+ * the day and fade for the night to represent the sun's
+ * reflection on the buildings.
+ */
+div#container-wrap::before {
+  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-whitewash.png),
+              url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-highlight.png);
+  background-size: auto var(--header-height-on-desktop);
+  animation: shine ease-in-out var(--sky-time) infinite;
+}
+@keyframes shine {
+  0%, 40%, 100% { opacity: 0.2; }
+  55%, 77% { opacity: 0; }
 }
 
-#login-status,
-#login-status a {
-    color: white;
-    font-weight: bold;
+/* The final two pseudoelements contain the ashes: clouds that
+ * roll past the city at ground level. Two elements are needed
+ * because the two layers of clouds have different widths and
+ * move at different speeds.
+ * The fade animation affords an unobscured view of the city
+ * every 3rd night.
+ */
+div#container-wrap-wrap::after, body::after {
+  background-size: var(--ashes-width) var(--header-height-on-desktop);
+  background-repeat: repeat-x;
+  animation: ashes-move linear var(--ashes-move-duration),
+             ashes-fade ease calc(var(--sky-time) * 3);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+div#container-wrap-wrap::after {
+  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-large.png);
+  --ashes-move-duration: 27s;
+  --ashes-width: 500px;
+  --ashes-opacity: 0.5;
+}
+body::after {
+  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-small.png);
+  --ashes-move-duration: 20s;
+  --ashes-width: 800px;
+  --ashes-opacity: 0.4;
+}
+@keyframes ashes-move {
+  from { background-position: 0 0; }
+  to { background-position: var(--ashes-width) 0; }
+}
+@keyframes ashes-fade {
+  0%, 85%, 96%, 100% { opacity: var(--ashes-opacity); }
+  88.66%, 92.33% { opacity: 0.1; }
 }
 
+/* - == === BODY BACKGROUNDS === == - */
 
-
-#footer {
-    background: transparent;
-}
-
-#search-top-box-input,
-#search-top-box-input:hover,
-#search-top-box-input:focus,
-#search-top-box-form input[type=submit],
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: none;
-    background: #282828;
-    box-shadow: none;
-    border-radius: 3px;
-    color: #f4f4f4;
+/* This psuedolement contains the faint purple patchy smog on the page
+ * just below the header, as a thematic transition from dark to light.
+ */
+#content-wrap { position: relative; }
+#content-wrap::before {
+  content: "";
+  position: absolute;
+  height: 100%; width: 100%; top: 0; left: 0;
+  background-repeat: repeat-x;
+  pointer-events: none;
+  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/purple-smoke.png);
+  opacity: 0.2;
 }
 
-#search-top-box input.empty {
-    color: #bbbbbb;
+/* This one is the skyline at the bottom of the sidebar */
+#side-bar::before {
+  content: "";
+  position: absolute;
+  height: 100%; width: 100%; bottom: 0; left: 0;
+  background-repeat: repeat-x;
+  pointer-events: none;
+  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
+  background-size: auto 15rem;
+  background-position: bottom;
+  opacity: 0.2;
 }
 
-#top-bar a,
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a,
-#login-status ul a,
-#login-status ul a:hover {
-    color: #00AAB3;
-}
+/* - == === MISCELLANEOUS === == - */
 
-div#header h1 a span {
-    font-family: 'Orbitron', '黑体', sans-serif;
-    font-weight: bold;
-    font-size: 0.9em;
-    color: #00ffff;
-    text-shadow: 0px 0px 0px #000;
-}
-div#header h2 span {
-    font-family: 'Cairo', '等线', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #ff9944;
-    padding: 17px 0;
-    text-shadow: 0px 0px 0px #000;
-    white-space: pre;
-}
-
-.scp-image-block.block-right {
-    margin: 0 2em 1em;
-}
-
-@media (min-width: 767px) {
-     #header {
-             background-position: 0em 1.8em;
-     }
-}
-
-/* ---- SIDE BAR ---- */
-
- #side-bar .side-block{
-     border: none;
-     border-radius: 3px;
-     box-shadow: none;
-     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png')!important;
-     color: #00ffff;
-}
-
- #side-bar .heading{
-     color: #ff9944;
-     border-bottom: solid 2px #ff9944;
-}
-
-#side-bar .menu-item > img {
-  display: none;
-}
-
-#side-bar .menu-item > a:hover {
-    background-color: #00ffff;
-    color: #013737;
-    text-decoration: none;
-}
-
-#top-bar div.open-menu a {
-    border-radius: 3px;
-    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
-    color: #00ffff;
-    border: none;
-}
-
-#side-bar a,
-#side-bar a:visited {
-    color: #00ffff;
-}
-
-#side-bar .collapsible-block-folded {
-    background: none;
-}
-
-#side-bar .collapsible-block-link {
-    margin-left: 0;
-}
-
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 2px #ff9944;
-    padding-left: 15px;
-}
-
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: #ff9944;
-}
-
-@media (max-width: 767px) {
-    #main-content {
-        padding: 0;
-        margin: 0 5%;
-        border-left: none;
-    }
-    #page-title {
-        margin-top: 0.7em;
-    }
-    #side-bar {
-        background-color: #013737;
-        left: -19em;
-    }
-    #side-bar:target {
-        border: none;
-        box-shadow: 3px 0 1px -2px rgba(0,0,0,0.04), 1px 0 5px 0 rgba(0,0,0,0.2);
-    }
-    #side-bar .close-menu {
-        transition: width 0.5s ease-in-out 0.1s,
-                    opacity 1s ease-in-out 0s;
-        display: block;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: rgba(0,0,0,0.3);
-        background-position: 19em 50%;
-        z-index: -1;
-        opacity: 0;
-        pointer-events: none;
-    }
-    #side-bar:target .close-menu {
-        width: calc(100% - 19em);
-        right: 0;
-        left: auto;
-        opacity: 1;
-        pointer-events: auto;
-    }
-    #page-content > hr, #page-content > .list-pages-box > .list-pages-item > hr {
-        margin: 3em -5.5%;
-    }
-    #side-bar {
-        top: 0;
-    }
-    #side-bar .heading,
-    #side-bar .collapsible-block-folded,
-    #side-bar .collapsible-block-unfolded-link {
-        padding-left: 1em;
-        margin-left: -1em;
-    }
-    #search-top-box {
-        top: 107px;
-    }
-}
-
-/* ---- TABS ---- */
-
-/* ---- YUI TAB BASE ---- */
-.yui-navset .yui-nav a,.yui-navset .yui-navset-top .yui-nav a{background-color:inherit;background-image:inherit}.yui-navset .yui-nav a:hover,.yui-navset .yui-nav a:focus{background:inherit;text-decoration:inherit}.yui-navset .yui-nav .selected a,.yui-navset .yui-nav .selected a:focus,.yui-navset .yui-nav .selected a:hover{color:inherit;background:inherit}.yui-navset .yui-nav,.yui-navset .yui-navset-top .yui-nav{border-color:inherit}.yui-navset li{line-height:inherit}
-
-/* ---- YUI TAB CUSTOMIZATION ----*/
-
- .yui-navset .yui-nav,
- .yui-navset .yui-navset-top .yui-nav{
-     display: flex;
-     flex-wrap: wrap;
-     width: calc(100% - .125rem);
-     margin: 0 auto;
-     border-color: #013737;
-     box-shadow: none;
-}
- .yui-navset .yui-nav a, /* ---- Link Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav a{
-     color: #013737;
-    /* ---- Tab Background Colour | [UNSELECTED] ---- */
-     background-color: #f4f4f4;
-     border: unset;
-}
- .yui-navset .yui-nav a:hover,
- .yui-navset .yui-nav a:focus{
-     color: #f4f4f4;
-    /* ---- Tab Background Colour | [HOVER] ---- */
-     background-color: #00AAB3;
-}
- .yui-navset .yui-nav li, /* ---- Listitem Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav li{
-     position: relative;
-     display: flex;
-     flex-grow: 2;
-     max-width: 100%;
-     margin: 0;
-     padding: 0;
-     color: #00ffff;
-     background-color: #f4f4f4;
-     border-color: transparent;
-     box-shadow: none;
-}
- .yui-navset .yui-nav li a,
- .yui-navset-top .yui-nav li a,
- .yui-navset-bottom .yui-nav li a{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-}
- .yui-navset .yui-nav li em{
-     border: unset;
-}
- .yui-navset .yui-nav a em,
- .yui-navset .yui-navset-top .yui-nav a em{
-     padding: .35em .75em;
-
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
-}
- .yui-navset .yui-nav .selected, /* ---- Selection Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav .selected{
-     flex-grow: 2;
-     margin: 0;
-     padding: 0;
-    /* ---- Tab Background Colour | [SELECTED] ---- */
-     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
-}
- .yui-navset .yui-nav .selected a,
- .yui-navset .yui-nav .selected a em{
-     border: none;
-}
- .yui-navset .yui-nav .selected a{
-     width: 100%;
-     color: #00ffff;
-}
- .yui-navset .yui-nav .selected a:focus,
- .yui-navset .yui-nav .selected a:active{
-     color: #00ffff;
-     background-color: #013737;
-}
- .yui-navset-left .yui-content{
-    /* ---- Content Background ---- */
-     background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
-}
- .yui-navset .yui-content,
- .yui-navset .yui-navset-top .yui-content{
-     padding: .5em;
-     border: none;
-}
-
-/* ---- TOP MENU ---- */
-
-#top-bar a {
-    color: #f4f4f4;
-    font-weight: normal;
-}
-
-
-/* ---- INFO BAR ---- */
- body{
-     --barColour: #013737;
-}
-
- .info-container .collapsible-block-content{
-     padding: 0 .5em 30px;
-}
- .info-container .collapsible-block-content .wiki-content-table{
-     width: 100%;
-}
-
-/* ---- INFO PANE ---- */
-
-#page-content .creditRate{
-     margin: unset;
-}
-#page-content .rate-box-with-credit-button {
-    background-color: #013737;
-    border: solid 1px #013737;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-#page-content .rate-box-with-credit-button .fa-info {
-    border: none;
-    color: #ff9944;
-}
-
-#page-content .rate-box-with-credit-button .fa-info:hover {
-    background: #ff9944;
-    color: #013737;
-}
-
-.rate-box-with-credit-button .cancel {
-    border: solid 1px #013737;
-}
-
-/* ---- PAGE RATING ---- */
-
-.page-rate-widget-box {
-    box-shadow: none;
-    margin: unset;
-    border-radius: 0;
-}
-
-.page-rate-widget-box .rate-points {
-    background-color: #013737 !important;
-    color: #00ffff !important;
-    border: solid 1px #013737;
-    border-radius: 0;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: #013737;
-    border-top: solid 1px #013737;
-    border-bottom: solid 1px #013737;
-}
-
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: #00ffff;
-}
-
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: #00ffff;
-    color: #013737;
-}
-
-.page-rate-widget-box .cancel {
-    background: transparent;
-    background-color: #013737;
-    border: solid 1px #013737;
-    border-radius: 0;
-}
-
-.page-rate-widget-box .cancel a {
-    color: #00ffff;
-}
-.page-rate-widget-box .cancel a:hover {
-    background: #00ffff;
-    color: #013737;
-    border-radius: 0;
-}
-
-/* ---- PAGE ELEMENTS ---- */
-
-#page-content .wiki-content-table tr th {
-    border: solid 1px #013737;
-    color: #f4f4f4;
-    background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
-    /* set border for table title */
-}
-
-#page-content .wiki-content-table tr td {
-    border: solid 1px #013737;
-    /* set border for table content */
-}
-
-blockquote,
-div.blockquote,
-#toc,
-.code {
-     background-color: #f5f5f5;
-     border: solid 1px #013737;
-}
-
-.scp-image-block {
-    border: solid 1px #013737;
-    box-shadow: none;
-}
-.scp-image-block .scp-image-caption {
-    background: linear-gradient(rgba(1,55,55,0), rgba(1,55,55,0)), url('http://scp-wiki.wdfiles.com/local--files/theme%3Atechnoblast/darkbg.png');
-    border-top: solid 1px #013737;
-    color: #f4f4f4;
-}
-
-/* ---- Horizontal Rules ---- */
-
-hr {
-  background-color: rgba(1,55,55,0.46);
+#side-bar .scpnet-interwiki-wrapper {
+  filter: brightness(0.86) invert(1) hue-rotate(73deg) saturate(10);
 }
