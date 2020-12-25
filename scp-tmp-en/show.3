@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-    <title>SCP-2272 - SCP Foundation</title>
+    <title>SCP Hover Box - SCP Foundation</title>
     
     	<script type='text/javascript'>
 var googletag = googletag || {};
@@ -51,14 +51,14 @@ googletag.enableServices();
         WIKIREQUEST.info.domain = "www.scpwiki.com";
         WIKIREQUEST.info.siteId = 66711;
         WIKIREQUEST.info.siteUnixName = "scp-wiki";
-        WIKIREQUEST.info.categoryId = 366566;
+        WIKIREQUEST.info.categoryId = 4126152;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-2272";
-        OZONE.request.timestamp = 1608906403;
+        WIKIREQUEST.info.requestPageName = "component:scp-hover-box";
+        OZONE.request.timestamp = 1608927635;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
-                WIKIREQUEST.info.pageUnixName = "scp-2272";
-        WIKIREQUEST.info.pageId = 23714782;
+                WIKIREQUEST.info.pageUnixName = "component:scp-hover-box";
+        WIKIREQUEST.info.pageId = 639223066;
                         WIKIREQUEST.info.lang = "en";
         OZONE.lang = "en";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -83,7 +83,7 @@ googletag.enableServices();
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
                             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                             
-        <link rel="canonical" href="/scp-2272" />
+        <link rel="canonical" href="/component:scp-hover-box" />
 
     
     
@@ -150,6 +150,397 @@ googletag.enableServices();
         });
     </script>
         
+<style>
+h1, h2 {
+    text-align: center;
+}
+
+.help {
+    display: flex;
+    align-content: stretch;
+    padding-top: 1em;
+}
+
+.help blockquote {
+    margin: 0;
+    font-size: 85%;
+}
+
+.help blockquote > p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin-right: 0;
+    min-height: 2rem;
+    margin: 0;
+}
+
+.help blockquote > p * {
+    margin: 0 0.1rem;
+    height: 100%;
+}
+
+.help blockquote:nth-of-type(1) {
+    background: transparent;
+    border: unset;
+    box-shadow: unset;
+    text-align: right;
+    margin-right: 0;
+    padding: 0;
+}
+
+.help blockquote:nth-of-type(1) > p {
+    justify-content: flex-end;
+}
+
+.help blockquote:nth-of-type(2) {
+    margin-left: 1em;
+    width: 50%;
+}
+</style>
+<style>
+@import url("https://use.typekit.net/fmm4kex.css");
+
+.scp-hover-box {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.scp-hover-box::before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    transition: 
+        border 1s 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+        top 1s 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+        left 1s 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        background 1s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scp-hover-box:hover::before {
+    box-sizing: content-box;
+}
+
+.scp-hover-box::before,
+.scp-hover-box div.container, 
+.scp-hover-box div.header {
+    clip-path: polygon(
+            0% var(--notch-size, 0), 
+            var(--notch-size) 0%, 
+            calc(100% - var(--notch-size, 0)) 0%, 
+            100% var(--notch-size, 0), 
+            100% calc(100% - var(--notch-size, 0)), 
+            calc(100% - var(--notch-size, 0)) 100%, 
+            var(--notch-size, 0) 100%, 
+            0% calc(100% - var(--notch-size, 0))
+    );
+}
+
+div.scp-hover-box * {
+    box-sizing: border-box;
+}
+
+div.scp-hover-box .container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: var(--body-width-on-desktop) !important;
+    box-sizing: border-box;
+    transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1), color 1s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 4rem;
+}
+
+div.scp-hover-box .container::before,
+div.scp-hover-box .container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 0.125rem;
+    width: 100%;
+    max-width: var(--body-width-on-desktop, 65rem) !important;
+    z-index: -1;
+}
+
+div.scp-hover-box .container::before {
+    top: 0;
+}
+
+div.scp-hover-box .container::after {
+    bottom: 0;
+}
+
+div.scp-hover-box .container:hover > * > *::before,
+div.scp-hover-box .container:hover > * > *::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+div.scp-hover-box .container:hover > * > * > *::before,
+div.scp-hover-box .container:hover > * > * > *::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+div.scp-hover-box .container > *::before,
+div.scp-hover-box .container > *::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0.125rem;
+    z-index: -1;
+}
+
+div.scp-hover-box .container > *::before {
+    left: 0;
+}
+
+div.scp-hover-box .container > *::after {
+    right: 0;
+}
+
+div.scp-hover-box .container > * > *::before,
+div.scp-hover-box .container > * > *::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    height: 0.125rem;
+    width: 100%;
+}
+
+div.scp-hover-box .container > * > *::before {
+    top: 0;
+    -webkit-transform: translate3d(-105%, 0, 0);
+    transform: translate3d(-105%, 0, 0);
+    transition: -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div.scp-hover-box .container > * > *::after {
+    bottom: 0;
+    -webkit-transform: translate3d(105%, 0, 0);
+    transform: translate3d(105%, 0, 0);
+    transition: -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div.scp-hover-box .container > * > * > *::before,
+div.scp-hover-box .container > * > * > *::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    height: 100%;
+    width: 0.125rem;
+}
+
+div.scp-hover-box .container > * > * > *::before {
+    left: 0;
+    -webkit-transform: translate3d(0, 105%, 0);
+    transform: translate3d(0, 105%, 0);
+    transition: -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div.scp-hover-box .container > * > * > *::after {
+    right: 0;
+    -webkit-transform: translate3d(0, -105%, 0);
+    transform: translate3d(0, -105%, 0);
+    transition: -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div.scp-hover-box div.container div:not(.sub-title):not(.title) {
+    width: 100%;
+}
+
+div.scp-hover-box div.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    letter-spacing: 0.05em;
+}
+
+div.scp-hover-box div.title > a, 
+div.scp-hover-box div.sub-title > a,
+div.scp-hover-box div.title,
+div.scp-hover-box div.sub-title {
+    display: flex;
+    margin: 0;
+    width: unset;
+    max-width: unset;
+    flex-grow: 2;
+    flex-shrink: 2;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.scp-hover-box div.title > a,
+div.scp-hover-box div.sub-title > a {
+    font-size: 150%;
+    font-family: var(--title-font, proxima-nova-extra-condensed);
+    width: 100%;
+    padding: 0.5em;
+    line-height: 1em;
+    align-items: center;
+    will-change: transform;
+}
+
+div.scp-hover-box div.title > a:hover,
+div.scp-hover-box div.sub-title > a:hover {
+    text-decoration: none;
+}
+
+div.scp-hover-box div.title > a {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+div.scp-hover-box div.sub-title > a {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+div.scp-hover-box div.blerb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    min-height: 4em;
+    padding: 0.75em;
+    text-align: center;
+}
+
+.blerb br {
+    display: none;
+}
+
+.blerb *:not(:last-child) {
+    margin-bottom: 0.25em;
+}
+</style>
+<style>
+.scp-hover-box.one::before,
+.scp-hover-box.one div.container, 
+.scp-hover-box.one div.header {
+    --notch-size: 1em;
+}
+
+div.scp-hover-box.one .container {
+    --container-bgcolor: rgba(252, 252, 252);
+    --container-txtcolor: rgba(12, 12, 12);
+    background-color: var(--container-bgcolor, rgba(252, 252, 252));
+    color: var(--container-txtcolor, rgba(12, 12, 12));
+}
+
+div.scp-hover-box.one .container:hover {
+    --container-hover-bgcolor: rgba(12, 12, 12);
+    --container-hover-txtcolor: rgba(252, 252, 252);
+    background-color: var(--container-hover-bgcolor, rgba(12, 12, 12));
+    color: var(--container-hover-txtcolor, rgba(252, 252, 252));
+}
+
+.scp-hover-box.one::before {
+    --container-stroke-color: rgba(244, 244, 244);
+    background-color: var(--container-stroke-color, rgba(244, 244, 244));
+    border: 0 solid var(--container-stroke-color, rgba(244, 244, 244));
+}
+
+.scp-hover-box.one:hover::before {
+    --container-hover-stroke-color: rgba(180, 35, 35);
+    --link-stroke-width: 0.125rem;
+    background-color: var(--container-hover-stroke-color, rgba(180, 35, 35));
+    border: var(--link-stroke-width, 0.125rem) solid var(--container-hover-stroke-color, rgba(180, 35, 35));
+    top: calc(var(--link-stroke-width, 0.125rem) * -1);
+    left: calc(var(--link-stroke-width, 0.125rem) * -1);
+}
+
+div.scp-hover-box.one .container::before,
+div.scp-hover-box.one .container::after,
+div.scp-hover-box.one .container > *:before,
+div.scp-hover-box.one .container > *:after {
+    --container-stroke-color: rgba(244, 244, 244);
+    background-color: var(--container-stroke-color, rgba(244, 244, 244));
+}
+
+div.scp-hover-box.one .container > * > *:before,
+div.scp-hover-box.one .container > * > *:after,
+div.scp-hover-box.one .container > * > * > *:before,
+div.scp-hover-box.one .container > * > * > *:after {
+    --container-hover-stroke-color: rgba(180, 35, 35);
+    background-color: var(--container-hover-stroke-color, rgba(180, 35, 35));
+}
+
+div.scp-hover-box.one div.header {
+    --background-url: url("http://www.scp-wiki.net/local--files/component:scp-hover-box/scp-2105.gif");
+    --background-vertical-position: 30%;
+    background-image: var(--background-url, url("http://www.scp-wiki.net/local--files/component:scp-hover-box/scp-2105.gif"));
+    background-size: cover;
+    background-position: 0 var(--background-vertical-position, 30%);
+}
+
+div.scp-hover-box.one div.title > a,
+div.scp-hover-box.one div.sub-title > a {
+    --link-fill-color: rgba(252, 252, 252);
+    --link-stroke-width: 0.125rem;
+    --link-stroke-color: rgba(12, 12, 12);
+    color: var(--link-fill-color, rgba(252, 252, 252));
+    text-shadow:
+        calc(var(--link-stroke-width, 0.125rem) * -1) calc(var(--link-stroke-width, 0.125rem) * -1) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        0 calc(var(--link-stroke-width, 0.125rem) * -1) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        var(--link-stroke-width, 0.125rem) calc(var(--link-stroke-width, 0.125rem) * -1) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        var(--link-stroke-width, 0.125rem) 0 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        var(--link-stroke-width, 0.125rem) var(--link-stroke-width, 0.125rem) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        0 var(--link-stroke-width, 0.125rem) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        calc(var(--link-stroke-width, 0.125rem) * -1) var(--link-stroke-width, 0.125rem) 0 var(--link-stroke-color, rgba(12, 12, 12)),
+        calc(var(--link-stroke-width, 0.125rem) * -1) 0 0 var(--link-stroke-color, rgba(12, 12, 12));
+}
+
+@media not all and (min-resolution:.001dpcm) { @media {
+    div.scp-hover-box.one div.title > a,
+    div.scp-hover-box.one div.sub-title > a {
+        --link-fill-color: rgba(252, 252, 252);
+        --link-stroke-width: 0.125rem;
+        --link-stroke-color: rgba(12, 12, 12);
+        -webkit-text-fill-color: var(--link-fill-color);
+         -webkit-text-stroke-width: var(--link-stroke-width, 0.125rem);
+        -webkit-text-stroke-color: var(--link-stroke-color, rgba(12, 12, 12));
+    paint-order: stroke fill;
+    text-shadow: unset;
+    }
+}
+
+@supports (-moz-appearance:meterbar) {
+    div.scp-hover-box.one div.title > a,
+    div.scp-hover-box.one div.sub-title > a {
+        --link-fill-color: rgba(252, 252, 252);
+        --link-stroke-width: 0.125rem;
+        --link-stroke-color: rgba(12, 12, 12);
+        -webkit-text-fill-color: var(--link-fill-color, rgba(252, 252, 252));
+         -webkit-text-stroke-width: var(--link-stroke-width, 0.125rem);
+        -webkit-text-stroke-color: var(--link-stroke-color, rgba(12, 12, 12));
+    paint-order: stroke fill;
+    text-shadow: unset;
+    }
+}
+</style>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
@@ -426,7 +817,7 @@ googletag.enableServices();
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="https://interwiki.scpdb.org/?wiki=scp-wiki&amp;lang=en&amp;page=_default:scp-2272" align="" frameborder="" height="" scrolling="" width="" class="scpnet-interwiki-frame" style=""></iframe></p>
+<p><iframe src="https://interwiki.scpdb.org/?wiki=scp-wiki&amp;lang=en&amp;page=component:scp-hover-box" align="" frameborder="" height="" scrolling="" width="" class="scpnet-interwiki-frame" style=""></iframe></p>
 </div>
     
     
@@ -446,7 +837,7 @@ googletag.enableServices();
                     
                     
                         <div id="page-title">
-                            SCP-2272
+                            SCP Hover Box
                         </div>
                     
 
@@ -459,32 +850,119 @@ googletag.enableServices();
                     <div id="page-content">
                         
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+210</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-<p><strong>Item #:</strong> SCP-2272</p>
-<p><strong>Object Class:</strong> Euclid</p>
-<p><strong>Special Containment Procedures:</strong> <span style="text-decoration: line-through;">Foundation contacts within Major League Baseball will work to replace the Pensacola Blue Wahoos’ general manager with Agent Rob Potsdam of Local Mobile Task Force 352-Dalet (“Dixieland Nightmare Magic”). Upon appointment as general manager, Agent Potsdam will trade Ellis Canastota to a Foundation-controlled summer league team in St. Petersburg, Fla., at which point containment procedures will be further revised.</span> Following Incident 2272-Domino (see Addendum II below), SCP-2272 is to be monitored for anomalous activity outside its known effects, and officials in the Cincinnati Reds franchise will be advised to retain Ellis Canastota at the Double-A level or below.<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup> At least one member of Local Mobile Task Forces in the region of Pensacola Blue Wahoos away games at which Ellis Canastota is scheduled to start shall attend. Regional Command will revise containment procedures if new information or activity is demonstrated.</p>
-<p><strong>Description:</strong> SCP-2272 is a phenomenon currently affecting the Double-A minor league baseball team known as the Pensacola Blue Wahoos. The phenomenon manifests as a player who does not exist, Blue Wahoos starting pitcher Ellis Canastota, appearing in game records, statistical compilations and in memories of Blue Wahoos games since mid-201█. All attendees of Blue Wahoos games in which Canastota is purported to play experience an apparent collective visual hallucination of Ellis Canastota pitching, batting and fielding, and a baseball game proceeding as normal. This effect also applies to visual recordings, photographs or audio recordings of Blue Wahoos games.<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup> (See Addendum I below for attempts at computer analysis of purported photographs of Canastota.)</p>
-<p>Double-blind analysis of aerial sonar readings from Vince J. Whibbs Sr. Community Maritime Park during a game in which Canastota was purported to pitch confirm that no being or object existed in the space in-person observers or observers of photographs and video suggest. In addition, despite audiovisual recordings indicating baseballs being hit, thrown and otherwise manipulated, sonar tracking was unable to verify the objective presence of a baseball on plays in which Canastota was a factor. When Canastota is not &quot;on the field,&quot; no anomalous effects are indicated.</p>
-<p>Ellis Canastota, according to scouts with the Cincinnati Reds organization and his listing on the Blue Wahoos website, attended “Oneiroi<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup> High School” in “Utica, WO.”<sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup> No memories, recordings or statistics of any baseball performances by the player exist prior to his signing with the Blue Wahoos in 201█.</p>
-<p><strong>Addendum I - Analysis of images:</strong> Multiple images affected by SCP-2272 were passed to a Foundation-developed program which subjects an image to a number of Fourier transforms and convolutions to obscure the resulting output from human recognition while simultaneously analyzing its structure and providing a summary of its contents by statistical analysis.<sup class="footnoteref"><a id="footnoteref-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-5')">5</a></sup> An example report (SCP-2272-IMG310):</p>
-<p>Date: 1st July 201█<br />
-Location: <tt>SPORTING EVENT at BASEBALL STADIUM</tt> (<tt>99</tt>% certainty)<br />
-Type: <tt>FULL COLOR PHOTOGRAPH</tt><br />
-Subject:<br />
-The image contains one (1) <tt>ADULT PERSON</tt> standing in foreground and seventy to eighty (70 to 80) <tt>ADULT PERSONS</tt> seated in the background. With 100% certainty the <tt>PERSONS</tt> in the image have <tt>CLOSED EYES</tt>.</p>
-<p><strong>Addendum II - Incident 2272-Domino:</strong> Initial containment procedures for SCP-2272 orchestrated the appointment of Field Agent Robert Potsdam as general manager of the Pensacola Blue Wahoos, with the intent to trade Ellis Canastota to a Foundation-controlled summer league baseball team to contain SCP-2272’s effects. The evening after his appointment as general manager, Agent Potsdam was found comatose in his bed, after suffering apparent blunt-force trauma to the head. All Foundation staffers within an approximately 40&#160;km radius of Agent Potsdam’s location reported experiencing the same dream that evening. Foundation staffers reported sitting in the stands of a baseball stadium and viewing Ellis Canastota throwing a fastball at the head of a bound Robert Potsdam.</p>
-<div class="footnotes-footer">
-<div class="title">Footnotes</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. At Canastota’s current level of statistical performance (7-10, 4.74 ERA as of last season) this is considered a feasible request with which the franchise is cooperating without objection.</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. For further details on the nature of collective hallucination events: McTiriss, Kate, “Can I Get A Witness? Mass Hallucinations And Infohazards In Foundation Containment” <em>Fieldwork: An SCP Foundation Journal</em> (2013): 619.</div>
-<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. A potential connection to the Oneiroi Initiative believed to be involved in the creation of SCPs <a href="/scp-1498">-1498</a>, <a href="/scp-2028">-2028</a>, and <a href="/scp-2805">-2805</a> is currently under research.</div>
-<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. ”WO” is not a valid ISO 3166 country or region code. It is used for both the World Intellectual Property Organization and the Wolof language, spoken in the Gambia and Mauritania. All individuals questioned about Ellis Canastota’s background did not recall specifics, with many indicating that he “keeps to himself.”</div>
-<div class="footnote-footer" id="footnote-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-5')">5</a>. This program was originally developed for use with <a href="/scp-592">SCP-592</a>. For details on its operation and accuracy: Ashley, Giulianna, “Methods For Image Analysis On Infohazardous Imagery” <em>Terminal: An SCP Foundation Journal</em> (2007): 230.</div>
+<div class="unmargined" style="margin: 0 auto 20px; background-color: #b01; border: solid 1px #b01; border-radius: 20px; box-shadow: 0 1px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.8), inset 0 10px 1px rgba(255,255,255,.6), inset 0 -15px 30px rgba(0,0,0,.2); text-align: center; width: 500px;">
+<div class="unmargined" style="margin: 20px 0; font-size: 300%; color: #fff; font-weight: bold; text-shadow: 1px 2px 3px rgba(0,0,0,.5);">
+<p>ERMAHGERD STAHP</p>
 </div>
-<div class="footer-wikiwalk-nav">
-<div style="text-align: center;">
-<p>&#171; <a href="/scp-2271">SCP-2271</a> | SCP-2272 | <a href="/scp-2273">SCP-2273</a> &#187;</p>
+<div class="unmargined" style="margin: 20px 0; color: #ff6;">
+<p>This is a <em>template</em> page used internally by the SCP Wiki.</p>
 </div>
+<div class="unmargined" style="margin: 20px 0; font-size: 120%; font-weight: bold; color: #fff; text-shadow: 1px 2px 3px rgba(0,0,0,.25);">
+<p>PLEASE DO NOT TOUCH THIS PAGE<br />
+WITHOUT STAFF PERMISSION</p>
+</div>
+</div>
+<hr />
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+18</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+
+
+
+
+
+
+
+<p><a name="4205"></a></p>
+<div class="scp-hover-box one">
+<div class="container">
+<div>
+<div>
+<div>
+<div class="header">
+<div class="title"><a href="http://www.scp-wiki.net/scp-4205">SCP-4205</a></div>
+<div class="sub-title"><a href="http://www.scp-wiki.net/scp-4205">In the Eyes of the Beholder</a></div>
+</div>
+<div class="blerb"><strong>“If you remember me, then I don't care if everyone else forgets” ― Haruki Murakami, Kafka On the Shore</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="toc0"><span>How to use</span></h1>
+<h2 id="toc1"><span>1. Copy code below.</span></h2>
+<h2 id="toc2"><span>2. Follow guide on the bottom.</span></h2>
+<h3 id="toc3"><span>Only needed once.</span></h3>
+<blockquote>
+<p><span style="white-space: pre-wrap;">[[include&#32;component:scp-hover-box-styling]]</span></p>
+</blockquote>
+<h3 id="toc4"><span>Needed per Hover Box</span></h3>
+<blockquote>
+<p><span style="white-space: pre-wrap;">[[include&#32;component:scp-hover-box-structure</span><br />
+<span style="white-space: pre-wrap;">|container-number=one</span><br />
+<span style="white-space: pre-wrap;">|corner-cutout=1em</span><br />
+<span style="white-space: pre-wrap;">|container-bgcolor=rgba(252,&#32;252,&#32;252)</span><br />
+<span style="white-space: pre-wrap;">|container-txtcolor=rgba(12,&#32;12,&#32;12)</span><br />
+<span style="white-space: pre-wrap;">|container-hover-bgcolor=rgba(12,&#32;12,&#32;12)</span><br />
+<span style="white-space: pre-wrap;">|container-hover-txtcolor=rgba(252,&#32;252,&#32;252)</span><br />
+<span style="white-space: pre-wrap;">|container-stroke-color=rgba(244,&#32;244,&#32;244)</span><br />
+<span style="white-space: pre-wrap;">|container-hover-stroke-color=rgba(180,&#32;35,&#32;35)</span><br />
+<span style="white-space: pre-wrap;">|background-url=http://www.scp-wiki.net/local--files/component:scp-hover-box/scp-2105.gif</span><br />
+<span style="white-space: pre-wrap;">|background-vertical-position=30%</span><br />
+<span style="white-space: pre-wrap;">|link-fill-color=rgba(252,&#32;252,&#32;252)</span><br />
+<span style="white-space: pre-wrap;">|link-stroke-width=0.125rem</span><br />
+<span style="white-space: pre-wrap;">|link-stroke-color=rgba(12,&#32;12,&#32;12)</span><br />
+<span style="white-space: pre-wrap;">|anchor=4205</span><br />
+<span style="white-space: pre-wrap;">|link=http://www.scp-wiki.net/scp-4205</span><br />
+<span style="white-space: pre-wrap;">|title=SCP-4205</span><br />
+<span style="white-space: pre-wrap;">|sub-title=In&#32;the&#32;Eyes&#32;of&#32;the&#32;Beholder</span><br />
+<span style="white-space: pre-wrap;">|blerb=**“If&#32;you&#32;remember&#32;me,&#32;then&#32;I&#32;don't&#32;care&#32;if&#32;everyone&#32;else&#32;forgets”&#32;―&#32;Haruki&#32;Murakami,&#32;Kafka&#32;On&#32;the&#32;Shore**</span><br />
+<span style="white-space: pre-wrap;">]]</span></p>
+</blockquote>
+<div class="help">
+<blockquote>
+<p>Only needs to be included once at the very top of the page.&nbsp;↦</p>
+<p>Beginning of component include. <strong>Will need to paste this entire code per block.</strong>&nbsp;↦</p>
+<p>Unique name given per-box on page. <strong>Use words, not numbers.</strong>&nbsp;↦</p>
+<p>Amount removed from the corners. <em>Set to 0 for square.</em>&nbsp;↦</p>
+<p>Color of BG <strong>without</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Color of Text <strong>without</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Color of BG <strong>while</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Color of Text <strong>while</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Stroke of Box <strong>without</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Stroke of Box <strong>with</strong> hovering <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Url to any background image for header&nbsp;↦</p>
+<p>Vertical position of header image. Set to 0 for default. <em>(accepts px, rem, em, %)</em>&nbsp;↦</p>
+<p>Color of Header Text <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>Width of Header Text Stroke <em>Set to 0 for no stroke</em>&nbsp;↦</p>
+<p>Color of Header Text Stroke <em>(accepts hex, rgb, rgba, hsl)</em>&nbsp;↦</p>
+<p>If including a navigation, this can be used to set anchor spot&nbsp;↦</p>
+<p>Link to Article&nbsp;↦</p>
+<p>Title of Article&nbsp;↦</p>
+<p>Subtitle of Article&nbsp;↦</p>
+<p>Text for the bottom section. <em>Can use formatting.</em>&nbsp;↦</p>
+</blockquote>
+<blockquote>
+<p>[[include component:scp-hover-box-styling]]</p>
+<p>[[include component:scp-hover-box-structure</p>
+<p>|<strong>container-number</strong>=one</p>
+<p>|<strong>corner-cutout</strong>=1em</p>
+<p>|<strong>container-bgcolor</strong>=rgba(252, 252, 252)</p>
+<p>|<strong>container-txtcolor</strong>=rgba(12, 12, 12)</p>
+<p>|<strong>container-hover-bgcolor</strong>=rgba(12, 12, 12)</p>
+<p>|<strong>container-hover-txtcolor</strong>=rgba(252, 252, 252)</p>
+<p>|<strong>container-stroke-color</strong>=rgba(244, 244, 244)</p>
+<p>|<strong>container-hover-stroke-color</strong>=rgba(180, 35, 35)</p>
+<p>|<strong>background-url</strong>=<span style="white-space: pre-wrap;">http://thisisalink.com/image.jpg</span></p>
+<p>|<strong>background-vertical-position</strong>=30%</p>
+<p>|<strong>link-fill-color</strong>=rgba(252, 252, 252)</p>
+<p>|<strong>link-stroke-width</strong>=0.125rem</p>
+<p>|<strong>link-stroke-color</strong>=rgba(12, 12, 12)</p>
+<p>|<strong>anchor</strong>=4205</p>
+<p>|<strong>link</strong>=<span style="white-space: pre-wrap;">http://www.scp-wiki.net/scp-4205</span></p>
+<p>|<strong>title</strong>=SCP-4205</p>
+<p>|<strong>sub-title</strong>=In the Eyes of the Beholder</p>
+<p>|<strong>blerb</strong><span style="white-space: pre-wrap;">=**This&#32;is&#32;a&#32;blerb!**</span></p>
+<p>]]</p>
+</blockquote>
 </div>
 
                     </div>
@@ -507,7 +985,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/euclid#pages">euclid</a><a href="/system:page-tags/tag/game#pages">game</a><a href="/system:page-tags/tag/infohazard#pages">infohazard</a><a href="/system:page-tags/tag/memetic#pages">memetic</a><a href="/system:page-tags/tag/memory-affecting#pages">memory-affecting</a><a href="/system:page-tags/tag/mind-affecting#pages">mind-affecting</a><a href="/system:page-tags/tag/oneiroi#pages">oneiroi</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/sport#pages">sport</a><a href="/system:page-tags/tag/the-gulf#pages">the-gulf</a>
+                                <a href="/system:page-tags/tag/template#pages">template</a>
                             </span>
                         </div>
                     
@@ -515,12 +993,12 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 18, last edited: <span class="odate time_1588217049 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">30 Apr 2020 03:24</span></div>
+                            <div id="page-info">page revision: 22, last edited: <span class="odate time_1558707752 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">24 May 2019 14:22</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+210</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+18</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
-<a href="/forum/t-1028887/scp-2272" class="btn btn-default" id="discuss-button">Discuss (35)</a>
+<a href="/forum/t-10670635/component:scp-hover-box" class="btn btn-default" id="discuss-button">Discuss (3)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">History</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
@@ -587,45 +1065,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://m5snapoli.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/m5snapoli.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://circservices.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/circservices.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://m5snapoli.wikidot.com">Il wiki-Programma del MoVimento5stelle Napoli</a></h3>
+            <h3><a target="_blank" href="http://circservices.wikidot.com">Circulation Services</a></h3>
             <div class="desc">          
-              
+              Library Circulation and Access Services
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://professorallred.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/professorallred.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://celtic-heroes.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/celtic-heroes.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://professorallred.wikidot.com">Ammon Allred&#039;s Online Classroom</a></h3>
+            <h3><a target="_blank" href="http://celtic-heroes.wikidot.com">Celtic Heroes Wiki</a></h3>
             <div class="desc">          
-              University of Toledo Philosophy Professor
+              A Wiki for the iPhone/iPad MMO Celtic Heroes
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://my-pride.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/my-pride.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-wiki-de.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-wiki-de.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://my-pride.wikidot.com">My Pride</a></h3>
+            <h3><a target="_blank" href="http://scp-wiki-de.wikidot.com">SCP Foundation</a></h3>
             <div class="desc">          
-              
+              auf Deutsch
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sliscomps.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sliscomps.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://area-48.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/area-48.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sliscomps.wikidot.com">CUA SLIS Comps Study Wiki</a></h3>
+            <h3><a target="_blank" href="http://area-48.wikidot.com">Bölge-48</a></h3>
             <div class="desc">          
-              
+              SCP Vakfı, Bölge-48 Veritabanı.
             </div>
           </div>
         </div>
