@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>叶樱与魔笛 - SCP基金会</title>
+    <title>糟糕之事 - SCP基金会</title>
     
     
     
@@ -20,14 +20,14 @@
         WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
         WIKIREQUEST.info.siteId = 530812;
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 4277017;
+        WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "wanderers:hazakura-to-mabue";
-        OZONE.request.timestamp = 1608843678;
+        WIKIREQUEST.info.requestPageName = "a-terrible-thing";
+        OZONE.request.timestamp = 1608866437;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "wanderers:hazakura-to-mabue";
-        WIKIREQUEST.info.pageId = 1002150150;
+                WIKIREQUEST.info.pageUnixName = "a-terrible-thing";
+        WIKIREQUEST.info.pageId = 1306279591;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,14 +65,11 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
-
-
         
                 
         /* theme */
                     @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
-                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch_wl.min.css);
+                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
             </style>
     
         
@@ -120,37 +117,233 @@
     </script>
         
 <style>
-@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
 </style>
 <style>
-@import url("http://scp-wiki-cn.wikidot.com/wanderers:dustjacket-theme/code/1");
-@import url("http://scp-wiki-cn.wikidot.com/wanderers:wanderers-station/code/1");
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
 </style>
 <style>
-.footnoteref{
-color: #FF5555;
-}
-.danke{
-padding: 5px 5px 5px 15px;
-margin-bottom:10px;
-width: 100%;
-font-family: monospace;
-font-size: 1.1em; }
+@import url(http://scp-wiki-cn.wikidot.com/theme:swirling-ashes/code/1);
+</style>
+<style>
+/* This theme overrides some of the Swirling Ashes headers.
+ * Made by Croquembouche for djkaktus' The Four Arcana. */
 
-.agent{
-background-color:#002200;
-border: 3px solid #55AA55;
-color: #77CC77;
+/* Replace the sky with an aurora. */
+body::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/sky.webp);
+  background-size: 1500px calc(var(--header-height-on-desktop));
+  animation-duration: 360s;
+  filter: grayscale(70%);
 }
 
-.site{
-background-color:#222200;
-border: 3px solid #AAAA55;
-color: #DDDD77;
+/* Replace the buildings. */
+div#container-wrap-wrap::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/skyline.png);
+  filter: grayscale(70%);
+}
+
+@keyframes sky {
+  from { background-position: 1500px 0; }
+  to { background-position: 0 0; }
+}
+
+/* Replace fog layers with snow */
+div#container-wrap-wrap::after, body::after {
+  background-image: url(http://scp-sandbox-3.wikidot.com/local--files/croquemtest2/snow.webp);
+  background-size: var(--ashes-width);
+  background-repeat: repeat;
+  animation: ashes-move linear var(--ashes-move-duration) infinite;
+  opacity: 0.8;
+}
+div#container-wrap-wrap::after {
+  --ashes-move-duration: 37s;
+  --ashes-width: 250px;
+}
+body::after {
+  --ashes-move-duration: 30s;
+  --ashes-width: 400px;
+}
+@keyframes ashes-move {
+  from { background-position: 0 0; }
+  to { background-position: var(--ashes-width) var(--ashes-width); }
+}
+</style>
+<style>
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
+</style>
+<style>
+@import url(http://scp-wiki-cn.wikidot.com/theme:swirling-ashes/code/1);
+</style>
+<style>
+/* Replace the sky with an aurora. */
+body::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/sky.webp);
+  background-size: 1500px calc(var(--header-height-on-desktop));
+  animation-duration: 360s;
+  filter: grayscale(70%);
+}
+
+/* Replace the buildings. */
+div#container-wrap-wrap::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/skyline.png);
+  filter: grayscale(70%);
+}
+
+@keyframes sky {
+  from { background-position: 1500px 0; }
+  to { background-position: 0 0; }
+}
+
+/* Replace fog layers with snow */
+div#container-wrap-wrap::after, body::after {
+  background-image: url(http://scp-sandbox-3.wikidot.com/local--files/croquemtest2/snow.webp);
+  background-size: var(--ashes-width);
+  background-repeat: repeat;
+  animation: ashes-move linear var(--ashes-move-duration) infinite;
+  opacity: 0.8;
+}
+div#container-wrap-wrap::after {
+  --ashes-move-duration: 37s;
+  --ashes-width: 250px;
+}
+body::after {
+  --ashes-move-duration: 30s;
+  --ashes-width: 400px;
+}
+@keyframes ashes-move {
+  from { background-position: 0 0; }
+  to { background-position: var(--ashes-width) var(--ashes-width); }
+}
+</style>
+<style>
+#header h1 a::before {
+  content: "畸人";
+}
+#header h2 span::before {
+  content: "死物" !important;
+}
+#header::before {
+  display: none;
+}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -497,7 +690,7 @@ color: #DDDD77;
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=wanderers&pagename=wanderers:hazakura-to-mabue" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=a-terrible-thing" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -519,10 +712,14 @@ color: #DDDD77;
                     
                     
                         <div id="page-title">
-                            叶樱与魔笛
+                            糟糕之事
                         </div>
                     
 
+                    
+                        <div id="breadcrumbs">
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/rat-s-nest-hub">鼠巢中心页</a> &raquo; 糟糕之事
+                        </div>
                     
 
                     
@@ -535,126 +732,78 @@ color: #DDDD77;
 
 
 
-<div class="creditRate">
-<div class="rateBox">
-<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+33</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
-<div class="creditButton">
-<p><a class="fa fa-info" href="#u-credit-view"></a></p>
-</div>
-</div>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div id="u-credit-view">
-<div class="fader">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-<div class="modalcontainer">
-<div class="modalbox">
-<div style="text-align: center;">
-<h2><span>著作信息</span></h2>
-</div>
-<hr />
-<div class="credit first">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-<div style="text-align: center;">
-<h3 id="toc0"><span>叶樱与魔笛</span></h3>
-<h1 id="toc1"><span><span style="color: red"><strong>FBI Warning</strong></span></span></h1>
-<h2 id="toc2"><span>本篇含有一定的成人内容，请酌情阅读</span></h2>
-</div>
-<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-obsidian-shard" onclick="WIKIDOT.page.listeners.userInfo(5090298); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5090298&amp;amp;size=small&amp;amp;timestamp=1600569470" alt="The Obsidian Shard" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5090298)" /></a><a href="http://www.wikidot.com/user:info/the-obsidian-shard" onclick="WIKIDOT.page.listeners.userInfo(5090298); return false;">The Obsidian Shard</a></span>以及他的<a href="/the-obsidian-shard">更多作品</a></p>
-<p><strong>题目来源：</strong>取材于太宰治的同名小说<em>叶樱与魔笛</em>，本篇与其除题目外没有任何关系，这只是对我所喜爱的作家的致敬，所以即便没有读过也不会有任何影响。</p>
-<p><strong>文中彩蛋：</strong>请移步至<a href="http://scp-wiki-cn.wikidot.com/forum/t-13159732/wanderers:hazakura-to-mabue">评论区</a></p>
-<p><strong>图片来源：</strong><span style="text-decoration: line-through;"><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sbshansh" onclick="WIKIDOT.page.listeners.userInfo(2898660); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2898660&amp;amp;size=small&amp;amp;timestamp=1600569470" alt="sbshansh" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2898660)" /></a><a href="http://www.wikidot.com/user:info/sbshansh" onclick="WIKIDOT.page.listeners.userInfo(2898660); return false;">sbshansh</a></span>在画廊中提供的照片：<a href="https://i.loli.net/2020/02/01/XIA8EuO964xnrBN.jpg">https://i.loli.net/2020/02/01/XIA8EuO964xnrBN.jpg</a>，我将其进行了调色的简单二次创作，不违反本次竞赛规则。</span><br />
-换图后图片来源：<a href="https://pixabay.com/photos/sunset-clouds-lake-rest-sunny-192978/">https://pixabay.com/photos/sunset-clouds-lake-rest-sunny-192978/</a></p>
-<p><strong>以及各种其他来源：</strong>吹笛人的字体为”Long Cang“，主题版式为<a href="http://scp-wiki-cn.wikidot.com/component:dustjacket-theme">封护</a>与<a href="http://scp-wiki-cn.wikidot.com/wanderers:wanderers-station">流浪者站</a>，侧边栏进行了<a href="http://scp-wiki-cn.wikidot.com/component:bhl-dark-sidebar">暗色</a>调整</p>
-</div>
-<hr />
-<div class="credit-back" style="text-align: center;">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-</div>
-<div class="creditBottomRate" style="position:relative;height:30px;">
-<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+33</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-</div>
-</div>
-</div>
-</div>
+<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
+
+
+
+
+
+
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
 
 
 
+<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
 
 
-<div class="danke agent">
-<p>| 您好，请问您需要借阅哪一本书？<br />
-| 典籍请按1，诗歌请按2，笔记请按3，剧作请按4，如果需要异世界相关文献请按5</p>
-<div style="border: 3px solid #55AA55; margin: 5px; padding: 10px; background-color: #002200; color: #77CC77">
-<p>1、3、5</p>
-</div>
-<br />
-| 正在为您切换到相关归档员<br />
-| 您好，请问您要借阅什么书？
-<div style="border: 3px solid #55AA55; margin: 5px; padding: 10px; background-color: #002200; color: #77CC77">
-<p>就是，之前图书馆有没有来过一个男子，嗯，吹笛子的，我想要找他的相关资料，如果有他本人所写的笔记的话，那更好。</p>
-</div>
-<br />
-| 啊，是要找他吗？稍等，我帮您连线一下馆长<br />
-| 你好
-<div style="border: 3px solid #55AA55; margin: 5px; padding: 10px; background-color: #002200; color: #77CC77">
-<p>你好</p>
-</div>
-<br />
-| 先说一声，我的存在本身是被隐去的，所以我们的对话是极高的机密，我来和你联系仅仅是因为你已经知道了不少东西。至于你所想要的东西，来到太空站左翼处找我。对了，你知道怎么把这个该死的精神联络装置卸下来吧。
-<div style="border: 3px solid #55AA55; margin: 5px; padding: 10px; background-color: #002200; color: #77CC77">
-<p>会。对了，该怎么去左翼，我来的时候专门检测了一下，那里似乎发生了正反物质的湮灭，贸然过去没问题吗，还有那里应该有被放逐者——呃，流浪者站的相关人员，我又怎么说明呢？</p>
-</div>
-<br />
-| 我会让相关人员把你送过去的，还有，你身上没有那种叫做“伊甸园”的电子毒品，希望你不要带。我们图书馆尽管堕落成了这番模样，但还是有原则的。
-<div style="border: 3px solid #55AA55; margin: 5px; padding: 10px; background-color: #002200; color: #77CC77">
-<p>没有，我会尽快过去。</p>
-</div>
-<br />
-| 好的，到时候我会给你吹笛人的手稿。</div>
-<br />
+
+
+
+
+
+
+
 <div style="text-align: center;">
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
+<h6><span>导航:</span></h6>
+<p><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/0">1</a> | <strong><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/1">2</a></strong> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/2">3</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/3">4</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/4">5</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/5">6</a></p>
 </div>
-<div class="scp-image-block block-center" style="width:100%;"><img src="http://scp-wiki-cn.wikidot.com/local--files/fragment:hazakura-to-mabue-2/lake%26mountians.jpg" style="width:100%;" alt="lake%26mountians.jpg" class="image" /></div>
-<p>你好。</p>
-<p>你还记得上面这张图吗？如果你记得，那请继续读吧，如果你早已将其遗忘，那就退出这份文档吧，因为你已经没有知道这一切真相的必要。</p>
-<p>我来到了这个世界，这个本该不属于我的世界，自然，这一步也是我的作者——或是上层叙事决定好的。守墓人说得没错，我将时间<strong>扭曲</strong>了。这个世界想必和你的那个世界完全不一样吧，你的那个世界，被放逐者之图书馆没有被放逐到太空中去，更没有人工义肢，电子毒品一类的东西。</p>
-<p>你还记得你原先的那个世界吗？如果还记得，那请继续读下去，如果你遗忘了，那立即退出，用助眠器进入梦乡吧，第二天，你就会发现你趴在<strong>本来的</strong>被放逐者之图书馆。这里的一切你也不会记得，你还可以和你的家人一起快乐地活着。</p>
-<p>好，既然你继续往下读，那我就将这一切的真相说出来。</p>
-<p>首先，我来讲述我后来的故事。</p>
-<p>我跨越了墓碑，来到了我们所说的外界。我早就要意识到，创作我的人绝非常人。我的创作者没有名字，但他一直盘踞在图书馆的中心。他早已意识到了，人类的疯狂终有一天会把他们自己杀死，于是他创作了一篇剧本，那个剧本，想必你也早已经读过了，并且你发现那个剧本是残缺的，对吗？然后你试着去填写这一篇。你以为这是一个通往异界的密径，你的墨水则是钥匙，实则不然，你是进入了一个我们设定的好的一个重启程序。</p>
-<p>好了，继续说我来到被放逐者之图书馆后的故事。</p>
-<p>我遇到了他，但是他在和我说明了这一切后触碰了我。这是一个及其致命而又愚蠢的错误，下层与上层之间是必须要有一个 隔膜的，但如果隔膜被打破，那就会发生正反物质相互碰撞而产生的湮灭。但即便湮灭给太空站带来了不小的问题，而我们则进入了一种新的意识形态，不用其他支撑就可以存在的全新意识形态。</p>
-<p>这给了我们强大的力量，同样也方便给你解释这一切的真相。</p>
-<p>那么，我们的计划是什么？怎么挽救这个世界？我在鲑鱼河谷吹笛时，还记得那个人形吗？想必凭你的力量，你已经知道那个人形究竟为何物。如果说我和彩樱当时是在用笛声来呐喊，想要把他唤醒，而现在则是要你用我们制作出的炸弹，扔到那个人形上，把他炸得粉碎，然后再把他重组起来。就如同那大洪水一样，但我们不用做方舟，时间就是一个天然的方舟。</p>
-<p>所以，现实正如你所见，我们选中了你，就是你要按下那个按钮，我们目睹现实破碎，然后再次重组。这样，我们这些名为“传统”“艺术”“文化”一类的东西也会顺着现实的破碎而破碎，自然，我们同样也随着现实的重组而重组。我们只能这样重生，别无他法。</p>
-<p>而所谓剧本，不过是我们向外发出的一个求救信号。</p>
-<p>抱歉，我们的精神形态不能稳定多么久，我相信你心中一定还有些许疑惑，但我们的对话只能匆匆略过了。我真正想和你谈的是，你们为什么要创造我们，上层叙事为什么要去创造下层叙事？</p>
-<p>这个问题我也和我的上层叙事问过，然后我才得知，这个问题不仅仅是困扰在我们心头的，也困扰在你们心头。不妨你先不再继续往下读，细细想想，你们为什么要创造我们？</p>
-<p>我在无数的宇宙中游历，发现不论是哪一个，都有着自己的文字，有着自己的故事。我们为什么这么重要，以至于你们都拼命想着法子来守护我们。</p>
-<p>我们真的那么重要吗？我如此向宇宙深处呐喊。</p>
-<p>的确如此。一个声音此番答道。</p>
-<p>那个声音继续说道“思想，寄居于你身，文明，刻画于你肤，时间，低语于你耳。你为我们的载体，在我们欢乐之时，以吟悲伤之歌来警戒当下，在我们沉闷之时，以诵乐之欢愉来勉励未来。你们认为你们因我而活，实则我们因你而活。没有你们，我们只是一群摧枯拉朽，行将就木之人，我们只是一群疯狂者，高颂着前进，却已然成为那行动的，思想上的矮子。宇宙之所以没有陷入混沌，就是你们的存在。</p>
-<p>此刻，应该是我们向宇宙呐喊，我们真的那么重要吗，这是一个思想的宇宙，一个精神的宇宙，我们的肉体在其中是那么的弱小不堪，终日等待着古印度神话中的转轮来把我们碾碎。”</p>
-<p style="text-align: center;"><strong>[文件损毁]</strong></p>
-
+<p>畸人离开了<span class="ruby">聚落<span class="rt">the compound</span></span>，走进稠密如雾的白雪。永冻土受压嘎吱作响，他的脚陷了进去。他不以为意。他一步一步往前迈进，灵活的双脚留下一溜宽宽的脚印。</p>
+<p>他看不到<em><span class="ruby">机器<span class="rt">the Machine</span></span></em>。但他知道它在哪。他不得不知道。</p>
+<p>他边走边想。</p>
+<p>雪白的虚空之中，他是唯一的一个小点。畸人记不清他已经来到这里多久。太阳既不落下也不升起；他的灯黯淡苍白，灯光在暴雪中散射殆尽。行程永远不变。这里只有畸人，雪，和其余他人。</p>
+<p>畸人计着他的步子，口中念念有词，每吐出一个数字，就品尝一口寒冷。500步了，停。右转。</p>
+<p>这熟悉的节奏。他和狱卒稔熟于心的节奏。</p>
+<p>他右转。还有1124步要走。</p>
+<hr />
+<p>一段记忆。</p>
+<p>畸人大跨步走入暴雪之中。他身材高大，志骄意满。他献身于崇高的事业，他牢记着两天前收到的使命。他是<span class="ruby">亚恩<span class="rt">Ion</span></span>之子；他的信仰能够战胜这肆虐于冰原的暴雪。他不觉得冷。</p>
+<p>他每一步都在向目标迈进，他如同火焰，照亮了无垠幽暗。狂怒的劲风呼号咆啸，吹不灭他的热火。</p>
+<p>他勘察这异域的地形，视狂风若无物。风暴渐强，但他毫不在乎。</p>
+<p><em>机器</em>应该近在眼前。他左转。他会找到的。暴雪威力不减。</p>
+<p>苍灰的天穹已变得漆黑一片。畸人瞪大双眼，却在这永冻的炼狱中一无所获。他听不到自己的思索时的心声。唯有冰与霜与风的声音盖过了一切。</p>
+<p>他的指尖感受到了严寒。</p>
+<p>畸人迷失了自己的所在。他记不清已经来到这里多久。他只知道长夜已至，他只知道即将遭受的刻骨严寒。他瑟缩着身体等待。他不知道是为了什么。</p>
+<p>冰封的废墟之中，一个紧裹大衣的人影走近一块冰雪砌成的石冢。畸人离开聚落已有一段时间。那人影冲石冢弯下腰来，用锄用铲干了起来。</p>
+<hr />
+<p>还有313步要走。</p>
+<p>狱卒找到了畸人冻僵的身体。完好无损，宛若冰晶。她把他带回到了聚落，也正是在聚落，他们踱步演练、设下路径。</p>
+<p>畸人凝视着前方。在他身前，雄踞着一座蒸汽与钢铁的大塔。在那，他能够感受到下方那<em>机器</em>传来的热气。他拉开大门，沿着湿滑的楼梯向下走去。</p>
+<p>阶梯尽头是一个小小的房间。房间散发出腐肉和油脂的味道。房间内蒸汽四溢，一层闪亮的油脂裹在齿轮和机筒的表面。为维护<em>机器</em>，便掏开冰层，筑起这间小室。望向正对门口的那道墙，便是<em>机器</em>——由齿轮、管道和血肉筑起的迷宫。</p>
+<p><em>机器</em>，由齿轮、沥青和一位神的尸体构成的<em>机器</em>，正全身上下一齐摆动的<em>机器</em>。在大地的尽头，它的火焰驱动着造物之窑。它的创造者们却有些匆忙。他们不得不匆忙。<em>机器</em>需要维护。驱动它的齿轮会锈蚀。维系它的魔法需要补充。它呼啸出的<em><span class="ruby">讯息<span class="rt">message</span></span></em>需要解码。</p>
+<p>运行中的<em>机器</em>散发出高温。足以致人死地的高温，畸人没有察觉到的高温。他听到生锈的齿轮每转一下都发出尖叫。他解开了它们的系索。尖叫并不减弱。</p>
+<p>畸人坐了下来，干了起来。齿轮必须被擦洗，肉身必须被剥皮。他挥拳舞断蛛网——磨损机器的几丁质的弦。他的汗和血混杂着油为齿轮润滑。在这伴随着油脂滴落的噪声的漩涡之中，他一遍遍地擦拭着齿轮、这重复、重复动作仿佛机械的无声的祷文。这异端，沿他的脊柱下行。</p>
+<p>他忆起了萨拉热窝。渎神的机器熏染蓝天，亵渎的雨水打到先知追随者们的头顶。他忆起了狱卒们，忆起了图书管理员们，忆起了人类军队是如何凿开一道道裂隙，忆起了裂隙泄露，又是怎样的光景。他记忆最深的，是亚恩的脸庞。亚恩双眼中的神情。而那时的他尚无法理解。</p>
+<p>还剩一个齿轮。畸人站了起来，欣赏起那肉体。一丝不苟，他尽情享受每分每刻。他感到每分每秒都在向着亚恩的承诺更进一步，到那时，血肉和筋腱网遍世界，血腥又温暖的怀抱福满人间。闭上眼睛，他几乎能感受到那血脉正与他相连。</p>
+<p>畸人独自站在房中。他触摸着<em>机器</em>新鲜、血腥的肉体，等待着聆听它的教诲。</p>
+<p>畸人低头看向最后一个齿轮。他看到他的血脉在冰冷的金属之中流淌。是世界哲学，是世界神学。他的救世主，已然倒下。</p>
+<p>畸人把生锈的齿轮重新安回<em>机器</em>。他没法动手清洗。他承受不住异端的代价。</p>
+<p>畸人离开了房间，重新踏上了永冻的大地。他在远处看到一个缩成一团的人影。那是从聚落而来的另外一人。</p>
+<p>畸人想起了亚恩眼中的神情。他现在明白了。</p>
+<p>那是恐惧。</p>
+<div style="text-align: center;">
+<h6><span>导航:</span></h6>
+<p><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/0">1</a> | <strong><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/1">2</a></strong> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/2">3</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/3">4</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/4">5</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/5">6</a></p>
+</div>
 </div>
     
     
     
     </div>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
+
                     </div>
 
                             
@@ -682,7 +831,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/2020%E7%94%BB%E5%BB%8A%E5%A4%A7%E8%B5%9B#pages">2020画廊大赛</a><a href="/system:page-tags/tag/wanderers#pages">wanderers</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%9B%BE%E4%B9%A6%E9%A6%86#pages">图书馆</a><a href="/system:page-tags/tag/%E5%9B%BE%E7%89%87#pages">图片</a><a href="/system:page-tags/tag/%E5%BC%82%E7%95%8C#pages">异界</a><a href="/system:page-tags/tag/%E6%88%90%E4%BA%BA%E5%86%85%E5%AE%B9#pages">成人内容</a><a href="/system:page-tags/tag/%E8%8B%8D%E6%A0%91%E4%B8%8E%E8%A1%80#pages">苍树与血</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%AC%B2%E8%82%89%E6%95%99#pages">欲肉教</a><a href="/system:page-tags/tag/%E7%89%B9%E5%BC%82%E4%BA%8B%E6%95%85%E5%A4%84#pages">特异事故处</a><a href="/system:page-tags/tag/%E7%A0%B4%E7%A2%8E%E4%B9%8B%E7%A5%9E%E6%95%99%E4%BC%9A#pages">破碎之神教会</a><a href="/system:page-tags/tag/%E8%A2%AB%E6%94%BE%E9%80%90%E8%80%85%E4%B9%8B%E5%9B%BE%E4%B9%A6%E9%A6%86#pages">被放逐者之图书馆</a><a href="/system:page-tags/tag/%E9%BC%A0%E5%B7%A2#pages">鼠巢</a>
                             </span>
                         </div>
                     
@@ -690,12 +839,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 4, 最后编辑于: <span class="odate time_1587175551 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">18 Apr 2020 02:05</span></div>
+                            <div id="page-info">页面版本: 6, 最后编辑于: <span class="odate time_1608394848 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">19 Dec 2020 16:20</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+33</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+6</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13159732/wanderers:hazakura-to-mabue" class="btn btn-default" id="discuss-button">讨论 (8)</a>
+<a href="/forum/t-13946597/a-terrible-thing" class="btn btn-default" id="discuss-button">讨论 (1)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -762,21 +911,32 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ko.scp-wiki.net">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ko.scp-wiki.net/80.jpg"/>
+            <a target="_blank" class="image" href="http://theautocraticcountryofjayland.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/theautocraticcountryofjayland.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ko.scp-wiki.net">SCP 재단</a></h3>
+            <h3><a target="_blank" href="http://theautocraticcountryofjayland.wikidot.com">The Autocratic Country Of Jayland</a></h3>
             <div class="desc">          
-              확보, 격리, 보호
+              MementoMori
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://nauticoamager.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/nauticoamager.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://mathaerobics4samvedna.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mathaerobics4samvedna.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://nauticoamager.wikidot.com">NauticoAmager</a></h3>
+            <h3><a target="_blank" href="http://mathaerobics4samvedna.wikidot.com">Math Aerobics</a></h3>
+            <div class="desc">          
+              ADIDAS - All Day I Dream About Sums..!!
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://blmodding.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/blmodding.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://blmodding.wikidot.com">Borderlands Modding Resource</a></h3>
             <div class="desc">          
               
             </div>
@@ -784,23 +944,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://desenvolvimentodejogos.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/desenvolvimentodejogos.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://marblehornets.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/marblehornets.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://desenvolvimentodejogos.wikidot.com">Desenvolvimento de Jogos</a></h3>
+            <h3><a target="_blank" href="http://marblehornets.wikidot.com">Marble Hornets</a></h3>
             <div class="desc">          
-              Tecnologias para uso no desenvolver jogos
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://pfcuq.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pfcuq.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://pfcuq.wikidot.com">Pokémon Fan Club of UQ</a></h3>
-            <div class="desc">          
-              Spoopy
+              
             </div>
           </div>
         </div>
