@@ -1,513 +1,335 @@
-@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
-@import url("https://use.typekit.net/tqr1skr.css");
+/*
+    Marshall, Carter & Dark
+    [2014 Wikidot Theme, 2018 Update]
+    Originally created for the SCP Foundation GoI Contest of 2014 (MC&D team and Group of Interest) by Randomini. Thanks to Reach, Aelanna and Crayne for the template.
+     Updated by stormbreath for mobile compatibility.
+*/
 
- @supports(--css:variables) {
-:root {
-    /* S-CSS-P Integration */
-    --theme-base: "nuscp";
-    --theme-id: "dustjacket-theme";
-    --theme-name: "Dustjacket Theme";
+/* RECOLOR THE TITLE */
+h1, #page-title {
+    color: #320042;}
 
-    /* Header */
-    --logo-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_logo.png");
-    --header-title: "被放逐者之图书馆";
-    --header-subtitle: " ";
-    --diagonal-stripes: unset;
-
-    /* Typefaces */
-    --body-font: adelle-sans, 'Lato', '微软雅黑', sans-serif;
-    --header-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
-    --title-font: 'zuijinregular', 'Poppins', kaiti, sans-serif;
-    --mono-font: adaptive-mono, "PT Mono", "Andale Mono", "Courier New", Courier, NSimSun, monospace;
-
-    /* Standard Colors */
-    --pale-gray-monochrome: 178, 210, 180;
-    --light-gray-monochrome: 130, 160, 135;
-    --gray-monochrome: 45, 70, 45;
-    --dark-gray-monochrome: 30, 55, 30;
-    --bright-accent: 255, 219, 90;
-    --medium-accent: 228, 180, 28;
-    --dark-accent: 185, 150, 17;
-    --newpage-color: 221, 102, 17;
-
-    /* Primary Menu Colors */
-    --swatch-menubg-hover-color: var(--dark-gray-monochrome);
-    --swatch-menutxt-dark-color: var(--dark-gray-monochrome);
-    --swatch-menutxt-light-color: var(--bright-accent);
-    --swatch-border-color: var(--medium-accent);
-
-   /* Primary Header Colors */
-    --swatch-topmenu-border-color: var(--bright-accent);
-    --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
-
-   /* Link Colors */
-    --link-color: var(--pale-accent);
-
-    --rating-module-button-color: var(--bright-accent);
-    --rating-module-text-color: var(--bright-accent);
-    --gradient-sidemenu-header: linear-gradient(10deg,
-        rgba(var(--dark-gray-monochrome), 0.65) 0%,
-        rgba(var(--dark-gray-monochrome), 0.75) 100%);
-
-   --barColour: rgb(var(--gray-monochrome));
-    --linkColour: rgb(var(--medium-accent));
+#page-title {
+    font-weight: lighter;
+    border-color: #320042;
 }
 
-/* HIGHLIGHTING */
-::-moz-selection {
-    background: rgba(var(--bright-accent), 0.5);
-}
-
-::selection {
-    background: rgba(var(--bright-accent), 0.5);
-}
-
-/* LINKS */
+/*RECOLOR THE LINKS */
 a {
-    color: rgb(var(--swatch-primary-darker));
+    color: #6C4279;
 }
 
-a:hover,
-a:active,
+a.newpage {
+    color: #4312A5;
+}
+
+#side-bar a:visited{
+    color: #6C4279;
+}
+
 a:visited {
-    color: rgb(var(--swatch-primary-darkest));
+    color: #6C4279;
 }
 
-/* HEADER */
-div#extra-div-1,
-div#extra-div-2 {
-        position: absolute;
-    display: block;
-    width: 100%;
-    height: 7.5rem;
-    top: 0;
-    left: 0;
+/*HEADER IMAGES*/
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amcd/body_bg_MCD2.png) repeat-x;
 }
 
-div#extra-div-1 {
-    background-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png");
-    background-size: 31.250rem;
-    z-index: -1;
-    mix-blend-mode: hard-light;
+#header {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amcd/MCDLogo2-small.png) no-repeat;
 }
 
-div#extra-div-2 {
-    background: var(--gradient-header);
-    background-size: var(--header-background-image-size);
-    background-repeat: repeat;
-    z-index: -2;
+
+/* Adjust Mobile Image Size */
+@media (max-width: 479px) {
+#header {
+    background-size: 150px 75px;
+    background-position: 1em;
+}
+}
+@media (min-width: 480px) and (max-width: 580px) {
+#header {
+    background-size: 180px 90px;
+    background-position: 1em;
+}
+}
+@media (min-width: 581px) and (max-width: 767px) {
+#header {
+    background-size: 210px 105px;
+    background-position: 1em;
+}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+#header {
+    background-size: 240px 120px;
+    background-position: 1em;
+}
 }
 
+
+/* HIDE THE HEADER TEXT */
 #header h1 a {
-    margin-left: 7.75rem;
-    margin-top: 0.6em;
-    font-size: 175%;
-    overflow-wrap: normal;
+    font-size: 0%;
 }
 
-#header h1 a::before {
-    content: "被放逐者之图书馆";
-    content: var(--header-title);
-    color: rgb(var(--bright-accent));
-    text-shadow: inherit;
-    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow-wrap: normal;
+#header h2 span {
+    font-size: 0%;
 }
 
-#header h2 {
-    display: none;
+/* RECOLOR THE SEARCH BAR */
+#search-top-box-input {
+    border-color: #3E2646;
+    color: #6E3251;
+    background-color: #603B6C;
 }
 
-/* Search Bar */
-#search-top-box-form * {
-    font-family: var(--header-font);
-    font-weight: 600 !important;
-    letter-spacing: 0.05em;
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background-color: #282053;
 }
 
-#search-top-box-form {
-    display: inline-flex;
-    justify-content: center;
-    position: absolute;
-    height: 1.3rem;
-    top: 47%;
-    right: 3%;
-    width: auto;
-    text-align: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    padding-top: 0.4rem !important;
+#search-top-box-form input[type=submit] {
+    border: solid 1px #AF4FCF;
+    color: #ccc;
+    background-color: #282053;
+    background: linear-gradient(to bottom, #371F3D,#282053,#8D6BA9);
 }
 
-#search-top-box input.empty {
-    color: rgba(var(--swatch-menutxt-light-color), 0.5);
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #fff;
+    background-color: #87a96b;
+    background: linear-gradient(to bottom, #7E608A,#946BA9,#8C3CA6);
 }
 
-#search-top-box-form > input,
-#search-top-box-form > input[type="submit"] {
-    min-height: 1.3rem;
-    height: 1.3rem;
-    padding: .25rem;
-    margin: 0;
-    box-sizing: border-box;
-    flex-grow: 1;
-    display: flex;
-    font-weight: 500;
-}
-
-input.button.btn {
-    padding-top: 0.1em !important;
-}
-
-/* Log-In Info */
+/* LOGIN STUFF */
 #login-status {
-    color: rgb(var(--swatch-menubg-light-color));
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    color: #C5A3C5;
+}
+#login-status a {
+    color: #E696E6;
+}
+#login-status ul a {
+    color: #C5A3C5;
+}
+#account-topbutton {
+    background: #ccc;
+    color: #C5A3C5;
 }
 
-#login-status * {
-    font-family: var(--header-font);
-    letter-spacing: 0.05em;
+/* IMAGE BLOCK RECOLORING */
+.scp-image-block {
+  border: solid 1px #6c006c;
+}
+.scp-image-block .scp-image-caption {
+  background-color: #f0f8ff;
+  border-top: solid 1px #6c006c;
 }
 
-/* TOPBAR */
-#top-bar div.top-bar > ul > li > a,
-#top-bar div.mobile-top-bar > ul > li > a {
-    font-family: var(--header-font);
-    text-transform: uppercase;
+/* MODULE RATE RECOLOR */
+.page-rate-widget-box .rate-points {
+  background-color: #6c006c !important;
+  border: solid 1px #6c006c;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: #f0f8ff;
+  border-top: solid 1px #6c006c;
+  border-bottom: solid 1px #6c006c;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  background: transparent;
+  color: #6c006c;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: #6c006c;
+  color: #f0ffff;
+}
+.page-rate-widget-box .cancel {
+  background: transparent;
+  background-color: #6c006c;
+  border: solid 1px #6c006c;
+}
+.page-rate-widget-box .cancel a {
+  color: #f0ffff;
+}
+.page-rate-widget-box .cancel a:hover {
+  background: #cdeadc;
+  color: #f0ffff;
 }
 
-#top-bar div.top-bar > ul > li > ul > li > a,
-#top-bar div.mobile-top-bar > ul > li > ul > li > a {
-    font-weight: 700;
-    color: rgb(var(--swatch-menutxt-dark-color));
+/* INFO MODULE */
+#page-content .rate-box-with-credit-button {
+    background-color: #6c006c;
+    border-color: #6c006c;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+#page-content .creditButton p a {
+    border-left-color: #f0ffff;
 }
 
-#top-bar div.top-bar > ul > li > ul,
-#top-bar div.mobile-top-bar > ul > li > ul {
-    background: rgba(var(--pale-gray-monochrome), 0.93);
+#page-content .modalbox {
+    box-shadow: 0 2px 6px rgba(50,0,50,.5);
 }
 
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a:hover,
-#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li > a:hover {
-    background: transparent;
+.close-credits,
+.credit-back {
+    filter: hue-rotate(275deg);
 }
 
-#top-bar div.top-bar > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > a:hover::before {
-    background-color: rgba(var(--bright-accent), 1);
+
+/* AYER'S INFO MODULE */
+:root {
+     --barColour: #6c006c;
 }
 
-#top-bar > div.mobile-top-bar > div.open-menu > p > a {
-    color: rgb(var(--medium-accent)) !important;
+/* HERITAGE MODULE */
+.heritage-rating-module {
+    background-color: #6c006c;
+    border: solid 1px #ccc066;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
 }
 
-/* SIDEBAR */
-/* 中文调整 */
-#side-bar {
-      box-shadow: inherit;
-      border-radius: inherit;
+/* TAB RECOLORING */
+.yui-navset .yui-content{
+    background-color: #f5f5f5;
+}
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color:#d8d8d8;
+    background-image: url(../images/yuitabs.png);
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background:#320082 url(../images/yuitabs.png) repeat-x left -1400px; /* selected tab background */
+    color:#fff;
+}
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background:#FCDBFF url(../images/yuitabs.png) repeat-x left -1300px;
+    text-decoration: none;
+}
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #400040;
+}
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #6c006c;
+}
+.yui-navset li {
+    line-height: normal;
 }
 
+/*SIDE BAR RECOLOR AND STUFF */
 #side-bar .side-block {
-      background-color: rgba(0, 0, 0, 0) !important;
+    border: 1px solid #8B198B;
+    box-shadow: 0 2px 6px rgba(50,0,50,.5);
+    color: #8B198B;
 }
 
 #side-bar .heading {
-      font-family: var(--header-font);
-      /* 中文调整 */
-      width: inherit;
-      margin: inherit;
+    color: #1E0087;
+    border-bottom: solid 1px #1E0087;
+}
+#side-bar div.menu-item .sub-text {
+    color: #3D1F31;
 }
 
-#side-bar div.menu-item a::before,
-#side-bar div.menu-item a:hover::before {
-    background-color: rgb(var(--gray-monochrome),0.25);
+#side-bar .side-block[style="background-color: #f0fff6;"],
+#side-bar .side-block[style="background-color: #f0fff6;"] .heading p { background-color: #FFF0FF !important; }
+#side-bar .side-block[style="background-color: #e7e5e8;"],
+#side-bar .side-block[style="background-color: #e7e5e8;"] .heading p { background-color: #E8D2E8 !important; }
+#side-bar .side-block[style="background-color: #fff0f0;"],
+#side-bar .side-block[style="background-color: #fff0f0;"] .heading p { background-color: #FFF0F7 !important;}
+#side-bar .side-block[style="background-color: #e5e5ff;"],
+#side-bar .side-block[style="background-color: #e5e5ff;"] .heading p { background-color: #F0E5FF !important; }
+
+.side-block .menu-item > .image {
+    filter: hue-rotate(275deg);
+    -webkit-filter: hue-rotate(275deg);
 }
 
-/* Page-Options */
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-    background-color: rgba(var(--swatch-menubg-dark-color), 1);
-    border: 0.08rem solid rgba(var(--swatch-primary), 1);
-    color: rgba(var(--swatch-primary), 1);
-    font-weight: 700;
+/* side-bar collapsible stuff */
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #220096;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
+    color: #220096;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #6C4279;
 }
 
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-    background-color: rgba(var(--swatch-menubg-light-color), 0.85);
-    border: 0.08rem solid rgba(var(--swatch-primary-darkest),1);
-    color: rgba(var(--swatch-primary), 1);
+/* MOBILE SIDEBAR */
+@media (max-width: 767px) {
+     #side-bar{
+         background-color: #6c006c
+      }
+
+    .open-menu a {
+        border: 0.2em solid #6c006c !important;
+        background-color: #f0f8ff !important;
+        color: #6c006c !important;
+    }
 }
 
-
-/* Footer */
+/* FOOTER STUFF */
 #footer {
-    width: calc(100% - 1.25rem);
-    color: rgb(var(--swatch-menubg-dark-color));
+    background: #3d2b1f;
+    color: #6C006C;
 }
 
-#footer a {
-    color: inherit;
+/* TOP BAR RECOLORING*/
+#top-bar ul li ul {
+    border: solid 1px #3d2b1f;
 }
 
-/* Page-Tags */
-#main-content .page-tags {
-    border-top: 2px solid rgb(var(--dark-accent));
+#top-bar ul li.sfhover ul li a,
+#top-bar ul li:hover ul li a {
+    border-top: 1px solid #CE9CCE;
 }
 
-#main-content .page-tags a {
-    display: inline-block;
-    height: 0.8125rem;
-    line-height: 13px;
-    line-height: 0.8125rem;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    margin: 0 0 .5rem .75rem;
-    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a {
+    background: #FFE3FD;
+    color: #6c006c;
+}
+#top-bar ul li ul a, #top-bar a:hover {
+    color: #8db600;
+}
+/* CONTENT PANELS */
+.content-panel {
+    border: solid 1px #5d8aa8;
+    background-color: #bcd4e6;
+    box-shadow: 3px 3px 6px #e6e6fa;
+}
+.content-panel .panel-footer {
+    color: #A30053;
+}
+.content-panel .content-toc {
+    border: solid 1px #5d8aa8;
 }
 
-#main-content .page-tags a:before {
-    top: -0.1875rem;
-    left: -0.625rem;
-    width: 0;
-    height: 0;
-    border-color:
-     transparent
-     rgb(48, 48, 52)
-     transparent
-     transparent;
-    border-color:
-     transparent
-     rgb(var(--gray-monochrome, 45, 70, 45))
-     transparent
-     transparent;
-    border-style: solid;
-    border-width: 0.5rem 0.5rem 0.5rem 0;
-    padding: 0 0.0625rem 0.1875rem;
+/* SEXY BOX */
+div.sexy-box {
+    background: #f0f8ff;
+    border: 1px solid #903C67;
+}
+div.sexy-box div.image-container img {
+    border: 1px solid #9f8170;
 }
 
-#main-content .page-tags a:before,
-#main-content .page-tags a:after {
-    content: "";
-    float: left;
-    position: relative;
-}
-
-#main-content .page-tags a:after {
-    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
-    top: 0.28125rem;
-    left: -0.5rem;
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0.125rem;
-    background-color: rgb(var(--bright-accent, 255, 219, 90));
-    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
-}
-
-.page-tags span {
-    border-top: .5rem solid transparent;
-}
-
-/* Rating and Info Modules */
-.page-rate-widget-box,
-#page-content .rate-box-with-credit-button {
-    background: linear-gradient(to top,
-        rgba(var(--swatch-menubg-dark-color), 1) 0,
-        rgba(var(--swatch-menubg-medium-color), 1) 100%);
-    font-family: var(--header-font);
-    letter-spacing: 0.05em;
-}
-
-.page-rate-widget-box .rate-points,
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown,
-.page-rate-widget-box .cancel,
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a,
-.page-rate-widget-box .cancel a {
-    font-weight: 500;
-}
-
-#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
-    background-color: rgb(var(--rating-module-button-color));
-}
-
-/* Blockquotes, Horizontal Rules and Special Divs*/
-.blockquote,
-blockquote {
-       background: rgb(var(--pale-gray-monochrome));
-       border: 3px outset rgb(var(--medium-accent));
-}
-
-hr {
-    height: .125rem;
-    border: 0;
-    border-top: .063rem solid transparent;
-    background-color: rgba(var(--bright-accent));
-    background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-    background-size: cover;
-}
-
-.fancyhr hr {
-    border-top: 2vw solid transparent;
-    background-color: rgba(var(--bright-accent), 0);
-    height: 0;
-    box-sizing: border-box;
-    border-image-source: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_hr.png);
-    border-image-repeat: round round;
-    background: none;
-    border-image-slice: 80 500 80 500 fill;
-    border-image-width: 10em 80em 10em 80em;
-}
-
-.fancyborder {
-    box-sizing: border-box;
-    border: 2vw solid rgba(0,0,0,0.5);
-    border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-    border-image-width: 6;
-    padding: 2vw;
-}
-
-/* footnote by 7happy7 */
-span:not([class]):not([style]) > sup.footnoteref:first-child > a.footnoteref:before,
-sup.footnoteref > a.footnoteref:before {
-content: "(";
-}
-span:not([class]):not([style]) > sup.footnoteref > a.footnoteref:before {
-content: ",";
-}
-
-/* Adjusts footnote block at bottom to fit the Hand format better, rather than BHL Default */
-.footnotes-footer {
-        width: unset;
-    margin: unset;
-    padding: 20px;
-    background-color: #EEF6EE;
-        border: solid 1px #112211;
-}
-
-/* MOBILE ELEMENTS */
-@media only screen and (max-width: 768px) {
-    #header h1 a,
-    #header h2 span {
-        margin-left: 7.75rem;
-        margin-top: 0.35em;
-    }
-
-    #header h1 a {
-        line-height: 1;
-    }
-
-    #header h2 span {
-        margin-top: calc(3.4rem + var(--offset-from-page-top));
-    }
-
-    div#extrac-div-1 {
-        background-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png);
-        background-size: 31.250rem;
-        z-index: 3;
-    }
-
-    div#extrac-div-1,
-    div#extrac-div-2 {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 7.5rem;
-        top: 0;
-        left: 0;
-    }
-
-    div#extrac-div-3::before {
-        text-shadow: inherit;
-        background: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/goldfoil.png);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        content: var(--header-title);
-        font-family: var(--header-font);
-        font-size: 170%;
-        width: 95%;
-        height: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: transparent;
-        text-align: center;
-        font-weight: 700;
-    }
-
-    div#extrac-div-3 {
-        display: block;
-        position: static;
-        z-index: 1;
-        background-color: transparent;
-    }
-
-    div#extrac-div-2 > span {
-        display: flex;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 3rem;
-        box-sizing: inherit;
-        background: var(--gradient-topmenu-mobile, linear-gradient(to bottom,
-            rgba(var(--swatch-topmenu-border-color), 1) 0,
-            rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
-            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-            rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
-            rgba(var(--swatch-topmenu-border-color), 1) 3rem));
-        background-size: 100% 10.375rem;
-        align-items: center;
-        position: sticky;
-        margin-top: 7.5rem;
-        background-color: transparent;
-    }
-
-    div#extra-div-2::before {
-        content: " ";
-        width: 100%;
-        height: 100%;
-    }
-
-    div#extrac-div-2 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    #search-top-box {
-        width: 12.5rem;
-    }
-
-   #search-top-box-form {
-        top: 0;
-        right: 0;
-        align-items: initial;
-    }
-}
+/* TRANSLATION BLOCK */
+iframe.scpnet-interwiki-frame {
+    filter: hue-rotate(275deg);
+    -webkit-filter: hue-rotate(275deg);
 }
