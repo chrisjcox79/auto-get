@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342261;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "system:page-tags";
-        OZONE.request.timestamp = 1609207409;
+        OZONE.request.timestamp = 1609226234;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "system:page-tags";
@@ -1241,10 +1241,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://pottersarmy.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pottersarmy.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpguy.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpguy.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://pottersarmy.wikidot.com">Potter&#039;s Army</a></h3>
+            <h3><a target="_blank" href="http://scpguy.wikidot.com">FakeProGaming Wiki Offical Website</a></h3>
+            <div class="desc">          
+              FakeProGaming Wiki Offical Website
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://bozic-nation.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bozic-nation.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://bozic-nation.wikidot.com">Bozic Nation</a></h3>
             <div class="desc">          
               
             </div>
@@ -1252,32 +1263,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://scp-eq.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-eq.org/80.jpg"/>
+            <a target="_blank" class="image" href="http://imocamp.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/imocamp.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://scp-eq.org">SCP基金会小马国分部</a></h3>
+            <h3><a target="_blank" href="http://imocamp.wikidot.com">2020 IMOC</a></h3>
             <div class="desc">          
-              控制 • 收容 • 保护
+              2020 暑期奧林匹亞數學研習營網頁
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sharecokecodes.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sharecokecodes.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://thesimsonline.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/thesimsonline.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sharecokecodes.wikidot.com">Share Coke Codes</a></h3>
-            <div class="desc">          
-              Sharing happiness by sharing Coke rewards codes.
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://rmitvnim2007b.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rmitvnim2007b.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://rmitvnim2007b.wikidot.com">RMIT Vietnam IM 2007B</a></h3>
+            <h3><a target="_blank" href="http://thesimsonline.wikidot.com">The Sims Online</a></h3>
             <div class="desc">          
               
             </div>
