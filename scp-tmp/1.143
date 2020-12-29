@@ -1,46 +1,266 @@
-<head></head>
-<body>
-<script>
-window.onload = function() {
-    randomSwitch();
+@import url('http://scp-wiki.wdfiles.com/local--files/theme%3Awilsons/national-park.css');
+
+/*
+    Wilson's Wildlife Theme
+    [2019 Wikidot Theme]
+    Theme by stormbreath.
+    Originally by stormbreath and DarkStuff.
+    The WWS logo was created by DrAnnoyingDog.
+*/
+
+@supports(--css:variables) {
+
+:root {
+/* Intro */
+    --theme-base: "nuscp"
+    --theme-id: "wilderness-theme"
+    --theme-name: "Wilderness Theme";
+
+/* Header */
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Awilsons/WWS_Logo_2.2_abrv.png");
+    --header-title: "威尔逊野生动物应对组";
+    --header-subtitle: "欢迎所有小动物之地！";
+    --header-font: 'national_parkregular', sans-serif;
+    --header-gradient-color-bottom: 81, 181, 75;
+    --header-gradient-color-middle: 170, 220, 131;
+    --header-gradient-color-top: 209, 237, 154;
+    --gradient-header: linear-gradient(to top,
+          rgb(var(--header-gradient-color-bottom)) 0%,
+          rgb(var(--header-gradient-color-middle)) 70%,
+          rgb(var(--header-gradient-color-top)) 100%);
+    --diagonal-stripes: unset;
+
+/* Colors */
+    --pale-gray-monochrome: 220, 242, 176; /* Wilson's Quote Color (Light Green)*/
+    --gray-monochrome: 80, 68, 37; /* dark brown */
+    --dark-gray-monochrome: 66, 56, 31; /* darker brown */
+    --bright-accent: 35, 180, 35; /* bright green */
+    --medium-accent: 20, 140, 20; /* medium green */
+    --dark-accent: 20, 100, 20; /* dark green */
+    --newpage-color: 102, 221, 102; /* pale green */
+
+    --wilson-header: 163, 193, 98; /* Wilson's Format Header */
+    --wilson-subtitle: 200, 226, 147; /* Wilson's Format Subtitle */
+    --wilson-body: 209, 237, 154; /* Wilson's Format Body */
+    --wilson-text: 102, 87, 49; /* Wilson's Format Text */
+
+    --swatch-topmenu-bg-color: var(--gray-monochrome);
+    --rating-module-button-color: var(--wilson-text);
+    --rating-module-text-color: var(--wilson-text);
+    --sidebar-links-text: var(--wilson-text);
+    --pale-accent: var(--dark-accent);  /* Visited Link Color*/
+    --barColour: var(--wilson-header); /* Ayer's Info Module */
 }
-function randomSwitch() {
-    switch(~~(34 * Math.random())) {
-        default:
-        case 0: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page2_limit/1"; break;
-        case 1: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page3_limit/1"; break;
-        case 2: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page4_limit/1"; break;
-        case 3: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page5_limit/1"; break;
-        case 4: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page6_limit/1"; break;
-        case 5: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page7_limit/1"; break;
-        case 6: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page8_limit/1"; break;
-        case 7: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page9_limit/1"; break;
-        case 8: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page10_limit/1"; break;
-        case 9: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page11_limit/1"; break;
-        case 10: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page12_limit/1"; break;
-        case 11: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page13_limit/1"; break;
-        case 12: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page14_limit/1"; break;
-        case 13: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page15_limit/1"; break;
-        case 14: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page16_limit/1"; break;
-        case 15: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page17_limit/1"; break;
-        case 16: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page18_limit/1"; break;
-        case 17: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page19_limit/1"; break;
-        case 18: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page20_limit/1"; break;
-        case 19: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page21_limit/1"; break;
-        case 20: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page22_limit/1"; break;
-        case 21: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page23_limit/1"; break;
-        case 22: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page24_limit/1"; break;
-        case 23: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page25_limit/1"; break;
-        case 24: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page26_limit/1"; break;
-        case 25: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page27_limit/1"; break;
-        case 26: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page28_limit/1"; break;
-        case 27: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page29_limit/1"; break;
-        case 28: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page30_limit/1"; break;
-        case 29: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page31_limit/1"; break;
-        case 30: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page32_limit/1"; break;
-        case 31: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page33_limit/1"; break;
-        case 32: parent.location.href = "http://scp-wiki-cn.wikidot.com/spc-2019-jp-af2019/offset/1/page34_limit/1"; break;
+
+/* FONTS */
+#header h2 span:before,
+#top-bar,
+#side-bar {
+    font-family: var(--header-font); /*Makes subtitle/top-bar/side-bar National Park */
+}
+
+/* HEADER */
+@media only screen and (max-width: 768px) {
+    #header {
+        background-size: 0.625rem 2.500rem;
+        background-repeat: no-repeat;
+        background-position: left 0.75rem top 1.1875rem;
+        background-clip: border-box;
+        background-size: auto 5.375rem;
     }
+} /* Fixes mobile sizing issue */
+
+#page-title {
+    color: rgb(var(--wilson-text));
+    border-color: rgb(var(--wilson-text));
 }
-</script>
-</body>
+
+#top-bar > div.mobile-top-bar > div.open-menu > p > a {
+    color: rgb(var(--white-monochrome)) !important;
+}
+
+/* SEARCH-BAR */
+#search-top-box-input,
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background: rgb(var(--wilson-header)) !important;
+    color: rgb(var(--wilson-text)) !important;
+} /* Recolors part of searchbar where text is typed, !importants used in Nu. */
+
+#search-top-box-form input[type="submit"],
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+    background: rgb(var(--gray-monochrome)) !important;
+} /* Recolors searchbar button, !important used in Nu. */
+
+/* LOGIN STUFF */
+#login-status {
+    color: rgba(var(--white-monochrome));
+}
+#login-status a {
+    color: rgba(var(--white-monochrome));
+}
+#login-status ul a {
+    color: rgba(var(--gray-monochrome));
+}
+#account-topbutton {
+    color: rgba(var(--wilson-text));
+}
+
+/* Page Rating Module */
+.page-rate-widget-box {
+    background: linear-gradient(to top,
+     rgba(var(--pale-gray-monochrome),1) 0%,
+     rgba(var(--pale-gray-monochrome), 1) 100%);
+    border-color: rgb(var(--gray-monochrome));
+}
+#page-content .rate-box-with-credit-button {
+    background: linear-gradient(to top,
+     rgba(var(--pale-gray-monochrome),1) 0%,
+     rgba(var(--pale-gray-monochrome), 1) 100%);
+    border-color: rgb(var(--gray-monochrome));
+}
+#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
+    background-color: rgb(var(--wilson-text));
+}
+
+#page-content .rate-box-with-credit-button > .creditButton:hover {
+    background: rgba(var(--bright-accent), 0.8);
+}
+
+#page-content .modalbox {
+     background: rgb(var(--pale-gray-monochrome)) !important;
+     color: rgb(var(--wilson-text));
+     border-radius: 0;
+     box-shadow: 0 2px 6px rgba(var(--bright-accent), 0.5);
+}
+
+/* RECOLOR THE QUOTEBLOCK */
+blockquote,
+.blockquote {
+    border-color: transparent;
+    color: rgb(var(--wilson-text));
+}
+
+#toc {
+    border-color: transparent;
+    color: rgb(var(--wilson-text));
+    background-color: rgb(var(--pale-gray-monochrome));
+    box-shadow: 0em 0.063em 0.125em rgba(0, 0, 0, 0.1);
+    padding: 0 1em;
+}
+
+hr {
+    border-top: 0.063rem solid rgba(var(--wilson-text));
+}
+
+/* Image Caption */
+.scp-image-block .scp-image-caption {
+  border-color: rgb(var(--wilson-text));
+  color: rgb(var(--wilson-text)); /*Recolors Image captions */
+}
+
+/* TRANSLATION BLOCK */
+iframe.scpnet-interwiki-frame {
+  filter: hue-rotate(140deg) brightness(150%);
+  -webkit-filter: hue-rotate(140deg) brightness(150%);
+}
+
+/* RECOLOR THE TABLES */
+#page-content .wiki-content-table tr th {
+    background-color: rgb(var(--wilson-header));
+    color: white;
+    border-color: rgb(var(--wilson-text));
+}
+
+/* TABS */
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: rgb(var(--gray-monochrome));
+    box-shadow: 0 calc(0.0625rem * 5) 0 0 rgb(var(--gray-monochrome));
+}
+
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color: rgb(var(--wilson-body));
+    /* tab background */
+    border-color: transparent! important;
+    color: rgb(var(--wilson-text));
+}
+
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background-color: rgb(var(--wilson-header));
+    color: rgb(var(--white-monochrome));
+}
+
+.yui-navset .yui-nav li,
+.yui-navset .yui-navset-top .yui-nav li {
+    background-color: rgb(var(--wilson-body));
+    border-color: transparent;
+    box-shadow: 0 0 0 0.0625rem rgb(var(--wilson-header));
+}
+
+/* Selected Tab */
+.yui-navset .yui-nav .selected,
+.yui-navset .yui-navset-top .yui-nav .selected {
+    background-color: rgb(var(--wilson-header));
+}
+
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:active {
+    background-color: rgb(var(--wilson-header));
+    color: rgb(var(--white-monochrome));
+}
+
+.yui-navset .yui-nav .selected a:hover {
+    background-color: rgb(var(--wilson-subtitle));
+    color: rgb(var(--white-monochrome));
+}
+
+.yui-navset .yui-content {
+    background-color: rgba(var(--wilson-body),0.25);
+    color: rgb(var(--wilson-text));
+    /* content background color */
+}
+
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: rgb(var(--gray-monochrome));
+    /* content border */
+}
+
+.yui-navset-left .yui-content {
+    border-left-color: rgb(var(--gray-monochrome));
+    /* different border color */
+}
+}
+
+/* Wilson's Divs */
+div.wilson-border {
+    border: 0.063em solid rgb(102, 87, 49);
+    box-shadow: 0em 0.063em 0.125em rgba(0, 0, 0, 0.1);
+}
+
+div.wilson-header {
+    color: white;
+    background: rgb(163, 193, 98);
+    padding: 1em;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.wilson-subtitle {
+    color: rgb(102, 87, 49);
+    background: rgba(200, 226, 147);
+    padding: 0.313em;
+    text-align: right;
+    font-weight: bold;
+}
+
+div.wilson-body {
+    color: rgba(102, 87, 49);
+    background: rgb(209, 237, 154);
+    padding: 1em;
+}

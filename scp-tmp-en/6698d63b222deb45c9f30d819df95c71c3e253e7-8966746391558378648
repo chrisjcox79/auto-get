@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<html lang="en"> <head> <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<SCRIPT LANGUAGE = "JavaScript">
+
+var PAGES = {
+
+'start': { //Page 0
+    'text': "",
+        'choices': [{
+        'text': 'begin',
+        'target': 'computer',
+        'response': '<br>'
+    }]
+},
+'computer': { //Page 0
+    'text': 'Unlocking the disk /dev/disks/by-uuid/fda9c08c-dc06-11e5-b5d2-0a1d41d68578 (sda5_crypt)<br>Enter Passphrase: ',
+        'choices': [{
+        'text': 'password',
+        'target': 'wrong_disk',
+        'response': '*******<br>'
+    }, {
+        'text': 'p@$$w0rd1',
+        'target': 'wrong_disk',
+        'response': '*********<br>'
+    }, {
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'first_login',
+        'response': '****************<br>'
+    }]
+}, 
+'wrong_disk': { //Page 1: wrong disk password
+    'text': 'No key available with this passphrase.<br>cryptsetup: cryptsetup failed, bad password or options?<br><br>Unlocking the disk /dev/disks/by-uuid/fda9c08c-dc06-11e5-b5d2-0a1d41d68578 (sda5_crypt)<br>Enter Passphrase: ',
+    'choices': [{
+        'text': 'password',
+        'target': 'wrong_disk',
+        'response': '*******<br>'
+    }, {
+        'text': 'p@$$w0rd1',
+        'target': 'wrong_disk',
+        'response': '*********<br>'
+    }, {
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'first_login',
+        'response': '****************<br>'
+    }]
+},
+'first_login': { //Page 2: first login
+    'text': '  Reading all physical volumes. This may take a while...<br>  Found volume group "redos-vg" using metadata type lvm2<br>  2 logical volume(s) in volume group "redos-vg" now active.<br>cryptsetup: sda5_crypt set up sucessfully<div class="d1">.</div><div class="d2">.</div><div class="d3">.</div><span class=con1>RedOS 12.34 foundation-92911 tty1<br><br>foundation-92911 login: <span>',
+    'choices': [{
+        'text': 'ken',
+        'target': 'bad_username',
+        'response': 'ken<br>'
+    }, {
+        'text': 'ash',
+        'target': 'good_username',
+        'response': 'ash<br>'
+    }, {
+        'text': 'frank',
+        'target': 'bad_username',
+        'response': 'frank<br>'
+    }]
+}, 
+'bad_login': { //Page 3: wrong login message
+    'text': '<br>Login incorrect<br>foundation-92911 login: ',
+    'choices': [{
+        'text': 'ken',
+        'target': 'bad_username',
+        'response': 'ash<br>'
+    }, {
+        'text': 'ash',
+        'target': 'good_username',
+        'response': 'ash<br>'
+    }, {
+        'text': 'frank',
+        'target': 'bad_username',
+        'response': 'frank<br>'
+    }]
+}, 
+'bad_username': { //Page 4: wrong user, ask password
+    'text': 'Password: ',
+    'choices': [{
+        'text': 'password1',
+        'target': 'bad_login',
+        'response': '<br>'
+    }, {
+        'text': 'p@$$w0rd1',
+        'target': 'bad_login',
+        'response': '<br>'
+    }, {
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'bad_login',
+        'response': '<br>'
+    }]
+}, 
+'good_username': { //Page 5: correct user, ask password
+    'text': 'Password: ',
+    'choices': [{
+        'text': 'password1',
+        'target': 'bad_login',
+        'response': '<br>'
+    }, {
+        'text': 'p@$$w0rd1',
+        'target': 'bad_login',
+        'response': '<br>'
+    }, {
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'home_initial',
+        'response': '<br>Last login: Tue Dec 29 12:03:45 MST 2015 on tty1<br>'
+    }]
+}, 
+'home_initial': { //Page 6: home shell
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_initial_ls',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'startx',
+        'target': 'home_initial',
+        'response': 'startx<br>startx: command not found<br>'
+    }, {
+        'text': 'rm -rd /',
+        'target': 'home_initial2',
+        'response': 'rm -rd /<br>rm: it is dangerous to operate recursively on /<br>rm: use --no-preserve-root to override this failsafe<br>'
+    }]
+},
+'home_initial2': { //Page 6: home shell
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_initial_ls',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'startx',
+        'target': 'home_initial2',
+        'response': 'startx<br>startx: command not found<br>'
+    }, {
+        'text': 'rm -rd --no-preserve-root /',
+        'target': 'home_initial3',
+        'response': 'rm -rd --no-preserve-root /<br>bash: /: Permission denied.<br>'
+    }]
+}, 
+'home_initial3': { //Page 6: home shell
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_initial_ls',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'startx',
+        'target': 'home_initial3',
+        'response': 'startx<br>startx: command not found<br>'
+    }, {
+        'text': 'sudo rm -rd --no-preserve-root /',
+        'target': 'delete_all',
+        'response': 'sudo rm -rd --no-preserve-root /<br>'
+    }]
+}, 
+'home_initial_ls': { //Page 6: home shell
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_initial_ls',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'cat README.md',
+        'target': 'death',
+        'response': 'cat README.md<br>c&#65533;&#65533;9[<br />&#65533;_&#65533;&#65533;&#65533;  z&#65533;&#65533;?&#65533;&#65533;&#65533;W%&#65533;bx&#65533;&#65533;z5&#65533;&#65533;3&#65533;&#65533;AH&#65533;}&#65533;&#65533;9_i&#65533;&gt;KK1dxC&#65533;iiOq:&#65533;&#65533;&#65533;IY&#65533;&#65533;\&quot;Fp&lt;&#65533;$L<br /> u*&#65533;W&#65533;SS&#65533;<br /> l&#65533;&#65533;&#65533;UK&#65533;&#65533;&#65533;&#65533;k=&#65533;|&#65533;A&#65533;&#65533;u&#65533;&#65533;qp&#65533;&#65533;&#65533;a&#65533;&#65533;&#65533;/;&#65533;G&#65533;n\'|L&#65533;&#65533;R&#65533;g&#65533;&#65533;c&#65533;q&#65533;)&#65533;v&#65533;?&#65533;|&#65533;&#65533;&#65533;&#65533;l5&#65533;&#65533;5&#65533;&#65533;LO%d&#65533;$b&gt;\'&#65533;&#65533;=]-W&#65533;_&#65533;&#65533;&#65533;}&#1330;&#65533;2&#65533;&#65533;+&#65533;t&#65533;&#65533;&#65533;&#65533;=&#65533;(&#65533;&#65533;&#65533;&#644;&#65533;&#65533;&#65533;.1\\[&#65533;&#65533;L&#65533;&#1598;&#65533;&#65533;z&#65533;&#65533;u&#65533;&#65533;`<br />}[Q&#65533;&#65533;&#65533;E&#65533;&#65533;&#65533;&#65533;MaU$&#65533;n0\'Q2&#65533;\&quot;&#65533;&#65533;&#65533;!wD.&#65533;&#65533;4&#65533;&#65533;G3&#65533;&#65533;5&#65533;&#65533;f&#65533;&#65533;<br /> &#65533;)&#65533;&#65533;&#65533;\&quot;&#65533;ra:&#65533;&#65533;&#65533;&#65533;%&#65533;2&#65533;w&#65533;.&#65533;}-&#65533;&#1384;&#65533;&#65533;&igrave;&#65533;.[{&#65533;%^&#65533;&#65533;&#65533;&#65533;&#65533;S&#65533;&#65533;&#65533;(Jj&#1957;Yn&#65533;&#574;&#65533;&#65533;2T&#65533;&#65533;t&#65533;&#65533;&#65533;&#65533;A@&#65533;E#&#65533;w&#65533;&#1317;]&#1311;e&#65533;&#65533;+&#65533;!&#65533;@X&#65533;\&quot;&#65533;G&#65533;&amp;&#65533;&#65533;~^g&#65533;Ju&#65533;&#65533;&gt;&#65533;;&#65533;\\r_&#65533;<br /> EoQ=i&#65533;&#65533;&#65533;!&#65533;&#65533;&#65533;&#65533;]&#65533;&#65533;Z&#65533;k/&#65533;O&#65533;&#65533;&#65533;&#65533;&#994;w~&#65533;&iacute;&#65533;&#65533;&#65533;&#65533;&#1472;E&#65533;]&#65533;VO&#65533;&#65533;&#65533;!OZ&#2002;E&#65533;*T&#65533;3&#65533;p&#65533;&#1302;&#65533;:&#65533;|&#65533;    &#65533;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;p&#1218;&#65533;.&#65533;;&#65533;&#65533;2&#65533;Q&#65533;k&#65533;&#65533;&#65533;&#65533;<br /> &#65533;,&#65533;?y&#65533;8&#65533;&#65533;&#65533;T<br />|<br /> &#65533;&#65533;j&#65533;eF&#65533;S}&#65533;C&#65533;&#65533;H&#65533;<br />&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;T&#65533;&#65533;_&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;-3&#65533;/&#65533;&#65533;z\&quot;&#65533;&#65533;&#65533;&#65533;\\Z{&#65533;)&#65533;&#65533;<br /> &#65533;_&#65533;8&#65533;}&#65533;I  &#65533;&#65533;&#65533;&#65533;&#65533;FT&#65533;x&#65533;&#65533;B^&#65533;&#65533;Ot0l&#65533;@&#65533;&#65533;&#65533;z&#65533;x.&#65533;,M&#65533;g&#65533;&#65533;m&#65533;&#65533;p&#65533;H&#65533;XV9)&#65533;&#65533;&#65533;ie&#532;8 D&#65533;&gt;;&#65533;&#65533;Z?J&#65533;s&#65533;&#65533;&#1377;&#65533;-&#65533;&#65533;&#65533;&#65533;I8\\1&#65533;,&#65533;p&#65533;*&#65533;p&#65533;&#65533;9U\\&#65533;&#1323;TF&#65533;,@Wz3&#65533;I&#65533;h&#65533;p&#65533;&#65533;;&#65533;&#65533;)&#65533;&#65533;&#65533;r&#65533;&#65533;&#65533;`Y&#65533;^/oY&#65533;&#65533;j&#65533;Z&#65533;A&#65533;&#65533;&#65533;&#65533;<br />&#65533;&#65533;i%&#65533;&#65533;&#65533;c&#1779;&#65533;&#65533;=/Yy&#65533;K&#41870;d\&quot;@&#65533;+L&#65533;K)dv&#65533;r0&#65533;&#65533;m&#65533;fZ&#65533;qI&#65533;&#65533;&#65533;&#65533;7%_o&#65533;&#65533;&#65533;&#1427;&#65533;&#65533;Y&gt;~&#65533;&#65533;D&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;/G&#65533;&#65533;&#65533;Jg&#65533;&#1214;I3&#65533;&#65533;&#65533;&alpha;&#65533;&#65533;&#65533;&#1443;&#65533;<br />&#65533;&#65533;&#65533;&#65533;&#842;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;<br /> Sz&#65533;&#65533;&#65533;&#65533;o&#65533;#&#65533;88&#65533;7&#65533;l   8&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;&#65533;#&#65533;&#65533;&#65533;4&#65533;[&#65533;<br>'
+    },  {
+        'text': 'rm README.md',
+        'target': 'home_no_ms',
+        'response': 'rm README.md<br>'
+    }]
+}, 
+'delete_all': { //Page 7: sudo
+    'text': '[sudo] password for ash: ',
+    'choices': [{
+        'text': 'password',
+        'target': 'delete_all',
+        'response': '<br>Sorry, try again.<br>'
+    }, {
+        'text': 'p@$$w0rd1',
+        'target': 'delete_all',
+        'response': '<br>Sorry, try again.<br>'
+    }, {
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'fired',
+        'response': '<br>ash is not in the sudoers file. This incident will be reported.<br>'
+    }]
+}, 
+'home_no_ms': { //Page 9: home shell
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_no_ms',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'death',
+        'response': 'ls -a<br><span class="dir">.<br />..</span><br />.$\'023&#65533;&#65533;&#65533;q&#65533;9&#65533;2&#65533;&#65533;g?v?&#65533;f&#65533;&#65533;&#65533;&#1268;!&#65533;7275M&#65533;&#65533;|&#65533;D&#65533;&#65533;Q&#65533;&#65533;&#65533;&#65533;GJ&#65533;|&#65533;~9&#65533;eS&#65533;&#65533;;O&#65533;p&#65533;&#65533;&#65533;.M\'<br /><span class="dir">.cache<br />.config<br />Desktop<br />Documents<br />Downloads<br />Mail<br />.minecraft<br />Music<br />Pictures<br />Public<br />README.md<br />.steam<br />Templates<br />.thunderbird<br />Videos</span><br />'
+    }, {
+        'text': 'man memescan',
+        'target': 'home',
+        'response': 'man memescan<br>MEMESCAN(7)               SCP Foundation Software Manual               MEMESCAN(7)<br><br>NAME<br>       memescan - scan for files with dangerous memetic or infohazardous contents.<br><br>SYNOPSIS<br>       memescan [options] &lt;path&gt;<br><br>OPTIONS<br>       -h, --help<br>              Help: show syntax.<br><br>       --version<br>              Print current version.<br><br>       -d, --definitions=VALUE<br>              Gives a file containing hazard definitions to use when scanning.<br>              This defaults to the file specified in ~/.memerc or in the global <br>              configuration file.<br><br>       -r, --recursive<br>              Scan subfolders recursively.<br><br>EXAMPLES<br>       memescan -r /<br>       memescan fishy_email.txt<br><br>AUTHOR<br>       Written by Dr. Giulianna Ashley.<br><br>REPORTING BUGS<br>       Foundation online help: &lt;http://foundation.scp/software/&gt;<br>       Report any containment failures to &lt;breach@breach.scp&gt;<br><br>COPYRIGHT<br>       Copyright © 2014 SCP Foundation. This software may only be used in the<br>       context of Foundation research and operations. Any unauthorized<br>       distribution or other use constitutes a security breach and may be grounds<br>       for diciplinary action.<br><br>MEMESCAN(7)               SCP Foundation Software Manual               MEMESCAN(7)<br>'
+    }]
+},
+'home': {
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'death',
+        'response': 'ls -a<br><span class="dir">.<br />..</span><br />.$\'023&#65533;&#65533;&#65533;q&#65533;9&#65533;2&#65533;&#65533;g?v?&#65533;f&#65533;&#65533;&#65533;&#1268;!&#65533;7275M&#65533;&#65533;|&#65533;D&#65533;&#65533;Q&#65533;&#65533;&#65533;&#65533;GJ&#65533;|&#65533;~9&#65533;eS&#65533;&#65533;;O&#65533;p&#65533;&#65533;&#65533;.M\'<br /><span class="dir">.cache<br />.config<br />Desktop<br />Documents<br />Downloads<br />Mail<br />.minecraft<br />Music<br />Pictures<br />Public<br />README.md<br />.steam<br />Templates<br />.thunderbird<br />Videos</span><br />'
+    }, {
+        'text': 'man memescan',
+        'target': 'home',
+        'response': 'man memescan<br>MEMESCAN(7)               SCP Foundation Software Manual               MEMESCAN(7)<br><br>NAME<br>       memescan - scan for files with dangerous memetic or infohazardous contents.<br><br>SYNOPSIS<br>       memescan [options] &lt;path&gt;<br><br>OPTIONS<br>       -h, --help<br>              Help: show syntax.<br><br>       --version<br>              Print current version.<br><br>       -d, --definitions=VALUE<br>              Gives a file containing hazard definitions to use when scanning.<br>              This defaults to the file specified in ~/.memerc or in the global <br>              configuration file.<br><br>       -r, --recursive<br>              Scan subfolders recursively.<br><br>EXAMPLES<br>       memescan -r /<br>       memescan fishy_email.txt<br><br>AUTHOR<br>       Written by Dr. Giulianna Ashley.<br><br>REPORTING BUGS<br>       Foundation online help: &lt;http://foundation.scp/software/&gt;<br>       Report any containment failures to &lt;breach@breach.scp&gt;<br><br>COPYRIGHT<br>       Copyright © 2014 SCP Foundation. This software may only be used in the<br>       context of Foundation research and operations. Any unauthorized<br>       distribution or other use constitutes a security breach and may be grounds<br>       for diciplinary action.<br><br>MEMESCAN(7)               SCP Foundation Software Manual               MEMESCAN(7)<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'home',
+        'response': 'memescan .<br>Scanning...<br>Warning! Hazards detected: filename for inode 578205 contains a known memetic agent (severity = 9).<br>'
+    }, {
+        'text': 'memescan -r .',
+        'target': 'home',
+        'response': 'memescan .<br>Scanning...<br>Scanning process has stalled, terminating.<br>'
+    }, {
+        'text': 'cd Documents',
+        'target': 'documents',
+        'response': 'cd Documents<br>'
+    }, {
+        'text': 'cd Pictures',
+        'target': 'pics_no_ls',
+        'response': 'cd Documents<br>'
+    }, {
+        'text': 'cd Mail',
+        'target': 'mail',
+        'response': 'cd Mail<br>'
+    }]
+},
+'documents': {
+    'text': 'ash@foundation-92911:~/Documents$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'documents',
+        'response': 'ls<br><span class="dir">Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'documents',
+        'response': 'ls -a<br><span class="dir">.  ..  Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'documents',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }]
+}, 
+'mail': {
+    'text': 'ash@foundation-92911:~/Mail$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'mail',
+        'response': 'ls<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'mail_pgp',
+        'response': 'ls -a<br><span class="dir">.  ..</span>  <span class="lnk">.pgp<br></span>'
+    }, {
+        'text': 'memescan .',
+        'target': 'mail',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }]
+},
+'mail_pgp': {
+    'text': 'ash@foundation-92911:~/Mail$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'mail_pgp',
+        'response': 'ls<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'mail_pgp',
+        'response': 'ls -a<br><span class="dir">.  ..</span>  <span class="lnk">.pgp</span><br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'mail_pgp',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }, {
+        'text': 'cd .pgp',
+        'target': 'pgp',
+        'response': 'cd ..<br>'
+    }]
+},
+'pgp': {
+    'text': 'ash@foundation-92911:~/.gnupg$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'pgp',
+        'response': 'ls<br>gpg-agent-info-foundaton-92911  <span class="dir">private-keys-v1.d</span>  pubring.gpg~  secring.gpg<br>gpg.conf                        pubring.gpg        random_seed   trustdb.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'pgp',
+        'response': 'ls -a<br><span class="dir">.</span>   gpg-agent-info-foundation-92911  <span class="dir">private-keys-v1.d</span>  pubring.gpg~  secring.gpg<br><span class="dir">..</span>  gpg.conf                         pubring.gpg        random_seed   trustdb.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'pgp',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }, {
+        'text': 'gpg --unlock',
+        'target': 'gpgpass',
+        'response': '<br>'
+    }]
+},
+'gpgpass': {
+    'text': '<br>You need a passphrase to unlock the secret key for<br>user: "Giulianna Ashley"<br>2048-bit RSA key, ID BBC2AF72, created 2015-09-30 (main key ID 8CF4EC49)<br>Passphrase: ',
+    'choices': [{
+        'text': '4bs@l64o$LMVA!6F',
+        'target': 'pgp',
+        'response': '4bs@l64o$LMVA!6F<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'blue...',
+        'target': 'gpgx1',
+        'response': 'blue '
+    }, {
+        'text': 'food...',
+        'target': 'gpgx1',
+        'response': 'food '
+    }, {
+        'text': 'pushed...',
+        'target': 'gpgo1',
+        'response': 'pushed '
+    }, {
+        'text': 'recieved...',
+        'target': 'gpgx1',
+        'response': 'recieved '
+    }]
+},
+'gpgx1': {
+    'text': '',
+    'choices': [{
+        'text': 'blue...',
+        'target': 'gpgx2',
+        'response': 'blue '
+    }, {
+        'text': 'food...',
+        'target': 'gpgx2',
+        'response': 'food '
+    }, {
+        'text': 'pushed...',
+        'target': 'gpgx2',
+        'response': 'pushed '
+    }, {
+        'text': 'recieved...',
+        'target': 'gpgx2',
+        'response': 'recieved '
+    }]
+},
+'gpgx2': {
+    'text': '',
+    'choices': [{
+        'text': 'blue...',
+        'target': 'gpgx3',
+        'response': 'blue '
+    }, {
+        'text': 'food...',
+        'target': 'gpgx3',
+        'response': 'food '
+    }, {
+        'text': 'pushed...',
+        'target': 'gpgx3',
+        'response': 'pushed '
+    }, {
+        'text': 'recieved...',
+        'target': 'gpgx3',
+        'response': 'recieved '
+    }]
+},
+'gpgx3': {
+    'text': '',
+    'choices': [{
+        'text': 'blue...',
+        'target': 'pgp',
+        'response': 'blue<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'food...',
+        'target': 'pgp',
+        'response': 'food<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'pushed...',
+        'target': 'pgp',
+        'response': 'pushed<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'recieved...',
+        'target': 'pgp',
+        'response': 'recieved<br>gpg: Invalid passphrase.<br>'
+    }]
+},
+'gpgo1': {
+    'text': '',
+    'choices': [{
+        'text': 'blue...',
+        'target': 'gpgx2',
+        'response': 'blue '
+    }, {
+        'text': 'food...',
+        'target': 'gpgx2',
+        'response': 'food '
+    }, {
+        'text': 'pushed...',
+        'target': 'gpgx2',
+        'response': 'pushed '
+    }, {
+        'text': 'recieved...',
+        'target': 'gpgo2',
+        'response': 'recieved '
+    }]
+},
+'gpgo2': {
+    'text': '',
+    'choices': [{
+        'text': 'blue...',
+        'target': 'gpgo3',
+        'response': 'blue '
+    }, {
+        'text': 'food...',
+        'target': 'gpgx3',
+        'response': 'food '
+    }, {
+        'text': 'pushed...',
+        'target': 'gpgx3',
+        'response': 'pushed '
+    }, {
+        'text': 'recieved...',
+        'target': 'gpgx3',
+        'response': 'recieved '
+    }]
+},
+'gpgo3': {
+    'text': '',
+    'choices': [{
+        'text': 'blue',
+        'target': 'pgp',
+        'response': 'blue<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'food',
+        'target': 'pgp_v',
+        'response': 'food<br>gpg: Keyring unlocked.<br>'
+    }, {
+        'text': 'pushed',
+        'target': 'pgp',
+        'response': 'pushed<br>gpg: Invalid passphrase.<br>'
+    }, {
+        'text': 'recieved',
+        'target': 'pgp',
+        'response': 'recieved<br>gpg: Invalid passphrase.<br>'
+    }]
+},
+'pics_no_ls': {
+    'text': 'ash@foundation-92911:~/Pictures$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'pics',
+        'response': 'ls<br><span class="img">592-scan-01.jpg  592-scan-03.jpg</span>  <span class="dir">ellis-canastota</span><br><span class="img">592-scan-02.jpg  atTheBeach.gif</span><br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'pics_no_ls',
+        'response': 'memescan .<br>Scanning...<br>Potentially hazardous file contents detected (severity=4).<br>'
+    }]
+},
+'pics': {
+    'text': 'ash@foundation-92911:~/Pictures$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'pics',
+        'response': 'ls<br><span class="img">592-scan-01.jpg  592-scan-03.jpg</span>  <span class="dir">ellis-canastota</span><br><span class="img">592-scan-02.jpg  atTheBeach.gif   theKey.png</span><br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'pics',
+        'response': 'memescan .<br>Scanning...<br>Potentially hazardous file contents detected (severity=4).<br>'
+    }, {
+        'text': 'man cleansum',
+        'target': 'pics_cs',
+        'response': 'man cleansum<br>CLEANSUM(7)               SCP Foundation Software Manual               CLEANSUM(7)<br><br>NAME<br>       cleansum - command-line infohazard content summary generator<br><br>SYNOPSIS<br>       cleansum [options]<br>       cleansum [options] -D device<br>       cleansum [options] filename [filename]...<br><br>DESCRIPTION<br>       cleansum is a command-line utility for processing and producing summaries<br>       of potentially cognitohazardous content. It supports multiple input types,<br>       including text, images, video, and audio recordings. It also supports<br>       online analysis of live data from video or audio recording devices.<br><br>       If no device or filename is specified, the standard output or input is<br>       used. The cleansum utility accepts multiple filenames, producing a summary<br>       for each.<br><br>OPTIONS<br>       -h, --help<br>              Help: show syntax.<br><br>       --version<br>              Print current version.<br><br>       -d, --detail=VALUE<br>              Control the amount of detail reported in the summary, with larger<br>              values giving more detail. The default value is 20; valid values<br>              are 0 (no output) through 100 (full transcript).<br><br>       -v, --verbose<br>              Give details on the analysis being performed on each file.<br><br>       -vv, -vvv<br>              Increase the level of verbosity.<br><br>       -D, --device=NAME<br>              Use NAME as an input device descriptor.<br><br>       -t, --file-type TYPE<br>              File type of the input files. If no file type is given, cleansum<br>              will attempt to infer the type from the filename extension.<br><br>       -o, --output=NAME<br>              Write the summary to the named file rather than to stdout.<br><br>EXAMPLES<br>       cleansum ellisCanastota.png<br>       cleansum -D /dev/video0 -o chronicleSummary.txt<br><br>SEE ALSO<br>       memecensor(7)<br><br>AUTHOR<br>       Written by Dr. Giulianna Ashley.<br><br>REPORTING BUGS<br>       Foundation online help: &lt;http://foundation.scp/software/&gt;<br>       Report any containment failures to &lt;breach@breach.scp&gt;<br><br>COPYRIGHT<br>       Copyright © 2014 SCP Foundation. This software may only be used in the<br>       context of Foundation research and operations. Any unauthorized<br>       distribution or other use constitutes a security breach and may be grounds<br>       for diciplinary action.<br><br>CLEANSUM(7)               SCP Foundation Software Manual               CLEANSUM(7)<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }, {
+        'text': 'display ./atTheBeach.gif',
+        'target': 'death',
+        'response': 'display ./atTheBeach.gif<br><img src="http://i.imgur.com/1Li831H.gif">'
+    }, {
+        'text': 'display ./theKey.png',
+        'target': 'pics',
+        'response': 'display ./theKey.png<br><img src="http://i.imgur.com/my10lZH.png"><br>'
+    }, {
+        'text': 'display ./592-scan-01.jpg',
+        'target': 'death',
+        'response': 'display ./592-scan-01.jpg<br><img src="http://visual-records.wdfiles.com/local--files/dolls-statues/statue.jpg">'
+    }]
+},
+'pics_cs': {
+    'text': 'ash@foundation-92911:~/Pictures$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'pics_cs',
+        'response': 'ls<br><span style="color:purple;">592-scan-01.jpg  592-scan-03.jpg</span>  <span class="dir">ellis-canastota</span><br><span style="color:purple;">592-scan-02.jpg  atTheBeach.gif</span><br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'pics_cs',
+        'response': 'ls -a<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'pics_cs',
+        'response': 'memescan .<br>Scanning...<br>Potentially hazardous file contents detected (severity=4).<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>'
+    }, {
+        'text': 'cleansum ./atTheBeach.gif',
+        'target': 'pics_cs',
+        'response': 'cleansum ./atTheBeach.gif<br>Hazard Level: 0.845<br>Location: BEACH<br>Type: FULL COLOR LOOPING GIF<br>Subject: The image contains ONE DARK-SKINNED HUMAN MALE. With 74% certaintly SUBJECT is missing LEGS.<br>'
+    }, {
+        'text': 'display ./atTheBeach.gif',
+        'target': 'death',
+        'response': 'display ./atTheBeach.gif<br><img src="http://i.imgur.com/1Li831H.gif">'
+    }, {
+        'text': 'cleansum ./theKey.jpg',
+        'target': 'pics_cs',
+        'response': 'cleansum ./theKey.jpg<br>Hazard Level: 0.220<br>Location: UNKNOWN<br>Type: FULL COLOR PIXEL ART<br>Subject: Contains TEXT. TEXT could not be recognised.<br>'
+    }, {
+        'text': 'display ./theKey.jpg',
+        'target': 'pics_cs',
+        'response': 'display ./theKey.png<br><img src="http://i.imgur.com/my10lZH.png"><br>'
+    }, {
+        'text': 'cleansum ./592-scan-01.jpg',
+        'target': 'pics_cs',
+        'response': 'cleansum ./592-scan-01.jpg<br>Hazard Level: 0.611<br>Location: UNKNOWN<br>Type: FULL COLOR PHOTOGRAPH<br>Subject: NOT RECOGNISED.<br>'
+    }, {
+        'text': 'display ./592-scan-01.jpg',
+        'target': 'death',
+        'response': 'display ./592-scan-01.jpg<br><img src="http://visual-records.wdfiles.com/local--files/dolls-statues/statue.jpg">'
+    }]
+},
+'pgp_v': {
+    'text': 'ash@foundation-92911:~/.gnupg$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'pgp_v',
+        'response': 'ls<br>gpg-agent-info-foundaton-92911  <span class="dir">private-keys-v1.d</span>  pubring.gpg~  secring.gpg<br>gpg.conf                        pubring.gpg        random_seed   trustdb.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'pgp_v',
+        'response': 'ls -a<br><span class="dir">.</span>   gpg-agent-info-foundaton-92911  <span class="dir">private-keys-v1.d</span>  pubring.gpg~  secring.gpg<br><span class="dir">..</span>  gpg.conf                        pubring.gpg        random_seed   trustdb.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'pgp_v',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home_v',
+        'response': 'cd ..<br>'
+    }, {
+        'text': 'gpg --unlock',
+        'target': 'gpgpass',
+        'response': '<br>'
+    }]
+},
+'home_v': {
+    'text': 'ash@foundation-92911:~$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'home_v',
+        'response': 'ls<br><span class="dir">Desktop    Downloads  Music     Public     Templates<br>Documents  Mail       Pictures</span>  README.md  <span class="dir">Videos</span><br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'death',
+        'response': 'ls -a<br><span class="dir">.<br />..</span><br />.$\'023&#65533;&#65533;&#65533;q&#65533;9&#65533;2&#65533;&#65533;g?v?&#65533;f&#65533;&#65533;&#65533;&#1268;!&#65533;7275M&#65533;&#65533;|&#65533;D&#65533;&#65533;Q&#65533;&#65533;&#65533;&#65533;GJ&#65533;|&#65533;~9&#65533;eS&#65533;&#65533;;O&#65533;p&#65533;&#65533;&#65533;.M\'<br /><span class="dir">.cache<br />.config<br />Desktop<br />Documents<br />Downloads<br />Mail<br />.minecraft<br />Music<br />Pictures<br />Public<br />README.md<br />.steam<br />Templates<br />.thunderbird<br />Videos</span><br />'
+    }, {
+        'text': 'memescan .',
+        'target': 'home_v',
+        'response': 'memescan .<br>Scanning...<br>Warning! Hazards detected: filename for inode 578205 contains a known memetic agent (severity = 9).<br>'
+    }, {
+        'text': 'memescan -r .',
+        'target': 'home_v',
+        'response': 'memescan .<br>Scanning...<br>Scanning process has stalled, terminating.<br>'
+    }, {
+        'text': 'cd Documents',
+        'target': 'documents_v',
+        'response': 'cd Documents<br>'
+    }, {
+        'text': 'cd Pictures',
+        'target': 'pics_no_ls',
+        'response': 'cd Documents<br>gpg: your keyring authentication has expired<br>'
+    }, {
+        'text': 'cd Mail',
+        'target': 'mail',
+        'response': 'cd Mail<br>gpg: your keyring authentication has expired<br>'
+    }]
+},
+'documents_v': {
+    'text': 'ash@foundation-92911:~/Documents$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'documents_v_ls',
+        'response': 'ls<br><span class="dir">Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'documents_v_ls',
+        'response': 'ls -a<br><span class="dir">.  ..  Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'documents_v',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>gpg: your keyring authentication has expired<br>'
+    }]
+},
+'documents_v_ls': {
+    'text': 'ash@foundation-92911:~/Documents$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'documents_v_ls',
+        'response': 'ls<br><span class="dir">Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'documents_v_ls',
+        'response': 'ls -a<br><span class="dir">.  ..  Expenses  Timesheets</span>  report.pdf.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'documents_v_ls',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>gpg: your keyring authentication has expired<br>'
+    }, {
+        'text': 'gpg -d report.pdf.gpg',
+        'target': 'documents_v_ls_d',
+        'response': 'cd ..<br>gpg: encrypted with 2048-bit RSA key, ID BBC2AF72, created 2015-09-30 "Giulianna Ashley"<br>gpg: decrypting to "report.pdf"<br>'
+    }]
+},
+'documents_v_ls_d': {
+    'text': 'ash@foundation-92911:~/Documents$ ',
+    'choices': [{
+        'text': 'ls',
+        'target': 'documents_v_ls_d',
+        'response': 'ls<br><span class="dir">Expenses  Timesheets</span>  report.pdf  report.pdf.gpg<br>'
+    }, {
+        'text': 'ls -a',
+        'target': 'documents_v_ls_d',
+        'response': 'ls -a<br><span class="dir">.  ..  Expenses  Timesheets</span>  report.pdf  report.pdf.gpg<br>'
+    }, {
+        'text': 'memescan .',
+        'target': 'documents_v_ls_d',
+        'response': 'memescan .<br>Scanning...<br>File structure appears to be safe, less than 1% memetic contamination detected.<br>'
+    }, {
+        'text': 'cd ..',
+        'target': 'home',
+        'response': 'cd ..<br>gpg: your keyring authentication has expired<br>'
+    }, {
+        'text': 'fbpdf report.pdf',
+        'target': 'win',
+        'response': 'fbpdf report.pdf'
+    }]
+},
+'fired': {
+    'text': "<div class='d1'>.</div><div class='d2'>.</div><div class='d3'>.</div><div class='text1'><blockquote><p><strong>From:</strong> Site Director H. Lemmond &lt;<a href=mailto:hlemmond@57.scp>hlemmond@57.scp</a>&gt;<br><strong>To:</strong> Kendal Shipley &lt;<a href=mailto:kshipley@rho9.scp>kshipley@rho9.scp</a>&gt;<br><strong>Subject:</strong> Termination Notice<br><strong>Message:</strong><br>The data on that computer is vital to continued Foundation operations, and the fact that you would try to delete it is an indication that you can no longer be trusted. As a result, I have no choice but to terminate your employment, effective immediately.<p><sup>This e-mail is intended for the addressee shown. It contains information that is confidential and protected from disclosure. Any review, dissemination or use of this transmission or its contents by persons or unauthorized employees of the intended organisations is strictly prohibited. The contents of this email do not necessarily represent the views or policies of the SCP Foundation or its employees.</sup></blockquote></div>",
+/*
+> **From:** Site Director H. Lemmond <hlemmond@57.scp>
+> **To:** Kendal Shipley <kshipley@rho9.scp>
+> **Subject:** Termination Notice
+> **Message:**
+> The data on that computer is vital to continued Foundation operations, and the fact that you would try to delete it is an indication that you can no longer be trusted.
+> 
+> ^^This e-mail is intended for the addressee shown. It contains information that is confidential and protected from disclosure. Any review, dissemination or use of this transmission or its contents by persons or unauthorized employees of the intended organisations is strictly prohibited. The contents of this email do not necessarily represent the views or policies of the SCP Foundation or its employees.^^
+*/
+    'choices': []
+},
+'death': {
+    'text': '<div class="d1">.</div><div class="d2">.</div><div class="d3">.</div><div class="text1"><blockquote>"The newbie got mind-melted"<br>"Maybe we should stop giving these jobs to new hires."<br>"Sure, you can do it next time."</blockquote></div>',
+    'choices': []
+},
+'win': {
+    'text': "<div class=d1>.</div><div class=d2>.</div><div class=d3>.</div><div class='text1'><blockquote><p><strong>From:</strong> Kendal Shipley &lt;<a href=mailto:kshipley@rho9.scp>kshipley@rho9.scp</a>&gt;<br><strong>To:</strong> Frank &lt;<a href=mailto:frank@rho9.scp>frank@rho9.scp</a>&gt;<br><strong>Subject:</strong> re:technical support assignment<br><strong>CC:</strong> Site Director H. Lemmond &lt;<a href=mailto:hlemmond@57.scp>hlemmond@57.scp</a>&gt;<br><strong>Attachment:</strong> <a href=javascript:;>report.pdf</a><br><strong>Message:</strong><br>Ok, I've got the research data; it is attached to this email. Not sure what the big deal was with it though, most of the pages are blank, but it seemed important.</blockquote><blockquote><p><strong>From:</strong> Frank &lt;<a href=mailto:frank@rho9.scp>frank@rho9.scp</a>&gt;<br><strong>To:</strong> Kendal Shipley &lt;<a href=mailto:kshipley@rho9.scp>kshipley@rho9.scp</a>&gt;<br><strong>Subject:</strong> re:technical support assignmentClosure<br><strong>Message:</strong><br>Good job. However, if you have viewed the document in any way, you need to seek immediate amnestic treatment, because it contains a serious latent memetic hazard used to protect high-level documents (this is also why it appeared blank). Even if you didn't you may have still been exposed to one or more other memetic hazards. Please report immediately to the information security department for treatment.</blockquote></div><div class=d4>.</div><div class=d5>.</div><div class=d6>. To Be Continued.</div>",
+/*
+> **From:** Kendal Shipley <kshipley@rho9.scp>
+> **To:** Frank <frank@rho9.scp>
+> **Subject:** re:technical support assignment
+> **CC:** Site Director H. Lemmond <hlemmond@57.scp>
+> **Attachment:** [# report.pdf]
+> **Message:**
+> Ok, I've got the research data; it is attached to this email. Not sure what the big deal was with it though, most of the pages are blank, but it seemed important.
+
+> **From:** Frank <frank@rho9.scp>
+> **To:** Kendal Shipley <kshipley@rho9.scp>
+> **Subject:** re:re:technical support assignment
+> **Message:**
+> Good job. However, if you have viewed the document in any way, you need to seek immediate amnestic treatment, because it contains a serious latent memetic hazard used to protect high-level documents (this is also why it appeared blank). Even if you didn't you may have still been exposed to one or more other memetic hazards. Please report immediately to the information security department for treatment.
+...
+*/
+    'choices': []
+}
+};
+
+var imported = document.createElement('script');
+imported.src = '/local--files/rho9-support-assignment/adventure.js';
+document.head.appendChild(imported);
+</SCRIPT>
+
+<style>
+    blockquote {
+        border: 1px dashed #999;
+        padding: 0 1em;
+        background-color: #f4f4f4;
+
+        display: block;
+        margin: 1.0em 0.5em;
+    }
+    body {
+        background-color: #fff;
+        font-size: 0.80em;
+        color: #333;
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 0.82em;
+    }
+    li, p {
+        line-height: 141%;
+    }
+    a {
+        color: #b01;
+        text-decoration: none;
+        background: transparent;
+    }
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+    strong, b {
+        font-weight: bold;
+    }
+
+    #output {
+        font-family: 'Lucida Console', Monaco, monospace;
+        font-size: 1.03em;
+    }
+
+    span.dir {
+        color: #5d5dff;
+    }
+    span.lnk {
+        color: #008484;
+    }
+    span.img {
+        color: #840084;
+
+    }
+
+    .text0, .text1{
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 0.94em;
+    }
+
+    .d1, .d2, .d3, .text1, .con1, .d4, .d5, .d6{
+        opacity: 0;
+        animation: appear 1;
+        -webkit-animation: appear 1;
+        -moz-animation: appear 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+    }
+    @keyframes appear {
+        0%   { opacity: 0; }
+        90%  { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @-webkit-keyframes appear {
+        0%   { opacity: 0; }
+        90%  { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @-moz-keyframes appear {
+        0%   { opacity: 0; }
+        90%  { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .d1 {
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+    }
+    .d2 {
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+    }
+    .d3 {
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+        -moz-animation-delay: 2s;
+    }
+    .text1, .con1 {
+        animation-delay: 3s;
+        -webkit-animation-delay: 3s;
+        -moz-animation-delay: 3s;
+    }
+    .d4 {
+        animation-delay: 6s;
+        -webkit-animation-delay: 6s;
+        -moz-animation-delay: 6s;
+    }
+    .d5 {
+        animation-delay: 7s;
+        -webkit-animation-delay: 9s;
+        -moz-animation-delay: 9s;
+    }
+    .d6 {
+        animation-delay: 8s;
+        -webkit-animation-delay: 8s;
+        -moz-animation-delay: 8s;
+    }
+
+    .choice {
+        font-family: verdana, arial, helvetica, sans-serif;
+        border: none;
+        padding: 0.5em 1.0em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.0em;
+        margin: 0.2em 0.1em;
+        border-radius: 0.3em;
+
+        transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        cursor: pointer;
+
+        background-color: white;
+        color: black;
+        border: 0.1px solid #555555;
+    }
+    .choice:hover {
+        background-color: #555555;
+        color: white;
+    }
+    .blink {
+        animation: 1s blink step-end infinite;
+        -webkit-animation: 1s blink step-end infinite;
+        -moz-animation: 1s blink step-end infinite;
+    }
+    @keyframes blink {
+        from, to { color: transparent;}
+        50% {color: inherit;}
+    }
+    @-webkit-keyframes blink {
+        from, to { color: transparent;}
+        50% {color: inherit;}
+    }
+    @-moz-keyframes blink {
+        from, to { color: transparent;}
+        50% {color: inherit;}
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div id="page" class="blockCenter">
+        <div id="output">
+            <span id="page_text"></span><span id="cursor"><span class="blink">█</span></span>
+        </div>
+        <br><br>
+        <div id="response">
+            </ul>
+        </div>
+    </div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</html>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
