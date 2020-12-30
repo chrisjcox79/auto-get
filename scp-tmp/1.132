@@ -1,81 +1,162 @@
 /*
-    Coalition Theme
+    Foundless Theme
     [2020 Wikidot Theme]
-    Created by Greyve with assistance from Calibri Bold and Croquembouche.
-    Based on Black Highlighter Theme created by Woedenaz and Croquembouche.
-    CC BY SA 3.0.
+     Created by Greyve
+     Logo by stephlynch
 */
-
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500');
 
 /* ROOT - Header & General Recoloring */
 :root {
-
 /* Intro */
     --theme-base: "nuscp"
-    --theme-id: "the-coalition-theme"
-    --theme-name: "The Coalition Theme";
+    --theme-id: "foundless"
+    --theme-name: "Foundless Theme";
 
 /* Header */
-    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Athe-coalition-theme/GOClogo.png");
-    --header-title: "全球超自然联盟";
-    --header-subtitle: "来自副秘书长办公室";
-    --header-gradient-color-bottom: 44, 74, 120;
-    --header-gradient-color-middle: 44, 74, 120;
-    --header-gradient-color-top: 44, 74, 120;
-    --gradient-header: linear-gradient(to top,
-          rgb(var(--header-gradient-color-bottom)) 100%,
-          rgb(var(--header-gradient-color-middle)) 100%,
-          rgb(var(--header-gradient-color-top)) 100%);
-    --diagonal-stripes: unset;
+    --logo-image: url("http://www.scpwiki.com/local--files/theme:foundless/unfounded.gif");
+    --logo-size: 500%;
+    --header-title: "未建立";
+    --header-subtitle: "不受基金会所染";
 
-    --body-font: 'Roboto', "Noto Sans SC", sans-serif;
-    --header-font: 'Roboto', "Noto Sans SC", sans-serif;
-    --title-font: 'Roboto', "Noto Sans SC", sans-serif;
-    --mono-font: "PT Mono", "Andale Mono", "Courier New", Courier, '仿宋', monospace;
+/* Colors */
+    --pale-gray-monochrome: 220, 220, 240; /* Light Grey */
+    --light-gray-monochrome: 160, 160, 180; /* Accent Light Gray */
+    --gray-monochrome: 48, 48, 64; /* Gray  */
+    --dark-dray-monochrome: 48, 48, 64; /*Gray */
 
-  /* Colors */
-    --white-monochrome: 252, 252, 252; /* White */
-    --pale-gray-monochrome: 244, 244, 244; /* Light Grey (Quoteblocks) */
-    --light-gray-monochrome: 170, 170, 170; /* Accent Light Gray (Login Status) */
-    --gray-monochrome: 66, 66, 72; /* Gray */
+    --pale-accent: 176, 210, 207; /* Pale Blue*/
+    --bright-accent: 206, 233, 234; /* Light Blue*/
+    --medium-accent: 139, 179, 180; /* Blue */
+    --dark-accent: 68, 92, 109; /* Dark Blue */
+    --newpage-color: 135, 158, 176; /* Grey Blue */
 
-    --pale-accent: 167, 188, 201; /* Pale Blue*/
-    --bright-accent: 56, 117, 161; /* Steel Blue*/
-    --medium-accent: 44, 74, 120; /* Deep Blue */
-    --dark-accent: 32, 40, 78; /* Navy */
-    --newpage-color: 187, 225, 250; /* Pale Turquoise */
+/* Menu Colors */
+    --swatch-menubg-color: var(--gray-monochrome);
+    --swatch-menubg-light-color: var(--pale-gray-monochrome);
+    --swatch-menubg-medium-color: var(--light-gray-monochrome);
+    --swatch-menubg-medium-dark-color: var(--black-monochrome);
+    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--gray-monochrome);
+    --swatch-menutxt-dark-color: var(--white-monochrome);
+    --swatch-menutxt-light-color: var(--white-monochrome);
+    --swatch-border-color: var(--black-monochrome);
 
-    /* Primary Header Colors */
-    --swatch-headerh1-color: var(--white-monochrome);
-    --swatch-headerh2-color: var(--white-monochrome);
-    --swatch-topmenu-border-color: var(--dark-accent);
-    --swatch-topmenu-bg-color: var(--dark-accent);
+/* Header Colors */
+  --swatch-topmenu-border-color: var(--light-gray-monochrome);
+  --swatch-topmenu-bg-color: var(--light-gray-monochrome);
 
-    --rating-module-button-color: var(--black-monochrome);
+/* Link Colors */
+  --link-color: var(--medium-accent);
+  --visited-link-color: var(--dark-accent);
+  --hover-link-color: var(--pale-accent);
+
+/* Rating Module Colors */
     --rating-module-text-color: var(--black-monochrome);
 
-       /* Link Colors */
-    --link-color: 27, 65, 94 ;
-    --visited-link-color: 133, 193, 233;
-    --hover-link-color: 133, 193, 233;
+/* Navbar Shadow */
+    --gradient-background: linear-gradient(to bottom,
+     rgba(var(--background-gradient-color), 1) calc(calc(0 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 1) calc(calc(1.6 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 1) calc(calc(2.9 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 1) calc(calc(6.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 1) calc(calc(11 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 1) calc(calc(16.6 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.85) calc(calc(27.1 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.75) calc(calc(33.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.62) calc(calc(38.3 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.52) calc(calc(46.7 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.35) calc(calc(55.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.20) calc(calc(64.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.155) calc(calc(69.5 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.052) calc(calc(82.5 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.03) calc(calc(91.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0) calc(calc(100 / 100) * var(--background-gradient-distance)));
+     --background-gradient-color: 0, 0, 0;
+     --background-gradient-distance: 15rem;
+
+    --header-gradient-color-bottom: 68, 92, 109;
+    --header-gradient-color-middle: 135, 158, 176;
+    --header-gradient-color-top: 154, 180, 181;
+
+  --diagonal-stripes: repeating-linear-gradient(
+    135deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0) 0.25vh,
+    rgba(88, 88, 88, 0.1) 0.35vh,
+    rgba(88, 88, 88, 0.2) 0.5vh
+  );
+
+  --gradient-sidemenu-header: linear-gradient(10deg,
+    rgba(var(--medium-accent), 0.9) 0%,
+    rgba(var(--medium-accent), 1) 100%
+  );
 }
 
-/* Top-Bar Open Button on Mobile */
-#top-bar > div.mobile-top-bar > div.open-menu > p > a {
-    color: rgb(var(--gray-monochrome)) !important;
+/* SEARCH-BAR */
+#search-top-box-input,
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background: rgb(var(--light-gray-monochrome)) !important;
+    color: rgb(var(--dark-accent)) !important;
+    border: rgb(var(--light-gray-monochrome)) !important;
+}
+ 
+#search-top-box-form input[type="submit"],
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+    background: rgb(var(--gray-monochrome)) !important;
+    border: rgb(var(--gray-monochrome)) !important;
 }
 
-/* Adjusts Header Size */
+  /* Filter */
+  --filter: hue-rotate(268deg) saturate(50%) brightness(111%);
 
-/* Undo the mobile Image Resize */
-@media only screen and (max-width: 768px) {
-    #header {
-        background-size: 0.625rem 2.500rem;
-        background-repeat: no-repeat;
-        background-position: left 0.75rem top 1.1875rem;
-        background-clip: border-box;
-        background-size: auto 5.375rem;
-    }
+  /* Ayers' Info Bar */
+  --barColour: rgb(var(--dark-accent));
+}
+ 
+body {
+  background-color: rgba(244, 244, 244, 1);
+  background-color: rgba(var(--swatch-menubg-light-color), 1);
+}
+
+/* Header Logo Compensation */
+   #header {
+    background-size: var(--header-height-on-desktop) auto;
+    background-position: left 0 top 0;
+}
+
+/* Page Title */
+#page-title {
+    color: rgb(var(--medium-accent));
+    border-color: rgb(var(--dark-gray));
+}
+
+/* Page Rating Module */
+.page-rate-widget-box {
+    background: linear-gradient(to top,
+     rgba(var(--pale-gray-monochrome),1) 0%,
+     rgba(var(--pale-gray-monochrome), 1) 100%);
+    border-color: rgb(var(--pale-gray-monochrome));
+}
+#page-content .rate-box-with-credit-button {
+    background: linear-gradient(to top,
+     rgba(var(--pale-gray-monochrome),1) 0%,
+     rgba(var(--pale-gray-monochrome), 1) 100%);
+    border-color: rgb(var(--pale-gray-monochrome));
+}
+#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
+    background-color: rgb(var(--pale-gray-monochrome));
+}
+ 
+#page-content .rate-box-with-credit-button > .creditButton:hover {
+    background: rgba(var(--bright-accent), 0.8);
+}
+ 
+#page-content .modalbox {
+     background: rgb(var(--pale-gray-monochrome)) !important;
+     color: rgb(var(--pale-gray-monochrome));
+     border-radius: 0;
+     box-shadow: 0 2px 6px rgba(var(--bright-accent), 0.5);
 }

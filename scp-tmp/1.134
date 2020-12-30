@@ -1,316 +1,81 @@
 /*
-  IJAMEA Theme改
-    Powered on 2020/04/07 14:38:39
+    Coalition Theme
     [2020 Wikidot Theme]
-    Created by Nanigashi Sato
-    Fixed by ukwhatn
-    CC BY-SA 3.0
-
-    This theme is based on the IJAMEA Theme by Dr Solo.
-    Source: http://www.scpwiki.com/component:ijamea-theme
-
-  IJAMEA Logo
-    Title: IJAMEA2.png
-    Created by Nanimono Demonai
-    Creation Year: 2019
-    Source: http://scp-jp.wikidot.com/foundation-or-goi-logo
-    Note: The background of this image was permeabilized by Nanigashi Sato.
-    CC BY-SA 3.0
+    Created by Greyve with assistance from Calibri Bold and Croquembouche.
+    Based on Black Highlighter Theme created by Woedenaz and Croquembouche.
+    CC BY SA 3.0.
 */
 
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500');
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&family=Sawarabi+Mincho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* ROOT - Header & General Recoloring */
+:root {
+
+/* Intro */
+    --theme-base: "nuscp"
+    --theme-id: "the-coalition-theme"
+    --theme-name: "The Coalition Theme";
 
 /* Header */
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Athe-coalition-theme/GOClogo.png");
+    --header-title: "全球超自然联盟";
+    --header-subtitle: "来自副秘书长办公室";
+    --header-gradient-color-bottom: 44, 74, 120;
+    --header-gradient-color-middle: 44, 74, 120;
+    --header-gradient-color-top: 44, 74, 120;
+    --gradient-header: linear-gradient(to top,
+          rgb(var(--header-gradient-color-bottom)) 100%,
+          rgb(var(--header-gradient-color-middle)) 100%,
+          rgb(var(--header-gradient-color-top)) 100%);
+    --diagonal-stripes: unset;
 
-div#container-wrap {
-    background: url(http://scp-jp-storage.wdfiles.com/local--files/file%3A3282741-8-xthd/Header.png) top left repeat-x;
+    --body-font: 'Roboto', "Noto Sans SC", sans-serif;
+    --header-font: 'Roboto', "Noto Sans SC", sans-serif;
+    --title-font: 'Roboto', "Noto Sans SC", sans-serif;
+    --mono-font: "PT Mono", "Andale Mono", "Courier New", Courier, '仿宋', monospace;
+
+  /* Colors */
+    --white-monochrome: 252, 252, 252; /* White */
+    --pale-gray-monochrome: 244, 244, 244; /* Light Grey (Quoteblocks) */
+    --light-gray-monochrome: 170, 170, 170; /* Accent Light Gray (Login Status) */
+    --gray-monochrome: 66, 66, 72; /* Gray */
+
+    --pale-accent: 167, 188, 201; /* Pale Blue*/
+    --bright-accent: 56, 117, 161; /* Steel Blue*/
+    --medium-accent: 44, 74, 120; /* Deep Blue */
+    --dark-accent: 32, 40, 78; /* Navy */
+    --newpage-color: 187, 225, 250; /* Pale Turquoise */
+
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    --swatch-topmenu-border-color: var(--dark-accent);
+    --swatch-topmenu-bg-color: var(--dark-accent);
+
+    --rating-module-button-color: var(--black-monochrome);
+    --rating-module-text-color: var(--black-monochrome);
+
+       /* Link Colors */
+    --link-color: 27, 65, 94 ;
+    --visited-link-color: 133, 193, 233;
+    --hover-link-color: 133, 193, 233;
 }
 
-div#header {
-    background: url(http://scp-jp-storage.wdfiles.com/local--files/file%3A3282741-9-p47y/IJAMEA2.png) 10px 40px no-repeat;
-    background-position: 1em 1.5em;
-    background-size: 70px;
+/* Top-Bar Open Button on Mobile */
+#top-bar > div.mobile-top-bar > div.open-menu > p > a {
+    color: rgb(var(--gray-monochrome)) !important;
 }
 
-div#header h1 a {
-    padding: 60px 0 28px;
-}
+/* Adjusts Header Size */
 
-div#header h1 a span {
-    font-size: 0px;
-}
-
-div#header h1 a:before {
-    content: "IJAMEA";
-    color: black;
-    font-size: 115%;
-    font-family: 'Abril Fatface', cursive;
-    text-shadow: 1.75px 1.75px white;
-}
-
-div#header h2 span {
-    font-size:0px;
-    padding: 3.5px;
-}
-
-div#header h2:after {
-    content: "局査調例事常異國帝本日大";
-    font-family: 'Sawarabi Mincho', 'Noto Serif SC', sans-serif;
-    font-weight: bold;
-    color: black;
-    padding: 15px 0;
-    text-shadow: none;
-    white-space: pre;
-}
-
-div#search-top-box {
-    top: 58px;
-}
-
-/* Header for Smartphone */
-
-@media (max-width: 580px) {
-    div#header {
-        background-position: 0.3em 1.5em;
+/* Undo the mobile Image Resize */
+@media only screen and (max-width: 768px) {
+    #header {
+        background-size: 0.625rem 2.500rem;
+        background-repeat: no-repeat;
+        background-position: left 0.75rem top 1.1875rem;
+        background-clip: border-box;
+        background-size: auto 5.375rem;
     }
-}
-
-@media (max-width: 479px) {
-    div#header {
-        background-position: -0.3em 1.5em;
-    }
-
-    #search-top-box-input {
-        display: none;
-    }
-
-    div#header h1 a {
-        padding: 62.5px 0 21px 10px;
-    }
-
-    div#header h1 a:before {
-        font-size: 40px;
-        text-shadow: 1.75px 1.75px white;
-    }
-
-    div#header h2:after {
-        padding-left: 10px;
-    }
-
-    div#search-top-box {
-        top: 57px;
-    }
-
-}
-
-/* Body */
-
-#html-body a,
-#side-bar a:visited {
-    color: #000000;
-}
-
-#html-body {
-    background-color: #FFF5C3;
-    color: #000000;
-    font-family: 'Noto Serif SC', sans-serif;
-}
-
-#page-content a {
-    text-decoration: underline;
-}
-
-#page-content .h0, h1, h2, h3, h4, h5, h6 {
-    color: #000000;
-    font-family: 'Sawarabi Mincho', 'Noto Serif SC', sans-serif;
-}
-
-#page-content .heading {
-    color: #000000;
-}
-
-#container a.collapsible-block-link {
-    color: #000000;
-}
-
-table.wiki-content-table th {
-    color: #000;
-}
-
-/* Tab */
-
-#container .yui-content {
-    color: #000;
-}
-
-div.yui-navset div.yui-content {
-    background: rgb(255, 255, 255);
-    background-image: none;
-}
-
-div.yui-navset ul.yui-nav a,
-div.yui-navset div.yui-navset-top ul.yui-nav a {
-    background: rgb(255, 255, 255);
-    color: #000000;
-    background-image: none;
-}
-
-div.yui-navset ul.yui-nav a:hover,
-div.yui-navset ul.yui-nav a:focus {
-    background: rgb(217, 217, 217);
-    color: #000000;
-    background-image: none;
-    text-decoration: none;
-}
-
-div.yui-navset ul.yui-nav .selected a,
-div.yui-navset ul.yui-nav .selected a:focus,
-div.yui-navset ul.yui-nav .selected a:hover {
-    background: rgb(148, 148, 148);
-    color: #000000;
-    background-image: none;
-}
-
-#page-content .yui-nav a {
-  text-decoration: none;
-}
-
-/* Module Rate */
-
-#container .page-rate-widget-box .rate-points {
-    background-color: #000000 !important;
-}
-
-#container .page-rate-widget-box .cancel {
-    background-color: #ffffff;
-}
-
-#container .page-rate-widget-box .rateup a:hover,
-#container .page-rate-widget-box .ratedown a:hover {
-    background: #ffffff;
-}
-
-#container .page-rate-widget-box .cancel a:hover {
-    background: transparent;
-}
-
-/* Credit Box */
-
-#page-content .rate-box-with-credit-button {
-    background-color: #000000;
-    border: solid 1px #000000;
-}
-
-#page-content .rate-box-with-credit-button > .page-rate-widget-box {
-    border-radius: 0px;
-    border: 0px;
-}
-
-#page-content .rate-box-with-credit-button > .page-rate-widget-box .rate-points {
-    border: none;
-}
-
-#page-content .rate-box-with-credit-button > .page-rate-widget-box .rateup,
-#page-content .rate-box-with-credit-button > .page-rate-widget-box .ratedown {
-    border-top: none;
-    border-bottom: none;
-}
-
-#page-content .rate-box-with-credit-button > .page-rate-widget-box .cancel {
-    border: none;
-}
-
-#page-content .rate-box-with-credit-button .creditButton {
-    background-color: transparent !important;
-    border: none !important;
-}
-
-#page-content .rate-box-with-credit-button .creditButton:hover {
-    background-color: transparent !important;
-    border: none !important;
-}
-
-#page-content .creditButton p a {
-    color: white;
-    border-left: solid 1px transparent;
-}
-
-#page-content div.creditRate a,
-#page-content div.page-rate-widget-box a,
-#u-credit-view a {
-  text-decoration: none;
-}
-
-/* Side Bar */
-
-#side-bar .side-block {
-    border: 1px solid #000000;
-    box-shadow: 0 2px 6px #000000;
-    background-color: #ffffff !important;
-}
-
-#side-bar .heading {
-    border-bottom: 1px solid #000000;
-}
-
-/* Search Box */
-
-#search-top-box-input {
-    border: solid 1px #999;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
-}
-
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    border: solid 1px #000;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
-}
-
-#search-top-box-form input[type=submit] {
-    padding: 2px 5px;
-    border: solid 1px #999;
-    border-radius: 5px;
-    background: none;
-    background-color: #000;
-    box-shadow: none;
-    color: #ccc;
-    font-size: 90%;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #000;
-    background: none;
-    background-color: #ccc;
-    box-shadow: none;
-    text-shadow: none;
-    color: #fff;
-}
-
-
-/* Inter Wiki */
-
-.scpnet-interwiki-wrapper {
-    filter: grayscale(100%) drop-shadow(0 1px 1px #000000);
-}
-
-/*
-  For J-style
-    It was edited by Nanigashi Sato
-    Original is http://scp-jp.wikidot.com/component:jstyles
-    Original was created by Nanimono Demonai
-*/
-
-tt {
-    font-family: 'Sawarabi Mincho', 'Noto Serif SC', sans-serif;
 }

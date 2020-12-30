@@ -1,614 +1,703 @@
 /*
-    Sigma-9 Wanderers' DustJacket Theme
-    [2020 Wikidot Theme]
-    By DrMacro
-    Adapted from Wanderers' DustJacket Theme by Woedenaz
-    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan
+    TING
+    [2018 Wikidot Theme]
+     Created for the SCP Foundation goi TING
+     Edited for SCP by Tnsbilws
+     Based on MC&D Theme
 */
 
-@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
-@import url("https://use.typekit.net/tqr1skr.css");
+/*
+    README: this theme needs SCP-Sigma-9 theme as used by SCP?????
+    to be loaded in advance to work properly.
+*/
 
-:root {
-    --body-font: adelle-sans, 'Lato', '微软雅黑', sans-serif;
-    --header-font: 'zuijinregular', 'Poppins', kaiti, lisu, sans-serif;
-    --title-font: 'zuijinregular', 'Poppins', kaiti, lisu, sans-serif;
-    --mono-font: adaptive-mono, "PT Mono", "Andale Mono", "Courier New", NSimSun, Courier, monospace;
-    --pale-gray-monochrome: 178, 210, 180;
-    --light-gray-monochrome: 130, 160, 135;
-    --gray-monochrome: 45, 70, 45;
-    --dark-gray-monochrome: 30, 55, 30;
-    --bright-accent: 255, 219, 90;
-    --medium-accent: 228, 180, 28;
-    --dark-accent: 185, 150, 17;
+/* COMMON */
+#content-wrap {
+    position: relative;
+    margin: 2em auto 0;
+    max-width: 1040px;
+    min-height:1300px;
+    height: auto !important;
+    height: 1500px;
+}
+h1, #page-title {
+    color: #000000;
+    padding: 0 0 0.25em;
+    margin: 0 0 0.6em;
+    text-align: left;
+}
+h1 {
+    margin-top: 0.7em;
+    padding: 0;
+    font-style: italic;
+    font-weight: lighter;
+}
+h2, h3, h4, h5, h6, h7 {
+    margin: 0.5em 0 0.4em;
+    padding: 0;
+    letter-spacing: 1px;
+}
+#page-title {
+    font-weight: lighter;
+    border-color: #ffffff;
+}
+ul {
+    /*list-style-image: url(../images/bullet.gif);*/
+    list-style: square;
+}
+#top-bar ul {
+/* list-style-image: none; /* IE ONLY! IF list-style-image IS SET */
+}
 
-    --gradient-header:
-           linear-gradient(to bottom, rgba(var(--dark-gray-monochrome), 1) 0%,
-           rgba(var(--dark-gray-monochrome), 1) 30%,
-           rgba(var(--bright-accent)) 100%);
-    --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--medium-accent), 0.45), rgba(var(--medium-accent), 0.55));
+li, p {
+    line-height: 141%;
+}
+a {
+    color: #0095e2;
+    text-decoration: none;
+    background: transparent;
+}
+a.newpage {
+    color: #000000;
+    text-decoration: none;
+    background: transparent;
+}
+a:hover {
+    text-decoration: underline;
+    background: transparent;
+}
 
-    scrollbar-color: rgb(var(--medium-accent)) rgb(var(--dark-gray-monochrome));
+/* GLOBAL WIDTH */
+#header, #top-bar {
+    width: 920px;
+    margin: 0 auto;
+}
+body {
+    background-color: #fff;
+    font-size: 0.80em;
+    color: #000000;
+}
+div#container-wrap {
+    background: url(http://scpsandboxcn.wikidot.com/local--files/tns-goi-ting/body_TING_long.png) top left repeat-x;
 }
 
 /* HEADER */
-div#container-wrap {
-    background-image: url(none);
-}
-
-div#extra-div-1,
-div#extra-div-2 {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 140px;
-    top: 0;
-    left: 0;
-}
-
-div#extra-div-1 {
-    background-image: url("http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wlheader_bg.png");
-    background-size: 31.250rem;
-    z-index: -1;
-    mix-blend-mode: hard-light;
-}
-
-div#extra-div-2 {
-    background: var(--gradient-header);
-    background-size: 31.250rem;
-    background-repeat: repeat;
-    z-index: -2;
-}
-
-div#extra-div-3 {
-    height: 22px;
-    width: 100%;
-    top: 140px;
-    position: absolute;
-    background-color: rgb(var(--gray-monochrome));
-    background-image: rgb(var(--gray-monochrome));
-    border-top: solid 1px rgb(var(--bright-accent));
-    border-bottom: solid 1px rgb(var(--bright-accent));
-} /* Green top bar */
-
 #header {
-    background: url(http://www.scpwiki.com/local--files/theme:dustjacket-sigma/wl_logo.png) 13px 41px no-repeat;
-    background-size: 94px 94px;
+    height: 140px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 22px; /* FOR MENU */
+    background: url(http://scpsandboxcn.wikidot.com/local--files/tnsbilws/TING) 40px 6px no-repeat;
 }
-#header > h1 > a > span {
-    display: none;
+#search-top-box {
+    position: absolute;
+    top: 79px;
+    right: 9px;
+    width: 250px;
+    text-align: right;
 }
+#search-top-box-input {
+    border: solid 1px #9f9f9f;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.5);
+}
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #000000;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.8);
+}
+#search-top-box-form input[type=submit] {
+    border: solid 1px #FFFFFF;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 90%;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #000000;
+    background: linear-gradient(to bottom, #505050,#505050,#505050);
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #fff;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(255,255,255,.25)
+    background-color: #000000;
+    background: linear-gradient(to bottom, #505050,#505050,#505050);
+    box-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+#login-status {
+    color: #ffffff;
+    font-size: 90%;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#login-status a {
+    background: transparent;
+    color: #FFFFFF;
+}
+#login-status ul a {
+    color: #ffffff;
+    background: transparent;
+}
+
+#account-topbutton {
+    background: #ccc;
+    color: #000000;
+}
+
+.printuser img.small {
+    margin-right: 1px;
+}
+
+#header h1 {
+    margin-left: 120px;
+    padding: 0;
+    float: left;
+    max-height: 95px;
+}
+#header h2 {
+    margin-left: 120px;
+    padding: 0;
+    clear: left;
+    float: left;
+    font-size: 105%;
+    max-height: 38px;
+}
+
 #header h1 a {
-    color: transparent;
-    text-shadow: none;
-    padding: 85px 0 25px;
-    font-size: 140%;
-    font-family: var(--header-font);
-}
-#header h1 a::before {
-    content: "被放逐者之图书馆";
-    color: rgb(var(--bright-accent));
-    text-shadow: inherit;
-    background: url(http://www.scpwiki.com/local--files/theme:dustjacket-sigma/goldfoil.png);
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow-wrap: normal;
-    font-size: 125%;
+    display: block;
+    margin: 0;
+    line-height: 0px;
+    max-height: 0px;
+    color: #190022;
+    background: transparent;
+    font-size: 0%;
+    text-decoration: none;
 }
 
 #header h2 span {
-    display: none;
+    display: block;
+    margin: 0;
+    line-height: 0px;
+    max-height: 0px;
+    font-size: 0%;
+    color: #000000;
 }
 
-@media (max-width: 767px) {
-    #header {
-        background: url(http://www.scpwiki.com/local--files/theme:dustjacket-sigma/wl_logo.png) 2px 72px no-repeat;
-        background-size: 50px 50px;
-    }
-    #header h1 a {
-        font-size: 65%;
-        padding: 95px 0px;
-    }
-}
-
-/* LOG-IN INFO */
-#login-status {
-    color: rgb(var(--pale-gray-monochrome));
-    font-weight: 600;
-    letter-spacing: 0.05em;
-}
-
-#login-status * {
-    font-family: var(--header-font);
-    letter-spacing: 0.05em;
-}
-
-#login-status ul a {
-    color: rgb(var(--dark-gray-monochrome));
-    background: rgb(var(--pale-gray-monochrome));
-}
-
-/* SEARCH BAR */
- #search-top-box-input {
-     background-color: rgb(var(--gray-monochrome));
-     border: solid 1px rgb(var(--medium-accent));
-     border-radius: 0;
-}
-#search-top-box input.empty {
-    color: rgba(var(--bright-accent), 0.5);
-}
- #search-top-box-input:hover,
- #search-top-box-input:focus {
-     background: rgb(var(--light-gray-monochrome));
-     border: solid 1px rgb(var(--bright-accent));
-     border-radius: 0;
-}
- #search-top-box-form input[type=submit] {
-     background: linear-gradient(to bottom, rgb(var(--bright-accent)),rgb(var(--medium-accent)),rgb(var(--dark-accent)));
-     background-color: rgb(var(--dark-accent));
-     color: white;
-     transition: color 0.25s;
-     border: solid 1px rgb(var(--medium-accent));
-     border-radius: 0;
-}
- #search-top-box-form input[type=submit]:hover,
- #search-top-box-form input[type=submit]:focus {
-     background: linear-gradient(to bottom, rgb(var(--bright-accent)),rgb(var(--medium-accent)),rgb(var(--dark-accent)));
-     background-color: rgb(var(--dark-accent));
-     color: rgb(var(--gray-monochrome));
-     border: solid 1px rgb(var(--medium-accent));
-     border-radius: 0;
-}
-
-@media (max-width: 767px) {
-    #search-top-box {
-         top: 115px;
-         right: -10px;
-    }
-}
-
-/* TITLE */
-#page-title {
-    font-size: 210%;
-    font-family: 'IMB Plex Mono';
-    font-weight: 600;
-}
-
-h1, h2, h3, h4, h5, h6, #page-title {
-    font-family: var(--title-font);
-    color: rgb(var(--black-monochrome));
-}
-h1 {
-    margin: .7em 0 .6em;
-    padding: 0 0 .25em;
-    font-weight: 700;
-}
-h2, h3, h4, h5, h6 {
-    margin: .5em 0 .4em;
+/* TOP MENU */
+#top-bar {
+    position: absolute;
+    z-index: 50;
+    top: 140px;
+    right: 0;
+    height: 21px;
+    line-height: 18px;
     padding: 0;
-    font-weight: 900;
-    letter-spacing: .063rem;
+    z-index: 20;
+    font-size: 90%;
 }
-
-@media (max-width: 767px) {
-    #page-title {
-        font-size: 180%
-    }
+#top-bar ul {
+    float: right;
 }
-
-/* TOP-BAR SETTINGS */
+#top-bar a {
+    color: #fff;
+    background: transparent;
+}
+#top-bar ul li {
+    border: 0;
+    position: relative;
+}
 #top-bar ul li ul {
-    border-color: rgb(var(--medium-accent));
+    border: solid 1px #3d2b1f;
+    box-shadow: 0 2px 6px rgba(0,0,0,.5);
+    border-top: 0;
 }
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    background: rgb(var(--pale-gray-monochrome));
-    border-top: 1px solid rgb(var(--medium-accent));
-    padding: 0.3em;
-    padding-left: 0.5em;
-    color: rgb(var(--dark-gray-monochrome));
-    font-family: var(--body-font);
-    font-size: 0.7rem;
+#top-bar ul li:last-of-type ul {
+    right: 0;
 }
 #top-bar ul li a {
-    color: rgb(var(--bright-accent));
-    font-family: var(--header-font);
-    font-size: 0.8rem;
-}
-#top-bar ul li.sfhover a {
-    color: rgb(var(--bright-accent));
-    border-top: solid 1px rgb(var(--bright-accent));
-    font-family: var(--header-font);
-    font-size: 0.8rem;
+    border-left: solid 1px rgba(64,64,64,.1);
+    border-right: solid 1px rgba(64,64,64,.1);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1px;
+    max-height: 1px;
+    overflow: hidden;
 }
 
+#top-bar ul li.sfhover a,
 #top-bar ul li:hover a {
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
+    background: #ffffff;
+    color: #000000;
+    border-left: solid 1px rgba(64,64,64,1);
+    border-right: solid 1px rgba(64,64,64,1);
 }
-#top-bar ul li ul a, #top-bar a:hover {
-    color: rgb(var(--pale-gray-monochrome));
+
+#top-bar ul li.sfhover ul li a,
+#top-bar ul li:hover ul li a {
+    border-width: 0;
+    width: 150px;
+    border-top: 1px solid #ddd;
+    line-height: 160%;
+    height: auto;
+    max-height: none;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 #top-bar ul li.sfhover a:hover,
 #top-bar ul li:hover a:hover {
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
+    background: #fff;
+    text-decoration: none;
 }
-#top-bar ul li ul.sfhover a:hover,
-#top-bar ul li ul:hover a:hover {
-    background: rgb(247, 213, 83);
-    color: rgb(var(--dark-gray-monochrome));
+#top-bar ul li ul {
+    border-width: 0 1px 1px 1px;
+    width: auto;
+}
+#top-bar ul li ul li, #top-bar ul li ul li.sfhover,
+#top-bar ul li ul li, #top-bar ul li ul li:hover {
+    border-width: 0;
+}
+#top-bar ul li ul li a {
+    border-width: 0;
+}
+#top-bar ul li ul a, #top-bar a:hover {
+    color: #000000;
+}
+
+/* IE7 HACK */
+#top-bar ul > li > ul {  
+    *margin-top: -4px;
+}
+
+/* SIDE MENU */
+
+#side-bar .side-block {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(102,0,0,.5);
+    background: #fff;
+    margin-bottom: 15px;
+}
+#side-bar .side-area {
+    padding: 10px;
+}
+#side-bar .heading {
+    color: #1E0087;
+    border-bottom: solid 1px #1E0087;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 8pt;
     font-weight: bold;
 }
-.topbar_arrow {
-    color: rgb(var(--dark-gray-monochrome));
+#side-bar p {
+    margin: 0;
 }
-
-/* SIDE-BAR SETTINGS */
-#side-bar .side-block {
-    border-color: rgb(var(--dark-accent));
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(var(--dark-accent),.5);
+#side-bar div.menu-item {
+    margin: 2px 0;
 }
-
-#side-bar .side-block[style*="#f0fff6"] {
-    background-color: rgb(248, 236, 198) !important;
+#side-bar div.menu-item img {
+    width: 13px;
+    height: 13px;
+    border: 0;
+    margin-right: 2px;
+    position: relative;
+    bottom: -2px;
 }
-
-#side-bar .side-block[style*="#e7e5e8"] {
-    background-color: rgb(234, 223, 183) !important;
+#side-bar div.menu-item a {
+    font-weight: bold;
 }
-
-#side-bar .side-block[style*="#fff0f0"] {
-    background-color: rgb(246, 234, 196) !important;
+#side-bar div.menu-item.inactive img {
+    opacity: 0.25;
 }
-
-#side-bar .side-block[style*="#e5e5ff"] {
-    background-color: rgb(248, 241, 218) !important;
+#side-bar div.menu-item.inactive a {
+    color: #380A38;
 }
-
-div.scpnet-interwiki-wrapper {
-    filter: hue-rotate(90deg);
+#side-bar div.menu-item .sub-text {
+    font-size: 80%;
+    color: #3D1F31;
 }
-
-#side-bar .heading {
-    font-size: 1rem;
-    color: rgb(var(--dark-accent));
-    border-bottom-color: rgb(var(--dark-accent));
-    font-family: var(--header-font);
+#side-bar div.menu-item.sub-item {
 }
 
 #side-bar .collapsible-block-folded {
-    background-image: none;
+    background: url(/local--files/nav:side/expand.png) 0 2px no-repeat;
 }
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom-color: rgb(var(--dark-accent));
-}
-
-#side-bar .collapsible-block-folded .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    font-size: 1rem;
-    color: rgb(var(--dark-accent));
-    font-family: var(--header-font);
-}
-
-/* SIDE-BAR IMAGES */
-.side-block .menu-item > .image {
-    filter: hue-rotate(-171deg);
-}
-
-/* Patch pour hover imbriqué */
-#top-bar ul li ul li ul {
-    left: 159px;
-}
-
-/* MOBILE SIDE-BAR */
-@media (max-width: 767px) {
-#side-bar {
-    background-color: rgb(var(--pale-gray-monochrome))
-}
-.open-menu a {
-    border: 0.2em solid rgb(var(--bright-accent)) !important;
-    background-color: rgb(var(--gray-monochrome)) !important;
-    color: rgb(var(--bright-accent)) !important;
-    }
-}
-
-/* BODY */
-body {
-    background-color: rgb(var(--white-monochrome));
-    font-family: var( --body-font);
-}
-
-#page-content {
-    font-size: .835rem;
-    letter-spacing: .3px;
-    word-spacing: .8px;
-}
-
-/* FOOTER */
-#footer {
-    background: rgb(var(--dark-accent));
-    color: rgb(var(--dark-gray-monochrome));
-}
-
-#footer a {
-    color: rgb(var(--dark-gray-monochrome));
-}
-
-/* OTHER STRUCTURAL ELEMENTS */
-
-/* LINKS */
-a {
-    color: rgb(var(--medium-accent));
+#side-bar .collapsible-block-link {
+    margin-left: 15px;
     font-weight: bold;
 }
-a:visited {
-    color: rgb(var(--dark-accent));
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #220096;
 }
-#side-bar a,
-#side-bar a:visited,
-#side-bar a.newpage {
-    color: rgb(93, 111, 93);
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 8pt;
+    color: #220096;
 }
-blockquote a,
-div.blockquote a {
-    color: rgb(var(--dark-accent));
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #6C4279;
+    text-decoration: none;
 }
-blockquote a:visited,
-div.blockquote a:visited {
-    color: rgb(153, 123, 15);
+/* CONTENT */
+/* // not-needed; loaded by SCP-Sigma-9 theme
+#main-content {
+    position: relative;
+}
+*/
+
+#breadcrumbs {
+    margin: -1em 0 1em;
+    font-weight: 85%;
 }
 
-/* CODE */
-.code {
-    background-color: rgb(var(--pale-gray-monochrome));
-}
-
-/* RATING MODULE */
-#page-content .page-rate-widget-box {
-    font-size: .8rem;
-}
-
-.page-rate-widget-box .rate-points {
-    background-color: rgb(var(--gray-monochrome)) !important;
-    border-color: rgb(var(--dark-gray-monochrome));
-    color: rgb(var(--bright-accent));
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: rgb(var(--pale-gray-monochrome));
-    border-top-color: rgb(var(--dark-gray-monochrome));
-    border-bottom-color: rgb(var(--dark-gray-monochrome));
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: rgb(var(--gray-monochrome));
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
-}
-.page-rate-widget-box .cancel {
-    background: transparent;
-    background-color: rgb(var(--gray-monochrome));
-    border-color: rgb(var(--dark-gray-monochrome));
-}
-.page-rate-widget-box .cancel a {
-    color: rgb(var(--light-gray-monochrome));
-}
-.page-rate-widget-box .cancel a:hover {
-    background-color: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
-}
-
-/* CREDIT MODULE */
-#page-content .rate-box-with-credit-button {
-    background-color: rgb(var(--gray-monochrome));
-    border-color: rgb(var(--dark-gray-monochrome));
-}
-#page-content .rate-box-with-credit-button .creditButton p a {
-    border-left-color: rgb(var(--light-gray-monochrome))
-}
-#page-content .rate-box-with-credit-button .creditButton a {
-    color: rgb(var(--bright-accent));
-}
-#page-content .rate-box-with-credit-button .creditButton a:hover {
-    color: rgb(var(--light-gray-monochrome));
-}
-
-#page-content .modalbox {
-     background: white !important;
-     color: rgb(var(--black-monochrome));
-     box-shadow: 0 2px 6px rgba(var(--dark-accent),.5);
-}
-
-.close-credits,
-.credit-back {
-    filter: hue-rotate(-171deg);
-}
-
-/* PAGE ELEMENTS */
-
-/* BLOCKQUOTES */
-blockquote,
-div.blockquote {
-       background: rgb(var(--pale-gray-monochrome));
-       border: 3px outset rgb(var(--medium-accent));
-}
-
-/* HORIZONTAL RULES */
-hr {
-    border: 0;
-    border-top: .063rem solid transparent;
-    background-color: rgba(var(--bright-accent));
-    background: url(http://www.scpwiki.com/local--files/theme:dustjacket-sigma/goldfoil.png);
-    background-size: cover;
-}
-
-.fancyhr hr {
-    border-top: 2vw solid transparent;
-    background-color: rgba(var(--bright-accent), 0);
-    height: 0;
-    box-sizing: border-box;
-    border-image-source: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_hr.png);
-    border-image-repeat: round round;
-    background: none;
-    border-image-slice: 80 500 80 500 fill;
-    border-image-width: 10em 80em 10em 80em;
-}
-
-.fancyborder {
-    box-sizing: border-box;
-    border: 2vw solid rgba(0,0,0,0.5);
-    border-image: url(http://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_border.png) 600 round;
-    border-image-width: 6;
-    padding: 2vw;
-}
-
-/* TABLES */
-table.wiki-content-table th {
-    color: rgb(var(--bright-accent));
-    background-color: rgb(var(--light-gray-monochrome));
-    border-color: rgb(108, 138, 112);
-}
-
-/* footnote by 7happy7 */
-span:not([class]):not([style]) > sup.footnoteref:first-child > a.footnoteref:before,
-sup.footnoteref > a.footnoteref:before {
-content: "(";
-}
-span:not([class]):not([style]) > sup.footnoteref > a.footnoteref:before {
-content: ",";
-}
-
-/* Adjusts footnote block at bottom to fit the Hand format better */
-.footnotes-footer {
-        width: unset;
-    margin: unset;
-    padding: 20px;
-    background-color: #EEF6EE;
-        border: solid 1px #112211;
-}
-
-/* TABVIEW */
-.yui-navset .yui-content {
-    border-color: rgb(var(--light-gray-monochrome));
-    border-top-color: rgb(var(--medium-accent));
-    background-color: rgb(234, 242, 234);
-    font-weight: normal;
-}
-.yui-navset .yui-nav, .yui-navset .yui-navset-top .yui-nav {
-    border-bottom: 0.3em solid rgb(var(--medium-accent));
+/* YUI-TABS */
+.yui-navset .yui-content{
+    background-color: #f5f5f5;
 }
 .yui-navset .yui-nav a,
 .yui-navset .yui-navset-top .yui-nav a {
-    background-image: none;
-    background-color: rgb(var(--pale-gray-monochrome));
-    font-weight: normal;
+    background-color:#d8d8d8;
+    background-image: url(../images/yuitabs.png);
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background:#3b0003 url(../images/yuitabs.png) repeat-x left -1400px; /* selected tab background */
+    color:#fff;
 }
 .yui-navset .yui-nav a:hover,
 .yui-navset .yui-nav a:focus {
-    background: rgb(var(--dark-accent));
-    color: white;
+    background:#FCDBFF url(../images/yuitabs.png) repeat-x left -1300px;
+    text-decoration: none;
 }
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* Pas d'effet focus/hover pour tab sélectionné */
-.yui-navset .yui-nav .selected a:hover {
-    background-image: none !important;
-    background: rgb(var(--medium-accent));
-    border-color: rgb(var(--medium-accent));
-    color: white;
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #400040;
+}
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #000000;
 }
 .yui-navset li {
     line-height: normal;
 }
-/* Bordures onglets */
-.yui-navset .yui-nav a, .yui-navset .yui-navset-top .yui-nav a {
-    border: 1.2px solid rgb(var(--medium-accent));
-    padding: 0.15em;
+
+/* FOOTER */
+#footer {
+    clear: both;
+    font-size: 77%;
+    background: #3d2b1f;
+    color: #c499c4;
+    margin-top: 15px;
+    padding: 3px 10px;
 }
-.yui-navset .yui-nav a em, .yui-navset .yui-navset-top .yui-nav a em {
-    border: none !important;
+#footer .options {
+    visibility: visible;
+    display: block;
+    float: right;
+    width: 50%;
+    font-size: 100%;
+    text-align: right;
+}
+#footer a {
+    color: #fff;
+    background: transparent;
 }
 
-/* IMAGE BLOCK */
-.scp-image-block .scp-image-caption {
-    background-color: rgb(var(--pale-gray-monochrome));
+/* SOME NICE BOXES */
+div.sexy-box {
+    background: #f0f8ff;
+    border: 1px solid #903C67;
+    padding: 0 10px 12px;
+    margin: 7px 4px 12px;
+    overflow: hidden;
+}
+div.sexy-box div.image-container img {
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #9f8170;
 }
 
-/* HIGHLIGHTING */
-::-moz-selection {
-    background: rgba(var(--bright-accent), 0.5);
+/* Custom page content classes */
+#page-content {
+    min-height: 720px;
 }
 
-::selection {
-    background: rgba(var(--bright-accent), 0.5);
+.unmargined > p {
+    margin: 0;
+    line-height: 100%;
+}
+.content-panel {
+    border: solid 1px #5d8aa8;
+    border-radius: 10px;
+    background-color: #bcd4e6;
+    margin: 10px 0 15px;
+    box-shadow: 3px 3px 6px #e6e6fa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.1);
+}
+.content-panel.standalone {
+    background: #fcfdfb;
+}
+.content-panel.series {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.content-panel.centered {
+    text-align: center;
+}
+.content-panel.left-column {
+    float: left;
+    width: 48%;
+}
+.content-panel.right-column {
+    float: right;
+    width: 48%;
 }
 
-/* Page-Tags */
+.content-panel .panel-heading {
+    padding: 2px 10px;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.35);
+}
+.content-panel .panel-heading > p,
+.content-panel .panel-footer > p {
+    margin: 0;
+}
+.content-panel .panel-body {
+    padding: 5px 10px;
+    background: f0ffff
+}
+.content-panel .panel-footer {
+    padding: 1px 10px;
+    color: #A30053;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+.content-panel .panel-footer a {
+    color: #ffffff;
+}
+.content-panel .content-toc {
+    float: right;
+    padding: 0 20px;
+    background-color: #fff;
+    border: solid 1px #5d8aa8;
+    border-radius: 10px;
+    margin: 20px 0 5px 5px;
+    white-space: nowrap;
+    box-shadow: inset 1px 2px 6px rgba(0,0,0,.15)
+}
+.alternate:nth-child(even) {
+    background-color: rgba(255,255,255,.9);
+}
+
+/* Page Rating Module Customizations */
+.page-rate-widget-box {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  margin-bottom: 10px;
+  margin-right: 2em;
+}
+.page-rate-widget-box .rate-points {
+  background-color: #000000 !important;
+  border: solid 1px #000000;
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: #f0f8ff;
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  font-weight: bold;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  background: transparent;
+  color: #000000;
+  padding: 0 4px;
+  margin: 0 1px;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: #000000;
+  color: #f0ffff;
+  text-decoration: none;
+}
+.page-rate-widget-box .cancel {
+  background-color: #000000;
+  border: solid 1px #000000;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.page-rate-widget-box .cancel a {
+  background: transparent;
+  text-transform: uppercase;
+  color: #f0ffff;
+}
+.page-rate-widget-box .cancel a:hover {
+  border-radius: 0 3px 3px 0;
+  background: #cdeadc;
+  color: #f0ffff;
+  text-decoration: none;
+}
+
+/* Heritage Collection Rating Module */
+.heritage-rating-module {
+  float: right;
+  background-color: #6c006c;
+  padding: 2px 8px 2px 5px;
+  margin-bottom: 10px;
+  margin-right: 2em;
+  border: solid 1px #ccc066;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.heritage-rating-module .page-rate-widget-box {
+  float: right;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.heritage-rating-module .heritage-emblem {
+  float: right;
+  position: relative;
+  top: -2px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  overflow: visible;
+  margin-right: 2px;
+}
+.heritage-rating-module .heritage-emblem img {
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
+
+/* Fixes for Multi-Line Page Tags */
 #main-content .page-tags {
-    border-top: 2px solid rgb(var(--dark-accent));
+    margin: 1em 0 0;
+    padding: 0;
 }
-
+#main-content .page-tags span {
+    display: inline-block;
+    padding: 0;
+    max-width: 60%;
+}
 #main-content .page-tags a {
     display: inline-block;
-    height: 0.8125rem;
-    line-height: 13px;
-    line-height: 0.8125rem;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    font-weight: normal;
-    background: rgb(var(--gray-monochrome));
-    color: rgb(var(--bright-accent));
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    margin: 0 0 .5rem .75rem;
-    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+    white-space: nowrap;
 }
 
-#main-content .page-tags a:before {
-    top: -0.1875rem;
-    left: -0.625rem;
-    width: 0;
-    height: 0;
-    border-color:
-     transparent
-     rgb(48, 48, 52)
-     transparent
-     transparent;
-    border-color:
-     transparent
-     rgb(var(--gray-monochrome, 45, 70, 45))
-     transparent
-     transparent;
-    border-style: solid;
-    border-width: 0.5rem 0.5rem 0.5rem 0;
-    padding: 0 0.0625rem 0.1875rem;
+/* Standard Image Block */
+.scp-image-block {
+  float: right;
+  clear: right;
+  margin: 0 2em 1em 2em;
+  border: solid 1px #6c006c;
+  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+  width: 300px;
+}
+.scp-image-block.block-left {
+  float: left;
+  clear: left;
+  margin: 0 2em 1em 0;
+}
+.scp-image-block img {
+  border: 0;
+  width: 300px;
+}
+.scp-image-block .scp-image-caption {
+  background-color: #f0f8ff;
+  border-top: solid 1px #6c006c;
+  padding: 2px 0;
+  font-size: 80%;
+  font-weight: bold;
+  text-align: center;
+  width: 300px;
+}
+.scp-image-block > p {
+  margin: 0;
+}
+.scp-image-block .scp-image-caption > p {
+  margin: 0;
+  padding: 0 10px;
 }
 
-#main-content .page-tags a:before,
-#main-content .page-tags a:after {
-    content: "";
-    float: left;
-    position: relative;
+/* Forum Customizations */
+.forum-thread-box .description-block {
+  padding: .5em 1em;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,.15),
+    inset 0 1px 0 rgba(255,255,255,.8),
+    inset 0 10px 5px rgba(255,255,255,.25),
+    inset 0 -15px 30px rgba(0,0,0,.1)
+}
+.thread-container .post .head {
+    padding: 0.5em 1em;
+    background-color: #f0f8ff;
+    background: linear-gradient(to right, #f0f8ff, #eeecec);
+    box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
+    border-radius: 5px 5px 0 0;
 }
 
-#main-content .page-tags a:after {
-    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
-    top: 0.28125rem;
-    left: -0.5rem;
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0.125rem;
-    background-color: rgb(var(--bright-accent, 255, 219, 90));
-    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+/* Hide Forum Signatures */
+.signature {
+  display:none !important;
 }
 
-.page-tags span {
-    border-top: .5rem solid transparent;
+@media (max-width: 479px) {
+
+#search-top-box,#side-bar,#login-status {
+display:none
+}
+}
+
+@media (max-width: 1700px){
+.phone {
+    font-size: 60%;
+}
+}
+
+#side-bar a:visited{ color: #000000; }
+ 
+a:visited { color: #000000; }
+
+a {
+    color: #404040;
+    text-decoration: none;
+    /* background: transparent; */
+}
+
+#top-bar ul li:hover a:hover {
+    background: #000;
+    text-decoration: none;
+    color:#f4f4f4;
+}
+
+@media (max-width: 767px) {
+    .open-menu {
+        color: #000;
+        border-color: #000;
+    }
+
+    #side-bar {
+        background-color: #F4F4F4;
+    }
 }
