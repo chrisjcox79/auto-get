@@ -1,304 +1,295 @@
 /*
--------------------------
-变量
---------------------------
-*/
-:root{
- 
-  /* 书本厚度色 */
- 
- --cl-a1:235,235,225,1;
-  --cl-a2:222,210,220,1;
-  --cl-a3:210,200,195,1;
-  --cl-a4:25,25,25,1;
-   --cl-a5:{$book-cover};
+Theme created by MrPines, based on the Sigma 9 theme created by Aelanna and Dr Devan.
+The logo image is licensed under CC0.
+Logo image source: https://svgsilh.com/image/1494506.html
+ */
 
+@import url('https://fonts.googleapis.com/css?family=Homenaje');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
-    /* 书本厚度描框 */
- 
---box-bk-0:0.0625rem 0.0625rem 0 rgba(var(--cl-a1)), 0.125rem 0.125rem 0 rgba(var(--cl-a2)), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2)), 0.25rem 0.25rem 0 rgba(var(--cl-a3)), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2)), 0.375rem 0.375rem 0 rgba(var(--cl-a2)), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2)), 0.58rem 0.8rem 0 rgba(var(--cl-a4));
- 
-/* 各线 */
---page-divider:linear-gradient(to right, transparent 50.2%, #000 50.3%, transparent 50.4%); 
- 
---mark-color:linear-gradient(to right, transparent 46%, #333 46.1%, #333 49%, transparent 49.1%);
- 
---line-color:linear-gradient(to top ,transparent 0%,#c0c0c0 1%, transparent 5%, #c0c0c0 11%,transparent 12%,transparent 20%);
-}
- 
-/* 脚注上标 */
-a.footnoteref {
-    line-height: 0px;
+h1,
+#page-title {
+    color: #0f0f0f;
 }
 
-.note-cover sup{
-   top: 5px;
-}
- 
-/* 
------------------
-书页
---------------
-*/
- 
-.note-cover{
-    width:100%;
-    clear:both;
-    background-color: #f3f3f3;
-    margin: 0rem;
-}
- 
-.note-wrap{
-    box-shadow: var(--box-bk-0);
-    background-color: #f3f3f3;
-    border:1px solid #cccccc;  
-}
- 
-.note-leaf{
-     columns:1px 2;
-    -webkit-columns:1px 2;
-    -moz-columns:1px 2; 
-     column-rule:3px  outset #ccc;
-    min-height: 10px;
-    padding: 0 1.2rem 0 1.2rem;
-}
- 
-.note-page {
-    white-space：normal;
-    float:left;
-    display: block;
-    font-family: '宋体',  '等线', lisu, sans-serif;
-    font-size:110%;
-    font-style: normal;
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image:var(--line-color);
-    background-origin: padding-box;
-    background-position: 0em 1.5rem;
-    background-repeat: repeat;
-    background-size: 100% 1.5rem;
- /*   padding: 0em 1em 0 1em; */
-}
- 
-.note-page p {
-    line-height: 1.5rem;
-    margin: 0;
-    padding: 0rem 0.5rem 1.5rem 0.5rem;
-}
- 
-/* 
--------------------------
-左右书页
---------------------------
-*/
- 
-.note-line{
-    background-image:  var(--page-divider);
-    background-size:100%;
-    height:90%;
+a {
+    color: #339;
 }
 
-
- 
-.note-left,.note-right {
-  width:45%;
+#side-bar a:visited {
+    color: #339;
 }
 
-.note-right {
-    float: right;
-    margin:0 1.2rem 0 0;
+a:visited {
+    color: #336;
 }
 
-.note-left {
-    float: left;
-    margin:0 0 0 1rem;
+a.newpage {
+    color: #488;
 }
 
-
-.note-left p:last-child, 
-.note-right p:last-child {
-    padding: 0rem 0.5rem 1.5rem 0.5rem;
+body {
+    background-color: #F3F3F3;
+    color: #111;
 }
 
-
-
-
-
-.note-left p:first-child, 
-.note-right p:first-child {
-    padding: 1.5rem 0.5rem 1.5rem 0.5rem;;
+div#container-wrap {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aprom-labs/pl_bg2.png");
 }
-
-@media (max-width: 495px) {
-  .note-left p:first-child, 
-  .note-right p:first-child {
-    padding: 1.5rem 0.5rem 0rem 0.5rem;;
-  }
-
-  .note-right p:last-child {
-    padding: 0rem 0rem 0rem 0.5rem;
-  }
-    
-  .note-left  p:not(:first-child),
-  .note-right p:not(:first-child) {
-    margin: 1.5rem 0rem 0 0rem;
-  } 
-   
-  .note-left p:last-child   {
-   display: none;
-  }         
-}
-
- 
-/*
-.note-right p{
-    padding: 0 0em 0 1em;
-}
-*/
- 
-/* 
--------------------------
-书签
---------------------------
-*/
-.note-bookmark{
-    background-image:var(--mark-color);   
-    background-size:100% 20%;
-    background-position:12rem  0px; 
-    background-repeat: no-repeat;
-}
- 
-
-/*
--------------------------
-列表
--------------------------
-*/
-
-.note-page li {
-   line-height: 1.5rem;
-   margin: 0;
-   padding: 0rem 0 0rem 0;
-/*! word-spacing: normal; */
-   word-break: break-word;
-}
-
-.note-page ul {
-   line-height: 0rem;
-   margin:  0rem 0rem 0rem 0rem;
-   list-style-type:circle;  
-}
-
-
-.note-page li ul{
-  margin:  0rem 0rem 0rem 0rem;  
-}
-
-.note-page ul + ul{
-  margin:  0rem 0rem 0rem 0rem; 
-}
-
-
-.note-page ul + p {
-    line-height: 1.5rem;
-    margin: 1.5rem 0rem 0rem 0rem;  
-} 
-
-.note-page p + ul {
-    line-height: 0rem;
-    margin:  -1.5rem 0rem 1.5rem 0rem;  
-}
-
-
-@media (max-width: 495px) {
- .note-page p + ul {
-    line-height: 0rem;
-    margin:  0rem 0rem 0rem 0rem;  
-  }
-    
-}
-
-
-/* 
--------------------------
-手机
---------------------------
-*/
-@media (max-width: 495px) {
- 
-#main-content {
-    min-width: 0rem !important;
-}
- 
-.note-page {
-    width: 100%;
-    float:none ;
- /*background-size: 90% 1.5rem; */
-    font-size:{$phone-size};
-}
- 
-#search-top-box-input{
-display:none;
-}
- 
-.note-leaf {
-         columns:1000em 2 ;
-    -webkit-columns:1000em 2 ; 
-    -moz-columns:1000em 2;
-}
- 
-.note-cover {
-   padding: 0.6rem  ;
-   margin: 0 0.8rem  0 -0.7rem;
-    border: 2px solid #968787;
- /*  overflow:hidden; */
-}
- 
-.note-wrap p{
-    padding:0 0.5rem 0 0.5rem;
-}
- 
-.note-wrap{
-    background: none ;
-    padding:0.1em ;
-    box-shadow: none ;
-    margin:0em ;
-    border: none ;
-}
-
-.note-bookmark{
-    background-image: none ;
-}
- 
-.note-left, .note-right {
-    margin: 0rem;
-}
- 
-
-
-
-/*
-.note-right p,.note-left p{
-padding: 0 3rem 0 0 ;
-}
-*/
-}
-
-
- 
-/* 
-==================
-常规版式 
-==================
-*/
- 
-
 
 #header {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aprom-labs/logo_temp.png");
 }
- 
-.no-float{
-    width:100%;
-    clear: both;
+
+#search-top-box-input {
+    border: solid 1px #999;
+    color: #fff;
+    background-color: #999;
+}
+
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    border: solid 1px #fff;
+    color: #f1f1f1;
+    background-color: #555;
+}
+
+#search-top-box-form input[type=submit] {
+    border: solid 1px #eee;
+    color: #1f1f1f;
+    background: #ddd;
+}
+
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #fff;
+    color: #1f1f1f;
+    background: #aaa !important;
+}
+
+#search-top-box-input,
+#search-top-box input.empty {
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #999;
+}
+
+#search-top-box-input,
+#search-top-box input.empty:hover {
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #555;
+}
+
+#login-status {
+    color: #1f1f1f;
+}
+
+#login-status a {
+    color: #1f1f1f;
+}
+
+#login-status ul a {
+    color: #1f1f1f;
+}
+
+#account-topbutton {
+    background: #ddd;
+    color: #1f1f1f;
+}
+
+#header h1 a {
+    color: transparent;
+    text-shadow: none;
+    font-family: 'Homenaje', sans-serif;
+}
+
+#header h1 a::before {
+    color: #f3f3f3;
+    letter-spacing: 3px;
+    content: "普罗米修斯实验室";
+    font-size: 125%;
+    text-shadow: -1px -1px 0 #282828, 1px -1px 0 #282828, -1px 1px 0 #282828, 1px 1px 0 #282828;
+}
+
+#header h2 span {
+    color: transparent;
+    text-shadow: none;
+}
+
+#header h2 span::before {
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    content: "通过学习和直觉，神秘变成普遍。";
+    color: #1f1f1f;
+}
+
+#header .button,
+#header .text,
+#header .text:active {
+    border-radius: 20px !important;
+}
+
+.yui-navset .yui-content {
+    background-color: #d8d8d8;
+}
+
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color: #339;
+    /* no focus effect for selected */
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+    /* no hover effect for selected */
+    background: #339;
+    /* selected tab background */
+    color: #eeeeee;
+}
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background: #aac;
+}
+
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #339;
+}
+
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a {
+    background: #eee;
+    color: #339;
+}
+
+#top-bar ul li ul a,
+#top-bar a:hover {
+    color: #339;
+}
+
+#side-bar .side-block {
+    border-radius: 20px;
+    border: 1px solid #d3d3d3;
+    background-color: #eee !important;
+    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
+}
+
+#side-bar .heading {
+    color: #339;
+    border-bottom: solid 1px #339;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #339;
+}
+
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #339;
+}
+
+.side-block .menu-item > .image {
+    filter:hue-rotate(250deg);
+}
+
+.scpnet-interwiki-frame {
+    filter:hue-rotate(260deg) !important;
+}
+
+.page-rate-widget-box .rate-points {
+    background-color: #eee !important;
+    color: #333 !important;
+    border: solid 1px #eee;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    box-shadow: none;
+}
+
+.page-rate-widget-box {
+    border-radius: 10px;
+}
+
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: #eee;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    font-weight: bold;
+
+}
+
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    color: #333;
+    padding: 0 4px;
+    margin: 0 1px;
+
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: #eee;
+    color: #bbb;
+}
+
+.page-rate-widget-box .cancel {
+    background-color: #eee;
+    border: solid 1px #eee;
+    border-left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.page-rate-widget-box .cancel a {
+    color: #333;
+}
+
+.page-rate-widget-box .cancel a:hover {
+    border-radius: 0 6px 6px 0;
+    background: #eee;
+    color: #bbb;
+}
+
+/* page stuff */
+.document {
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    background: #f0f0f0;
+    width: 96.5%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
+}
+
+hr {
+    background-color: rgba(0,0,0,0.12);
+}
+
+#page-title {
+    text-align: center;
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.hovertip {
+    background-color: #F3F3F3 !important;
+}
+
+/* mobile */
+
+@media (max-width: 767px) {
+    #side-bar {
+        background-color: #F3F3F3;
+    }
+
+    #header h2 span {
+        font-size: 50%;
+    }
 }
