@@ -54,7 +54,7 @@ googletag.enableServices();
         WIKIREQUEST.info.categoryId = 366566;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "miss-lohner-s-sandbox";
-        OZONE.request.timestamp = 1609276947;
+        OZONE.request.timestamp = 1609300683;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "miss-lohner-s-sandbox";
@@ -155,278 +155,242 @@ googletag.enableServices();
 </style>
 <style>
 :root {
-    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/logo-xmas-bhl.png");
-}
-#extra-div-1 {
-    height: 2rem;
-    width: 100%;
-    top: 9rem;
-    position: absolute;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/n1.png);
-    background-repeat: repeat-x;
-    background-size: 6.2rem;
-    pointer-events: none;
-    z-index: 9;
-   animation: lightOne 3s infinite steps(1, end);
-}
-#extra-div-2 {
-    height: 2rem;
-    width: 100%;
-    top: 9rem;
-    position: absolute;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/n2.png);
-    background-repeat: repeat-x;
-    background-size: 6.2rem;
-    pointer-events: none;
-    z-index: 9;
-   animation: lightTwo 3s infinite steps(1, end);
-}
-@keyframes lightOne {
-    0% 
-    {
-       opacity: 0;
-    }
-    50%
-    {
-       opacity: 1;
-    }
-    100%
-    {
-       opacity: 0;
-    }
-}
-@keyframes lightTwo {
-    0% 
-    {
-       opacity: 1;
-    }
-    50%
-    {
-       opacity: 0;
-    }
-    100%
-    {
-       opacity: 1;
-    }
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/component%3Apride-highlighter/ally_logo.svg") !important;
 }
 </style>
 <style>
-#extrac-div-1 {
-    height: 24rem;
-    width: 100%;
-    position: absolute;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn2.png);
-    background-repeat: repeat;
-    background-size: 230px;
-    z-index: 10;
-    pointer-events: none;
-    animation: snowOne 83s infinite linear;
-    filter: blur(1.3px);
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
 }
-#extrac-div-2 {
-    height: 24rem;
-    width: 100%;
-    position: absolute;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn.png);
-    background-repeat: repeat;
-    background-size: 370px;
-    z-index: 10;
-    pointer-events: none;
-    animation: snowTwo 39s infinite linear;
-    filter: blur(0.4px);
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
 }
-#extrac-div-3 {
-    height: 24rem;
-    width: 100%;
-    position: absolute;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn.png);
-    background-repeat: repeat;
-    background-size: 720px;
-    z-index: 10;
-    pointer-events: none;
-    animation: snowThree 21s infinite linear;
-    filter: blur(2.4px);
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
 }
-@media (max-width: 767px) {
-   #extrac-div-1, #extrac-div-2, #extrac-div-3 {
-       height: 10.5rem;
-   }
-  #extra-div-1, #extra-div-2 {
-       top: 10.2rem;
-  }
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
 }
-@keyframes snowOne{
-    0%
-    {
-     background-position: 0px 0px;
-            opacity: 0;
-    }
-    10%
-    {
-            opacity: 0.6;
-    }
-    90%
-    {
-            opacity: 0.5;
-     }
-    100%
-    {
-     background-position: 100px 750px;
-     opacity:0;
-    }
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
 }
-@keyframes snowTwo{
-    0%
-    {
-     background-position: 0px -100px;
-     opacity: 0;
-    }
-    8%
-    {
-            opacity: 0.74;
-    }
-    90%
-    {
-            opacity: 0.65;
-     }
-    100%
-    {
-     background-position: -50px 700px;
-     opacity: 0;
-    }
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
 }
-@keyframes snowThree{
-    0%
-    {
-     background-position: 0px 100px;
-     opacity: 0;
-    }
-    13%
-    {
-            opacity: 0.9;
-    }
-    91%
-    {
-            opacity: 0.8;
-    }
-    100%
-    {
-     background-position: 240px 750px;
-     opacity: 0;
-    }
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
 }
 </style>
 <style>
-.page {
+:root{
+--cutColour: #fafafa;
+--barColour: #590505;
+}
+
+.info-container .collapsible-block-folded a{
+color: #FFF;}
+.info-container .collapsible-block-unfolded-link a{
+color: #FFF;
+}
+
+#page-title {
+    text-align: center;
+}
+#page-content > .collapsible-block {
     display: block;
-    overflow: hidden;
-    font-family: "Monotype Corsiva", "Bradley Hand ITC", sans-serif;
-    font-style: normal;
+    text-align: center;
+    padding: 0.75em;
+    background-color: lightgrey;
+    border-top: 0.125rem dashed slategrey;
+    border-bottom: 0.125rem dashed slategrey;
+}
 
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image: linear-gradient(to top ,rgb(202, 219, 228) 0%, rgb(231, 233, 220) 8%);
-    background-origin: padding-box;
-    background-position: 0px 8px;
-    background-repeat: repeat;
-    background-size: 100% 20px;
+#page-content > .collapsible-block .collapsible-block-content {
+    text-align: left;
+}
 
-    border: 1px solid #CCC;
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
+.addendum {
+    border:solid 2px #999999;
+    background:#F5F5F5;
+    width:84%;
+    padding:1px 15px;
+    margin: 10px auto;
+}
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-.page p {
-    line-height: 20px;
-    margin: 0;
+#main-content .page-tags {
+    border-top: 2px solid rgba(var(--swatch-menubg-medium-color),.5);
+}
+
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background: rgb(48, 48, 52);
+    background: rgb(var(--swatch-menubg-dark-color, 48, 48, 52));
+    color: rgb(252, 252, 22);
+    color: rgb(var(--swatch-menutxt-light-color, 252, 252, 252));
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent
+     rgb(48, 48, 52)
+     transparent
+     transparent;
+    border-color:
+     transparent
+     rgb(var(--swatch-menubg-dark-color,  48, 48, 52))
+     transparent
+     transparent;
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--swatch-menubg-dark-color,  48, 48, 52));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: rgb(252, 252, 252);
+    background-color: rgb(var(--swatch-background, 252, 252, 252));
+    box-shadow: -0.0625rem -0.0625rem 0.125rem rgb(48, 48, 52);
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+
+.page-tags span {
+    border-top: .5rem solid transparent;
 }
 </style>
 <style>
-.page {
-    display: block;
-    overflow: hidden;
-    font-family: "Monotype Corsiva", "Bradley Hand ITC", sans-serif;
-    font-style: normal;
+@import url(http://topia.wdfiles.com/local--code/cqb%3Aflow/1);
+@import url("http://topia.wdfiles.com/local--code/cqb%3Aflow/1");
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
 
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image: linear-gradient(to top ,rgb(202, 219, 228) 0%, rgb(231, 233, 220) 8%);
-    background-origin: padding-box;
-    background-position: 0px 8px;
-    background-repeat: repeat;
-    background-size: 100% 20px;
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
 
-    border: 1px solid #CCC;
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-.page p {
-    line-height: 20px;
-    margin: 0;
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
 }
 </style>
 <style>
-.page {
-    display: block;
-    overflow: hidden;
-    font-family: "Monotype Corsiva", "Bradley Hand ITC", sans-serif;
-    font-style: normal;
-
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image: linear-gradient(to top ,rgb(202, 219, 228) 0%, rgb(231, 233, 220) 8%);
-    background-origin: padding-box;
-    background-position: 0px 8px;
-    background-repeat: repeat;
-    background-size: 100% 20px;
-
-    border: 1px solid #CCC;
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-.page p {
-    line-height: 20px;
-    margin: 0;
+#page-title {
+  display: none;
 }
 </style>
 <style>
-.page {
-    display: block;
-    overflow: hidden;
-    font-family: "Monotype Corsiva", "Bradley Hand ITC", sans-serif;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|PT+Mono|Poppins:600,800');
 
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image: linear-gradient(to top ,rgb(202, 219, 228) 0%, rgb(231, 233, 220) 8%);
-    background-origin: padding-box;
-    background-position: 0px 8px;
-    background-repeat: repeat;
-    background-size: 100% 20px;
+:root {
 
-    border: 1px solid #CCC;
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-.page p {
-    line-height: 20px;
-    margin: 0;
-}
+    --header-title: "Jakob17's Art Cavern";
+    --header-subtitle: "artpage of curiosity";
 </style>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
@@ -759,7 +723,7 @@ googletag.enableServices();
 <hr />
 </div>
     
-    <div class="pager"><span class="pager-no">page 1 of 11821</span><span class="current">1</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">2</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11820">11820</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11821">11821</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">next &raquo;</a></span></div>
+    <div class="pager"><span class="pager-no">page 1 of 11824</span><span class="current">1</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">2</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11823">11823</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11824">11824</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">next &raquo;</a></span></div>
     
     </div><div class="list-pages-box">    <div class="list-pages-item">
 
@@ -769,8 +733,8 @@ googletag.enableServices();
 <td style="border: 1px solid #888; padding: 0.3em 0.7em; text-align: left; background-color: #EEE;">
 <table style="border-collapse: collapse; border-spacing: 0; margin: 0px; width: 100%;">
 <tr>
-<td style="border: 0px; padding: 0px; text-align: left;"><span style="font-size:x-large;"><a href="/bear-flag-republic">Bear Flag Republic</a></span></td>
-<td style="border: 0px; padding: 0px; text-align: right; vertical-align: bottom;"><strong>rating: 4</strong></td>
+<td style="border: 0px; padding: 0px; text-align: left;"><span style="font-size:x-large;"><a href="/jakob17-s-art-cavern">Jakob17's Art Cavern</a></span></td>
+<td style="border: 0px; padding: 0px; text-align: right; vertical-align: bottom;"><strong>rating: 5</strong></td>
 </tr>
 </table>
 </td>
@@ -783,228 +747,137 @@ googletag.enableServices();
 
 
 
+
+
+
+
+
+
+
+
 <div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+41</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-<div style="border:solid 1px #999999; background:#FFFFFF; padding:5px; margin-bottom: 10px;">
-<div class="image-container aligncenter"><a href="http://scp-wiki.wdfiles.com/local--files/bear-flag-republic/seal"><img src="http://scp-wiki.wdfiles.com/local--resized-images/bear-flag-republic/seal/medium.jpg" style="width:300px;" alt="seal" class="image" /></a></div>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p style="text-align: center;"><strong>BY THE PRESIDENT OF THE UNITED STATES OF AMERICA</strong></p>
-<p style="text-align: center;"><strong>AN ANNOUNCEMENT</strong></p>
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-<div style="text-indent:20px">
-<p>By agreement between Congress and this most sacred office of the President of the United States, I proclaim that the gears of war in the western reaches of this great continent have begun their grind to a halt. It is in the American people's best interest to ensure a safe and competent acquisition of the western territories from our conquered neighbor.</p>
-<p>It won't be long now before our hands of justice embrace both seas of this glorious homeland; with the grace of God and the knowledge of our Forefathers, we will emerge from the bloodshed born anew, with revitalized determination for our destiny. With this, I call upon all citizens that hail the United States his home to duty; to uphold his sacred honor to self, God, and country, to respect the authority of his elected governors, and to fulfill his purpose to this blessed soil. Victory will not elude us; with the glory of this great authority, we will prevail.</p>
-<p>With conviction everlasting, done at the City of Washington the eighth day of June, one thousand eight hundred and forty-six, and of the independence of the United States the seventieth.</p>
-</div>
-<br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<div style="text-align: right;">
-<p><strong>JAMES K. POLK<br />
-PRESIDENT OF THE UNITED STATES</strong></p>
-</div>
-</div>
-<hr />
 
 
 
-<div class="page">
-<p><span style="font-size:150%;"><br />
-<tt>Captain John C. Frémont,</tt><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<tt>The President has asked for your progress in securing the territory west of Texas. He worries that your frequent delays may lead to backlash from the newspapers. I urge you to update his office on your position with haste; Washington is boiling on the charcoals of resentment for this war and I would hate for you to be caught in its eruption.</tt><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<tt>I await your response.</tt><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br /></span></p>
-<div style="text-align: right;">
-<p><strong>JAMES BUCHANAN</strong><br />
-<em>Secretary of State</em></p>
+<div style="text-align: center;">
+<h1><span>Hello there!</span></h1>
 </div>
-<br /></div>
-<hr />
-
-
-
-<div class="page">
-<p><span style="font-size:150%;"><br />
-<em>Buchanan,</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<em>I assure you, there is no problem with my men, nor is there an issue with my approach. Yes, we are behind schedule, but this war has been dragging on for much longer than anyone could have anticipated. Tell the President, if you must, that we will have California by the end of the month.</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br /></span></p>
-<div style="text-align: right;">
-<p><strong>Cpt. John C. Frémont</strong></p>
-</div>
-<br /></div>
-<hr />
-<div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#e6f7ef; float:top; width:96.5%; padding:10px">
-<div class="unmargined" style="text-align: center; font-family: 'Anton'; font-size: 275%; margin: 2px 0 5px;">
-<p>¡Independencia!</p>
-</div>
-<p style="text-align: center;">We hereby shed our bondage! No longer are we to be held under the boot of Mexico! From here, our sights are set on a free California; a Republic for the settlers and the indigenous, wholely and entirely free.</p>
-<p style="text-align: center;">Among our ranks is a comandante of fierce conviction and deadly precision. All contenders of our new nation, prepare to be met with the sting of our pistols and the shine of our swords! Our liberty will be paid for with blood!</p>
-<p style="text-align: center;">For this, we fight for independence!</p>
-</div>
-<hr />
-
-
-
-<div class="page">
-<p><span style="font-size:150%;"><br />
-<em>Buchannan,</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<em>I demand an explanation. Why was I not informed about the uprising in California? When my men arrived, we were greeted with a hail of musket rounds and cannon fire. We haven't suffered many casualties yet, but we are unequipped for this fight. I was under the impression California had no militia; certainly not the</em> organized <em>and highly equipped army we encountered in the foothills.</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<em>I will not advance again until I hear assurance that I will be provided with supplies for a sustained attack.</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br /></span></p>
-<div style="text-align: right;">
-<p><strong>Cpt. John Frémont</strong></p>
-</div>
-<br /></div>
-<hr />
-<div style="display: inline-block; border-radius: 10px; background:#cccccc; float:top; padding:10px">
-<h3><span>Excerpt from the diary of an unknown U.S. Soldier, California, circa 1846:</span></h3>
-<div style="text-indent:20px">
-<p>Orders were to push through the hills and approach San Fransisco from the West. Captain Frémont had us march at noon so that the natives could witness our military might in the light of day. We packed for a show, not a fight. Our cannons were empty and our rifles were sparsely prepared.</p>
-<p>We got within eyeshot of the town before a volley of fire rained on our convoy. We all scattered; I caught a glimpse of the Captain on his mount turn and ride for cover. I hid behind a mound until the volley ceased. I couldn't tell how many were wounded or killed, but the fire was heavy and sustained. I would have thought the natives had been trained; if their aim hadn't been so lousy.</p>
-<p>Before we could return fire, a booming voice echoed around us.</p>
-<p>I looked up to see a huge man, covered in navy blue wool and leather straps. He spoke with a slight Spanish accent, yet I felt I had known his voice all my life. A glittering rapier rested on his belt, and his wide-brimmed hat covered his face in shadows.</p>
-<p>&quot;Invaders, you are trespassing on the soil of this new nation. You have one chance, and one chance only, to return to your camps before we return you to your camps by force,&quot; he bellowed. &quot;My men will not miss the next time we fire.&quot;</p>
-<p>It was then when we heard the Captain's trumpet sing its song of retreat, that we graciously fled to the cover of the trees at the far end of the hills. Not a single shot rang as we made our escape.</p>
-<p>I don't know what to make of today's events. No one spoke of an army in California, so why is one here? And who was their general? I will write more in the morning; it's getting late and we're regrouping with the 7th battalion for a second assault on San Fransisco tomorrow.</p>
+<p>This page is filled with art that can be described as Good, Cursed, or Cool but you'll be the Judge so shall stumble in.</p>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-468b8eb1f6e50bdb6d834ab929a7db2f" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>SCPs</em></a></li>
+<li><a href="javascript:;"><em>Padoru</em></a></li>
+<li><a href="javascript:;"><em>Characters</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p>Pictures of the Varies Anomalies and or Events surrounding said anomalies.</p>
+<div style="text-align: center;">
+<h3><span>- <a href="/scp-662">SCP-662</a>/<a href="/scp-113">SCP-113</a> - Mrs.Deeds</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/662"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/662/medium.jpg" alt="662" class="image" /></a><br />
+Yes I know the stone is not here but please give me a better explanation, I'll wait</div>
 </div>
 </div>
-<hr />
-
-
-
-<div class="page">
-<p><span style="font-size:150%;"><br />
-<em>President James K. Polk,</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<em>I am pleased to announce the successful capture of San Fransisco by my forces. We lost not a single man in the assault, and, despite their initial resistance, the population of this town has thus far been cooperative.</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<em>I must inform you that the natives of San Fransisco demanded we hear to their terms if we are to occupy the town. I will meet them at the negotiation table tomorrow to discuss matters with their leader. I believe this approach was the only way we could safely take California. I await your next orders.</em><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br /></span></p>
-<div style="text-align: right;">
-<p><strong>Cpt. John C. Frémont</strong></p>
+<h3><span>- <a href="/scp-4795">SCP-4795</a> - Feathered F(r)iends-</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/4795"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/4795/medium.jpg" alt="4795" class="image" /></a><br />
+This was a gift for <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735419&amp;amp;size=small&amp;amp;timestamp=1609300683" alt="Lt Flops" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735419)" /></a><a href="http://www.wikidot.com/user:info/lt-flops" onclick="WIKIDOT.page.listeners.userInfo(1735419); return false;">Lt Flops</a></span> for the Art Exchange</div>
 </div>
-<br /></div>
-<hr />
-<div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#e6f7ef; float:top; width:96.5%; padding:10px">
-<div class="unmargined" style="text-align: center; font-family: 'Anton'; font-size: 275%; margin: 2px 0 5px;">
-<p>¡Libertad Eterna!</p>
 </div>
-<p style="text-align: center;">Our resistance was short-lived, but we would all be under the boot of yet another nation had it not been for our fearless savior! We respect your decision to remain anonymous, but because of your bravery during battle, and your skillful negotiations, the people of San Fransisco have elected to remember you as the Bear of California. In your honor, we raise our flag with pride!</p>
-<p style="text-align: center;">Wherever you may be, we will never forget what you did for our Republic.</p>
+<h3><span>- <a href="/scp-5366">SCP-5366</a> - Until death do us part and every day after -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/5366"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/5366/medium.jpg" alt="5366" class="image" /></a><br />
+I'm not proud of this one I don't say this because it's bad because it makes me feel sick in a good way</div>
 </div>
-<div class="image-container aligncenter"><a href="http://scp-wiki.wdfiles.com/local--files/bear-flag-republic/flag"><img src="http://scp-wiki.wdfiles.com/local--resized-images/bear-flag-republic/flag/medium.jpg" style="width:500px;" alt="flag" class="image" /></a></div>
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-<p style="text-align: center;">&#8230;</p>
-<p><span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="blockquote">
-<p style="text-align: center;"><span style="font-size:180%;"><strong>BEAR REPORT - THE YEAR OF 1847</strong></span></p>
-<p style="text-align: center;">Eventful year</p>
-<p style="text-align: center;">turmoil has been challenging</p>
-<p style="text-align: center;">but no challenge is too great for Ursidae ingenuity</p>
-<p style="text-align: center;">Abridged Guardian Bear Report:</p>
-<p style="text-align: center;">Polar Guardian Bear (&quot;Nanuq&quot;)</p>
-<p style="text-align: center;">status: to be inaugurated</p>
-<p style="text-align: center;">Greater Asia Guardian Bear (&quot;Tàiyáng&quot;)</p>
-<p style="text-align: center;">status: needs additional bear support</p>
-<p style="text-align: center;">Eastern Europe Guardian Bear (&quot;Wojtek&quot;)</p>
-<p style="text-align: center;">status: ok</p>
-<p style="text-align: center;">California Guardian Bear (&quot;Fuerza&quot;)</p>
-<p style="text-align: center;">status: recalled, pending reassignment</p>
-<p style="text-align: center;">Due to events outside of our organization's control</p>
-<p style="text-align: center;">California Guardian Bear (&quot;Fuerza&quot;) has been relocated to our Headquarters</p>
-<p style="text-align: center;">As international issues continue to increase in frequency</p>
-<p style="text-align: center;">our methods of operation must also adapt</p>
-<p style="text-align: center;">Additional bears are being trained for intervention protocol</p>
-<p style="text-align: center;">to alleviate future strain on resources</p>
-<p style="text-align: center;">Until further notice please continue operations as normal</p>
-<p style="text-align: center;">Thank you for your cooperation</p>
-<p style="text-align: center;"><strong>- <a href="http://scp-wiki.wikidot.com/scp-5464">The Obearwatch Command</a></strong></p>
 </div>
-</td>
+</div>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
+<p>Christmas the Time of Giving so I'm giving away some Padorus of different Authors or researchers</p>
+<div style="text-align: center;">
+<h3><span>- <a href="http://scp-wiki.wikidot.com/system:page-tags/tag/doctor-cimmerian#pages">Dr. Cimmerian</a> -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/cimmerian"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/cimmerian/medium.jpg" alt="cimmerian" class="image" /></a></div>
+</div>
+</div>
+<h3><span>- <a href="http://scp-wiki.wikidot.com/a-green-squid-kid-s-arts-n-crafts/comments/show">Dr. Green</a> -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/green"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/green/medium.jpg" alt="green" class="image" /></a></div>
+</div>
+</div>
+<h3><span>- <a href="http://scp-wiki.wikidot.com/rounderhouse-s-author-page">Rounderhouse</a> -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/rounderhouse"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/rounderhouse/medium.jpg" alt="rounderhouse" class="image" /></a></div>
+</div>
+</div>
+<h3><span>- <a href="http://scp-wiki.wikidot.com/scp-5936">Dr.Asheworth</a> -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/asheworth"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/asheworth/medium.jpg" alt="asheworth" class="image" /></a></div>
+</div>
+</div>
+</div>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<p>An Arrey of SCP Character in different art styles or doing some weird stuff.</p>
+<div style="text-align: center;">
+<h3><span>- Dr.Cimmerian at a Shooting range -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/shooting"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/shooting/medium.jpg" alt="shooting" class="image" /></a></div>
+</div>
+</div>
+<h3><span>- Dr. Clef and Dr. Iceberg as Chibis -</span></h3>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Show&nbsp;image</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Hide&nbsp;image</a></div>
+<div class="collapsible-block-content"><a href="http://scp-wiki.wdfiles.com/local--files/jakob17-s-art-cavern/chibi"><img src="http://scp-wiki.wdfiles.com/local--resized-images/jakob17-s-art-cavern/chibi/medium.jpg" alt="chibi" class="image" /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabView468b8eb1f6e50bdb6d834ab929a7db2f = new YAHOO.widget.TabView('wiki-tabview-468b8eb1f6e50bdb6d834ab929a7db2f');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script></td>
 </tr>
 <tr>
 <td style="border: 1px solid #888; padding: 0.3em 0.7em; text-align: center; background-color: #EEE;">
 <table style="border-collapse: collapse; border-spacing: 0; margin: 0px; width: 100%;">
 <tr>
-<td style="border: 0px; padding: 0px; text-align: left;">page tags:</td>
+<td style="border: 0px; padding: 0px; text-align: left;">page tags: artwork</td>
 <td style="border: 0px; padding: 0px; text-align: right; vertical-align: top;">comments: 1</td>
 </tr>
 </table>
@@ -1013,7 +886,7 @@ PRESIDENT OF THE UNITED STATES</strong></p>
 </table>
 </div>
     
-    <div class="pager"><span class="pager-no">page 1 of 11821</span><span class="current">1</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">2</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11820">11820</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11821">11821</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">next &raquo;</a></span></div>
+    <div class="pager"><span class="pager-no">page 1 of 11824</span><span class="current">1</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">2</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11823">11823</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/11824">11824</a></span><span class="target"><a href="/miss-lohner-s-sandbox/binge_p/2">next &raquo;</a></span></div>
     
     </div>
 <table class="wiki-content-table">
@@ -1147,45 +1020,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://uniofbeds.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/uniofbeds.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.larpard.cz">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.larpard.cz/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://uniofbeds.wikidot.com">Uniofbeds</a></h3>
+            <h3><a target="_blank" href="http://www.larpard.cz">Larpard</a></h3>
             <div class="desc">          
-              
+              Vše nejen o larpech ve východních Čechách
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://solpadeinehelp.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/solpadeinehelp.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.etnolinguistica.org">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.etnolinguistica.org/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://solpadeinehelp.wikidot.com">Solpadeine Help</a></h3>
+            <h3><a target="_blank" href="http://www.etnolinguistica.org">Biblioteca Digital Curt Nimuendajú</a></h3>
             <div class="desc">          
-              Help and information about Solpadeine addiction
+              línguas e culturas indígenas sul-americanas
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.ereticopedia.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.ereticopedia.org/80.jpg"/>
+            <a target="_blank" class="image" href="http://hiddenprojectwiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/hiddenprojectwiki.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.ereticopedia.org">ERETICOPEDIA</a></h3>
+            <h3><a target="_blank" href="http://hiddenprojectwiki.wikidot.com">Hidden Project</a></h3>
             <div class="desc">          
-              Mediterranean Digital &amp; Public Humanities
+              Welcome to Hidden Project Wiki
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://aeternuscenter.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/aeternuscenter.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://defunct-elitequestworlds.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/defunct-elitequestworlds.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://aeternuscenter.wikidot.com">Aeternus Center</a></h3>
+            <h3><a target="_blank" href="http://defunct-elitequestworlds.wikidot.com">EliteQuest Worlds</a></h3>
             <div class="desc">          
-              the ARG
+              Eqwwiki
             </div>
           </div>
         </div>
