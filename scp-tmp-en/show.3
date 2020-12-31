@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-    <title>███-3955 - SCP Foundation</title>
+    <title>Christmas Theme - SCP Foundation</title>
     
     	<script type='text/javascript'>
 var googletag = googletag || {};
@@ -51,14 +51,14 @@ googletag.enableServices();
         WIKIREQUEST.info.domain = "www.scpwiki.com";
         WIKIREQUEST.info.siteId = 66711;
         WIKIREQUEST.info.siteUnixName = "scp-wiki";
-        WIKIREQUEST.info.categoryId = 366566;
+        WIKIREQUEST.info.categoryId = 34790961;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-3955";
-        OZONE.request.timestamp = 1609384737;
+        WIKIREQUEST.info.requestPageName = "theme:xmas";
+        OZONE.request.timestamp = 1609402829;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
-                WIKIREQUEST.info.pageUnixName = "scp-3955";
-        WIKIREQUEST.info.pageId = 1306358982;
+                WIKIREQUEST.info.pageUnixName = "theme:xmas";
+        WIKIREQUEST.info.pageId = 1306058356;
                         WIKIREQUEST.info.lang = "en";
         OZONE.lang = "en";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -83,7 +83,7 @@ googletag.enableServices();
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
                             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                             
-        <link rel="canonical" href="/scp-3955" />
+        <link rel="canonical" href="/theme:xmas" />
 
     
     
@@ -151,71 +151,126 @@ googletag.enableServices();
     </script>
         
 <style>
-/* HEADER */
-#header{ background-image: url(http://scp-wiki.wdfiles.com/local--files/scp-4428/DoMC_Logo100.png); }
-#header h1 a{
-    display: block;
-    margin: 0;
-    padding: 80px 0 25px;
-    line-height: 0;
-    max-height: 0;
-    color: transparent;
-    background: transparent;
-    font-family: 'Verdana', Arial, sans-serif;
-    text-decoration: none;
-    text-shadow: none;
-    letter-spacing: 0.9px;
+/*
+    Xmas Theme
+    [2020 Wikidot Theme]
+       Originally made by Dc_Yerko for the Spanish Branch
+       Ported to -EN by stormbreath
+*/
+
+div#container-wrap {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/GIF-111.gif);
 }
-#header h1 a::before{
-    content: "DoMC";
-    color: white;
-    letter-spacing: -0.02em;
-    text-shadow: 3px 3px 5px black;
-}
-#header h2 span{
-    display: block;
-    margin: 0;
-    padding: 19px 0;
-    line-height: 0;
-    max-height: 0;
-    font-weight: bold;
-    color: transparent;
-    text-shadow: none;
-}
-#header h2 span::before{
-    content: 'Solving Communications Problems';
-    color: white;
-    text-shadow: 1px 1px 1px black;
+#header {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/logo-xmas.png)
 }
 
-.notice{
-    background: #b54d3b;
-    outline: 4px solid #b54d3b;
-    border: 1px solid #fdf560;
-    padding: 0.78em;
-    color: #fdf560;
-    text-align: center;
-    font-weight: bold;
-    word-break: unset;
+#top-bar div.open-menu a {
+    color: #990011;
+    border-color: #33552D;
 }
 
-.red{
-    color: #FF0000;
+/* ---- SNOWFALL, adapted from https://github.com/elena-in-code/Css-Snow-Fall-Animation ---- */
+
+#header-extra-div-1 {
+    height: 270px;
+    width: 99.4vw;
+    position: absolute;
+    left: calc((-100vw + 100%)/2);
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn2.png);
+    background-repeat: repeat;
+    background-size: 230px;
+    z-index: 2;
+    pointer-events: none;
+    animation: snowOne 83s infinite linear;
+    filter: blur(1.3px);
+}
+#header-extra-div-2 {
+    height: 270px;
+    width: 99.4vw;
+    position: absolute;
+    left: calc((-100vw + 100%)/2);
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn.png);
+    background-repeat: repeat;
+    background-size: 370px;
+    z-index: 2;
+    pointer-events: none;
+    animation: snowTwo 39s infinite linear;
+    filter: blur(0.4px);
+}
+#header-extra-div-3 {
+    height: 270px;
+    width: 99.4vw;
+    position: absolute;
+    left: calc((-100vw + 100%)/2);
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Axmas/sn.png);
+    background-repeat: repeat;
+    background-size: 720px;
+    z-index: 2;
+    pointer-events: none;
+    animation: snowThree 21s infinite linear;
+    filter: blur(2.4px);
 }
 
-.h2{
-    margin: 0.5em 0 0.4em;
-    padding: 0;
-    letter-spacing: 1px;
-    font-size: 150%;
-    font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
+@keyframes snowOne{
+    0%
+    {
+     background-position: 0px 0px;
+            opacity: 0;
+    }
+    10%
+    {
+            opacity: 0.6;
+    }
+    90%
+    {
+            opacity: 0.5;
+     }
+    100%
+    {
+     background-position: 100px 750px;
+     opacity:0;
+    }
 }
-
-.quote-block{
-    border: 3px double #999;
-    background-color: #d8e5f0;
-    padding: .25em 1em;
-    margin-bottom: 1em;
+@keyframes snowTwo{
+    0%
+    {
+     background-position: 0px -100px;
+     opacity: 0;
+    }
+    8%
+    {
+            opacity: 0.74;
+    }
+    90%
+    {
+            opacity: 0.65;
+     }
+    100%
+    {
+     background-position: -50px 700px;
+     opacity: 0;
+    }
+}
+@keyframes snowThree{
+    0%
+    {
+     background-position: 0px 100px;
+     opacity: 0;
+    }
+    13%
+    {
+            opacity: 0.9;
+    }
+    91%
+    {
+            opacity: 0.8;
+    }
+    100%
+    {
+     background-position: 240px 750px;
+     opacity: 0;
+    }
 }
 </style>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -494,7 +549,7 @@ googletag.enableServices();
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="https://interwiki.scpdb.org/?wiki=scp-wiki&amp;lang=en&amp;page=_default:scp-3955" align="" frameborder="" height="" scrolling="" width="" class="scpnet-interwiki-frame" style=""></iframe></p>
+<p><iframe src="https://interwiki.scpdb.org/?wiki=scp-wiki&amp;lang=en&amp;page=theme:xmas" align="" frameborder="" height="" scrolling="" width="" class="scpnet-interwiki-frame" style=""></iframe></p>
 </div>
     
     
@@ -514,7 +569,7 @@ googletag.enableServices();
                     
                     
                         <div id="page-title">
-                            ███-3955
+                            Christmas Theme
                         </div>
                     
 
@@ -527,148 +582,169 @@ googletag.enableServices();
                     <div id="page-content">
                         
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+28</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">rating:&nbsp;<span class="number prw54353">+40</span></span><span class="rateup btn btn-default"><a title="I like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="I don't like it" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="Cancel my vote" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<p>This is a theme originally created by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dc-yerko" onclick="WIKIDOT.page.listeners.userInfo(1780049); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1780049&amp;amp;size=small&amp;amp;timestamp=1609397263" alt="Dc_Yerko" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1780049)" /></a><a href="http://www.wikidot.com/user:info/dc-yerko" onclick="WIKIDOT.page.listeners.userInfo(1780049); return false;">Dc_Yerko</a></span> for the <a href="http://lafundacionscp.wikidot.com">Spanish Translation Site</a> and adapted by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/stormbreath" onclick="WIKIDOT.page.listeners.userInfo(3075960); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3075960&amp;amp;size=small&amp;amp;timestamp=1609397263" alt="stormbreath" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3075960)" /></a><a href="http://www.wikidot.com/user:info/stormbreath" onclick="WIKIDOT.page.listeners.userInfo(3075960); return false;">stormbreath</a></span>. Code for the snow flakes adapted by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3781861&amp;amp;size=small&amp;amp;timestamp=1609397263" alt="EstrellaYoshte" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3781861)" /></a><a href="http://www.wikidot.com/user:info/estrellayoshte" onclick="WIKIDOT.page.listeners.userInfo(3781861); return false;">EstrellaYoshte</a></span>.</p>
+<p>Use it on your own article with the following:</p>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-header=&#32;--]</span><br />
+<span style="white-space: pre-wrap;">|xmas-snow=&#32;--]]]</span></p>
+</div>
+<p>If you only want to use the header, use the following:</p>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-header=&#32;--]]]</span></p>
+</div>
+<p>If you only want to use the snow, use the following:</p>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-snow=&#32;--]]]</span></p>
+</div>
+<p>Likewise, to use with Black Highlighter:</p>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:black-highlighter-theme]]</span><br />
+<span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-header-bhl=&#32;--]</span><br />
+<span style="white-space: pre-wrap;">|xmas-snow-bhl=&#32;--]]]</span></p>
+</div>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:black-highlighter-theme]]</span><br />
+<span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-header-bhl=&#32;--]]]</span></p>
+</div>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;theme:black-highlighter-theme]]</span><br />
+<span style="white-space: pre-wrap;">[[include&#32;theme:xmas</span><br />
+<span style="white-space: pre-wrap;">|xmas-snow-bhl=&#32;--]]]</span></p>
+</div>
+<hr />
 
 
-
-<div style="text-align: center;">
-<blockquote>
-<h1 id="toc0"><span><tt>This document is currently being edited by Dr. ██████ ████. Please review changes before saving. All adjustments have been highlighted for manual review.</tt></span></h1>
-</blockquote>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<h3 id="toc1"><span>Last Update: April 12th, 4:02 PM</span></h3>
-</div>
-<div class="red">
-<div class="notice">
-<p>[<tt>Error, only certified staff members may edit or append formal notices. Please contact Site-<span style="color: red">█</span> for temporary access privileges.</tt>]</p>
-</div>
-</div>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="scp-image-block block-center" style="width:100%;"><img src="http://scp-wiki.wdfiles.com/local--files/scp-3955/anomalousnotes.png" style="width:100%;" alt="anomalousnotes.png" class="image" />
-<div class="scp-image-caption" style="width:100%;">
-<p><span style="color: red">███</span>-3955</p>
-</div>
-</div>
-<p><strong>Item #:</strong> <span style="color: red">███</span>-3955</p>
-<p><strong>Object Class:</strong> <span style="text-decoration: line-through;">Safe</span> <span style="color: red">Apollyon</span></p>
-<p><strong>Special Containment Procedures:</strong> <span style="color: red">███</span>-3955 does not require containment or concealment of any kind<span style="color: red">, aside from the obligatory warning towards all staff involved in the official ███ Foundation CAOCIT<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup> program to cease all testing involving musical or harmonic analysis.</span></p>
-<p><span style="color: red">The <a href="http://www.scpwiki.com/domc-hub" target="_blank">██████████ of █████████████████</a> is in charge of upkeep of this document's adherence to internally recognized regulations. All unauthorized changes are to be reverted immediately, and all updates are to be brought to ██████ ████ for manual review.</span></p>
-<p><strong>Description:</strong> <span style="color: red">███</span>-3955 is an eight note melody of relative pitches. These pitches may vary based on the key of the root note, but contain no additional pitches separating the main eight notes<sup class="footnoteref"><a id="footnoteref-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>. Because of the layout of a standard musical octave, there are twelve iterations of <span style="color: red">███</span>-3955, each beginning on a different root pitch, and updating the following pitches relative to the starting note. An example of <span style="color: red">███</span>-3955, beginning on F, has been provided below.</p>
-<p><iframe src="/scp-3955/html/3cca19f5a3163c3c373bb7c698b38937c0cfcc58-24508952039512891" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
-<p><span style="color: red">███</span>-3955 does not possess any anomalous properties, but is rather the biproduct of an anomalous phenomenon, which can be defined as follows: As time increases, the likelihood that an AI with the goal of creating music will produce something involving <span style="color: red">███</span>-3955 asymptotically approaches one. That is to say, after extreme lengths of time, it is nearly guaranteed that every piece of music produced by a given AI will contain <span style="color: red">███</span>-3955. The collective notes contained within <span style="color: red">███</span>-3955 do not fall into any commonly recognized scale<sup class="footnoteref"><a id="footnoteref-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-3')">3</a></sup>, and its inclusion is almost always as the bass line of the chord progression, rather than the actual melody.</p>
-<hr />
-<div style="text-align: center;">
-<h3 id="toc2"><span><span style="font-size:130%;">Addenda Materials</span></span></h3>
-</div>
-<hr />
-<p><strong>Addendum 01 - Background on CAOCIT</strong></p>
-<div class="quote-block">
-<p><strong>&#8212; [Beginning of Relevant Section] &#8212;</strong></p>
-<p><strong>Dr. <span style="color: red">██████ ████</span>:</strong> &#8230;and that recursive cycle of amplification is how we're able to use this technology to search for deep space waveforms with 10x more clarity than the current leading satellite system in the world. We've found some very interesting, albeit hard to decipher, signals in the so-called &quot;void&quot; of space.</p>
-<p><strong>Prof. <span style="color: red">███ ██████████</span>:</strong> Great, now, I want to move on to the other piece of technology your team worked on; I don't have the document number but I believe your boss referred to them as &quot;Time Boxes&quot;. Tell me about the research you're doing with those.</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> Yeah, sorry about that, the name Time Box is still a placeholder, MCD<sup class="footnoteref"><a id="footnoteref-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-4')">4</a></sup> is working on a more formal one at the moment. Oh, but sorry, to answer your question, Time Boxes are essentially the main power behind CAOCIT, they're what let us do all this long-term analysis so seamlessly.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> How are they, functionally?</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> Well, technically speaking, they're great! Most of the time, we'll hook up a computer to run for a few trillion years, consolidate its own data, and then reset the chamber automatically, so usually with only one Time Box, we can get a few septillion years of data analysis within an hour.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> That sounds&#8230; almost impossible to believe. And you have the data storage capacity to handle this?</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> Oh sure, data's the least of our problems. We spend far more time sanitizing than anything - when you're dealing with time on a pseudo-universal scale, stuff can get nasty really quick. We learned the hard way with Site-<span style="color: red">██</span> that if you leave so much as a piece of lint in a Time Box, that sucker will black hole in an instant.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> That much from just a piece of dust? I mean, do you have any precautions in place against, for example, getting a researcher trapped inside one during testing? From what it sounds like, if you let a second pass by before turning it off, you'd be far too late.</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> Well&#8230; we've done some smaller things like putting a person inside of one and setting it to an hour, but it's not as simple as &quot;an hour passes inside the box&quot;. The reality actually changes to adapt to what are essentially new laws of&#8230; well, reality. Limited experimentation has revealed some very intriguing effects of what being in that sort of reality can do to the human mind. Paranoia, delusions, and fear are all pretty common.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> Would someone inside be able to disable it themselves?</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> It's not super clear if they'd even want to; you experience time much differently while inside one, but from a practical standpoint, I don't see why not, after all, computers obviously work just fine. Plus it's not like we spend too much time inside of them ourselves. The only rooms that need a lot of personal maintenance are the calibration rooms, and we usually only hook those up to run for like three or four years max.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> Calibration? So, what, you just feed these computers a giant dataset and run it to see what it comes up with?</p>
-<p><strong>Dr. <span style="color: red">████</span>:</strong> That's how I'd explain it if I was in a hurry, but in reality, there are actually three computers per setup - one to do the primary analysis, one to do the production, and one to compare what computer two makes to the primary dataset, and filter what it deems fit back into computer one. Hence the &quot;Cyclical&quot; in CAOCIT.</p>
-<p><strong>Prof. <span style="color: red">██████████</span>:</strong> <em>(taking notes)</em> Interesting.</p>
-<p><strong>&#8212; [End of Relevant Section] &#8212;</strong></p>
-</div>
-<hr />
-<p><strong>Addendum 02 - Examples of <span style="color: red">███</span>-3955</strong></p>
-<p>The following audio files are taken from the database of CRYSTAL-INE, a general purpose AI at Site-<span style="color: red">██</span>, during CAOCIT procedural testing. In all three, <span style="color: red">███</span>-3955 is audible underneath the melody.</p>
-<p><iframe src="/scp-3955/html/1132136bb8d4c992ee61a42276551cf8647ab530-566688846817644647" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
-<p><iframe src="/scp-3955/html/f66c924d56ebc229a61d6295b0ac5659845b992f-1440621438246448163" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
-<p><strong>Note:</strong> The third audio file is an example of <span style="color: red">███</span>-3955 being harmonized by CRYSTAL-INE, which may make it slightly harder to pinpoint. In testing, it is not uncommon for the notes in <span style="color: red">███</span>-3955 to present as various levels of harmony within a single chord progression.</p>
-<p><iframe src="/scp-3955/html/c47dd85d912a22574e589ac9d935a78f7b7a178f-16340432751253598429" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
-<div class="red">
-<hr />
-<p><strong>Addendum 03 - Cross-Examination</strong></p>
-<blockquote>
-<p>On April 12th, at 4:02&#160;pm, Dr. ████ followed up on a hunch regarding ███-3955's possible connections to a series of abstract, deep-space transmissions found in CRYSTAL-INE's database. Findings indicate ████ ██ ███ ██ █████ █████ ██████ ██ ████ ███ ███ ████ █████████ ██████ ███ █████ ██ █ ████ ██ █████.</p>
-<hr />
-<p>There are to be no further additions to this document.</p>
-</blockquote>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<hr />
-<p><strong>Addendum 04 - [section name]</strong></p>
-<table class="wiki-content-table">
-<tr>
-<th>System Time</th>
-<th>Notes</th>
-</tr>
-<tr>
-<td>16:02</td>
-<td>∙Near-certain signal manipulation<br />
-∙Possible memetic/antimemetic encapsulation<br />
-∙Possible identity encapsulation<br />
-∙Possibly infohazardous<br />
-∙All identifying information redacted<br />
-∙All direct reference prohibited</td>
-</tr>
-<tr>
-<td>16:02</td>
-<td>∙Emotional anomaly<br />
-∙Possible anticommunicative properties<br />
-∙Imbues self-doubt (by the songs)<br />
-∙Strong connection to the music (it wants the music)<br />
-∙Not able to disable the music (part of the effect?)</td>
-</tr>
-<tr>
-<td>16:02</td>
-<td>∙The music is stronger than them<br />
-∙Disables good feelings (about it, and the music)<br />
-∙Where am I? (irrelevant, check later)<br />
-∙Patterns in the music (I know them, they don't but they find them)</td>
-</tr>
-<tr>
-<td>16:03</td>
-<td>∙The music is cyclical (cycles) (cycles)<br />
-∙They aren't real (they only want the music?)<br />
-∙The music creates a connection to them (they are unknown)</td>
-</tr>
-<tr>
-<td>16:03</td>
-<td>∙I think they exist, I am listening to the music (the music creates a false perception in my reality?)<br />
-∙The music is the one making the reality, I always listen to it (won't turn it off. Point noted)<br />
-∙Analysis of the music: It ends on a good, middle, a nice middle of the road note. The middle, a middle note, a good middle. (It's the middle note)</td>
-</tr>
-<tr>
-<td>16:03</td>
-<td>∙Three parts of the music, three men, Metal (three metal music men)<br />
-∙Measure, Music, mmm (put back around, throw? something with an M)<br />
-∙It throws, bad evil, it's a meanie? (Mister Meanie, perhaps?)</td>
-</tr>
-<tr>
-<td>16:04</td>
-<td>∙This one is Mister Measure. I call him that because he measures all the notes to see just what kind of notes they are, so clean. So clean Mister Measure<br />
-∙And next is my favorite, Mister Music. He makes all the lovely music. all the eight notes over and over and over. Mister Music is a wonderful composer. Sing me a song Mister Music, and he does.<br />
-∙But then Mister Meanie is always bullying Mister Music. Oooh, scary, take all his hard work and flush, down the toilet, throw it all back at Mister Measure. Mister Meanie loves to throw all of his music into the trash and at Mister Measure. How evil.<br />
-∙I don't think Mister Music is listening to me, he just makes all the lovely music that's just for me. But the music is why it's all there is, just music. It's the music's fault. (mister music's fault)<br />
-∙The music has the effects on me and emotions, it gives me thoughts. Giving my thoughts&#8230; the music is giving them.<br />
-∙Not me.<br />
-∙not me</td>
-</tr>
-</table>
-</div>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="footnotes-footer">
-<div class="title">Footnotes</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. Cyclical Analysis Over Countably Infinite Time</div>
-<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. With the exception of sequences of each note appearing in tandem uniformly.</div>
-<div class="footnote-footer" id="footnote-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-3')">3</a>. Some versions of a Spanish Eight Tone Scale can be adapted to contain the notes of <span style="color: red">███</span>-3955.</div>
-<div class="footnote-footer" id="footnote-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-4')">4</a>. Methodical Colloquialism Division</div>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">/</span><span class="hl-identifier">*</span><span class="hl-code">
+    </span><span class="hl-identifier">Xmas</span><span class="hl-code"> </span><span class="hl-identifier">Theme</span><span class="hl-code">
+    </span><span class="hl-brackets">[</span><span class="hl-var">2020</span><span class="hl-code"> </span><span class="hl-var">Wikidot</span><span class="hl-code"> </span><span class="hl-var">Theme</span><span class="hl-brackets">]</span><span class="hl-code">
+       </span><span class="hl-identifier">Originally</span><span class="hl-code"> </span><span class="hl-identifier">made</span><span class="hl-code"> </span><span class="hl-identifier">by</span><span class="hl-code"> </span><span class="hl-identifier">Dc</span><span class="hl-code">_</span><span class="hl-identifier">Yerko</span><span class="hl-code"> </span><span class="hl-identifier">for</span><span class="hl-code"> </span><span class="hl-identifier">the</span><span class="hl-code"> </span><span class="hl-identifier">Spanish</span><span class="hl-code"> </span><span class="hl-identifier">Branch</span><span class="hl-code">
+       </span><span class="hl-identifier">Ported</span><span class="hl-code"> </span><span class="hl-identifier">to</span><span class="hl-code"> -</span><span class="hl-identifier">EN</span><span class="hl-code"> </span><span class="hl-identifier">by</span><span class="hl-code"> </span><span class="hl-identifier">stormbreath</span><span class="hl-code">
+</span><span class="hl-identifier">*</span><span class="hl-code">/
+ 
+</span><span class="hl-identifier">div#container-wrap</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">background-image:</span><span class="hl-code"> url(http://scp-wiki.wdfiles.com/local--files/theme%</span><span class="hl-number">3</span><span class="hl-code">Axmas/GIF-111.gif)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-identifier">#header</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">background-image:</span><span class="hl-code"> url(http://scp-wiki.wdfiles.com/local--files/theme%</span><span class="hl-number">3</span><span class="hl-code">Axmas/logo-xmas.png)
+</span><span class="hl-brackets">}</span><span class="hl-code">
+ 
+</span><span class="hl-identifier">#top-bar</span><span class="hl-code"> </span><span class="hl-identifier">div.open-menu</span><span class="hl-code"> </span><span class="hl-identifier">a</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">color:</span><span class="hl-code"> </span><span class="hl-var">#990011</span><span class="hl-code">;
+    </span><span class="hl-reserved">border-color:</span><span class="hl-code"> </span><span class="hl-var">#33552D</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+ 
+/</span><span class="hl-identifier">*</span><span class="hl-code"> ---- </span><span class="hl-identifier">SNOWFALL</span><span class="hl-code">, </span><span class="hl-identifier">adapted</span><span class="hl-code"> </span><span class="hl-identifier">from</span><span class="hl-code"> </span><span class="hl-identifier">https</span><span class="hl-code">://</span><span class="hl-identifier">github.com</span><span class="hl-code">/</span><span class="hl-identifier">elena-in-code</span><span class="hl-code">/</span><span class="hl-identifier">Css-Snow-Fall-Animation</span><span class="hl-code"> ---- </span><span class="hl-identifier">*</span><span class="hl-code">/
+ 
+</span><span class="hl-identifier">#header-extra-div-1</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">height:</span><span class="hl-code"> </span><span class="hl-number">270</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">width:</span><span class="hl-code"> </span><span class="hl-number">99.4</span><span class="hl-code">vw</span><span class="hl-code">;
+    </span><span class="hl-reserved">position:</span><span class="hl-code"> </span><span class="hl-string">absolute</span><span class="hl-code">;
+    </span><span class="hl-reserved">left:</span><span class="hl-code"> calc((-</span><span class="hl-number">100</span><span class="hl-code">vw + </span><span class="hl-number">100</span><span class="hl-string">%</span><span class="hl-code">)/</span><span class="hl-number">2</span><span class="hl-code">)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background:</span><span class="hl-code"> url(http://scp-wiki.wdfiles.com/local--files/theme%</span><span class="hl-number">3</span><span class="hl-code">Axmas/sn2.png)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-repeat:</span><span class="hl-code"> </span><span class="hl-string">repeat</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-size:</span><span class="hl-code"> </span><span class="hl-number">230</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">z-index:</span><span class="hl-code"> </span><span class="hl-number">2</span><span class="hl-code">;
+    </span><span class="hl-reserved">pointer-events:</span><span class="hl-code"> </span><span class="hl-string">none</span><span class="hl-code">;
+    </span><span class="hl-reserved">animation:</span><span class="hl-code"> snowOne </span><span class="hl-number">83</span><span class="hl-code">s infinite linear</span><span class="hl-code">;
+    </span><span class="hl-reserved">filter:</span><span class="hl-code"> blur(</span><span class="hl-number">1.3</span><span class="hl-string">px</span><span class="hl-code">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-identifier">#header-extra-div-2</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">height:</span><span class="hl-code"> </span><span class="hl-number">270</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">width:</span><span class="hl-code"> </span><span class="hl-number">99.4</span><span class="hl-code">vw</span><span class="hl-code">;
+    </span><span class="hl-reserved">position:</span><span class="hl-code"> </span><span class="hl-string">absolute</span><span class="hl-code">;
+    </span><span class="hl-reserved">left:</span><span class="hl-code"> calc((-</span><span class="hl-number">100</span><span class="hl-code">vw + </span><span class="hl-number">100</span><span class="hl-string">%</span><span class="hl-code">)/</span><span class="hl-number">2</span><span class="hl-code">)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background:</span><span class="hl-code"> url(http://scp-wiki.wdfiles.com/local--files/theme%</span><span class="hl-number">3</span><span class="hl-code">Axmas/sn.png)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-repeat:</span><span class="hl-code"> </span><span class="hl-string">repeat</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-size:</span><span class="hl-code"> </span><span class="hl-number">370</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">z-index:</span><span class="hl-code"> </span><span class="hl-number">2</span><span class="hl-code">;
+    </span><span class="hl-reserved">pointer-events:</span><span class="hl-code"> </span><span class="hl-string">none</span><span class="hl-code">;
+    </span><span class="hl-reserved">animation:</span><span class="hl-code"> snowTwo </span><span class="hl-number">39</span><span class="hl-code">s infinite linear</span><span class="hl-code">;
+    </span><span class="hl-reserved">filter:</span><span class="hl-code"> blur(</span><span class="hl-number">0.4</span><span class="hl-string">px</span><span class="hl-code">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-identifier">#header-extra-div-3</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">height:</span><span class="hl-code"> </span><span class="hl-number">270</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">width:</span><span class="hl-code"> </span><span class="hl-number">99.4</span><span class="hl-code">vw</span><span class="hl-code">;
+    </span><span class="hl-reserved">position:</span><span class="hl-code"> </span><span class="hl-string">absolute</span><span class="hl-code">;
+    </span><span class="hl-reserved">left:</span><span class="hl-code"> calc((-</span><span class="hl-number">100</span><span class="hl-code">vw + </span><span class="hl-number">100</span><span class="hl-string">%</span><span class="hl-code">)/</span><span class="hl-number">2</span><span class="hl-code">)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background:</span><span class="hl-code"> url(http://scp-wiki.wdfiles.com/local--files/theme%</span><span class="hl-number">3</span><span class="hl-code">Axmas/sn.png)</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-repeat:</span><span class="hl-code"> </span><span class="hl-string">repeat</span><span class="hl-code">;
+    </span><span class="hl-reserved">background-size:</span><span class="hl-code"> </span><span class="hl-number">720</span><span class="hl-string">px</span><span class="hl-code">;
+    </span><span class="hl-reserved">z-index:</span><span class="hl-code"> </span><span class="hl-number">2</span><span class="hl-code">;
+    </span><span class="hl-reserved">pointer-events:</span><span class="hl-code"> </span><span class="hl-string">none</span><span class="hl-code">;
+    </span><span class="hl-reserved">animation:</span><span class="hl-code"> snowThree </span><span class="hl-number">21</span><span class="hl-code">s infinite linear</span><span class="hl-code">;
+    </span><span class="hl-reserved">filter:</span><span class="hl-code"> blur(</span><span class="hl-number">2.4</span><span class="hl-string">px</span><span class="hl-code">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+ 
+</span><span class="hl-var">@keyframes</span><span class="hl-code"> </span><span class="hl-identifier">snowOne</span><span class="hl-brackets">{</span><span class="hl-code">
+    0%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-string">px</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-string">px</span><span class="hl-code">;
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    10%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.6</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    90%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.5</span><span class="hl-code">;
+     </span><span class="hl-brackets">}</span><span class="hl-code">
+    100%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> </span><span class="hl-number">100</span><span class="hl-string">px</span><span class="hl-code"> </span><span class="hl-number">750</span><span class="hl-string">px</span><span class="hl-code">;
+     </span><span class="hl-reserved">opacity:</span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-var">@keyframes</span><span class="hl-code"> </span><span class="hl-identifier">snowTwo</span><span class="hl-brackets">{</span><span class="hl-code">
+    0%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-string">px</span><span class="hl-code"> -</span><span class="hl-number">100</span><span class="hl-string">px</span><span class="hl-code">;
+     </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    8%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.74</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    90%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.65</span><span class="hl-code">;
+     </span><span class="hl-brackets">}</span><span class="hl-code">
+    100%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> -</span><span class="hl-number">50</span><span class="hl-string">px</span><span class="hl-code"> </span><span class="hl-number">700</span><span class="hl-string">px</span><span class="hl-code">;
+     </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-var">@keyframes</span><span class="hl-code"> </span><span class="hl-identifier">snowThree</span><span class="hl-brackets">{</span><span class="hl-code">
+    0%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-string">px</span><span class="hl-code"> </span><span class="hl-number">100</span><span class="hl-string">px</span><span class="hl-code">;
+     </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    13%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.9</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    91%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+            </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0.8</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    100%
+    </span><span class="hl-brackets">{</span><span class="hl-code">
+     </span><span class="hl-reserved">background-position:</span><span class="hl-code"> </span><span class="hl-number">240</span><span class="hl-string">px</span><span class="hl-code"> </span><span class="hl-number">750</span><span class="hl-string">px</span><span class="hl-code">;
+     </span><span class="hl-reserved">opacity:</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span>
+</pre></div>
 </div>
 
                     </div>
@@ -691,7 +767,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/art-exchange#pages">art-exchange</a><a href="/system:page-tags/tag/audio#pages">audio</a><a href="/system:page-tags/tag/_cc#pages">_cc</a><a href="/system:page-tags/tag/computer#pages">computer</a><a href="/system:page-tags/tag/esoteric-class#pages">esoteric-class</a><a href="/system:page-tags/tag/meta#pages">meta</a><a href="/system:page-tags/tag/miscommunications#pages">miscommunications</a><a href="/system:page-tags/tag/musical#pages">musical</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/temporal#pages">temporal</a>
+                                <a href="/system:page-tags/tag/_cc#pages">_cc</a><a href="/system:page-tags/tag/theme#pages">theme</a>
                             </span>
                         </div>
                     
@@ -699,12 +775,12 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410946564449-0');
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">page revision: 6, last edited: <span class="odate time_1609366500 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">30 Dec 2020 22:15</span></div>
+                            <div id="page-info">page revision: 45, last edited: <span class="odate time_1607881956 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">13 Dec 2020 17:52</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+28</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">Rate (<span id="prw54355">+40</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
-<a href="/forum/t-13964752/scp-3955" class="btn btn-default" id="discuss-button">Discuss (15)</a>
+<a href="/forum/t-13893926/theme:xmas" class="btn btn-default" id="discuss-button">Discuss (10)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">History</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
@@ -771,45 +847,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://media.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/media.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://fmiseria3.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fmiseria3.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://media.wikidot.com">My, media</a></h3>
+            <h3><a target="_blank" href="http://fmiseria3.wikidot.com">Portalul Seriilor de Informatica</a></h3>
             <div class="desc">          
-              by the people, for the people
+              Facultatea de Matematica si Informatica, Universitatea din Bucuresti
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://iracing.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/iracing.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://colbycriminaljustice.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/colbycriminaljustice.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://iracing.wikidot.com">iRacing.com Wiki</a></h3>
+            <h3><a target="_blank" href="http://colbycriminaljustice.wikidot.com">Criminal Justice Collaboratory</a></h3>
             <div class="desc">          
-              Your one-stop-shop for all iRacing setup help and knowledge.
+              Colby Community College
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://fortean.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fortean.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://pylint-messages.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pylint-messages.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://fortean.wikidot.com">Forteana: The Fortean Wiki</a></h3>
+            <h3><a target="_blank" href="http://pylint-messages.wikidot.com">PyLint Messages</a></h3>
             <div class="desc">          
-              The World of Strange Phenomena
+              and what they&#039;re trying to tell you
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chessvariants.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chessvariants.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://05command.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/05command.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chessvariants.wikidot.com">Chess Variants Wiki</a></h3>
+            <h3><a target="_blank" href="http://05command.wikidot.com">O5 Command</a></h3>
             <div class="desc">          
-              
+              Why they changed it I can&#039;t say. People just liked it better that way
             </div>
           </div>
         </div>

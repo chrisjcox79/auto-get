@@ -1,160 +1,303 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Play');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Turret+Road&display=swap');
+
 /*
-    Powered on 2019/09/06 03:05:59
-    [2019 Wikidot Theme]
-    Created by hey_kounoike
-    Fixed by Nanigashi Sato & Mishary
-    CC BY-SA 3.0
+    This theme is based in SCP-001 Darkbody Theme
+    Darkbody Theme Information:
+    [2018 Wikidot Theme]
+    Based on Aelanna's Sigma 9 and Greenwolf's Third Law
+    Edited by djkaktus for the Doomsday Contest
+    Facelifted by stormbreath.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Noto+Serif+SC&display=swap');
-
-/* COMMON */
-#page-content strong {
-    font-weight: bold;
-    margin-top: 4px;
+h1, #page-title {
+    color: #c9c9c9;
 }
+
+a,
+a.newpage,
+a:visited,
+#side-bar a:visited {
+    color: #72bd46;
+}
+
 body {
-    font-family: 'Noto Serif SC';
+    background-color: #000;
+    color: #C9C9C9;
 }
 div#container-wrap {
-    background: url( http://scp-jp-sandbox3.wikidot.com/local--files/draft:2094799-27-2d6f/haikei) top left repeat-x;
+    background-image: url(http://scp-yerko-2.wdfiles.com/local--files/component%3Aluistheme/body_bg.jpg) ;
 }
-div#header {
-    background: url( http://scp-jp.wdfiles.com/local--files/theme%3Afusouki-theme/Japanese_crest_Kiku_ni_Ichimonnji_2.svg ) 10px 40px no-repeat;
-    background-size: 100px;
-    background-position: 10px;
-}
-div#header h1 a span {
-    font-size: 0px;
-}
-div#header h1 a:before {
-    font-family: 'Noto Serif SC';
-    content: "扶桑紀";
-    color: rgb(68, 68, 68);;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
-}
-div#header h2 span {
-    font-size:0px;
-    padding: 4px;
-}
-div#header h2:after {
-    font-family: 'Noto Serif SC';
-    content: "此載皇基國體";
-    font-weight: bold;
-    color: rgb(68, 68, 68);;
-    padding: 19px 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    white-space: pre;
-}
-#login-status {
-    color: #333;
-}
-#login-status a {
-    color: inherit;
+
+/* HEADER */
+#header {
+    position: relative;
+    z-index: 10;
+    background: url(http://scp-yerko-2.wdfiles.com/local--files/component%3Aluistheme/ohmerlin.png) 10px 36px no-repeat !important;
 }
 #search-top-box-input {
-    border: solid 1px #999;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
+    border: solid 1px #2F4F4F;
+    color: #ccc;
+    background-color: #708090;
 }
-#search-top-box-input:hover, #search-top-box-input:focus {
-    border: solid 1px #000;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    border: solid 1px #2F4F4F;
+    color: #fff;
+    background-color: #708090;
 }
 #search-top-box-form input[type=submit] {
-    padding: 2px 5px;
-    border: solid 1px #999;
-    border-radius: 5px;
-    background: none;
-    background-color: #000;
-    box-shadow: none;
-    color: #ccc;
-    font-size: 90%;
-    font-weight: bold;
-    cursor: pointer;
+    border: solid 1px #2F4F4F;
+    color: #000000;
+    background-color: #708090;
+    background: linear-gradient(to bottom, #778899,#708090,#2F4F4F);
 }
-#search-top-box-form input[type=submit]:hover, #search-top-box-form input[type=submit]:focus {
-    border: solid 1px #000;
-    background: none;
-    background-color: #ccc;
-    box-shadow: none;
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #2F4F4F;
+    background-color: #708090;
+    background: linear-gradient(to bottom, #778899,#708090,#2F4F4F);
+}
+
+#login-status {
+    color: #708090;
+}
+#login-status a {
+    color: #708090;
+}
+#login-status ul a {
+    color: #708090;
+}
+
+#account-topbutton {
+    background: #2F4F4F;
+    color: #708090;
+}
+
+#header h1 a {
+    padding: 80px 0px 25px;
+    color: transparent;
+    background: transparent;
+    font-family: 'Turret Road', '幼圆', cursive;
+    font-size: 180%;
     text-shadow: none;
-    color: #fff;
 }
 
-/* For Smartphone */
-@media (max-width: 600px) {
-
-    div#header {
-        background-position: -5px 20px;
-    }
-
-    div#header h1 a {
-        padding: 72px 0 10px 20px;
-    }
-
-    div#header h1 a:before {
-        font-size: 160%;
-    }
-
-    div#header h2:after {
-        padding: 0 0 0 20px;
-    }
-
-    div#search-top-box {
-        top: 80px;
-    }
-
-    #search-top-box-input {
-        display: none;
-    }
-
+#header h1 a::before {
+    content: "凝望已死群星";
+    font-size: 45%;
+    color: #72bd46;
+    text-shadow: 3px 3px 5px #242424;
 }
 
-/* J-style Ruby Font */
-
-tt {
-    font-family: 'Noto Serif SC', sans-serif;
+#header h2 span {
+    padding: 15px 0;
+    color: transparent;
+    text-shadow: none;
 }
 
-/* CreditButton */
+#header h2 span::before {
+    content: '有多少兔子，在那星辰之间？';
+    color: #c9c9c9;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    font-family: 'Turret Road', '幼圆', cursive;
+    text-align: center;
+}
+
+#top-bar a {
+    color: #C0C0C0;
+}
+
+#top-bar ul li ul {
+    border: solid 1px #72bd46;
+}
+
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a {
+    background: #44163c;
+    color: #C9C9C9;
+}
+
+#top-bar ul li.sfhover ul li a,
+#top-bar ul li:hover ul li a {
+    border-top: 1px solid #ddd;
+}
+
+#top-bar ul li.sfhover a:hover,
+#top-bar ul li:hover a:hover {
+    background: #a93d98;
+}
+
+#top-bar ul li ul a, #top-bar a:hover {
+    color: #a01;
+}
+
+/* SIDE MENU */
+.side-block .menu-item > .image {
+    filter: hue-rotate(210deg);
+    -webkit-filter: hue-rotate(210deg);
+}
+
+
+#side-bar .side-block {
+    border: 1px solid #D6D6D6;
+    box-shadow: 0 2px 6px rgba(32,32,32,1) !important;
+    background: #000000 !important;
+}
+
+#side-bar .heading {
+    color: #D6D6D6;
+    border-bottom: solid 1px #D6D6D6;
+}
+
+
+#side-bar div.menu-item.inactive a {
+    color: #D6D6D6;
+}
+
+#side-bar div.menu-item .sub-text {
+    color: #D6D6D6;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #D6D6D6;
+}
+
+
+/* YUI-TABS */
+.yui-navset .yui-content {
+    color: white;
+    background-color: #212121;
+}
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color:#d8d8d8;
+    background-image: url(none);
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background: #490ea9; /* selected tab background */
+    background-image: url(none)
+}
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background: #FCDBFF;
+    background-image: url(none);
+}
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #400040;
+}
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #6c006c;
+}
+
+/* OTHER STRUCTURAL ELEMENTS */
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+}
+
+/* Page Rating Module Customizations */
 .page-rate-widget-box {
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+     box-shadow: 0px 0px 0px 0px #FFFFFF;
+     background-color: #FFFFFF;
+     padding: .1em;
 }
+
 .page-rate-widget-box .rate-points {
-    border: solid 1px #000;
-    background-color: #000 !important;
+    background-color: #581C58 !important;
+    border: none;
+    color: #FFFFFF!important;
+    text-transform: capitalize;
 }
-.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
-    border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: #581C58;
+    border-top: none;
+    border-bottom: none;
 }
-.page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a {
-    color: #000;
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: #FFFFFF;
 }
-.page-rate-widget-box .rateup a:hover, .page-rate-widget-box .ratedown a:hover {
-    background: #000;
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: #FFFFFF;
+    color: #581C58;
 }
 .page-rate-widget-box .cancel {
-    border: solid 1px #000;
-    background-color: #000;
+    background-color: #581C58;
+    border: none;
 }
 .page-rate-widget-box .cancel a {
-    color: #ccc;
+    color: #FFFFFF;
 }
 .page-rate-widget-box .cancel a:hover {
-    border-radius: 0 3px 3px 0;
-    background: #000;
-    color: #fffff0;
+    background: #FFFFFF;
+    color: #581C58;
 }
-#page-content .rate-box-with-credit-button {
-    background-color: #000;
-    border-color: #000;
+
+/* Standard Image Block */
+.scp-image-block {
+    border: solid 1px #000;
+    color: #C9C9C9;
 }
-#page-content .creditButton p a {
-    border-left-color: #ccc;
+
+.scp-image-block .scp-image-caption {
+    color: #eee;
+    background-color: #424242 !important;
+    border-top: solid 1px #2F4F4F;
+}
+
+
+@media (max-width: 767px) {
+
+.open-menu a {
+    border: 0.2em solid #2F4F4F !important;
+    background-color: #C0C0C0 !important;
+    color: #2F4F4F !important;
+}
+
+#side-bar {
+    background-color: rgb(192, 192, 192);
+}
+ }
+
+/* Cambiar color de los recuadros con > */
+
+blockquote {
+    background-color: #551c56;
+}
+
+/* Cambiar color de los desplegables */
+a.collapsible-block-link {
+    color: #72bd46;
+}
+
+.footnotes-footer {
+    background: black !important;
+}
+
+/* TRANSLATION BLOCK */
+div.scpnet-interwiki-wrapper {
+    filter: hue-rotate(230deg) saturate(150%) invert(80%);
+}
+
+/* Intentando arreglar las footnotes */
+
+.hovertip {
+     border: 1px solid #555 !important;
+     background-color: black !important;
+     color: #fff !important;
 }
