@@ -1,335 +1,367 @@
-/*
-    Marshall, Carter & Dark
-    [2014 Wikidot Theme, 2018 Update]
-    Originally created for the SCP Foundation GoI Contest of 2014 (MC&D team and Group of Interest) by Randomini. Thanks to Reach, Aelanna and Crayne for the template.
-     Updated by stormbreath for mobile compatibility.
-*/
+@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 
-/* RECOLOR THE TITLE */
-h1, #page-title {
-    color: #320042;}
+@supports(--css: variables) {
 
-#page-title {
-    font-weight: lighter;
-    border-color: #320042;
-}
-
-/*RECOLOR THE LINKS */
-a {
-    color: #6C4279;
-}
-
-a.newpage {
-    color: #4312A5;
-}
-
-#side-bar a:visited{
-    color: #6C4279;
-}
-
-a:visited {
-    color: #6C4279;
-}
-
-/*HEADER IMAGES*/
-div#container-wrap {
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amcd/body_bg_MCD2.png) repeat-x;
-}
-
-#header {
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amcd/MCDLogo2-small.png) no-repeat;
-}
-
-
-/* Adjust Mobile Image Size */
-@media (max-width: 479px) {
-#header {
-    background-size: 150px 75px;
-    background-position: 1em;
-}
-}
-@media (min-width: 480px) and (max-width: 580px) {
-#header {
-    background-size: 180px 90px;
-    background-position: 1em;
-}
-}
-@media (min-width: 581px) and (max-width: 767px) {
-#header {
-    background-size: 210px 105px;
-    background-position: 1em;
-}
-}
-@media (min-width: 768px) and (max-width: 979px) {
-#header {
-    background-size: 240px 120px;
-    background-position: 1em;
-}
-}
-
-
-/* HIDE THE HEADER TEXT */
-#header h1 a {
-    font-size: 0%;
-}
-
-#header h2 span {
-    font-size: 0%;
-}
-
-/* RECOLOR THE SEARCH BAR */
-#search-top-box-input {
-    border-color: #3E2646;
-    color: #6E3251;
-    background-color: #603B6C;
-}
-
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    background-color: #282053;
-}
-
-#search-top-box-form input[type=submit] {
-    border: solid 1px #AF4FCF;
-    color: #ccc;
-    background-color: #282053;
-    background: linear-gradient(to bottom, #371F3D,#282053,#8D6BA9);
-}
-
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #fff;
-    background-color: #87a96b;
-    background: linear-gradient(to bottom, #7E608A,#946BA9,#8C3CA6);
-}
-
-/* LOGIN STUFF */
-#login-status {
-    color: #C5A3C5;
-}
-#login-status a {
-    color: #E696E6;
-}
-#login-status ul a {
-    color: #C5A3C5;
-}
-#account-topbutton {
-    background: #ccc;
-    color: #C5A3C5;
-}
-
-/* IMAGE BLOCK RECOLORING */
-.scp-image-block {
-  border: solid 1px #6c006c;
-}
-.scp-image-block .scp-image-caption {
-  background-color: #f0f8ff;
-  border-top: solid 1px #6c006c;
-}
-
-/* MODULE RATE RECOLOR */
-.page-rate-widget-box .rate-points {
-  background-color: #6c006c !important;
-  border: solid 1px #6c006c;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-  background-color: #f0f8ff;
-  border-top: solid 1px #6c006c;
-  border-bottom: solid 1px #6c006c;
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-  background: transparent;
-  color: #6c006c;
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-  background: #6c006c;
-  color: #f0ffff;
-}
-.page-rate-widget-box .cancel {
-  background: transparent;
-  background-color: #6c006c;
-  border: solid 1px #6c006c;
-}
-.page-rate-widget-box .cancel a {
-  color: #f0ffff;
-}
-.page-rate-widget-box .cancel a:hover {
-  background: #cdeadc;
-  color: #f0ffff;
-}
-
-/* INFO MODULE */
-#page-content .rate-box-with-credit-button {
-    background-color: #6c006c;
-    border-color: #6c006c;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-}
-#page-content .creditButton p a {
-    border-left-color: #f0ffff;
-}
-
-#page-content .modalbox {
-    box-shadow: 0 2px 6px rgba(50,0,50,.5);
-}
-
-.close-credits,
-.credit-back {
-    filter: hue-rotate(275deg);
-}
-
-
-/* AYER'S INFO MODULE */
 :root {
-     --barColour: #6c006c;
+    /* Typefaces */
+    --body-font: 'IBM Plex Mono', '等线', monospace;
+    --header-font: 'IBM Plex Mono', '等线', sans-serif;
+    --title-font: 'IBM Plex Mono', '等线', monospace;
+    --mono-font: "IBM Plex Mono", '等线', monospace;
+
+    /* Standard Colors */
+
+    --white-monochrome: 238, 238, 216;
+    --pale-gray-monochrome: 233, 231, 204;
+    --light-gray-monochrome: 147, 147, 147;
+    --gray-monochrome: 127, 127, 127;
+    --dark-gray-monochrome: 101, 101, 101;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 145, 179, 153;
+    --medium-accent: 145, 179, 153;
+    --dark-accent: 105, 133, 111;
+
+
+    --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Ascp-offices-theme/scpoffices_logo.svg");
+
+    --background-gradient-color: 215, 215, 215;
+    --background-gradient-distance: 40rem;
+
+    /* Link Colors */
+	--link-color: var(--bright-accent);
+	--visited-link-color: var(--dark-accent);
+	--hover-link-color: var(--dark-accent);
+	--newpage-color: 221, 102, 17;
+
+    scrollbar-color: rgba(var(--white-monochrome), 1) rgba(var(--bright-accent), 0.50);
 }
 
-/* HERITAGE MODULE */
-.heritage-rating-module {
-    background-color: #6c006c;
-    border: solid 1px #ccc066;
-    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+#container-wrap-wrap {
+
+    background-image:
+        -webkit-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -webkit-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) -webkit-calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        -moz-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -moz-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) -moz-calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        repeating-linear-gradient(180deg,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -webkit-gradient(linear,
+        left top, left bottom,
+        color-stop(7.5rem, rgba(var(--black-monochrome), 1)),
+        color-stop(7.625rem, rgba(var(--gray-monochrome), 1)),
+        color-stop(rgba(var(--gray-monochrome), 1)),
+        color-stop(rgba(var(--gray-monochrome), 1)),
+        to(rgba(var(--black-monochrome), 1)));
+
+    background-image:
+        -o-repeating-linear-gradient(top,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        -o-linear-gradient(top,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+
+    background-image:
+        repeating-linear-gradient(180deg,
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 100%, 0) 0.25vh,
+        rgba(88, 88, 88, 0.1) 0.35vh,
+        rgba(88, 88, 88, 0.2) 0.5vh),
+
+        linear-gradient(to bottom,
+        rgba(var(--black-monochrome), 1) 7.5rem,
+        rgba(var(--gray-monochrome), 1) 7.625rem,
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--gray-monochrome), 1) calc(100% - 0.125rem),
+        rgba(var(--black-monochrome), 1) 100%);
+    -webkit-background-size: 100% 7.5rem, 100% 9.375rem;
+       -moz-background-size: 100% 7.5rem, 100% 9.375rem;
+         -o-background-size: 100% 7.5rem, 100% 9.375rem;
+            background-size: 100% 7.5rem, 100% 9.375rem;
+    background-repeat: no-repeat;
 }
 
-/* TAB RECOLORING */
-.yui-navset .yui-content{
-    background-color: #f5f5f5;
-}
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-color:#d8d8d8;
-    background-image: url(../images/yuitabs.png);
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
-.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
-    background:#320082 url(../images/yuitabs.png) repeat-x left -1400px; /* selected tab background */
-    color:#fff;
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background:#FCDBFF url(../images/yuitabs.png) repeat-x left -1300px;
-    text-decoration: none;
-}
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #400040;
-}
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #6c006c;
-}
-.yui-navset li {
-    line-height: normal;
+#skrollr-body {}
+
+a {
+    font-weight: 900;
 }
 
-/*SIDE BAR RECOLOR AND STUFF */
-#side-bar .side-block {
-    border: 1px solid #8B198B;
-    box-shadow: 0 2px 6px rgba(50,0,50,.5);
-    color: #8B198B;
+#header h2 span::before {
+    color: rgb(var(--bright-accent));
 }
 
-#side-bar .heading {
-    color: #1E0087;
-    border-bottom: solid 1px #1E0087;
-}
-#side-bar div.menu-item .sub-text {
-    color: #3D1F31;
-}
-
-#side-bar .side-block[style="background-color: #f0fff6;"],
-#side-bar .side-block[style="background-color: #f0fff6;"] .heading p { background-color: #FFF0FF !important; }
-#side-bar .side-block[style="background-color: #e7e5e8;"],
-#side-bar .side-block[style="background-color: #e7e5e8;"] .heading p { background-color: #E8D2E8 !important; }
-#side-bar .side-block[style="background-color: #fff0f0;"],
-#side-bar .side-block[style="background-color: #fff0f0;"] .heading p { background-color: #FFF0F7 !important;}
-#side-bar .side-block[style="background-color: #e5e5ff;"],
-#side-bar .side-block[style="background-color: #e5e5ff;"] .heading p { background-color: #F0E5FF !important; }
-
-.side-block .menu-item > .image {
-    filter: hue-rotate(275deg);
-    -webkit-filter: hue-rotate(275deg);
+#header h1 *,
+#top-bar *,
+#page-title * {
+    will-change: opacity;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
-/* side-bar collapsible stuff */
-#side-bar .collapsible-block-folded {
-    background-image: none;
-}
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px #220096;
-}
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-    color: #220096;
-}
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: #6C4279;
+#header h1 a:hover::before,
+#top-bar a:hover,
+#page-title:hover,
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
 }
 
-/* MOBILE SIDEBAR */
-@media (max-width: 767px) {
-     #side-bar{
-         background-color: #6c006c
-      }
+#top-bar li:hover ul,
+#top-bar li:focus-within ul,
+#top-bar li.sfhover ul,
+#top-bar li ul {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
 
-    .open-menu a {
-        border: 0.2em solid #6c006c !important;
-        background-color: #f0f8ff !important;
-        color: #6c006c !important;
+#search-top-box-form input[type="submit"] {
+    background: rgb(var(--bright-accent)) !important;
+}
+
+#search-top-box-form input[type="submit"]:hover,
+#search-top-box-form input[type="submit"]:focus {
+	background: rgb(var(--dark-accent)) !important;
+}
+	
+#side-bar img {
+	display: none;
+}
+	
+#side-bar .collapsible-block-unfolded {
+	background: unset;
+}
+	
+#side-bar div.menu-item a.collapsible-block-link,
+#side-bar .side-block>.collapsible-block a.collapsible-block-link {
+	background: rgba(var(--medium-accent),0.5);	
+}
+
+#side-bar div.menu-item a,
+#side-bar div.menu-item .text {
+    font-weight: 900;
+}
+
+#side-bar div.menu-item a:hover {
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
+}
+
+.page-rate-widget-box {
+    background:
+        -webkit-gradient(linear,
+        left top, left bottom,
+        from(rgb(var(--bright-accent))),
+        color-stop(30%, rgb(var(--dark-accent))),
+        to(rgb(var(--dark-accent)))) !important;
+    background:
+        -webkit-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        -moz-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        -o-linear-gradient(top,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+    background:
+        linear-gradient(to bottom,
+        rgb(var(--bright-accent)) 0%,
+        rgb(var(--dark-accent)) 30%,
+        rgb(var(--dark-accent)) 100%) !important;
+}
+
+.page-rate-widget-box > span.rate-points,
+.page-rate-widget-box > span.rateup,
+.page-rate-widget-box > span.ratedown,
+.page-rate-widget-box > span.cancel,
+.page-rate-widget-box > span.rate-points > a,
+.page-rate-widget-box > span.rateup > a,
+.page-rate-widget-box > span.ratedown > a,
+.page-rate-widget-box > span.cancel > a {
+    color: rgb(var(--white-monochrome));
+    mix-blend-mode: unset;
+    -webkit-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.page-rate-widget-box > span.rate-points:hover,
+.page-rate-widget-box > span.rate-points:active {
+    color: rgb(var(--white-monochrome)) !important;
+    mix-blend-mode: unset !important;
+}
+
+.page-rate-widget-box > span.rateup:hover,
+.page-rate-widget-box > span.rateup:active,
+.page-rate-widget-box > span.ratedown:hover,
+.page-rate-widget-box > span.ratedown:active,
+.page-rate-widget-box > span.cancel:hover,
+.page-rate-widget-box > span.cancel:active {
+    color: rgb(var(--black-monochrome));
+    -webkit-animation: flicker 20s linear infinite;
+    -moz-animation: flicker 20s linear infinite;
+    -o-animation: flicker 20s linear infinite;
+       animation: flicker 20s linear infinite;
+}
+	
+.info-container .collapsible-block-folded,
+.info-container .collapsible-block-unfolded-link {
+	background: rgb(var(--bright-accent))!important;	
+}
+	
+iframe.scpnet-interwiki-frame {
+	-webkit-filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
+	        filter: invert(0.8) hue-rotate(-40deg) saturate(0.2);
+}	
+
+@media only screen and (max-width: 768px) {
+	#header {
+		background-position: left -webkit-calc(5vw + 5.5rem - 10.4rem) top -webkit-calc(4% - var(--offset-from-page-top) / 2),top center;
+		background-position: left -moz-calc(5vw + 5.5rem - 10.4rem) top -moz-calc(4% - var(--offset-from-page-top) / 2),top center;
+		background-position: left calc(5vw + 5.5rem - 10.4rem) top calc(4% - var(--offset-from-page-top) / 2),top center;
+		-webkit-background-size: -webkit-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		   -moz-background-size: -moz-calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		     -o-background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		        background-size: calc(8.75rem + var(--offset-from-page-top)),100% 7.5rem;
+		background-repeat: no-repeat,repeat;
+	}
+}
+
+@-webkit-keyframes flicker {
+    0% {
+        opacity: .2;
+    }
+
+    5% {
+        opacity: .9;
+    }
+
+    6% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: .4;
+    }
+
+    11.25% {
+        opacity: .6;
+    }
+
+    11.5% {
+        opacity: .4;
+    }
+
+    18% {
+        opacity: 1;
+    }
+
+    18.5% {
+        opacity: .9;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    38.5% {
+        opacity: 1;
+    }
+
+    39% {
+        opacity: .8;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    60.5% {
+        opacity: 0;
+    }
+
+    62% {
+        opacity: 0;
+    }
+
+    63% {
+        opacity: .2;
+    }
+
+    63.25% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .8;
+    }
+
+    79% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
-
-/* FOOTER STUFF */
-#footer {
-    background: #3d2b1f;
-    color: #6C006C;
-}
-
-/* TOP BAR RECOLORING*/
-#top-bar ul li ul {
-    border: solid 1px #3d2b1f;
-}
-
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    border-top: 1px solid #CE9CCE;
-}
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: #FFE3FD;
-    color: #6c006c;
-}
-#top-bar ul li ul a, #top-bar a:hover {
-    color: #8db600;
-}
-/* CONTENT PANELS */
-.content-panel {
-    border: solid 1px #5d8aa8;
-    background-color: #bcd4e6;
-    box-shadow: 3px 3px 6px #e6e6fa;
-}
-.content-panel .panel-footer {
-    color: #A30053;
-}
-.content-panel .content-toc {
-    border: solid 1px #5d8aa8;
-}
-
-/* SEXY BOX */
-div.sexy-box {
-    background: #f0f8ff;
-    border: 1px solid #903C67;
-}
-div.sexy-box div.image-container img {
-    border: 1px solid #9f8170;
-}
-
-/* TRANSLATION BLOCK */
-iframe.scpnet-interwiki-frame {
-    filter: hue-rotate(275deg);
-    -webkit-filter: hue-rotate(275deg);
 }
