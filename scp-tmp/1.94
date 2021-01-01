@@ -1,186 +1,568 @@
-/* - == === BHL VARIABLES === == - */
+@import url("https://use.typekit.net/nxg5itx.css");
 
-/* This is a BHL theme, which is configuration-based, so the root element
- * contains variables that will affect the whole theme
- */
-:root {
-  /* S-CSS-P integration */
-  --theme-base: "black-highlighter";
-  --theme-id: "swirling-ashes";
-  --theme-name: "Swirling Ashes Theme";
+@supports(display:grid) {
 
-  /* Colours */
-  --dark-gray-monochrome: 26, 24, 26;
-  --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
-  --dark-accent: 63, 9, 143;
-  --medium-accent: 81, 13, 181;
-  --bright-accent: 105, 49, 186;
-  --pale-accent: 128, 80, 200;
+	:root {
+		/* S-CSS-P Integration */
+		/* If you're making a new CSS theme, please include the following three variables at minimum. */
+		--theme-base: "black-highlighter";
+		/* must be either "black-highlighter" or "sigma9" */
+		--theme-id: "old-money-theme";
+		/* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+		--theme-name: "nu-SCP Theme";
+		/* set this to your theme's full name */
 
-  /* Sky */
-  --sky-at-dawn: 236, 112, 99;
-  --sky-at-morning: 174, 214, 241;
-  --sky-at-daytime: 249, 231, 159;
-  --sky-at-evening: 248, 196, 113;
-  --sky-at-dusk: 140, 50, 70;
-  --sky-at-night: 50, 40, 67;
-  --sky-length: 15;
-  --sky-time: 60s;
+		/* Header */
+		--logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Logo.png");
 
-  /* Header adjustments */
-  --header-title: "鼠巢";
-  --header-subtitle: "让我们从结局开始";
+		/* Typefaces */
+		--body-font: turnip, '华文中宋', serif;
+		--header-font: ivymode, '华文新魏', sans-serif;
+		--title-font: ivymode, '华文新魏', sans-serif;
+		--mono-font: pennsylvania, '仿宋', monospace;
 
-  /* Delete the default header background */
-  --gradient-header: linear-gradient(transparent, transparent);
-  --diagonal-stripes: linear-gradient(transparent, transparent);
-}
+		/* Standard Colors */
+		--white-monochrome: 252, 252, 252;
+		/* white */
+		--pale-gray-monochrome: 244, 244, 244;
+		/* v light gray for blockquotes and stuff */
+		--light-pale-gray-monochrome: 244, 244, 244;
+		/* very light pale gray for misc. use */
+		--very-light-gray-monochrome: 215, 215, 215;
+		--light-gray-monochrome: 215, 215, 215;
+		/* light accent gray for login status */
+		--gray-monochrome: 185, 150, 80;
+		/* gray */
+		--dark-gray-monochrome: 115, 94, 55;
+		/* dark accent gray for sidebar background */
+		--black-monochrome: 26, 25, 24;
+		/* black */
+		--bright-accent: 252, 236, 135;
+		/* bright red */
+		--medium-accent: 207, 159, 45;
+		/* medium red */
+		--dark-accent: 70, 56, 33;
+		/* dark red */
+		--newpage-color: 221, 102, 17;
+		/* pale orange */
 
-/* - == === HEADER BACKGROUNDS === == - */
+		/* Primary Menu Colors */
+		--swatch-menubg-color: var(--black-monochrome);
+		--swatch-border-color: var(--swatch-menubg-dark-color);
+		--sidebar-links-text: var(--swatch-menutxt-light-color);
 
-/* The header is made up of a million different stacked backgrounds.
- * Instead of fucking about with z-index, I've added backgrounds to
- * the ::before and ::after of various full-page elements in their
- * natural stacking order.
- */
+		/* Primary Theme Colors */
+		--swatch-background: var(--black-monochrome, 26, 25, 24);
 
-/* The following pseudoelements each contain a different part of the
- * header background. They need to be drawn precisely over the header
- * and made unclickable so they don't interfere with the links up there.
- * They appear on the page in this order, so they'll also be drawn on
- * top of each other in this order.
- */
-body::before,
-div#container-wrap-wrap::before,
-div#container-wrap::before,
-div#container-wrap-wrap::after,
-body::after {
-  content: "";
-  position: absolute;
-  height: var(--header-height-on-desktop); width: 100%; top: 0; left: 0;
-  pointer-events: none;
-}
+		/* Rating Module Colors */
+		--rating-module-button-color: var(--bright-accent);
+		--rating-module-button-plus-color: 45, 65, 25;
+		--rating-module-button-negative-color: 70, 35, 30;
+		--rating-module-button-cancel-color: 50, 45, 50;
+		--rating-module-button-credit-color: 50, 45, 50;
+		--rating-module-text-color: var(--bright-accent);
+		--rating-module-text-hover-color: var(--swatch-menutxt-light-color);
 
-/* The sky, which loops through a series of colours to evoke the
- * unstoppable passing of time
- */
-body::before {
-  background: linear-gradient(
-                to top,
-                rgb(var(--sky-at-morning)) 0%,
-                rgb(var(--sky-at-morning)) 11%,
-                rgb(var(--sky-at-daytime)) 22%,
-                rgb(var(--sky-at-daytime)) 33%,
-                rgb(var(--sky-at-evening)) 44%,
-                rgb(var(--sky-at-dusk)) 55%,
-                rgb(var(--sky-at-night)) 66%,
-                rgb(var(--sky-at-night)) 77%,
-                rgb(var(--sky-at-dawn)) 88%,
-                rgb(var(--sky-at-morning)) 100%
-              );
-  background-size: 100% calc(var(--header-height-on-desktop)
-                             * var(--sky-length));
-  animation: sky linear var(--sky-time) infinite;
-}
-@keyframes sky {
-  from { background-position: 0 0; }
-  to {
-    background-position: 0 calc(var(--header-height-on-desktop)
-                                * var(--sky-length));
-  }
-}
+		/* Background and Header Colors */
+		--background-gradient-color: var(--dark-accent, 70, 56, 33);
+		--header-gradient-color-bottom: var(--dark-accent);
+		--header-gradient-color-middle: var(--black-monochrome);
+		--header-gradient-color-top: var(--black-monochrome);
 
-/* The city skyline */
-div#container-wrap-wrap::before {
-  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
-  background-size: auto var(--header-height-on-desktop);
-}
+		--gradient-header: linear-gradient(30deg,
+			rgb(var(--header-gradient-color-bottom)) 0%,
+			rgb(var(--header-gradient-color-middle)) 90%,
+			rgb(var(--header-gradient-color-top)) 100%);
 
-/* Two backgrounds: a white and blurred shine on the buildings,
- * taken from a brightness threshold of the original skyline
- * image; and a white-to-transparent gradient that uses the
- * original skyline image as a clipping mask. These appear in
- * the day and fade for the night to represent the sun's
- * reflection on the buildings.
- */
-div#container-wrap::before {
-  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-whitewash.png),
-              url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline-highlight.png);
-  background-size: auto var(--header-height-on-desktop);
-  animation: shine ease-in-out var(--sky-time) infinite;
-}
-@keyframes shine {
-  0%, 40%, 100% { opacity: 0.2; }
-  55%, 77% { opacity: 0; }
-}
+		--scrollbar-width: 0.5rem;
 
-/* The final two pseudoelements contain the ashes: clouds that
- * roll past the city at ground level. Two elements are needed
- * because the two layers of clouds have different widths and
- * move at different speeds.
- * The fade animation affords an unobscured view of the city
- * every 3rd night.
- */
-div#container-wrap-wrap::after, body::after {
-  background-size: var(--ashes-width) var(--header-height-on-desktop);
-  background-repeat: repeat-x;
-  animation: ashes-move linear var(--ashes-move-duration),
-             ashes-fade ease calc(var(--sky-time) * 3);
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-div#container-wrap-wrap::after {
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-large.png);
-  --ashes-move-duration: 27s;
-  --ashes-width: 500px;
-  --ashes-opacity: 0.5;
-}
-body::after {
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/ashes-small.png);
-  --ashes-move-duration: 20s;
-  --ashes-width: 800px;
-  --ashes-opacity: 0.4;
-}
-@keyframes ashes-move {
-  from { background-position: 0 0; }
-  to { background-position: var(--ashes-width) 0; }
-}
-@keyframes ashes-fade {
-  0%, 85%, 96%, 100% { opacity: var(--ashes-opacity); }
-  88.66%, 92.33% { opacity: 0.1; }
-}
+		/* header measurements */
+		--header-height-on-desktop: 12rem;
+		--header-height-on-mobile: 12rem;
+		--topbar-height-on-desktop: 1.875rem;
+		--topbar-height-on-mobile: 3rem;
 
-/* - == === BODY BACKGROUNDS === == - */
+		scrollbar-color: rgba(var(--dark-gray-monochrome), 1) rgba(var(--black-monochrome), 1);
+	}
 
-/* This psuedolement contains the faint purple patchy smog on the page
- * just below the header, as a thematic transition from dark to light.
- */
-#content-wrap { position: relative; }
-#content-wrap::before {
-  content: "";
-  position: absolute;
-  height: 100%; width: 100%; top: 0; left: 0;
-  background-repeat: repeat-x;
-  pointer-events: none;
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/purple-smoke.png);
-  opacity: 0.2;
-}
+	html,
+	body {
+		color: rgb(var(--swatch-text-light));
+	}
 
-/* This one is the skyline at the bottom of the sidebar */
-#side-bar::before {
-  content: "";
-  position: absolute;
-  height: 100%; width: 100%; bottom: 0; left: 0;
-  background-repeat: repeat-x;
-  pointer-events: none;
-  background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aswirling-ashes/skyline.png);
-  background-size: auto 15rem;
-  background-position: bottom;
-  opacity: 0.2;
-}
+	a {
+		color: rgb(var(--swatch-primary-darker));
+	}
 
-/* - == === MISCELLANEOUS === == - */
+	@supports (background-blend-mode: screen) {
+		#extrac-div-1 {
+			width: 100%;
+			height: var(--header-height-on-desktop);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: var(--gradient-header), url(http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/deco-pattern.png);
+			background-size: var(--header-background-image-size) 100%, 100% 100%;
+			background-blend-mode: color-burn;
+			pointer-events: none;
+		}
 
-#side-bar .scpnet-interwiki-wrapper {
-  filter: brightness(0.86) invert(1) hue-rotate(73deg) saturate(10);
+		div#extra-div-1 {
+			width: 100%;
+			height: calc(100% - var(--final-header-height-on-desktop));
+			position: absolute;
+			top: calc(var(--final-header-height-on-desktop));
+			left: 0;
+			z-index: -1;
+			background-color: rgba(252, 252, 252, 1);
+			background-color: rgba(var(--swatch-background), 1);
+			mask: var(--gradient-background);
+			-webkit-mask: var(--gradient-background);
+			background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/deco-pattern.png), var(--gradient-background);
+			background-size: 10%, 100% var(--background-gradient-distance);
+			background-blend-mode: difference;
+			background-repeat: repeat, repeat-x;
+			pointer-events: none;
+		}
+	}
+
+	#header {
+		background-repeat: no-repeat;
+		background-position: left 0 top 0.25rem;
+		background-clip: border-box;
+		-webkit-background-size: auto calc(var(--header-height-on-desktop) - 1rem);
+		background-size: auto calc(var(--header-height-on-desktop) - 1rem);
+		filter: initial;
+	}
+
+	#header h1 a {
+		font-size: 200%;
+		overflow-wrap: normal;
+		padding: 0;
+		margin-top: calc((var(--header-height-on-desktop) - 0.5em)/2);
+		margin-left: calc(var(--header-height-on-desktop) - .75rem);
+	}
+
+	#header h1 a::before {
+		color: rgb(255, 219, 90);
+		color: rgb(var(--bright-accent));
+		text-shadow: inherit;
+		background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/goldfoil.png");
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		overflow-wrap: normal;
+	}
+
+	#header h2 span {
+		margin-left: calc(var(--header-height-on-desktop) + 0.75rem);
+	}
+
+	#header h2 {
+		font-size: 150%;
+	}
+
+
+	#side-bar:hover {
+		background-color: rgb(var(--black-monochrome), 0.5);
+		scrollbar-color: rgba(var(--dark-gray-monochrome), 1) rgba(var(--black-monochrome), 1);
+	}
+
+	#side-bar {
+		background-color: rgb(var(--black-monochrome));
+		scrollbar-color: rgba(var(--dark-gray-monochrome), 0) rgba(var(--black-monochrome), 0);
+	}
+
+	#side-bar div.menu-item {
+		border-bottom: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
+		border-top: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
+		margin-top: -0.0625rem;
+	}
+
+	#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+		border-left: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
+	}
+
+	#side-bar div.menu-item a,
+	#side-bar div.menu-item .text {
+		color: rgb(var(--swatch-menutxt-light-color));
+	}
+
+	#side-bar .heading,
+	#side-bar .side-block > .collapsible-block:nth-child(1) .collapsible-block-folded {
+		background: initial;
+	}
+
+	#side-bar .heading p,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link {
+		color: rgb(var(--swatch-menutxt-dark-color));
+		text-shadow: inherit;
+		letter-spacing: 0.05rem;
+		font-weight: 900;
+		font-size: 1.25rem;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0 1rem 0.5rem;
+		color: rgb(255, 219, 90);
+		color: rgb(var(--bright-accent));
+		text-shadow: inherit;
+		background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/goldfoil.png");
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		overflow-wrap: normal;
+		font-family: var(--header-font);
+		text-transform: none;
+	}
+
+	#side-bar .heading p::after,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link::after,
+	#side-bar .heading p::before,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link::before {
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 0.35rem;
+		background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Divider.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#side-bar .side-block[style*="background-color:"] * {
+		margin-left: 0 !important;
+	}
+
+	#side-bar > div[style="background-color: #e5e5ff;"] > div.menu-item > div {
+		background-color: rgb(var(--black-monochrome));
+	}
+
+	#side-bar .side-block[style*="background-color:"] .heading {
+		margin-top: .25rem;
+	}
+
+	#side-bar .heading p::after,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link::after {
+		bottom: -0.6rem;
+	}
+
+	#side-bar .heading p::before,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link::before {
+		top: -0.6rem;
+	}
+
+	#side-bar div.menu-item .sub-text {
+		color: rgba(var(--swatch-primary-darker), 1);
+	}
+
+	iframe.scpnet-interwiki-frame {
+		 filter: invert(0.9) hue-rotate(222deg) saturate(1.5) contrast(1);
+	}
+
+	#page-title {
+		color: rgb(var(--swatch-menutxt-light-color));
+	}
+
+	blockquote {
+		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
+	}
+
+	.yui-navset .yui-content {
+		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
+	}
+
+	.yui-navset .yui-content,
+	.yui-navset .yui-navset-top .yui-content {
+		border-color: rgb(var(--swatch-menubg-dark-color));
+	}
+
+	.yui-navset .yui-nav a,
+	.yui-navset .yui-navset-top .yui-nav a {
+		background-color: rgb(var(--swatch-menubg-black-color));
+		color: rgb(var(--swatch-text-light));
+	}
+
+	table.wiki-content-table th {
+		background: rgb(var(--swatch-primary-darkest));
+	}
+
+	.code {
+		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
+	}
+
+	.hl-main {
+		filter: invert(1) hue-rotate(180deg);
+	}
+
+	.scp-image-block .scp-image-caption {
+		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
+	}
+
+	.scp-image-block img {
+		border: 0.5rem solid rgba(var(--black-monochrome));
+	}
+
+	a:visited {
+		color: rgb(var(--swatch-primary-darker));
+	}
+
+	h1 {
+		color: rgb(var(--swatch-primary)) !important;
+	}
+
+	hr {
+		border-top: none;
+		position: relative;
+		height: 0.35rem;
+		background: rgba(0, 0, 0, 0);
+		display: flex;
+	}
+
+	hr::before {
+		content: " ";
+		position: absolute;
+		top: 0.1125rem;
+		left: 0;
+		border-top: none;
+		width: 100%;
+		height: 0.125rem;
+		background: -webkit-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
+		background: -o-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
+		background: -moz-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
+		background: linear-gradient(10deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
+		background-position: center center;
+		-webkit-filter: blur(0.04rem);
+		filter: blur(0.04rem);
+	}
+
+	hr::after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 10%;
+		height: 0.35rem;
+		background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Divider.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.page-rate-widget-box {
+		background: linear-gradient(to top, rgba(var(--swatch-primary), 0.25) 0, rgba(var(--swatch-primary-darker), 0.15) 100%) !important;
+	}
+
+	form#edit-page-form {
+		background-color: rgba(var(--dark-accent), 0.25);
+	}
+
+	textarea,
+	input.text {
+		background-color: rgb(var(--black-monochrome));
+		color: rgb(var(--white-monochrome));
+		padding: 0.5em;
+	}
+
+
+	#lock-info {
+		background-color: rgb(var(--dark-accent));
+	}
+
+	div.buttons input,
+	input.button,
+	button,
+	file,
+	a.button {
+		background-color: rgb(var(--medium-accent));
+		color: rgb(var(-black-monochrome));
+		border-color: rgb(var(--black-monochrome))
+	}
+
+	div.buttons input:hover,
+	input.button:hover,
+	button:hover,
+	a.button:hover {
+		background-color: rgb(var(--bright-accent));
+	}
+
+	div#page-info,
+	div.page-watch-options {
+		padding: 0 1em;
+	}
+
+	div#page-options-bottom {
+		width: 90%;
+		margin-bottom: 2.125rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div#page-options-bottom-2 {
+		width: 90%;
+		margin-top: -2.125rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div#page-options-bottom,
+	div#page-options-bottom-2 {
+		text-align: left;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	div#page-options-bottom,
+	div#page-options-bottom-2,
+	div#page-options-bottom > a {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	div#page-options-bottom > a,
+	div#page-options-bottom-2 > a {
+		-webkit-box-flex: 2;
+		-webkit-flex-grow: 2;
+		-moz-box-flex: 2;
+		-ms-flex-positive: 2;
+		flex-grow: 2;
+		padding: .25rem;
+		-webkit-border-radius: .25rem;
+		border-radius: .25rem;
+		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
+		border: 0.0625rem solid rgba(var(--swatch-primary), 0.25);
+		font-weight: 700;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-moz-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+	}
+
+	div#page-options-bottom-2 > a {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	div#page-options-bottom > a:hover,
+	div#page-options-bottom > a:active,
+	div#page-options-bottom-2 > a:hover,
+	div#page-options-bottom-2 > a:active {
+		text-decoration: none;
+		background-color: rgba(var(--swatch-menubg-dark-color), 1);
+		color: rgba(var(--swatch-primary), 1);
+		border: 0.0625rem solid rgba(var(--swatch-primary-darkest),1);
+	}
+
+	.owindow .title {
+		background-color: rgb(var(--swatch-menubg-dark-color));
+	}
+
+	#odialog-container,
+	.title.modal-header,
+	.owindow,
+	.hovertip {
+		background-color: rgb(var(--swatch-primary-darkest));
+	}
+
+	.owindow .button-bar a {
+		background-color: rgb(var(--swatch-menubg-dark-color));
+		color: rgb(var(--white-monochrome));
+	}
+
+	@media only screen and (max-width: 768px) {
+		#header {
+			--size: calc(var(--final-header-height-on-mobile) - 0.875rem);
+			--y-offset: 1.5rem;
+			background-position:
+				calc((var(--header-height-on-mobile) - 3.75rem) - var(--size)) calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
+			background-size: var(--size), 100% var(--header-height-on-mobile);
+			background-repeat: no-repeat, repeat;
+		}
+
+		#header > h1 > a > span {
+			height: var(--header-height-on-mobile);
+		}
+
+
+		#header h1 a {
+			line-height: 1;
+		}
+
+		#header h2 span {
+			line-height: 1.1;
+		}
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 768px) {
+		#header {
+			--size: calc(var(--final-header-height-on-mobile) - 0.875rem);
+			--y-offset: 1.5rem;
+			background-position:
+                calc((var(--header-height-on-mobile) - 3.75rem) - var(--size))
+                calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
+			background-size: var(--size), 100% var(--header-height-on-mobile);
+			background-repeat: no-repeat, repeat;
+		}
+
+		#header h1 a {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 0.75em);
+			line-height: 1;
+			font-size: 300%;
+		}
+
+		#header h2 span {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2) + 0.5em));
+			line-height: 1.1;
+			font-size: 120%;
+		}
+	}
+
+
+	@media only screen and (min-width: 400px) and (max-width: 600px) {
+		#header h1 a {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 1em);
+			font-size: 140%;
+		}
+
+
+		#header h2 span {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2) + 0.5em));
+			font-size: 60%;
+		}
+	}
+
+	@media only screen and (max-width: 400px) {
+		#header h1 a {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 1em);
+			font-size: 125%;
+		}
+
+
+		#header h2 span {
+			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
+			margin-top: calc(((var(--header-height-on-mobile) / 2) + 3.5em));
+			font-size: 35%;
+		}
+	}
 }

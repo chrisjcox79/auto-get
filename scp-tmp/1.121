@@ -1,240 +1,256 @@
-@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap&subset=latin-ext");
+/*
+    Alexylva University Theme
+    [2018 Wikidot Theme]
+    Created by Uncle Nicolini, cleaned by ROUNDERHOUSE.
+    Logo created by MingoMongo, under CC BA SA 3.0: https://www.deviantart.com/mingomongo/art/SCP-Alexylva-University-Simple-Logo-750830216
+    Paper Textures created by Jojo-ojoj, under CC BY SA 3.0: https://www.deviantart.com/jojo-ojoj/art/Old-paper-seamless-textures-1-531542908
+    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan, and MC&D Theme created by Randomini.
+*/
 
-@supports((display: -ms-grid) or (display: grid)) {
-:root {
-  /* Header */
-  --logo-image: url("http://scp-wiki-cn.wdfiles.com/local--files/theme%3Aneo-linkage/linkAge-logo.svg");
-  --header-title: "linkAge";
-  --header-subtitle: "Find Your Dream, Find Yourself.";
-  /* Typefaces */
-  --header-font: 'Russo One', "Noto Sans SC", sans-serif;
-  /* Standard Colors */
-  --light-gray-monochrome: 125, 125, 125;
-  --pale-accent: 201, 23, 30;
-  --bright-accent: 90, 121, 186;
-  --medium-accent: 30, 80, 162;
-  --dark-accent: 23, 24, 75;
-  /* Header Colors */
-  --header-gradient-color-bottom: 16, 16, 16;
-  --header-gradient-color-middle: var(--dark-accent);
-  --header-gradient-color-top: var(--dark-accent);
-  /* Primary Menu Colors */
-  --swatch-menubg-hover-color: var(--pale-accent);
-  /* Primary Header Colors */
-  --swatch-topmenu-bg-color: var(--light-gray-monochrome);
-  /* Link Colors */
-  --link-color: var(--bright-accent);
-  --visited-link-color: 103, 69, 152;
-  --hover-link-color: 103, 69, 152;
-  /* Header Measurements */
-  --header-height-on-desktop: 10rem;
-  --header-height-on-mobile: 10rem;
-  /* Filter */
-  --filter: hue-rotate(220deg);
-  /* Ayers' Info Bar */
-  --barColour: rgb(var(--dark-accent));
-}
+   /* FONTS */
 
-/* Article Bottom Buttons */
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-  background-color: rgba(23, 24, 75, 1);
-  background-color: rgba(var(--swatch-primary-darkest), 1);
-  border-color: rgba(48, 48, 52, 1);
-  border-color: rgba(var(--swatch-menubg-dark-color), 1);
-}
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-  background-color: rgba(90, 121, 186, 1);
-  background-color: rgba(var(--swatch-primary), 1);
-  border-color: rgba(66, 66, 72, 1);
-  border-color: rgba(var(--swatch-menubg-medium-dark-color), 1);
-  box-shadow: 0 0 1rem rgba(23, 24, 75, 0.5) inset;
-  box-shadow: 0 0 1rem rgba(var(--swatch-primary-darkest), 0.5) inset;
-}
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=GFS+Neohellenic');
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil:700');
 
-/* Header */
+   /* HEADER */
+
 #header {
-  background-position: left -webkit-calc(30% - (var(--header-height-on-desktop) - 2.125rem)) top 1.1875rem;
-  background-position: left -moz-calc(30% - (var(--header-height-on-desktop) - 2.125rem)) top 1.1875rem;
-  background-position: left calc(30% - (var(--header-height-on-desktop) - 2.125rem)) top 1.1875rem;
+    height: 140px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30px; /* for menu */
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/alexyvalogo.png) 10px 35px no-repeat;
 }
-#header h1,
-#header h2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  max-height: var(--header-height-on-desktop);
+
+#header h1 span {
+    display: none;
 }
-#header h1 a,
+
 #header h2 span {
-  margin: 0;
-  padding: 0;
+    color: transparent;
+    text-shadow: none;
 }
-#header h1 a::before {
-  font-size: 5.25rem;
-  font-weight: 400;
-  text-shadow: none;
-}
+
 #header h2 span::before {
-  display: block;
-  color: transparent;
-  text-align: center;
-  font-size: 1.25rem;
-  text-shadow: none;
+    content: "西哥特人冲啊！";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    font-weight: bold;
+    color: #ffffff;
 }
-@supports(-webkit-background-clip: text) {
+
 #header h1 a::before {
-  background-image: -webkit-linear-gradient(to bottom, rgba(var(--swatch-headerh1-color), 1) -webkit-calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) -webkit-calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) -webkit-calc(50% + 0.875rem), rgba(var(--swatch-headerh1-color), 1) -webkit-calc(50% + 0.875rem));
-  background-image: -moz-linear-gradient(to bottom, rgba(var(--swatch-headerh1-color), 1) -moz-calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) -moz-calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) -moz-calc(50% + 0.875rem), rgba(var(--swatch-headerh1-color), 1) -moz-calc(50% + 0.875rem));
-  background-image: linear-gradient(to bottom, rgba(var(--swatch-headerh1-color), 1) calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) calc(50% - 0.875rem), rgba(var(--swatch-headerh1-color), 0) calc(50% + 0.875rem), rgba(var(--swatch-headerh1-color), 1) calc(50% + 0.875rem));
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#header h2 span::before {
-  color: rgb(252, 252, 252);
-  color: rgb(var(--swatch-headerh2-color));
-}
+    content: "Alexylva大学";
+    font-family: "Stardos Stencil", "Times New Roman", serif;
+    font-weight: 700;
+    color: white;
+    font-style: normal;
+    text-shadow: none;
 }
 
-/* Search Box */
-#search-top-box {
-  top: -webkit-calc(var(--header-height-on-mobile) * 0.67);
-  top: -moz-calc(var(--header-height-on-mobile) * 0.67);
-  top: calc(var(--header-height-on-mobile) * 0.67);
-}
-#search-top-box-form input[type="submit"],
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-  background: rgb(201, 23, 30);
-  background: rgb(var(--pale-accent));
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/header2.png) top left repeat-x;
+    background-size: 105px;
 }
 
-/* Top Bar */
-#top-bar div.top-bar > ul > li > a::before,
-#top-bar div.top-bar > ul > li > a::after,
-#top-bar div.mobile-top-bar > ul > li > a::before,
-#top-bar div.mobile-top-bar > ul > li > a::after {
-  background-color: rgba(201, 23, 30, 0.75);
-  background-color: rgba(var(--pale-accent), 0.75);
+/*
+div#page-content {
+    color: white;
+    transform: rotatez(1deg);
+    background-image: url("https://i.imgur.com/igf22s1.gif");
 }
-#top-bar div.top-bar > ul > li > ul > li:hover,
-#top-bar div.mobile-top-bar > ul > li > ul > li:hover,
-#top-bar div.top-bar > ul > li > ul > li > ul > li:hover,
-#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li:hover {
-    background-color: transparent;
-    background-color: rgba(var(--pale-accent), 0.05);
-}
-#top-bar div.top-bar > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > a:hover::before {
-  background-color: rgba(201, 23, 30, 0.75);
-  background-color: rgba(var(--pale-accent), 0.75);
+*/
+
+   /* LINKS */
+
+a {
+    color: #9c3111;
+    text-decoration: bold;
 }
 
-/* Side Bar */
-#side-bar div.menu-item a {
-  -webkit-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  -moz-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  -o-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-}
-#side-bar div.menu-item a:hover {
-  color: rgb(252, 252, 252);
-  color: rgb(var(--swatch-menutxt-light-color));
-}
-#side-bar div.menu-item a::before,
-#side-bar div.menu-item a:hover::before {
-  background-color: rgba(201, 23, 30, 0.75);
-  background-color: rgba(var(--pale-accent), 0.75);
-}
-#side-bar div.menu-item .sub-text {
-  color: rgb(201, 23, 30);
-  color: rgb(var(--pale-accent));
+a.newpage {
+    color: #d68c53;
+    text-decoration: bold;
 }
 
-/* Tabview */
-.yui-navset * {
-  transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), margin 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-.yui-navset .yui-nav .selected {
-  margin-top: -0.3em;
+#side-bar a:visited {
+    color: #9c3111;
 }
 
-/* Credit Module */
-iframe.scpnet-interwiki-frame, .close-credits, .credit-back {
-  -webkit-filter: var(--filter);
-  filter: var(--filter);
-}
-.modalbox {
-  box-shadow: 0 2px 6px rgba(var(--dark-accent), .5) !important;
+a:visited {
+    color: #4c3c26;
 }
 
-/* Mobile */
-@media only screen and (max-width: 768px) {
-/* Header */
-#header {
-  background-position: -webkit-calc((var(--header-height-on-mobile) - 2.75rem) - var(--size)) -webkit-calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
-  background-position: -moz-calc((var(--header-height-on-mobile) - 2.75rem) - var(--size)) -moz-calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
-  background-position: calc((var(--header-height-on-mobile) - 2.75rem) - var(--size)) calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
+   /* MISC & WIDGET STYLING */
+
+#login-status, #login-status a {
+    color: #fff;
+    border-color: #fff;
 }
 
-/* 7happy7's Mobile Search */
-#login-status {
-  right: 3%;
+.scp-image-block .scp-image-caption {
+   font-family: 'Oswald', sans-serif;
+   background-color: #9c3111;
+   color: white;
 }
-#search-top-box {
-  top: 0;
+
+hr {
+  background-color: #9c3111;
 }
-#search-top-box:not(:focus-within):before {
-  top: -webkit-calc((((var(--base-font-size) * (14/15)) * 1.125) - 0.5em) + (var(--header-height-on-mobile) * 0.67));
-  top: -moz-calc((((var(--base-font-size) * (14/15)) * 1.125) - 0.5em) + (var(--header-height-on-mobile) * 0.67));
-  top: calc((((var(--base-font-size) * (14/15)) * 1.125) - 0.5em) + (var(--header-height-on-mobile) * 0.67));
-  right: 0.5rem;
-  width: -webkit-calc((var(--base-font-size) * (14/15)) * 3.75);
-  width: -moz-calc((var(--base-font-size) * (14/15)) * 3.75);
-  width: calc((var(--base-font-size) * (14/15)) * 3.75);
+
+#page-title {
+    font-family: 'Oswald', sans-serif;
+    color: #9c3111;
 }
-#search-top-box form[id="search-top-box-form"] input {
-  top: 13%;
+
+h1, h2, h3, h4, h6, h7 {
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-style: italic;
+    color: black;
+    font-weight: bold;
 }
-#search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
-  top: -webkit-calc(var(--header-height-on-mobile) * 0.67);
-  top: -moz-calc(var(--header-height-on-mobile) * 0.67);
-  top: calc(var(--header-height-on-mobile) * 0.67);
-  right: 0.5rem;
-  width: -webkit-calc((var(--base-font-size) * (14/15)) * 3.75);
-  width: -moz-calc((var(--base-font-size) * (14/15)) * 3.75);
-  width: calc((var(--base-font-size) * (14/15)) * 3.75);
-  height: -webkit-calc((var(--base-font-size) * (14/15)) * 2.25);
-  height: -moz-calc((var(--base-font-size) * (14/15)) * 2.25);
-  height: calc((var(--base-font-size) * (14/15)) * 2.25);
-  border: 0.0625rem solid rgb(12, 12, 12);
-  border: var(--border-styling);
-  border-radius: 0.0625rem;
-  border-radius: var(--border-radius-width);
+
+#page-title {
+    border-color: black;
 }
-#search-top-box form[id="search-top-box-form"] input[type="submit"] {
-  background-color: rgb(201, 23, 30);
-  background-color: rgb(var(--pale-accent));
+
+.blockquote, blockquote {
+    background-color: #9c3111;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    border: 4px solid #d84519;
 }
+
+.borders {
+    display: block;
+    margin: auto;
+    border: 6px double #9c3111;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/4.jpg");
+    background-repeat: repeat;
+    background-size: contain;
 }
+
+.main-body-div{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px 25px;
+    background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aalexylva-university/3.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+/* RATING MODULE */
+
+.page-rate-widget-box .rate-points {
+     background-color: #a38b65 !important;
+     border: solid 1px #ffe4af;
+}
+
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
+     background-color: a38b65;
+     border-top: solid 1px #ffe4af;
+     border-bottom: solid 1px #ffe4af;
+     font-weight: bold;
+}
+
+.page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a {
+     background: a38b65;
+     color: #ffe4af;
+     padding: 0 4px;
+     margin: 0 1px;
+}
+
+.page-rate-widget-box .rateup a:hover, .page-rate-widget-box .ratedown a:hover {
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
+}
+
+.page-rate-widget-box .cancel {
+     background-color: #a38b65;
+     border: solid 1px #ffe4af;
+     border-left: 0;
+     border-radius: 0 5px 5px 0;
+}
+
+.page-rate-widget-box .cancel a {
+     background: transparent;
+     text-transform: uppercase;
+     color: #ffe4af;
+}
+
+.page-rate-widget-box .cancel a:hover {
+     border-radius: 0 3px 3px 0;
+     background: #a38b65;
+     color: #ffe4af;
+     text-decoration: none;
+}
+
+   /* SIDEBAR */
+
+/* bonus: .side-block {transform: skew(3deg, 4deg);} */
+
+#side-bar .side-block {
+    padding: 10px;
+    border: 3px double #9c3111;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(102,0,0,.5);
+    background: #fff;
+}
+
+#side-bar div.menu-item img {
+    filter: hue-rotate(50deg);
+}
+
+   /* Search Bar */
+
+#search-top-box-input, #search-top-box input.empty,
+#search-top-box-form input[type=submit] {
+    transition: 0.2s linear;
+}
+
+#search-top-box-input, #search-top-box input.empty {
+    background-color: #B4935D;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+}
+
+#search-top-box-input:hover, #search-top-box-input:focus,
+#search-top-box input.empty:hover, #search-top-box input.empty:focus {
+    outline: 0;
+    border: 1px solid #fff;
+    background-color: #B4935D;
+    box-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+#search-top-box-form input[type=submit] {
+    outline: 0;
+    height: 1.65em;
+    border: 1px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
+
+    position: relative;
+    top: -1px;
+
+    box-shadow: none;
+}
+
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: 1px solid #fff;
+    border-radius: 0;
+    background: #B6925E;
+}
+
+#search-top-box-form input[type=submit]:active {
+    padding: 0 0.5em;
+    border: 2px solid #DBC39F;
+    border-radius: 0;
+    color: #fff;
+    background: #B6925E;
 }
