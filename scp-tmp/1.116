@@ -1,1 +1,792 @@
-No such page
+/*
+=========================================================
+              ⚙️ 羽天一的破碎世界BHL版主题 ⚙️
+       ------------------------------------------------
+         破碎之神教会的LOGO由Sunyclocwork设计
+          侧边栏和版头logo的衬图由Woednaz制作
+                       遵循CC-BY-SA协议
+==========================================================
+*/
+ 
+/* 字体 */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+
+
+ 
+/* 
+============================================
+赋值 
+============================================
+*/
+ 
+:root{
+   --theme-base: "black-highlighter";
+   --theme-id: " broken-world-bhl";
+   --theme-name: "Etinjats Broken world BHL theme";
+
+/* 字体 */
+   --body-font:'微软雅黑', '等线', '思源宋体 CN', '新宋体','Iceland','Merriweather', monospace;
+    --header-font:'思源宋体 CN', '华文中宋','宋体',lisu,'楷体', 'Iceberg' ,sans-serif;
+    --sub-header-font: '楷体', 'Iceberg' ,sans-serif;
+    --page-title-font: 'ZCOOL XiaoWei', 'Iceberg',  '装甲明朝',  '华文中宋',  '思源宋体 CN', CTWeiBeiSJ, '楷体', 'Ivymode' ,sans-serif;
+    --title-font: '思源宋体 CN', 'ZCOOL XiaoWei',  '新宋体', 'Kumar One', 'Turnip' ,sans-serif;
+    --mono-font: '仿宋', 'pennsylvania ', monospace;
+ 
+
+ 
+/* 版头文字 */
+     --header-title:"破碎之神教会";
+     --header-subtitle:"修补这个破碎的世界";
+    --phone-title:"破碎之神教会";
+     --phone-subtitle:"修补这个破碎的世界";
+
+/* 图片 */
+        --logo-image: url("http://scp-wiki-cn.wdfiles.com/local--files/theme:broken-world/Logo-broken-1.png");
+ 
+        --ironhide-image: url("http://scp-wiki-cn.wdfiles.com/local--files/theme:broken-world/Bgr-wanderers-goldfoil.png");
+ 
+       --gold-image: url("http://wanderers-library.wdfiles.com/local--files/component%3Atheme/goldfoil.png");
+ 
+       --scp-image: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
+ 
+ /* */                        
+ /* 颜色与阴影遮罩 */  
+ /* */
+ 
+/* 版头遮罩  */
+    --gradient-header: linear-gradient(43deg, #151515, #141414,#3b3b3b,#342f2f,#2a2a2a,#000);  
+ 
+   --gradient-header-line: repeating-linear-gradient(43deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .4vh);
+ 
+   --header-title-cover: linear-gradient(120deg,#e8e8e8 0%, #a2a2a2 10%, #fff 50%);
+ 
+/* logo遮罩  */
+   --gradient-logo-under:  linear-gradient(180deg,#2e2c2c 0%, #333 0%, #000 0%);  
+ 
+   --gradient-logo-cover: linear-gradient(rgb(145, 145, 145,0.5) 0%, rgb(44,46, 44,0.8) 30%, rgb(51, 51, 51,0.8) 100%);
+ 
+  /* 侧边栏遮罩  */
+   --gradient-sidebar-cover: linear-gradient(150deg,#2e2c2c 0%, #333 20%, #000 100%);     
+ 
+   --gradient-sidebar-line: repeating-linear-gradient(60deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .6vh); 
+ 
+   --gradient-sidebar-btn: linear-gradient(10deg, rgba(44,46,46,0.1),rgba(88,76,26,0.2),rgba(0,0,0,0.6));    
+ 
+  --gradient-sidebar-txt-line:repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .6vh);  
+ 
+/* 基准色以及其他 */    
+    --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+ 
+                --white-monochrome: 250, 250, 250;
+            /*↑ 白色 ↑*/
+                  --pale-gray-monochrome: 244, 244, 244;
+            /*↑ 非常浅的灰色，用于引用块 ↑*/
+                  --light-pale-gray-monochrome: 225, 225, 225;
+            /*↑ 浅灰色 ↑*/
+                  --very-light-gray-monochrome: 215, 215, 215;
+            /*↑ 浅灰色 ↑*/
+                  --light-gray-monochrome: 150, 150, 150;
+            /*↑ 浅灰色 ↑*/
+                  --black-monochrome: 5, 5, 5;
+            /*↑ 黑色 ↑*/
+     --swatch-menubg-light-color:180,180,180;   
+
+    
+/*
+ --gray-monochrome: 30, 36, 30;
+ --dark-gray-monochrome: 25, 25, 25;
+        --dark-gray-monochrome:77,77,77;
+*/
+
+ /* 链接颜色   */
+                  --link-color:118,36,36;
+                  --visited-link-color:91,28,28;
+                  --hover-link-color:165,42,42;
+                  --newpage-color: 105,32,32;
+                  --sidebar-links-text:255,255,255;
+ 
+/* 表格~样式颜色 */
+    --swatch-menubg-medium-color: var(--light-gray-monochrome,163,163,163);
+ 
+/* 著作信息文件夹 */
+   --linkColour: #999 !important;
+   --barColour:  linear-gradient(0deg, #555, #3b3b3b,#342f2f,#2a2a2a,#333)  !important;
+ 
+/*  滚动条 */
+     scrollbar-color: rgba(128,128,128, 1) rgba(51,51,51, 0.50);
+}
+ 
+/*  字间距 */
+  #page-content{
+       letter-spacing:0.5px;
+  }
+ 
+@media (max-width: 479px) {    
+  #page-content{
+       letter-spacing:auto;
+  }
+}
+
+/* 
+============================================
+版头 
+============================================
+*/
+div#container-wrap {
+    background-image: var(--gradient-header-line);
+}
+ 
+#header h2 span {
+    line-height: 1;
+    font-weight: 500;
+    padding: 0.1rem 0rem 0rem 0.3rem !important;
+    font-family: var(--sub-header-font);
+}
+ 
+
+/* 
+============================================
+3d 版头标题 
+============================================
+*/
+ 
+/* 限电脑屏幕 */
+ 
+@media screen and (min-width: 475px){
+#header h1 a::before,#header h2 span::before{
+     background:var(--header-title-cover)
+/*    ,var(--gold-image), 加个底图就成了镂金的了 */ ;
+   -webkit-background-size: cover;
+   background-size: cover;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   overflow-wrap: normal; 
+   filter: brightness(160%);
+   -webkit-filter: brightness(160%);
+}
+}
+ 
+/*
+============================================
+LOGO
+此处代码修改自超形而上学主题中Woedenaz制作的层叠logo代码
+我不知道怎么回事反正整整就能用作3d效果的了
+============================================
+*/
+ 
+/* 限电脑屏幕 */
+@media screen and (min-width: 475px){
+ 
+#header {
+   background-image: none;
+}
+ 
+/* 插入div格式，背景图片 */
+#header #header-extra-div-1,
+#header #header-extra-div-2{
+    display: flex;
+    position: absolute;
+     width: 6.250rem;
+    height: 6.250rem;
+    display: flex;
+    position: absolute;
+    left: 0.15rem;
+    top:0.55rem;
+}
+ 
+#header #header-extra-div-1::before,
+#header #header-extra-div-2::before {
+    content: "";
+    width: 6.250rem;
+    height: 6.250rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    flex: 1;
+}
+ 
+/* 层叠1 主要底图*/
+#header #header-extra-div-1::before {
+    z-index: 1;
+    background: var(--ironhide-image),
+                         var(--gradient-logo-under);
+    mask:var(--logo-image);
+    mask-size: cover;
+    -webkit-mask:var(--logo-image);
+    -webkit-mask-size: cover;
+    background-size: cover;    
+}
+ 
+/* 层叠2 滤镜*/
+#header #header-extra-div-2::before {
+    background:var(--gradient-logo-cover);
+    mask:var(--logo-image);
+    mask-size: cover;
+    -webkit-mask:var(--logo-image);
+    -webkit-mask-size: cover;
+    z-index: 2;
+}
+}
+ 
+/* 
+============================================
+标题 
+============================================
+*/
+#page-title, .meta-title {
+    font-family:var(--page-title-font);
+    font-size: 300% ;
+    text-align: center ;
+   /* font-weight: normal ; */
+   text-shadow: 0 0.2rem 1rem #7b7b7b;
+}
+ 
+@media (max-width: 479px) {
+   #header h1 a::before {
+    padding: 0 0 0 0.5rem;
+    content: var(--phone-title);
+   }
+ #header h2 span {
+    padding: 0rem 0rem 0rem 1rem !important;
+   }
+        
+ #header h2 span::before {
+    content: var(--phone-subtitle);
+  } 
+}
+ 
+/* 
+============================================
+搜索框 和 用户栏
+============================================
+*/
+ 
+/*
+#search-top-box   {
+    filter: grayscale(150%);
+}
+ 
+@media (max-width: 479px) {
+   #search-top-box-input{
+     display: none;
+    }
+}
+*/
+ 
+#login-status {
+    font-family: var( --page-title-font);
+}
+ 
+/* 
+============================================
+著作信息文件夹
+============================================
+*/
+ 
+.info-container{
+    background: #f4f4f4;
+}
+ 
+.info-containere{
+    background-image: var(--ironhide-image) !important; 
+    background-size: contain;
+}
+ 
+.info-container .list-pages-item iframe{
+    background: var(--ironhide-image);     
+    border: 0.5rem groove #333;
+}
+ 
+/* 
+============================================
+评分栏 
+============================================
+*/
+#page-content .rate-box-with-credit-button,
+.page-rate-widget-box {
+     background:grey;
+     border: 0.2rem ridge grey;
+}
+ 
+.creditButton p,
+.page-rate-widget-box  > span.rate-points,
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .cancel, 
+.page-rate-widget-box .ratedown  {
+     background:radial-gradient(#ecd5d5,#afb3af,grey);
+     border-left:0.1rem groove grey;
+     border-right:0.1rem groove grey;
+    -webkit-filter: brightness(1) drop-shadow(1px 3px 1px #333);
+    filter: brightness(1) drop-shadow(1px 3px 1px #333);   
+    bottom:  0.15rem; 
+    height: auto;
+    width:auto;
+}
+ 
+.creditButton p:hover,
+.page-rate-widget-box .rateup:hover,
+.page-rate-widget-box .cancel:hover, 
+.page-rate-widget-box .ratedown:hover {  
+    border: 0.1rem outset grey;
+    filter: brightness(1) drop-shadow(2px 1px 1px #333);
+    -webkit-filter: brightness(1) drop-shadow(2px 1px 1px #333);
+ 
+}
+ 
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover,
+.page-rate-widget-box .cancel a:hover {
+     background:radial-gradient(#ecd5d5, grey,#afb3af);
+}
+ 
+.creditButton p:hover a:before {
+background:#e8e8e8 !important;
+}
+ 
+.creditButton a:hover,
+.upbtn .rateup a:hover,
+.downbtn .ratedown a:hover,
+.cancelbtn .cancel a:hover {
+    /*width: 30px;
+     height: 30px;*/
+     border-radius: 5px;
+     color:#bab8b5;
+     background-color: transparent !important;
+}
+ 
+/* 
+============================================
+鼠标选择色 
+============================================
+*/
+::selection { 
+    color: #e8e8e8;
+    background:#4d4d4d; 
+    color:rgb(var(--pale-gray-monochrome)); 
+    background:rgb(var(--gray-monochrome)); 
+}
+
+::-moz-selection { 
+    color: #e8e8e8;
+    background:#4d4d4d; 
+    color:rgb(var(--pale-gray-monochrome)); 
+    background:rgb(var(--gray-monochrome)); 
+}
+ 
+/* 
+============================================
+顶栏 
+============================================
+*/
+#top-bar ul li a {
+    color: gainsboro;
+}
+ 
+#top-bar ul li a:hover {
+    color: grey;
+}
+ 
+#top-bar ul li ul a{
+    color: #000;
+    
+}
+ 
+#top-bar ul li:hover a:hover {
+    background: #000;
+    color:#f4f4f4;
+    color: rgb(var(--pale-gray-monochrome));
+    text-decoration: none;   
+}
+ 
+/*
+============================================
+侧边栏
+============================================
+*/
+
+ .side-bar-container{
+    background-color: var(--gradient-sidebar-line);    
+}
+
+/* 
+-------------------------------
+侧边栏样式
+------------------------------
+ */
+ 
+/* 底部颜色 */
+#side-bar,#side-bar:hover {
+    border:0.5em  groove #2e2c2c; 
+    background-color: grey;
+    background-image: var(--gradient-sidebar-line);        
+}
+ 
+/* 引导链接文字 */
+#side-bar .heading ,#side-bar .collapsible-block a{
+    color: #600;
+    border: groove 0.5rem #4D4D4D;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    background-color:#2c2e2e;
+    background-image:var(--gradient-sidebar-txt-line);   
+}
+ 
+#side-bar .sub-text,
+#side-bar  .side-block span {
+ color:#969696 ; 
+    width: 95%;
+}
+
+
+#side-bar .heading p{   
+     font-size: 0.8rem;
+     margin:0.2rem 0 :0.2rem 0 ;
+     height:auto;
+       /* margin:0.5rem 0 0.5rem 0rem;*/
+}
+
+#side-bar .heading{ 
+      display:block;
+     /* padding: 0.5rem 0 0.5rem 0;*/
+}
+
+ 
+/*  菜单 */
+#side-bar .side-block {
+    padding: 10px;
+    margin: 1rem 0 0 0.5rem;
+    border: 1rem ridge #555 !important;
+    border-radius: 0px;
+    box-shadow: 2px 2px 6px var(--dark-gray-monochrome);
+    /*background-color: #2e2c2c; */
+
+    background-image:  repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .8vh);
+ 
+    background-image:  
+               var(--ironhide-image),
+               var(--gradient-sidebar-cover);  
+    background-blend-mode: overlay, normal;
+    background-size: cover, 100% 260%;    
+}
+
+
+#side-bar .side-block.resources,
+#side-bar .side-block.media {
+
+    background-image:  repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .8vh);
+    background-image:  
+               var(--ironhide-image),
+               var(--gradient-sidebar-cover);  
+    background-blend-mode: overlay, normal;
+    background-size: cover, 100% 260%;   
+}
+
+ 
+/* 菜单链接 */
+#side-bar div.menu-item a{
+   color: white ;  
+   background-image:  var(--gradient-sidebar-btn);
+   filter: brightness(1) drop-shadow(5px 3px 1px #000);
+   border: 0.2rem outset #2c2e2e;
+}
+ 
+#side-bar div.menu-item a:hover{
+   color: gray;  
+   filter: brightness(2) drop-shadow(2px 2px 1px #000);
+   border: 0.2rem inset #2c2e2e;
+   top: 0.2rem;
+}
+ 
+/* 侧边栏链接样式 */
+#side-bar a:visited {
+    color: var(--pale-gray-monochrome);
+}
+ 
+#side-bar div.menu-item.inactive a {
+    color: #000000;
+}
+
+ 
+/*
+ 因nu主题又变而修改，用auto可能比较合适，但丑 
+因弹性布局被废弃。
+#side-bar div.menu-item > a:last-of-type {
+    width: 85%;
+}
+*/
+ 
+/* 
+---------------------------
+弹性布局
+---------------------------
+*/
+ 
+/* 系列链接 */
+#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series"] {
+     width:auto;
+    min-width: 5%;
+}
+ 
+#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series"] {
+    width:auto;
+    min-width: 4%;
+}
+ 
+#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series-cn"]  {
+    min-width: 35%;
+    text-align: center;
+}
+ 
+/* 链接弹性布局 */
+#side-bar div.menu-item a:not([href*="scp-series"]) {
+         flex: 1;
+        display:-webkit-flex;
+        display: flex;
+        justify-content: space-around;
+}
+ 
+#side-bar div.menu-item   {
+    display:-webkit-flex;
+    display: flex;
+}
+ 
+/*  鼠标移过灌注修正 */
+#side-bar div.menu-item a::before, #side-bar div.menu-item a:hover::before {
+    width: 220%;
+}
+ 
+/* 
+插入语
+*/
+#side-bar .scpnet-interwiki-wrapper:after {
+    content: "⚙️ 神虽破裂，人必完整 ⚙️";
+    border: 0.2rem inset #2c2e2e;
+    padding: 0.2rem;
+    background: var(--gradient-sidebar-btn);
+    width: auto;
+    color: #000;
+    font-family:STXingkai,'微软简行楷',Kaiti,SimSun,sans-serif ;
+    font-size: 130%;
+}
+
+ 
+/* 手机样式 */
+.mobile-top-bar .open-menu a::after{
+  content: "⚙️";
+  font-size: 30%;
+}
+ 
+/* 
+-----------------------------
+通常手机下的侧边栏 
+-----------------------------
+*/
+@media (max-width: 479px) {
+   #side-bar,#side-bar:hover {
+        border:none; 
+        padding: 0  1rem 0 0rem;
+   }
+ 
+  #side-bar .side-block {
+     border: 0rem double #2B2B2B;
+   }
+
+  #side-bar:target .close-menu {
+       border-left: 0.2rem solid #2e2c2c;     
+   }
+ 
+   #side-bar {
+ /*  height: 700px;*/
+       overflow:scroll;
+       border: none !important;  
+   }
+ 
+   #side-bar  div.menu-item a {
+         width: 85% !important; 
+         word-wrap: break-word;
+         word-break: normal;
+        text-align: center !important; 
+   }
+ 
+    #side-bar div.menu-item   {
+          display: block;
+    }
+ 
+    #side-bar:target .close-menu {
+             border-left: 0.5em ridge #999;     
+    }
+}
+ 
+/*
+------------------------------
+多语言框
+------------------------------
+*/
+ 
+iframe.scpnet-interwiki-frame {
+    filter: invert(1)  grayscale(80%);
+}
+ 
+/* 
+============================================
+tab格式 
+============================================
+*/
+ 
+/*  tab：内容页  */
+.yui-navset .yui-content{
+    border: 0.2rem inset #5E5E5E;
+}
+ 
+/*  tab：未被选中 */
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+     background:radial-gradient(#ecd5d5,#afb3af,grey);
+     color: #000;
+     filter: drop-shadow(2px 10px 10px #333);
+     -webkit-filter: drop-shadow(2px 10px 10px #333);
+}
+ 
+/*  tab：被选中时 */
+.yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selecteda:focus,
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+ 
+    background:radial-gradient(#ecd5d5,#afb3af,grey);
+    color: #000;  
+ 
+     transform:rotateX(10deg);
+    -webkit-transform:rotateX(10deg); 
+    -moz-transform:rotateX(25deg); 
+ 
+     transform-origin: bottom;    
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;  
+ 
+      filter: sepia(20%) drop-shadow(2px 5px 5px #000);
+      -webkit-filter: sepia(20%) drop-shadow(2px 5px 5px #000);     
+}
+ 
+/*  tab：选择  */
+.yui-navset .yui-nav a, 
+.yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selected,
+.yui-navset .yui-navset-top .yui-nav a{
+     border: 0.2rem outset #5E5E5E;
+}
+ 
+/* tab：鼠标移过 */
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+      color: #000;
+      color:rgb(var(--dark-gray-monochrome)); 
+
+      background:radial-gradient(#ecd5d5,#afb3af,grey);
+ 
+      transform:rotateX(10deg);
+    -webkit-transform:rotateX(10deg); 
+    -moz-transform:rotateX(25deg); 
+ 
+     transform-origin: bottom;    
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;  
+ 
+    filter: sepia(15%) drop-shadow(2px 8px 8px #000);
+    -webkit-filter: sepia(15%) drop-shadow(2px 8px 8px #000);
+}
+ 
+/*  tab：被选择时，顶部选页的文字样式 */
+.yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a em {
+color: #000;
+color:rgb(var(--dark-gray-monochrome)); 
+
+}
+ 
+/*
+============================================
+ 标签
+============================================
+ */
+#main-content .page-tags a {
+    border: 2px solid #333;
+    color: #000;
+    transition: all 0.5s;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    text-decoration:none;
+ 
+}
+ .page-tags span {
+    border-top: none;
+}
+ 
+#main-content .page-tags a:hover {
+    transition: all 0.5s;
+
+    border: 2px double grey; 
+    background-color: #333;
+    color: #f4f4f4;
+   
+    color:rgb(var(--pale-gray-monochrome)); 
+    background-color:rgb(var(--dark-gray-monochrome)); 
+}
+
+.page-watch-options a {
+    color: #242424;
+    color:rgb(var(--gray-monochrome)); 
+}
+ 
+/* 
+============================================
+底部按钮 
+============================================
+*/
+.page-options-bottom a {
+    display: inline-block;
+    white-space: nowrap;
+}
+ 
+/* 因为nu主题受修改 */
+#main-content .page-options-bottom a,
+#main-content #action-area div #edit-page-form .buttons.alignleft input {
+    border: 3px double #343434 ;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    text-decoration:none;
+    transition: all 0.5s;
+    filter: brightness(1) drop-shadow(2px 2px 3px #000);
+    -webkit-filter: brightness(1) drop-shadow(2px 2px 3px #000);
+}
+ 
+#main-content .page-options-bottom  a:hover {
+     background-color: #111;
+    border: 3px solid #333;   
+    filter: brightness(1.5) drop-shadow(0.4em 0.6em 0.1em #333);
+    -webkit-filter: brightness(1.5) drop-shadow(2px 5px 2px #333);
+}
+ 
+/* 
+============================================
+底部
+============================================
+ */
+#footer {
+    background: linear-gradient(120deg, #030303, #2c2c2c,#323131,#545353,#1c1919,#1b1818);
+    width:100%;
+}
+ 
+#footer:before {
+    background: transparent;
+    content: "大衍运机";
+    width:100%;
+    color: transparent;
+}
+
+#footer .options {
+   width: inherit;
+}
