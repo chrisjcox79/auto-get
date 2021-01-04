@@ -1,114 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
 
+/*
+    Super Cute Pets!
+    [2014 Wikidot Theme]
+    Created for the SCP Foundation by Aelanna
+*/
+
+/* COMMON */
+h1, #page-title {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
+    color: #909;
+}
+a {
+    color: #b0b;
+}
+a.newpage {
+    color: #d6d;
+}
+
+a:visited {
+   color: #828;
+}
+
+#side-bar a:visited {
+    color: #b0b;
+}
+
+/* GLOBAL WIDTH */
+div#container-wrap {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/component%3Atheme/body_bg_af.png);
+}
+
+/* HEADER */
 #header {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/TitleLogo.png)
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/component%3Atheme/logo-af.png);
+}
+#search-top-box-input {
+    border: solid 1px #699;
+    background-color: #303;
+}
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    border: solid 1px #fff;
+    background-color: #606;
+}
+#search-top-box-form input[type=submit] {
+    border: solid 1px #699;
+    background-color: #636;
+    background: linear-gradient(to bottom, #969,#606,#303);
+}
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #969;
+    background: linear-gradient(to bottom, #c9c,#969,#636);
 }
 
-#page-title{display:none}
-
-@supports(--css:variables) {
-
-    :root {
-     --header-title: "追忆，内殿";
-     --header-subtitle: "卡尔马克塔玛的回响。";
-     --header-font: 'Long Cang', cursive;
-     --background-gradient-distance:75rem; !important
-    }
+#header h1 a,
+#header h2 span {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
 }
 
+/* TOP MENU */
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a {
+    color: #b0b;
+}
 
-    @supports (background-blend-mode: screen) {
+/* SIDE MENU */
+#side-bar .side-block {
+    border: 1px solid #660066;
+    box-shadow: 0 2px 6px rgba(102,0,102,.5);
+}
 
-     #extrac-div-1 {
-     width: 100%;
-     height: var(--header-height-on-desktop);
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-image: var(--gradient-header), url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/background.jpg);
-     background-size: var(--header-background-image-size) 100%, 100%, 100%;
-     background-blend-mode: normal;
-     pointer-events: none;
+#side-bar .heading {
+    color: #606;
+    border-bottom: solid 1px #606;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #606;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
+    color: #606;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #b0b;
+}
+
+/* Changes background for un-folded sidebar */
+@media (max-width: 767px) {
+     #side-bar {
+         background-color: #909;
      }
-
-     div#extra-div-1 {
-     width: 100%;
-     height: calc(100% - var(--final-header-height-on-desktop));
-     position: absolute;
-     top: calc(var(--final-header-height-on-desktop));
-     left: 0;
-     z-index: -1;
-     background-color: rgba(222, 222, 222, 1);
-     background-color: rgba(var(--swatch-background), 1);
-     mask: var(--gradient-background);
-     -webkit-mask: var(--gradient-background);
-     background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/background.jpg), var(--gradient-background);
-     background-size: 100%, 80% var(--background-gradient-distance);
-     background-blend-mode: difference;
-     background-repeat: no-repeat, repeat-x;
-     pointer-events: none;
-     }
-
-    }
-
-.type1 {
-    display: block;
-    overflow: hidden;
-    font-family: 'Long Cang', cursive;
-    font-style: normal;
-    font-size: 170%;
-    color: rgb(57, 0, 0);
-
-    background-attachment: scroll;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/textback.jpg);
-
-    background-clip: border-box;
-    background-color: rgb(222, 222, 222);
-    background-origin: padding-box;
-    background-repeat: repeat;
-    background-size: 100%;
-
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-
-.textbox {
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    background-color: rgb(var(--white-monochrome));
 }
 
-#side-bar:hover, #side-bar:active {
-background:
-linear-gradient(
-	rgba(var(--swatch-menubg-color),1) 30%,
-	rgba(var(--swatch-menubg-color),0)),
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0),
-	rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
-radial-gradient(farthest-side at 50% 0,
-	rgba(var(--swatch-primary-darkest),.5),
-	rgba(var(--black-monochrome),0)),
-radial-gradient(farthest-side at 50% 100%,
-	rgba(var(--swatch-primary-darkest),.5),
-	rgba(var(--black-monochrome),0)) 0 100%;
+.side-block .menu-item > .image,
+iframe.scpnet-interwiki-frame {
+  -webkit-filter: hue-rotate(310deg) brightness(120%); /* Safari 6.0 - 9.0 */
+  filter: hue-rotate(310deg) brightness(120%);
 }
-#side-bar {
-background:
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0) 30%,
-	rgba(var(--swatch-menubg-color),0)),
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0),
-	rgba(var(--swatch-menubg-color),0) 70%) 0 100%,
-radial-gradient(farthest-side at 50% 0,
-	rgba(var(--swatch-primary-darkest),0),
-	rgba(var(--black-monochrome),0)),
-radial-gradient(farthest-side at 50% 100%,
-	rgba(var(--swatch-primary-darkest),0),
-	rgba(var(--black-monochrome),0)) 0 100%;
+
+/* FOOTER */
+#footer {
+    background: #424;
+}
+
+#footer a {
+    color: #fff;
+}
+
+/* SOME NICE BOXES */
+.content-panel {
+    border: solid 1px #308088;
+    background-color: #339099;
+}
+.content-panel.standalone {
+    background: #fdfbfd;
+}
+
+/* Page Rating Module Customizations */
+.page-rate-widget-box .rate-points {
+  background-color: #636 !important;
+  border: solid 1px #636;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: #fff6f0;
+  border-top: solid 1px #636;
+  border-bottom: solid 1px #636;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  color: #636;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: #636;
+  color: #fffff0;
+}
+.page-rate-widget-box .cancel {
+  background-color: #636;
+  border: solid 1px #636;
+}
+.page-rate-widget-box .cancel a {
+  color: #969;
+}
+.page-rate-widget-box .cancel a:hover {
+  background: #636;
+  color: #fffff0;
+}
+
+/* Heritage Collection Rating Module */
+.heritage-rating-module {
+  background-color: #636;
+  border: solid 1px #ccc066;
+}
+
+/* LOGIN STATUS */
+#login-status ul a {
+    color: #b0b;
 }

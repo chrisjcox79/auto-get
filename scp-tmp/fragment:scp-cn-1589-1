@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 11375464;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "fragment:scp-cn-1589-1";
-        OZONE.request.timestamp = 1609555579;
+        OZONE.request.timestamp = 1609769007;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "fragment:scp-cn-1589-1";
@@ -126,29 +126,145 @@
     --accentColor: #4E8EF5;
 }
 
-/* 图片选择 */
-.image .collapsible-block-folded, .image .collapsible-block-unfolded-link {
-    background: none!important;
-    padding-top: 0px!important;
-    padding-bottom: 0px!important;
-    padding-left: 14px!important;
-    padding-right: 14px!important;
-}
-.image .collapsible-block-folded .collapsible-block-link::before,
-.image .collapsible-block-unfolded .collapsible-block-link::before {
-    content: " "!important;
-}
-.image .collapsible-block-unfolded-link {
-    box-shadow: 0px 0px 0px 5px #4e8ef5 inset!important;
-}
-
 /* 刷新 */
 .refresh a:hover {
     background: none!important;
 }
+
+/* 认证按钮 */
+.collapsiblealt .collapsible-block-link {
+    color: #000!important;
+}
+.collapsiblealt .collapsible-block-folded, .collapsiblealt .collapsible-block-unfolded-link, .collapsiblealt .collapsible-block-folded:hover, .collapsiblealt .collapsible-block-unfolded-link:hover {
+    background: none!important;
+}
+.collapsiblealt .collapsible-block-link:hover {
+    color: #fff!important;
+}
+.collapsiblealt .collapsible-block-folded .collapsible-block-link::before, .collapsiblealt .collapsible-block-unfolded .collapsible-block-link::before {
+    content: " "!important;
+}
+.collapsiblealt .collapsible-block-unfolded-link{
+    box-shadow: none!important;
+}
+
+/* 感谢Sekai_s的代码援助！ */
+.image-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+}
+.image-wrap a:hover {
+  background-color: transparent;
+}
+.image-wrap > div {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+.image-wrap > div:nth-child(1) > .image {
+  width: 100%;
+}
+.image-wrap > div:nth-child(2) {
+  position: relative;
+  left: -100%;
+}
+.image-wrap > div:nth-child(2) > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.image-wrap > div:nth-child(2) > div.col-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 26% 3% 0;
+}
+.image-wrap > div:nth-child(2) > div.link-wrap {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 11.5% 5% 0 3%;
+}
+
+.col-wrap > .colmod-block {
+  width: 33.33%;
+}
+.col-wrap > .colmod-block > ul > li > .colmod-link-top a {
+  box-sizing: border-box;
+  padding-bottom: calc(100% - 10px);
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  border: 5px solid transparent;
+}
+.col-wrap > .colmod-block > ul > li.folded > .colmod-link-top a:first-child,
+.col-wrap > .colmod-block > ul > li.unfolded > .colmod-link-top a:not(:first-child) {
+  display: block;
+}
+.col-wrap > .colmod-block > ul > li.unfolded > .colmod-link-top a:not(:first-child) {
+  border: 5px solid #4e8ef5;
+}
+
+.link-wrap > .refresh {
+  padding-bottom: 16%;
+  width: 16%;
+  height: 0;
+}
+.link-wrap > .submit{
+  width: 45%;
+}
+/* 赞美色开！ */
+</style>
+<style>
+.fakeprot .mailform-box .buttons{
+display:none;
+}
+
+.collapsiblealt .collapsible-block-link {
+padding: 0.1em 0.5em;
+text-decoration: none;
+background-color: #F4F4F4;
+border: 1px solid #AAA;
+color: #000;
+}
+.collapsiblealt .collapsible-block-link:hover {
+    background-color: #DDD;
+color: #000;
+}
+.collapsiblealt .collapsible-block-link:active {
+background-color: #DDD;
+color: #000;
+}
+.collapsiblealt .collapsible-block-unfolded-link{
+margin:0.5em 0;
+text-align: center;
+}
+.collapsiblealt .collapsible-block-folded{
+margin:0.5em 0;
+text-align: center;
+}
+
+.fakeprot .passw input[type=text] {
+    text-security:disc;
+    -webkit-text-security:disc;
+    -mox-text-security:disc;
+}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/wiki/mailform/MailFormModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -543,6 +659,60 @@
 
 <div style="height: 30em;"></div>
 <div style="text-align: center;">
+
+
+<div class="fakeprot"><div class="mailform-box" id="mailform-box-59170">
+    <form id="mailform-59170" action="javascript:WIKIDOT.modules.MailFormModule.listeners.send(null, '59170')">
+        <table class="form">
+                            <tr id="mailform-row-59170-name">
+                    <td>
+                                                    帐号
+                                            </td>
+                    <td>
+                        <div class="field-error-message"></div>
+                                                    <input name="name" class="text" type="text" 
+                                value="drclinton1437"                                size="30"                                maxlength="10"                            />
+                                                                                                                                            </td>
+                </tr>
+                    </table>
+        <div class="buttons">
+            <input type="button" value="发送" onclick="WIKIDOT.modules.MailFormModule.listeners.send(event, '59170')"/>
+        </div>
+    </form>
+    <div id="mailformdef-59170" style="display: none;">
+        c0fca6351b027868bc5ed9ae7d30ed20_1609769007
+    </div>
+</div>
+<div class="passw"><div class="mailform-box" id="mailform-box-98990">
+    <form id="mailform-98990" action="javascript:WIKIDOT.modules.MailFormModule.listeners.send(null, '98990')">
+        <table class="form">
+                            <tr id="mailform-row-98990-affiliation">
+                    <td>
+                                                    密码
+                                            </td>
+                    <td>
+                        <div class="field-error-message"></div>
+                                                    <input name="affiliation" class="text" type="text" 
+                                value="・・・・・・・・・"                                size="30"                                maxlength="10"                            />
+                                                                                                                                            </td>
+                </tr>
+                    </table>
+        <div class="buttons">
+            <input type="button" value="发送" onclick="WIKIDOT.modules.MailFormModule.listeners.send(event, '98990')"/>
+        </div>
+    </form>
+    <div id="mailformdef-98990" style="display: none;">
+        9b372eb5e67d493a1829e18acc53f22b_1609769007
+    </div>
+</div></div>
+</div>
+<div class="collapsiblealt">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">认证</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">注销</a></div>
+<div class="collapsible-block-content"></div>
+<br />
 <div class="colmod-block">
 <ul>
 <li class="folded">
@@ -550,98 +720,151 @@
 <li style="list-style: none"><span style="font-size:150%;">_</span></li>
 </ul>
 <div class="colmod-link-top">
-<div class="foldable-list-container"><span style="font-size:150%;"><a href="javascript:;">☐ 进行人机身份验证</a><a href="javascript:;">　</a></span></div>
+<div class="foldable-list-container"><span style="font-size:150%;"><a href="javascript:;">☐ 进行人机身份验证</a><a href="javascript:;">☐ 进行人机身份验证</a></span></div>
 </div>
 <div class="colmod-content">
-<div class="image" style="z-index: 1; position: absolute; font-size: 650%; margin: 1.18em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="image-wrap">
+<div><img src="http://scp-wiki-cn.wikidot.com/local--files/scp-cn-1589/Reverse-CAPTCHA2.png" alt="Reverse-CAPTCHA2.png" class="image" /></div>
+<div>
+<div class="col-wrap">
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 2; position: absolute; font-size: 650%; margin: 1.18em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 3; position: absolute; font-size: 650%; margin: 1.18em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 4; position: absolute; font-size: 650%; margin: 2.52em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 5; position: absolute; font-size: 650%; margin: 2.52em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 6; position: absolute; font-size: 650%; margin: 2.52em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 7; position: absolute; font-size: 650%; margin: 3.88em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 8; position: absolute; font-size: 650%; margin: 3.88em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
 </div>
+</li>
+</ul>
 </div>
-<div class="image" style="z-index: 9; position: absolute; font-size: 650%; margin: 3.88em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
 </div>
-</div>
-</div>
-<div style="position: absolute; margin: 1.2em 0em;"><img src="http://scp-wiki-cn.wikidot.com/local--files/scp-cn-1589/Reverse-CAPTCHA2.png" width="400px" alt="Reverse-CAPTCHA2.png" class="image" /></div>
-<div class="refresh" style="z-index: 1; position: absolute; margin: 38.1em 18.8em;">
-<p><span style="font-size:160%;"><a style="color: transparent; background-color: none;" href="/scp-cn-1589/offset/1">验证</a></span></p>
-</div>
-<div class="refresh" style="z-index: 1; position: absolute; margin: 38.1em 1.5em;">
-<p><span style="font-size:300%;"><a style="color: transparent; background-color: none;" href="/scp-cn-1589/offset/0">　</a></span></p>
-</div>
-</div>
+<div class="colmod-content"></div>
 <div>
 <div class="foldable-list-container"></div>
 </div>
@@ -649,7 +872,21 @@
 </ul>
 </div>
 </div>
-<div style="height: 60em;"></div>
+<div class="link-wrap"><a class="refresh" href="/scp-cn-1589/offset/0"></a><a class="submit" href="/scp-cn-1589/offset/1"></a></div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</div>
+</div>
+<div style="height: 30em;"></div>
 
                     </div>
 
@@ -686,7 +923,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 8, 最后编辑于: <span class="odate time_1609525436 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">01 Jan 2021 18:23</span></div>
+                            <div id="page-info">页面版本: 10, 最后编辑于: <span class="odate time_1609598238 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Jan 2021 14:37</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">0</span>)</a>
@@ -758,32 +995,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://fcr-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fcr-wiki.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://r.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/r.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://fcr-wiki.wikidot.com">FCR Vakfı</a></h3>
-            <div class="desc">          
-              Find, Contain, Research
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://sandboxscpfr.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sandboxscpfr.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://sandboxscpfr.wikidot.com">SCP Sandbox</a></h3>
-            <div class="desc">          
-              Réservé aux auteurs et traducteurs du Wiki
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://kingswaypreint.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kingswaypreint.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://kingswaypreint.wikidot.com">Kingsway Pre-Intermediate</a></h3>
+            <h3><a target="_blank" href="http://r.wikidot.com">Wikidot URL shortener</a></h3>
             <div class="desc">          
               
             </div>
@@ -791,12 +1006,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://caughtnotsleeping.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/caughtnotsleeping.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ds10.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ds10.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://caughtnotsleeping.wikidot.com">CaughtNotSleeping</a></h3>
+            <h3><a target="_blank" href="http://ds10.wikidot.com">מבני נתונים</a></h3>
             <div class="desc">          
-              It&#039;s just a game...It&#039;s just a game...
+              סמסטר ב&#039;, תש&quot;ע
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://chessvariants.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chessvariants.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://chessvariants.wikidot.com">Chess Variants Wiki</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://scpexplained.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpexplained.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://scpexplained.wikidot.com">SCP Explained</a></h3>
+            <div class="desc">          
+              Simplify, Condense, Paraphrase
             </div>
           </div>
         </div>

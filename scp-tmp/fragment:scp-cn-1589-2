@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 11375464;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "fragment:scp-cn-1589-2";
-        OZONE.request.timestamp = 1609555579;
+        OZONE.request.timestamp = 1609769007;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "fragment:scp-cn-1589-2";
@@ -143,21 +143,6 @@
     border-radius: 10px;
 }
 
-/* 附录 */
-.addendum{
-    text-align: center;
-}
-.addendum a{
-    font-weight: bold;
-    font-size: 120%;
-}
-
-/* qnl链接正常点 */
-.exp a{
-    font-weight: normal;
-    font-size: 100%;
-}
-
 /* 变蓝！ */
 .blue a{
     font-weight: normal;
@@ -169,26 +154,84 @@
     background-color: #4E8EF5;
 }
 
-/* 图片选择 */
-.image .collapsible-block-folded, .image .collapsible-block-unfolded-link {
-    background: none!important;
-    padding-top: 0px!important;
-    padding-bottom: 0px!important;
-    padding-left: 14px!important;
-    padding-right: 14px!important;
+/* 感谢Sekai_s的代码援助！ */
+.image-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
 }
-.image .collapsible-block-folded .collapsible-block-link::before,
-.image .collapsible-block-unfolded .collapsible-block-link::before {
-    content: " "!important;
+.image-wrap a:hover {
+  background-color: transparent;
 }
-.image .collapsible-block-unfolded-link {
-    box-shadow: 0px 0px 0px 5px #4e8ef5 inset!important;
+.image-wrap > div {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+.image-wrap > div:nth-child(1) > .image {
+  width: 100%;
+}
+.image-wrap > div:nth-child(2) {
+  position: relative;
+  left: -100%;
+}
+.image-wrap > div:nth-child(2) > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.image-wrap > div:nth-child(2) > div.col-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 26% 3% 0;
+}
+.image-wrap > div:nth-child(2) > div.link-wrap {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 11.5% 5% 0 3%;
 }
 
-/* 刷新 */
-.refresh a:hover {
-    background: none!important;
+.col-wrap > .colmod-block {
+  width: 33.33%;
 }
+.col-wrap > .colmod-block > ul > li > .colmod-link-top a {
+  box-sizing: border-box;
+  padding-bottom: calc(100% - 10px);
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  border: 5px solid transparent;
+}
+.col-wrap > .colmod-block > ul > li.folded > .colmod-link-top a:first-child,
+.col-wrap > .colmod-block > ul > li.unfolded > .colmod-link-top a:not(:first-child) {
+  display: block;
+}
+.col-wrap > .colmod-block > ul > li.unfolded > .colmod-link-top a:not(:first-child) {
+  border: 5px solid #4e8ef5;
+}
+
+.link-wrap > .refresh {
+  padding-bottom: 16%;
+  width: 16%;
+  height: 0;
+}
+.link-wrap > .submit{
+  width: 45%;
+}
+/* 赞美色开！ */
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -590,7 +633,6 @@
 <p>请重新认证以访问该文档</p>
 </div>
 </div>
-<br />
 <div style="text-align: center;">
 <div class="colmod-block">
 <ul>
@@ -635,42 +677,31 @@
 </ol>
 <p>当SCP-CN-1589-1被成功加载时，其将立即开始收集使用者数据<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup>并上传至未知位置。当使用者数据被收集到一定程度后，点选SCP-CN-1589-1的复选框将不再弹出SCP-CN-1589-2，但其仍能继续收集使用者数据。</p>
 <p>SCP-CN-1589-2为由点选SCP-CN-1589-1的复选框后弹出的一个对话框，通常由题目、图片、提交三个模块组成。该对话框要求使用者点选符合题目要求的图片以通过验证。题目难度与图片复杂度将随验证失败次数提升，其最后往往将无法使用任何手段通过验证。SCP-CN-1589-2的图片含有轻微模因影响与认知危害，目视图片后将产生强烈的通过验证的期望。目前仍未知SCP-CN-1589-2的图片来源，对所有图片中地点的追溯均宣告失败。</p>
-<p><span style="white-space: pre-wrap;">&#32;</span></p>
-<div class="addendum">
-<div class="colmod-block">
-<ul>
-<li class="folded">
-<ul>
-<li style="list-style: none">_</li>
-</ul>
-<div class="colmod-link-top">
-<div class="foldable-list-container"><a href="javascript:;">▷ 显示附录 - CN-1589-1</a><a href="javascript:;">▽ 收起附录 - CN-1589-1</a></div>
+<div class="footnotes-footer">
+<div class="title">脚注</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 包括但不限于光标移动轨迹、光标移动速度、键盘输入记录、浏览记录、使用时间、设备定位、声纹记录、面部特征等。
+<p>实验表明该程序在设备缺少音频与图像采集设备的情况下仍可采集音频与图像。对其原理的研究仍在进行中。</p>
 </div>
-<div class="colmod-content">
-<div style="text-align: left;">
-<p><strong>附录 - CN-1589-1 - 起源：</strong>经溯源，该程序原型为由谷歌公司改进制作的reCAPTCHA第3版，其开发目的为拦截机器人与爬虫对服务器的高强度访问操作。对谷歌公司的技术人员审问与reCAPTCHA开发日志查询得知，该异常的产生为对reCAPTCHA的技术性改进所致。其自改进算法于开发版本7██添加，但其添加者未知，对该添加者的来源查询与追捕行动已被无限期搁置。</p>
-</div>
-</div>
-<div>
-<div class="foldable-list-container"></div>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <br />
 <span style="white-space: pre-wrap;">&#32;</span>
-<div class="addendum">
-<div class="colmod-block">
-<ul>
-<li class="folded">
-<ul>
-<li style="list-style: none">_</li>
-</ul>
-<div class="colmod-link-top">
-<div class="foldable-list-container"><a href="javascript:;">▷ 显示附录 - CN-1589-2</a><a href="javascript:;">▽ 收起附录 - CN-1589-2</a></div>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">显示附录&nbsp;-&nbsp;CN-1589-1</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">收起附录&nbsp;-&nbsp;CN-1589-1</a></div>
+<div class="collapsible-block-content">
+<div style="text-align: left;">
+<p><strong>附录 - CN-1589-1 - 起源：</strong>经溯源，该程序原型为由谷歌公司改进制作的reCAPTCHA第3版，其开发目的为拦截机器人与爬虫对服务器的高强度访问操作。对谷歌公司的技术人员审问与reCAPTCHA开发日志查询得知，该异常的产生为对reCAPTCHA的技术性改进所致。其自改进算法于开发版本7██添加，但其添加者未知，对该添加者的来源查询与追捕行动已被无限期搁置。</p>
 </div>
-<div class="colmod-content">
+</div>
+</div>
+</div>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">显示附录&nbsp;-&nbsp;CN-1589-2</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">收起附录&nbsp;-&nbsp;CN-1589-2</a></div>
+<div class="collapsible-block-content">
 <div style="text-align: left;">
 <p><strong>附录 - CN-1589-2 - 实验记录：</strong>以下为针对SCP-CN-1589-2的实验记录，所有问题均已翻译为中文。无用且重复的记录已略过。</p>
 <div class="exp">
@@ -713,7 +744,7 @@
 <strong>图片：</strong>0幅含有鞋的图片，9幅无关干扰图片。其中有9幅图片为纯黑色。检测到有9幅图片带有轻微认知危害。<br />
 <strong>验证结果：</strong><span style="color: #d02727">验证未通过</span></p>
 <hr />
-<p><strong>结果：</strong>实验因实验员出现精神恍惚症状而被下令强行终止。未分析出SCP-CN-1589-2的出题规律。</p>
+<p><strong>结果：</strong>实验因实验员出现精神恍惚症状而被下令强行终止。未分析出SCP-1589-2的出题规律。</p>
 </div>
 <br />
 <span style="white-space: pre-wrap;">&#32;</span>
@@ -748,26 +779,13 @@
 </div>
 </div>
 </div>
-<div>
-<div class="foldable-list-container"></div>
-</div>
-</li>
-</ul>
 </div>
 </div>
-<br />
-<span style="white-space: pre-wrap;">&#32;</span>
-<div class="addendum">
-<div class="colmod-block">
-<ul>
-<li class="folded">
-<ul>
-<li style="list-style: none">_</li>
-</ul>
-<div class="colmod-link-top">
-<div class="foldable-list-container"><a href="javascript:;">▷ 显示附录 - CN-1589-3</a><a href="javascript:;">▽ 收起附录 - CN-1589-3</a></div>
-</div>
-<div class="colmod-content">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">显示附录&nbsp;-&nbsp;CN-1589-3</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">收起附录&nbsp;-&nbsp;CN-1589-3</a></div>
+<div class="collapsible-block-content">
 <div class="blue">
 <div class="colmod-block">
 <ul>
@@ -779,134 +797,167 @@
 <div class="foldable-list-container"><span style="font-size:150%;"><a href="javascript:;">☐ 进行人机身份验证</a><a href="javascript:;">　</a></span></div>
 </div>
 <div class="colmod-content">
-<div class="image" style="z-index: 1; position: absolute; font-size: 650%; margin: 1.18em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="image-wrap">
+<div><img src="http://scp-wiki-cn.wikidot.com/local--files/scp-cn-1589/Reverse-CAPTCHA3.png" alt="Reverse-CAPTCHA3.png" class="image" /></div>
+<div>
+<div class="col-wrap">
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ Show block</a><a href="javascript:;">- Hide block</a></div>
+</div>
+<div class="colmod-content"></div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
 </div>
 </div>
-</div>
-<div class="image" style="z-index: 2; position: absolute; font-size: 650%; margin: 1.18em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
+<div class="link-wrap"><a class="refresh" href="/scp-cn-1589/offset/1"></a><a class="submit" href="/scp-cn-1589/offset/2"></a></div>
 </div>
 </div>
-</div>
-<div class="image" style="z-index: 3; position: absolute; font-size: 650%; margin: 1.18em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 4; position: absolute; font-size: 650%; margin: 2.52em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 5; position: absolute; font-size: 650%; margin: 2.52em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 6; position: absolute; font-size: 650%; margin: 2.52em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 7; position: absolute; font-size: 650%; margin: 3.88em 0.16em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 8; position: absolute; font-size: 650%; margin: 3.88em 1.5em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div class="image" style="z-index: 9; position: absolute; font-size: 650%; margin: 3.88em 2.85em;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">　</a></div>
-<div class="collapsible-block-content"></div>
-</div>
-</div>
-</div>
-<div style="position: absolute; margin: 1.2em 0em;"><img src="http://scp-wiki-cn.wikidot.com/local--files/scp-cn-1589/Reverse-CAPTCHA3.png" width="400px" alt="Reverse-CAPTCHA3.png" class="image" /></div>
-<div class="refresh" style="z-index: 1; position: absolute; margin: 38.1em 18.8em;">
-<p><span style="font-size:160%;"><a style="color: transparent; background-color: none;" href="/scp-cn-1589/offset/2">验证</a></span></p>
-</div>
-<div class="refresh" style="z-index: 1; position: absolute; margin: 38.1em 1.5em;">
-<p><span style="font-size:300%;"><a style="color: transparent; background-color: none;" href="/scp-cn-1589/offset/1">　</a></span></p>
 </div>
 <div style="height: 30em;"></div>
-</div>
-<div>
-<div class="foldable-list-container"></div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-<span style="white-space: pre-wrap;">&#32;</span>
-<div style="text-align: left;">
-<div class="footnotes-footer">
-<div class="title">脚注</div>
-<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 包括但不限于光标移动轨迹、光标移动速度、键盘输入记录、浏览记录、使用时间、设备定位、声纹记录、面部特征等。
-<p>实验表明该程序在设备缺少音频与图像采集设备的情况下仍可采集音频与图像。对其原理的研究仍在进行中。</p>
-</div>
-</div>
-</div>
 </li>
 </ul>
 </div>
 <div>
 <div class="foldable-list-container"></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -954,7 +1005,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 7, 最后编辑于: <span class="odate time_1609525471 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">01 Jan 2021 18:24</span></div>
+                            <div id="page-info">页面版本: 8, 最后编辑于: <span class="odate time_1609597938 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Jan 2021 14:32</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
 <a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">0</span>)</a>
@@ -1026,32 +1077,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://fcr-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fcr-wiki.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://r.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/r.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://fcr-wiki.wikidot.com">FCR Vakfı</a></h3>
-            <div class="desc">          
-              Find, Contain, Research
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://sandboxscpfr.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sandboxscpfr.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://sandboxscpfr.wikidot.com">SCP Sandbox</a></h3>
-            <div class="desc">          
-              Réservé aux auteurs et traducteurs du Wiki
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://kingswaypreint.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kingswaypreint.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://kingswaypreint.wikidot.com">Kingsway Pre-Intermediate</a></h3>
+            <h3><a target="_blank" href="http://r.wikidot.com">Wikidot URL shortener</a></h3>
             <div class="desc">          
               
             </div>
@@ -1059,12 +1088,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://caughtnotsleeping.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/caughtnotsleeping.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ds10.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ds10.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://caughtnotsleeping.wikidot.com">CaughtNotSleeping</a></h3>
+            <h3><a target="_blank" href="http://ds10.wikidot.com">מבני נתונים</a></h3>
             <div class="desc">          
-              It&#039;s just a game...It&#039;s just a game...
+              סמסטר ב&#039;, תש&quot;ע
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://chessvariants.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chessvariants.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://chessvariants.wikidot.com">Chess Variants Wiki</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://scpexplained.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpexplained.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://scpexplained.wikidot.com">SCP Explained</a></h3>
+            <div class="desc">          
+              Simplify, Condense, Paraphrase
             </div>
           </div>
         </div>

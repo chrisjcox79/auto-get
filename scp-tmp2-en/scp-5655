@@ -1,0 +1,445 @@
+        margin: 3em -5.5%;
+    }
+    #side-bar {
+        top: 0;
+    }
+    #side-bar .heading {
+        padding-left: 1em;
+        margin-left: -1em;
+    }
+    #search-top-box {
+        top: 107px;
+    }
+}
+
+/* ---- TABS ---- */
+
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: #7E2520; /* color between tab list and content */
+}
+
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background: white; /* tab background */
+    border-color: transparent;
+    color: black;
+    transition: 0.125s;
+}
+
+.yui-navset .yui-nav a em {
+    background: #f4f4f4;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    border-color: white;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+    background: white; /* selected tab background */
+    color: #7E2520;
+}
+
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background: white;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em {
+    border-color: transparent;
+    box-shadow: 0px 1px 2px 0.5px rgba(0,0,0,0.5);
+    background: white;
+}
+
+.yui-navset .yui-content {
+    background: #f4f4f4; /* content background color */
+}
+
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: transparent; /* content border */
+    border-top-color: transparent; /* different border color */
+}
+
+.yui-navset-left .yui-content {
+    border-left-color: #b7a9a9; /* different border color */
+}
+
+/* ---- TOP MENU ---- */
+
+#top-bar a {
+    color: #f4f4f4;
+    font-weight: normal;
+}
+
+/* ---- INFO BAR ---- */
+ body{
+     --barColour: rgb(126, 37, 32);
+}
+
+ .info-container .collapsible-block-content{
+     padding: 0 .5em 30px;
+}
+ .info-container .collapsible-block-content .wiki-content-table{
+     width: 100%;
+}
+
+/* ---- INFO PANE ---- */
+
+#page-content .creditRate{
+     margin: unset;
+}
+#page-content .rate-box-with-credit-button {
+    background-color: #ffffff;
+    border: solid 1px white;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#page-content .rate-box-with-credit-button .fa-info {
+    border: none;
+    color: #7E2520;
+}
+
+#page-content .rate-box-with-credit-button .fa-info:hover {
+    background: #ffffff;
+    color: #E53C35;
+}
+
+.rate-box-with-credit-button .cancel {
+    border: solid 1px white;
+}
+
+/* ---- PAGE RATING ---- */
+
+.page-rate-widget-box {
+    box-shadow: none;
+    margin: unset;
+    margin-bottom: 6px;
+}
+
+.page-rate-widget-box .rate-points {
+    background-color: white !important;
+    color: #7E2520 !important;
+    border: solid 1px white;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: #7E2520;
+}
+
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: white;
+    color: #E53C35;
+}
+
+.page-rate-widget-box .cancel {
+    background: transparent;
+    background-color: white;
+    border: solid 1px white;
+}
+
+.page-rate-widget-box .cancel a {
+    color: #7E2520;
+}
+.page-rate-widget-box .cancel a:hover {
+    background: white;
+    color: #E53C35;
+}
+
+/* ---- PAGE ELEMENTS ---- */
+
+#page-content .wiki-content-table tr th {
+    border: solid 1px #bbbbbb;
+    background-color: #f4f4f4;
+    /* set border for table title */
+}
+
+#page-content .wiki-content-table tr td {
+    border: solid 1px #bbbbbb;
+    /* set border for table content */
+}
+
+blockquote,
+div.blockquote,
+#toc,
+.code {
+     background-color: #f4f4f4;
+     border: solid 1px #bbbbbb;
+}
+
+.scp-image-block {
+    border: solid 1px #bbbbbb;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+.scp-image-block .scp-image-caption {
+    background-color: #f4f4f4;
+    border-top: solid 1px #bbbbbb;
+    color: black;
+}
+
+
+@import url("http://www.scp-wiki.net/component:collapsible-sidebar/code/1")
+
+
+@import url(http://topia.wdfiles.com/local--code/cqb%3Aflow/1);
+@import url("http://topia.wdfiles.com/local--code/cqb%3Aflow/1");
+
+
+.test {
+  margin: 6px auto;
+  padding: .2em 1.25em;
+  background-color: #e5e5e5;
+  width: 85%;
+}
+
+@media only screen and (max-width: 600px) {
+  .test { width: 95% }
+}
+
+
+/* Fix footnote superscript flying away: */
+.footnoteref, #page-content > sup {
+    top: -0.25em;
+}
+
+/* Visually centers image block */
+.scp-image-block.block-right {
+    margin: 0em 0em 1em 2em;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .scp-image-block.block-right{
+        float: none;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+              SCP Foundation
+                
+                    Secure, Contain, Protect
+                
+                
+                
+                
+                
+    
+        
+    
+
+                
+                
+                    
+                        
+
+
+
+SCP Series
+
+Series VI
+Series V
+» Series V Tales
+Series IV
+» Series IV Tales
+Series III
+» Series III Tales
+Series II
+» Series II Tales
+Series I
+» Series I Tales
+
+
+Tales
+
+Foundation Tales
+Series Archive
+Incident Reports
+CreepyPasta Archive
+
+
+Library
+
+User-Curated Lists
+Joke SCPs
+» Joke SCPs Tales
+Explained SCPs
+» Explained SCPs Tales
+GoI Formats
+Audio Adaptations
+SCP Artwork Hub
+Contest Archive
+
+
+Universe
+
+Canons
+Groups of Interest
+Anomalous Items
+Extranormal Events
+Unexplained Locations
+
+
+SCP Global
+
+International Translation Archive
+Russian Branch(-RU)
+SCP 재단(-KO)
+SCP基金会(-CN)
+Fondation SCP(-FR)
+SCP Polska Filia(-PL)
+La Fundación SCP(-ES)
+สถาบัน SCP(-TH)
+SCP財団(-JP)
+SCP Deutschland(-DE)
+Fondazione SCP(-IT)
+Ukrainian Branch(-UA)
+Lusófona Branch(-PT/BR)
+SCP Nadace(-CZ)
+
+
+Background
+
+About the Foundation
+Object Classes
+Personnel Dossier
+Security  Clearance
+Secure Facilities
+Task Forces
+
+
+Info Pages
+
+Guide Hub
+User Tools
+Tag Search
+Meet The Staff
+Criticism Policy
+Licensing Guide
+Image Use Policy
+Chat Guidelines
+Deletions Guidelines
+Seminars and Workshops
+Donations Policy
+Links
+
+
+
+
+
+
+
+≡
+
+
+SCPs
+
+Series VI
+Series V
+» Series V Tales
+Series IV
+» Series IV Tales
+Series III
+» Series III Tales
+Series II
+» Series II Tales
+Series I
+» Series I Tales
+
+
+Tales
+
+Foundation Tales
+Series Archive
+Incident Reports
+CreepyPasta Archive
+
+
+Library
+
+User Curated Lists
+Joke SCPs
+» Joke SCPs Tales
+Explained SCPs
+» Explained SCPs Tales
+GoI Formats
+Audio Adaptations
+Artwork Hub
+Contest Archive
+
+
+Universe
+
+Canon Hub
+GoIs
+Anomalous Items
+Extranormal Events
+Unexplained Locations
+Object Classes
+Personnel Dossier
+Security  Clearance
+Secure Facilities
+Task Forces
+
+
+Guides
+
+Guide Hub
+Guide for Newbies
+How to Write an SCP
+Image Use Policy
+Chat Guidelines
+FAQ
+Site Rules
+Deletions Guidelines
+Criticism Policy
+Seminars and Workshops
+Links
+
+
+
+
+
+                    
+                
+                Sign in 
+                
+            
+            
+            
+                
+                    
+                        
+
+
+                        
+
+
+
+
