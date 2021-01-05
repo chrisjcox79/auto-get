@@ -1,273 +1,719 @@
-@supports((display: -ms-grid) or (display: grid)) {
+/*
+=========================================================
+              🐉 羽天一的异学夜行BHL版主题 🐉
+       ------------------------------------------------
+           异学会标志由 Freedom Koo 绘制
+           CN分部标志由 Deer Kylin 设计
+         分割线代码参考自 Woednaz 设计的主题
+                   遵循CC-BY-SA协议
+==========================================================
+*/
+
+
 :root {
-  /* Header */
-  --logo-image: none;
-  --header-title: "黑 王";
-  --header-subtitle: "神拘黑白 王宴绯青";
+   --theme-base: "black-highlighter";
+--theme-id: " piaoxiang-bhl";
+--theme-name: "夜行主题";
 
-  /* Standard Colors */
-  --bright-accent: 192, 5, 4;
-  --medium-accent: 144, 46, 47;
-  --dark-accent: 57, 10, 22;
+/* 图片 */
 
-  /* Primary Menu Colors */
-  --swatch-menubg-hover-color: var(--dark-gray-monochrome);
-  --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
 
-/* Rating Module Colors */
-  --rating-module-button-color: var(--swatch-menutxt-light-color);
-  --rating-module-button-credit-color: 52, 152, 219;
-  --rating-module-text-color: var(--swatch-menutxt-light-color);
+--header-image:url(http://scp-wiki-cn.wdfiles.com/local--files/theme:walk-in-the-dark/Header-yxh-dark.png);
 
-  /* Header Gradients */
-  --gradient-header: linear-gradient(to top, rgb(var(--black-monochrome)), rgb(var(--black-monochrome)));
-  --gradient-sidemenu-header: linear-gradient(10deg, rgb(var(--black-monochrome)) 0%, rgb(var(--dark-accent)) 100%);
+--yxh-red-image:url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-the-dark/Logo-YXH-red.png);
 
-  /* Ayers' Info Bar */
-  --barColour: rgb(var(--black-monochrome));
-}
+--hr-image:url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-the-dark/Logo-CNhub-white.png);
 
-/* Article Bottom Buttons */
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-  background-color: rgba(66, 66, 72, 1);
-  background-color: rgba(var(--swatch-menubg-medium-dark-color), 1);
-  border-color: rgba(12, 12, 12, 1);
-  border-color: rgba(var(--swatch-menubg-black-color), 1);
-}
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-  background-color: rgba(57, 10, 22, 1);
-  background-color: rgba(var(--swatch-primary-darkest), 1);
-  border-color: rgba(12, 12, 12, 1);
-  border-color: rgba(var(--swatch-menubg-black-color), 1);
-}
-#footer {
-  background: rgb(48, 48, 52);
-  background: rgb(var(--dark-gray-monochrome));
-}
+ /* 著作信息文件夹 */    
+--linkColour:#CC6600  ;
+ --barColour:  linear-gradient(30deg,#151e3b,#2d1053,#291342 );
 
-/* Header */
-div#container {
-  background-image: url("data:image/svg+xml,%3C!DOCTYPE svg PUBLIC %22-//W3C//DTD SVG 20010904//EN%22 %22http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd%22%3E%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22375%22 height=%22120%22%3E%3Cstyle xmlns=%22http://www.w3.org/2000/svg%22%3E.st0%7Bfill:rgba(252,252,252,0.35);%7D.rain%7Banimation:rain 300ms linear infinite%7D%40keyframes rain%7B0%25%7Btransform:translateY(0);%7D100%25%7Btransform:translateY(100%25);%7D%7D%3C/style%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:400ms;%22%3E%3Cpolygon class=%22st0%22 points=%22246.6,85.3 246.8,85.3 246.8,98.5 246.6,98.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22246.6,-34.7 246.8,-34.7 246.8,-21.5 246.6,-21.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:377ms;%22%3E%3Cpolygon class=%22st0%22 points=%22265.6,2.8 265.8,2.8 265.8,10.3 265.6,10.3%22 /%3E%3Cpolygon class=%22st0%22 points=%22265.6,-117.2 265.8,-117.2 265.8,-109.7 265.6,-109.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:278ms;%22%3E%3Cpolygon class=%22st0%22 points=%22229.6,-3.3 230.1,-3.3 230.1,14.7 229.6,14.7%22 /%3E%3Cpolygon class=%22st0%22 points=%22229.6,-123.3 230.1,-123.3 230.1,-105.3 229.6,-105.3%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:228ms;%22%3E%3Cpolygon class=%22st0%22 points=%22141.6,24.2 141.8,24.2 141.8,32.5 141.6,32.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22141.6,-95.8 141.8,-95.8 141.8,-87.5 141.6,-87.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:204ms;%22%3E%3Cpolygon class=%22st0%22 points=%22289.7,125.7 290.4,125.7 290.4,138.0 289.7,138.0%22 /%3E%3Cpolygon class=%22st0%22 points=%22289.7,5.7 290.4,5.7 290.4,18.0 289.7,18.0%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:205ms;%22%3E%3Cpolygon class=%22st0%22 points=%22257.7,97.2 258.4,97.2 258.4,130.3 257.7,130.3%22 /%3E%3Cpolygon class=%22st0%22 points=%22257.7,-22.8 258.4,-22.8 258.4,10.3 257.7,10.3%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:335ms;%22%3E%3Cpolygon class=%22st0%22 points=%22314.9,71.9 315.4,71.9 315.4,77.6 314.9,77.6%22 /%3E%3Cpolygon class=%22st0%22 points=%22314.9,-48.1 315.4,-48.1 315.4,-42.4 314.9,-42.4%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:341ms;%22%3E%3Cpolygon class=%22st0%22 points=%22368.9,21.5 369.6,21.5 369.6,40.2 368.9,40.2%22 /%3E%3Cpolygon class=%22st0%22 points=%22368.9,-98.5 369.6,-98.5 369.6,-79.8 368.9,-79.8%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:393ms;%22%3E%3Cpolygon class=%22st0%22 points=%22282.0,112.0 282.7,112.0 282.7,151.8 282.0,151.8%22 /%3E%3Cpolygon class=%22st0%22 points=%22282.0,-8.0 282.7,-8.0 282.7,31.8 282.0,31.8%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:233ms;%22%3E%3Cpolygon class=%22st0%22 points=%2261.0,96.7 61.5,96.7 61.5,102.9 61.0,102.9%22 /%3E%3Cpolygon class=%22st0%22 points=%2261.0,-23.3 61.5,-23.3 61.5,-17.1 61.0,-17.1%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:270ms;%22%3E%3Cpolygon class=%22st0%22 points=%22255.1,58.6 255.3,58.6 255.3,82.1 255.1,82.1%22 /%3E%3Cpolygon class=%22st0%22 points=%22255.1,-61.4 255.3,-61.4 255.3,-37.9 255.1,-37.9%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:383ms;%22%3E%3Cpolygon class=%22st0%22 points=%22367.1,3.7 367.8,3.7 367.8,18.3 367.1,18.3%22 /%3E%3Cpolygon class=%22st0%22 points=%22367.1,-116.3 367.8,-116.3 367.8,-101.7 367.1,-101.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:254ms;%22%3E%3Cpolygon class=%22st0%22 points=%2287.8,23.9 88.1,23.9 88.1,33.0 87.8,33.0%22 /%3E%3Cpolygon class=%22st0%22 points=%2287.8,-96.1 88.1,-96.1 88.1,-87.0 87.8,-87.0%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:260ms;%22%3E%3Cpolygon class=%22st0%22 points=%22128.3,46.2 129.2,46.2 129.2,73.0 128.3,73.0%22 /%3E%3Cpolygon class=%22st0%22 points=%22128.3,-73.8 129.2,-73.8 129.2,-47.0 128.3,-47.0%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:243ms;%22%3E%3Cpolygon class=%22st0%22 points=%22176.5,125.4 176.9,125.4 176.9,136.1 176.5,136.1%22 /%3E%3Cpolygon class=%22st0%22 points=%22176.5,5.4 176.9,5.4 176.9,16.1 176.5,16.1%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:348ms;%22%3E%3Cpolygon class=%22st0%22 points=%22286.9,78.9 288.0,78.9 288.0,111.7 286.9,111.7%22 /%3E%3Cpolygon class=%22st0%22 points=%22286.9,-41.1 288.0,-41.1 288.0,-8.3 286.9,-8.3%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:274ms;%22%3E%3Cpolygon class=%22st0%22 points=%2243.4,19.3 44.1,19.3 44.1,27.5 43.4,27.5%22 /%3E%3Cpolygon class=%22st0%22 points=%2243.4,-100.7 44.1,-100.7 44.1,-92.5 43.4,-92.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:279ms;%22%3E%3Cpolygon class=%22st0%22 points=%22271.1,82.6 272.1,82.6 272.1,95.5 271.1,95.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22271.1,-37.4 272.1,-37.4 272.1,-24.5 271.1,-24.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:377ms;%22%3E%3Cpolygon class=%22st0%22 points=%2244.8,72.0 45.1,72.0 45.1,78.4 44.8,78.4%22 /%3E%3Cpolygon class=%22st0%22 points=%2244.8,-48.0 45.1,-48.0 45.1,-41.6 44.8,-41.6%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:355ms;%22%3E%3Cpolygon class=%22st0%22 points=%2239.0,102.5 39.4,102.5 39.4,138.5 39.0,138.5%22 /%3E%3Cpolygon class=%22st0%22 points=%2239.0,-17.5 39.4,-17.5 39.4,18.5 39.0,18.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:237ms;%22%3E%3Cpolygon class=%22st0%22 points=%22350.7,14.3 351.2,14.3 351.2,47.7 350.7,47.7%22 /%3E%3Cpolygon class=%22st0%22 points=%22350.7,-105.7 351.2,-105.7 351.2,-72.3 350.7,-72.3%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:321ms;%22%3E%3Cpolygon class=%22st0%22 points=%22153.9,69.1 154.7,69.1 154.7,103.6 153.9,103.6%22 /%3E%3Cpolygon class=%22st0%22 points=%22153.9,-50.9 154.7,-50.9 154.7,-16.4 153.9,-16.4%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:286ms;%22%3E%3Cpolygon class=%22st0%22 points=%22323.9,85.9 324.7,85.9 324.7,115.8 323.9,115.8%22 /%3E%3Cpolygon class=%22st0%22 points=%22323.9,-34.1 324.7,-34.1 324.7,-4.2 323.9,-4.2%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:361ms;%22%3E%3Cpolygon class=%22st0%22 points=%2257.3,117.9 57.9,117.9 57.9,138.2 57.3,138.2%22 /%3E%3Cpolygon class=%22st0%22 points=%2257.3,-2.1 57.9,-2.1 57.9,18.2 57.3,18.2%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:343ms;%22%3E%3Cpolygon class=%22st0%22 points=%22171.2,85.4 171.9,85.4 171.9,95.2 171.2,95.2%22 /%3E%3Cpolygon class=%22st0%22 points=%22171.2,-34.6 171.9,-34.6 171.9,-24.8 171.2,-24.8%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:264ms;%22%3E%3Cpolygon class=%22st0%22 points=%2226.7,4.5 27.1,4.5 27.1,19.0 26.7,19.0%22 /%3E%3Cpolygon class=%22st0%22 points=%2226.7,-115.5 27.1,-115.5 27.1,-101.0 26.7,-101.0%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:204ms;%22%3E%3Cpolygon class=%22st0%22 points=%22366.4,59.0 367.4,59.0 367.4,93.5 366.4,93.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22366.4,-61.0 367.4,-61.0 367.4,-26.5 366.4,-26.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:291ms;%22%3E%3Cpolygon class=%22st0%22 points=%2258.9,98.3 59.3,98.3 59.3,113.3 58.9,113.3%22 /%3E%3Cpolygon class=%22st0%22 points=%2258.9,-21.7 59.3,-21.7 59.3,-6.7 58.9,-6.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:308ms;%22%3E%3Cpolygon class=%22st0%22 points=%22140.8,40.0 141.8,40.0 141.8,64.5 140.8,64.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22140.8,-80.0 141.8,-80.0 141.8,-55.5 140.8,-55.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:223ms;%22%3E%3Cpolygon class=%22st0%22 points=%22181.1,2.3 181.5,2.3 181.5,28.2 181.1,28.2%22 /%3E%3Cpolygon class=%22st0%22 points=%22181.1,-117.7 181.5,-117.7 181.5,-91.8 181.1,-91.8%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:391ms;%22%3E%3Cpolygon class=%22st0%22 points=%2276.5,-2.5 77.2,-2.5 77.2,18.3 76.5,18.3%22 /%3E%3Cpolygon class=%22st0%22 points=%2276.5,-122.5 77.2,-122.5 77.2,-101.7 76.5,-101.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:254ms;%22%3E%3Cpolygon class=%22st0%22 points=%2234.9,27.3 35.8,27.3 35.8,61.4 34.9,61.4%22 /%3E%3Cpolygon class=%22st0%22 points=%2234.9,-92.7 35.8,-92.7 35.8,-58.6 34.9,-58.6%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:319ms;%22%3E%3Cpolygon class=%22st0%22 points=%22190.8,29.1 191.9,29.1 191.9,42.9 190.8,42.9%22 /%3E%3Cpolygon class=%22st0%22 points=%22190.8,-90.9 191.9,-90.9 191.9,-77.1 190.8,-77.1%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:292ms;%22%3E%3Cpolygon class=%22st0%22 points=%2255.5,69.4 56.0,69.4 56.0,79.4 55.5,79.4%22 /%3E%3Cpolygon class=%22st0%22 points=%2255.5,-50.6 56.0,-50.6 56.0,-40.6 55.5,-40.6%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:320ms;%22%3E%3Cpolygon class=%22st0%22 points=%226.0,32.8 6.5,32.8 6.5,64.8 6.0,64.8%22 /%3E%3Cpolygon class=%22st0%22 points=%226.0,-87.2 6.5,-87.2 6.5,-55.2 6.0,-55.2%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:308ms;%22%3E%3Cpolygon class=%22st0%22 points=%22133.3,75.6 134.0,75.6 134.0,85.4 133.3,85.4%22 /%3E%3Cpolygon class=%22st0%22 points=%22133.3,-44.4 134.0,-44.4 134.0,-34.6 133.3,-34.6%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:296ms;%22%3E%3Cpolygon class=%22st0%22 points=%2293.3,37.9 93.8,37.9 93.8,71.3 93.3,71.3%22 /%3E%3Cpolygon class=%22st0%22 points=%2293.3,-82.1 93.8,-82.1 93.8,-48.7 93.3,-48.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:398ms;%22%3E%3Cpolygon class=%22st0%22 points=%22315.9,106.0 316.3,106.0 316.3,141.5 315.9,141.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22315.9,-14.0 316.3,-14.0 316.3,21.5 315.9,21.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:265ms;%22%3E%3Cpolygon class=%22st0%22 points=%2258.3,39.6 59.1,39.6 59.1,52.5 58.3,52.5%22 /%3E%3Cpolygon class=%22st0%22 points=%2258.3,-80.4 59.1,-80.4 59.1,-67.5 58.3,-67.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:341ms;%22%3E%3Cpolygon class=%22st0%22 points=%22203.0,81.0 203.3,81.0 203.3,94.3 203.0,94.3%22 /%3E%3Cpolygon class=%22st0%22 points=%22203.0,-39.0 203.3,-39.0 203.3,-25.7 203.0,-25.7%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:294ms;%22%3E%3Cpolygon class=%22st0%22 points=%22341.8,0.2 342.4,0.2 342.4,24.5 341.8,24.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22341.8,-119.8 342.4,-119.8 342.4,-95.5 341.8,-95.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:252ms;%22%3E%3Cpolygon class=%22st0%22 points=%22163.1,107.7 163.3,107.7 163.3,143.5 163.1,143.5%22 /%3E%3Cpolygon class=%22st0%22 points=%22163.1,-12.3 163.3,-12.3 163.3,23.5 163.1,23.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:274ms;%22%3E%3Cpolygon class=%22st0%22 points=%22153.4,41.9 153.8,41.9 153.8,79.6 153.4,79.6%22 /%3E%3Cpolygon class=%22st0%22 points=%22153.4,-78.1 153.8,-78.1 153.8,-40.4 153.4,-40.4%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:329ms;%22%3E%3Cpolygon class=%22st0%22 points=%2215.5,74.5 15.9,74.5 15.9,90.1 15.5,90.1%22 /%3E%3Cpolygon class=%22st0%22 points=%2215.5,-45.5 15.9,-45.5 15.9,-29.9 15.5,-29.9%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:369ms;%22%3E%3Cpolygon class=%22st0%22 points=%2286.5,90.9 87.6,90.9 87.6,122.5 86.5,122.5%22 /%3E%3Cpolygon class=%22st0%22 points=%2286.5,-29.1 87.6,-29.1 87.6,2.5 86.5,2.5%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:246ms;%22%3E%3Cpolygon class=%22st0%22 points=%22283.0,62.7 283.5,62.7 283.5,96.6 283.0,96.6%22 /%3E%3Cpolygon class=%22st0%22 points=%22283.0,-57.3 283.5,-57.3 283.5,-23.4 283.0,-23.4%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:342ms;%22%3E%3Cpolygon class=%22st0%22 points=%22246.9,48.1 247.7,48.1 247.7,63.2 246.9,63.2%22 /%3E%3Cpolygon class=%22st0%22 points=%22246.9,-71.9 247.7,-71.9 247.7,-56.8 246.9,-56.8%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:259ms;%22%3E%3Cpolygon class=%22st0%22 points=%22319.7,56.2 320.7,56.2 320.7,94.9 319.7,94.9%22 /%3E%3Cpolygon class=%22st0%22 points=%22319.7,-63.8 320.7,-63.8 320.7,-25.1 319.7,-25.1%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:248ms;%22%3E%3Cpolygon class=%22st0%22 points=%22251.5,13.9 251.9,13.9 251.9,38.8 251.5,38.8%22 /%3E%3Cpolygon class=%22st0%22 points=%22251.5,-106.1 251.9,-106.1 251.9,-81.2 251.5,-81.2%22 /%3E%3C/g%3E%3Cg xmlns=%22http://www.w3.org/2000/svg%22 class=%22rain%22 style=%22animation-duration:238ms;%22%3E%3Cpolygon class=%22st0%22 points=%227.4,102.1 8.5,102.1 8.5,116.4 7.4,116.4%22 /%3E%3Cpolygon class=%22st0%22 points=%227.4,-17.9 8.5,-17.9 8.5,-3.6 7.4,-3.6%22 /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: 23.4375rem var(--header-height-on-desktop);
-  background-repeat: repeat-x;
-  background-position: 0 0;
-}
-#header h1,
-#header h2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-}
-#header h1 a,
-#header h2 span {
-  margin-left: 0;
-}
-#header h1 a {
-  margin-top: -webkit-calc(((var(--header-height-on-desktop) / 2)) - 1.75rem);
-  margin-top: -moz-calc(((var(--header-height-on-desktop) / 2)) - 1.75rem);
-  margin-top: calc(((var(--header-height-on-desktop) / 2)) - 1.75rem);
-  z-index: auto;
-}
-#header h1 a::before {
-  --text-shadow: var(--white-monochrome);
-  font-size: 5rem;
-  color: rgb(12, 12, 12);
-  color: rgb(var(--black-monochrome));
-  text-shadow:
-    0 0 0.3125rem rgba(var(--text-shadow), 0),
-    0 0 0.625rem rgba(var(--text-shadow), 0.35),
-    0 0 0.9375rem rgba(var(--text-shadow), 0),
-    0 0 2.5rem rgba(var(--text-shadow), 0.35),
-    0 0 5rem rgba(var(--text-shadow), 0);
-  word-spacing: 0.25em;
-  -webkit-transition: color 500ms, text-shadow 500ms;
-  -moz-transition: color 500ms, text-shadow 500ms;
-  -o-transition: color 500ms, text-shadow 500ms;
-  transition: color 500ms, text-shadow 500ms;
-}
-#header h1 a:hover::before {
-  color: rgb(192, 5, 4);
-  color: rgb(var(--bright-accent));
-  text-shadow:
-    0 0 0.3125rem rgba(var(--black-monochrome), 1),
-    0 0 0.625rem rgba(var(--black-monochrome), 1),
-    0 0 0.9375rem rgba(var(--text-shadow), 0.35),
-    0 0 2.5rem rgba(var(--text-shadow), 0.35),
-    0 0 5rem rgba(var(--text-shadow), 0.35);
-}
-#header h2 span {
-  margin-top: -webkit-calc(((var(--header-height-on-desktop) / 2) + 1.25rem));
-  margin-top: -moz-calc(((var(--header-height-on-desktop) / 2) + 1.25rem));
-  margin-top: calc(((var(--header-height-on-desktop) / 2) + 1.25rem));
-}
-#header h2 span::before {
-  --text-shadow: var(--white-monochrome);
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgb(48, 48, 52);
-  color: rgb(var(--dark-gray-monochrome));
-  text-align: center;
-  text-shadow:
-    0 0 0.125rem rgba(var(--text-shadow), 0.35),
-    0 0 0.25rem rgba(var(--text-shadow), 0.35);
-}
 
-/* Top-Bar */
-#top-bar div.top-bar > ul > li:hover,
-#top-bar div.mobile-top-bar > ul > li:hover,
-#top-bar div.top-bar > ul > li.sfhover,
-#top-bar div.mobile-top-bar > ul > li.sfhover,
-#top-bar div.top-bar > ul > li:focus-within,
-#top-bar div.mobile-top-bar > ul > li:focus-within {
-  background-color: rgba(12, 12, 12, 0.75);
-  background-color: rgba(var(--swatch-menubg-black-color), 0.75);
-}
-#top-bar div.top-bar > ul > li > ul > li:hover,
-#top-bar div.top-bar > ul > li > ul > li > ul > li:hover {
-  background-color: transparent;
-  background-color: rgba(var(--black-monochrome), 0.05);
-}
-#top-bar div.top-bar > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
-#top-bar div.top-bar > ul > li > ul > li > a:hover::before {
-  background-color: rgba(12, 12, 12, 0.7);
-  background-color: rgba(var(--black-monochrome), 0.7);
-}
-#top-bar div.mobile-top-bar > ul > li > ul > li:hover,
-#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li:hover {
-  background-color: rgba(12, 12, 12, 0.5);
-  background-color: rgba(var(--black-monochrome), 0.5);
-}
-#search-top-box-form input[type="submit"],
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-  background: rgb(144, 46, 47);
-  background: rgb(var(--swatch-primary-darker));
+
+/* 字体 */
+    --body-font: '新宋体',kaiti,monospace;
+    --header-font: '思源宋体 CN',lisu,kaiti,sans-serif;
+    --sub-header-font:'思源宋体 CN', lisu, kaiti,sans-serif;
+    --page-title-font: '楷体', kaiti,sans-serif;
+    --title-font: '思源宋体 CN', lisu,kaiti,sans-serif;
+    --mono-font: '仿宋', monospace;
+    --hdmemu-font: kaiti, monospace;/* 顶栏文字 */
+    --hdlist-font: '等线', monospace;/* 顶栏列表 */
+
+    
+/* 版头文字 */
+    --header-title:" ";
+    --header-subtitle:" ";
+ 
+ 
+/* 基准色以及其他 */    
+    --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+      
+      --bright-accent:0,0,0;
+    --medium-accent:grey;
+    --dark-accent:0,0,0;
+      
+   
+
+                --white-monochrome: 3, 3, 3;
+            /*↑ 白色 ↑*/
+                  --pale-gray-monochrome:50, 50, 50;
+            /*↑ 非常浅的灰色，用于引用块 ↑*/
+      
+              --light-pale-gray-monochrome: 150,150,150;/**/
+            /*↑ 浅灰色 ↑*/
+               --very-light-gray-monochrome:190,187,156;/**/
+            /*↑ 浅灰色 ↑*/
+
+      
+                  --light-pale-gray-monochrome: 205, 205, 205;
+            /*↑ 浅灰色 ↑*/
+                  --very-light-gray-monochrome: 215, 215, 215;
+            /*↑ 浅灰色 ↑*/
+                  --light-gray-monochrome: 240, 230, 230;
+            /*↑ 浅灰色 ↑*/
+                  --black-monochrome: 240, 240, 240;
+            /*↑ 黑色 ↑*/
+
+
+              --pale-accent: 210,107,92;/**/
+            /*↑ 浅红色，链接颜色 ↑*/
+                  --bright-accent: 133, 0, 5;/**/
+            /*↑ 亮红色 ↑*/
+                  --medium-accent:173,29,25;
+            /*↑ 红色 - 基准颜色 ↑*/
+                  --dark-accent: 132,8,5;
+            /*↑ 深红色 ↑*/
+      
+                        --very-dark-accent: 91,5,4;
+                  /*↑ 非常深的红色 ↑*/
+
+    --alt-accent: 221, 102, 17;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+                  --very-dark-accent: 91,5,4;
+                  /*↑ 非常深的红色 ↑*/
+
+                  --alt-accent: 204,102,0;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+
+                  --alt-accent: 204,102,0;
+            /*↑ 橘色，页面不存在的链接颜色 ↑*/
+    
+    --hover-link-color:171,58,55;
+    --visited-link-color:171,58,55;
+    --sel-color:90,16,14;
+    --purple-color:43,17,76, 0.85;
+
+   /* 版头 */
+    --header-gradient-color-bottom: var(--black-monochrome);
+    --header-gradient-color-middle: var(--dark-gray-monochrome);
+    --header-gradient-color-top: var(--dark-gray-monochrome);
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    
+ --gradient-header: linear-gradient(0deg, #151515, #141414,#3b3b3b,#222,#111);  
+      
+         
+    /* 顶栏 */
+      --swatch-topmenu-bg-color: var(--very-dark-accent); 
+      --swatch-topmenu-border-color: 42,12,4;
+      
+        --background-gradient-color:var(--pale-gray-monochrome);
+
+    /* 按钮 */
+      --swatch-menubg-dark-color:5,5,5;
+
+     --swatch-menubg-medium-color: var(--light-pale-gray-monochrome,10,10,10);/* 表格~样式颜色 */
+
+
+    /* 分割线 */
+--hr-color:41,19,66;
+
+ /* 评分 */
+
+       --rating-module-button-plus-color: 204,102,0;
+      --rating-module-text-hover-color: 0,0,0; 
+
+    /* 滚轮 */
+          scrollbar-color: #6e1310 #2d0908   ;
+
+
+
 }
 
-/* Side-Bar */
-#side-bar {
-  background:
-    /* Shadow covers */
-      linear-gradient(
-        rgba(var(--swatch-menubg-color),1) 30%,
-        rgba(var(--swatch-menubg-color),0)),
-      linear-gradient(
-        rgba(var(--swatch-menubg-color),0),
-        rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+/* 
+============================================
+主体
+============================================
+*/
 
-    /* Shadows */
-      radial-gradient(farthest-side at 50% 0,
-        rgba(var(--black-monochrome),0.5),
-        rgba(var(--black-monochrome),0)),
-      radial-gradient(farthest-side at 50% 100%,
-        rgba(var(--black-monochrome),0.5),
-        rgba(var(--black-monochrome),0)) 0 100%;
-  background-color: rgba(var(--swatch-menubg-color),1);
-  background-repeat: no-repeat;
-  background-attachment: local, local, scroll, fixed;
-  background-size: 100% 3rem, 100% 3rem, 100% 1.5rem, var(--sidebar-width-on-desktop) 1.5rem;
-  background-position: top center, bottom center, top center, bottom -0.25rem left;
+body{
+   color:#e8e8e8;
 }
-#side-bar .heading,
-#side-bar .side-block > .collapsible-block:nth-child(1) .collapsible-block-folded {
-  background-color: rgb(12, 12, 12);
-  background-color: rgb(var(--black-monochrome));
+
+  #page-content{
+       letter-spacing:1px;
+  }
+
+@media (max-width: 479px) {    
+  #page-content{
+       letter-spacing:auto;
+  }
 }
-#side-bar .side-block > .collapsible-block .collapsible-block-unfolded-link {
-  background-color: rgba(57, 10, 22);
-  background-color: rgba(var(--swatch-primary-darkest));
+
+/* 
+------------------
+鼠标选择
+--------------------
+ */
+::selection { 
+    color: #cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
 }
-#side-bar .collapsible-block-link:hover {
-  background-color: rgba(144, 46, 47);
-  background-color: rgba(var(--swatch-primary-darker));
+
+
+::-moz-selection { 
+    color:#cc6600;
+    color: rgb(var(--alt-accent)) ;
+    background:#5a100e; 
+    background: rgb(var(--sel-color)) ;
 }
-#side-bar div.menu-item a {
-  -webkit-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  -moz-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  -o-transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
-  transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms ease;
+
+
+/* 
+------------------
+其他
+--------------------
+ */
+#toc{
+    background: #232222;  
+    color:grey;
 }
-#side-bar div.menu-item a:hover {
-  color: rgb(252, 252, 252);
-  color: rgb(var(--swatch-menutxt-light-color));
+
+
+
+
+/* 
+============================================
+版头 
+============================================
+*/
+
+div#header {
+    background:var(--header-image);
+    background-position:10px 20px;
+    background-repeat: no-repeat;
+    background-size:300px;
 }
-#side-bar div.menu-item a::before,
+
+@media screen and (min-width: 475px){
+    background: url(http://scp-wiki-cn.wikidot.com/local--files/theme:walk-in-dark-nights/Header-yxh-dark.png) 10px 20px no-repeat;
+background-size:16em;
+}
+ 
+div#container-wrap {
+    background-image: var(--gradient-header-line) ;
+}
+
+#header {
+    filter: none;
+}
+
+
+/* 
+============================================
+搜索和用户 
+============================================
+*/
+
+
+#search-top-box-form input[type="submit"], 
+    #search-top-box-input , #search-top-box-input   {
+    border: 1px solid #000  ;
+        
+}
+
+#search-top-box-input {
+       background-color: var(--gradient-header-line) ;  
+        color: #555;
+
+}
+
+#search-top-box-input:hover, #search-top-box-input:focus {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; /* Safari */
+}
+ 
+
+#search-top-box-form input[type="submit"] {
+    color: #CC6600;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; /* Safari */
+}
+
+/*
+@media (max-width: 479px) {
+   #search-top-box-input{
+     display: none;
+    }
+}
+ */
+#login-status a{
+          font-family: var( --page-title-font);
+ color: SaddleBrown;     
+}
+
+#account-options {
+  background-color:rgba(5,5,5,0.95); 
+      border:rgb(var(--very-dark-accent)) solid 2px;
+}
+
+
+#account-options a:hover{
+color: SaddleBrown !important;
+      text-decoration:none;
+}
+
+
+/* 
+============================================
+顶栏
+============================================
+*/
+
+.top-bar ul a,
+.mobile-top-bar ul a{
+     color:#CC6600 !important; 
+    color: rgb(var(--alt-accent)) !important; 
+    font-family:var(--hdmemu-font);  
+    font-size: 120%;
+}
+
+.top-bar ul:first-child :not(li) a,
+.mobile-top-bar ul:first-child :not(li) a {
+    color:#fff !important; 
+          font-family:var(--hdlist-font) ;  
+ background-color: rgb(var(--white-accent)) !important;
+}
+
+.top-bar  ul:first-child li a:hover,
+.mobile-top-bar ul:first-child li a:hover
+{
+     color: #000 !important;
+background-color: #CC6600 !important;
+     background-color: rgb(var(--alt-accent)) !important;
+      transition: all 0.5s;
+}
+
+#top-bar div.top-bar  > ul > li > ul,
+#top-bar  .mobile-top-bar > ul > li > ul
+{
+      border: rgb(var(--very-dark-accent)) double 4px  ;      
+}
+
+/* 
+============================================
+侧边栏
+============================================
+*/
+
+#side-bar .heading p ,
+#side-bar .side-block > .collapsible-block .collapsible-block-link {
+    --text-shadow: rgb(0,0,0);
+     color: #Cc6600;
+     color: rgb(var(--alt-accent)) ;
+}
+
+#side-bar div.menu-item a::before, 
 #side-bar div.menu-item a:hover::before {
-  background-color: rgba(48, 48, 52, 0.75);
-  background-color: rgba(var(--dark-gray-monochrome), 0.75);
-}
-#side-bar div[style*="background-color"] {
-  background-color: rgba(12, 12, 12, 0.09) !important;
-  background-color: rgba(var(--black-monochrome), 0.09) !important;
-}
-#side-bar div[style*="#f0f0f0"] {
-  background-color: transparent !important;
+    background-color: rgba(43,17,76, 0.85);
+    background-color: rgba(var(--purple-color));
 }
 
-/* Rating */
-.page-rate-widget-box,
-#page-content .rate-box-with-credit-button {
-  background-image: -webkit-linear-gradient(to bottom, rgb(var(--black-monochrome)) 0%, rgb(var(--black-monochrome)) 30%, rgb(var(--dark-accent)) 100%);
-  background-image: -moz-linear-gradient(to bottom, rgb(var(--black-monochrome)) 0%, rgb(var(--black-monochrome)) 30%, rgb(var(--dark-accent)) 100%);
-  background-image: linear-gradient(to bottom, rgb(var(--black-monochrome)) 0%, rgb(var(--black-monochrome)) 30%, rgb(var(--dark-accent)) 100%);
-  background-color: rgb(252, 252, 252);
-  background-color: rgb(var(--black-monochrome));
-  border-color: rgba(160, 160, 160, 0.25);
-  border-color: rgba(var(--light-gray-monochrome), 0.25);
-}
-#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
-  background-color: rgb(252, 252, 252);
-  background-color: rgb(var(--swatch-menutxt-light-color));
+
+
+/* 鼠标移过 */
+#side-bar div.menu-item a:hover {
+    background-color: rgba(66,66,72,.15);
 }
 
-/* Tabview */
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-  --box-shadow: rgb(var(--swatch-menubg-medium-color));
-}
-.yui-navset .yui-nav li,
-.yui-navset .yui-navset-top .yui-nav li {
-  --box-shadow: rgb(var(--gray-monochrome));
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-  background-color: rgb(66, 66, 72);
-  background-color: rgb(var(--gray-monochrome));
-}
-.yui-navset .yui-nav .selected,
-.yui-navset .yui-navset-top .yui-nav .selected,
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:active {
-  background-color: rgb(12, 12, 12);
-  background-color: rgb(var(--black-monochrome));
+#side-bar div.menu-item a:hover:after{
+    content: " 🐉";
 }
 
-/* Footnotes */
-.footnotes-footer {
-  border-color: rgb(12, 12, 12);
-  border-color: rgb(var(--black-monochrome));
+/* 侧边栏菜单纯文字 */
+#side-bar, #side-bar div.menu-item .sub-text {
+    color: #37076e;
 }
 
-/* Mobile */
-@media only screen and (max-width: 768px) {
-/* Mobile Search */
-#search-top-box form[id="search-top-box-form"] input[type="submit"] {
-  background-color: rgb(144, 46, 47);
-  background-color: rgb(var(--swatch-primary-darker));
+/* 
+============================================
+标题 
+============================================
+*/
+#page-title {
+    font-size: 200% ;
+    text-align: center ;
+}
+
+
+
+/* 
+============================================
+标签
+============================================
+ */
+#main-content .page-tags {
+    border-top: 2px solid rgb(var(--medium-accent));
+}
+ 
+#main-content .page-tags a {
+    display: inline-block;
+    height: 0.8125rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    background:rgb(var(--dark-gray-monochrome));
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 0 0 .5rem .75rem;
+    padding: 0.1875rem 0.3125rem 0.1875rem 0;
+}
+ 
+#main-content .page-tags a:before {
+    top: -0.1875rem;
+    left: -0.625rem;
+    width: 0;
+    height: 0;
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--dark-gray-monochrome, 45, 70, 45))
+     transparent
+     transparent; 
+    border-style: solid;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.0625rem 0.1875rem;
+}
+ 
+#main-content .page-tags a:before,
+#main-content .page-tags a:after {
+    content: "";
+    float: left;
+    position: relative;
+}
+ 
+#main-content .page-tags a:after {
+    --box-shadow: rgb(var(--gray-monochrome, 45, 70, 45));
+    top: 0.28125rem;
+    left: -0.5rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: #fff;
+    box-shadow: -0.0625rem -0.0625rem 0.125rem var(--box-shadow);
+}
+ 
+.page-tags span {
+    border-top: .5rem solid transparent;
+}
+ 
+
+#main-content .page-tags a:hover{
+    background-color:  rgb(var(--purple-color)); 
+    text-decoration: none;
+}
+
+#main-content .page-tags a:hover:before {
+    border-color:
+     transparent rgb(45, 45, 50) transparent transparent;
+    border-color:
+     transparent
+     rgb(var(--purple-color, 45, 70, 45))
+     transparent
+     transparent; 
+}
+
+
+
+
+/* 
+============================================
+底部按钮 
+============================================
+*/
+.page-options-bottom a {
+    display: inline-block;
+    white-space: nowrap;
+      font-family: lisu;
+      font-size: 120%;
+}
+
+@media screen and (min-width: 475px){
+.page-options-bottom a {
+    display: inline-block;
+    white-space: nowrap;
+      font-size: 100%;
 }
 }
+ 
+/* 因为nu主题受修改 */
+#main-content .page-options-bottom a {
+    cursor: pointer;
+    padding: 0.3em;
+    margin: 0.1em;
+    text-decoration:none;
+    transition: all 0.5s;
+          border: 3px solid  rgb(var(--dark-accent));  
+          background-color: transparent;
+            color: rgb(var(--medium-accent));
+}
+ 
+#main-content .page-options-bottom  a:hover {
+    color: #CC6600;
+    color: rgb(var(--alt-accent)) ;
+    border: 3px solid red;   
+    background-color: rgb(var(--very-dark-accent));
+}
+
+
+#main-content #action-area div #edit-page-form .buttons.alignleft input{
+          color: #CC6600;
+          color: rgb(var(--alt-accent)) ;
+          border: 3px solid rgb(var(--dark-accent));   
+          background-color: rgb(var(--very-dark-accent));  
+          cursor:pointer;
+}
+
+#main-content #action-area div #edit-page-form .buttons.alignleft input:hover{
+          color: #fff;
+}
+
+/* 
+============================================
+编辑
+============================================
+*/
+
+#lock-info {
+    background-color: #1B0909;
+    border: 4px double #8d5f13;
+}
+
+.change-textarea-size a {
+color:#000;
+}
+
+#edit-page-form{
+background: radial-gradient(#2f2c2c, #393737,#141514);
+}
+
+#edit-page-title,#edit-page-textarea,#edit-page-comments{
+background: #000;
+color: #fff;
+}
+
+
+/* 
+============================================
+手机--侧边栏用了，这个就不用了
+============================================
+
+.mobile-top-bar .open-menu a::after{
+  content: "🐉";
+  font-size: 50%;
+}
+ */
+
+
+/* 
+============================================
+多语言框
+============================================
+ */
+iframe.scpnet-interwiki-frame {
+    filter: invert(0.8) hue-rotate(190deg) saturate(7.5) contrast(2);
+    }
+ 
+
+
+
+/* 
+============================================
+分割线，来自woednaz
+============================================
+ */
+
+hr {
+border-top:1px solid transparent ;
+background: #514d62;   
+background: linear-gradient(to right,transparent,#514d62,transparent);
+}
+
+blockquote  hr{
+border-top:1px solid transparent ;
+background: #6d6b82;   
+background: linear-gradient(to right,transparent,#6d6b82,transparent);
+}
+
+
+.yui-navset hr{
+border-top:1px solid transparent ;
+background: #504967;   
+background: linear-gradient(to right,transparent,#504967,transparent);
+}
+
+
+.cn-hr hr {
+    border-top:1px solid #000 ;
+    background: rgb(0, 0, 0, 0);
+    border: 0;
+    height: 1.5rem;
+    width: 90%;
+    position: relative;
+    margin: 1.875rem auto;
+    }
+
+.cn-hr hr::before {
+    content: " ";
+    background-image: var(--hr-image);
+    color: rgb(var(--hr-color));
+    display: inline-block;
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    margin: 0 0 0 -0.188rem;
+        margin-left: -0.188rem;
+    font-size: 0.938rem;
+    line-height: 0;
+    height: 1.5rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: -webkit-calc(50% - 2rem);
+    margin-left: -moz-calc(50% - 2rem);
+    margin-left: calc(50% - 2rem);
+    background-color: transparent;
+    z-index: 1;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+.cn-hr hr::after {
+    content: " ";
+    height: 0.125rem;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    background: rgb(var(--hr-color));
+    left: 0;
+    top: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: 43.375rem auto;
+    mask-size: 43.375rem auto;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+}
+ 
+ /**/
+.yui-navset .cn-hr hr::before,
+.cn-hr blockquote hr::before{
+    content: " ";
+    background-image: var(--hr-image);
+    color: rgb(var(--very-light-gray-monochrome));
+    display: inline-block;
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    margin: 0 0 0 -0.188rem;
+        margin-left: -0.188rem;
+    font-size: 0.938rem;
+    line-height: 0;
+    height: 1.5rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: -webkit-calc(50% - 2rem);
+    margin-left: -moz-calc(50% - 2rem);
+    margin-left: calc(50% - 2rem);
+    background-color: transparent;
+    z-index: 1;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+
+
+blockquote .cn-hr hr::after,
+.yui-navset .cn-hr hr::after {
+    background: rgb(var(--very-light-gray-monochrome));
+ content: " ";
+    height: 0.125rem;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    top: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+    -webkit-mask-size: 43.375rem auto;
+    mask-size: 43.375rem auto;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+}
+
+/* 
+============================================
+脚注和注释
+============================================
+ */
+/* 鼠标移过注释框 */
+ .hovertip {
+      background-color: #1B0909 !important;
+    border: 4px double SaddleBrown !important;
+    color: #8d5f13;
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    }
+
+ 
+
+/* 
+============================================
+著作信息文件夹
+============================================
+*/
+
+.info-container{
+background:transparent;
+}
+ 
+.info-container .list-pages-item iframe{
+  background: var(--yxh-red-image); 
+  background-size: contain;
+  border: 0.5em groove #333;
+    width: auto;
 }

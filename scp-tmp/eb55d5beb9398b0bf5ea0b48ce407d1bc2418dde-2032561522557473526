@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<style type="text/css">
+body {
+     font-family: verdana, arial, helvetica, sans-serif;
+     font-size: 12.8px;
+        color: #333;
+        text-align:center;
+}
+</style>
+ <script>  
+function showTime()
+{
+var enabled = 0;
+today = new Date();
+var date;
+var d=new Date()
+var month=new Array(12)
+month[-1]="Apr"
+month[-2]="Jun"
+month[-3]="Nov"
+
+month[0]="Jan"
+month[1]="Feb"
+month[2]="Mar"
+month[3]="Apr"
+month[4]="May"
+month[5]="Jun"
+month[6]="Jul"
+month[7]="Aug"
+month[8]="Sep"
+month[9]="Oct"
+month[10]="Nov"
+month[11]="Dec"
+
+var rdn1= parseInt(4*Math.random())
+var rdn2= parseInt(5*Math.random())
+var rdn3= parseInt(25*Math.random())
+var rdn4= parseInt(3*Math.random())
+
+var sss = month[d.getMonth()-rdn4]
+var yr = (today.getFullYear() -rdn1)
+var day = (today.getDate() - rdn2)
+
+if (day < 1 ){
+day = 28;
+}
+
+if ( rdn3 < 10 ){
+rdn3 = 12 + rdn3;
+}
+
+date = "╣ " + " "+"本文更新于" + day + " "+ sss+ "," + " "+ yr +" "+ "; "  + "第"+ rdn3 +"版"  + " "+ " ╠";
+document.getElementById("timer").innerHTML= date;
+}
+
+</script>
+</head>
+
+<body  onload="showTime()" >
+<p id="timer"></p>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
