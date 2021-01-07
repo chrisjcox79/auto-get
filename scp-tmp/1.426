@@ -1,303 +1,125 @@
-@charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css?family=Play');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Turret+Road&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poor+Story&display=swap');
 
 /*
-    This theme is based in SCP-001 Darkbody Theme
-    Darkbody Theme Information:
-    [2018 Wikidot Theme]
-    Based on Aelanna's Sigma 9 and Greenwolf's Third Law
-    Edited by djkaktus for the Doomsday Contest
-    Facelifted by stormbreath.
+    Powered on 2019/07/04 14:56:39
+    [2019 Wikidot Theme]
+    Created by blackmagpie
+    Logo designed by thd-glasses
+    Header designed by TheAlice
+    Originally based on SCP Sigma 9 Theme created by Aelanna and Dr Devan.
+    CC BY-SA 3.0
+    The font Kirang Haerang, Noto Serif TC and Poor Story are under Open Font License.
 */
 
-h1, #page-title {
-    color: #c9c9c9;
+h1, h2, h3, h4, h5, h6,
+#page-title, #login-status, #login-status a, #login-status ul a, #account-topbutton {
+    font-family: 'Poor Story', cursive;
+    font-weight: normal;
 }
-
-a,
-a.newpage,
-a:visited,
-#side-bar a:visited {
-    color: #72bd46;
-}
-
 body {
-    background-color: #000;
-    color: #C9C9C9;
+    background: rgb(250, 250, 210);
+    color: rgb(0, 0, 0);
+}
+h1,h2,h3,h4,h5,h6 {
+    color: rgb(99, 17, 17);
 }
 div#container-wrap {
-    background-image: url(http://scp-yerko-2.wdfiles.com/local--files/component%3Aluistheme/body_bg.jpg) ;
+    background: url(http://ko.scp-wiki.net/local--files/component:note-theme/header.jpg) top left repeat-x;
 }
-
-/* HEADER */
-#header {
+div#header {
+    background: url(http://ko.scp-wiki.net/local--files/component:note-theme/logo.png) no-repeat;
+}
+div#header h1 a span {
+    font-size: 0px;
+}
+div#header h1 a:before {
+    content: "「午間橡樹」流浪樂團";
+    color: rgb(255, 255, 255);
+    font-family: 'Noto Serif TC', cursive;
+    font-size: 85%;
     position: relative;
-    z-index: 10;
-    background: url(http://scp-yerko-2.wdfiles.com/local--files/component%3Aluistheme/ohmerlin.png) 10px 36px no-repeat !important;
+    left: 25px;
+    bottom: 10px;
 }
-#search-top-box-input {
-    border: solid 1px #2F4F4F;
-    color: #ccc;
-    background-color: #708090;
+div#header h2 span {
+    font-size:0px;
+    padding: 4px;
 }
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    border: solid 1px #2F4F4F;
-    color: #fff;
-    background-color: #708090;
+div#header h2:after {
+    content: "한낮의 떡갈나무 유랑극단";
+    font-weight: bold;
+    font-family: 'Kirang Haerang', serif;
+    color: rgb(255, 255, 255);
+    padding: 19px 0;
+    white-space: pre;
+    position: relative;
+    left: 25px;
+    bottom: 10px;
 }
-#search-top-box-form input[type=submit] {
-    border: solid 1px #2F4F4F;
-    color: #000000;
-    background-color: #708090;
-    background: linear-gradient(to bottom, #778899,#708090,#2F4F4F);
-}
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #2F4F4F;
-    background-color: #708090;
-    background: linear-gradient(to bottom, #778899,#708090,#2F4F4F);
-}
-
 #login-status {
-    color: #708090;
+    color: #ffea81;
+    z-index: 30;
+    background-color: transparent;
+    top: 7px;
+    padding: 0;
 }
-#login-status a {
-    color: #708090;
-}
-#login-status ul a {
-    color: #708090;
-}
-
-#account-topbutton {
-    background: #2F4F4F;
-    color: #708090;
-}
-
-#header h1 a {
-    padding: 80px 0px 25px;
-    color: transparent;
-    background: transparent;
-    font-family: 'Turret Road', '幼圆', cursive;
-    font-size: 180%;
-    text-shadow: none;
-}
-
-#header h1 a::before {
-    content: "凝望已死群星";
-    font-size: 45%;
-    color: #72bd46;
-    text-shadow: 3px 3px 5px #242424;
-}
-
-#header h2 span {
-    padding: 15px 0;
-    color: transparent;
-    text-shadow: none;
-}
-
-#header h2 span::before {
-    content: '有多少兔子，在那星辰之间？';
-    color: #c9c9c9;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
-    font-family: 'Turret Road', '幼圆', cursive;
-    text-align: center;
-}
-
 #top-bar a {
-    color: #C0C0C0;
+    color: #883e2f;
+    font-family: 'Poor Story', cursive;
 }
-
-#top-bar ul li ul {
-    border: solid 1px #72bd46;
+div#side-bar div.side-block div.heading,
+div#side-bar div.collapsible-block-unfolded-link,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link {
+    color: rgb(99, 17, 17);
+    border-color: rgb(99, 17, 17);
 }
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: #44163c;
-    color: #C9C9C9;
+div.open-menu a {
+    color: rgb(99, 17, 17)!important;
+    border-color: rgb(99, 17, 17)!important;
 }
-
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    border-top: 1px solid #ddd;
+div#side-bar div.side-block {
+    background: rgba(250, 250, 205);
+    border: 1px solid #83382B;
 }
-
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover {
-    background: #a93d98;
+div#side-bar div.side-block div.heading,
+div#side-bar div.collapsible-block-unfolded-link,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link {
+    color: #83382B;
+    border-color: #83382B;
 }
-
-#top-bar ul li ul a, #top-bar a:hover {
-    color: #a01;
+div.open-menu a {
+    color: #663333!important;
+    border-color: #663333!important;
 }
-
-/* SIDE MENU */
-.side-block .menu-item > .image {
-    filter: hue-rotate(210deg);
-    -webkit-filter: hue-rotate(210deg);
+div.yui-navset div.yui-content {
+    background: #EDD4B4;
 }
-
-
-#side-bar .side-block {
-    border: 1px solid #D6D6D6;
-    box-shadow: 0 2px 6px rgba(32,32,32,1) !important;
-    background: #000000 !important;
+div.yui-navset ul.yui-nav a,
+div.yui-navset div.yui-navset-top ul.yui-nav a {
+    background: #FAFACD;
+    color: #83382B;
+    border: soild #000000;
 }
-
-#side-bar .heading {
-    color: #D6D6D6;
-    border-bottom: solid 1px #D6D6D6;
-}
-
-
-#side-bar div.menu-item.inactive a {
-    color: #D6D6D6;
-}
-
-#side-bar div.menu-item .sub-text {
-    color: #D6D6D6;
-}
-
-#side-bar .collapsible-block-folded {
-    background-image: none;
-}
-
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px #D6D6D6;
-}
-
-
-/* YUI-TABS */
-.yui-navset .yui-content {
-    color: white;
-    background-color: #212121;
-}
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-color:#d8d8d8;
-    background-image: url(none);
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
-.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
-    background: #490ea9; /* selected tab background */
-    background-image: url(none)
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background: #FCDBFF;
-    background-image: url(none);
-}
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #400040;
-}
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #6c006c;
-}
-
-/* OTHER STRUCTURAL ELEMENTS */
-/* Scrollbar */
-::-webkit-scrollbar-thumb {
-    background: #aaa;
-}
-
-/* Page Rating Module Customizations */
-.page-rate-widget-box {
-     box-shadow: 0px 0px 0px 0px #FFFFFF;
-     background-color: #FFFFFF;
-     padding: .1em;
-}
-
-.page-rate-widget-box .rate-points {
-    background-color: #581C58 !important;
-    border: none;
-    color: #FFFFFF!important;
-    text-transform: capitalize;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: #581C58;
-    border-top: none;
-    border-bottom: none;
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
+div.yui-navset ul.yui-nav a:hover,
+div.yui-navset ul.yui-nav a:focus {
+    background: D59C4C;
     color: #FFFFFF;
 }
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: #FFFFFF;
-    color: #581C58;
-}
-.page-rate-widget-box .cancel {
-    background-color: #581C58;
-    border: none;
-}
-.page-rate-widget-box .cancel a {
+div.yui-navset ul.yui-nav .selected a,
+div.yui-navset ul.yui-nav .selected a:focus,
+div.yui-navset ul.yui-nav .selected a:hover {
+    background: #E39654;
     color: #FFFFFF;
+    border: soild #000000;
 }
-.page-rate-widget-box .cancel a:hover {
-    background: #FFFFFF;
-    color: #581C58;
+blockquote{
+         background-color: #F7E1DD;
 }
-
-/* Standard Image Block */
-.scp-image-block {
-    border: solid 1px #000;
-    color: #C9C9C9;
+@media (max-width: 767px){
+     div#header{
+         background-size: 100px 100px;
+         background-position: -5px 30px;
 }
-
-.scp-image-block .scp-image-caption {
-    color: #eee;
-    background-color: #424242 !important;
-    border-top: solid 1px #2F4F4F;
-}
-
-
-@media (max-width: 767px) {
-
-.open-menu a {
-    border: 0.2em solid #2F4F4F !important;
-    background-color: #C0C0C0 !important;
-    color: #2F4F4F !important;
-}
-
-#side-bar {
-    background-color: rgb(192, 192, 192);
-}
- }
-
-/* Cambiar color de los recuadros con > */
-
-blockquote {
-    background-color: #551c56;
-}
-
-/* Cambiar color de los desplegables */
-a.collapsible-block-link {
-    color: #72bd46;
-}
-
-.footnotes-footer {
-    background: black !important;
-}
-
-/* TRANSLATION BLOCK */
-div.scpnet-interwiki-wrapper {
-    filter: hue-rotate(230deg) saturate(150%) invert(80%);
-}
-
-/* Intentando arreglar las footnotes */
-
-.hovertip {
-     border: 1px solid #555 !important;
-     background-color: black !important;
-     color: #fff !important;
 }
