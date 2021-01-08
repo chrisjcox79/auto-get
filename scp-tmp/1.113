@@ -1,114 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
 
+/*
+    Super Cool Plants!
+    [2020 Wikidot Theme]
+    Created for the SCP Foundation by stormbreath
+    Image Sources: https://www.kissclipart.com/leaf-icon-png-clipart-computer-icons-leaf-g0jlo5/. Edited by stormbreath.
+*/
+
+/* COMMON */
+h1, #page-title {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
+    color: #090;
+}
+
+a,
+#side-bar a:visited,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a {
+    color: #0b0;
+}
+a.newpage {
+    color: #6d6;
+}
+
+a:visited {
+   color: #282;
+}
+
+/* GLOBAL WIDTH */
+div#container-wrap {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/plantbg.png);
+}
+
+/* HEADER */
 #header {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/TitleLogo.png)
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/plantlogo.png);
+}
+#search-top-box-input {
+    border: solid 1px #696;
+    background-color: #030;
+}
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background-color: #060;
+}
+#search-top-box-form input[type=submit] {
+    border: solid 1px #696;
+    background-color: #363;
+    background: linear-gradient(to bottom, #696,#060,#030);
+}
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    background-color: #696;
+    background: linear-gradient(to bottom, #9c9,#696,#363);
 }
 
-#page-title{display:none}
-
-@supports(--css:variables) {
-
-    :root {
-     --header-title: "追忆，内殿";
-     --header-subtitle: "卡尔马克塔玛的回响。";
-     --header-font: 'Long Cang', cursive;
-     --background-gradient-distance:75rem; !important
-    }
+#header h1 a,
+#header h2 span {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
 }
 
+#header h2 span {
+    color: transparent;
+    text-shadow: none;
+}
 
-    @supports (background-blend-mode: screen) {
+#header h2 span::before {
+     content: '超酷植物！';
+     color: #f0f0c0;
+     text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+}
 
-     #extrac-div-1 {
-     width: 100%;
-     height: var(--header-height-on-desktop);
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-image: var(--gradient-header), url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/background.jpg);
-     background-size: var(--header-background-image-size) 100%, 100%, 100%;
-     background-blend-mode: normal;
-     pointer-events: none;
+/* SIDE MENU */
+#side-bar .side-block {
+    border: 1px solid #060;
+    box-shadow: 0 2px 6px rgba(0,102,0,.5);
+}
+
+#side-bar .heading {
+    color: #060;
+    border-bottom: solid 1px #060;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #060;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
+    color: #060;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #0b0;
+}
+
+/* Changes background for un-folded sidebar */
+@media (max-width: 767px) {
+     #side-bar {
+         background-color: #090;
      }
-
-     div#extra-div-1 {
-     width: 100%;
-     height: calc(100% - var(--final-header-height-on-desktop));
-     position: absolute;
-     top: calc(var(--final-header-height-on-desktop));
-     left: 0;
-     z-index: -1;
-     background-color: rgba(222, 222, 222, 1);
-     background-color: rgba(var(--swatch-background), 1);
-     mask: var(--gradient-background);
-     -webkit-mask: var(--gradient-background);
-     background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/background.jpg), var(--gradient-background);
-     background-size: 100%, 80% var(--background-gradient-distance);
-     background-blend-mode: difference;
-     background-repeat: no-repeat, repeat-x;
-     pointer-events: none;
-     }
-
-    }
-
-.type1 {
-    display: block;
-    overflow: hidden;
-    font-family: 'Long Cang', cursive;
-    font-style: normal;
-    font-size: 170%;
-    color: rgb(57, 0, 0);
-
-    background-attachment: scroll;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Amemoria/textback.jpg);
-
-    background-clip: border-box;
-    background-color: rgb(222, 222, 222);
-    background-origin: padding-box;
-    background-repeat: repeat;
-    background-size: 100%;
-
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
-    }
-
-.textbox {
-    border-radius: 10px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    background-color: rgb(var(--white-monochrome));
 }
 
-#side-bar:hover, #side-bar:active {
-background:
-linear-gradient(
-	rgba(var(--swatch-menubg-color),1) 30%,
-	rgba(var(--swatch-menubg-color),0)),
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0),
-	rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
-radial-gradient(farthest-side at 50% 0,
-	rgba(var(--swatch-primary-darkest),.5),
-	rgba(var(--black-monochrome),0)),
-radial-gradient(farthest-side at 50% 100%,
-	rgba(var(--swatch-primary-darkest),.5),
-	rgba(var(--black-monochrome),0)) 0 100%;
+.side-block .menu-item > .image,
+iframe.scpnet-interwiki-frame {
+    -webkit-filter: hue-rotate(140deg) brightness(220%);
+    filter: hue-rotate(140deg) brightness(220%);
 }
-#side-bar {
-background:
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0) 30%,
-	rgba(var(--swatch-menubg-color),0)),
-linear-gradient(
-	rgba(var(--swatch-menubg-color),0),
-	rgba(var(--swatch-menubg-color),0) 70%) 0 100%,
-radial-gradient(farthest-side at 50% 0,
-	rgba(var(--swatch-primary-darkest),0),
-	rgba(var(--black-monochrome),0)),
-radial-gradient(farthest-side at 50% 100%,
-	rgba(var(--swatch-primary-darkest),0),
-	rgba(var(--black-monochrome),0)) 0 100%;
+
+#side-bar .side-block[style="background-color: #fff0f0;"] {
+    background-color: #f0fff0!important;
+}
+#side-bar .side-block[style="background-color: #e5e5ff;"] {
+     background-color: #e5ffe5 !important;
+}
+
+/* FOOTER */
+#footer {
+    background: #242;
+}
+
+/* SOME NICE BOXES */
+.content-panel {
+    border: solid 1px #308830;
+    background-color: #339930;
+}
+
+/* Page Rating Module Customizations */
+.page-rate-widget-box .rate-points {
+    background-color: #363 !important;
+    border: solid 1px #363;
+}
+
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: #f6fff6;
+    border-top: solid 1px #363;
+    border-bottom: solid 1px #363;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    color: #363;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: #363;
+    color: #fffff0;
+}
+.page-rate-widget-box .cancel {
+    background-color: #363;
+    border: solid 1px #363;
+}
+.page-rate-widget-box .cancel a {
+    color: #696;
+}
+.page-rate-widget-box .cancel a:hover {
+    background: #363;
+    color: #fffff0;
+}
+
+#page-content .rate-box-with-credit-button{
+    background-color: #363;
+    border: solid 1px #363;
+}
+
+#page-content .creditButton p a {
+    border-left-color: #696;
+}
+
+.close-credits,
+.credit-back {
+     filter: hue-rotate(140deg)
+}
+
+#page-content .modalbox {
+    box-shadow: 0 2px 6px rgba(0, 100,0 ,.5);
+}
+
+/* Heritage Collection Rating Module */
+.heritage-rating-module {
+  background-color: #363;
+  border: solid 1px #ccc066;
+}
+
+
+/* YUI-TABS */
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png);
+}
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png); /* selected tab background */
+}
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png);
 }
