@@ -1,295 +1,227 @@
 /*
-Theme created by MrPines, based on the Sigma 9 theme created by Aelanna and Dr Devan.
-The logo image is licensed under CC0.
-Logo image source: https://svgsilh.com/image/1494506.html
- */
-
-@import url('https://fonts.googleapis.com/css?family=Homenaje');
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-h1,
-#page-title {
-    color: #0f0f0f;
-}
-
-a {
-    color: #339;
-}
-
-#side-bar a:visited {
-    color: #339;
-}
-
-a:visited {
-    color: #336;
-}
-
-a.newpage {
-    color: #488;
-}
+    OCT Theme
+    [2018 Wikidot Theme]
+    Based on Aelanna's Sigma 9 and Greenwolf's Third Law and djkaktus' Darkbody Theme
+    Edited by PeppersGhost for the Doomsday Contest
+*/
 
 body {
-    background-color: #F3F3F3;
-    color: #111;
+    background-color: #060606 !important;
+    font-size: 0.80em;
+    color: #baa6a6;
 }
 
-div#container-wrap {
-    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aprom-labs/pl_bg2.png");
+#content-wrap {
+    color: #baa6a6;
 }
 
+div#page-content {
+    color: white;
+}
+
+
+/* HEADER */
 #header {
-    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aprom-labs/logo_temp.png");
-}
-
-#search-top-box-input {
-    border: solid 1px #999;
-    color: #fff;
-    background-color: #999;
-}
-
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    border: solid 1px #fff;
-    color: #f1f1f1;
-    background-color: #555;
-}
-
-#search-top-box-form input[type=submit] {
-    border: solid 1px #eee;
-    color: #1f1f1f;
-    background: #ddd;
-}
-
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #fff;
-    color: #1f1f1f;
-    background: #aaa !important;
-}
-
-#search-top-box-input,
-#search-top-box input.empty {
-    border: solid 1px #fff;
-    color: #fff;
-    background-color: #999;
-}
-
-#search-top-box-input,
-#search-top-box input.empty:hover {
-    border: solid 1px #fff;
-    color: #fff;
-    background-color: #555;
-}
-
-#login-status {
-    color: #1f1f1f;
-}
-
-#login-status a {
-    color: #1f1f1f;
-}
-
-#login-status ul a {
-    color: #1f1f1f;
-}
-
-#account-topbutton {
-    background: #ddd;
-    color: #1f1f1f;
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aoct/OCTlogoOhNo.png);
 }
 
 #header h1 a {
-    color: transparent;
-    text-shadow: none;
-    font-family: 'Homenaje', sans-serif;
+    content: "SCP OCT";
+    text-shadow: 1px 1px 2px white, 0 0 1em red, 0 0 0.2em white;
+    color: #000;
 }
 
 #header h1 a::before {
-    color: #f3f3f3;
-    letter-spacing: 3px;
-    content: "普罗米修斯实验室";
-    font-size: 125%;
-    text-shadow: -1px -1px 0 #282828, 1px -1px 0 #282828, -1px 1px 0 #282828, 1px 1px 0 #282828;
+    content: "SCP OCT";
 }
 
+#header h1 a span{
+    display: block;
+    content: "";
+    visibility: hidden;
+}
+
+#header h2 {
+    margin-left: 120px;
+    padding: 0;
+    clear: left;
+    float: left;
+    font-size: 105%;
+    max-height: 38px;
+}
 #header h2 span {
+    display: block;
+    margin: 0;
+    padding: 19px 0;
+    line-height: 0px;
+    max-height: 0px;
+    font-weight: bold;
     color: transparent;
     text-shadow: none;
 }
-
 #header h2 span::before {
-    letter-spacing: 1px;
-    font-family: 'Lato', sans-serif;
-    font-style: italic;
-    content: "通过学习和直觉，神秘变成普遍。";
-    color: #1f1f1f;
+    content: "原创角色锦标赛";
+    display: block;
+    margin: 0;
+    padding: 0px 0;
+    line-height: 0px;
+    max-height: 0px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 
-#header .button,
-#header .text,
-#header .text:active {
-    border-radius: 20px !important;
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aoct/SCPbody_bg3.jpg) top left repeat-x;
 }
+/* Source: https://www.flickr.com/photos/telemax/2818520042 */
 
-.yui-navset .yui-content {
-    background-color: #d8d8d8;
+/* SIDEBAR */
+.side-block {
+    background: #060606 !important;
+    background-color: #060606;
 }
-
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-color: #339;
-    /* no focus effect for selected */
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:hover {
-    /* no hover effect for selected */
-    background: #339;
-    /* selected tab background */
-    color: #eeeeee;
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background: #aac;
-}
-
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #339;
-}
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: #eee;
-    color: #339;
-}
-
-#top-bar ul li ul a,
-#top-bar a:hover {
-    color: #339;
-}
-
 #side-bar .side-block {
-    border-radius: 20px;
-    border: 1px solid #d3d3d3;
-    background-color: #eee !important;
-    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
+    padding: 10px;
+    border: 1px solid #660000;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(102,0,0,.5);
+    background: #060606;
+    background-color: #060606;
+    margin-bottom: 15px;
 }
+
+#side-bar img {
+  width:13px;
+  height:13px;
+  box-sizing:border-box;
+}
+/* Source: https://commons.wikimedia.org/wiki/File:Noun_project_758.svg */
 
 #side-bar .heading {
-    color: #339;
-    border-bottom: solid 1px #339;
+    color: #fff;
+    border-bottom: solid 1px #fff;
 }
 
-#side-bar .collapsible-block-folded {
-    background-image: none;
+#side-bar div.menu-item.inactive a {
+    color: #e2525d;
+}
+#side-bar div.menu-item .sub-text {
+    color: #e2525d;
 }
 
 #side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px #339;
+    border-bottom: solid 1px #0b65c0;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
+    color: #0b65c0;
 }
 
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: #339;
+.interwiki_title {
+    color: #0b65c0;
 }
 
-.side-block .menu-item > .image {
-    filter:hue-rotate(250deg);
+.interwiki_entry a {
+    color: #0b65c0;
 }
 
-.scpnet-interwiki-frame {
-    filter:hue-rotate(260deg) !important;
+/* LINKS */
+
+a {
+    color: #e2525d;
+    text-decoration: none;
+    background: transparent;
+}
+a.newpage {
+    color: #e2525d;
+    text-decoration: none;
+    background: transparent;
 }
 
+/* RATING MODULE */
 .page-rate-widget-box .rate-points {
-    background-color: #eee !important;
-    color: #333 !important;
-    border: solid 1px #eee;
-    border-right: 0;
-    border-radius: 10px 0 0 10px;
-    box-shadow: none;
+    background-color: #3d0c0c !important;
+    border: solid 1px #6d1515;
 }
-
-.page-rate-widget-box {
-    border-radius: 10px;
-}
-
 .page-rate-widget-box .rateup,
 .page-rate-widget-box .ratedown {
-    background-color: #eee;
-    border-top: solid 1px #eee;
-    border-bottom: solid 1px #eee;
+    background-color: 3d0c0c;
+    border-top: solid 1px #6d1515;
+    border-bottom: solid 1px #6d1515;
     font-weight: bold;
-
 }
-
 .page-rate-widget-box .rateup a,
 .page-rate-widget-box .ratedown a {
-    color: #333;
+    background: 3d0c0c;
+    color: #a05b58;
     padding: 0 4px;
     margin: 0 1px;
-
 }
 .page-rate-widget-box .rateup a:hover,
 .page-rate-widget-box .ratedown a:hover {
-    background: #eee;
-    color: #bbb;
+    background: 3d0c0c;
+    color: #a05b58;
+    text-decoration: none;
 }
-
 .page-rate-widget-box .cancel {
-    background-color: #eee;
-    border: solid 1px #eee;
+    background-color: 3d0c0c;
+    border: solid 1px #6d1515;
     border-left: 0;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 5px 5px 0;
 }
-
 .page-rate-widget-box .cancel a {
-    color: #333;
+    background: transparent;
+    text-transform: uppercase;
+    color: #a05b58;
 }
-
 .page-rate-widget-box .cancel a:hover {
-    border-radius: 0 6px 6px 0;
-    background: #eee;
-    color: #bbb;
+    border-radius: 0 3px 3px 0;
+    background: 3d0c0c;
+    color: #fffff0;
+    text-decoration: none;
 }
 
-/* page stuff */
-.document {
-    border-radius: 10px;
-    border: solid 1px #ccc;
-    background: #f0f0f0;
-    width: 96.5%;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
+/* PAGE TITLEs */
+h1, #page-title {
+    color: #e2525d;
 }
 
-hr {
-    background-color: rgba(0,0,0,0.12);
+/* SEARCH BAR */
+#search-top-box-input {
+    border: solid 1px #6d1515;
+    background-color: #1c0101;
+}
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    border: solid 1px #6d1515;
+    background-color: #1c0101;
+}
+#search-top-box-form input[type=submit] {
+    border: solid 1px #6d1515;
+    background-color: #1c0101;
+    color: #fff;
+    background: linear-gradient(to bottom, #301515,#8c1313,#330303);
+}
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    border: solid 1px #6d1515;
+    color: #fff;
+    background-color: #1c0101;
+    background: linear-gradient(to bottom, #8c1313,#330303,#301515);
 }
 
-#page-title {
-    text-align: center;
-    background-color: #eee;
-    border-radius: 20px;
-    padding: 5px;
-    box-shadow: 0 2px 4px rgba(68, 68, 68, .5);
-    margin-left: 5px;
-    margin-right: 5px;
+#top-bar a {
+    color: #505050;
+    background: transparent;
 }
 
-.hovertip {
-    background-color: #F3F3F3 !important;
-}
+/* Sidebar */
 
-/* mobile */
+.scpnet-interwiki-frame{
+filter: invert(1) hue-rotate(183deg) saturate(400%);
+}
 
 @media (max-width: 767px) {
-    #side-bar {
-        background-color: #F3F3F3;
-    }
-
-    #header h2 span {
-        font-size: 50%;
-    }
+#side-bar{background-color: #060606;
 }
