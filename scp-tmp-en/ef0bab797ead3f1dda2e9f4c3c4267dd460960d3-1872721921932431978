@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style>
+body{
+font-family: sans-serif;
+font-size: 90%;
+}
+/* No additional CSS */
+</style>
+<script type="text/javascript">
+/****************** Define some variables */
+pageselect="pf";
+enforceSearch = "[!--";
+enforceMode = "[!--";
+miniMode = "false";
+hideFilters = "false";
+
+defaultTitle = "null";
+defaultCategory = "null";
+defaultAuthor = "null";
+
+defaultMode = "pf";
+
+showTitle = "block";
+showAuthor = "block";
+showCategory = "none";
+
+/****************** Ensure that "null" default value is nulled */
+if(defaultTitle=="null"){ defaultTitle= ""; }
+if(defaultCategory=="null"){ defaultCategory = ""; }
+if(defaultAuthor=="null"){ defaultAuthor = ""; }
+
+/****************** Trim Prototype */
+String.prototype.trim = function () {
+    return this.replace(/^\s*/, "").replace(/\s*$/, "");
+}
+
+/****************** getElementById Shortcut */
+function gEl(a){
+return document.getElementById(a);
+}
+
+/****************** onLoad function */
+window.onload = function(){
+
+/*** BEGIN "ANY QUERY" ACTION */
+if(miniMode=="true"){
+gEl("mode-radio-container").style.display = "none";
+}
+if(hideFilters=="true"){
+gEl("filter-container").style.display = "none";
+}
+
+pluralCheck = 0;
+
+if(showTitle.match(/^(none|false|no)$/i)){
+gEl("container-title").style.display = "none";
+}else{
+gEl("container-title").style.display = "block";
+pluralCheck++;
+}
+
+if(showAuthor.match(/^(none|false|no)$/i)){
+gEl("container-author").style.display = "none";
+}else{
+gEl("container-author").style.display = "block";
+pluralCheck++;
+}
+
+if(showCategory.match(/^(none|false|no)$/i)){
+gEl("container-category").style.display = "none";
+}else{
+gEl("container-category").style.display = "block";
+pluralCheck++;
+}
+
+if(pluralCheck==1){
+gEl("filter-container").innerHTML=gEl("filter-container").innerHTML.replace("Filters:</b>","Filter:</b>");
+}
+/*** END "ANY QUERY" ACTION */
+
+if(unescape(document.referrer).match(/\/q\/(.*?)$/)){
+/*** BEGIN QUERY CHECK */
+
+gEl("titlestring").value = defaultTitle;
+gEl("categorystring").value = defaultCategory;
+gEl("authorstring").value = defaultAuthor;
+
+recallSearch = false; //recalls search if default values are not met; define as false, will be set true if needed
+
+/****************** match the query string */
+searchstring = decodeURIComponent(document.referrer).match(/\/q\/(.*?)(\/)?([a-zA-Z]\/[0-9]+)?$/)[1];
+
+/****************** add a space after the search query (for matching later)*/
+searchstring += " ";
+
+/*** [START] MATCH TITLE FILTER */
+titlematch=searchstring.match(/title:(.*?) /);
+
+/*** Start TITLE enforceSearch */
+if((enforceSearch=="true")&&(titlematch)){
+  if((titlematch[1]!=defaultTitle)){
+   if(defaultTitle!=""){ recallSearch = true; }
+  }
+}else{  if((defaultTitle!="")&&(enforceSearch=="true")){recallSearch = true;} }
+/*** End TITLE enforceSearch */
+
+if(titlematch){
+ gEl("titlestring").value = titlematch[1];
+ searchstring = searchstring.replace(/title:(.*?) /,"");
+}
+/*** [END] MATCH TITLE FILTER */
+
+authormatch=searchstring.match(/user:(.*?) /);
+
+/*** Start AUTHOR enforceSearch */
+if((enforceSearch=="true")&&(authormatch)){
+  if((authormatch[1]!=defaultAuthor)){
+   if(defaultAuthor!=""){ recallSearch = true; }
+  }
+}else{  if((defaultAuthor!="")&&(enforceSearch=="true")){recallSearch = true;} }
+/*** End AUTHOR enforceSearch */
+
+if(authormatch){
+gEl("authorstring").value = authormatch[1];
+searchstring = searchstring.replace(/user:(.*?) /,"");
+}
+
+categorymatch=searchstring.match(/category:(.*?) /);
+
+/*** Start CATEGORY enforceSearch */
+if((enforceSearch=="true")&&(categorymatch)){
+  if((categorymatch[1]!=defaultCategory)){
+   if(defaultCategory!=""){ recallSearch = true; }
+  }
+}else{ if((defaultCategory!="")&&(enforceSearch=="true")){recallSearch = true;} }
+/*** End CATEGORY enforceSearch */
+
+if(categorymatch){
+gEl("categorystring").value = categorymatch[1];
+searchstring = searchstring.replace(/category:(.*?) /,"");
+}
+
+if(unescape(document.referrer).match(/\/a\/(.*?)\//)){
+ pageselect = unescape(document.referrer).match(/\/a\/(.*?)\//)[1];
+ document.getElementById("select"+pageselect).checked="checked";
+ if((pageselect!=defaultMode)&&(enforceMode=="true")){
+//console.log("DEBUG: defaultMode="+defaultMode);
+  pfselect(defaultMode);
+  //document.getElementById("select"+defaultMode).checked="checked";
+  recallSearch = true;
+ }
+}
+
+document.getElementById("searchstring").value = searchstring.trim();
+
+if(recallSearch){
+if((defaultCategory!="")&&(enforceSearch=="true")){gEl("categorystring").value=defaultCategory;}
+if((defaultTitle!="")&&(enforceSearch=="true")){gEl("titlestring").value=defaultTitle;}
+if((defaultAuthor!="")&&(enforceSearch=="true")){gEl("authorstring").value=defaultAuthor;}
+callSearch();
+}
+
+/*** END CHECK QUERY */
+}else{
+/*** BEGIN NO QUERY ACTION */
+/*** END NO QUERY ACTION */
+}
+/*** BEGIN "ANY QUERY" ACTION */
+
+/*** END "ANY QUERY" ACTION */
+
+}
+
+function pfselect(a){
+pageselect = a;
+}
+function callSearch(){
+theLocation = "/search:site/a/"+pageselect+"/q/"+document.getElementById("searchstring").value;
+if(gEl("titlestring").value!=""){
+theLocation += " title:"+gEl("titlestring").value;
+}
+if(gEl("authorstring").value!=""){
+theLocation += " user:"+gEl("authorstring").value.replace(" ","-");
+}
+if(gEl("categorystring").value!=""){
+theLocation += " category:"+gEl("categorystring").value;
+}
+window.top.location.href=theLocation;
+window.parent.location.href=theLocation;
+window.top.location.replace(theLocation);
+}
+</script>
+<center>
+<form action="javascript:;" onsubmit="callSearch();">
+<table style="width:100%; text-align: center;">
+<tr>
+<td>
+<div>
+    <input class="text" type="text" size="30" name="query" value="" id="searchstring"/>
+    <input class="button" type="submit" value="Search" onClick="callSearch();"/>
+</div>
+<div id="mode-radio-container">
+    <input id="selectp" type="radio" name="area" value="p" onclick="pfselect('p');" />pages only
+    <input id="selectpf" type="radio" name="area" value="pf" checked="checked" onclick="pfselect('pf');" />pages and forum
+    <input  id="selectf" type="radio" name="area" value="f"  onclick="pfselect('f');" />forum only
+</div>
+</td>
+<td style="text-align: right;">
+<div id="filter-container">
+<b>Additional Filters:</b><br />
+<div id="container-title">
+    Title contains...
+<input class="text" type="text" size="20" name="title" value="" id="titlestring"/>
+</div>
+<div id="container-author">
+    Author contains...
+<input class="text" type="text" size="20" name="author" value="" id="authorstring"/>
+</div>
+<div id="container-category">
+    Category(ies) are...
+<input class="text" type="text" size="20" name="category" value="" id="categorystring"/>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<hr />
+
+</form>
+</center>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

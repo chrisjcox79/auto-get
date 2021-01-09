@@ -1,792 +1,1018 @@
-/*
-=========================================================
-              ⚙️ 羽天一的破碎世界BHL版主题 ⚙️
-       ------------------------------------------------
-         破碎之神教会的LOGO由Sunyclocwork设计
-          侧边栏和版头logo的衬图由Woednaz制作
-                       遵循CC-BY-SA协议
-==========================================================
-*/
- 
-/* 字体 */
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
-
- 
-/* 
-============================================
-赋值 
-============================================
-*/
- 
-:root{
-   --theme-base: "black-highlighter";
-   --theme-id: " broken-world-bhl";
-   --theme-name: "Etinjats Broken world BHL theme";
-
-/* 字体 */
-   --body-font:'微软雅黑', '等线', '思源宋体 CN', '新宋体','Iceland','Merriweather', monospace;
-    --header-font:'思源宋体 CN', '华文中宋','宋体',lisu,'楷体', 'Iceberg' ,sans-serif;
-    --sub-header-font: '楷体', 'Iceberg' ,sans-serif;
-    --page-title-font: 'ZCOOL XiaoWei', 'Iceberg',  '装甲明朝',  '华文中宋',  '思源宋体 CN', CTWeiBeiSJ, '楷体', 'Ivymode' ,sans-serif;
-    --title-font: '思源宋体 CN', 'ZCOOL XiaoWei',  '新宋体', 'Kumar One', 'Turnip' ,sans-serif;
-    --mono-font: '仿宋', 'pennsylvania ', monospace;
- 
-
- 
-/* 版头文字 */
-     --header-title:"破碎之神教会";
-     --header-subtitle:"修补这个破碎的世界";
-    --phone-title:"破碎之神教会";
-     --phone-subtitle:"修补这个破碎的世界";
-
-/* 图片 */
-        --logo-image: url("http://scp-wiki-cn.wdfiles.com/local--files/theme:broken-world/Logo-broken-1.png");
- 
-        --ironhide-image: url("http://scp-wiki-cn.wdfiles.com/local--files/theme:broken-world/Bgr-wanderers-goldfoil.png");
- 
-       --gold-image: url("http://wanderers-library.wdfiles.com/local--files/component%3Atheme/goldfoil.png");
- 
-       --scp-image: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
- 
- /* */                        
- /* 颜色与阴影遮罩 */  
- /* */
- 
-/* 版头遮罩  */
-    --gradient-header: linear-gradient(43deg, #151515, #141414,#3b3b3b,#342f2f,#2a2a2a,#000);  
- 
-   --gradient-header-line: repeating-linear-gradient(43deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .4vh);
- 
-   --header-title-cover: linear-gradient(120deg,#e8e8e8 0%, #a2a2a2 10%, #fff 50%);
- 
-/* logo遮罩  */
-   --gradient-logo-under:  linear-gradient(180deg,#2e2c2c 0%, #333 0%, #000 0%);  
- 
-   --gradient-logo-cover: linear-gradient(rgb(145, 145, 145,0.5) 0%, rgb(44,46, 44,0.8) 30%, rgb(51, 51, 51,0.8) 100%);
- 
-  /* 侧边栏遮罩  */
-   --gradient-sidebar-cover: linear-gradient(150deg,#2e2c2c 0%, #333 20%, #000 100%);     
- 
-   --gradient-sidebar-line: repeating-linear-gradient(60deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .6vh); 
- 
-   --gradient-sidebar-btn: linear-gradient(10deg, rgba(44,46,46,0.1),rgba(88,76,26,0.2),rgba(0,0,0,0.6));    
- 
-  --gradient-sidebar-txt-line:repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .6vh);  
- 
-/* 基准色以及其他 */    
-    --bright-accent:0,0,0;
-    --medium-accent:grey;
-    --dark-accent:0,0,0;
- 
-                --white-monochrome: 250, 250, 250;
-            /*↑ 白色 ↑*/
-                  --pale-gray-monochrome: 244, 244, 244;
-            /*↑ 非常浅的灰色，用于引用块 ↑*/
-                  --light-pale-gray-monochrome: 225, 225, 225;
-            /*↑ 浅灰色 ↑*/
-                  --very-light-gray-monochrome: 215, 215, 215;
-            /*↑ 浅灰色 ↑*/
-                  --light-gray-monochrome: 150, 150, 150;
-            /*↑ 浅灰色 ↑*/
-                  --black-monochrome: 5, 5, 5;
-            /*↑ 黑色 ↑*/
-     --swatch-menubg-light-color:180,180,180;   
-
+<head>
+    <title>事故记录，目击证人采访，以及个人记录 - SCP基金会</title>
     
-/*
- --gray-monochrome: 30, 36, 30;
- --dark-gray-monochrome: 25, 25, 25;
-        --dark-gray-monochrome:77,77,77;
-*/
-
- /* 链接颜色   */
-                  --link-color:118,36,36;
-                  --visited-link-color:91,28,28;
-                  --hover-link-color:165,42,42;
-                  --newpage-color: 105,32,32;
-                  --sidebar-links-text:255,255,255;
- 
-/* 表格~样式颜色 */
-    --swatch-menubg-medium-color: var(--light-gray-monochrome,163,163,163);
- 
-/* 著作信息文件夹 */
-   --linkColour: #999 !important;
-   --barColour:  linear-gradient(0deg, #555, #3b3b3b,#342f2f,#2a2a2a,#333)  !important;
- 
-/*  滚动条 */
-     scrollbar-color: rgba(128,128,128, 1) rgba(51,51,51, 0.50);
-}
- 
-/*  字间距 */
-  #page-content{
-       letter-spacing:0.5px;
-  }
- 
-@media (max-width: 479px) {    
-  #page-content{
-       letter-spacing:auto;
-  }
-}
-
-/* 
-============================================
-版头 
-============================================
-*/
-div#container-wrap {
-    background-image: var(--gradient-header-line);
-}
- 
-#header h2 span {
-    line-height: 1;
-    font-weight: 500;
-    padding: 0.1rem 0rem 0rem 0.3rem !important;
-    font-family: var(--sub-header-font);
-}
- 
-
-/* 
-============================================
-3d 版头标题 
-============================================
-*/
- 
-/* 限电脑屏幕 */
- 
-@media screen and (min-width: 475px){
-#header h1 a::before,#header h2 span::before{
-     background:var(--header-title-cover)
-/*    ,var(--gold-image), 加个底图就成了镂金的了 */ ;
-   -webkit-background-size: cover;
-   background-size: cover;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   overflow-wrap: normal; 
-   filter: brightness(160%);
-   -webkit-filter: brightness(160%);
-}
-}
- 
-/*
-============================================
-LOGO
-此处代码修改自超形而上学主题中Woedenaz制作的层叠logo代码
-我不知道怎么回事反正整整就能用作3d效果的了
-============================================
-*/
- 
-/* 限电脑屏幕 */
-@media screen and (min-width: 475px){
- 
-#header {
-   background-image: none;
-}
- 
-/* 插入div格式，背景图片 */
-#header #header-extra-div-1,
-#header #header-extra-div-2{
-    display: flex;
-    position: absolute;
-     width: 6.250rem;
-    height: 6.250rem;
-    display: flex;
-    position: absolute;
-    left: 0.15rem;
-    top:0.55rem;
-}
- 
-#header #header-extra-div-1::before,
-#header #header-extra-div-2::before {
-    content: "";
-    width: 6.250rem;
-    height: 6.250rem;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    flex: 1;
-}
- 
-/* 层叠1 主要底图*/
-#header #header-extra-div-1::before {
-    z-index: 1;
-    background: var(--ironhide-image),
-                         var(--gradient-logo-under);
-    mask:var(--logo-image);
-    mask-size: cover;
-    -webkit-mask:var(--logo-image);
-    -webkit-mask-size: cover;
-    background-size: cover;    
-}
- 
-/* 层叠2 滤镜*/
-#header #header-extra-div-2::before {
-    background:var(--gradient-logo-cover);
-    mask:var(--logo-image);
-    mask-size: cover;
-    -webkit-mask:var(--logo-image);
-    -webkit-mask-size: cover;
-    z-index: 2;
-}
-}
- 
-/* 
-============================================
-标题 
-============================================
-*/
-#page-title, .meta-title {
-    font-family:var(--page-title-font);
-    font-size: 300% ;
-    text-align: center ;
-   /* font-weight: normal ; */
-   text-shadow: 0 0.2rem 1rem #7b7b7b;
-}
- 
-@media (max-width: 479px) {
-   #header h1 a::before {
-    padding: 0 0 0 0.5rem;
-    content: var(--phone-title);
-   }
- #header h2 span {
-    padding: 0rem 0rem 0rem 1rem !important;
-   }
+    
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
+        // global request information
         
- #header h2 span::before {
-    content: var(--phone-subtitle);
-  } 
-}
- 
-/* 
-============================================
-搜索框 和 用户栏
-============================================
-*/
- 
-/*
-#search-top-box   {
-    filter: grayscale(150%);
-}
- 
-@media (max-width: 479px) {
-   #search-top-box-input{
-     display: none;
-    }
-}
-*/
- 
-#login-status {
-    font-family: var( --page-title-font);
-}
- 
-/* 
-============================================
-著作信息文件夹
-============================================
-*/
- 
-.info-container{
-    background: #f4f4f4;
-}
- 
-.info-containere{
-    background-image: var(--ironhide-image) !important; 
-    background-size: contain;
-}
- 
-.info-container .list-pages-item iframe{
-    background: var(--ironhide-image);     
-    border: 0.5rem groove #333;
-}
- 
-/* 
-============================================
-评分栏 
-============================================
-*/
-#page-content .rate-box-with-credit-button,
-.page-rate-widget-box {
-     background:grey;
-     border: 0.2rem ridge grey;
-}
- 
-.creditButton p,
-.page-rate-widget-box  > span.rate-points,
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .cancel, 
-.page-rate-widget-box .ratedown  {
-     background:radial-gradient(#ecd5d5,#afb3af,grey);
-     border-left:0.1rem groove grey;
-     border-right:0.1rem groove grey;
-    -webkit-filter: brightness(1) drop-shadow(1px 3px 1px #333);
-    filter: brightness(1) drop-shadow(1px 3px 1px #333);   
-    bottom:  0.15rem; 
-    height: auto;
-    width:auto;
-}
- 
-.creditButton p:hover,
-.page-rate-widget-box .rateup:hover,
-.page-rate-widget-box .cancel:hover, 
-.page-rate-widget-box .ratedown:hover {  
-    border: 0.1rem outset grey;
-    filter: brightness(1) drop-shadow(2px 1px 1px #333);
-    -webkit-filter: brightness(1) drop-shadow(2px 1px 1px #333);
- 
-}
- 
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover,
-.page-rate-widget-box .cancel a:hover {
-     background:radial-gradient(#ecd5d5, grey,#afb3af);
-}
- 
-.creditButton p:hover a:before {
-background:#e8e8e8 !important;
-}
- 
-.creditButton a:hover,
-.upbtn .rateup a:hover,
-.downbtn .ratedown a:hover,
-.cancelbtn .cancel a:hover {
-    /*width: 30px;
-     height: 30px;*/
-     border-radius: 5px;
-     color:#bab8b5;
-     background-color: transparent !important;
-}
- 
-/* 
-============================================
-鼠标选择色 
-============================================
-*/
-::selection { 
-    color: #e8e8e8;
-    background:#4d4d4d; 
-    color:rgb(var(--pale-gray-monochrome)); 
-    background:rgb(var(--gray-monochrome)); 
-}
-
-::-moz-selection { 
-    color: #e8e8e8;
-    background:#4d4d4d; 
-    color:rgb(var(--pale-gray-monochrome)); 
-    background:rgb(var(--gray-monochrome)); 
-}
- 
-/* 
-============================================
-顶栏 
-============================================
-*/
-#top-bar ul li a {
-    color: gainsboro;
-}
- 
-#top-bar ul li a:hover {
-    color: grey;
-}
- 
-#top-bar ul li ul a{
-    color: #000;
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
+        WIKIREQUEST.info.siteId = 530812;
+        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
+        WIKIREQUEST.info.categoryId = 3342264;
+        WIKIREQUEST.info.themeId = 1;
+        WIKIREQUEST.info.requestPageName = "incident-reports-eye-witness-interviews-and-personal-logs";
+        OZONE.request.timestamp = 1610200024;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'cn';
+                WIKIREQUEST.info.pageUnixName = "incident-reports-eye-witness-interviews-and-personal-logs";
+        WIKIREQUEST.info.pageId = 47973389;
+                        WIKIREQUEST.info.lang = "cn";
+        OZONE.lang = "cn";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
     
-}
- 
-#top-bar ul li:hover a:hover {
-    background: #000;
-    color:#f4f4f4;
-    color: rgb(var(--pale-gray-monochrome));
-    text-decoration: none;   
-}
- 
-/*
-============================================
-侧边栏
-============================================
-*/
-
- .side-bar-container{
-    background-color: var(--gradient-sidebar-line);    
-}
-
-/* 
--------------------------------
-侧边栏样式
-------------------------------
- */
- 
-/* 底部颜色 */
-#side-bar,#side-bar:hover {
-    border:0.5em  groove #2e2c2c; 
-    background-color: grey;
-    background-image: var(--gradient-sidebar-line);        
-}
- 
-/* 引导链接文字 */
-#side-bar .heading ,#side-bar .collapsible-block a{
-    color: #600;
-    border: groove 0.5rem #4D4D4D;
-    padding-left: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    background-color:#2c2e2e;
-    background-image:var(--gradient-sidebar-txt-line);   
-}
- 
-#side-bar .sub-text,
-#side-bar  .side-block span {
- color:#969696 ; 
-    width: 95%;
-}
+    
 
 
-#side-bar .heading p{   
-     font-size: 0.8rem;
-     margin:0.2rem 0 :0.2rem 0 ;
-     height:auto;
-       /* margin:0.5rem 0 0.5rem 0rem;*/
-}
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+                            <meta name="robots" content="index,follow"/>
+                                <meta name="language" content="zh,zh-cn"/>
+                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="zh,zh-cn"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
+                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
+        
+            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
+                
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
 
-#side-bar .heading{ 
-      display:block;
-     /* padding: 0.5rem 0 0.5rem 0;*/
-}
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
 
- 
-/*  菜单 */
-#side-bar .side-block {
-    padding: 10px;
-    margin: 1rem 0 0 0.5rem;
-    border: 1rem ridge #555 !important;
-    border-radius: 0px;
-    box-shadow: 2px 2px 6px var(--dark-gray-monochrome);
-    /*background-color: #2e2c2c; */
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="/onesignal/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+<script src="https://s.nitropay.com/ads-143.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
 
-    background-image:  repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .8vh);
- 
-    background-image:  
-               var(--ironhide-image),
-               var(--gradient-sidebar-cover);  
-    background-blend-mode: overlay, normal;
-    background-size: cover, 100% 260%;    
-}
 
 
-#side-bar .side-block.resources,
-#side-bar .side-block.media {
 
-    background-image:  repeating-linear-gradient(20deg,hsla(0,0%,90%,0),hsla(0,0%,100%,0) .25vh,rgba(88,88,88,0.1) .35vh,rgba(88,88,88,0.2) .8vh);
-    background-image:  
-               var(--ironhide-image),
-               var(--gradient-sidebar-cover);  
-    background-blend-mode: overlay, normal;
-    background-size: cover, 100% 260%;   
-}
 
- 
-/* 菜单链接 */
-#side-bar div.menu-item a{
-   color: white ;  
-   background-image:  var(--gradient-sidebar-btn);
-   filter: brightness(1) drop-shadow(5px 3px 1px #000);
-   border: 0.2rem outset #2c2e2e;
-}
- 
-#side-bar div.menu-item a:hover{
-   color: gray;  
-   filter: brightness(2) drop-shadow(2px 2px 1px #000);
-   border: 0.2rem inset #2c2e2e;
-   top: 0.2rem;
-}
- 
-/* 侧边栏链接样式 */
-#side-bar a:visited {
-    color: var(--pale-gray-monochrome);
-}
- 
-#side-bar div.menu-item.inactive a {
-    color: #000000;
-}
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>SCP基金会</span></a></h1>
+                
+                    <h2><span>控制，收容，保护</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
 
- 
-/*
- 因nu主题又变而修改，用auto可能比较合适，但丑 
-因弹性布局被废弃。
-#side-bar div.menu-item > a:last-of-type {
-    width: 85%;
-}
-*/
- 
-/* 
----------------------------
-弹性布局
----------------------------
-*/
- 
-/* 系列链接 */
-#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series"] {
-     width:auto;
-    min-width: 5%;
-}
- 
-#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series"] {
-    width:auto;
-    min-width: 4%;
-}
- 
-#side-bar div.menu-item img[src*="scp-wiki-cn.wikidot"] + a[href*="scp-series-cn"]  {
-    min-width: 35%;
-    text-align: center;
-}
- 
-/* 链接弹性布局 */
-#side-bar div.menu-item a:not([href*="scp-series"]) {
-         flex: 1;
-        display:-webkit-flex;
-        display: flex;
-        justify-content: space-around;
-}
- 
-#side-bar div.menu-item   {
-    display:-webkit-flex;
-    display: flex;
-}
- 
-/*  鼠标移过灌注修正 */
-#side-bar div.menu-item a::before, #side-bar div.menu-item a:hover::before {
-    width: 220%;
-}
- 
-/* 
-插入语
-*/
-#side-bar .scpnet-interwiki-wrapper:after {
-    content: "⚙️ 神虽破裂，人必完整 ⚙️";
-    border: 0.2rem inset #2c2e2e;
-    padding: 0.2rem;
-    background: var(--gradient-sidebar-btn);
-    width: auto;
-    color: #000;
-    font-family:STXingkai,'微软简行楷',Kaiti,SimSun,sans-serif ;
-    font-size: 130%;
-}
+<div class="top-bar">
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>SCP-CN系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+</ul>
+</li>
+<li>SCP国际
+<ul>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
+<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
+<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
+<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
+<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
+<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
+<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
+<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
+<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
+<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
+<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
+<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
+<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mobile-top-bar">
+<div class="open-menu">
+<p><a href="#side-bar">≡</a></p>
+</div>
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
 
- 
-/* 手机样式 */
-.mobile-top-bar .open-menu a::after{
-  content: "⚙️";
-  font-size: 30%;
-}
- 
-/* 
------------------------------
-通常手机下的侧边栏 
------------------------------
-*/
-@media (max-width: 479px) {
-   #side-bar,#side-bar:hover {
-        border:none; 
-        padding: 0  1rem 0 0rem;
-   }
- 
-  #side-bar .side-block {
-     border: 0rem double #2B2B2B;
-   }
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
 
-  #side-bar:target .close-menu {
-       border-left: 0.2rem solid #2e2c2c;     
-   }
- 
-   #side-bar {
- /*  height: 700px;*/
-       overflow:scroll;
-       border: none !important;  
-   }
- 
-   #side-bar  div.menu-item a {
-         width: 85% !important; 
-         word-wrap: break-word;
-         word-break: normal;
-        text-align: center !important; 
-   }
- 
-    #side-bar div.menu-item   {
-          display: block;
-    }
- 
-    #side-bar:target .close-menu {
-             border-left: 0.5em ridge #999;     
-    }
-}
- 
-/*
-------------------------------
-多语言框
-------------------------------
-*/
- 
-iframe.scpnet-interwiki-frame {
-    filter: invert(1)  grayscale(80%);
-}
- 
-/* 
-============================================
-tab格式 
-============================================
-*/
- 
-/*  tab：内容页  */
-.yui-navset .yui-content{
-    border: 0.2rem inset #5E5E5E;
-}
- 
-/*  tab：未被选中 */
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-     background:radial-gradient(#ecd5d5,#afb3af,grey);
-     color: #000;
-     filter: drop-shadow(2px 10px 10px #333);
-     -webkit-filter: drop-shadow(2px 10px 10px #333);
-}
- 
-/*  tab：被选中时 */
-.yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selecteda:focus,
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
-.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
- 
-    background:radial-gradient(#ecd5d5,#afb3af,grey);
-    color: #000;  
- 
-     transform:rotateX(10deg);
-    -webkit-transform:rotateX(10deg); 
-    -moz-transform:rotateX(25deg); 
- 
-     transform-origin: bottom;    
-    -webkit-transform-origin: bottom;
-    -moz-transform-origin: bottom;  
- 
-      filter: sepia(20%) drop-shadow(2px 5px 5px #000);
-      -webkit-filter: sepia(20%) drop-shadow(2px 5px 5px #000);     
-}
- 
-/*  tab：选择  */
-.yui-navset .yui-nav a, 
-.yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selected,
-.yui-navset .yui-navset-top .yui-nav a{
-     border: 0.2rem outset #5E5E5E;
-}
- 
-/* tab：鼠标移过 */
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-      color: #000;
-      color:rgb(var(--dark-gray-monochrome)); 
 
-      background:radial-gradient(#ecd5d5,#afb3af,grey);
- 
-      transform:rotateX(10deg);
-    -webkit-transform:rotateX(10deg); 
-    -moz-transform:rotateX(25deg); 
- 
-     transform-origin: bottom;    
-    -webkit-transform-origin: bottom;
-    -moz-transform-origin: bottom;  
- 
-    filter: sepia(15%) drop-shadow(2px 8px 8px #000);
-    -webkit-filter: sepia(15%) drop-shadow(2px 8px 8px #000);
-}
- 
-/*  tab：被选择时，顶部选页的文字样式 */
-.yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a em {
-color: #000;
-color:rgb(var(--dark-gray-monochrome)); 
+                        
 
-}
- 
-/*
-============================================
- 标签
-============================================
- */
-#main-content .page-tags a {
-    border: 2px solid #333;
-    color: #000;
-    transition: all 0.5s;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    text-decoration:none;
- 
-}
- .page-tags span {
-    border-top: none;
-}
- 
-#main-content .page-tags a:hover {
-    transition: all 0.5s;
+<div class="side-block" style="background-color: #f0fff6;">
+<div class="heading">
+<p>新人资讯</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
+</div>
+<div class="side-block">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
+<div class="heading">
+<p>SCP-CN系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
+<div class="heading">
+<p>SCP系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
+<div class="heading">
+<p>SCP系列故事</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
+<div class="heading">
+<p>SCP图书馆</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
+<div class="heading">
+<p>网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
+<div class="heading">
+<p>社交</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
+<div class="heading">
+<p>相关网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
+</div>
+<div class="side-block resources" style="background-color: #e7e5e8;">
+<div class="heading">
+<p>写作指导</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
+</div>
+<div class="side-block" style="background-color: #fff0f0;">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="side-block media" style="background-color: #e5e5ff;">
+<div class="heading">
+<p>相关媒体</p>
+</div>
+<div class="menu-item">
+<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
+</div>
+</div>
+<div class="side-block" style="background-color: #f0f0f0;">
+<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
+<span style="font-size:80%;">© SCP基金会<br />
+<a href="/licensing-guide">授权指南</a></span></div>
+</div>
+<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
-    border: 2px double grey; 
-    background-color: #333;
-    color: #f4f4f4;
-   
-    color:rgb(var(--pale-gray-monochrome)); 
-    background-color:rgb(var(--dark-gray-monochrome)); 
-}
 
-.page-watch-options a {
-    color: #242424;
-    color:rgb(var(--gray-monochrome)); 
-}
- 
-/* 
-============================================
-底部按钮 
-============================================
-*/
-.page-options-bottom a {
-    display: inline-block;
-    white-space: nowrap;
-}
- 
-/* 因为nu主题受修改 */
-#main-content .page-options-bottom a,
-#main-content #action-area div #edit-page-form .buttons.alignleft input {
-    border: 3px double #343434 ;
-    cursor: pointer;
-    padding: 0.2rem;
-    margin: 0.1rem;
-    text-decoration:none;
-    transition: all 0.5s;
-    filter: brightness(1) drop-shadow(2px 2px 3px #000);
-    -webkit-filter: brightness(1) drop-shadow(2px 2px 3px #000);
-}
- 
-#main-content .page-options-bottom  a:hover {
-     background-color: #111;
-    border: 3px solid #333;   
-    filter: brightness(1.5) drop-shadow(0.4em 0.6em 0.1em #333);
-    -webkit-filter: brightness(1.5) drop-shadow(2px 5px 2px #333);
-}
- 
-/* 
-============================================
-底部
-============================================
- */
-#footer {
-    background: linear-gradient(120deg, #030303, #2c2c2c,#323131,#545353,#1c1919,#1b1818);
-    width:100%;
-}
- 
-#footer:before {
-    background: transparent;
-    content: "大衍运机";
-    width:100%;
-    color: transparent;
-}
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=incident-reports-eye-witness-interviews-and-personal-logs" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+</div>
+    
+    
+    
+    </div></div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<a class="close-menu" href="###"><br />
+<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
+                        
 
-#footer .options {
-   width: inherit;
-}
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            事故记录，目击证人采访，以及个人记录
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-4273613784ae4612f258366fdf2e3769" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>实验记录</em></a></li>
+<li><a href="javascript:;"><em>探索报告</em></a></li>
+<li><a href="javascript:;"><em>事故/事件报告</em></a></li>
+<li><a href="javascript:;"><em>访谈记录</em></a></li>
+<li><a href="javascript:;"><em>补充材料</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<h1 id="toc0"><span>实验记录</span></h1>
+<div class="list-pages-box">    
+
+<ul>
+<li><a href="/scp-3922-extended-test-logs">SCP-3922后续测试记录</a></li>
+<li><a href="/project-palisade-test-log">围栏计划测试日志</a></li>
+<li><a href="/experiment-logs-2105">实验记录2105</a></li>
+<li><a href="/scp-cn-1181-contact-16-log">接触记录CN-1181-16</a></li>
+<li><a href="/experiment-log-393">实验记录393</a></li>
+<li><a href="/experiment-log-024-jp">使用记录SCP-024-JP</a></li>
+<li><a href="/experiment-log-4035">测试日志-4035</a></li>
+<li><a href="/scp-cn-287-experiment">SCP-CN-287生物生成实验记录</a></li>
+<li><a href="/scp-143-testing-log">SCP-143测试记录</a></li>
+<li><a href="/rapport-de-tests-sur-scp-144-fr">SCP-144-FR实验报告</a></li>
+<li><a href="/scp-tests-131-fr">SCP-131-FR实验记录</a></li>
+<li><a href="/serie-de-tests-sur-scp-084-fr">SCP-084-FR实验记录</a></li>
+<li><a href="/origin-iv">实验记录</a></li>
+<li><a href="/document-189-2-clb">文档-189-2-CLB</a></li>
+<li><a href="/experiment-log-cn-1201">测试记录CN-1201</a></li>
+<li><a href="/207">SCP-207-JP实验记录</a></li>
+<li><a href="/v1l3-j-experiment-log">V1L3-J实验日志</a></li>
+<li><a href="/cn-experiment-log-083-j">SCP-CN-083-J实验记录</a></li>
+<li><a href="/tset-cn-680">实验记录 CN-680</a></li>
+<li><a href="/test-protokoll-084-de-10">试验-记录 084-DE-10</a></li>
+<li><a href="/versuchsprotokoll-066-de-p1">实验记录 #066-DE-P1</a></li>
+<li><a href="/scp-cn-541-1">SCP-CN-541合作实验列表</a></li>
+<li><a href="/scp-2383-j-t">SCP-2383-J的实验记录</a></li>
+<li><a href="/scp-cn-367-1">SCP-CN-367 合作实验列表</a></li>
+<li><a href="/write-back-618">实验记录 618</a></li>
+<li><a href="/scp-cn-483-test">SCP-CN-483實驗記錄</a></li>
+<li><a href="/scp-cn-353-test">SCP-CN-353实验记录</a></li>
+<li><a href="/scp-cn-434-test">SCP-CN-434实验记录</a></li>
+<li><a href="/experiment-log-cn-444-j">记录SCP-CN-444-1</a></li>
+<li><a href="/cn-experiment-log-910">实验记录CN-910</a></li>
+<li><a href="/experiment-log-914-cn">实验记录914-CN</a></li>
+<li><a href="/scp-cn-162-extra-experiment-log">SCP-CN-162拓展实验记录</a></li>
+<li><a href="/tests-de-scp-032-fr">SCP-032-FR的效果测试报告</a></li>
+<li><a href="/scp-978-extended-test-logs-cn">SCP-978后续实验日志-CN</a></li>
+<li><a href="/cn-experiment-log-048-j">实验记录CN-048-J</a></li>
+<li><a href="/test-log-2209-024515">测试记录2209-024515</a></li>
+<li><a href="/scp-cn-117-ecp">“SCP-CN-117合作实验”计划</a></li>
+<li><a href="/rapports-de-tests-sur-scp-020-fr">SCP-020-FR实验记录</a></li>
+<li><a href="/rapport-de-tests-sur-scp-013-fr">SCP-013-FR实验记录</a></li>
+<li><a href="/cn-experiment-log-347">实验记录347</a></li>
+<li><a href="/experiment-log-261-ad-de">实验日志 261</a></li>
+<li><a href="/scp-3301-testing-log">SCP-3301 测试记录</a></li>
+<li><a href="/005-fr-1-2-005-fr-1">实验报告005-FR-1 与2 + 事件005-FR-1</a></li>
+<li><a href="/scp-1049-j-extended-test-logs">SCP-1049-J的扩展实验日志</a></li>
+<li><a href="/experiment-log-cn-264">测试记录264</a></li>
+<li><a href="/experiment-log-301">实验记录301</a></li>
+<li><a href="/experiment-log-1402">实验记录1402</a></li>
+<li><a href="/experiment-log-826">实验记录-826</a></li>
+<li><a href="/scp-cn-521-extend-request-logs">SCP-CN-521后续申请记录</a></li>
+<li><a href="/experiment-log-731">实验记录731</a></li>
+</ul>
+
+    
+    <div class="pager"><span class="pager-no">page 1 of 3</span><span class="current">1</span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/2">2</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/3">3</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/2">next &raquo;</a></span></div>
+    
+    </div></div>
+<div id="wiki-tab-0-1" style="display:none">
+<h1 id="toc1"><span>探索报告</span></h1>
+<div class="list-pages-box">    
+
+<ul>
+<li><a href="/exploration-log-3426">探索记录3426</a></li>
+<li><a href="/the-beast-beneath-the-library">图书馆下的野兽</a></li>
+<li><a href="/exploration-log-a009-1">探索记录A009-1</a></li>
+<li><a href="/expedition-log-ps13-2815-1612-1">探索日志：Ψ13-2815-1612-1</a></li>
+<li><a href="/survey-log-1165">调查日志-1165</a></li>
+<li><a href="/scp-783-l1">SCP-783-L1</a></li>
+<li><a href="/scp-4242-extended-location-and-exploration-log">SCP-4242扩展地点和探索记录</a></li>
+<li><a href="/cn-251-exploration-log">SCP-CN-251-1探索记录</a></li>
+<li><a href="/026-exploration-logs">SCP-026探索记录</a></li>
+<li><a href="/scp-2585-exploration-log-c">SCP-2585探索记录C</a></li>
+<li><a href="/scp-2585-exploration-log-b">SCP-2585探索记录B</a></li>
+<li><a href="/scp-2585-exploration-log-a">SCP-2585探索记录A</a></li>
+<li><a href="/scp-3035-exploration-log">SCP-3035探索记录</a></li>
+<li><a href="/document-1201">文件1201-█</a></li>
+<li><a href="/exploration-log-dim-3-d">探索记录：DIM-3███-D</a></li>
+<li><a href="/exploration-log-2016">探索记录2016</a></li>
+<li><a href="/document-scp-1734-e9">文档-SCP-1734-E9</a></li>
+<li><a href="/document-087-iii">文件 087-III</a></li>
+<li><a href="/document-087-ii">文件 087-II</a></li>
+<li><a href="/document-860-iii-and-iv">文档860-III和IV</a></li>
+<li><a href="/transcript-epsilon-12-1555">音頻/遙測記錄 Epsilon-12-1555</a></li>
+<li><a href="/document-860-i-and-ii">文档860-I和II</a></li>
+<li><a href="/scp-432-expedition-5">SCP-432 探索 5</a></li>
+<li><a href="/scp-432-expedition-4">SCP-432 探索 4</a></li>
+<li><a href="/scp-432-expedition-2">SCP-432 探索 2</a></li>
+<li><a href="/scp-432-expedition-1">SCP-432 探索 1</a></li>
+<li><a href="/exploration-log-record-455-3">探索日誌記錄455 3</a></li>
+<li><a href="/experiment-log-455">實驗記錄455</a></li>
+<li><a href="/personal-log-of-gordon-richards">Gordon Richards的个人日志</a></li>
+<li><a href="/scp-610-l5">SCP-610-L5</a></li>
+<li><a href="/scp-610-l4">SCP-610-L4</a></li>
+<li><a href="/scp-610-l3">SCP-610-L3</a></li>
+<li><a href="/scp-610-l2">SCP-610-L2</a></li>
+<li><a href="/scp-610-l1">SCP-610-L1</a></li>
+<li><a href="/exploratory-mission-354-alpha">探索任务354 Alpha档案</a></li>
+<li><a href="/scp-093-red-test">SCP-093“红色”测试</a></li>
+<li><a href="/scp-093-yellow-test">SCP-093“黄色”测试</a></li>
+<li><a href="/scp-093-violet-test">SCP-093“紫色”测试</a></li>
+<li><a href="/scp-093-green-test">SCP-093“绿色”测试</a></li>
+<li><a href="/scp-093-blue-test">SCP-093“蓝色”测试</a></li>
+<li><a href="/document-087-i">文件087-I</a></li>
+<li><a href="/exploration-log-1689-i">探索日志 1689-I</a></li>
+</ul>
+
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-2" style="display:none">
+<h1 id="toc2"><span>事故/事件报告</span></h1>
+<div class="list-pages-box">    
+
+<ul>
+<li><a href="/scp-cn-096-j-a">事故 096-J-A</a></li>
+<li><a href="/incident-log-i-3456-032">事故记录I-3456-032</a></li>
+<li><a href="/video-log-1743-26">视频记录1743-26</a></li>
+<li><a href="/retrieval-log-db-4503-b">回收日志db/4503-b</a></li>
+<li><a href="/01-091">事件01-091</a></li>
+<li><a href="/777-cn-0b">事件777-CN-0B</a></li>
+<li><a href="/incident-report-tcg-jp-j">事故记录：SCP-TCG-JP-J</a></li>
+<li><a href="/vorfalls-protokoll-097-de-03">事故记录 097-DE-03</a></li>
+<li><a href="/protokoll-066-de-i1">事故记录 #066-DE-I1</a></li>
+<li><a href="/vorfalls-protokoll-092-04">事件-记录 092-04</a></li>
+<li><a href="/028-de-i2">事故#028-DE/I2</a></li>
+<li><a href="/schwerer-vorfall-surt">严重事故-002-Surt</a></li>
+<li><a href="/005-fr-1-2-005-fr-1">实验报告005-FR-1 与2 + 事件005-FR-1</a></li>
+<li><a href="/scp-cn-640-a">旧日光荣</a></li>
+<li><a href="/incident-log-1264-d-2">MTF行动后报：1264-D-2</a></li>
+<li><a href="/incident-log-1245-043">事故记录1245-043</a></li>
+<li><a href="/incident-report-i741-a">事故报告I741-A</a></li>
+<li><a href="/incidentreportnullpleaseseeasupervisor">事故2770-C</a></li>
+<li><a href="/incident-668-a">事故668 A</a></li>
+<li><a href="/incidence-report-log-567-4012">事故报告567-4012</a></li>
+<li><a href="/incident-log-555-1">事故记录555-1</a></li>
+<li><a href="/incident-report-amn-c227-939">事故报告AMN-C227-939</a></li>
+<li><a href="/initial-contact-log-scp-939">SCP-939初次接触记录</a></li>
+<li><a href="/incident-023-27">事件报告 023-27</a></li>
+<li><a href="/incident-report-023-26">事件报告 023-26</a></li>
+<li><a href="/incident-517-1997-m">事件517-1997-M</a></li>
+<li><a href="/incident-report-x23">安保突破事故X23</a></li>
+<li><a href="/incident-370-a">事件370-A</a></li>
+<li><a href="/incident-report-307">事件報告307</a></li>
+<li><a href="/incident-report-scp70119971">事故報告 SCP-701-19██-1</a></li>
+<li><a href="/incident-096-1-a">事故 096-1-A</a></li>
+<li><a href="/scp-076-2">机动特遣队Omega 7事故记录</a></li>
+<li><a href="/incident-report-yersinia-047-01-2010">事件报告耶尔森氏菌047-01（2010）</a></li>
+<li><a href="/incident-i-j77-82">事故I.J77.82</a></li>
+</ul>
+
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-3" style="display:none">
+<h1 id="toc3"><span>访谈记录</span></h1>
+<div class="list-pages-box">    
+
+<ul>
+<li><a href="/interrogation-w-2105-001">采访记录 W-2105-001</a></li>
+<li><a href="/scp-cn-1087-files-1">与特工L3的访谈记录</a></li>
+<li><a href="/scp-2446-interview">SCP-2446 采访</a></li>
+<li><a href="/retrocausality-torus-interview-b">逆因果环面采访B</a></li>
+<li><a href="/retrocausality-torus-interview-a">逆因果环面采访A</a></li>
+<li><a href="/interview-log-472-0165-b">采访日志472-0165-B</a></li>
+<li><a href="/statement-of-650-jp">SCP-650-JP的自述</a></li>
+<li><a href="/interview-log-084-de-01">采访页-084-DE-01</a></li>
+<li><a href="/befragungs-protokoll-092-01">询问-记录 092-01</a></li>
+<li><a href="/gespraechsaufzeichnung-092-21">谈话记录 092-21</a></li>
+<li><a href="/2274-interview-1">采访记录 2274 1</a></li>
+<li><a href="/interview-log-026-08">采访记录026-08</a></li>
+<li><a href="/interview-log-2422-2">采访记录2422-2</a></li>
+<li><a href="/interview-log-2422-1">采访记录2422-1</a></li>
+<li><a href="/interview-log-026-01">采访记录 026-01</a></li>
+<li><a href="/interview-log-1372-1">事故记录1372-1</a></li>
+<li><a href="/interview-log-769-43">采访文档769-43</a></li>
+<li><a href="/interview-1128">问询记录1128-██</a></li>
+<li><a href="/953-interview-a">953采访A</a></li>
+<li><a href="/interview-616-am">采访记录616-AM</a></li>
+<li><a href="/interview-507-g">访谈记录507-G</a></li>
+<li><a href="/interview-scp-418-3">采访日志SCP-418/3</a></li>
+<li><a href="/2212-archival-interview">2212 歸檔采访</a></li>
+<li><a href="/jacob-001-txt">jacob-001.txt</a></li>
+<li><a href="/interviews-log-405">采访档案405</a></li>
+<li><a href="/scp-315-a">文档315-a</a></li>
+<li><a href="/662-l1">662-L1</a></li>
+<li><a href="/interview-882-1">采访记录882-1</a></li>
+<li><a href="/interview-214">访谈记录214</a></li>
+<li><a href="/interview-log-022-751">采访日志022-751</a></li>
+<li><a href="/interview-051-1">采访051-1</a></li>
+<li><a href="/termination-log-scp-316">处决记录SCP-316</a></li>
+<li><a href="/277interview">采访记录 277-A</a></li>
+</ul>
+
+    
+    
+    
+    </div></div>
+<div id="wiki-tab-0-4" style="display:none">
+<h1 id="toc4"><span>独立补充材料</span></h1>
+<div class="list-pages-box">    
+
+<ul>
+<li><a href="/scp-1646-jp-2">SCP-1646-JP-2</a></li>
+<li><a href="/scp-1646-jp-1">SCP-1646-JP-1</a></li>
+<li><a href="/mtf-list-cn-i">andy和面包的中分mtf列表整理</a></li>
+<li><a href="/scp-cn-1426-secret-files">SCP-CN-1426 secret files</a></li>
+<li><a href="/what-if-1">数据恢复</a></li>
+<li><a href="/what-if-2">……</a></li>
+<li><a href="/scp-cn-1862-extra-observe-results">SCP-CN-1862的观测记录</a></li>
+<li><a href="/sraosha-s-personnel-file-appendix">附录：关于Bright博士</a></li>
+<li><a href="/scp-cn-1784-1">云消雾散</a></li>
+<li><a href="/scp-cn-1369-a">事故记录 1369-A</a></li>
+<li><a href="/jiangli-oudafengge">2021新人竞赛奖励一览</a></li>
+<li><a href="/cn-1349-experiment">CN-1349- experiment</a></li>
+<li><a href="/scp-cn-006-j-a">SCP-CN-006-J-A档案</a></li>
+<li><a href="/cn-1773-tel">TEL-CN-1773附加实验记录</a></li>
+<li><a href="/scp-pl-000-j-1">SCP-PL-001-J-1</a></li>
+<li><a href="/damn-god-2">尾声</a></li>
+<li><a href="/scp-cn-1297-0">记录：Individual-1</a></li>
+<li><a href="/scp-2696-attached-documentation">SCP-2696附加文件</a></li>
+<li><a href="/cn-1235-1">SCP-CN-1235您已成功更新至最新版本</a></li>
+<li><a href="/anomalousflatulence-preview-page">Site-M16内部SCiPNET电子邮件：RCT</a></li>
+<li><a href="/scp-cn-1480-1">数据已丢失！</a></li>
+<li><a href="/joseph1756">“虎门计划”项目计划书</a></li>
+<li><a href="/foundation-radio-experimental-talk-about-173">基金会电台 实验节目 | 谈谈SCP-173</a></li>
+<li><a href="/shuangshoufengshen">SCP-CN-1754</a></li>
+<li><a href="/scp-cn-1827-2">SCP-CN-1827</a></li>
+<li><a href="/cn-1583-more-message">新邮件</a></li>
+<li><a href="/hhh">攻心计划</a></li>
+<li><a href="/galcon2020-loot-list">赞助列表</a></li>
+<li><a href="/scp-cn-1158-ext">SCP-CN-1158-Ext</a></li>
+<li><a href="/resazurin-s-proposal-page-2">Resazurin的提案</a></li>
+<li><a href="/scp-cn-640-b">147工程主页面</a></li>
+<li><a href="/scp-cn-1496-kindness">SCP-CN-1496-Kindness</a></li>
+<li><a href="/scp-cn-1226-2">档案库</a></li>
+<li><a href="/scp-3317-audio">SCP-3317音频文档</a></li>
+<li><a href="/kfa">爱蒂塔计划衍生工程及爱蒂塔科技列表</a></li>
+<li><a href="/scp-3959-restricted">SCP-3959 (5级权限)</a></li>
+<li><a href="/cn-1743-more">也只是那样的事</a></li>
+<li><a href="/interview-391-jp">采访记录391-JP</a></li>
+<li><a href="/scp-cn-949-research-record">SCP-CN-949实验记录</a></li>
+<li><a href="/scp-cn-1071-t">SCP-CN-1071</a></li>
+<li><a href="/scp-cn-1071-c">SCP-CN-1071</a></li>
+<li><a href="/scp-cn-1071-b">全站点紧急通知</a></li>
+<li><a href="/scp-cn-1071-a">SCP-CN-1071</a></li>
+<li><a href="/scp-cn-1071-new">SCP-CN-1071</a></li>
+<li><a href="/base-cn-113">Base-CN-113员工档案存储页面</a></li>
+<li><a href="/experiment-log-914-hub">实验记录914 - 中心页</a></li>
+<li><a href="/site-cn-39">Site-CN-39</a></li>
+<li><a href="/scp-cn-1330-altale-offset-1">SCP-CN-1330</a></li>
+<li><a href="/excerpts-of-the-personal-log-of-research-assistant-915-g">研究助理个人日志摘录 915-g</a></li>
+<li><a href="/thaumaturgy-subject-first-a">咒文学部通用入门教材ART-0001号 法阵学入门摘录</a></li>
+</ul>
+
+    
+    <div class="pager"><span class="pager-no">page 1 of 5</span><span class="current">1</span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/2">2</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/3">3</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/4">4</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/5">5</a></span><span class="target"><a href="/incident-reports-eye-witness-interviews-and-personal-logs/p/2">next &raquo;</a></span></div>
+    
+    </div></div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabView4273613784ae4612f258366fdf2e3769 = new YAHOO.widget.TabView('wiki-tabview-4273613784ae4612f258366fdf2e3769');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
+                    </div>
+
+                            
+            <!-- wikidot_bottom_300x250 -->
+<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
+<script type='text/javascript'>
+nads.createAd('wad-scp-wiki-cn-below-content', {
+  "refreshLimit": 10,
+  "refreshTime": 83,
+  "sizes": [ [ 300, 250 ] ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  }
+  });
+</script>
+        
+    
+
+                    
+
+
+
+                    
+                        <div class="page-tags">
+                            <span>
+                                <a href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83#pages">中心</a>
+                            </span>
+                        </div>
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">页面版本: 4, 最后编辑于: <span class="odate time_1586747218 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">13 Apr 2020 03:06</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+3</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
+<a href="/forum/t-9088901/incident-reports-eye-witness-interviews-and-personal-logs" class="btn btn-default" id="discuss-button">讨论 (2)</a>
+<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
+</div>
+基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                <div id="footer-bar">
+  <div>
+     </div>
+  <h2>其它有趣的网站</h2>
+  
+  <div class="units">
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://www.ereticopedia.org">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.ereticopedia.org/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://www.ereticopedia.org">ERETICOPEDIA</a></h3>
+            <div class="desc">          
+              Mediterranean Digital &amp; Public Humanities
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://insurrection-du-chaos-sandbox.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/insurrection-du-chaos-sandbox.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://insurrection-du-chaos-sandbox.wikidot.com">IC-FR Sandbox</a></h3>
+            <div class="desc">          
+              Sandbox de l&#039;Insurrection du Chaos francophone
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://marblehornets.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/marblehornets.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://marblehornets.wikidot.com">Marble Hornets</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://inctr-palliative-care-handbook.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/inctr-palliative-care-handbook.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://inctr-palliative-care-handbook.wikidot.com">INCTR Palliative Care Handbook</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        请点此编辑本页内容。    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
+    <div id="edit-append-button-hovertip">
+        在不编辑整个页面源代码的情况下添加内容。    </div>
+    <div id="history-button-hovertip">
+        看看本页过去是如何沿革的。    </div>
+    <div id="discuss-button-hovertip">
+        若您想要讨论本页内容 - 这是最简单的方法。    </div>
+    <div id="files-button-hovertip">
+        检视并管理本页附件。    </div>
+    <div id="site-tools-button-hovertip">
+        管理网站的实用工具。    </div>
+    <div id="backlinks-button-hovertip">
+        检视链接至本页或引用本页的页面。    </div>
+    <div id="rename-move-button-hovertip">
+        变更页面名称（及URL 位址，或许会影响分类）。    </div>
+    <div id="view-source-button-hovertip">
+        在不编辑的情形下检视维基原始码。    </div>
+    <div id="parent-page-button-hovertip">  
+        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
+            <div id="abuse-report-button-hovertip">
+            向管理员举报本页有令人反感的内容。        </div>
+        <div id="bug-report-button-hovertip">
+            事情不如预期？看看您可以做些什么。        </div>
+        <div id="wikidot-help-button-hovertip">
+            一般的 Wikidot.com 文件与说明。        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com 隐私政策。          
+        </div>
+    </div>
+</body>
+</html>

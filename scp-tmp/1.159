@@ -1,1402 +1,385 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+/* Wanderer's Station Theme */
+/* 2019 Wikidot Theme */
+/* By Rounderhouse, based off Dustjacket by Woedenaz and Croquembouche */
+/* Logo by Rounderhouse, using art from SunnyClockwork, licensed under CC BY SA 3.0 */
+/* Header background by NASA, public domain. */
 
-<head>
-    <title>被放逐者之图书馆原创区 - SCP基金会</title>
-    
-    
-    
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
-    <script  type="text/javascript">
-        var URL_HOST = 'www.wikidot.com';
-        var URL_DOMAIN = 'wikidot.com';
-        var USE_SSL =  true ;
-        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
-        // global request information
-        
-        var WIKIREQUEST = {};
-        WIKIREQUEST.info = {};
-        
-        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
-        WIKIREQUEST.info.siteId = 530812;
-        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 4277017;
-        WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "wanderers:the-library-cn";
-        OZONE.request.timestamp = 1610179612;
-        OZONE.request.date = new Date();
-        WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "wanderers:the-library-cn";
-        WIKIREQUEST.info.pageId = 55698338;
-                        WIKIREQUEST.info.lang = "cn";
-        OZONE.lang = "cn";
-        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    </script>
-    
-    
+/* Fonts */
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|PT+Mono|Poppins:600,800');
+@import url('https://fonts.googleapis.com/css?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
 
-    
-        <script  type="text/javascript">
-    
-        require.config({
-            baseUrl: URL_STATIC + '/common--javascript',
-            paths: {
-                'jquery.ui': 'jquery-ui.min',
-                'jquery.form': 'jquery.form'
-            }
-        });
-    
-    </script>
-    
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-                            <meta name="robots" content="index,follow"/>
-                                <meta name="language" content="zh,zh-cn"/>
-                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                            
-    
-    
-    
-    
-    <meta http-equiv="content-language" content="zh,zh-cn"/>
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
-        
-    
-    <style type="text/css" id="internal-style">
-        
-        /* modules */
-        
-                
-        /* theme */
-                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
-                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch_wl.min.css);
-            </style>
-    
-        
-        
-        
-    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
-    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
-    
-            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
-        
-            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
-                
-            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
-    
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-18234656-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+/* All Vars Used */
 
-        _gaq.push(['old._setAccount', 'UA-68540-5']);
-        _gaq.push(['old._setDomainName', 'none']);
-        _gaq.push(['old._setAllowLinker', true]);
-        _gaq.push(['old._trackPageview']);
+:root {
+    /* S-CSS-P Integration */
+    /* If you're making a new CSS theme, please include the following three variables at minimum. */
+    --theme-base: "nuscp";
+    /* must be either "nuscp" or "sigma9" */
+    --theme-id: "WandererStation";
+    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+    --theme-name: "Wanderer's Station";
+    /* set this to your theme's full name */
 
-            </script>
-    
-    <script type="text/javascript">
-        window.google_analytics_uacct = 'UA-18234656-1';
-        window.google_analytics_domain_name = 'none';
-    </script>
-    
-        <link rel="manifest" href="/onesignal/manifest.json" />
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-          OneSignal.init({
-            appId: null,
-          });
-        });
-    </script>
-        
-<style>
-div.boxmain {
-    border: solid 1px #004F00;
-    background: #FBFBD3;
-    padding: 5px;
+    /* Header */
+    --logo-image: url("http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/spacelogo.png");
+    --header-title: "流浪者站";
+    --header-subtitle: "欢迎回港，流浪者01。";
+
+    /* Typefaces */
+    --body-font: 'Lato', '微软雅黑', sans-serif;
+    --header-font: 'Audiowide', '方正姚体', cursive;
+    --title-font: 'Gugi', '等线', '幼圆', cursive;
+    --mono-font: "PT Mono", "Andale Mono", "Courier New", '仿宋', Courier, monospace;
+
+    /* Standard Colors */
+    --white-monochrome: 252, 252, 252;
+    /* white */
+    --pale-gray-monochrome: 244, 244, 244;
+    /* v light gray for blockquotes and stuff */
+    --light-gray-monochrome: 170, 170, 170;
+    /* light accent gray for login status */
+    --gray-monochrome: 66, 66, 72;
+    /* gray */
+    --dark-gray-monochrome: 48, 48, 52;
+    /* dark accent gray for sidebar background */
+    --black-monochrome: 12, 12, 12;
+    /* black */
+    --bright-accent: 255, 219, 90;
+    /* bright yellow */
+    --medium-accent: 36, 38, 114;
+    /* blue */
+    --dark-accent: 220, 185, 53;
+    /* dark yellow */
+    --newpage-color: 221, 102, 17;
+    /* pale orange */
+    --mid-black: 39, 39, 39;
+    /* pale black */
+    --mid-black: 39, 39, 39;
+    /* pale black */
+
+    /* Primary Theme Colors */
+    --swatch-background: var(--mid-black);
+    --swatch-primary: var(--medium-accent);
+    --swatch-primary-darker: var(--bright-accent);
+    --swatch-primary-darkest: var(--bright-accent);
+    /* Primary Text Colors */
+    --swatch-text-dark: var(--white-monochrome);
+    --swatch-text-light: var(--black-monochrome);
+    --swatch-important-text: var(--bright-accent);
+
+    /* Primary Menu Colors */
+    --swatch-menubg-color: var(--gray-monochrome);
+    --swatch-menubg-light-color: var(--gray-monochrome);
+    --swatch-menubg-medium-color: var(--gray-monochrome);
+    --swatch-menubg-medium-dark-color: var(--black-monochrome);
+    --swatch-menubg-dark-color: var(--medium-accent);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--gray-monochrome);
+    --swatch-menutxt-dark-color: var(--bright-accent);
+    --swatch-menutxt-light-color: var(--bright-accent);
+    --swatch-border-color: var(--bright-accent);
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    --swatch-topmenu-border-color: var(--bright-accent);
+    --swatch-topmenu-bg-color: var(--medium-accent);
+
+    --rating-module-button-color: var(--bright-accent);
+    --rating-module-text-color: var(--bright-accent);
+
+    /* Spacing Measurements */
+
+    --offset-from-page-top: 1.2rem;
+    /* space between the top of the page and the start of the header */
+    --body-width-on-desktop: 44.25rem;
+    --sidebar-width-on-desktop: calc(var(--base-font-size)*19);
+    --sidebar-width-on-mobile: 14rem;
+    --scrollbar-width: 0.5625rem;
+    --border-styling: solid 0.0625rem rgb(var(--swatch-border-color));
+    --border-radius-width: 0.0625rem;
+
+    /* Box-Shadow 1px Borders */
+    --box-border-bottom: 0 0.0625rem 0 0 rgb(var(--swatch-border-color));
+    --box-border-top: 0 -0.0625rem 0 0 rgb(var(--swatch-border-color));
+    --box-border-left: -0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+    --box-border-right: 0.0625rem 0 0 0 rgb(var(--swatch-border-color));
+    --box-border-all: 0 0 0 0.0625rem rgb(var(--swatch-border-color));
+
+    /* Sidebar */
+    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+    --sidebar-internal-border-thickness: 0.125rem;
+
+    --background-gradient-color: 36, 38, 114;
+    --background-gradient-distance: 10rem;
+
+    /* Dynamic Font Sizing */
+    /* This set of vars will make the base font size vary with screen width */
+    /* base font size ranges */
+    --unitless-min-font-size: 0.8;
+    --unitless-max-font-size: 1;
+    /* base viewport size ranges */
+    --unitless-min-viewport: 768;
+    --unitless-max-viewport: 900;
+    /* base line height size ranges */
+    --min-lineheight: 1.2;
+    --max-lineheight: 1.5;
+    /* calculating size differences */
+    --font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
+    --lineheight-difference: calc(var(--max-lineheight) - var(--min-lineheight));
+    --viewport-range-difference: calc(var(--unitless-max-viewport) - var(--unitless-min-viewport));
+    --min-viewport-difference: calc(100vw - (var(--unitless-min-viewport) * 1px));
+    /* responsive fluid type formula */
+    --font-calc: calc((var(--unitless-min-font-size) * 1rem) + var(--font-size-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
+    --line-calc: calc(var(--min-lineheight) + var(--lineheight-difference) * var(--min-viewport-difference) / var(--viewport-range-difference));
+    /* final values */
+    --base-font-size: var(--font-calc);
+    --base-line-height: var(--line-calc);
 }
-div.boxbook, div.boxleft, div.boxright {
-    box-sizing: border-box;
+
+.page-rate-widget-box {
+    border-radius: 0px 15px 0px 15px !important;
 }
-div.boxbook {
-    border: solid 1px #004F00;
-    background: #f2f2c2;
-    padding: 5px;
-    margin: 5px 0;
-    overflow: auto;
+
+#top-bar div.top-bar > ul > li > ul {
+    background: rgba(var(--medium-accent), 1);
 }
-div.boxleft, div.boxright {
-    border: solid 1px #004F00;
-    background: #FFFDD9;
-    padding: 5px;
-    margin: 5px 0;
-    min-height: 100px;
+
+#login-status, #my-account {
+   color: rgb(var(--bright-accent)) !important;
 }
-div.boxleft {
-    float: left;
-    width: calc(40% - 2.5px);
+
+#login-status a {
+   color: rgb(var(--bright-accent)) !important;
 }
-div.boxright {
-    float: right;
-    width: calc(60% - 2.5px);
+
+#login-status > a > strong {
+   color: rgb(var(--bright-accent)) !important;
 }
-@media (max-width: 768px) {
-div.boxleft, div.boxright {
+
+#toc {
+     background-color: rgba(var(--medium-accent));
+     color: rgba(var(--bright-accent));
+}
+
+#top-bar div.top-bar div.newpage_dropdown div.new-page-box input {
+    background-color: rgba(var(--bright-accent));
+    color: rgba(var(--medium-accent));
+}
+
+#top-bar div.top-bar div.newpage_dropdown div.new-page-box input.button:hover {
+    color: rgba(var(--bright-accent));
+    border: solid 2px rgba(var(--bright-accent));
+}
+
+#top-bar div.mobile-top-bar > ul > li > ul > li:hover > a, #top-bar div.top-bar > ul > li > ul > li:hover > a {
+    color: rgba(var(--medium-accent));
+}
+
+.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {
+   color: rgba(var(--bright-accent));
+}
+
+.yui-navset-bottom .yui-nav li a, .yui-navset-top .yui-nav li a, .yui-navset .yui-nav li a {
+    background-color: rgba(var(--medium-accent));
+}
+
+.yui-navset .yui-nav li a em:hover, .yui-navset-top .yui-nav li a em:hover, .yui-navset-bottom .yui-nav li a em:hover {
+    color: rgba(var(--medium-accent));
+}
+
+.yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a em {
+    color: rgba(var(--medium-accent));
+}
+
+#skrollr-body {
     width: 100%;
-    float: none;
-}
+    height: 7.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/space.png);
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
-.boxmain h1 {
-    text-align: center;
-    font-family: Palatino;
-    font-weight: bold;
-    font-size: 1.75em;
+#search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"], #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"]:hover {
+    background-color: rgb(var(--medium-accent));
 }
-.boxmain h2 {
-    text-align: center;
-    font-family: Palatino;
-    font-weight: bold;
-    font-size: 1.5em;
+
+#search-top-box:not(:focus-within)::before {
+    color: rgb(var(--bright-accent));
 }
-.boxmain h3 {
-    text-align: center;
-    font-family: Palatino;
-    font-weight: bold;
+
+#page-title {
+    grid-area: page-title;
+    border-color: rgb(var(--bright-accent,66,66,72));
+    color: rgb(var(--bright-accent,12,12,12));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(var(--bright-accent));
+}
+
+#lock-info {
+    background-color: rgba(var(--medium-accent));
+    color: rgba(var(--bright-accent));
+}
+
+div#page-options-bottom > a,
+div#page-options-bottom-2 > a {
+    background-color: rgba(178, 210, 180, 0.25);
+    background-color: rgba(var(--swatch-menubg-light-color), 0.25);
+    border: 0.0625rem solid rgba(255, 219, 90, 1);
+    border: 0.0625rem solid rgba(var(--swatch-primary), 1);
+    color: rgba(var(--bright-accent));
+}
+
+div#page-options-bottom > a:hover,
+div#page-options-bottom > a:active,
+div#page-options-bottom-2 > a:hover,
+div#page-options-bottom-2 > a:active {
+    background-color: rgba(30, 55, 30, 1);
+    background-color: rgba(var(--swatch-menubg-dark-color), 1);
+    color: rgba(255, 219, 90, 1);
+    color: rgba(var(--bright-accent), 1);
+}
+
+.wl-translations {
+    border: 1px solid rgba(var(--bright-accent), 1);
+    border-radius: 2px;
+}
+
+.wl-translations a {
+    color: rgba(var(--bright-accent), 1);
+}
+
+.blockquote, blockquote {
+    background-color: rgba(var(--medium-accent));
+    color: rgba(var(--bright-accent));
+    border: .063em solid rgba(var(--bright-accent),.25)
+}
+
+table.wiki-content-table th {
+    background-color: rgb(var(--medium-accent));
+}
+
+table.wiki-content-table th, table.wiki-content-table tr {
+    border: .075rem solid rgba(var(--bright-accent),.50) !important;
+}
+
+/* terminal by ayers */
+
+div.terminal{
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #00183C;
+/* black shadow at the top of the terminal */
+    background-image:
+        -o-radial-gradient(50% 90%, ellipse 1000% 100%, transparent, #00183C);
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #00183C);
+    background-position: center;
+    display: block;
+/* shadow around the terminal */
+    -webkit-box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+    overflow:hidden;
+}
+div.terminal blockquote {
+    color: rgba(22,115,255,0.8) !important;
+    background-color: black;
+    border: double 3px #1E78FF
+}
+div.scanline{
+    margin-top: -40%;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    pointer-events: none;
+/* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
+    animation: scan 12s linear 0s infinite; /* Same as above */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 112, 82,0)), to(rgba(56, 112, 82,0.1))) !important;
+    background: -o-linear-gradient(top, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+}
+
+div.text{
+    color: rgba(22,115,255,0.8);
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 40%;
+    font-family: monospace;
+    font-size: 1.2em;
+    }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes scan{
+    from{ -webkit-transform: translateY(-10%); transform: translateY(-10%);}
+    to{  -webkit-transform: translateY(5000%);  transform: translateY(5000%);} /* You may need to change this depending on the length of your terminal. If the scanline stops halfway, increase the second number.*/
+}
+
+@keyframes scan{
+    from{ -webkit-transform: translateY(-10%); transform: translateY(-10%);}
+    to{  -webkit-transform: translateY(5000%);  transform: translateY(5000%);} /* Same as above.*/
+}
+
+div.text a {
+    color: #00B6AC;
+    text-decoration: none;
+    background: transparent;
+}
+div.text a.newpage {
+    color: #03fff1;
+}
+
+div.text a:hover {
+    color: #00d0c4;
     text-decoration: underline;
-    font-size: 1.3em;
+    background-color: #272727;
+    padding: 1px;
 }
-.boxleft p {
-    text-align: justify;
-    font-style: italic;
+div.text a:hover::before{
+content: "> ";
 }
-</style>
-<script src="https://s.nitropay.com/ads-143.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-</head>
-<body id="html-body">
-<div id="skrollr-body">
-<a name="page-top"></a>
 
-
-
-
-
-<div id="container-wrap-wrap">
-    <div id="container-wrap">
-        <div id="container">
-            <div id="header">
-              <h1><a href="/"><span>SCP基金会</span></a></h1>
-                
-                    <h2><span>控制，收容，保护</span></h2>
-                
-                
-                <!-- google_ad_section_start(weight=ignore) -->
-                
-                <div id="search-top-box" class="form-search">
-    <form id="search-top-box-form" action="dummy" class="input-append">
-        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
-    </form>
-</div>
-                
-                
-                    <div id="top-bar">
-                        
-
-<div class="top-bar">
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>SCP-CN系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-</ul>
-</li>
-<li>SCP国际
-<ul>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
-<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
-<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
-<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
-<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
-<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
-<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
-<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
-<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
-<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
-<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
-<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
-<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="mobile-top-bar">
-<div class="open-menu">
-<p><a href="#side-bar">≡</a></p>
-</div>
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-                    </div>
-                
-                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
-                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
-            </div>
-            
-            <div id="content-wrap">
-                
-                    <div id="side-bar">
-                        
-
-
-                        
-
-<div class="side-block" style="background-color: #f0fff6;">
-<div class="heading">
-<p>新人资讯</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
-</div>
-<div class="side-block">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
-<div class="heading">
-<p>SCP-CN系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
-<div class="heading">
-<p>SCP系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
-<div class="heading">
-<p>SCP系列故事</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
-<div class="heading">
-<p>SCP图书馆</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
-<div class="heading">
-<p>网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
-<div class="heading">
-<p>社交</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
-<div class="heading">
-<p>相关网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
-</div>
-<div class="side-block resources" style="background-color: #e7e5e8;">
-<div class="heading">
-<p>写作指导</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
-</div>
-<div class="side-block" style="background-color: #fff0f0;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-content">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="side-block media" style="background-color: #e5e5ff;">
-<div class="heading">
-<p>相关媒体</p>
-</div>
-<div class="menu-item">
-<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
-</div>
-</div>
-<div class="side-block" style="background-color: #f0f0f0;">
-<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
-<span style="font-size:80%;">© SCP基金会<br />
-<a href="/licensing-guide">授权指南</a></span></div>
-</div>
-<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=wanderers&pagename=wanderers:the-library-cn" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
-</div>
-    
-    
-    
-    </div></div>
-<div style="clear:both; height: 0px; font-size: 1px"></div>
-<a class="close-menu" href="###"><br />
-<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
-                        
-
-
-                    </div>
-                
-                
-                <!-- google_ad_section_end -->
-                
-                <div id="main-content">
-                    <div id="action-area-top"></div>
-                    
-                    
-                        <div id="page-title">
-                            被放逐者之图书馆原创区
-                        </div>
-                    
-
-                    
-
-                    
-
-
-
-                    <div id="page-content">
-                        
-
-
-
-
-<div class="boxmain">
-<div style="text-align: center;">
-<p>期待有一天这里能够茁壮成长，至于果实为何，拭目以待。</p>
-</div>
-<br />
-<div style="text-align: right;">
-<p>——Ebon Archivist L.C.</p>
-</div>
-</div>
-<hr />
-<div class="boxmain">
-<h1 id="toc0"><span>藏书</span></h1>
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc1"><span>苍树与血</span></h2>
-<hr />
-<p>图书馆的繁茂取决于对万物的见证。结构的解析，因果的探寻，命运的预测，这是苍天古树之根基。在那无尽的道路，亦或那深邃的海洋，无数先贤投身于此，尸骸、汗液、泪水与鲜血，化为路标，指引着下一次伟大的献身。</p>
-<p>偶有绿叶落下，偶有养分洒出。归档员们细心收集于此，等待着，直到某一天，散落之物能够再度回归其本源。此处，则为暂存失落典籍、残破片段之地。</p>
-<p>原本，对于残页与无主之书，图书馆不曾在意，直至被冠以乌木之名的归档员提议整理。为了见证心之末路而舍弃人类之身的狂物，其所渴望的，这生长结下于被遗弃之物的果实到底是什么？</p>
-</div>
-<div class="boxright">
-<h3 id="toc2"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:point-out-mistakes">对部分能力的指正</a></li>
-<li><a href="/wanderers:how-to-keep-sth-inside">如何把什么关在里面</a></li>
-<li><a href="/wanderers:the-fifth-god-first-part">五之神，圣言，圣篇之其一</a></li>
-<li><a href="/wanderers:a-handout-for-bug-translation">一份關於蟲文翻譯的講義</a></li>
-<li><a href="/wanderers:story-has-not-been-ended">被中断的故事</a></li>
-<li><a href="/wanderers:the-god-cost">信仰价值几何？</a></li>
-<li><a href="/wanderers:recorded-employee-handbook">摘抄的员工守则</a></li>
-<li><a href="/wanderers:potions-introduction">魔藥學概述</a></li>
-<li><a href="/wanderers:repairment-of-east-ew-qi-420">图书馆东-EW-齐-410号分区塌陷维修报告</a></li>
-<li><a href="/wanderers:neverland">永无乡</a></li>
-<li><a href="/wanderers:dargon-s-mum">≪''龙之祖''纪年编≫</a></li>
-<li><a href="/wanderers:the-verbose-book">瓦俄伯斯，魔咒基础及符号全书</a></li>
-<li><a href="/wanderers:from-the-stars">流亡的美神</a></li>
-<li><a href="/wanderers:the-storry-of-gemini">雙子的故事</a></li>
-<li><a href="/wanderers:my-reality">虚构的现实</a></li>
-<li><a href="/wanderers:past">過往</a></li>
-<li><a href="/wanderers:violet">紫羅蘭</a></li>
-<li><a href="/wanderers:library">圖書館歡迎你</a></li>
-<li><a href="/wanderers:last-flowers">最后的花</a></li>
-<li><a href="/wanderers:ganzhiruoyi">甘之若饴</a></li>
-<li><a href="/wanderers:the-last-one">最后一只龟</a></li>
-<li><a href="/wanderers:say-my-name">《无题》，又名《隐匿于神性与人性之隙的呐喊》</a></li>
-<li><a href="/wanderers:forgottenbeast">遗忘之兽</a></li>
-<li><a href="/wanderers:in-between-silence-and-craze">死寂與狂熱之間</a></li>
-<li><a href="/wanderers:run-run-run">跑啊，跑啊，跑啊</a></li>
-<li><a href="/wanderers:its-note-page">便签</a></li>
-<li><a href="/wanderers:man-made">人造物</a></li>
-<li><a href="/wanderers:blue">蓝色</a></li>
-<li><a href="/wanderers:to-the-sea">向海</a></li>
-<li><a href="/wanderers:highway">高速</a></li>
-<li><a href="/wanderers:red-and-tree">红与树</a></li>
-<li><a href="/wanderers:poemrubbish-zerone">擬幻想遺物附註</a></li>
-<li><a href="/wanderers:the-old-book">旧书</a></li>
-<li><a href="/wanderers:sacrifice">献祭</a></li>
-<li><a href="/wanderers:meeting-my-future">这只是月亮的一个谎言</a></li>
-<li><a href="/wanderers:song-of-the-whale">鲸的歌谣</a></li>
-<li><a href="/wanderers:rotate-sandclock-again">翻转沙漏，再一次</a></li>
-<li><a href="/wanderers:from-cyan-crow-charity-association">来自苍鸦慈善协会</a></li>
-<li><a href="/wanderers:story">一个被遗弃的故事</a></li>
-<li><a href="/wanderers:from-white-sparrow-lost-property-office">来自白雀失物招领处</a></li>
-<li><a href="/wanderers:the-last-boscaria">最后的波斯卡利亚蟹</a></li>
-<li><a href="/wanderers:elevator">电梯</a></li>
-<li><a href="/wanderers:bodhi-sattva">《无题》，又名《一万两千年的银河菩萨》</a></li>
-<li><a href="/wanderers:the-dead-cat">猫死了</a></li>
-<li><a href="/wanderers:pure-white">涂白</a></li>
-<li><a href="/wanderers:the-witch-and-the-cauldron">女巫與鍋釜</a></li>
-<li><a href="/wanderers:whatiexperienced">我见到</a></li>
-<li><a href="/wanderers:the-black-moon">魆魆黑月</a></li>
-<li><a href="/wanderers:deadblackhand">死亡黑手 商场简介</a></li>
-<li><a href="/wanderers:fall-into-the-abyss">坠入深渊</a></li>
-<li><a href="/wanderers:garrison-borderland">戍边行</a></li>
-<li><a href="/wanderers:the-scarecrow-and-the-crow">稻草人与鸦</a></li>
-<li><a href="/wanderers:zero">零</a></li>
-<li><a href="/wanderers:in-dream">如梦似幻</a></li>
-<li><a href="/wanderers:winding">蜿蜒其上</a></li>
-<li><a href="/wanderers:the-mystery-of-gilgamesh">機密！專家都沒發現的記錄，古時烏魯克統治者吉爾伽美什王：老子沒活</a></li>
-<li><a href="/wanderers:my-last-word">无名遗书</a></li>
-<li><a href="/wanderers:herself">以吾之命，换汝江山</a></li>
-<li><a href="/wanderers:ashsong-01">烬歌女伯爵的手记：绝息之森</a></li>
-<li><a href="/wanderers:behemoth-ants">巨兽与蚂蚁</a></li>
-<li><a href="/wanderers:my-soul-pants-for-you">千夜的终末</a></li>
-<li><a href="/wanderers:tristitia-tribus">改渊明诗拟为挽歌二首以怀故友</a></li>
-<li><a href="/wanderers:help-me-with-my-english">於是在岸上你聽到飄搖的吟唱，而經年之後詞句化作風，融入無邊無際的蒼藍中。</a></li>
-<li><a href="/wanderers:homework">我的作业炸了我也不知道我该怎么办不过我好像不用交作业了哈哈哈</a></li>
-<li><a href="/wanderers:ashsong-02">烬歌女伯爵的手记：无之大地</a></li>
-<li><a href="/wanderers:the-beginning-of-the-hourglass">Tick Tock</a></li>
-<li><a href="/wanderers:end-or-return">结束，亦是回归</a></li>
-<li><a href="/wanderers:reset">制作你的“孟婆汤”：如何重置《重生OL》账号</a></li>
-<li><a href="/wanderers:i-saw-a-ghost">新生的鬼</a></li>
-<li><a href="/wanderers:zou-chu-jia-men">走出家门</a></li>
-<li><a href="/wanderers:yd">愚昧且前行</a></li>
-<li><a href="/wanderers:voice-mail">留言信箱</a></li>
-<li><a href="/wanderers:what-color-do-artists-use">艺术家们用什么颜色？</a></li>
-<li><a href="/wanderers:from-flamingo-news">来自赤鹳报社</a></li>
-<li><a href="/wanderers:despair-fable">一篇寓言故事</a></li>
-<li><a href="/wanderers:from-mariana-philharmonic-orchestra">来自马里亚纳乐团</a></li>
-<li><a href="/wanderers:zhongsi">终死</a></li>
-<li><a href="/wanderers:journey-the-child-of-border">我自边境而来</a></li>
-<li><a href="/wanderers:hz">一切都将沉入水中</a></li>
-<li><a href="/wanderers:torinouta">智鸟通用语的诞生、发展与困境</a></li>
-<li><a href="/wanderers:lexicon-noricst">诺莱斯志异</a></li>
-<li><a href="/wanderers:yi-so-lai-zi-yi-xiang-de-ge-yao">一首来自异乡的歌谣</a></li>
-<li><a href="/wanderers:blind-obedience">偶像</a></li>
-<li><a href="/wanderers:masses">小丑</a></li>
-<li><a href="/wanderers:woaiwodeguxiang">我爱我的故乡</a></li>
-<li><a href="/wanderers:diao-si-de-shi">鲁泽尔男爵的诗笺</a></li>
-<li><a href="/wanderers:the-monument">纪念碑</a></li>
-<li><a href="/wanderers:b-ta-ta-ta-ta-ta">无形之梦，幻灭救赎</a></li>
-<li><a href="/wanderers:not-with-the-housekeeper">并不是与女管家的交易</a></li>
-<li><a href="/wanderers:zaifengzhong">在风中</a></li>
-<li><a href="/wanderers:eternal-night">长夜</a></li>
-<li><a href="/wanderers:epitaph">尸体旅游指南</a></li>
-<li><a href="/wanderers:moonlight-flower">流光花海</a></li>
-<li><a href="/wanderers:ohhhh">过客</a></li>
-<li><a href="/wanderers:lvjingjing">绿境</a></li>
-<li><a href="/wanderers:hentaiiiiii">湖水，天空，魔鬼的三个新娘。</a></li>
-<li><a href="/wanderers:trees">护林者颂曲</a></li>
-<li><a href="/wanderers:welcome-home">风雨夜归人</a></li>
-<li><a href="/wanderers:finally-i-fused-with-her">我终于和她融为一体</a></li>
-<li><a href="/wanderers:alligator">我等迷乱于狂梦</a></li>
-</ul>
-
-    
-    <div class="pager"><span class="pager-no">page 1 of 2</span><span class="current">1</span><span class="target"><a href="/wanderers:the-library-cn/p/2">2</a></span><span class="target"><a href="/wanderers:the-library-cn/p/2">next &raquo;</a></span></div>
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc3"><span>灾兽梦语</span></h2>
-<hr />
-<p>《灾兽梦语》是一本具有特色而风格多变的文集，文章通常包括以幽魂视角对世界最深处的考察和种族特有的梦语抄录。</p>
-<p>作者大学者Airalin与大学者Dragostea是两位具有至亲血脉的赫尔曼灾兽，类似于图书馆中聚集的大量灾兽被放逐者，是语言风格和化蝶方面的专家。两位学者赖以生长的时间线并非同一条，而是近乎逆方向平行的两条，这意味着在一位学者已然老去的某刻，另一位已变成孩童。仰赖图书馆内部空间的稳定性，两位学者得以在同一处阅读和写作。有心的来访者可以在图书馆深处的某个冰砖制成的别墅中找到他们，其中一位在进食、阅读和写作，而另一位则做出完全相反的行为。辨认两位学者被证实是非常困难的，但你可以根据鸟翼状的背部附加物认出当前年龄较大的姐姐Airalin，而有着蜻蜓翅膀状背部附加物的则是弟弟Dragostea。</p>
-</div>
-<div class="boxright">
-<h3 id="toc4"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:7-days">七日死</a></li>
-<li><a href="/wanderers:i-see">我明了</a></li>
-<li><a href="/wanderers:tales-of-boots">靴子的传说</a></li>
-<li><a href="/wanderers:sand">守夜人沙漠</a></li>
-<li><a href="/wanderers:sea">无声之海</a></li>
-<li><a href="/wanderers:lentlily">野水仙</a></li>
-<li><a href="/wanderers:hydrangea">紫阳花</a></li>
-<li><a href="/wanderers:colorful-future">绚烂人生</a></li>
-<li><a href="/wanderers:grey-rain">灰色的雨</a></li>
-<li><a href="/wanderers:about-my-life">关于鬼神</a></li>
-<li><a href="/wanderers:night-cab">深夜出租</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc5"><span>梦之谏言</span></h2>
-<hr />
-<p>时间不偏不倚，余者皆为曲流。此书记录着散落在遗忘中的故事，作为梦的谏言警示索求知识之人。于阅读时，读者自身的故事也被记录其中。</p>
-<p>作者Δελφοί，又称Axelera，Axla，以梦神的形态寄居于图书馆时间线的中央。为了融入时间每一处的梦境，Axla没有确定的形态，但他较为偏爱的外形为漆黑羽毛的游隼。</p>
-</div>
-<div class="boxright">
-<h3 id="toc6"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:hes-always-nobody">无信之人</a></li>
-<li><a href="/wanderers:king-and-evil">国王与恶魔</a></li>
-<li><a href="/wanderers:the-end">结局</a></li>
-<li><a href="/wanderers:greed-and-king">死</a></li>
-<li><a href="/wanderers:new-qishilu">新启示录</a></li>
-<li><a href="/wanderers:new-idealism">教会</a></li>
-<li><a href="/wanderers:ant-and-butterfly">蚁聚南柯，蝶绕黄粱</a></li>
-<li><a href="/wanderers:lunarmare">宁静海</a></li>
-<li><a href="/wanderers:whalefall">鲸落</a></li>
-<li><a href="/wanderers:neeee">等待流星坠落</a></li>
-<li><a href="/wanderers:cunning-god">狡猾的祂</a></li>
-<li><a href="/wanderers:hashiqi">姆们的寓言</a></li>
-<li><a href="/wanderers:insomnia">当我们深陷夜的沼泽</a></li>
-<li><a href="/wanderers:nipton">出尼普顿记</a></li>
-<li><a href="/wanderers:dream-strayer">dream strayer</a></li>
-<li><a href="/wanderers:carlos6">于是他从后门绕出别墅，将画作扔进了垃圾桶。</a></li>
-<li><a href="/wanderers:fading-in-the-dark">离去的夜</a></li>
-<li><a href="/wanderers:falling-down-in-the-sea">下坠</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc7"><span>欢声笑语</span></h2>
-<hr />
-<p>与历史悠久且臭名昭著的同行Planasthai不同，“欢声笑语”新闻社致力且得心应手于中国地区各个组织的二三事（绝对不是因为这一领域未曾被开发）。近十几年来，由于名为“SCP基金会”的狱卒介入该地区，几度濒临破产的《欢声笑语》再获新生——感谢狱卒与其同行组织，他们的斗争故事让新闻社终于有料了！现在，《欢声笑语》在中国地区有极大的影响力，每月都有大量读者寄来信件表达热情（包括但不仅限于银河联邦的传教单、圣克里斯汀娜书院的抗议信、OB传媒的律师函等）。</p>
-</div>
-<div class="boxright">
-<h3 id="toc8"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:happy-daily-news-one">《欢声笑语》每日新闻（第#^$#@期）</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc9"><span>灰烬残页</span></h2>
-<hr />
-<p>图书馆当中的藏书如宇宙中的星辰一般繁多，然而图书馆外依然散落着大量由其他超自然个体所写下的故事。它们或者已经和作者一同消失在历史的长河之中，或者被当作邪典和禁书被付之一炬。所幸的是，<a href="/nirvana-hub">重生者</a>的领袖之一，Indus，历尽辛苦保存下了其中的一部分，并无私地将这些珍贵的残篇交由图书馆保管。</p>
-<p>这些残篇记述了散居于地球上的超自然个体的所见所闻，以及<a href="/about-the-thrumuvethur">活死人</a>与重生者那尘封的历史。Indus先生将这些残篇交予图书馆时，只留下了一句话：</p>
-<p>“历史永远不应被忘却。”</p>
-</div>
-<div class="boxright">
-<h3 id="toc10"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:fairy-dance">Dulljah</a></li>
-<li><a href="/wanderers:dead-souls">死魂曲</a></li>
-<li><a href="/wanderers:mad-words">于此深渊之底，咏唱吾之永恒</a></li>
-<li><a href="/wanderers:history-start">秘史：起始</a></li>
-<li><a href="/wanderers:inu-no-uta">犬之歌</a></li>
-<li><a href="/wanderers:fearless">The Fearless</a></li>
-<li><a href="/wanderers:kitty">猫猫</a></li>
-<li><a href="/wanderers:dream-of-gears">送进梦想的温床</a></li>
-<li><a href="/wanderers:little-red-riding-hood">小红帽</a></li>
-<li><a href="/wanderers:underwater-soul-coffin">海中魂</a></li>
-<li><a href="/wanderers:tomb">墓</a></li>
-<li><a href="/wanderers:looking-for-yang-feng">寻找杨枫</a></li>
-<li><a href="/wanderers:basilisk">Basilisk</a></li>
-<li><a href="/wanderers:tandava">坦达瓦</a></li>
-<li><a href="/wanderers:alice">镜像爱丽丝</a></li>
-<li><a href="/wanderers:flowers">伊娃着火了</a></li>
-<li><a href="/wanderers:sherley">雪离</a></li>
-<li><a href="/wanderers:the-death-of-sherley">雪离之死</a></li>
-<li><a href="/wanderers:mirrorand-confused-person">迷茫者與鏡</a></li>
-<li><a href="/wanderers:songs-of-phoenix">凰之歌</a></li>
-<li><a href="/wanderers:for-my-friends">星之尘</a></li>
-<li><a href="/wanderers:the-serpent-who-hold-a-flower-in-mouth">外典：衔花之蛇</a></li>
-<li><a href="/wanderers:the-dragon">有龙</a></li>
-<li><a href="/wanderers:the-serpent-s-edification">外典：蛇之箴言</a></li>
-<li><a href="/wanderers:sorry-yoghurt">制作酸奶的注意事项</a></li>
-<li><a href="/wanderers:the-standard-bearer">旗手</a></li>
-<li><a href="/wanderers:2-7">2-7</a></li>
-<li><a href="/wanderers:unknown-uncompletely">不著名星际贡献者不完全记录 第40章与书后附言</a></li>
-<li><a href="/wanderers:nirvana-blood-lineage">在Nirvana之前，在屠戮之后</a></li>
-<li><a href="/wanderers:knight-epic">克爾德葛斯之詩</a></li>
-<li><a href="/wanderers:564245f">来碗面吧</a></li>
-<li><a href="/wanderers:the-luo-3">卢思恩</a></li>
-<li><a href="/wanderers:memories-seaside">意识海</a></li>
-<li><a href="/wanderers:eap">TmV3JTIwV2F5</a></li>
-<li><a href="/wanderers:why-is-it">安提戈涅的死</a></li>
-<li><a href="/wanderers:ljzljz">走出时间的李家庄</a></li>
-<li><a href="/wanderers:eye">眼</a></li>
-<li><a href="/wanderers:beautiful-future">美好未来</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc11"><span>游人志异</span></h2>
-<hr />
-<p>世间故事如繁花，过去的图书馆喜好那些奇花异草并把它们放到自己的花瓶里。<br />
-如今小花野草在大地上活跃，他们有自己的信仰，实现自己的愿望。图书馆忠实的行走在野花丛里收集纪录新的篇章。</p>
-<p>《游人志异》，原名《吟游诗人见闻录》<br />
-图书馆在世间的行走们记录下不同的人与事，集结成册，在大地上传播它们。</p>
-<p>这些笔记从行走们手中收回时，他们说：<br />
-“人类与冷漠的超智慧体有所不同，正因为如此，人类的故事也得以成为新的史诗。”</p>
-</div>
-<div class="boxright">
-<h3 id="toc12"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:a-man-chasing-a-dragon">逐龙者</a></li>
-<li><a href="/wanderers:forget-himself">那王、其四</a></li>
-<li><a href="/wanderers:face-of-preface">序;续</a></li>
-<li><a href="/wanderers:c2h5oh">我想她了</a></li>
-<li><a href="/wanderers:riluo">日落</a></li>
-<li><a href="/wanderers:in-coffin">我等你们回家</a></li>
-<li><a href="/wanderers:seeker">追寻者</a></li>
-<li><a href="/wanderers:way">路，行路人</a></li>
-<li><a href="/wanderers:doll">洋娃娃</a></li>
-<li><a href="/wanderers:sushengzhizhu">复生棺</a></li>
-<li><a href="/wanderers:sumireko">七色堇</a></li>
-<li><a href="/wanderers:watch-the-night">望太清</a></li>
-<li><a href="/wanderers:mourn-china">国悼</a></li>
-<li><a href="/wanderers:return-to-the-sea">归海</a></li>
-<li><a href="/wanderers:wo-shi-shi">捕鲛者传</a></li>
-<li><a href="/wanderers:renyan">人宴</a></li>
-<li><a href="/wanderers:under-the-orbit">星轨之下</a></li>
-<li><a href="/wanderers:the-song">吟游诗人</a></li>
-<li><a href="/wanderers:the-song2">吟游诗人 其二</a></li>
-<li><a href="/wanderers:the-song3">吟游诗人 其三</a></li>
-<li><a href="/wanderers:eateateatttttttrttt">雾锁幽城，幻真之殇</a></li>
-<li><a href="/wanderers:leave">离去</a></li>
-<li><a href="/wanderers:the-song4">吟游诗人 其四</a></li>
-<li><a href="/wanderers:the-song5">吟游诗人 其五</a></li>
-<li><a href="/wanderers:hshhshshsh">确乎存在过的我的浪漫</a></li>
-<li><a href="/wanderers:dead-flower">再见</a></li>
-<li><a href="/wanderers:red-dress">红嫁衣</a></li>
-<li><a href="/wanderers:deserted-song">荒 歌</a></li>
-<li><a href="/wanderers:the-song6">吟游诗人 其六</a></li>
-<li><a href="/wanderers:paranoia">妄想症</a></li>
-<li><a href="/wanderers:the-madness">狂人旧篇</a></li>
-<li><a href="/wanderers:a-drowned-dragon">溺水的龙</a></li>
-<li><a href="/wanderers:the-song7">吟游诗人 其七</a></li>
-<li><a href="/wanderers:poem1">颂诗歌者其一：初生</a></li>
-<li><a href="/wanderers:the-song8">吟游诗人 其八</a></li>
-<li><a href="/wanderers:poem2">颂诗歌者其二：战争</a></li>
-<li><a href="/wanderers:poem3">颂诗歌者其三：黎明</a></li>
-<li><a href="/wanderers:earthworms">Earthworms</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<p><a id="u-Etinjat" href=""></a></p>
-<div class="boxbook">
-<div class="boxleft" style="font-family: 'Microsoft YaHei';">
-<h2 id="toc13"><span><span style="font-family:kaiti, '华文楷体';">琅嬛福地藏书阁</span></span></h2>
-<hr />
-<p>曲水流远，何日滥觞？万界游子，时聚彼方。<br />
-羽杯传永，酒蕴沧沧。所闻所感，莫隐莽荒。</p>
-<p>或怀馨漫步，歌浮生之趣；或谪居异乡，悲秋之回风。时驾云龙而上，遨游太虚；时驻足于道，侧闻黎民哀乐之声。华赋合卷，采风为章；录史成典，杂言若霜。悠悠岁月，俱是无尽藏海；浩浩往来，齐作群星高台。琅嬛福地，藏书阁立，万道而俱同流矣。</p>
-<p>偶有二三有缘之人，入曲径而迷途。其行未远，忽闻一老翁问询曰：“书读几何？”个中对答者，或心怀大志，或欲广博，或愿叙天下之事，烛心古师乃云：</p>
-<p>“迁客骚人，何意徘徊？<br />
-但执一灯入室，而灵台洞明哉。”</p>
-</div>
-<div class="boxright">
-<h3 id="toc14"><span><span style="font-family: '仿宋';font-weight: 600;">收藏摘录</span></span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-poem-that-eternally-wandering-in-paradise-lost">诗钞——乐土长歌行</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-gospel-of-lotus-that-bloom-in-the-wonderland">净莲宝卷——花开福地劝民序歌</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-ballad-that-poor-man">国风——下民</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-gospel-of-lightfeather-that-the-lord-bright">辉羽宝卷——圣教会苏生明王偈</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-ballad-that-the-river">国风——河水</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-ode-of-pastafarianism-that-the-true-genesis">原颂——太初，又称，无上至真纯灵造物煮飞天面条创世福音歌</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-poem-in-dust-that-xuanpin">诗钞——玄牝</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-ballad-that-sunset">国风——日薄</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-ring-that-pavilion-farewell">曲音——长亭四叠</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-scripture-of-ky-that-jin-gong">步虚列仙传——西方行者金公录</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-travel-notes-of-qingming">游记——清明岿阳行</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-chuci-that-the-goddess-in-cloudydream">楚辞——云梦仙</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:rolling-moon">诗钞——悠悠霜玉轮</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:dying-world">诗钞——宴天行</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:broken-heart">诗钞——破碎之心</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:fantasy-come-to-reality">诗钞——拟幻想遗物其三 并序附注</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:zhulu">长歌行——逐鹿何遑遑</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-magic-code-that-conquer-the-black-dragon">岿阳谶——鹿尘子伏龙还丹诀</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:chun">岿阳诀 —— 碧游春</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-court-of-the-hanged-king">愚者史诗 —— 缢王深殿里</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-fool-and-the-fools">愚者漫吟游</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:gone-with-the-winds">小雅 · 悠颸</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:spidersss">诗钞——蛛颂</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:the-seven-preciousness-lection-of-xu-empyrean">虚皇衍帝说无量绎梦万天七法妙宝镇域外伪魔经</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:chinese-santa-claus">步虚列仙传续编：北极仙翁礼宝丈人</a></span></li>
-<li><span style="font-family: '思源宋体 CN'; font-size: 110%;"><a href="/wanderers:eulogy-for-yuxuan">玉成山人文集——祭郁玄仙君羽化文</a></span></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc15"><span>恶性裂痕</span></h2>
-<hr />
-<p>漆黑的夜，笼罩在这片人类开凿的天地；同时，点点微弱的火光熄灭，只留下寂静与黑暗。<br />
-故事们不知从何出现，蜷缩在人类的阴影中，记录着残留的人性与黑暗，与周围的虚空诉说着。而图书馆将它们汇集、保留。</p>
-<p>“所有人在自己的面前永远无法撒谎，他们将直面自己的黑暗。”</p>
-<p>《恶性裂痕》，图书馆将人类背面所发掘的黑暗凝聚，用以弥补世界的空白，挽救破裂的人性。<br />
-“有人看见了自己的心脏，有人看见了自己的骨骼，有人什么也没有看见。”故事们被汇集时说。</p>
-</div>
-<div class="boxright">
-<h3 id="toc16"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:professed-love-of-what-one-actually-fears">叶公好龙</a></li>
-<li><a href="/wanderers:bet">赌注</a></li>
-<li><a href="/wanderers:people-who-watch-the-scenery">他一直趴在窗边看风景，现在，他的脑袋掉了，看不成风景了</a></li>
-<li><a href="/wanderers:fomalhaut">书</a></li>
-<li><a href="/wanderers:thulhu-one">哈克里奈提斯—昔日</a></li>
-<li><a href="/wanderers:road">走在路上，走在心上</a></li>
-<li><a href="/wanderers:xiang-cheng-kai-fa-piao">香城开发票，兼代办证、代购产品、代写论文</a></li>
-<li><a href="/wanderers:oldclock">爷爷的嘀嗒钟</a></li>
-<li><a href="/wanderers:drama-1">不幸</a></li>
-<li><a href="/wanderers:drama-2">敌基督者</a></li>
-<li><a href="/wanderers:such-a-wonderful-day">到深蓝中去吧</a></li>
-<li><a href="/wanderers:behind-the-glasses">镜外</a></li>
-<li><a href="/wanderers:kuangdang">哐当的一声，有人睡着了，然后又哐当一声，梦醒了</a></li>
-<li><a href="/wanderers:queen-spade-s-rhymes-01">黑桃皇后童谣集：神奇竖林大冒险</a></li>
-<li><a href="/wanderers:two-steps-from-light">我与光的邂逅</a></li>
-<li><a href="/wanderers:how-to-kill-a-child">幼体屠杀演练</a></li>
-<li><a href="/wanderers:commonbird">春黄菊手抄</a></li>
-<li><a href="/wanderers:zi">正义</a></li>
-<li><a href="/wanderers:grandma">祖母</a></li>
-<li><a href="/wanderers:ln">荒谬的梦</a></li>
-<li><a href="/wanderers:loaner">讨债</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc17"><span><a href="/wanderers:travellers-book-hub">旅行者之书</a></span></h2>
-<hr />
-<p>有人找到了在世界之间旅行的方法。</p>
-<p>这些云游四方的人，我们暂且称他们为“旅行者”。只不过他们所涉足的地方并非常人理解中的异国他乡，而是千万平行宇宙中的彼处。他们的目的多为游历，通过观察在不同规则支撑下运行的世界而拓展自身的知识；也有人只是感到过往的世界无处容身，从而前往寻觅一片新的乐土。</p>
-<p>总之，旅行者并无固定的队伍或组织，只是对一类人的统称。而有好事者将他们的游记汇编成册，以供后来人参阅。这些断章残篇，便被非正式地称为“旅行者之书”。</p>
-</div>
-<div class="boxright">
-<h3 id="toc18"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:travellers-book-succubus">第三卷，世界42，残页1：魅魔</a></li>
-<li><a href="/wanderers:travellers-book-the-little-monster">第三卷，世界?，残页1：小水怪</a></li>
-<li><a href="/wanderers:travellers-book-end-of-the-world">第三卷，世界8，残页2：终焉</a></li>
-<li><a href="/wanderers:travellers-book-magic-and-insight">第二卷，世界76，第1页：魔法与洞察</a></li>
-<li><a href="/wanderers:travellers-book-the-exhibition">第二卷，中间地带，断章1：世界博览会</a></li>
-<li><a href="/wanderers:travellers-book-the-birds-shall-fly">鸟儿终将飞翔</a></li>
-<li><a href="/wanderers:travellers-book-the-outcast">术士阿德里安的日记</a></li>
-<li><a href="/wanderers:lemon-slice">柠檬切片</a></li>
-<li><a href="/wanderers:book-burning">末日收集：焚书</a></li>
-<li><a href="/wanderers:travellers-book-the-tower">高塔竞技场的邀请函</a></li>
-<li><a href="/wanderers:nomoh-sar-velores1">Nomoh Sar宇宙传说合集：商人与暴风雪</a></li>
-<li><a href="/wanderers:travellers-book-city-of-a-thousand-city">第二卷，世界77，节选：千城之城</a></li>
-<li><a href="/wanderers:rks-journey">Kaze的回忆录</a></li>
-<li><a href="/wanderers:outworlder">第二卷，世界79，序章：局外人</a></li>
-<li><a href="/wanderers:travellers-book-star-of-circle">第二卷，世界45，第1页：圆之星</a></li>
-<li><a href="/wanderers:travellersbook-adherents-of-a-former-dynasty">遗民</a></li>
-<li><a href="/wanderers:shsbjzs">天涯酒馆</a></li>
-<li><a href="/wanderers:kksk">困兽之斗</a></li>
-<li><a href="/wanderers:the-luo-7">潘多的旅行日志（其一）</a></li>
-<li><a href="/wanderers:the-tianya-pavilion">天涯阁记</a></li>
-<li><a href="/wanderers:but-they-can-wake-up">但他们会醒来</a></li>
-<li><a href="/wanderers:betrayer-of-birthplace">陌生猎人的记忆</a></li>
-<li><a href="/wanderers:travellers-book-fools">节选两则</a></li>
-<li><a href="/wanderers:crazy-tree">疯狂的树</a></li>
-<li><a href="/wanderers:armageddon-reverie">第三卷，世界35，残页2：末路随笔</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc19"><span>蜂巢之下</span></h2>
-<hr />
-<p>大自然撬开古老的地质层后，留下的是谜题全貌，深潜者二号传输的画面令无数专家叹为观止：断断续续的音频内，能依稀看见纯白色的金属环笼罩着一块褐色立方体。“环”早已停摆，斜跨着几何体，镶嵌在周围岩壁。</p>
-<p>水肺单元模块随着气泵逐渐闭合，他站在巨型装甲的顶端。<br />
-我们曾活过，直至天罚降临，新的一轮开始，那便是你们。<br />
-埃里克曾成为我们装甲，我们也曾是埃里克。<br />
-终将分化，这是世界。<br />
-他与它矗立于海平面之上。<br />
-未曾到来，暗流仍在回旋。<br />
-涌动，消失。<br />
-这将是宣告。</p>
-<p>他的肉体逃离了蜂巢，回归于残损的躯壳。<br />
-二零二零年四月六日，空白的一页从未被人类谱写。<br />
-大气层的悲鸣撼动地球。<br />
-一切从这里终结，一切又从这里开始。</p>
-<p>第三太阳纪下所苏醒的文明呼唤着旧日尖啸，人类于蜂巢之下，在宿命间徘徊。</p>
-</div>
-<div class="boxright">
-<h3 id="toc20"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:yutu">夏与他与我，曾一同逝去</a></li>
-<li><a href="/wanderers:yutuu">一切从这里终结，一切又从这里开始</a></li>
-<li><a href="/wanderers:yutuuu">雪仍在下，从未停息</a></li>
-<li><a href="/wanderers:output">外部虚无</a></li>
-<li><a href="/wanderers:yutuuuu">或许，是宿命</a></li>
-<li><a href="/wanderers:descending-order">拟似然</a></li>
-<li><a href="/wanderers:prepartum-regression">觐见神祗</a></li>
-<li><a href="/wanderers:mortality">后果</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc21"><span>妖精们</span></h2>
-<hr />
-<p>此地的藏书由众多路过的妖精们整理而成。她们中的多数行走于不同的时间与维度，而图书馆是这些妖精的命运间唯一的交汇点。</p>
-<p>在诸多智慧文明的普遍观念中，妖精是位面的讲述人，少女的旅伴以及爱与美的化身。妖精们整理的故事，也常常以少女为主角，其情节也往往带有奇幻的瑰丽与彻骨的浪漫。</p>
-</div>
-<div class="boxright">
-<h3 id="toc22"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:lance">苏斯之王的命运</a></li>
-<li><a href="/wanderers:prophet">她看见</a></li>
-<li><a href="/wanderers:fae">妖精交往指南</a></li>
-<li><a href="/wanderers:sealily">羽星</a></li>
-<li><a href="/wanderers:war">信札抄录</a></li>
-<li><a href="/wanderers:the-city-of-cicada">蝉鸣之城</a></li>
-<li><a href="/wanderers:lappland">雪三篇</a></li>
-<li><a href="/wanderers:duel">决斗</a></li>
-<li><a href="/wanderers:deepcolor">海色（虫三篇其一）</a></li>
-<li><a href="/wanderers:tonghua">DLC：Fairy Tales</a></li>
-<li><a href="/wanderers:palefire">月牙儿，又名微暗的火，白银时代</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-<hr />
-<div class="boxbook">
-<div class="boxleft">
-<h2 id="toc23"><span><a href="/wanderers:asagao">朝颜文学报</a></span></h2>
-<hr />
-<p>朝颜文学报是发行于被放逐者图书馆中的文学刊物。即使在图书馆，也没人知道朝颜文学报所谓的编辑部在哪里，人们对它的了解仅限于那句简短的精神宣言——“做风的君王”。</p>
-<p>各个宇宙、各个位面的学者、作家和评论家，都可能会在某一天收到一封署名为“朝颜文学报编辑部”的约稿函，报酬则是这位受邀者当时最需要的东西。有时是金钱、有时是一瓶淡水、有时是一朵云彩、有时是做梦的自由、有时是亿万光年外一颗超新星的爆发。</p>
-<p>朝颜文学报从不强人所难，只会委托受邀者写下他当时能够在截稿期前写出来的内容和体量。拖稿和拒绝约稿都会造成相当严重的后果，但似乎从未有人因此而死。只是遭遇过这种“后果”的人，都对此噤若寒蝉。</p>
-<p>朝颜文学报的刊载范围非常广泛，与文学、美术、音乐、电影乃至游戏相关的内容都有涉猎，也并不排斥历史和哲学相关的稿件。总体来说，朝颜文学报聚焦于文学、历史和哲学，试图创造出一个远离世俗骚扰的文化乌托邦。</p>
-</div>
-<div class="boxright">
-<h3 id="toc24"><span>收藏摘录</span></h3>
-<div class="list-pages-box">    
-
-<ul>
-<li><a href="/wanderers:yasuharasuzu-no-tameni">《朝颜文学报特刊》：评述霍尔特•塞尔柱之作品《无定形的玫瑰》，并移译巴安思诺尔特斯诗四首</a></li>
-<li><a href="/wanderers:yasuharasuzu-special-wizard-summon-flesh">《朝颜文学报特刊》：走进《弥漫的肉》与它的作者盖盾·哈雷尔</a></li>
-<li><a href="/wanderers:yasuharasuzu-special-galgame-in-the-galgame">《朝颜文学报特刊》：在夏穗渐青时，破碎的现实也不能确定归于何方——TAVG游戏《昨日的现实在指数崩坏》剧情赏析</a></li>
-<li><a href="/wanderers:zhejichensha-103">《朝颜文学报特刊》：折戟沉沙第103期 麦尔彦之梦——阿黑赖哈里发国的乌托邦实验</a></li>
-<li><a href="/wanderers:moksha-s-booklist">《朝颜文学报特刊》纪元书单推荐——纪念启迪月及摩沙文学奖600周年</a></li>
-<li><a href="/wanderers:asagao">《朝颜文学报》发刊词</a></li>
-</ul>
-
-    
-    
-    
-    </div></div>
-</div>
-</div>
-<hr />
-<div class="boxmain">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">写作指导</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">隐藏教程</a></div>
-<div class="collapsible-block-content">
-<h3 id="toc25"><span>基本要求</span></h3>
-<ul>
-<li>和基金会作品相同，图书馆原创文章将在低于（或等于）-2时由管理员开启删帖流程，详情参考<a href="/deletions-guide">删帖指导</a>。</li>
-<li>目前图书馆原创区采取书籍列表由管理员制定的模式。</li>
-<li>为原创作品添加标签时，注意必须添加“wanderers”、“原创”及所在书籍的标签，除此之外，若欲添加图书馆专属特性标签，可参考<a href="/tag-guide">标签指导</a>中的图书馆分页。</li>
-<li>若作者希望开辟新书籍，需拥有至少3篇以上拥有<strong><em>明确</em></strong>且<strong><em>统一</em></strong>世界观或风格的合格作品（+10及以上），并确保自己会继续更新该系列，随后私信管理人员并等待批复。</li>
-<li>若作者希望将自己的作品放入自己的板块，在没有达到要求前，可将作品暂时存放至《苍树与血》。《苍树与血》没有统一的写作要求，毕竟如同说明一样，为失落典籍之暂存处。</li>
-<li>需要申请典籍或有相关事务，请私信任一网站版主或管理人员，由其处理。</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-                    </div>
-
-                            
-            <!-- wikidot_bottom_300x250 -->
-<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
-<script type='text/javascript'>
-nads.createAd('wad-scp-wiki-cn-below-content', {
-  "refreshLimit": 10,
-  "refreshTime": 83,
-  "sizes": [ [ 300, 250 ] ],
-  "report": {
-    "enabled": true,
-    "wording": "Report Ad",
-    "position": "bottom-right"
-  }
-  });
-</script>
-        
-    
-
-                    
-
-
-
-                    
-                        <div class="page-tags">
-                            <span>
-                                <a href="/system:page-tags/tag/wanderers#pages">wanderers</a><a href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83#pages">中心</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a>
-                            </span>
-                        </div>
-                    
-
-                    <div id="page-info-break"></div>
-                    
-                        <div id="page-options-container">
-                            <div id="page-info">页面版本: 85, 最后编辑于: <span class="odate time_1608092804 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">16 Dec 2020 04:26</span></div>
-            <div id="page-options-bottom"  class="page-options-bottom">
-            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+27</span>)</a>
-<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-3994581/wanderers:the-library-cn" class="btn btn-default" id="discuss-button">讨论 (41)</a>
-<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
-<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
-<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
-<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
-<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
-</div>
-<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
-    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
-    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
-    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
-    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
-    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
-    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
-    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
-    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
-</div>
-<div id="page-options-area-bottom">
-</div>
-
-                        </div>
-                    
-                    <div id="action-area" style="display: none;"></div>
-                </div>
-            </div>
-            
-            
-            
-            <div id="footer" style="display: block; visibility: visible;">
-                <div class="options" style="display: block; visibility: visible;">
-    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
-    &nbsp;|
-    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
-    &nbsp;|
-    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
-</div>
-基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
-            </div>
-            
-                <div id="license-area" class="license-area">
-                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
-                </div>
-            
-            
-            
-
-
-
-            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
-            
-            
-            
-            
-                <div id="footer-bar">
-  <div>
-     </div>
-  <h2>其它有趣的网站</h2>
-  
-  <div class="units">
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://scp-yerko-4.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-yerko-4.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://scp-yerko-4.wikidot.com">Yerko&#039;s Sandbox IV</a></h3>
-            <div class="desc">          
-              ¿Cuatro ya? LeL
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://demonssouls.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/demonssouls.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://demonssouls.wikidot.com">Demon&#039;s Souls English Wiki</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://scpexplained.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpexplained.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://scpexplained.wikidot.com">SCP Explained</a></h3>
-            <div class="desc">          
-              Simplify, Condense, Paraphrase
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://norron.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/norron.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://norron.wikidot.com">WikiNorron</a></h3>
-            <div class="desc">          
-              Almost as good as the guide, maybe better!
-            </div>
-          </div>
-        </div>
-        </div>
-  </div>
-
-            
-        </div>
-        
-    </div>
-<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
-<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
-<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
-</div>
-
-
-
-
-</div>
-<div id="dummy-ondomready-block" style="display: none;" ></div>
-    <!-- Google Analytics load -->
-    <script type="text/javascript">
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <!-- Quantcast -->
-    <script type="text/javascript">
-    _qoptions={
-        qacct:"p-edL3gsnUjJzw-"
-    };
-    (function() {
-        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
-        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
-    })();
-    </script>
-    <noscript>
-        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
-    </noscript>
-
-
-
-
-<div id="page-options-bottom-tips" style="display: none;">
-    <div id="edit-button-hovertip">
-        请点此编辑本页内容。    </div>
-</div>
-<div id="page-options-bottom-2-tips"  style="display: none;">
-    <div id="edit-sections-button-hovertip">
-        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
-    <div id="edit-append-button-hovertip">
-        在不编辑整个页面源代码的情况下添加内容。    </div>
-    <div id="history-button-hovertip">
-        看看本页过去是如何沿革的。    </div>
-    <div id="discuss-button-hovertip">
-        若您想要讨论本页内容 - 这是最简单的方法。    </div>
-    <div id="files-button-hovertip">
-        检视并管理本页附件。    </div>
-    <div id="site-tools-button-hovertip">
-        管理网站的实用工具。    </div>
-    <div id="backlinks-button-hovertip">
-        检视链接至本页或引用本页的页面。    </div>
-    <div id="rename-move-button-hovertip">
-        变更页面名称（及URL 位址，或许会影响分类）。    </div>
-    <div id="view-source-button-hovertip">
-        在不编辑的情形下检视维基原始码。    </div>
-    <div id="parent-page-button-hovertip">  
-        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
-            <div id="abuse-report-button-hovertip">
-            向管理员举报本页有令人反感的内容。        </div>
-        <div id="bug-report-button-hovertip">
-            事情不如预期？看看您可以做些什么。        </div>
-        <div id="wikidot-help-button-hovertip">
-            一般的 Wikidot.com 文件与说明。        </div>
-        <div id="wikidot-tos-button-hovertip">
-            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
-        <div id="wikidot-privacy-button-hovertip">
-            Wikidot.com 隐私政策。          
-        </div>
-    </div>
-</body>
-</html>
+/* mobile */
+
+@media only screen and (max-width: 768px) {
+    #header h1 a,
+    #header h2 span {
+        margin-left: 7.75rem;
+        margin-top: 0.35em;
+    }
+
+    #header h1 a {
+        line-height: 1;
+    }
+
+    #header h2 span {
+        margin-top: calc(5.5rem + var(--offset-from-page-top));
+    }
+
+    div#extrac-div-1 {
+        background-image: url(http://wanderers-sandbox.wikidot.com/local--files/component%3Awanderers-station/space.png);
+        background-size: 31.250rem;
+        z-index: 3;
+    }
+
+    body {
+        background:rgba(var(--swatch-background), 1);
+    }
+
+    #main-content {
+        margin-left: inherit;
+    }
+
+    div#page-options-bottom {
+        width: 90%;
+    }
+}

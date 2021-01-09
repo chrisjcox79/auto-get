@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<img id="pic" src="http://scp-wiki.wdfiles.com/local--files/a-sunny-day-at-the-clockwork-gallery/TIW%2001.jpg" width="150px" alt="" class="image" />
+<script type="text/javascript">
+var firstUrl = "http://scp-wiki.wdfiles.com/local--files/a-sunny-day-at-the-clockwork-gallery/TIW%2001.jpg";
+var secondUrl = "http://scp-wiki.wdfiles.com/local--files/a-sunny-day-at-the-clockwork-gallery/TIW%2002.jpg";
+
+new Image().src = firstUrl;
+
+new Image().src = secondUrl;
+
+window.onload = function(){
+
+var org = window.document.getElementById('pic');
+org.src = firstUrl;
+org.onmouseover = function(ev){
+this.src = secondUrl;
+}
+org.onmouseout = function(ev){
+this.src = firstUrl;
+}
+
+ org.addEventListener('touchstart',org.onmouseover,false);
+ org.addEventListener('touchend',org.onmouseout,false); 
+}
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

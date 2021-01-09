@@ -1,663 +1,278 @@
-/*
-    SCP Sigma 9
-    [2014 Wikidot Theme]
-    Created for the SCP Foundation by Aelanna
-    Edited for SCP基金会 by MScarlet and Devanos
-    re-edited for Nirvana by Izsac
-    re-edited for zs by AIeditor059,the code is based on Nirvana.Thanks to Izsac's help.Thanks to bread.I could not get this wonderful logo without her(its) ;) help.
-*/
- 
-#content-wrap {
-    position: relative;
-    margin: 2em auto 0;
-    max-width: 1040px;
-    min-height:1300px;
-    height: auto !important;
-    height: 1500px;
- 
-}
- 
+@charset "utf-8";
+/* 此为深渊之光同修会的特殊CSS格式，由[[*user W Asriel]]设计并编写。
+    底纹图片处理自Photoshop预设纹理。部分参考基金会基础CSS（Base）代码与第三定律板式代码。 */
+
+/* 顶端栏格式 */
+
 div#container-wrap {
-    background: url(http://scp-wiki-cn.wikidot.com/local--files/component:zsj-theme/590-5.png) top left repeat-x;
+    background: url(http://scp-wiki-cn.wikidot.com/local--files/abyssal-light/Abyssal_Background.jpg) top left repeat-x;
 }
- 
-#header {
-    width:100%;
-    max-width:auto ;
-    margin: 0 auto;
-}
- 
-#header {
-    height: 120px;
-    position: relative;
-    z-index: 10;
-    padding-bottom: 25px; /* FOR MENU */
-    background-image:url(/local--files/component:zsj-theme/zs-s1a.png);
-    background-repeat:no-repeat;
-    background-position:5px 5px; 
-    background-size:120px
-}
- 
+
 #header h1 {
-    margin-left: 170px;
+    margin-left: 15%;
     padding: 0;
     float: left;
-    max-height: 98px;
+    max-height: 90px;
 }
- 
+
 #header h2 {
-    margin-left: 125px;
+    margin-left: 15%;
     padding: 0;
     clear: left;
     float: left;
-    font-size: 110%;
+    font-size: 105%;
     max-height: 38px;
 }
- 
+
 #header h1 a {
     display: block;
     margin: 0;
-    padding: 60px 0 25px;
+    padding: 80px 0 25px;
     line-height: 0px;
     max-height: 0px;
     color: transparent;
     background: transparent;
-    font-family:'Franklin Gothic Medium', Arial, sans-serif;
-    font-size: 180%;
-    text-decoration: none;
+    font-size: 120%;
     text-shadow: none;
-    letter-spacing: 1px;
+    text-decoration: none;
 }
- 
+
 #header h1 a::before {
-    content: "众生教总教会";
-    color: #ffc;
-    text-shadow: 4px 4px 8px #000000;
+    content: "深渊之光同修会";
+    color: #FFD306;
+    text-shadow: 3px 3px 5px #000000;
 }
- 
+
 #header h2 span {
     display: block;
     margin: 0;
     padding: 19px 0;
-    line-height: 12px;
+    line-height: 0px;
     max-height: 0px;
-    font-weight: bold;
     color: transparent;
     text-shadow: none;
 }
- 
+
 #header h2 span::before {
-    content: '我信，我爱，即使曾经；我将醒悟，我将超越，即使未来';
-    color: #1f1f00;
-    font-style: normal;
-    text-shadow: 1px 2px 4px #ffff00;
+    content: '　愿真理之神祝福我们　';
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 
-#login-status, #login-status a{
-    color: #ffe;
+#login-status {
+    color: #FFFFFF;
+    font-size: 90%;
+    z-index: 30;
 }
- 
-h1, #page-title {
-    color: #cccc00;
-    padding: 0 0 0.25em;
-    margin: 0 0 0.6em;
-    font-weight: normal;
-    text-shadow: 1.5px 1.5px 2px #660;
+#login-status a {
+    background: transparent;
+    color: #FFF8D7;
 }
- 
+#login-status ul a {
+    color: #2f2e4d;
+    background: transparent;
+}
+
+
+/* --------------- */
+
+/* 左边栏格式 */
+
 #side-bar .side-block {
-    padding: 10px;
-    border: 1px solid #2f2f4f;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(32,32,32,1) !important;
-    background: #fd9 !important; 
-    margin-bottom: 15px;
+background: url(http://scp-wiki-cn.wdfiles.com/local--files/abyssal-light/blue.jpg) repeat;
 }
- 
-#top-bar {
-  width: 100%;
-  margin: 0 auto;
+
+#side-bar a, #side-bar a:visited {
+color: #FFD306;
 }
- 
-body {
-    background-color: #fff;
-    font-size: 0.80em;
-    color: #000;
+
+#side-bar .heading {
+    color: #FFED97;
+    border-bottom: solid 1px #FFED97;
 }
- 
+
+#side-bar div.menu-item.inactive a {
+    color: #FFED97;
+}
+#side-bar div.menu-item .sub-text {
+    font-size: 80%;
+    color: #FFED97;
+}
+
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #FFED97;
+}
+
 #page-title {
-    border-color: #aaaa00;
+    color: #2f2e4d;
 }
- 
-#top-bar ul {
-/* list-style-image: none; /* IE ONLY! IF list-style-image IS SET */
-}
- 
-li, p {
-    line-height: 141%;
-}
+/* --------------- */
 
-a {
-    color: #990;
-    text-decoration: none;
-    background: transparent;
-}
- 
-a:visited { color: #660; }
- 
-a.newpage {
-    color: #ee0;
-    text-decoration: none;
-    background: transparent;
-}
-a:hover {
-    text-decoration: underline;
-    background: transparent;
-}
 
- 
-/* footnote hovers */
- 
-.hovertip {
-    width: 20em;
-    padding: 0.5em;
-
-    border: 1px solid #fff !important;
-    border-radius: 0.5em;
- 
-    background-color: #ffa !important;
-    box-shadow: 0 0 5px 1px #ff3;
-    z-index: 100;
-}
-
-.hovertip .f-heading {
-    color: var(--fg-accent-2-light);
-}
-
-/* Page Rating Module Customizations */
-.page-rate-widget-box {
-  display: inline-block;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-  margin-bottom: 10px;
-  margin-right: 2em;
-}
-.page-rate-widget-box .rate-points {
-  background-color: #cc2 !important;
-  border: solid 1px #cc5;
-  border-right: 0;
-  border-radius: 5px 0 0 5px;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-  background-color: #ff6;
-  border-top: solid 1px #dd4;
-  border-bottom: solid 1px #dd4;
-  font-weight: bold;
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-  background: transparent;
-  color: #991;
-  padding: 0 4px;
-  margin: 0 1px;
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-  background: #fd0;
-  color: #fff;
-  text-decoration: none;
-}
-.page-rate-widget-box .cancel {
-  background-color: #cc2;
-  border: solid 1px #cc5;
-  border-left: 0;
-  border-radius: 0 5px 5px 0;
-}
-.page-rate-widget-box .cancel a {
-  background: transparent;
-  text-transform: uppercase;
-  color: #990;
-}
-.page-rate-widget-box .cancel a:hover {
-  border-radius: 0 3px 3px 0;
-  background: #cf0;
-  color: #fff;
-  text-decoration: none;
-}
-
+/* 分页格式 */
 .yui-navset .yui-content{
-    background-color: #f5f5f5;
+    background-color:transparent;
+    background-color:rgba(0,0,0,0.1);
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color: #CCCCCC;
 }
 .yui-navset .yui-nav .selected a,
 .yui-navset .yui-nav .selected a:focus, 
 .yui-navset .yui-nav .selected a:hover { 
-    background: #ee4; 
-    color: #447;
+    background: #2f2e4d; 
+    color: #FFD306;
 }
 .yui-navset .yui-nav a:hover,
 .yui-navset .yui-nav a:focus {
-    background: #ca4;
+    background: #FFF8D7;
     text-decoration: none;
 }
 .yui-navset .yui-nav,
 .yui-navset .yui-navset-top .yui-nav {
-    border-color: #f90;
+    border-color: #2f2e4d;
+}
+.yui-navset li {
+    line-height: normal;
 }
 
-/* Mobile Media Query */
-@media (max-width: 479px) { 
-#search-top-box-input {
-    display: none;
+
+/*----------*/
+
+
+/* DIV方块格式 */
+
+.abyssal blockquote{
+    border: 1px dashed #FFD306;
+    padding: 0 1em;
+    background-color: transparent;
 }
- 
-#page-content {
-    font-size: 0.9em;
+
+.abyssal {
+ font-family: Courier New, Courier, monospace; 
+ padding: 10px 30px; 
+ color:#FFFFFF; 
+ background: url(http://scp-wiki-cn.wdfiles.com/local--files/abyssal-light/blue.jpg) repeat;
+ text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+ box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    border: 1px solid #bbbbbb;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius:10px;     
 }
- 
-#main-content {
-    margin: 0;
+
+.abyssal h1{
+    color:#FFD306;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
 }
- 
-#recent-posts-category {
-width: 100%;
+
+.abyssal h2,h3,h4,h5,h6{
+    color:#FFED97;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
 }
- 
-#header, .mobile-top-bar {
-    max-width: 90%;
+
+.abyssal .yui-navset .yui-nav .selected a,
+.abyssal .yui-navset .yui-nav .selected a:focus, 
+.abyssal .yui-navset .yui-nav .selected a:hover { 
+    background: #FFD306; 
+    color: #000000;
 }
- 
-#side-bar {
-    width: 80%;
-    position: relative;
+.abyssal .yui-navset .yui-nav,
+.abyssal .yui-navset .yui-navset-top .yui-nav {
+    border-color: #FFD306;
 }
- 
-.top-bar {
-    display:none;
+
+.abyssal .code { 
+    background-color:transparent;
 }
- 
-.mobile-top-bar {
-    display: block;
-    padding: 0;
+
+.abyssal a, .abyssal a:visited {
+color: #FFD306;
 }
- 
-.page-options-bottom a {
+
+.abyssal .rt{
+color: #FFED97;
+}
+
+/* -------------- */
+
+/* 评分模组格式 */
+
+.page-rate-widget-box .rate-points {
+    background-color: #2f2e4d !important;
+    border: solid 1px #312259;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    color: #FFF8D7;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: #404d7e;
+    border-top: solid 1px #312259;
+    border-bottom: solid 1px #312259;
+    font-weight: bold;
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: #FFF8D7;
     padding: 0 4px;
-}
- 
-#header h1 a {
-    font-size: 100%;
-}
- 
-blockquote {
-    margin: 1em 0;
-}
- 
-.license-area {
-    font-size: 0.8em;
-}
- 
-#header {
-    background-position: 0 5.5em;
-    background-size: 55px 55px;
-}
- 
-#header h1, #header h2 {
-    margin-left: 66px;
-}
- 
-table.form td, table.form th {
-    float: left;
-}
- 
-/*
-td.title {
-    width: 30%;
-}
-*/
- 
-td.name {
-    width: 15em;
-}
- 
-table.form td, table.form th {
-    padding: 0;
-}
- 
-#edit-page-title {
-    max-width: 90%;
-}
- 
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
- 
-#page-content div, #page-content div table {
-clear: both;
-}
- 
-#page-content div.title {
-word-break: keep-all;
-}
- 
-}
- 
-/* Note Media Query */
-@media (min-width: 480px) and (max-width: 580px) { 
-#search-top-box-input {
-    width: 7em;
-}
- 
-#main-content {
-    margin: 0 2em 0 2em;
-}
- 
-#header, .mobile-top-bar {
-    max-width: 90%;
-}
- 
-#side-bar {
-    width: 80%;
-    position: relative;
-}
- 
-.top-bar {
-    display:none;
-}
- 
-.mobile-top-bar {
-    display: block;
-}
- 
-.page-options-bottom a {
-    padding: 0 5px;
-}
- 
-#header h1 a {
-    font-size: 120%;
-}
- 
-blockquote {
-    margin: 0.5em;
-}
- 
-.license-area {
-    font-size: 0.85em;
-}
- 
-#header {
-    background-position: 0.5em 4.5em;
-    background-size: 66px 66px;
-}
- 
-#header h1, #header h2 {
-    margin-left: 80px;
-}
- 
-/*
-td.title {
-    width: 30%;
-}
-*/
- 
-#page-content div.title {
-word-break: keep-all;
-}
- 
-td.name {
-    width: 15em;
-}
- 
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
- 
-#page-content div, #page-content div table {
-clear: both;
-}
-}
- 
-/* Mini Tablet Media Query */
-@media (min-width: 581px) and (max-width: 767px) { 
-#search-top-box-input {
-    width: 8em;
-}
- 
-#side-bar {
-    width: 80%;
-    position: relative;
-}
- 
-#main-content {
-    margin: 0 3em 0 2em;
-}
- 
-#header, .mobile-top-bar {
-    max-width: 90%;
-}
- 
-.top-bar {
-    display: none;
-}
- 
-.mobile-top-bar {
-    display: block;
-}
- 
-.page-options-bottom a {
-    padding: 0 6px;
-}
- 
-#header h1 a {
-    font-size: 140%;
-}
- 
-.license-area {
-    font-size: 0.9em;
-}
- 
-#header {
-    background-position: 1em 4em;
-    background-size: 77px 77px;
-}
- 
-#header h1, #header h2 {
-    margin-left: 93px;
-}
-}
- 
-/* Tablet Media Query */
-@media (min-width: 768px) and (max-width: 979px) {
-#main-content {
-    margin: 0 4em 0 20em;
-}
- 
-#header, #top-bar #side-bar {
-    max-width: 100%;
-}
- 
-.top-bar li {
-    margin: 0;
-}
- 
-#top-bar ul li.sfhover ul li a, #top-bar ul li:hover ul li a {
-    width: 110px;
-}
- 
-.page-options-bottom a {
-    padding: 0 7px;
-}
- 
-#header h1 a {
-    font-size: 160%;
-}
- 
-.license-area {
-    font-size: 0.95em;
-}
- 
-#header {
-    background-position: 1em 4em;
-    background-size: 88px 88px;
-}
- 
-#header h1, #header h2 {
-    margin-left: 106px;
-}
- 
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
- 
-#page-content div, #page-content div table {
-clear: both;
-}
-}
- 
-/* Desktop Media Query -----------
-@media (min-width: 980px) and (max-width: 1399px) {
- 
-}
------------------------------------------- */
- 
-/* Wide Monitor Media Query -----
-@media (min-width: 1400px) {
- 
-}
------------------------------------------- */
- 
-/* off-canvas */
- 
-.close-menu {
-    display: none;
-}
- 
-@media (max-width: 767px) {
- 
-.page-history tbody tr td:last-child {
-width: 35%;
-}
- 
-.owindow {
-    min-width: 80%;
-    max-width: 99%;
-}
- 
-.modal-body .table, .modal-body .table ~ div {
-    float: left;
-}
- 
-.owindow .button-bar {
-    float: right;
-}
- 
-.owindow div .btn-primary {
-width: 100%;
-float: left;
-}
- 
-.owindow div .btn-primary ~ div {
-width: 100%;
-}
- 
-.yui-navset {
-z-index: 1;
-}
- 
-#navi-bar, #navi-bar-shadow {
-    display: none;
-}
- 
-.open-menu a {
-    position: fixed;
-    top: 0.5em;
-    left: 0.5em;
-    z-index: 15;
-    font-family: 'Nanum Gothic', san-serif;
-    font-size: 30px;
-    font-weight: 700;
-    width: 30px;
-    height: 30px;
-    line-height: 0.9em;
-    text-align: center;
-    border: 0.2em solid #888 !important;
-    background-color: #fff !important;
-    border-radius: 3em;
-    color: #888 !important;
-}
- 
-.open-menu a:hover {
-    text-decoration: none !important;
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -ms-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -o-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-}
- 
-#main-content {
-    max-width: 90%;
-    margin: 0 5%;
-    padding: 0;
-    -webkit-transition: 0.5s ease-in-out 0.1s;
-    -moz-transition: 0.5s ease-in-out 0.1s;
-    -ms-transition: 0.5s ease-in-out 0.1s;
-    -o-transition: 0.5s ease-in-out 0.1s;
-    transition: 0.5s ease-in-out 0.1s;
-}
- 
-#side-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -25em;
-    width: 17em;
-    height: 100%;
-    background-color: rgb(184, 134, 134);
-    overflow-y: auto;
-    z-index: 10;
-    padding: 1em 1em 0 1em;
-    -webkit-transition: left 0.5s ease-in-out 0.1s;
-    -moz-transition: left 0.5s ease-in-out 0.1s;
-    -ms-transition: left 0.5s ease-in-out 0.1s;
-    -o-transition: left 0.5s ease-in-out 0.1s;
-    transition: left 0.5s ease-in-out 0.1s;
-}
- 
-#side-bar:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
- 
-}
- 
-#side-bar:target {
-    display: block;
-    left: 0;
-    width: 17em;
-    margin: 0;
-    border: 1px solid #dedede;
-    z-index: 10;
-}
- 
-#side-bar:target + #main-content {
-    left: 0;
-}
- 
-#side-bar:target .close-menu {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.3) 1px 1px repeat;
-    z-index: -1;
-}
-}
+    margin: 0 1px;
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: #2f2e4d;
+    color: #FFD306;
+    text-decoration: none;
+}
+.page-rate-widget-box .cancel {
+    background-color: #2f2e4d;
+    border: solid 1px #312259;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+}
+.page-rate-widget-box .cancel a {
+    background: transparent;
+    text-transform: uppercase;
+    color: #FFF8D7;
+}
+.page-rate-widget-box .cancel a:hover {
+    border-radius: 0 3px 3px 0;
+    background: #2f2e4d;
+    color: #FFD306;
+    text-decoration: none;
+}
+
+/* ------------- */
+
+/* 著作信息模块 */
+
+.rate-box-with-credit-button {
+    background-color: #2f2e4d  !important;
+    border: solid 1px #312259  !important;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+.creditButton p a {
+    border-left-color: #FFD306;
+}
+
+/* ------------- */
+
+/* 其他修正 */
+
+.scpnet-interwiki-frame{
+     filter: invert(0.85)  sepia(90%) hue-rotate(204deg) brightness(100%) saturate(210%);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+        border-radius: 10px;
+        background-color: #FFD306;
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    }
+
+/* ------------- */

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-CN-1399 - SCP基金会</title>
+    <title>SCP-CN-1388 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-cn-1399";
-        OZONE.request.timestamp = 1610179736;
+        WIKIREQUEST.info.requestPageName = "scp-cn-1388";
+        OZONE.request.timestamp = 1610200512;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-cn-1399";
-        WIKIREQUEST.info.pageId = 598232156;
+                WIKIREQUEST.info.pageUnixName = "scp-cn-1388";
+        WIKIREQUEST.info.pageId = 1165104827;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -120,80 +120,130 @@
     </script>
         
 <style>
-#page-title { display: none; }
-.feature-block {
-    height: 200px;
+@import url(http://scp-wiki-cn.wikidot.com/theme:ad-astra/code/1);
+</style>
+<style>
+.blinkbar {color: red;font-size:125%; animation: blink 1.5s infinite; letter-spacing: -0.13em;}@keyframes blink{to{opacity: .0;}}@keyframes flicker {0% {opacity: 0.9890; }5% {opacity: 0.5842; }10% {opacity: 0.9865; }20% {opacity: 0.0412; }20% {opacity: 0.6255; }25% {opacity: 0.3157; }30% {opacity: 0.7328; }35% {opacity: 0.4654; }40% {opacity: 0.9128; }45% {opacity: 0.2449; }50% {opacity: 0.5485; }55% {opacity: 0.6438; }60% {opacity: 0.1180; }65% {opacity: 0.9085; }70% {opacity: 0.0266; }75% {opacity: 0.6795; }80% {opacity: 0.7812; }85% {opacity: 0.0117; }90% {opacity: 0.2239; }95% {opacity: 0.8897; }100% {opacity: 0.2260; }}@keyframes overlay-anim {0% {visibility: hidden; }10% {visibility: hidden; }11% {visibility: visible; }50% {visibility: hidden; }100% {visibility: hidden; }}
+.collapsible-block-folded a.collapsible-block-link {
+    animation: blink 0.8s ease-in-out infinite alternate;
 }
-.feature-block .panel-body {
-    height: 130px;
-    overflow-y: hidden;
+@keyframes blink {
+    0% { color: transparent; }
+    50%, 100% { color: #b01; }
 }
-.feature-block .feature-title {
-    font-size: 120%;
-    font-weight: bold;
+.email {float: center; border: solid 2px #000000; width: 88%; padding: 1px 15px; margin: 10px 10px 10px 10px; box-shadow: 0 1px 3px rgba(0,0,0,.5)}
+a.collapsible-block-link { font-weight: bold; }
+.tofrom {margin-left: 10px; margin-top: 5px; padding: 1px 15px; border-left: solid 3px maroon}
+</style>
+<style>
+div.terminal{
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #131;
+/* 终端上方的黑色阴影 */
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    display: block;
+/* 终端周围的阴影 */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* 防止扫描条产生滚动条 */
+    overflow:hidden;
 }
-.feature-block .feature-subtitle {
-    font-size: 90%;
+div.terminal blockquote {
+    background-color: black;
+    border: double 3px #80FF80
+}
+div.scanline{
+    margin-top: -40%;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    pointer-events: none;
+/* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* 你可能需要修改这个。如果扫描条走得太快了，添加5秒。 */
+    animation: scan 12s linear 0s infinite; /* 同上 */
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
 }
 
-.feature-block .feature-title > p,
-.feature-block .feature-subtitle > p {
-    margin: 0;
+div.text{
+    color: rgba(128,255,128,0.8);
+    padding-left: 2em;
+    padding-top: 40%;
+    font-family: monospace;
+    font-size: 1.2em;
+    }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 你可能需要根据你终端的长短修改这个。如果扫描条走到一半停止了，增大第二个数字。 */
 }
 
-.news-block .panel-body {
-    padding: 0;
-}
-.news-block .panel-body .alternate {
-    padding: 5px 10px;
-}
-.news-block .news-title {
-    font-weight: bold;
-    font-size: 110%;
-    margin-bottom: 5px;
-    color: #633;
-}
-.news-block .news-content {
-    margin: 5px 0;
-}
-.news-block .news-title > p,
-.news-block .news-content > p {
-    margin: 0;
+@keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 同上。 */
 }
 
-.international-block .panel-body {
-    padding: 0;
+div.text a {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
 }
-.international-entry {
-    padding: 5px 10px;
+div.text a.newpage {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
 }
-.international-entry:nth-child(even),
-.alternate:nth-child(even) {
-    background-color: rgba(255,255,255,.9);
-    border-top: solid 1px #eeeee0;
-    border-bottom: solid 1px #eeeee0;
+div.text a:hover {
+    color: #131;
+    text-decoration: underline;
+    background-color: #80FF80;
+    padding: 1px;
 }
-.international-entry div > p {
-    margin: 0;
+div.text a:hover::before{
+content: "> ";
 }
-.international-entry .international-title {
-    font-weight: bold;
-    font-size: 110%;
+</style>
+<style>
+.danke{
+padding: 5px 5px 5px 15px;
+margin-bottom:10px;
+width: 100%;
+font-family: monospace;
+font-size: 1.1em; }
+
+.agent{
+background-color:#002200;
+border: 3px solid #55AA55;
+color: #77CC77;
 }
-.international-entry .international-title img {
-    width: 16px;
-    height: 11px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+.site{
+background-color:#222200;
+border: 3px solid #AAAA55;
+color: #DDDD77;
 }
-.international-entry .international-description {
-    font-size: 90%;
-    font-style: italic;
-    margin: 5px 20px;
+</style>
+<style>
+.danke{
+padding: 5px 5px 5px 15px;
+margin-bottom:10px;
+width: 100%;
+font-family: monospace;
+font-size: 1.1em; }
+
+.agent{
+background-color:#002200;
+border: 3px solid #55AA55;
+color: #77CC77;
 }
-.international-entry .international-footer {
-    font-size: #333;
-    font-size: 80%;
-    margin: 5px 0;
+
+.site{
+background-color:#222200;
+border: 3px solid #AAAA55;
+color: #DDDD77;
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -545,7 +595,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-cn-1399" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-cn-1388" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -567,7 +617,7 @@
                     
                     
                         <div id="page-title">
-                            SCP-CN-1399
+                            SCP-CN-1388
                         </div>
                     
 
@@ -580,303 +630,239 @@
                     <div id="page-content">
                         
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+18</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+
+
+
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+60</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
 
 
 
-<div style="text-align: center; color: #600;">
-<div class="unmargined">
-<p>警告：基金会属于</p>
+
+
+
+
+
+
+<p><br /></p>
+<div class="danke agent">
+<div style="text-align: center;">
+<p><span class="terminal-span">|▷:文件提取-The past/:files/1388</span><br />
+<br />
+<br />
+&lt;命令执行√&gt;<br />
+<br />
+欢迎：特许人员-代号：∑<br />
+文档更新时间：<span style="color: red">1969-01-22(离线中）</span></p>
 </div>
-<div class="unmargined" style="font-size: 400%; font-weight: bold; margin: 2px 0 5px;">
-<p>最高机密</p>
 </div>
-<div class="unmargined">
-<h1><span>Error</span></h1>
-<h1><span>Error</span></h1>
+<table style="border: none; width: 100%;">
+<tr>
+<td><span style="font-size: 125%;"><span style="font-weight: 900; color: #ffb961">项目编号：</span>SCP-CN-1388</span></td>
+<td style="text-align: right;"><span style="font-weight: 900; font-size: 125%; color: #ffb961">5/CN-1388级</span></td>
+</tr>
+<tr>
+<td><span style="font-size: 125%;"><span style="font-weight: 900; color: #ffb961">收容等级：</span>KETER</span></td>
+<td style="text-align: right;"><span style="font-weight: 900; font-size: 125%; color: #ffb961;">太阳系外</span></td>
+</tr>
+</table>
+<hr />
+<hr />
+<hr />
+<div style="background: gray; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
+<div style="background: white; padding: 1px 15px; border: solid 3px lightgray; margin: 10px; border-radius: 30px 15px;">
+<div style="background: url(http://kaktuskontainer.wdfiles.com/local--files/format-hell/scp_trans.png) bottom center no-repeat; text-align: center; width: 600px; margin: 0 auto; font-size: 20px; padding: 0px;">
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br /></p>
+<div style="text-align: center;">
+<h2><span><span style="color: black">根据Δ-79议会的命令</span></span></h2>
+<p><span style="color: black">以下文件为5/1388级机密。禁止除特许人员外未经授权的访问。</span></p>
+</div>
+<p style="text-align: center;"><strong><span style="color: green">为王蛇献上群星所铸之冠</span></strong></p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
+</div>
 </div>
 </div>
 <hr />
-<div class="content-panel centered standalone">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">[Not&nbsp;Found]</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[Not&nbsp;Found]</a></div>
-<div class="collapsible-block-content">
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
-</script>
-<div id="wiki-tabview-b2e49a0262beab427cb476e6fee35ab3" class="yui-navset">
-<ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>[Not Found</em></a></li>
-<li><a href="javascript:;"><em>[Not Found</em></a></li>
-<li><a href="javascript:;"><em>[Not Found</em></a></li>
-<li><a href="javascript:;"><em>[Not Found</em></a></li>
-</ul>
-<div class="yui-content">
-<div id="wiki-tab-0-0">
-<p><strong>SCP条目</strong> [Not Found]</p>
-<h3><span>[Not Found]</span></h3>
 <hr />
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-</div>
-<div id="wiki-tab-0-1" style="display:none">
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
 <hr />
-<div style="font-size: 80%; font-style: italic; line-height: 130%;">
-<p><strong>注意：</strong> [Not Found]</p>
-</div>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-</div>
-<div id="wiki-tab-0-2" style="display:none">
-<p><strong>另类条目</strong> [Not Found]</p>
-<hr />
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-</div>
-<div id="wiki-tab-0-3" style="display:none">
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<hr />
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<h3><span>[Not Found]</span></h3>
-<div style="font-size: 80%; font-style: italic; line-height: 130%;">
-<p><strong>注意：</strong> <span style="text-decoration: underline;">[<a href="http://scp-wiki-cn.wikidot.com/scp-cn-1399/offset/2">You Find Me！</a>]</span></p>
-</div>
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
-OZONE.dom.onDomReady(function(){
-        var tabViewb2e49a0262beab427cb476e6fee35ab3 = new YAHOO.widget.TabView('wiki-tabview-b2e49a0262beab427cb476e6fee35ab3');
-                }, "dummy-ondomready-block");
-        
-//]]>
-</script>
-<div class="content-panel centered">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-footer" style="text-align: center; height: 16px;"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="content-panel left-column">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<h3><span>[Not Found]</span></h3>
-<p><span style="text-decoration: line-through;">4040404040404040404040404</span><br />
-<span style="text-decoration: line-through;">4040404040404040404040404</span><br />
-<span style="text-decoration: line-through;">4040404040404040404040404</span></p>
-</div>
-<div class="panel-footer">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="content-panel right-column">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<h3><span>[Not Found]</span></h3>
-<p><span style="text-decoration: line-through;">4040404040404040404040404</span><br />
-<span style="text-decoration: line-through;">4040404040404040404040404</span><br />
-<span style="text-decoration: line-through;">4040404040404040404040404</span></p>
-</div>
-<div class="panel-footer">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="content-panel left-column">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<div class="feature-title">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="feature-subtitle">
-<p>by [Not Found]</p>
-</div>
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-footer">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="content-panel right-column">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<div class="feature-title">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="feature-subtitle">
-<p>by [Not Found]</p>
-</div>
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-footer">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-</div>
-<div class="news-block content-panel">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<div class="alternate unmargined">
-<div class="news-title">
-<p>消失</p>
-</div>
-<div class="news-content">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="alternate unmargined">
-<div class="news-title">
-<p>死亡</p>
-</div>
-<div class="news-content">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="alternate unmargined">
-<div class="news-title">
-<p>分解</p>
-</div>
-<div class="news-content">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="alternate unmargined">
-<div class="news-title">
-<p>毁灭</p>
-</div>
-<div class="news-content">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div class="alternate unmargined">
-<div class="news-title">
-<p>逝去</p>
-</div>
-<div class="news-content">
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-</div>
-<div class="panel-footer">
-<p>？？？</p>
-</div>
-</div>
-<hr />
-<div class="international-block content-panel">
-<div class="panel-heading">
-<h3><span>[Not Found]</span></h3>
-</div>
-<div class="panel-body">
-<div class="international-entry">
-<div class="international-title">
-<h3><span>[Not Found]</span></h3>
-</div>
-<h3><span>[Not Found]</span></h3>
-</div>
-<h3><span>[Not Found]</span></h3>
-</div>
-</div>
-<div style="background: url(http://scp-wiki.wdfiles.com/local--files/the-great-hippo/scp_trans.png) center no-repeat ; float: center; border: solid 2px #000000; padding: 1px 15px; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
-<p>本系统受到来自未知方的网络进攻</p>
-<h3><span>正在重新支起Shelter/3级电子防火墙</span></h3>
-<h3><span>已支起电子防火墙99%</span></h3>
-<h1><span>电子防火墙支起成功！</span></h1>
-<hr />
-<h3><span>重新刷新基金会网络中&#8230;</span></h3>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">刷新成功！</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">取消刷新</a></div>
-<div class="collapsible-block-content">
-<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: 575px; padding: 10px 30px; margin: 20px auto; background: url(http://scp-wiki.wdfiles.com/local--files/about-the-scp-foundation/bg-marble.png) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
-<p><span style="font-size:130%;"><strong>人类到如今已经繁衍了250000年，只有最近的4000年是有意义的。</strong></span></p>
-<p><span style="font-size:130%;">所以，我们在将近250000年中在干嘛？我们躲在山洞中，围坐在小小的篝火边，畏惧那些我们不懂得的事物——那些关于太阳如何升起的解释，那些人头鸟身的怪物，那些有生命的石头。所以我们称他们为“神”和“恶魔”，并向他们祈求宽恕和祈祷拯救。</span></p>
-<p><span style="font-size:130%;">之后，他们的数量在减少，我们的数量在增加。当我们恐惧的事物越来越少，我们开始更理智的看待这个世界。然而，不能解释的事物并没有消失，好像宇宙故意要表现出荒谬与不可思议一样。</span></p>
-<p><span style="font-size:130%;"><strong>人类不能再生活在恐惧中。</strong>没有东西能保护我们，我们必须保护我们自己。没有东西能保护我们，我们必须保护我们自己。</span></p>
-<span style="font-size:130%;">当其他人在阳光下生活时，我们必须在阴影中和它们战斗，并防止它们暴露在大众眼中，这样其他人才能生活在一个理智的，普通的世界中。<br />
-<img src="http://scp-wiki.wdfiles.com/local--files/about-the-scp-foundation/scp-logo-signature.png" style="width: 63px; margin: 12px 15px 0 42px; float: left;" alt="scp-logo-signature.png" class="image" /><br />
-<strong>我们控制，我们收容，我们保护。</strong></span>
-<p><span style="font-size:130%;"><strong>&#8212; The Administrator</strong></span></p>
-</div>
-<div style="background: url(http://scp-wiki.wdfiles.com/local--files/the-great-hippo/scp_trans.png) center no-repeat ; float: center; border: solid 2px #000000; padding: 1px 15px; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
-<h1><span>你好，Dristy博士</span></h1>
-<hr />
-<h3><span>基金会系统网络已恢复运行</span></h3>
-<h3><span>本系统很抱歉对您的查阅带来不便</span></h3>
-<h3><span>请输入Shelter/3级电子防火墙密钥以更新电子防火墙</span></h3>
-<hr />
-<h3><span>输入密钥：030210_</span></h3>
-<div class="colmod-block">
+<p><strong><span style="color: #ffb961">特殊收容措施：</span></strong>就目前基金会所掌握的科技水平所有针对于SCP-CN-1388的管控均是无效的，已知对项目进行表现抹杀打击具有理论可行性，个体对于物理层面的互动几乎呈现出不可扭转的惰性。唯一可以对其造成存在概念上的损害的方式有且只能通过<strong><span style="color: red">[最高机密]</span></strong>来进行，O5议会已把对该项目的抹杀计划提升至最优先事项，所有部门被命令无条件服从对项目的相关指派，直至项目被摧毁。<br />
+<br />
+<strong><span style="color: #ffb961">描述：</span></strong>SCP-CN-1388被确认为一存在于M42号星云内的异常敌意生命体，其可被观测到的物理形态表现为一种不属于任何可见光的未知可视光波，项目存在无法被任何图像信息记载媒体留存，对其的光谱解码并翻译成英文得来&quot;Midgardsormr&quot;一词，同时将其光讯号进行一定规律的排列得到了一张衔尾蛇的图片。目前基金会对该实体命名为&quot;王蛇&quot;。<br />
+<br />
+基金会所掌握的项目异常效应大概如下：</p>
 <ul>
-<li class="folded">
-<ul>
-<li style="list-style: none">_</li>
+<li>时间回环影响</li>
+<li>空间湮灭与重构效能</li>
+<li>III级本质促动危害</li>
+<li>物理概念颠覆性</li>
+<li>超限</li>
+<li>上层叙事干扰</li>
 </ul>
-<div class="colmod-link-top">
-<div class="foldable-list-container"><a href="javascript:;">确认</a><a href="javascript:;">关闭</a></div>
+<p>项目对此世界已经造成了大量的结构破坏。其已经导致以M42为圆心，████光年为半径的区域内的空间表现完全被摧毁，物质呈现出高低维循环更替，物理法则颠覆，时间线扭转。上述影响的范围正在持续扩大，经估算，项目打击将于公历2012年侵入太阳系，抹杀SCP-CN-1388提升至为目前基金会首要目标，1966年&quot;世界蛇&quot;计划起草。<br />
+<br />
+通过对项目时间回环影响的函数谱绘，其形成了<span class="ruby">&quot;莫比乌斯环形&quot;<span class="rt">Möbius strip</span></span>图像，在图像X轴极值两端均发现了代表项目的α与β点。由此推测，项目可能存在于该世界的起点与终点并且始终同时存在，如果在终点破坏项目的循环链结性，可能导致项目的无效化。此理论已经得到上级批准，列入到&quot;世界蛇&quot;计划目标指导方针内。<br />
+<br />
+<br /></p>
+<hr />
+<blockquote>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">编号:1959/过往交流记录</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">关闭文档</a></div>
+<div class="collapsible-block-content">
+<div style="text-align: center;">
+<p>对项目的多次沟通</p>
 </div>
-<div class="colmod-content">
-<h1><span>密钥正确</span></h1>
-<p>Shelter/3级电子防火墙已更新<br />
-是否继续回档SCP-CN目录？</p>
-<h3><span>点击<span style="text-decoration: underline;"><a href="http://scp-wiki-cn.wikidot.com/scp-series-cn">Yes</a></span>回到SCP-CN目录</span></h3>
-<h3><span>点击<span style="text-decoration: underline;"><a href="http://scp-wiki-cn.wikidot.com/scp-cn-1399/offset/3">No</a></span>重新登录账号</span></h3>
+<br />
+<strong>采访者：</strong><span style="color: red">[数据遗失]</span>
+<p><strong>前言：</strong>尝试通过光讯号对项目专递信息以获取沟通</p>
+<p><strong>&lt;记录开始，1959/07/04&gt;</strong></p>
+<p><strong>采访者：</strong>[转译]-你是什么？何时出现</p>
+<p><strong>项目：</strong>[转译]-&quot;眼&quot;，世界蛇，古早</p>
+<p>&lt;重复89次&gt;</p>
+<p>项目惰化，不再回应</p>
+<p><strong>&lt;记录结束&gt;</strong></p>
+<hr />
+<p><strong>结语：</strong>需要更多信息</p>
+<p><strong>采访者：</strong><span style="color: red">[数据遗失]</span></p>
+<p><strong>前言：</strong>与项目进行沟通获取有关信息</p>
+<p><strong>&lt;记录开始，1959/08/07&gt;</strong></p>
+<p><strong>采访者：</strong>[转译]-你从何而来？</p>
+<p><strong>项目：</strong>[转译]-心，任意，尽头或终结，[无法识别]</p>
+<p><strong>采访者：</strong>[转译]-你如何出现？</p>
+<p><strong>项目：</strong>[转译]-衔尾，循环，自我</p>
+<p><strong>采访者：</strong>[转译]-你的目的？</p>
+<p>项目惰化，不再回应</p>
+<p><strong>&lt;记录结束&gt;</strong></p>
+<hr />
+<p><strong>结语：</strong>需要更多信息</p>
+<p><strong>采访者：</strong><span style="color: red">[数据遗失]</span></p>
+<p><strong>前言：</strong>探究项目的目的</p>
+<p><strong>&lt;记录开始，1965/02/08&gt;</strong></p>
+<p><strong>采访者：</strong>[转译]-循环是什么？</p>
+<p><strong>项目：</strong>[转译]-超新星爆发、从起点开始、热寂</p>
+<p><strong>采访者：</strong>[转译]-你的目的是什么？</p>
+<p><strong>项目：</strong>[转译]-毁灭,崩解、重建持续进行</p>
+<p>此语句重复5899次后，项目停止发射光讯号，交流终止</p>
+<p><strong>&lt;记录结束&gt;</strong></p>
+<hr />
+<p><strong>结语：</strong>项目具有强烈的攻击性，处决行动应被立即开启</p>
 </div>
-<div>
-<div class="foldable-list-container"></div>
-</div>
-</li>
-</ul>
 </div>
 </div>
+</blockquote>
+<blockquote>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">访问SCiPNET信箱一1966/01/01</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">登出</a></div>
+<div class="collapsible-block-content">
+<div style="text-align: left;">
+<div class="email">
+<div class="tofrom">
+<p><strong>至：</strong>Site-CN-10深空部主管 Liang Yue<br />
+<strong>自：</strong>Dr.Kich<br />
+<strong>主题：</strong>对计划的疑问</p>
+</div>
+<hr />
+<p>主管女士，我是我会空间控制司署长Dr.Kich，同时也是世界蛇计划起草者之一，我想您应该也阅览了其具体内容，我在此对项目的抹杀计划表示否定。基金会并非GOC这您也清楚，虽然具有高危的项目需要被清理，但1388是否是针对人类个体展现出敌意暂且未知。依照我们的片面的分析并不能断定项目的威胁大小，我们能知道的是1388将导致循环与重启，如果失去项目，这个世界是否能一直存活下去，还是在热寂的爆炸中蒸发成一束能量，这是需要思考的。或许项目会使生活一直反复下去，但至少我们将不会被毁灭，文明不会消失，死亡于CK情景，复生于CK情景，这也许是这个世界最好的归宿。</p>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<div style="text-align: center;">
+<p><span class="blinkbar-nagi">新邮件！</span></p>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span>
+<div class="email">
+<div class="tofrom">
+<p><strong>自：</strong>Site-CN-10深空部主管 Liang Yue<br />
+<strong>至：</strong>Dr.Kich<br />
+<strong>主题：</strong>回复：对计划的疑问</p>
+</div>
+<hr />
+<p>这里是Liang Yue，您的疑问我已经知晓了，总的来说，您的提问很令我吃惊，是的没错，抹杀项目确实有这种风险，不过要请你先想一想我们毁灭项目的原因是什么。这不是为了毁灭而毁灭，而是防止在未来的某一天，在你吃着煎蛋与培根，看着桌上散落的研究报告企图理解一项根本无法理解的异常物品时，难以预料的被另一个远在宇宙彼岸的东西抹杀，连尸体都不会剩下，未知的灰飞烟灭，你甚至连理解的机会也不会拥有，只在一瞬之间达摩克里斯之剑刃就统统向人类脆弱的脖颈刺下，这就是结果，所以，我们必须且坚决的要毁灭项目。也许现实总有一天会崩溃，但我们所做的是在为现在考虑，让人类不必害怕剑刃的下落，这是我们能做的极限，至于未来如何，我们也只能放手一搏。</p>
 </div>
 </div>
 </div>
 </div>
+</div>
+</blockquote>
+<blockquote>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">Dr.Kich的阻断研究与猜想</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">关闭文档</a></div>
+<div class="collapsible-block-content">
+<div class="blockquote">
+<p style="text-align: center;"><strong>视频记录</strong></p>
+<hr />
+<p><strong>日期：</strong>1966/07/28</p>
+<p><strong>笔记：</strong>阻隔器已准备完毕</p>
+<hr />
+<p>[记录开始]</p>
+<p><strong>地点：</strong>SCP基金会空间管理司研发部</p>
+<p><strong>内容：</strong>呃&#8230;您好，这里是Dr.Kich，我已经超过79天没有离开过这座实验侧翼了，因为 &lt;停顿30s&gt; 我目前正在对一个产品研发的项目进行工作&#8230;嗯，如你所见 &lt;Dr.kich从视野外拿出一个柱形物体&gt; 这是小型莫比乌斯循环阻隔器，该项目的最终产物。它和斯克兰顿稳定锚很像，实际上功能其实也是类似的，我，呃，我的意思是说，阻隔器的主要工作原理有一部分是基于稳定锚的。<br />
+<br />
+在研究时我发现，稳定锚是一个很好的划界载体，它规定着正常的现实稳定数值并将波动的现实指数锁固在一个点上，这种设计十分精妙，所以我尝试了来自于稳定锚的构筑方案，阻隔器同时可以沿用稳定锚的概念效应，通过立场维持区域内不被塌缩影响。一开始还是比较 &lt;停顿&gt; 有趣的，不过当三分之一个实验室被强对波空间风洞从宇宙中平滑的切除时，就没人开心的起来了，可我还是保留了一些属于锚的有用的模块，这些对于重新设计阻隔器的主要架构起到了一定的帮助。在实验部全体的帮助下，终于 &lt;Dr.Kich表现得十分激动&gt; 我们成功了！<br />
+<br />
+就在电闸拉开的一瞬间时，一道撕裂空间的裂隙凭空而出，我隔着玻璃看着那道深邃的黑色，这裂隙不应该存在，它好像是一个不属于于此世界的错误，但这道裂隙的里面…真是 &lt;Dr.Kich眼神空洞&gt; 令我惊骇，我看见<span style="text-decoration: underline;">祂</span>了，祂那犹如镶嵌了万亿颗恒星的躯体在蠕动，我在那里看见了自我，过去22分钟的自我与未来22分钟的自我，我…我不敢想象，这绝对不是人类的理智所能思考的…值得注意的是，这几个“我”的领带好像都不相同，或许这是观测错误。不过我还是打算对此异常部分进行研究，结果是我猜对了，这里面确实有什么变数，7000次几率推导其所有交点都指向一个情况 &lt;Dr.Kich在纸上写下Multiverse一词，并将纸展示给镜头&gt; 就是平行宇宙，我不知道这预示着什么，变故如何产生也根本无从知晓，虽然我们拥有跨空间交流手段也与其他宇宙的基金会取得了联络，不过在我们提供的项目所在坐标上他们一无所获，给我们的时间太少了，如果再多一些时间，我想我能明白它的问题所在，可…我们在与毁灭赛跑。所以我能做的只能是把这个变数记录下来，存在档案里，有朝一日被我们或者“你们”重新找到并且详细研究。</p>
+<p>我还是希望，在灭绝来临前，找到其他办法</p>
+<hr />
+<p>[记录结束]</p>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<hr />
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+<div style="text-align: center;">
+<p><strong><span style="font-size:200%;"><a href="http://scp-wiki-cn.wikidot.com/scp-cn-1388/offset/2">&lt;世界蛇计划完整记录&gt;</a></span></strong></p>
+</div>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
 </div>
     
     
     
     </div>
+<div class="footer-wikiwalk-nav">
+<div style="text-align: center;">
+<p>&#171; <a href="/scp-cn-1387">SCP-CN-1387</a> | SCP-CN-1388 | <a href="/scp-cn-1389">SCP-CN-1389</a> &#187;</p>
+</div>
+</div>
+
                     </div>
 
                             
@@ -904,7 +890,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/thaumiel#pages">thaumiel</a><a href="/system:page-tags/tag/%E4%B8%8D%E5%8F%AF%E7%A7%BB%E5%8A%A8#pages">不可移动</a><a href="/system:page-tags/tag/%E4%BA%BA%E9%80%A0%E7%89%A9%E5%93%81#pages">人造物品</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%9F%BA%E9%87%91%E4%BC%9A%E5%88%B6#pages">基金会制</a><a href="/system:page-tags/tag/%E5%BB%BA%E7%AD%91#pages">建筑</a><a href="/system:page-tags/tag/%E6%97%B6%E9%97%B4%E5%BD%B1%E5%93%8D#pages">时间影响</a><a href="/system:page-tags/tag/%E7%90%83%E4%BD%93#pages">球体</a><a href="/system:page-tags/tag/%E8%87%AA%E6%88%91%E4%BF%AE%E5%A4%8D#pages">自我修复</a>
+                                <a href="/system:page-tags/tag/ad-astra#pages">ad-astra</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/site-cn-10#pages">site-cn-10</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%A4%9A%E9%9D%A2%E4%BD%93#pages">多面体</a><a href="/system:page-tags/tag/%E6%97%A0%E5%AE%9A%E5%BD%A2#pages">无定形</a><a href="/system:page-tags/tag/%E6%97%B6%E7%A9%BA#pages">时空</a><a href="/system:page-tags/tag/%E6%97%B6%E9%97%B4%E5%BD%B1%E5%93%8D#pages">时间影响</a><a href="/system:page-tags/tag/%E6%98%9F%E9%99%85#pages">星际</a><a href="/system:page-tags/tag/%E6%9C%AC%E8%B4%A8%E4%BF%83%E5%8A%A8#pages">本质促动</a><a href="/system:page-tags/tag/%E6%9C%BA%E5%AF%86%E5%88%86%E7%BA%A7#pages">机密分级</a><a href="/system:page-tags/tag/%E8%87%AA%E6%88%91%E5%A4%8D%E5%88%B6#pages">自我复制</a><a href="/system:page-tags/tag/%E8%B6%85%E7%BB%B4%E5%BA%A6#pages">超维度</a>
                             </span>
                         </div>
                     
@@ -912,12 +898,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 41, 最后编辑于: <span class="odate time_1549723861 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">09 Feb 2019 14:51</span></div>
+                            <div id="page-info">页面版本: 18, 最后编辑于: <span class="odate time_1600953587 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">24 Sep 2020 13:19</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+18</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+60</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-10194765/scp-cn-1399" class="btn btn-default" id="discuss-button">讨论 (34)</a>
+<a href="/forum/t-13443470/scp-cn-1388" class="btn btn-default" id="discuss-button">讨论 (6)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -984,10 +970,32 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://roboticsclubucla.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/roboticsclubucla.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://vocaro.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/vocaro.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://roboticsclubucla.wikidot.com">Robotics Club @ UCLA Wiki</a></h3>
+            <h3><a target="_blank" href="http://vocaro.wikidot.com">보카로 가사 위키</a></h3>
+            <div class="desc">          
+              Vocaloid Lyrics Wiki
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://ds10.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ds10.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://ds10.wikidot.com">מבני נתונים</a></h3>
+            <div class="desc">          
+              סמסטר ב&#039;, תש&quot;ע
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://bozic-nation.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bozic-nation.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://bozic-nation.wikidot.com">Bozic Nation</a></h3>
             <div class="desc">          
               
             </div>
@@ -995,34 +1003,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://comux.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/comux.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpvakfi.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpvakfi.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://comux.wikidot.com">CoMUX</a></h3>
+            <h3><a target="_blank" href="http://scpvakfi.wikidot.com">SCP Vakfı</a></h3>
             <div class="desc">          
-              Realities Combined
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://biol252-biol319.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/biol252-biol319.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://biol252-biol319.wikidot.com">Micro &amp; Epi @ Morningside Wiki</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://neosteam.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/neosteam.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://neosteam.wikidot.com">Neo Steam Wiki</a></h3>
-            <div class="desc">          
-              May 2008 to February 2012
+              Yakala, Sakla, Koru
             </div>
           </div>
         </div>

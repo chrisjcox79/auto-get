@@ -1,884 +1,1198 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+@import url("https://use.typekit.net/tax7dna.css");
 
-<head>
-    <title>SCP-3939 - SCP基金会</title>
-    
-    
-    
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
-    <script  type="text/javascript">
-        var URL_HOST = 'www.wikidot.com';
-        var URL_DOMAIN = 'wikidot.com';
-        var USE_SSL =  true ;
-        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
-        // global request information
-        
-        var WIKIREQUEST = {};
-        WIKIREQUEST.info = {};
-        
-        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
-        WIKIREQUEST.info.siteId = 530812;
-        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 3342264;
-        WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-3939";
-        OZONE.request.timestamp = 1610182421;
-        OZONE.request.date = new Date();
-        WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-3939";
-        WIKIREQUEST.info.pageId = 70901752;
-                        WIKIREQUEST.info.lang = "cn";
-        OZONE.lang = "cn";
-        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    </script>
-    
-    
+@supports(display:grid) {
+    :root {
+     /* S-CSS-P Integration */
+     /* If you're making a new CSS theme, please include the following three variables at minimum. */
+     --theme-base: "nuscp";
+     /* must be either "nuscp" or "sigma9" */
+     --theme-id: "crocker-theme";
+     /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+     --theme-name: "Unusual Incidents Unit BHL Theme";
+     /* set this to your theme's full name */
+
+     /* Header */
+     --logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Acrocker-theme/crocker_logo.png");
+     --header-title: "Site-81";
+     --header-subtitle: "社区食谱";
+
+     /* Typefaces */
+     --body-font: garamond-premier-pro, "Noto Sans SC", serif;
+     --header-font: aragon, sans-serif;
+     --title-font: hwt-van-lanen, "Noto Sans SC", sans-serif;
+
+     /* Standard Colors */
+     --white-monochrome: 249, 247, 236;
+     /* off-blue white */
+     --pale-gray-monochrome: 243, 240, 218;
+     /* v light blue for blockquotes and stuff */
+     --light-gray-monochrome: 213, 194, 96;
+     /* light accent blue for login status */
+     --gray-monochrome: 206, 157, 144;
+     /* blue */
+     --dark-gray-monochrome: 162, 149, 85;
+     /* deep blue */
+     --black-monochrome: 39, 37, 32;
+     /* off-blue black */
+     --bright-accent: 239, 109, 138;
+     /* bright yellow */
+     --medium-accent: 188, 67, 69;
+     /* medium red */
+     --dark-accent: 129, 24, 21;
+     /* deep red */
+     --newpage-color: var(--bright-accent);
+     /* pale orange */
+
+     /* Primary Theme Colors */
+     --swatch-background: var(--white-monochrome);
+     --swatch-primary: var(--bright-accent);
+     --swatch-primary-darker: var(--medium-accent);
+     --swatch-primary-darkest: var(--dark-accent);
+     /* Primary Text Colors */
+     --swatch-text-dark: var(--black-monochrome);
+     --swatch-text-light: var(--white-monochrome);
+     --swatch-important-text: var(--bright-accent);
+
+     /* Primary Menu Colors */
+     --swatch-menubg-color: var(--white-monochrome);
+     --swatch-menubg-light-color: var(--pale-gray-monochrome);
+     --swatch-menubg-medium-color: var(--light-gray-monochrome);
+     --swatch-menubg-medium-dark-color: var(--gray-monochrome);
+     --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+     --swatch-menubg-black-color: var(--black-monochrome);
+     --swatch-menubg-hover-color: var(--black-monochrome);
+     --swatch-menutxt-dark-color: var(--black-monochrome);
+     --swatch-menutxt-light-color: var(--white-monochrome);
+     --swatch-border-color: var(--black-monochrome);
+     /* Primary Header Colors */
+     --header-gradient-color-bottom: var(--bright-accent);
+     --header-gradient-color-middle: var(--medium-accent);
+     --header-gradient-color-top: var(--medium-accent);
+     --swatch-headerh1-color: var(--dark-accent);
+     --swatch-headerh2-color: var(--black-monochrome);
+     --swatch-topmenu-border-color: var(--black-monochrome);
+     --swatch-topmenu-bg-color: var(--pale-gray-monochrome);
+
+     --link-color: var(--dark-accent);
+     --visited-link-color: var(--medium-accent);
+     --hover-link-color: var(--medium-accent);
+
+     --rating-module-button-color: var(--black-monochrome);
+     --rating-module-text-color: var(--swatch-menutxt-dark-color);
+
+     /* Header Gradients */
+     --gradient-header: linear-gradient(35deg,
+     rgb(var(--header-gradient-color-bottom)) 0,
+     rgb(var(--header-gradient-color-middle)) 90%,
+     rgb(var(--header-gradient-color-top)) 100%);
+
+     --gradient-topmenu: linear-gradient(to bottom,
+     rgba(255, 255, 255, 0) 0,
+     rgba(255, 255, 255, 0) 12.25rem,
+     rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) -webkit-calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) -webkit-calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+     --gradient-topmenu: linear-gradient(to bottom,
+     rgba(255, 255, 255, 0) 0,
+     rgba(255, 255, 255, 0) 12.25rem,
+     rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) -moz-calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) -moz-calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+     --gradient-topmenu: linear-gradient(to bottom,
+     rgba(255, 255, 255, 0) 0,
+     rgba(255, 255, 255, 0) 12.25rem,
+     rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) calc(100% - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+     --gradient-topmenu-mobile: linear-gradient(to bottom,
+     rgba(var(--swatch-topmenu-border-color), 1) 0,
+     rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) -webkit-calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) -webkit-calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+     --gradient-topmenu-mobile: linear-gradient(to bottom,
+     rgba(var(--swatch-topmenu-border-color), 1) 0,
+     rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) -moz-calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) -moz-calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+     --gradient-topmenu-mobile: linear-gradient(to bottom,
+     rgba(var(--swatch-topmenu-border-color), 1) 0,
+     rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-bg-color), 0) calc(3rem - .125rem),
+     rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+     --diagonal-stripes: inherit;
+
+     --header-background-image-size: 100% 12.25rem;
+     --base-font-size: 1rem;
+
+     --sidebar-width-on-desktop: -webkit-calc(var(--base-font-size) * 16);
+
+     --sidebar-width-on-desktop: -moz-calc(var(--base-font-size) * 16);
+
+     --sidebar-width-on-desktop: calc(var(--base-font-size) * 16);
+    }
+
+    ::-webkit-scrollbar,
+    #side-bar:hover::-webkit-scrollbar {
+     background-color: rgba(var(--pale-gray-monochrome), 1);
+    }
+
+    ::-webkit-scrollbar-thumb,
+    #side-bar:hover::-webkit-scrollbar-thumb {
+     background-color: rgba(var(--dark-gray-monochrome), 1);
+    }
+
+    ::-moz-selection {
+     background: rgba(var(--bright-accent), 0.5);
+    }
+
+    ::selection {
+     background: rgba(var(--bright-accent), 0.5);
+    }
+
+    html {
+        background: white;
+    }
+
+    #extra-div-1 {
+        height: 12.25rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: url("http://www.scp-wiki.net/local--files/theme:crocker-theme/crocker-header-bg.png");
+    }
+
+    html,
+    body {
+     -webkit-font-feature-settings: "onum"0;
+     -moz-font-feature-settings: "onum"0;
+     font-feature-settings: "onum"0;
+     font-variant-numeric: tabular-nums;
+     scrollbar-color: rgb(var(--dark-gray-monochrome)) rgb(var(--pale-gray-monochrome));
+    }
 
 
-    
-        <script  type="text/javascript">
-    
-        require.config({
-            baseUrl: URL_STATIC + '/common--javascript',
-            paths: {
-                'jquery.ui': 'jquery-ui.min',
-                'jquery.form': 'jquery.form'
-            }
-        });
-    
-    </script>
-    
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-                            <meta name="robots" content="index,follow"/>
-                                <meta name="language" content="zh,zh-cn"/>
-                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                            
-    
-    
-    
-    
-    <meta http-equiv="content-language" content="zh,zh-cn"/>
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
-        
-    
-    <style type="text/css" id="internal-style">
-        
-        /* modules */
-        
-                
-        /* theme */
-                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
-                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
-            </style>
-    
-        
-        
-        
-    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
-    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
-    
-            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
-        
-            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
-                
-            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
-    
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-18234656-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+    #page-content span > a,
+    #page-content div:not([id*="wiki-tabview"]) a {
+     -webkit-transition: -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -o-transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -moz-transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -webkit-box-shadow: inset 0 0 0 0.01px rgba(var(--light-gray-monochrome), 1);
+     -moz-box-shadow: inset 0 0 0 0.01px rgba(var(--light-gray-monochrome), 1);
+     box-shadow: inset 0 0 0 0.01px rgba(var(--light-gray-monochrome), 1);
+     -webkit-box-decoration-break: clone;
+     box-decoration-break: clone;
+    }
 
-        _gaq.push(['old._setAccount', 'UA-68540-5']);
-        _gaq.push(['old._setDomainName', 'none']);
-        _gaq.push(['old._setAllowLinker', true]);
-        _gaq.push(['old._trackPageview']);
+    .owindow .title {
+     background-color: rgb(var(--swatch-primary-darkest));
+     color: rgb(var(--white-monochrome));
+    }
 
-            </script>
-    
-    <script type="text/javascript">
-        window.google_analytics_uacct = 'UA-18234656-1';
-        window.google_analytics_domain_name = 'none';
-    </script>
-    
-        <link rel="manifest" href="/onesignal/manifest.json" />
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-          OneSignal.init({
-            appId: null,
-          });
-        });
-    </script>
-        
-<style>
-:root { --swatch-primary: 187, 0, 17; }
-.story {
-  clear: both; border: 3px black solid; padding: calc(20px - 1em) 0 20px 0;
+    .title.modal-header,
+    .owindow {
+     background: var(--gradient-header);
+     color: rgb(var(--white-monochrome));
+    }
+
+    .hovertip {
+     background: var(--gradient-header);
+     background-color: rgb(var(--dark-gray-monochrome));
+     color: rgb(var(--white-monochrome));
+     -webkit-background-size: contain;
+        -moz-background-size: contain;
+          -o-background-size: contain;
+             background-size: contain;
+    }
+
+    .owindow .button-bar a {
+     background-color: rgb(var(--swatch-menubg-dark-color));
+     color: rgb(var(--white-monochrome));
+    }
+
+    .title.modal-header h1,
+    .owindow h1,
+    .hovertip h1 {
+     color: rgb(var(--white-monochrome));
+    }
+
+    #lock-info,
+    #search-top-box-input {
+     background-color: rgb(var(--pale-gray-monochrome));
+    }
+
+    #login-status {
+     color: rgb(var(--dark-accent));
+    }
+
+    #login-status a {
+      color: rgb(var(--swatch-text-dark)) !important;
+     }
+
+     #search-top-box input.empty {
+      color: rgb(var(--dark-accent));
+     }
+
+    #main-content {
+     margin-top: 2.1em;
+    }
+
+    #page-content span > a:hover,
+    #page-content div:not([id*="wiki-tabview"]) a:hover {
+     -webkit-transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -o-transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -moz-transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--light-gray-monochrome), 0.75);
+     -moz-box-shadow: inset 100vw 0 0 0 rgba(var(--light-gray-monochrome), 0.75);
+     box-shadow: inset 100vw 0 0 0 rgba(var(--light-gray-monochrome), 0.75);
+     text-decoration: none;
+    }
+
+    body {
+     -webkit-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+     -moz-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+     -o-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+     background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+    }
+
+    hr {
+     background: rgb(0, 0, 0, 0);
+     border: 0;
+     height: 0em;
+     width: 90%;
+     position: relative;
+     margin: 1.875rem auto 2.175rem;
+    }
+
+    #page-title::after,
+    hr::after {
+     content: " ";
+     height: 0.35rem;
+     width: 100%;
+     position: absolute;
+     margin: 0 auto;
+     background: rgb(var(--white-monochrome));
+     border-top: 0.125rem dashed rgb(var(--gray-monochrome));
+     border-bottom: 0.125rem dashed rgb(var(--gray-monochrome));
+     left: 0;
+     top: 50%;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+    }
+
+    #header {
+     background-position: left .75rem top 1rem;
+     -webkit-background-size: auto 10.375rem;
+     -moz-background-size: auto 10.375rem;
+     -o-background-size: auto 10.375rem;
+     background-size: auto 10.375rem;
+     height: 12.25rem;
+     -webkit-filter: initial;
+             filter: initial;
+    }
+
+    #header h1 {
+     max-height: 12.75rem;
+    }
+
+    #header h1,
+    #header h1 a,
+    #header h2,
+    #header h2 span {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+    }
+
+    #header h1 a {
+     margin-left: 12rem;
+     margin-top: -1em;
+     position: relative;
+     height: 12.75rem;
+     width: auto;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -moz-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     top: 0;
+    }
+
+    #header h1 a::before {
+     font-size: 7rem;
+     --text-shadow: rgb(var(--swatch-text-light));
+    color: rgb(var(--dark-accent));
+    }
+
+    #header h2,
+    #header h2 span {
+     margin-left: 6.5rem;
+     height: 12.25rem;
+     -webkit-box-pack: start;
+     -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+     -ms-flex-pack: start;
+     justify-content: flex-start;
+     font-family: var(--title-font);
+     margin-top: 2.25rem;
+    }
+
+    #header h2 span {
+     line-height: 1.15;
+     font-size: 1.1rem;
+     margin-top: 0rem;
+    }
+
+     #header h2 span::before {
+     font-weight: 600;
+     text-shadow: 0.125rem 0.125rem 0 rgb(var(--white-monochrome));
+     }
+
+    #top-bar {
+     font-size: var(--base-font-size);
+     font-weight: 900;
+     margin: 12.25rem 0 1.75rem 0;
+     height: 1.875rem;
+    }
+
+    #side-bar {
+     margin: 2em 0 0 0;
+    }
+
+    #side-bar:hover {
+     background: rgb(var(--white-monochrome));
+    }
+
+    #top-bar div.top-bar > ul > li:hover,
+    #top-bar div.mobile-top-bar > ul > li:hover {
+     background-color: rgb(var(--gray-monochrome));
+    }
+
+    #top-bar div.top-bar > ul > li > a,
+    #top-bar div.mobile-top-bar > ul > li > a {
+     color: rgb(var(--swatch-menutxt-dark-color)) !important;
+    }
+
+    #top-bar div.top-bar > ul > li > a::before,
+    #top-bar div.top-bar > ul > li > a::after,
+    #top-bar div.mobile-top-bar > ul > li > a::before,
+    #top-bar div.mobile-top-bar > ul > li > a::after {
+     background-color: rgb(var(--dark-accent));
+    }
+
+    #top-bar div.top-bar > ul > li:hover > a,
+    #top-bar div.top-bar > ul > li:hover > a,
+    #top-bar div.top-bar > ul > li.sfhover > a,
+    #top-bar div.top-bar > ul > li.sfhover > a,
+    #top-bar div.mobile-top-bar > ul > li:hover > a,
+    #top-bar div.mobile-top-bar > ul > li:hover > a,
+    #top-bar div.mobile-top-bar > ul > li.sfhover > a,
+    #top-bar div.mobile-top-bar > ul > li.sfhover > a {
+     color: rgb(var(--white-monochrome)) !important;
+    }
+
+    #top-bar div.top-bar > ul > li > ul,
+    #top-bar div.mobile-top-bar > ul > li > ul {
+     background-color: rgb(var(--dark-gray-monochrome));
+     background-image: var(--gradient-header);
+     margin-top: 1.875rem;
+     margin-left: -0.0625rem;
+     -webkit-box-shadow: inherit;
+     -moz-box-shadow: inherit;
+     box-shadow: inherit;
+    }
+
+    #top-bar div.top-bar > ul > li > ul,
+    #top-bar div.mobile-top-bar > ul > li > ul,
+    #top-bar div.top-bar > ul > li > ul > li,
+    #top-bar div.mobile-top-bar > ul > li > ul > li {
+     border-color: rgb(var(--light-gray-monochrome));
+    }
+
+    #top-bar div.top-bar > ul > li > ul > li > a,
+    #top-bar div.mobile-top-bar > ul > li > ul > li > a {
+     font-weight: 600;
+    }
+
+    #top-bar div.top-bar > ul > li > ul > li > a::before,
+    #top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
+    #top-bar div.top-bar > ul > li > ul > li > a:hover::before,
+    #top-bar div.mobile-top-bar > ul > li > ul > li > a::before,
+    #top-bar div.mobile-top-bar > ul > li > ul > li > ul > li > a::before,
+    #top-bar div.mobile-top-bar > ul > li > ul > li > a:hover::before {
+     background-color: rgb(var(--dark-accent));
+    }
+
+    #side-bar:hover {
+     background: rgb(var(--white-monochrome));
+    }
+
+    #side-bar .heading,
+    #side-bar .side-block > .collapsible-block:nth-child(1) .collapsible-block-folded {
+     background: rgba(var(--pale-gray-monochrome), 0.5);
+     font-family: var(--title-font);
+     min-height: 1.5rem;
+    }
+
+    #side-bar .heading p,
+    #side-bar .side-block > .collapsible-block .collapsible-block-link {
+     text-shadow: inherit;
+     color: rgb(var(--dark-gray-monochrome));
+     font-weight: 900;
+     letter-spacing: 0.15em;
+     font-size: -webkit-calc(var(--base-font-size) * 0.95);
+     font-size: -moz-calc(var(--base-font-size) * 0.95);
+     font-size: calc(var(--base-font-size) * 0.95);
+     height: 1.5rem;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -moz-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+    }
+
+    #side-bar div.menu-item a::before,
+    #side-bar div.menu-item a:hover::before {
+     background-color: rgb(var(--light-gray-monochrome), 0.5);
+    }
+
+    #side-bar div.menu-item .sub-text {
+     color: rgb(var(--medium-accent));
+    }
+
+    #page-title {
+     font-family: var(--title-font);
+     position: relative;
+     border: 0px;
+     text-align: center;
+    }
+
+    #page-title:before {
+     top: -webkit-calc(100% - 0.75rem);
+     top: -moz-calc(100% - 0.75rem);
+     top: calc(100% - 0.75rem);
+    }
+
+    #page-title:after {
+     left: 50%;
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+     transform: translateX(-50%);
+     top: -webkit-calc(100%);
+     top: -moz-calc(100%);
+     top: calc(100%);
+     max-width: 43.375rem;
+    }
+
+    #content-wrap h1,
+    #content-wrap h2,
+    #content-wrap h3,
+    #content-wrap h4,
+    #content-wrap h5,
+    #content-wrap #page-title {
+     line-height: 1.25;
+     font-weight: 700;
+    }
+
+    #content-wrap h1,
+    #content-wrap #page-title {
+     font-size: 2.45rem;
+    }
+
+    #content-wrap h2 {
+     font-size: 1.7rem;
+    }
+
+    #content-wrap h3 {
+     font-size: 1.25rem;
+    }
+
+    #content-wrap h4 {
+     font-size: 1rem;
+    }
+
+    #content-wrap h5 {
+     font-size: .9rem;
+    }
+
+    #content-wrap * > #page-title,
+    #content-wrap * > h1:first-of-type,
+    #content-wrap * > h2:first-of-type,
+    #content-wrap * > h3:first-of-type,
+    #content-wrap * > h4:first-of-type,
+    #content-wrap * > h5:first-of-type,
+    #content-wrap * > h6:first-of-type {
+     margin-bottom: 0;
+     margin-top: 0;
+    }
+
+    #content-wrap * + h1,
+    #content-wrap * + h2,
+    #content-wrap * + h3,
+    #content-wrap * + h4,
+    #content-wrap * + h5,
+    #content-wrap * + h6 {
+     margin-top: 1.5em;
+    }
+
+    #content-wrap #page-title + *,
+    #content-wrap h1 + *,
+    #content-wrap h2 + *,
+    #content-wrap h3 + *,
+    #content-wrap h4 + *,
+    #content-wrap h5 + *,
+    #content-wrap h6 + * {
+     margin-top: 1em;
+    }
+
+    #content-wrap p + * {
+     margin-top: 1em;
+    }
+
+    #content-wrap ol:not([class*="yui-nav"]),
+    #content-wrap ul:not([class*="yui-nav"]) {
+     margin-bottom: 1em;
+     margin-top: 1em;
+     line-height: 1.5;
+     padding-left: 3ch;
+    }
+
+    #content-wrap ol:not([class*="yui-nav"]) {
+     counter-reset: crocker-counter;
+     list-style: none;
+    }
+
+     #content-wrap ul:not([class*="yui-nav"]) {
+      list-style: none;
+      text-indent: -1em;
+     }
+
+    #content-wrap ol:not([class*="yui-nav"]) li,
+    #content-wrap ul:not([class*="yui-nav"]) li {
+     margin-bottom: .25em;
+     max-width: 100ex;
+    }
+
+    #content-wrap ol:not([class*="yui-nav"]) li {
+     counter-increment: crocker-counter;
+     position: relative;
+     text-indent: -1rem;
+     line-height: 1.5rem;
+     padding-bottom: 0.5rem;
+    }
+
+    #content-wrap ul:not([class*="yui-nav"]) li::before,
+    #content-wrap ol:not([class*="yui-nav"]) li::before {
+     color: rgb(var(--medium-accent))
+    }
+
+    #content-wrap ul:not([class*="yui-nav"]) li::before {
+     font-family: var(--header-font);
+     font-size: 1.25rem;
+     content: "\2767";
+     margin-right: 0.25rem;
+    }
+
+    #content-wrap ol:not([class*="yui-nav"]) li::before {
+     content: counter(crocker-counter) ". ";
+     font-family: var(--header-font);
+     font-size: 1.25rem;
+    }
+
+    .page-rate-widget-box .cancel a,
+    .page-rate-widget-box .rateup a,
+    .page-rate-widget-box .ratedown a,
+    .page-rate-widget-box .cancel a::before,
+    .page-rate-widget-box .rateup a::before,
+    .page-rate-widget-box .ratedown a::before {
+     -webkit-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -o-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -moz-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    .page-rate-widget-box .cancel a:hover {
+     background-color: rgba(var(--gray-monochrome), 0.2);
+    }
+
+    .page-rate-widget-box .rateup a:hover {
+     background-color: rgba(0, 200, 0, 0.2);
+    }
+
+    .page-rate-widget-box .ratedown a:hover {
+     background-color: rgba(var(--dark-accent), 0.2);
+    }
+
+    .page-rate-widget-box .cancel a {
+     -webkit-box-shadow: inset 0 0 0 0 rgba(var(--light-gray-monochrome), 1) !important;
+     -moz-box-shadow: inset 0 0 0 0 rgba(var(--light-gray-monochrome), 1) !important;
+     box-shadow: inset 0 0 0 0 rgba(var(--light-gray-monochrome), 1) !important;
+    }
+
+    .page-rate-widget-box .rateup a {
+     -webkit-box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+     -moz-box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+     box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+    }
+
+    .page-rate-widget-box .ratedown a {
+     -webkit-box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+     -moz-box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+     box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+    }
+
+    .page-rate-widget-box .cancel a:hover {
+     -webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+     -moz-box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+     box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+    }
+
+    .page-rate-widget-box .cancel a:hover::before {
+     background-color: rgb(var(--white-monochrome));
+    }
+
+    .page-rate-widget-box .rateup a:hover {
+     -webkit-box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+     -moz-box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+     box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+    }
+
+    .page-rate-widget-box .rateup a:hover::before {
+     background-color: rgb(var(--white-monochrome));
+    }
+
+    .page-rate-widget-box .ratedown a:hover {
+     -webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+     -moz-box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+     box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+    }
+
+    .page-rate-widget-box .ratedown a:hover::before {
+     background-color: rgb(var(--white-monochrome));
+    }
+
+    #content-wrap table {
+     font-size: 1rem;
+     line-height: 1.5;
+     border-spacing: 0;
+     margin: 1.25rem auto !important;
+     border-collapse: collapse !important;
+    }
+
+    #content-wrap table td,
+    #content-wrap table th,
+    #content-wrap td,
+    #content-wrap th {
+     border: 1px solid rgb(var(--gray-monochrome));
+     background-color: rgb(var(--white-monochrome));
+     font-weight: 400;
+     padding: .25rem 0.5rem !important;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+        -moz-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     grid-auto-flow: column;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+        -moz-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+    }
+
+    #content-wrap thead td,
+    #content-wrap thead th,
+    #content-wrap th {
+     background-color: rgb(var(--pale-gray-monochrome)) !important;
+     color: rgb(var(--dark-gray-monochrome));
+     font-weight: 700 !important;
+    }
+
+    #content-wrap table thead th,
+    #content-wrap thead th {
+     font-weight: 700;
+    }
+
+    #content-wrap table th,
+    #content-wrap th {
+     text-align: left;
+    }
+
+    table.form,
+    table.form > tbody,
+    table.form > tr,
+    table.form td,
+    table.form input {
+     display: -ms-grid;
+     display: grid;
+     -webkit-box-align: stretch;
+     -webkit-align-items: stretch;
+        -moz-box-align: stretch;
+         -ms-flex-align: stretch;
+             align-items: stretch;
+     -webkit-box-pack: stretch;
+     -webkit-justify-content: stretch;
+        -moz-box-pack: stretch;
+         -ms-flex-pack: stretch;
+             justify-content: stretch;
+    }
+
+    table.form tr {
+     -webkit-box-align: stretch;
+     -webkit-align-items: stretch;
+     -moz-box-align: stretch;
+     -ms-flex-align: stretch;
+     align-items: stretch;
+    }
+
+    .yui-navset .yui-nav,
+    .yui-navset .yui-navset-top .yui-nav {
+     --box-shadow: rgb(var(--dark-accent));
+     -webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 var(--box-shadow);
+     -moz-box-shadow: 0 -moz-calc(0.0625rem * 5) 0 0 var(--box-shadow);
+     box-shadow: 0 calc(0.0625rem * 5) 0 0 var(--box-shadow);
+     font-weight: 700;
+    }
+
+    .yui-navset .yui-nav li,
+    .yui-navset .yui-navset-top .yui-nav li {
+     --box-shadow: rgb(var(--dark-gray-monochrome));
+     -webkit-box-shadow: 0 0 0 .0625rem var(--box-shadow);
+     -moz-box-shadow: 0 0 0 .0625rem var(--box-shadow);
+     box-shadow: 0 0 0 .0625rem var(--box-shadow);
+     -webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -moz-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     overflow: hidden;
+    }
+
+    .yui-navset .yui-nav .selected,
+    .yui-navset .yui-navset-top .yui-nav .selected {
+     background-color: rgb(var(--gray-monochrome));
+    }
+
+    .yui-navset .yui-nav .selected a,
+    .yui-navset .yui-nav .selected a em {
+     background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .yui-navset .yui-nav *,
+    .yui-navset .yui-nav *:hover {
+     -webkit-transition:
+     color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+     -o-transition:
+     color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+     -moz-transition:
+     color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition:
+     color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .yui-navset .yui-nav li:hover * {
+     color: rgb(var(--white-monochrome));
+    }
+
+    .yui-navset .yui-nav a:hover,
+    .yui-navset .yui-nav a:focus {
+     background-color: rgba(var(--dark-accent), 0.1);
+    }
+
+    .yui-navset .yui-nav a::before,
+    .yui-navset .yui-nav .selected a::before {
+     content: " ";
+     width: 125%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     background-color: rgb(var(--dark-accent), 1);
+     opacity: 1;
+     z-index: 0;
+     -webkit-clip-path: polygon(0.00% .00%, 100% 0, 90% 100%, 0 100%);
+     clip-path: polygon(0.00% .00%, 100% 0, 90% 100%, 0 100%);
+     -webkit-transform: translateX(-webkit-calc(-100% - 4rem));
+     -moz-transform: translateX(-moz-calc(-100% - 4rem));
+     -ms-transform: translateX(calc(-100% - 4rem));
+     -o-transform: translateX(calc(-100% - 4rem));
+     transform: translateX(calc(-100% - 4rem));
+     -webkit-transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     -o-transition: -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     -moz-transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     -moz-transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+     pointer-events: none
+    }
+
+    .yui-navset .yui-nav a:hover::before,
+    .yui-navset .yui-nav a:focus::before,
+    .yui-navset .yui-nav .selected a:hover::before {
+     -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+     -ms-transform: translateX(0);
+     -o-transform: translateX(0);
+     transform: translateX(0)
+    }
+
+    .yui-navset .yui-content,
+    .yui-navset .yui-navset-top .yui-content {
+     padding: 0.5em 2em;
+    }
+
+    sup {
+     top: -0.3em;
+    }
+
+    .footnotes-footer,
+    .code {
+     background-image:
+     -webkit-gradient(linear, left top, right top, color-stop(2.35rem, transparent), color-stop(2.35rem, #abced4), color-stop(2.5rem, #abced4), color-stop(2.5rem, transparent)),
+     -webkit-gradient(linear, left top, left bottom, color-stop(.1rem, rgba(var(--light-gray-monochrome), 0.5)), color-stop(.1625rem, transparent));
+     background-image:
+     -webkit-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+     -webkit-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     -moz-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+     -moz-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     -o-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+     -o-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     linear-gradient(90deg, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+     linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-position: 1rem 0.75rem;
+     -webkit-background-size: 100% 1.8rem;
+     -moz-background-size: 100% 1.8rem;
+     -o-background-size: 100% 1.8rem;
+     background-size: 100% 1.8rem;
+     font-size: 0.9rem;
+     font-family: var(--mono-font);
+    }
+
+    .code pre {
+     white-space: pre;
+     white-space: normal;
+     width: 100%;
+     overflow: hidden;
+    }
+
+    .code > *,
+    .footnotes-footer > * {
+     padding: 0 0 0 3rem;
+     line-height: 2;
+     font-weight: 400;
+     letter-spacing: 0.05em;
+     outline: none;
+    }
+
+    .footnotes-footer div:not([id*="footnote-1"]) {
+     padding: 0 0 0 3rem;
+    }
+
+    .footnote-footer {
+     display: block;
+     position: relative;
+     width: 90%;
+     margin: 0;
+    }
+
+    .footnote-footer > a:nth-of-type(1) {
+     margin-left: 0;
+    }
+
+    .footnotes-footer .title {
+     margin: 0;
+     font-size: 1.5em;
+     font-weight: bold;
+     margin-bottom: -0.3em;
+     padding: 0.2em 0 0 3rem !important;
+    }
+
+    div.buttons.alignleft > input,
+    div#page-options-bottom > a,
+    div#page-options-bottom-2 > a {
+     -webkit-border-radius: 0rem;
+     -moz-border-radius: 0rem;
+     border-radius: 0rem;
+     background-color: rgba(var(--pale-gray-monochrome), 1);
+     border: .125rem solid rgba(var(--dark-gray-monochrome), 1);
+     color: rgb(var(--link-color)) !important;
+     -webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     -moz-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+     transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    div.buttons.alignleft > input:hover,
+    div.buttons.alignleft > input:active,
+    div#page-options-bottom > a:hover,
+    div#page-options-bottom > a:active,
+    div#page-options-bottom-2 > a:hover,
+    div#page-options-bottom-2 > a:active {
+     background-color: rgba(var(--dark-gray-monochrome), 1);
+     color: rgba(var(--swatch-menutxt-light-color), 1) !important;
+    }
+
+    .scp-image-block {
+     -moz-box-shadow: initial;
+          box-shadow: initial;
+     -webkit-box-shadow: initial;
+    }
+
+    form#edit-page-form {
+     -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+     border-radius: 0;
+    }
+
+    #footer a {
+     color: rgb(var(--swatch-primary));
+    }
+
+    #footer {
+     color: rgba(var(--black-monochrome));
+     background: rgba(var(--pale-gray-monochrome));
+    }
+
+    @media only screen and (max-width: 768px) {
+     #header {
+     background-position: left .5rem top 2rem;
+     -webkit-background-size: auto 8.375rem;
+     -moz-background-size: auto 8.375rem;
+     -o-background-size: auto 8.375rem;
+     background-size: auto 8.375rem;
+     height: 12.25rem;
+     top: -12.25rem;
+     }
+
+     #header h1 a {
+     margin-left: 7rem;
+     margin-top: -2.5rem;
+     }
+
+     #header h1 a::before {
+     font-size: 7rem;
+     }
+
+     #header h2 {
+     width: -webkit-calc(100% - 9.5rem);
+     width: -moz-calc(100% - 9.5rem);
+     width: calc(100% - 9.5rem);
+     height: -webkit-calc(100% - 7.5rem);
+     height: -moz-calc(100% - 7.5rem);
+     height: calc(100% - 7.5rem);
+     margin-left: 8.35rem;
+     margin-top: 8rem;
+     text-align: left;
+     }
+
+     #header h2 span {
+     width: 90vw;
+     height: 100%;
+     margin: 0;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     position: relative;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -moz-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     font-size: -webkit-calc(var(--base-font-size) * 1.05);
+     font-size: -moz-calc(var(--base-font-size) * 1.05);
+     font-size: calc(var(--base-font-size) * 1.05);
+     }
+
+     #header h2 span::before {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 90%;
+     margin: 0;
+     }
+
+     #top-bar {
+     font-size: -webkit-calc(var(--base-font-size) * 0.8);
+     font-size: -moz-calc(var(--base-font-size) * 0.8);
+     font-size: calc(var(--base-font-size) * 0.8);
+     height: 2.5rem;
+     top: -12.25rem;
+     }
+
+     #top-bar > div.mobile-top-bar > div.open-menu {
+     font-size: -webkit-calc(var(--base-font-size) * 0.65);
+     font-size: -moz-calc(var(--base-font-size) * 0.65);
+     font-size: calc(var(--base-font-size) * 0.65);
+     width: 2.5rem;
+     height: 2.5rem;
+     }
+
+     #top-bar > div.mobile-top-bar > div.open-menu > p > a {
+     color: rgb(var(--swatch-menutxt-dark-color)) !important;
+     }
+
+     #top-bar div.mobile-top-bar > ul > li > a {
+     letter-spacing: 0;
+     }
+
+     #top-bar > div.top-bar > ul > li:last-of-type > ul,
+     #top-bar > div.mobile-top-bar > ul > li:last-of-type > ul {
+     left: 50%;
+     }
+
+     #top-bar div.mobile-top-bar > ul > li > ul {
+     margin-top: 2.5rem;
+     }
+
+     #login-status {
+     right: -webkit-calc(3% + 30px);
+     right: -moz-calc(3% + 30px);
+     right: calc(3% + 30px);
+     }
+
+     #search-top-box:not(:focus-within)::before {
+     top: 5.625rem;
+     }
+
+     #search-top-box,
+     #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
+     height: 12.25rem;
+     }
+
+     #side-bar:target .close-menu {
+     width: -webkit-calc(100% - 15em - var(--scrollbar-width));
+     width: -moz-calc(100% - 15em - var(--scrollbar-width));
+     width: calc(100% - 15em - var(--scrollbar-width));
+     }
+
+     .footnotes-footer,
+     .code {
+     background-image:
+     -webkit-gradient(linear, left top, right top, color-stop(1.35rem, transparent), color-stop(1.35rem, #abced4), color-stop(1.5rem, #abced4), color-stop(1.5rem, transparent)),
+     -webkit-gradient(linear, left top, left bottom, color-stop(.1rem, rgba(var(--light-gray-monochrome), 0.5)), color-stop(.1625rem, transparent));
+     background-image:
+     -webkit-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+     -webkit-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     -moz-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+     -moz-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     -o-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+     -o-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-image:
+     linear-gradient(90deg, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+     linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+     background-position: 1rem 0.45rem;
+     -webkit-background-size: 100% 1.25rem;
+        -moz-background-size: 100% 1.25rem;
+          -o-background-size: 100% 1.25rem;
+             background-size: 100% 1.25rem;
+     font-size: 0.7rem;
+     font-family: var(--mono-font);
+
+     }
+
+     .code > *,
+     .footnotes-footer > * {
+     line-height: 1.75;
+     padding-left: 2.5rem;
+     }
+
+     .footnotes-footer .title {
+     padding-left: 2.5rem !important;
+     ;
+     }
+
+     .footnotes-footer div:not([id*="footnote-1"]) {
+     padding: 0 0 0 2.5rem;
+     }
+
+     #content-wrap h1,
+     #content-wrap #page-title {
+     font-size: 1.9rem;
+     }
+
+     #content-wrap h2 {
+     font-size: 1.5rem;
+     }
+
+     #content-wrap h3 {
+     font-size: 1.1rem;
+     }
+
+     #content-wrap h4 {
+     font-size: 0.9rem;
+     }
+
+     #content-wrap h5 {
+     font-size: .8rem;
+     }
+
+    }
 }
-.story p {
-  margin-left: 20px; margin-right: 20px; 
-}
-.choices {
-  clear: both;
-}
-.choices a {
-  height: 30px; border: 1px solid #b01; border-right: 1px solid transparent; line-height: 30px; position: relative; background: white; z-index: 8; margin-bottom: 0.5em; float: left; clear: both; padding-left: 7px; margin-left: 20px; margin-right: 20px
-}
-.choices a::before {
-  content: ""; position: absolute; border: 16px solid transparent; border-left: 16px solid #b01; right: -33px; top: -1px; z-index: 6;
-}
-.choices a::after {
-  content: ""; position: absolute; border: 15px solid transparent; border-left: 15px solid white; right: -31px; top: 0; z-index: 7;
-}
-.choices p {
-  clear: both; height: 30px; margin: 0 0 0 0;
-}
-.footer-wikiwalk-nav {
-  margin-top: 50px;
-}
-span, a {
-  word-break: normal !important;
-}
-@media (max-width: 580px) {
-  .choices a {
-    line-height: initial !important; margin-left: 10px !important; margin-right: 30px !important;
-  }
-}
-</style>
-<style>
-@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
-</style>
-<script src="https://s.nitropay.com/ads-143.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-</head>
-<body id="html-body">
-<div id="skrollr-body">
-<a name="page-top"></a>
-
-
-
-
-
-<div id="container-wrap-wrap">
-    <div id="container-wrap">
-        <div id="container">
-            <div id="header">
-              <h1><a href="/"><span>SCP基金会</span></a></h1>
-                
-                    <h2><span>控制，收容，保护</span></h2>
-                
-                
-                <!-- google_ad_section_start(weight=ignore) -->
-                
-                <div id="search-top-box" class="form-search">
-    <form id="search-top-box-form" action="dummy" class="input-append">
-        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
-    </form>
-</div>
-                
-                
-                    <div id="top-bar">
-                        
-
-<div class="top-bar">
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>SCP-CN系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-</ul>
-</li>
-<li>SCP国际
-<ul>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
-<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
-<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
-<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
-<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
-<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
-<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
-<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
-<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
-<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
-<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
-<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
-<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="mobile-top-bar">
-<div class="open-menu">
-<p><a href="#side-bar">≡</a></p>
-</div>
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-                    </div>
-                
-                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
-                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
-            </div>
-            
-            <div id="content-wrap">
-                
-                    <div id="side-bar">
-                        
-
-
-                        
-
-<div class="side-block" style="background-color: #f0fff6;">
-<div class="heading">
-<p>新人资讯</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
-</div>
-<div class="side-block">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
-<div class="heading">
-<p>SCP-CN系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
-<div class="heading">
-<p>SCP系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
-<div class="heading">
-<p>SCP系列故事</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
-<div class="heading">
-<p>SCP图书馆</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
-<div class="heading">
-<p>网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
-<div class="heading">
-<p>社交</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
-<div class="heading">
-<p>相关网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
-</div>
-<div class="side-block resources" style="background-color: #e7e5e8;">
-<div class="heading">
-<p>写作指导</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
-</div>
-<div class="side-block" style="background-color: #fff0f0;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-content">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="side-block media" style="background-color: #e5e5ff;">
-<div class="heading">
-<p>相关媒体</p>
-</div>
-<div class="menu-item">
-<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
-</div>
-</div>
-<div class="side-block" style="background-color: #f0f0f0;">
-<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
-<span style="font-size:80%;">© SCP基金会<br />
-<a href="/licensing-guide">授权指南</a></span></div>
-</div>
-<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-3939" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
-</div>
-    
-    
-    
-    </div></div>
-<div style="clear:both; height: 0px; font-size: 1px"></div>
-<a class="close-menu" href="###"><br />
-<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
-                        
-
-
-                    </div>
-                
-                
-                <!-- google_ad_section_end -->
-                
-                <div id="main-content">
-                    <div id="action-area-top"></div>
-                    
-                    
-                        <div id="page-title">
-                            SCP-3939
-                        </div>
-                    
-
-                    
-
-                    
-
-
-
-                    <div id="page-content">
-                        
-
-
-
-
-
-
-<div class="creditRate">
-<div class="creditButtonStandalone">
-<p><a class="fa fa-info" href="#u-credit-view"></a></p>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div id="u-credit-view">
-<div class="fader">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-<div class="modalcontainer">
-<div class="modalbox">
-<div style="text-align: center;">
-<h2><span>著作信息</span></h2>
-</div>
-<hr />
-<div class="credit first">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-<p><strong>文章：</strong> SCP-3939 (<em>[编号保留，以待研究员]</em>)</p>
-<p><strong>作者：</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1608737405" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span></p>
-<p><strong>致谢：</strong> <span class="error-inline"><em>Baseplate-Actual</em> does not match any existing user name</span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/taylor-itkin" onclick="WIKIDOT.page.listeners.userInfo(3208919); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3208919&amp;amp;size=small&amp;amp;timestamp=1608737405" alt="taylor_itkin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3208919)" /></a><a href="http://www.wikidot.com/user:info/taylor-itkin" onclick="WIKIDOT.page.listeners.userInfo(3208919); return false;">taylor_itkin</a></span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=776854&amp;amp;size=small&amp;amp;timestamp=1608737405" alt="Tanhony" style="background-image:url(http://www.wikidot.com/userkarma.php?u=776854)" /></a><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;">Tanhony</a></span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mayd" onclick="WIKIDOT.page.listeners.userInfo(1422059); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1422059&amp;amp;size=small&amp;amp;timestamp=1608737405" alt="MayD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1422059)" /></a><a href="http://www.wikidot.com/user:info/mayd" onclick="WIKIDOT.page.listeners.userInfo(1422059); return false;">MayD</a></span></p>
-<p>这是一篇多选择故事。每一页底部的箭头形状的链接选项表示其可将您带到另一页中。完整阅读一整条这篇SCP的故事线将花费大约15分钟。并不期望您会再读一遍。</p>
-<p><a href="/cone">作者页</a></p>
-</div>
-<hr />
-<div class="credit-back" style="text-align: center;">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-</div>
-</div>
-</div>
-</div>
-<div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div class="scp-image-block block-right" style="width: 300px;"><img src="http://scp-wiki.wdfiles.com/local--files/scp-3939/scp.jpg" style="width: 300px;" alt="scp.jpg" class="image" />
-<div class="scp-image-caption" style="width: 300px;">
-<p>IMG_201802280039.JPG</p>
-</div>
-</div>
-<p><strong>项目编号：</strong>SCP-3939</p>
-<p><strong>项目等级：</strong>未分级</p>
-<p><strong>特殊收容措施：</strong>项目目前被收容于标准预控制收容室。一名研究员将被分配至项目处以尽快将项目分级。</p>
-<p><strong>描述：</strong>目前尚无。</p>
-<div class="story">
-<blockquote>
-<p><strong>To:</strong> 站点主管 (Site-39)</p>
-<p><strong>From:</strong> 研究员 ████ ████████</p>
-<p>Amanda,</p>
-<p>我刚刚看了一下原始通信记录。并不是SCP-3939，是完全不一样的另外一个。我不知道我怎么搞错的。</p>
-<p>致以诚挚的歉意。谢谢你纠正我的错误。</p>
-<p>再次道歉，</p>
-<p>研究员 ████ ████████</p>
-</blockquote>
-<p>真他妈一坨屎。SCP-3939绝对就是你要去研究的那个。毫无疑问。只是确认一下，也看看你的邮件，你打开了来自O5-3，指示你到Site-39的第一份邮件，标题是“补偿。”</p>
-<p>&#8230;</p>
-<p>没错儿，那里的确说了，SCP-3939。而且在你、O5-3和O5-9所有的往来邮件中这个编号出现了好多次。也从没人说“等等，不，这才是我们要你研究的那个完全不同的SCP。”</p>
-<p>所以Amanda Salisbury要么就是想让你看起来像是个傻子，要么就是她真不知道她自己站点里有个在预收容状态下可能有13年的异常。你不知道哪种更让人着急。如果是前者，你发了这封邮件就已经像是个傻子了。如果是后者，你还是像个傻子，但是可能稍微好点儿。</p>
-<p>“稍微好点的白痴。”是你能做的最好选择。你发送了邮件。</p>
-<div class="choices">
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-3939/offset/44">自己去看看SCP-3939</a></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-3939/offset/33">回家睡觉摆脱尴尬。</a></p>
-</div>
-</div>
-</div>
-    
-    
-    
-    </div>
-<div class="footer-wikiwalk-nav">
-<div style="text-align: center;">
-<p>&#171; <a class="newpage" href="/scp-3938">SCP-3938</a> | SCP-3939 | <a href="/scp-3940">SCP-3940</a> &#187;</p>
-</div>
-</div>
-<div class="licensebox">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;授权&nbsp;/&nbsp;引用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;隐藏授权&nbsp;/&nbsp;引用</a></div>
-<div class="collapsible-block-content">
-<p>请按如下方式引用此页：</p>
-<div class="list-pages-box">    <div class="list-pages-item">
-
-
-<blockquote>
-<p>“<a href="/scp-3939">SCP-3939</a>”，作者 Croquembouche，来自 <a href="http://www.scpwiki.com/">SCP 维基</a>。原文链接：<a href="http://www.scpwiki.com/scp-3939">http://www.scpwiki.com/scp-3939</a>。译者 Hannah_AI，来自 <a href="http://scp-wiki-cn.wikidot.com/">SCP-CN 维基</a>。译文链接：<a href="http://scp-wiki-cn.wikidot.com/scp-3939">http://scp-wiki-cn.wikidot.com/scp-3939</a>。遵循 <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC-BY-SA</a> 协议。</p>
-</blockquote>
-</div>
-    
-    
-    
-    </div>
-<p>更多详情请参阅<a href="http://scp-wiki-cn.wikidot.com/licensing-guide">授权指南</a>。<br />
-<strong>授权信息</strong></p>
-<div class="content-separator" style="display: none:"></div>
-<blockquote>
-<p><strong>文件名：</strong>Gramophone<br />
-<strong>图像作者：</strong>Michael Bußmann<br />
-<strong>授权协议：</strong>CC0<br />
-<strong>来源链接：</strong><a href="https://pixabay.com/photos/gramophone-turntable-shellac-disc-1790007/" target="_blank">https://pixabay.com/photos/gramophone-turntable-shellac-disc-1790007/</a><br />
-<strong>备注：</strong>发布于2016年</p>
-</blockquote>
-<div class="content-separator" style="display: none:"></div>
-<p>更多维基文档信息，请见<a href="http://www.scp-wiki.net/licensing-master-list">版权信息总览</a>。</p>
-</div>
-</div>
-</div>
-</div>
-
-                    </div>
-
-                            
-            <!-- wikidot_bottom_300x250 -->
-<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
-<script type='text/javascript'>
-nads.createAd('wad-scp-wiki-cn-below-content', {
-  "refreshLimit": 10,
-  "refreshTime": 83,
-  "sizes": [ [ 300, 250 ] ],
-  "report": {
-    "enabled": true,
-    "wording": "Report Ad",
-    "position": "bottom-right"
-  }
-  });
-</script>
-        
-    
-
-                    
-
-
-
-                    
-                        <div class="page-tags">
-                            <span>
-                                <a href="/system:page-tags/tag/meta#pages">meta</a><a href="/system:page-tags/tag/safe#pages">safe</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/%E4%BA%92%E5%8A%A8%E6%80%A7#pages">互动性</a><a href="/system:page-tags/tag/%E5%8F%99%E8%BF%B0%E6%80%A7#pages">叙述性</a><a href="/system:page-tags/tag/%E6%84%9F%E7%9F%A5%E5%8A%9B#pages">感知力</a><a href="/system:page-tags/tag/%E6%95%8C%E6%84%8F#pages">敌意</a><a href="/system:page-tags/tag/%E6%99%BA%E8%83%BD#pages">智能</a><a href="/system:page-tags/tag/%E6%A6%82%E5%BF%B5#pages">概念</a><a href="/system:page-tags/tag/%E6%A8%A1%E5%9B%A0#pages">模因</a>
-                            </span>
-                        </div>
-                    
-
-                    <div id="page-info-break"></div>
-                    
-                        <div id="page-options-container">
-                            <div id="page-info">页面版本: 7, 最后编辑于: <span class="odate time_1608365420 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">19 Dec 2020 08:10</span></div>
-            <div id="page-options-bottom"  class="page-options-bottom">
-            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+35</span>)</a>
-<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-5687233/scp-3939" class="btn btn-default" id="discuss-button">讨论 (19)</a>
-<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
-<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
-<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
-<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
-<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
-</div>
-<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
-    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
-    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
-    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
-    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
-    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
-    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
-    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
-    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
-</div>
-<div id="page-options-area-bottom">
-</div>
-
-                        </div>
-                    
-                    <div id="action-area" style="display: none;"></div>
-                </div>
-            </div>
-            
-            
-            
-            <div id="footer" style="display: block; visibility: visible;">
-                <div class="options" style="display: block; visibility: visible;">
-    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
-    &nbsp;|
-    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
-    &nbsp;|
-    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
-</div>
-基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
-            </div>
-            
-                <div id="license-area" class="license-area">
-                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
-                </div>
-            
-            
-            
-
-
-
-            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
-            
-            
-            
-            
-                <div id="footer-bar">
-  <div>
-     </div>
-  <h2>其它有趣的网站</h2>
-  
-  <div class="units">
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://liminal-sandbox.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/liminal-sandbox.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://liminal-sandbox.wikidot.com">Liminal Sandbox</a></h3>
-            <div class="desc">          
-              Sandbox for the Liminal Archives
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://rpcauthority.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rpcauthority.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://rpcauthority.wikidot.com">RPC Authority</a></h3>
-            <div class="desc">          
-              Research, Protection, Containment
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://bzhlab.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bzhlab.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://bzhlab.wikidot.com">BZHLab</a></h3>
-            <div class="desc">          
-              Makers goes west!
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://wiki.zeromq.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wiki.zeromq.org/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://wiki.zeromq.org">zeromq</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-        </div>
-  </div>
-
-            
-        </div>
-        
-    </div>
-<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
-<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
-<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
-</div>
-
-
-
-
-</div>
-<div id="dummy-ondomready-block" style="display: none;" ></div>
-    <!-- Google Analytics load -->
-    <script type="text/javascript">
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <!-- Quantcast -->
-    <script type="text/javascript">
-    _qoptions={
-        qacct:"p-edL3gsnUjJzw-"
-    };
-    (function() {
-        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
-        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
-    })();
-    </script>
-    <noscript>
-        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
-    </noscript>
-
-
-
-
-<div id="page-options-bottom-tips" style="display: none;">
-    <div id="edit-button-hovertip">
-        请点此编辑本页内容。    </div>
-</div>
-<div id="page-options-bottom-2-tips"  style="display: none;">
-    <div id="edit-sections-button-hovertip">
-        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
-    <div id="edit-append-button-hovertip">
-        在不编辑整个页面源代码的情况下添加内容。    </div>
-    <div id="history-button-hovertip">
-        看看本页过去是如何沿革的。    </div>
-    <div id="discuss-button-hovertip">
-        若您想要讨论本页内容 - 这是最简单的方法。    </div>
-    <div id="files-button-hovertip">
-        检视并管理本页附件。    </div>
-    <div id="site-tools-button-hovertip">
-        管理网站的实用工具。    </div>
-    <div id="backlinks-button-hovertip">
-        检视链接至本页或引用本页的页面。    </div>
-    <div id="rename-move-button-hovertip">
-        变更页面名称（及URL 位址，或许会影响分类）。    </div>
-    <div id="view-source-button-hovertip">
-        在不编辑的情形下检视维基原始码。    </div>
-    <div id="parent-page-button-hovertip">  
-        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
-            <div id="abuse-report-button-hovertip">
-            向管理员举报本页有令人反感的内容。        </div>
-        <div id="bug-report-button-hovertip">
-            事情不如预期？看看您可以做些什么。        </div>
-        <div id="wikidot-help-button-hovertip">
-            一般的 Wikidot.com 文件与说明。        </div>
-        <div id="wikidot-tos-button-hovertip">
-            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
-        <div id="wikidot-privacy-button-hovertip">
-            Wikidot.com 隐私政策。          
-        </div>
-    </div>
-</body>
-</html>

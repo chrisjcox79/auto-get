@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<style>
+@charset "utf-8";
+@import url('www.scp-wiki.net/component:theme/code/1');
+</style>
+<script type = "text/javascript">
+  function resetBox(){
+  var txtName = document.getElementById("inputLicenseInfo");
+  var name = txtName.value;
+  inputLicenseInfo.value = "**Images:** (or audio, if applicable)\r\n* \"[LINK-TO-SOURCE Name-of-image]\" by AUTHOR-NAME, Licensed under Type-of-License"
+  } // end clear
+  function boxify(){
+  var txtName = document.getElementById("inputLicenseInfo");
+  var name = txtName.value;
+  inputLicenseInfo.value = "[[include :scp-wiki:component:license-box]]\r\n=====\r\n" + name + "\r\n=====\r\n[[include :scp-wiki:component:license-box-end]]"
+  } // end boxify
+ </script>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "textBoxes.css" />
+ </head>
+ <body>
+ <form action = "">
+ <textarea id="inputLicenseInfo" rows="10" cols="80">
+&gt; **Filename:**
+&gt; **Name:** (if different from filename)
+&gt; **Author:**
+&gt; **License:**
+&gt; **Source Link:**
+&gt; **Derivative of:** (If applicable)
+&gt; **Additional Notes:** (Optional)
+</textarea><br>
+<input type = "button" value = "License-box-ify!" onclick = "boxify()"/>
+<input type = "button" value = "Reset" onclick = "resetBox()"/>
+ </form>
+ <script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
