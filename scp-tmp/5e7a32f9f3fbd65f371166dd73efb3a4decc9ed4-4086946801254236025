@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[include component:image-block
+|name=图片链接
+|caption=描述文字
+]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

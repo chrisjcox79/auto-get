@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
+
+/* ---------------------------------
+Word Processor Theme
+2020 Wikidot Theme
+Created by stormbreath
+Logo Image by Rounderhouse and MalyceGrayves
+--------------------------------- */
+
+/* -------------- MAIN -------------- */
+a,
+a.newpage,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a {
+    color: #00F;
+}
+
+a:visited{
+    color: #00C;
+}
+
+h1,
+#page-title {
+    color: black;
+    border-color: black;
+}
+
+/* Creates the page effect of the body. */
+#main-content {
+    margin-top: 2em;
+    background: white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+    padding: 1em;
+}
+
+
+/* -------------- HEADER -------------- */
+ div#container-wrap {
+     background-image: url(none);
+}
+
+body {
+    background-color: #e6e6e6;
+    background-image: linear-gradient(
+        to bottom,
+        #0F4699, #0F4699 38px,
+        #f4f4f4 38px, #f4f4f4 140px,
+        #0F4699 140px, #0F4699 162px,
+        #e6e6e6 162px, #e6e6e6 100%);
+    background-repeat: no-repeat;
+}
+
+#header {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aword-processor/commonlogo.png");
+}
+
+#header h1 a {
+    color: transparent;
+    text-shadow: none;
+}
+
+#header h1 a::before {
+    content: 'Common Office';
+    color: #333;
+    font-family: 'Baloo Bhaina 2', '微软雅黑', cursive;
+}
+
+#header h2 span {
+   color: transparent;
+   text-shadow: none;
+}
+
+#header h2 span::before {
+    content: '开源文字处理器';
+    color: #0F4699;
+    font-family: 'Baloo Bhaina 2', '微软雅黑', cursive;
+}
+
+/* -------------- SEARCH-BAR -------------- */
+#search-top-box-input {
+    border-color: #999;
+    background-color: #e6e6e6;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background-color: #f2f2f2;
+    box-shadow: none;
+    border-color: #ccc;
+    color: #333;
+}
+
+#search-top-box-form input[type=submit] {
+    background: #0F4699;
+    border-color: #999;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    background: #1152B2;
+    box-shadow: none;
+    border-color: #ccc;
+}
+
+/* -------------- LOG-IN INFO -------------- */
+#login-status .printuser a {
+    display: none;
+}
+
+#login-status {
+    color: white;
+}
+#login-status a {
+    background: transparent;
+    color: white;
+}
+
+#account-topbutton {
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+/* -------------- SIDE-BAR -------------- */
+/* See also: the Collapsible Side-Bar Component, included in this theme */
+#side-bar .side-block {
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+#side-bar .heading,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #333;
+    border-color: #333;
+}
+
+#side-bar a,
+#side-bar a:visited {
+    color: #666;
+}
+
+.side-block .menu-item > .image {
+    visibility: hidden;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+
+iframe.scpnet-interwiki-frame {
+    filter: saturate(0%);
+}
+
+/* -------------- MOBILE SIDE-BAR -------------- */
+@media (max-width: 767px) {
+    #side-bar {
+        background-color: white;
+    }
+
+    .open-menu a {
+        border-radius: 0;
+        border: none !important;
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #side-bar .close-menu {
+        transition: width 0.5s ease-in-out 0.1s,
+                    opacity 1s ease-in-out 0s;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(0,0,0,0.3);
+        background-position: 19em 50%;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #side-bar:target .close-menu {
+        width: calc(100% - 19em);
+        right: 0;
+        left: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* -------------- FOOTERS -------------- */
+.footnotes-footer {
+    border-top: 1px solid #333;
+}
+
+.footnotes-footer a {
+    color: #333;
+}
+
+.page-tags span {
+    border: none;
+    margin-top: 1em;
+}
+
+#page-options-container {
+    opacity: .1;
+    transition: opacity .75s;
+}
+
+#page-options-container:hover,
+#page-options-container:focus {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    #page-options-container {
+        opacity: .7;
+    }
+}
+
+#footer,
+#footer a {
+    background-color: transparent;
+    color: black;
+}
+
+/* -------------- RATING MODULE -------------- */
+.page-rate-widget-box {
+    box-shadow: none;
+    margin: unset;
+}
+
+.page-rate-widget-box .rate-points {
+    background-color: white !important;
+    color: black !important;
+    border: solid 1px white;
+    font-weight: normal !important;
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    font-weight: normal;
+}
+
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: black;
+}
+
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: white;
+    color: black;
+}
+
+.page-rate-widget-box .cancel {
+    background: transparent;
+    background-color: white;
+    border: solid 1px white;
+}
+
+.page-rate-widget-box .cancel a {
+    color: black;
+}
+.page-rate-widget-box .cancel a:hover {
+    background: white;
+    color: black;
+}
+
+/* -------------- BLINK-BAR -------------- */
+#u-blink-bar p:last-child::after {
+    content: '|';
+    animation: blink 1.5s infinite;
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+}
+
+@keyframes blink{
+    to {
+        opacity: .0;
+    }
+}

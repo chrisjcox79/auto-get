@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<style type="text/css">
+    body {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12.8px; /* 16px * 0.8 */
+        color: #333;
+        line-height: 141%;
+    }
+    #classified-info, #meme-agent {
+        display: none;
+    }
+
+.printuser{
+}
+
+.printuser a{
+    margin-right: -1px;
+}
+
+.printuser img.small{
+    vertical-align: -0.3em;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    z-index:0;
+    padding: 1px 9px 1px 8px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.printuser.anonymous img.small{
+    padding: 1px;
+}
+
+a.avatar-hover,  a.avatar-hover:hover {
+    background: none;
+    background-image: url(../images/background/opacity2.png);
+    padding: 8px;
+    text-decoration: none;
+    font-size: 130%;
+    color: black;
+    font-weight: bold;
+}
+
+a.avatar-hover img{
+ vertical-align: middle;
+}
+
+a.avatar-hover div{
+    position: relative;
+}
+
+a.avatar-hover div div{
+    position: absolute;
+    left: 48px;
+    top: 0;
+    height: 48px;
+    right: 0px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+
+}
+
+a.avatar-hover div span{
+    padding: 0.5em 1em;
+    margin: 0 1em;
+
+    background-color: white;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    z-index: 30;
+
+}
+
+.printuser a:hover img.large{
+    display: block;
+}
+
+.printuser .ip{
+    font-size: 90%;
+}
+
+    blockquote {
+        border: 1px dashed #999;
+        padding: 0 12.8px;
+        background-color: #f4f4f4;
+        margin: 1em 0;
+    }
+    a {
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 12.8 px;
+    }
+    .collapsed {
+        display: none;
+    }
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
+}
+
+h1{
+    font-size: 190%;
+    font-weight: normal;
+}
+h2{
+    font-weight: normal;
+    font-size: 150%;
+}
+h3{
+    font-weight: bold;
+    font-size: 130%;
+}
+h4{
+    font-weight: bold;
+    font-size: 120%;
+}
+h5 {
+    font-weight: bold;
+    font-size: 100%;
+}
+h6 {
+    font-weight: bold;
+    font-size: 90%;
+}
+
+    .image-container.floatright {
+        padding-right: 0;
+        float: right;
+    }
+    tt{
+        font-family: 'Andale Mono', 'Courier New', Courier, monospace; 
+        font-size: 98%;
+    }
+    .collapsed {
+        display: none;
+    }
+
+table.scp-image-block{
+    border-collapse:collapse;
+    border-spacing: 0;
+    margin: 0.5em auto;
+    border: solid 1px #666;
+    box-shadow: 0 1px 6px rgba(0,0,0,.25);
+    width: 300px;
+}
+table.scp-image-block td{
+    border: 0;
+    width: 300px;
+}
+table.scp-image-block th{
+    background-color: #eee;
+    border-top: solid 1px #666;
+    padding: 2px 0;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+}
+</style>
+<style>
+.hover {
+text-decoration: none;
+    border-bottom: none;
+    color:black;
+}
+.hover:hover {
+     text-decoration: none;
+    border-bottom: none;
+    color:#004c00;
+}
+
+.hover span {    display: none;}
+.hover:hover span {
+    position: absolute;
+    display: inline;
+    margin: 20px 0px;
+    height: auto;
+    width: auto;
+    background: #FFF;
+    border: 1px solid #000;
+    color: black;
+    padding: 0.5em;
+}
+.hover:hover span span {
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: auto;
+    border: none;
+    padding: 0;
+}
+</style>
+<script type="text/javascript">
+
+var collapsibleLink = function(className) {
+    var collapsed = document.querySelectorAll("." + className + ".collapsed");
+    var expanded = document.querySelectorAll("." + className + ":not(.collapsed)");
+    var i;
+    for(i = 0; i < collapsed.length; i++) {
+        collapsed[i].classList.remove("collapsed");
+    }
+    for(i = 0; i < expanded.length; i++) {
+        expanded[i].classList.add("collapsed");
+    }
+}
+
+var hideBlock = function(blockName) {
+    var expanded = document.querySelectorAll("." + blockName + ":not(.collapsed)");
+    var i;
+    for(i = 0; i < expanded.length; i++) {
+        expanded[i].classList.add("collapsed");
+    }
+}
+
+var showBlock = function(blockName) {
+    var collapsed = document.querySelectorAll("." + blockName + ".collapsed");
+    var i;
+    for(i = 0; i < collapsed.length; i++) {
+        collapsed[i].classList.remove("collapsed");
+    }
+}
+</script>
+
+<p><a href="http://scp-wiki-cn.wikidot.com/secure-facility-dossier-site-cn-71" style="color:black" target="_blank">Site-CN-71</a>在傳聞中是一個生活悠閒、工作等於放假的站點。</p>
+<p>&nbsp;</p>
+<p>這當然不是真的，但你曾經聽過到那裡交流過一段時間的同事說，香港在異常業的發展上處於世界的最前端，於是Site-CN-71的工作非常輕鬆：能在那裡出現的異常都是Safe和Euclid級別，擁有的收容技術和能力也遠遠超過所需要應對的異常。在那裏，異常是技術的一部分，政府甚至有自己的異常研究團隊，一直和Site-CN-71保持深入合作。哦，原理已經解明而且能夠投入應用的異常應該叫超技術而不再是異常了。</p>
+<p>當時你頗為不解。</p>
+<p>香港不像<a href="http://scp-wiki-cn.wikidot.com/three-portlands-hub" style="color:black" target="_blank">三波特蘭城</a>或曾經的<a href="http://scp-wiki-cn.wikidot.com/nx-03" style="color:black" target="_blank">Hy-Brasil</a>。香港是個法治社會，人民的行為受嚴謹而完整的法律限制，而不是來自君主旨意的控制或者性命受威脅下的自保。香港也是基金會在中國第一批站點的所在地，對於基金會的歷史意義非同尋常。最重要的是，香港是個屬於普通人的社會。</p>
+<p>現代人類文明發展基本上都處於基金會的監督之下，而基金會的宗旨就是保護常態，避免普通人接觸到異常。雖然有三城那種基金會鞭長莫及的地方，但你認為無論如何，基金會不會容忍有人在自己鼻子底下發展異常。</p>
+<p>&nbsp;</p>
+<p>直至某天，你被調到Site-CN-71。</p>
+<p>&nbsp;</p>
+<p>你剛剛報到完畢，就已經有為期一星期的假期。</p>
+<p>Site-CN-71的主管是這麼說的："反正站點現在也沒甚麼很急的事，去放個假熟悉下<i>香江</i>吧。"</p>
+<p>你總覺得他的笑容中帶著一點不懷好意，但是你知道，不應該去質疑上司，尤其是見面僅僅一天的上司的人品問題。況且，從加入基金會到現在天天被工作纏身，還沒放過一個正常假期的你，這會兒正對上司主動讓你放假的這個事實感到不可思議。</p>
+<p>&nbsp;</p>
+<p>於是，在到處亂逛，到過常常在港片看到的尖沙嘴、銅鑼灣、灣仔等地後，你現在正乘搭叫港鐵的地下鐵路到了港島西邊。</p>
+
+<p><hr /></p>
+<div class="block1" style="float: middle">
+<blockquote><a onclick="collapsibleLink('block1');">
+<p>下一站：上環。</p>
+<p>下一站：上环。</p>
+<p>Next station: Sheung Wan.</p>
+</a></blockquote>
+
+<p><hr /></p>
+</div>
+
+<div class="block1 collapsed">
+<blockquote><a onclick="collapsibleLink('block1');">
+<p>下一站：<span class="ruby">上環<span class="rt"> <span style="color:blue">林士</span></span></span><span style="color:blue">，乘客可以轉乘林士綫</span>。</p>
+<p>下一站：<span class="ruby">上环<span class="rt"> <span style="color:blue">林士</span></span></span><span style="color:blue">，乘客可以换乘林士线</span>。</p>
+<p>Next station: <span class="ruby">Sheung Wan<span class="rt"> <span style="color:blue">Rumsey</span></span></span><span style="color:blue">, interchange station for the Rumsey Line</span>.</p>
+</a></blockquote>
+
+<p><hr /></p>
+
+<p>在列車駛往這個地鐵站時，你在車廂廣播中聽到了一個奇怪的逆模因異常。</p>
+<p>&nbsp;</p>
+<p>作為基金會的人員，你在看到異常時第一反應就是要通知上頭。</p>
+<p>但是你下意識把手伸進兜裡、準備拿出基金會內部聯絡專用手機時，你卻想起了你現在已經是Site-CN-71一員，並正在休假的這個事實。</p>
+<p>於是你猶豫了。</p>
+<p>但是，你身為基金會一份子，就決定了你不可能對異常放任不管。所以在正式開始為Site-CN-71工作前，你得先搜集資訊，以便更好的收容。</p>
+<p>&nbsp;</p>
+<p>下定決心後，你把注意力轉到這個逆模因異常本身上。</p>
+<p>從專業的角度來說，在作為一個異常的這方面，這個逆模因實在做的不怎麼好。如果是要信息自我保守，為甚麼要被廣播出來，還要用三種不同的語言重複呢？如果想要讓人得知這段信息，那為甚麼要用帶有逆模因性質的方式發放呢？</p>
+<p>但這都不是重點。反正你接受過記憶增強訓練，這麼一個拙劣的逆模因還不能阻止你回憶起信息內容。</p>
+
+<div class="block2">
+<p><a onclick="collapsibleLink('block2');">林士站。</a></p>
+<p><hr /></p>
+</div>
+
+<div class="block2 collapsed">
+<p><a onclick="collapsibleLink('block2');">你在網上搜到了一個關於港鐵林士站的網站。</a></p>
+<p><hr /></p>
+
+<div class="block3">
+<p><h2 id="toc2">香港鐵路資訊</h2></p>
+<p><span style="color:#C0C0C0; font-size:12px">由香港鐵路有限公司提供</span></p>
+
+<h3 id="toc3">林士站</h3>
+<p>林士站（Rumsey Station）為地下鐵路早期計劃中東九龍綫一個已擱置的車站，位於中西區上環林士街地底。該站原計劃與上環街市站（後重定為上環站）連接為轉綫站，但後來因暫緩興建東九龍綫以及後來的計劃大幅更改而棄用。</p>
+
+<p>林士站大堂及月台預留結構於上環站興建時一併落成，上環站通車後則分別成為了上環站東大堂（E出口）及大堂與月台之間的通道。上環站通車後20多年該月台結構仍然清晰可見，到2011年配合西港島綫工程港鐵才將路軌部份以圍牆封住。<p>
+
+<h4 id="toc4">月台</h4><br />
+<p>林士站月台設於林士街地底，與港島綫上環站月台呈約90度角，為一島式月台。為免未來東九龍綫工程妨礙上環站的日常運作，於上環站興建時一併興建了約60公尺長的預留月台結構，並設有月台吊板。月台軌道預留位置並未裝置任何路軌或架空電纜。月台的邊緣有欄杆防止乘客進入軌道預留範圍，並於月台預留結構兩端設有活門，讓清潔工人進入軌道範圍打掃。月台預留結構兩端有磚牆封起，當未來興建東九龍綫時便可破開磚牆擴建月台。而一邊月台後方設有空間，設有機房及車站控制設施。該站升降機同樣於該層預留位置安裝機門。</p>
+
+<p><h4 id="toc4">樓層及設施分布</h4><br />
+<span style="color:#A9A9A9; font-size:12px">以上環站結構作說明</span></p>
+<table cellspacing="0" cellpadding="3">
+
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray;width:85px">
+</td><td style="border-bottom:solid 1px gray;width:85px">
+</td><td style="border-bottom:solid 1px gray;width:330px">
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="1"><b>G</b>
+</td><td style="border-bottom:solid 1px gray">地面
+</td><td style="border-bottom:solid 1px gray">出口
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L1</b>
+</td><td style="border-bottom:solid 1px gray">中央大堂閣樓
+</td><td style="border-bottom:solid 1px gray">A出口通道
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray">東面大堂閣樓
+</td><td style="border-bottom:solid 1px gray">E出口通道
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L2</b>
+</td><td style="border-bottom:solid 1px gray">中央大堂
+</td><td style="border-bottom:solid 1px gray">客務中心、商店、自助設施<br />出口：A、B、C、D
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray">東面大堂
+</td><td style="border-bottom:solid 1px gray">客務中心、商店、自助設施、洗手間<br />出口：E
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L3<br />閣樓</b>
+</td><td style="border-bottom:solid 1px gray">中央大堂
+</td><td style="border-bottom:solid 1px gray">交匯處（連接大堂層及月台層通道）
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray">東面大堂
+</td><td style="border-bottom:solid 1px gray">交匯處（連接大堂層及月台層通道）
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="1"><b>L4</b>
+</td><td style="border-bottom:solid 1px gray">
+</td><td style="border-bottom:solid 1px gray">機房
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>P<br />月台</b>
+</td><td style="border-bottom:solid 1px gray"><span style="color: #0071CE;"><b>1</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #0071CE;">港島綫</span></b>往柴灣
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray"><span style="color: #0071CE;"><b>2</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #0071CE;">港島綫</span></b>往堅尼地城
+</td></tr>
+</table>
+
+<a onclick="collapsibleLink('block3');"><p>但你聽到的廣播說明林士站仍然運作，不是甚麼廢棄車站。
+這個不是你想要的資訊。</p></a>
+</div>
+
+<div class="block3 collapsed">
+<p><h2 id="toc2">香江鐵路資訊</h2></p>
+<p><span style="color:#C0C0C0; font-size:12px">由香港鐵路有限公司 及 香江地鐵集團有限公司 提供</span></p>
+<a onclick="collapsibleLink('block3');">
+<p>逆模因免疫觸媒：香城 / 香江群島 / 異位城市</p></a>
+
+<div style="background: url(http://scp-wiki-cn.wdfiles.com/local--files/rumsey-stations/hk-flag-petals-transparent.png) 50% 45% no-repeat; float: center; border: solid 2px #000000; padding: 8px 15px; box-shadow: 0 1px 3px rgba(0,0,0,.2);">
+<div style="text-align: center">
+<p>&nbsp;</p>
+<p>以下內容受香港所在位面的《面紗協議》及香江異位城市共同體的《異位城市資訊協議》限制，不可透露於對香江、香城以及其他香港異位城市不知情的市民。請不要洩露以下內容於不當人員，否則你將會被香港入境事務處(香城分區)以及香江異常事務及發展局(出入境部)拒絕離開香港、進入香江其他異位城市範圍內。</p>
+<p>&nbsp;</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h3 id="toc3">左港林士站</h3>
+<p>左港林士站（HK Rumsey Station）為跨異位城市交通計劃中林士綫於左相位香港的車站，地理上位於中西區上環林士街地底。該站計劃及施工時對外說法為東九龍綫與上環街市站（後重定為上環站）連接之轉綫站，後來棄用。</p>
+
+<h4 id="toc4">月台</h4><br />
+
+<div style="float:right; margin:0 2em 1em 2em; width:300px; border:0;">
+<table class="scp-image-block">
+<tr>
+<td><a href="http://scp-wiki-cn.wdfiles.com/local--files/rumsey-stations/Rumsey_MemeAgentCovered.jpg" target="_blank"><img src="http://scp-wiki-cn.wdfiles.com/local--files/rumsey-stations/Rumsey_MemeAgentCovered.jpg" style="width:300px;" alt="Rumsey_MemeAgentCovered.jpg" class="image" /></a></td>
+</tr>
+<tr>
+<th style="text-align:center">2011年《異位城市資訊協議》更新後左港林士站的認知異常外觀。圖中可見右側路軌部分以外觀為淺啡色焗漆板的認知異常遮擋。</th>
+</tr>
+</table>
+</div>
+
+<p>左港林士站月台於上環站興建時一併落成。為遵守《異位城市資訊協議》，月台路軌、列車以及其他部份以認知異常遮蓋，內容為將路軌部份以圍欄封住、兩端以磚牆封閉。到2011年配合《異位城市資訊協議》更新時，港鐵將認知異常內容改為路軌部份以圍牆遮擋。</p>
+
+<h4 id="toc4">樓層及設施分布</h4><br />
+<table cellspacing="0" cellpadding="3">
+
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray;width:85px">
+</td><td style="border-bottom:solid 1px gray;width:85px">
+</td><td style="border-bottom:solid 1px gray;width:330px">
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="1"><b>G</b>
+</td><td style="border-bottom:solid 1px gray">地面
+</td><td style="border-bottom:solid 1px gray">出口
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L1</b>
+</td><td style="border-bottom:solid 1px gray">中央大堂閣樓
+</td><td style="border-bottom:solid 1px gray">A出口通道
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray">東面大堂閣樓
+</td><td style="border-bottom:solid 1px gray">E出口通道
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L2</b>
+</td><td style="border-bottom:solid 1px gray">中央大堂
+</td><td style="border-bottom:solid 1px gray">客務中心、商店、自助設施<br />出口：A、B、C、D
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray">東面大堂
+</td><td style="border-bottom:solid 1px gray">客務中心、商店、自助設施、洗手間<br />出口：E
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>L3<br />左港林士站月台</b>
+</td><td style="border-bottom:solid 1px gray"><span style="color: #FFD280;"><b>3</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #FFD280;">林士綫</span></b>往右島林士
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray"><span style="color: #FFD280;"><b>4</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #FFD280;">林士綫</span></b>落客月台
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="1"><b>L4</b>
+</td><td style="border-bottom:solid 1px gray">
+</td><td style="border-bottom:solid 1px gray">機房
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray" rowspan="2"><b>P<br />上環站月台</b>
+</td><td style="border-bottom:solid 1px gray"><span style="color: #0071CE;"><b>1</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #0071CE;">港島綫</span></b>往柴灣
+</td></tr>
+<tr style="vertical-align:top;">
+<td style="border-bottom:solid 1px gray"><span style="color: #0071CE;"><b>2</b></span>號月台
+</td><td style="border-bottom:solid 1px gray"><b><span style="color: #0071CE;">港島綫</span></b>往堅尼地城
+</td></tr>
+</table>
+
+<p><hr /></p>
+
+<p>下了列車，你根據那個網站的資料，走到了地鐵站的L3層。</p>
+<p>你看到的，不是網站上那張圖裡所顯示的，兩邊本應是路軌部分被淺啡色的牆壁遮蓋的廢置樓層，而是人來人往耐心等待列車的月台。</p>
+
+<div class="block4">
+<a onclick="collapsibleLink('block4');">
+<p>周圍紛雜的資訊一一以異常的方式呈現於感知中，使得你無所適從。</p></a>
+<p><hr /></p>
+</div>
+
+<div class="block4 collapsed">
+<a onclick="collapsibleLink('block4');">
+<p>周圍紛雜的資訊一一以異常的方式呈現於感知中，使得你無所適從。</p></a>
+<p><hr /></p>
+
+<blockquote>
+<p>最新最潮的科技、神術、煉金以及更多，盡在<a href="http://scp-wiki-cn.wikidot.com/marshall-carter-and-dark-hub" style="color:black" target="_blank">MC&D</a>的商場！</p>
+<p>從<a href="http://scp-wiki-cn.wikidot.com/scp-576" style="color:black" target="_blank">好夢藥劑</a>到<a href="http://scp-wiki-cn.wikidot.com/scp-cn-070" style="color:black" target="_blank">終焉眼鏡</a>，我們應有盡有！</p>
+</blockquote>
+
+<p>你的目光飄過一張張海報，驚歎於這些廣告呈現資訊的方式，震撼於這裡對於知道關鍵詞的人的毫不掩飾。</p>
+
+<blockquote>
+<p>升學不再是問題！即使沒有超技術文憑(<span class="hover"><span>Diploma of Advanced Technology</span>DAT</span>)，不透過異常院校聯招(<span class="hover"><span>Joint Advanced Technology Schools Programmes Admission System</span>JATSPAS</span>)的途徑，你仍然可以報讀各大異常院校的副學士課程！香城的<span class="hover"><span>聖克莉斯汀娜書院(St. Christina College)、香城杏壇書院(或稱 杏壇中學, Hang Tan Secondary School)、群島官立大學(Islands Government University)及香江城市大學(Hong Gong City University)</span>四大院校</span>皆已開放報名！</p>
+</blockquote>
+
+<div class="block5">
+<p><a onclick="collapsibleLink('block5');">在五感的衝擊之中，你卻明確地聽到了月台廣播，用著之前車廂廣播的那個聲音，仍然以拙劣的逆模因掩飾。</a></p>
+
+<p><hr /></p>
+</div>
+
+<div class="block5 collapsed">
+<p><a onclick="collapsibleLink('block5');">在五感的衝擊之中，你卻明確地聽到了月台廣播，用著之前車廂廣播的那個聲音，仍然以拙劣的逆模因掩飾。</a></p>
+
+<p><hr /></p>
+
+<div class="block6">
+<a onclick="collapsibleLink('block6');">
+<blockquote><p>往右島林士列車即將到達，請先讓車上乘客落車。</p>
+<p>前往右岛林士的列车即将到达，请先让车上的乘客下车。</p>
+<p>The train to HG Rumsey is arriving, please let passengers exit first.</p></blockquote>
+</a>
+<p><hr /></p>
+</div>
+
+<div class="block6 collapsed">
+<a onclick="collapsibleLink('block6');">
+<blockquote><p>往右島林士列車即將到達，請先讓車上乘客落車。</p>
+<p>前往右岛林士的列车即将到达，请先让车上的乘客下车。</p>
+<p>The train to HG Rumsey is arriving, please let passengers exit first.</p></blockquote>
+</a>
+<p><hr /></p>
+
+<div class="block7">
+<p><a onclick="collapsibleLink('block7');">你猶豫了一會，決定上車看看林士綫。</a></p>
+<p><hr /></p>
+</div>
+
+<div class="block7 collapsed">
+<p><a onclick="collapsibleLink('block7');">你猶豫了一會，決定上車看看林士綫。</a></p>
+
+<p><hr /></p>
+
+<div class="block8">
+<a onclick="collapsibleLink('block8');">
+<blockquote><p>請勿靠近車門。</p>
+<p>请不要靠近车门。</p>
+<p>Please stand back from the train doors.</p></blockquote>
+</a>
+<p><hr /></p>
+</div>
+
+<div class="block8 collapsed">
+<p><a onclick="collapsibleLink('block8');">
+<blockquote><p>請勿靠近車門。</p>
+<p>请不要靠近车门。</p>
+<p>Please stand back from the train doors.</p></blockquote>
+</a>
+<p><hr /></p>
+
+<div class="block9">
+<a onclick="collapsibleLink('block9');">
+<p>&nbsp;</p>
+</a>
+<p><hr /></p>
+</div>
+
+<div class="block9 collapsed">
+<a onclick="collapsibleLink('block9');">
+<p>&nbsp;</p>
+</a>
+<p><hr /></p>
+
+<div class="block10">
+<a onclick="collapsibleLink('block10');">
+<p>&nbsp;</p>
+</a>
+<p><hr /></p>
+</div>
+
+<div class="block10 collapsed">
+<a onclick="collapsibleLink('block10');">
+<p>&nbsp;</p>
+</a>
+<p><hr /></p>
+
+<blockquote><a href="https://scp-wiki-cn.wikidot.com/hong-shing-hub" style="color:black" target="_blank"><p>下一站：香城林士。</p>
+<p>下一站：香城林士。</p>
+<p>Next station: HS Rumsey.</p></a></blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

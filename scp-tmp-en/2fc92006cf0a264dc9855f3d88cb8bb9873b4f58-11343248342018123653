@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<head>
+
+<style>
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/base/css/style.css);
+@import url(http://www.scp-wiki.net/component:theme/code/1);
+
+.box {
+  background: white; border: 2px solid #bbb; width: 200px; min-width: 50vw; display: inline-block; position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+
+.box-interior {
+  margin: 10px; padding: 0 50px; background-position: bottom center; background-repeat: no-repeat;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(() => {
+  $('#buttons').show()
+  $('#saving').hide()
+  $('#fuck').hide()
+
+  $('#cancel').on('click', () => {
+    $('#buttons').hide()
+    $('#saving').hide()
+    $('#fuck').show()
+  })
+
+  $('#retry').on('click', () => {
+    $('#buttons').hide()
+    $('#saving').show()
+    $('#fuck').hide()
+    setTimeout(() => {
+      $('#buttons').show()
+      $('#saving').hide()
+      $('#fuck').hide()
+    }, 3000)
+  })
+})
+</script>
+
+</head>
+<body>
+
+<div style="background: #222b; height: 300px; position: relative;">
+  <div class="box">
+    <div class="box-interior" id="buttons">
+      <p style="text-align: center">Connection lost.</p>
+      <p style="text-align: center"> <button id="cancel">Cancel</button>
+      <button id="retry">Retry</button></p>
+    </div>
+    <div class="box-interior" id="saving" style="background-image: url(https://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/images/progress/progressbar.gif); padding-bottom: 10px;">
+      <p style="text-align: center">Reconnecting...</p>
+    </div>
+    <div class="box-interior" id="fuck">
+      <p style="font-size: 2em; text-align: center">FUCK</p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

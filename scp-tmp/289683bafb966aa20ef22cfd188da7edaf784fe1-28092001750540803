@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<head>
+<style>
+body {
+   font-family: Aldrich; font-size: 12.8px;
+}
+
+Error {
+   font-family: Aldrich; font-size: 12.8px; color: red;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #000000;
+    color: lightgreen;
+  }
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: lightgreen;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Aldrich;
+    font-size: 15px;
+    margin: 6px 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+  background: #d5fdd5;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.25795
+  }
+  5% {
+    opacity: 0.31511
+  }
+  10% {
+    opacity: 0.94554
+  }
+  15% {
+    opacity: 0.2469
+  }
+  20% {
+    opacity: 0.62031
+  }
+  25% {
+    opacity: 0.0293
+  }
+  30% {
+    opacity: 0.00899
+  }
+  35% {
+    opacity: 0.5344
+  }
+  40% {
+    opacity: 0.12778
+  }
+  45% {
+    opacity: 0.52042
+  }
+  50% {
+    opacity: 0.3823
+  }
+  55% {
+    opacity: 0.2198
+  }
+  60% {
+    opacity: 0.9383
+  }
+  65% {
+    opacity: 0.86615
+  }
+  70% {
+    opacity: 0.68695
+  }
+  75% {
+    opacity: 0.55749
+  }
+  80% {
+    opacity: 0.96984
+  }
+  85% {
+    opacity: 0.1361
+  }
+  90% {
+    opacity: 0.24467
+  }
+  95% {
+    opacity: 0.08351
+  }
+  100% {
+    opacity: 0.54813
+  }
+}
+.overlay {
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+}
+.overlay:before {
+  background: linear-gradient(rgba(45,45,45,0.3) 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.overlay:after {
+  animation: flicker 0.40s infinite;
+  background: rgba(16, 16, 16, 0.2);
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+<div class="alert">
+<center><h2><img src="http://lafundacionscp.wdfiles.com/local--files/terminal-de-catalogacion/SCP%20Logo%20Verde.png" style="width:150px;height:150px;">
+<br>
+SCP</h2>
+控制 // 收容 // 保护 </center>
+<br>
+<br>
+<br>
+<div style="display:none;" id="Inicio">
+<span>系统加载中...<br><br></span>
+</div>
+<div style="display:none;" id="Inicio2">
+<span>请稍候。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio3">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio4">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio5">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio6">
+<span>正在核验系统根目录...<br><br></span>
+</div>
+<div style="display:none;" id="Inicio7">
+<span>核验完毕。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio8">
+<span>正在同步到Site-34服务器…<br><br></span>
+</div>
+<div style="display:none;" id="Inicio9">
+<span>请稍候。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio10">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio11">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio12">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio13">
+<span><b>[ 允许访问 ]</b><br><br></span>
+</div>
+<div style="display:none;" id="Inicio14">
+<span>欢迎回来，Dr. Ashworth。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio15">
+<span>您上次于2010/01/30访问本系统。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio16">
+<span>正在选取SCP-ES-100/N4级真实文档...<br><br></span>
+</div>
+<div style="display:none;" id="Inicio17">
+<span>请稍候。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio18">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio19">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio20">
+<span>.<br><br></span>
+</div>
+<div style="display:none;" id="Inicio21">
+<span>请在核验权限后继续访问。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio22">
+<span>请保持双眼直视屏幕。请不要在本阶段过程中眨眼。<br><br></span>
+</div>
+<div style="display:none;" id="Inicio23">
+<span>正在采集图像...<br><br></span>
+<div style="display:none;" id="Inicio24">
+<span>正在启动极坐标编码算法...<br><br></span>
+<div style="display:none;" id="Inicio25">
+<span>正在与基金会员工数据库坐标相匹配...<br><br></span>
+<div style="display:none;" id="Inicio26">
+<span>正在选取SCP-ES-100/N4级真实文档...<br><br></span>
+<div style="display:none;" id="Inicio27">
+<span>请点击以下链接继续。<br><br><br></span>
+<div id="button1" style="display:none">
+
+<button class="button" onclick="openWin(); this.style.display='none'"id="button1"> > <b>SCP-ES-100/N4级真实文档</b><img src="http://lafundacionscp.wdfiles.com/local--files/terminal-de-catalogacion/Linea-Parpadeo.gif" style="width:5px;height:13px;"></button>
+
+<div style="display:none;" id="Inicio28">
+<span>
+<br><br><br>
+<error><b>[ 您提交的权限中检测到严重不一致 ]</b></error>
+<br><br>
+您的视网膜纹与安全系统中Dr. Jerome Ashworth的信息未保持一致，亦即您正试图冒充基金会员工身份以访问您无法访问的需限文档。
+<br><br>
+您对本文件的试图访问已登记于 <span id="datetime"></span>.
+<br><br>
+请不要关闭或断开本终端，本次入侵已被报告至您所在站点安保人员处。
+<br><br>
+若不遵守本警告，您将被立即处决。<img src="http://lafundacionscp.wdfiles.com/local--files/terminal-de-catalogacion/Linea-Parpadeo.gif" style="width:4px;height:12.8px;"></span>
+</div>
+</div>
+</div>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +" el "+  (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear());
+
+var myVar = setInterval(Inicio, 2500);
+var myVar = setInterval(Inicio2, 3500);
+var myVar = setInterval(Inicio3, 4000);
+var myVar = setInterval(Inicio4, 4500);
+var myVar = setInterval(Inicio5, 5000);
+var myVar = setInterval(Inicio6, 6500);
+var myVar = setInterval(Inicio7, 7500);
+var myVar = setInterval(Inicio8, 8500);
+var myVar = setInterval(Inicio9, 9500);
+var myVar = setInterval(Inicio10, 10000);
+var myVar = setInterval(Inicio11, 10500);
+var myVar = setInterval(Inicio12, 11000);
+var myVar = setInterval(Inicio13, 12000);
+var myVar = setInterval(Inicio14, 13000);
+var myVar = setInterval(Inicio15, 14000);
+var myVar = setInterval(Inicio16, 15000);
+var myVar = setInterval(Inicio17, 16000);
+var myVar = setInterval(Inicio18, 16500);
+var myVar = setInterval(Inicio19, 17000);
+var myVar = setInterval(Inicio20, 17500);
+var myVar = setInterval(Inicio21, 18500);
+var myVar = setInterval(Inicio22, 19500);
+var myVar = setInterval(Inicio23, 23500);
+var myVar = setInterval(Inicio24, 24500);
+var myVar = setInterval(Inicio25, 25500);
+var myVar = setInterval(Inicio26, 26500);
+var myVar = setInterval(Inicio27, 27500);
+var myVar = setInterval(button1, 28000);
+
+function button1() {
+    document.getElementById("button1").style.display = "inline";
+}
+
+function openWin() {
+    var myWindow = window.open("http://scp-wiki-cn.wikidot.com/scp-es-100/offset/4", "_blank");
+   setTimeout(function(){ myWindow.close() }, 600000);
+    document.getElementById("Inicio28").style.display = "block";
+
+}
+
+function Inicio() {
+document.getElementById("Inicio").style.display = "block";
+}
+function Inicio2() {
+document.getElementById("Inicio2").style.display = "block";
+}
+function Inicio3() {
+document.getElementById("Inicio3").style.display = "block";
+}
+function Inicio4() {
+document.getElementById("Inicio4").style.display = "block";
+}
+function Inicio5() {
+document.getElementById("Inicio5").style.display = "block";
+}
+function Inicio6() {
+document.getElementById("Inicio6").style.display = "block";
+}
+function Inicio7() {
+document.getElementById("Inicio7").style.display = "block";
+}
+function Inicio8() {
+document.getElementById("Inicio8").style.display = "block";
+}
+function Inicio9() {
+document.getElementById("Inicio9").style.display = "block";
+}
+function Inicio10() {
+document.getElementById("Inicio10").style.display = "block";
+}
+function Inicio11() {
+document.getElementById("Inicio11").style.display = "block";
+}
+function Inicio12() {
+document.getElementById("Inicio12").style.display = "block";
+}
+function Inicio13() {
+document.getElementById("Inicio13").style.display = "block";
+}
+function Inicio14() {
+document.getElementById("Inicio14").style.display = "block";
+}
+function Inicio15() {
+document.getElementById("Inicio15").style.display = "block";
+}
+function Inicio16() {
+document.getElementById("Inicio16").style.display = "block";
+}
+function Inicio17() {
+document.getElementById("Inicio17").style.display = "block";
+}
+function Inicio18() {
+document.getElementById("Inicio18").style.display = "block";
+}
+function Inicio19() {
+document.getElementById("Inicio19").style.display = "block";
+}
+function Inicio20() {
+document.getElementById("Inicio20").style.display = "block";
+}
+function Inicio21() {
+document.getElementById("Inicio21").style.display = "block";
+}
+function Inicio22() {
+document.getElementById("Inicio22").style.display = "block";
+}
+function Inicio23() {
+document.getElementById("Inicio23").style.display = "block";
+}
+function Inicio24() {
+document.getElementById("Inicio24").style.display = "block";
+}
+function Inicio25() {
+document.getElementById("Inicio25").style.display = "block";
+}
+function Inicio26() {
+document.getElementById("Inicio26").style.display = "block";
+}
+function Inicio27() {
+document.getElementById("Inicio27").style.display = "block";
+}
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

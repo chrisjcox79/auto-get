@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>贩卖伙伴中心页 - SCP基金会</title>
+    <title>旧维基 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "vend-a-friend";
-        OZONE.request.timestamp = 1610140262;
+        WIKIREQUEST.info.requestPageName = "the-old-wiki";
+        OZONE.request.timestamp = 1610162384;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "vend-a-friend";
-        WIKIREQUEST.info.pageId = 902668118;
+                WIKIREQUEST.info.pageUnixName = "the-old-wiki";
+        WIKIREQUEST.info.pageId = 1184609422;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,26 +117,486 @@
     </script>
         
 <style>
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+#page-title {
+  display: none;
+}
 </style>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
-#page-content .navigation-links a[href="/"],
-#page-content .navigation-links a:visited[href="/"],
-#page-content .navigation-links a:hover[href="/"] {
- text-decoration: none;
- color: #2e023a;
- pointer-events: none;
- cursor: text;
+#page-title {
+  display: none;
 }
-.navigation-links.hub {
- display: none;
+
+.meta-title {
+  border-bottom: solid 1px #bbbbbb;
+  color: #990011;
+  font-weight: normal;
+  margin: 0 0 0.6em;
+  padding: 0 0 0.25em;
+  font-size: 200%;
 }
-.navigation-links.first .previous {
- display: none;
+
+.meta-title p {
+  margin: 0;
 }
-.navigation-links.last .next {
- display: none;
+</style>
+<style>
+.fake-link {
+color: #b01;
+text-decoration: none;
+background: transparent;
+cursor:pointer;
+}
+
+.fake-link:hover {
+text-decoration: underline;
+background-color: transparent;
+cursor:pointer;
+}
+
+.dummyDescription{
+line-height: 0em;
+border: 1px solid #CCC;
+margin: 1em 4em;
+padding: 0.5em;
+background-color: #F5F5F5;
+overflow: hidden;
+height: 100%;
+border-radius: 10px;
+box-shadow: 0 1px 5px rgba(0,0,0,.15),
+inset 0 1px 0 rgba(255,255,255,.8),
+inset 0 10px 5px rgba(255,255,255,.25),
+inset 0 -15px 30px rgba(0,0,0,.1)
+}
+
+.dummyOptions{
+text-align: right;
+margin: 0.2em 4em;
+color: #b01;
+}
+
+.dummySummaySentence{
+padding:0.5em 0em 1em 0em;
+}
+
+.dummySummaySentence:before{
+content:"サマリー";
+display:block;
+color: #777;
+font-size: 87%;
+bottom:0em;
+}
+
+.dummyHead{
+display:block;
+color: #777;
+font-size: 87%;
+}
+
+div.DummyNew-post {
+    text-align: left;
+    margin: 20px 0;
+}
+div.DummyNew-post .fake-link{
+    border: 1px solid #999;
+    background-color: #F7F7F7;
+    padding: 5px 10px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.DummyForumTitle{
+padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
+font-size: 200%;
+color: #901;
+padding: 0;
+font-weight: normal;
+}
+
+.DummyForumTitle p{
+padding-top: 0.5em;
+display:block;
+padding:0px 0px 1px 0px;
+margin:0;
+border-bottom: 1px #999 solid;
+
+}
+
+.DummyForumTitle h2{
+padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
+font-size: 100%;
+color: #901;
+display:block;
+padding:0px 0px 1px 0px;
+border-bottom: 1px #999 solid;
+font-weight: normal;
+}
+
+.DummyForumTitle ul{
+display:block;
+padding:0em;
+border-color: #bbb;
+font-size:50%;
+}
+
+.DummyForumTitle ul li{
+cursor:pointer;
+color: #b01;
+display:inline;
+background: transparent;
+padding:0;
+
+}
+
+.DummyForumTitle ul li:hover{
+text-decoration: underline;
+background-color: transparent;
+cursor:pointer;
+
+}
+
+.DummyForumTitle ul li:after {
+    content:" » ";
+color:#000;
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:after {
+    content:" » ";
+color:#000;
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:after:hover {
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:last-child{
+text-decoration:none;
+color:#000;
+cursor:auto;
+}
+
+.DummyForumTitle ul li:last-child:hover {
+text-decoration:none;
+color:#000;
+}
+
+.DummyForumTitle ul li:last-child:after {
+    content : none ;
+}
+
+.post-container .dummyOptions{
+margin: 0.2em 0em;
+}
+
+.post-container .dummyOptions .fake-link{
+margin:0; padding:0;
+color: #77A;
+}
+
+.DummyStatistics{
+margin: 0.5em 0;
+padding: 0 0.5em;
+font-size: 87%;
+color: #666;
+text-align: right;
+float: right;
+line-height: 1.5em;
+}
+
+.Dummytitle{
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.dummyPostHead{
+line-height: 0em;
+padding: 0.5em 1em;
+background-color: #eee;
+background: linear-gradient(to right, #eee, #eeecec);
+box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
+border-radius: 5px 5px 0 0;
+}
+
+.dummyPostHead p{
+margin:0;
+padding:0;
+}
+.dummyContent{
+
+}
+
+.dummyContent:after{
+    content: "返信 オプション";
+    display:block;
+    font-weight:bold;
+    color: #77A;
+    text-align:right;
+    padding: 10px 0 10px 0;
+}
+
+/*隠し機能*/
+.CustomTabR .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+    border-left:none;
+}
+
+.CustomTabR .yui-navset ul {
+   border-bottom:none;
+    padding:0;
+    border-right:solid #333 2px;
+}
+
+.CustomTabR .yui-navset ul li{
+    display: block;
+}
+.CustomTabR .yui-navset .yui-nav li{
+margin:0;
+}
+
+.CustomTabR .yui-navset ul li.select{
+    display: block;
+    margin:0;
+    border-radius:0;
+}
+
+.CustomTabR  .yui-content{
+        background-color:#F6F6F6;
+        display:inline-block;
+        border:solid #000 1px;
+}
+
+.CustomTabR  .yui-content div{
+    width:100%;
+    border:none;
+    background-color:transparent;
+}
+
+.CustomTabRJ .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+}
+
+.CustomTabRJ .yui-navset ul {
+   border-bottom:none;
+display:block;
+width:2.5em;
+border-right:solid #333 2px;
+    padding:0;
+    margin:0;
+}
+
+.CustomTabRJ .yui-navset .yui-nav li{
+    display: block;
+width:100%;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+text-orientation: upright; 
+margin:0;
+}
+
+.CustomTabRJ .yui-navset ul li.select{
+    display: block;
+    margin:0;
+    border-radius:0;
+}
+
+.CustomTabRJ  .yui-content{
+    border:solid #333 1px;
+    display:block;
+width:calc(100% - 2.5em);
+}
+
+.CustomTabRJ  .yui-content div{
+    width:98%;
+    border:none;
+    background-color:transparent;
+        padding: 0px 5px 0px 10px;
+}
+
+@media all and (-ms-high-contrast:none) {
+.CustomTabRJ .yui-navset .yui-nav li {
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+.CustomTabRJ .yui-navset ul li em{
+width:100%;
+height:8em;
+    overflow:hidden;
+}
+.CustomTabRJ .yui-navset ul {
+    overflow:hidden;
+}
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul li{
+width:100%;
+height:8em;
+    overflow:hidden;
+
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul li em{
+width:100%;
+height:8em;
+    overflow:hidden;
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul {
+    overflow:hidden;
+}
+
+.CustomTabRJC .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+}
+
+.CustomTabRJC .yui-navset ul {
+   border:none;
+display:block;
+width:2.5em;
+    padding:0;
+    margin:0;
+    position:relative;
+    background-color:#333;
+
+}
+
+.CustomTabRJC .yui-navset .yui-nav li{
+    display: block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+text-orientation: upright; 
+margin:0;
+padding:0;
+width:100%;
+
+}
+
+.CustomTabRJC .yui-nav li a{
+color:#333;
+display:block;
+    border:none !important;
+    padding:0;
+    margin:0;
+}
+
+.CustomTabRJC .yui-nav li a em{
+        background-color:#DADADA;
+display:block;
+color:#333;
+width:100%;
+-moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-o-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-ms-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+}
+
+.CustomTabRJC .yui-navset ul li.select{
+    border-radius:0 !important;
+    border-right:none !important;
+z-index:1000;
+}
+
+.CustomTabRJC .yui-nav li.selected a{
+
+        background-color:#F6F6F6;
+    border:none !important;
+    /*background:*/
+}
+
+.CustomTabRJC .yui-nav li.selected a em{
+        background-color:#F6F6F6;
+z-index:1000;
+position:static;
+width:100%;
+color:#333;
+overflow-y:hidden;
+border-left:solid #000 1px;
+border-bottom:solid #000 1px;
+    -moz-box-shadow: none;
+-webkit-box-shadow: none;
+-o-box-shadow: none;
+-ms-box-shadow: none;
+}
+.CustomTabRJC .yui-nav li.selected a em:after{
+        content:" ";
+        background-color:#F6F6F6;
+display:block;
+height:100%;
+width:3px;
+position:absolute;
+right:-1px;
+top:0px;
+z-index:1000;
+border-top:solid #000 1px;
+
+}
+
+.CustomTabRJC  .yui-content{
+    border:none;
+    background-color:#F6F6F6;
+    width:calc(100% - 2.5em);
+    border:solid #333 1px;
+    margin:0;
+}
+
+.CustomTabRJC  .yui-content div{
+    width:98%;
+    padding: 0px 5px 0px 10px;
+    border:none;
+    background-color:transparent;
+}
+
+@media all and (-ms-high-contrast:none) {
+.CustomTabRJC .yui-navset .yui-nav li {
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+.CustomTabRJC .yui-navset ul li em{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+
+}
+
+_:-ms-lang(x), .CustomTabRJC .yui-navset ul li{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+
+_:-ms-lang(x), .CustomTabRJC .yui-navset ul li em{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+</style>
+<style>
+.dummySummaySentence:before{
+content:"摘要:";
+}
+
+.dummyContent:after{
+    content: "回复 选项";
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -487,7 +947,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=vend-a-friend" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=the-old-wiki" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -509,14 +969,10 @@
                     
                     
                         <div id="page-title">
-                            贩卖伙伴中心页
+                            旧维基
                         </div>
                     
 
-                    
-                        <div id="breadcrumbs">
-                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/wonder-world">多么奇妙世界中心页</a> &raquo; 贩卖伙伴中心页
-                        </div>
                     
 
                     
@@ -528,81 +984,71 @@
 
 
 
-
-<div style="text-align: center;"><img src="http://scp-wiki-cn.wikidot.com/local--files/vend-a-friend/Logo.png" alt="Logo.png" class="image" /><br />
-<br />
-<img src="http://scp-wiki-cn.wikidot.com/local--files/vend-a-friend/Phrase.png" width="400px" alt="Phrase.png" class="image" /><br />
-<br /></div>
-<br />
-<br />
-<br />
-<br />
-<p><span style="font-size:125%;"><strong><a href="/we-just-make-toys">第1章</a> - <span style="font-family: 'Berkshire Swash', cursive;">We Just Make Toys</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a href="/to-think-i-ve-spent-my-whole-life-waiting">第2章</a> - <span style="font-family: 'Berkshire Swash', cursive;">To Think I've Spent My Whole Life Waiting</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a href="/i-don-t-get-it-i-functioned-before">第3章</a> - <span style="font-family: 'Berkshire Swash', cursive;">I Don't Get It, I Functioned Before</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a href="/you-can-t-win-them-all">第4章</a> - <span style="font-family: 'Berkshire Swash', cursive;">You Can't Win Them All</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a href="/be-strange-or-be-forgotten">第5章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Be Strange or Be Forgotten</span></strong></span></p>
-<hr />
-<div style="text-align: center;"><img src="http://www.scp-wiki.net/local--files/vend-a-friend/DayTower" width="80px" alt="DayTower" class="image" /></div>
-<hr />
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/sometimes-the-best-intentions-need-redemption">第6章 / 幕间休息</a> - <span style="font-family: 'Berkshire Swash', cursive;">Sometimes the Best Intentions are in Need of Redemption</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/life-s-a-show">第7章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Life's a Show</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/and-i-m-the-star">第8章</a> - <span style="font-family: 'Berkshire Swash', cursive;">&#8230;And I'm the Star!</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/back-in-habit">第9章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Back in Habit</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/pepper-s-lament">第10章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Pepper's Lament</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/souls-somas">第11章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Souls &amp; Somas</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/deceptive-cadence">第12章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Deceptive Cadence</span></strong></span></p>
-<hr />
-<div style="text-align: center;"><img src="http://www.scp-wiki.net/local--files/vend-a-friend/NightTower" width="80px" alt="NightTower" class="image" /></div>
-<hr />
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/what-a-wonderful-world">第13章 / 幕间休息</a> - <span style="font-family: 'Berkshire Swash', cursive;">And I Think To Myself&#8230;</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/everything-will-be-okay">第14章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Everything Will Be Okay</span></strong></span></p>
-<p><span style="font-size:125%;"><strong><a class="newpage" href="/holding-an-umbrella">第15章</a> - <span style="font-family: 'Berkshire Swash', cursive;">Holding an Umbrella but the Sun's Still Shining</span></strong></span></p>
-<hr />
-<p><span style="font-size:110%;"><span style="font-family: 'Berkshire Swash', cursive;"><strong>来自作者的一封信：</strong></span></span><br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“有人曾经告诉我，他们很反感那些不讲清楚自身内容的中心页。我个人不喜欢把信息塞到页面顶端，所以我决定用一封小小的信来为这个中心页作结。那么，‘贩卖伙伴’……是什么？<br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“‘贩卖伙伴’是一则故事，故事的主角叫Brainy Brian，他不是什么好人。他不是英雄，他做过很多坏事……但他也做过一些好事。他只是……一介凡人。真的。起初他是Wondertainment博士的一名雇员，但很快他就阴差阳错地进入‘真实世界’，随后不久又进入异常世界。我开始写作时，并未预料到它能写到一篇实打实的小说的长度。我想，天呐，这篇故事足足有60,000多个单词呢！原计划是五话写完，但写起来……却源源不断。到现在为止统共写了十五话，系列正式结束了，但当时可真叫一个绵绵不绝。<br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“当我开始写作时，我的目标是写一个暗黑风的Wondertainment博士系列故事。然而，有人做过了。所以它变成了一次对于Wondertainment博士世界观的重新设计，因为我对网站上有关Wondertainment博士的各种二设并不算满意。我动手开写，结果它就变成了……一场创作大长篇故事的写作实践！它是目前为止我写过的最长的一篇东西。我指的是单篇……完整连贯的故事。太疯狂啦。它大概也是我最引以为傲的作品，因为大家都挺喜欢的。我练习了角色塑造技巧，对情节脉络的打造进行了思考，还产出了<em>成吨的</em>世界构建工作，我<em>热爱</em>写作这个世界（未来也很有可能再度造访）。最重要的是，我……在写作中收获了他喵的一大堆乐趣。<br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“那么在写作中的一切，我都处理得出色与否？<br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“我的老天鹅呀，又有谁知道呢。你来告诉我好啦。我猜它大概挺业余的。因为这是我<em>头一次</em>写出超过三个部分的故事。所以。就这样啦。这就是这篇中心页的内容。<br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>“敬请享用。”</p>
-
-
-
-<div class="navigation-links hub">
-<div style="text-align: center;">
-<p><strong><span class="previous">&#171; <a class="newpage" href="/previous-page">{$previous-page-name}</a> |</span> <a href="/vend-a-friend">贩卖伙伴中心页</a> <span class="next">| <a class="newpage" href="/next-page">{$next-page-name}</a> &#187;</span></strong></p>
-</div>
-</div>
-<hr />
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="link-to-with" style="display: block;">
-<blockquote>
-<p><a href="/vend-a-friend/offset/0">打开 Wondertainment 版式</a></p>
-</blockquote>
+
+
+
+
+
+
+
+<div class="DummyForumTitle">
+<p><a href="/the-old-wiki">旧维基</a> / 讨论区</p>
+<ul>
+<li>Forum</li>
+<li>单页讨论 / 单页讨论</li>
+<li>旧维基</li>
+</ul>
 </div>
-<div class="link-to-without" style="display: none;">
-<blockquote>
-<p><a href="/vend-a-friend/offset/1">关闭 Wondertainment 版式</a></p>
-</blockquote>
+<div class="dummyDescription">
+<div class="DummyStatistics">开始由: <span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/blank.png" class="small" alt="blank.png" /><span class="fake-link">Wikidot</span></span><br />
+日期: 12 Sep 2008, 00:44<br />
+文章数: 3<br />
+<span class="rss-icon"><img src="http://www.wikidot.com/common--theme/base/images/feed/feed-icon-14x14.png" class="" alt="feed-icon-14x14.png" /></span>RSS: <span class="fake-link">新文章</span></div>
+<div class="dummySummaySentence" style="display:block">
+<p>这是与维基页面相关联的讨论内容 <a href="/the-old-wiki">旧维基</a>.</p>
 </div>
 </div>
-    
-    
-    
-    </div><div class="list-pages-box">    
+<div class="dummyOptions">
+<p><span class="fake-link">全部展开</span> <span class="fake-link">全部收合</span> <span class="fake-link">更多选项</span></p>
+</div>
+<div class="post-container">
+<div class="dummyPostHead">
+<p><span class="Dummytitle">&nbsp;</span></p>
+<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Kain%20Pathos%20Crow.png" class="small" alt="Kain%20Pathos%20Crow.png" /><span class="fake-link">Kain Pathos Crow</span></span> 12 Sep 2008, 00:45</div>
+</div>
+<div class="dummyContent">
+<p>但是进化那些东西太牛了！冲啊！</p>
+</div>
+</div>
+<div class="post-container">
+<div class="dummyPostHead">
+<p><span class="Dummytitle">&nbsp;</span></p>
+<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Dr%20Gears.png" class="small" alt="Dr%20Gears.png" /><span class="fake-link">Dr Gears</span></span> 12 Sep 2008, 00:51</div>
+</div>
+<div class="dummyContent">
+<p>芜湖！我们就像某种奇怪的网络蝴蝶一样，冲出了旧网站的茧，比以前变得更好，更强了!</p>
+</div>
+</div>
+<div class="post-container">
+<div class="dummyPostHead">
+<p><span class="Dummytitle">&nbsp;</span></p>
+<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Noaqiyeum.png" class="small" alt="Noaqiyeum.png" /><span class="fake-link">Noaqiyeum</span></span> 12 Sep 2008, 06:07</div>
+</div>
+<div class="dummyContent">
+<p>一只奇怪的网络蝴蝶，险些被黑暗未知的恐怖吞噬……</p>
+</div>
+</div>
+<div class="DummyNew-post">
+<p><span class="fake-link">新文章</span></p>
+</div>
+</div>
     
     
     
     </div>
-<p><br /></p>
-<div style="text-align: center;"><img src="http://www.scp-wiki.net/local--files/vend-a-friend/BrainyBrianTransparent.png" alt="BrainyBrianTransparent.png" class="image" /><br />
-<span style="font-size:60%;"><strong>画作来自<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mendelssohn" onclick="WIKIDOT.page.listeners.userInfo(3110636); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3110636&amp;amp;size=small&amp;amp;timestamp=1600701726" alt="Mendelssohn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3110636)" /></a><a href="http://www.wikidot.com/user:info/mendelssohn" onclick="WIKIDOT.page.listeners.userInfo(3110636); return false;">Mendelssohn</a></span> &#8212; 标题、横幅、徽章来自<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sunnyclockwork" onclick="WIKIDOT.page.listeners.userInfo(1621343); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1621343&amp;amp;size=small&amp;amp;timestamp=1600701726" alt="SunnyClockwork" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1621343)" /></a><a href="http://www.wikidot.com/user:info/sunnyclockwork" onclick="WIKIDOT.page.listeners.userInfo(1621343); return false;">SunnyClockwork</a></span></strong></span></div>
-<br />
-<br />
-
                     </div>
 
                             
@@ -630,7 +1076,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/brainy-brian#pages">brainy-brian</a><a href="/system:page-tags/tag/wondertainment%E5%8D%9A%E5%A3%AB#pages">wondertainment博士</a><a href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83#pages">中心</a><a href="/system:page-tags/tag/%E5%A5%87%E5%A6%99%E4%B8%96%E7%95%8C#pages">奇妙世界</a>
+                                <a href="/system:page-tags/tag/%E7%AE%A1%E7%90%86#pages">管理</a>
                             </span>
                         </div>
                     
@@ -638,12 +1084,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 12, 最后编辑于: <span class="odate time_1600701726 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">21 Sep 2020 15:22</span></div>
+                            <div id="page-info">页面版本: 1, 最后编辑于: <span class="odate time_1594712547 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">14 Jul 2020 07:42</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+7</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+1</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-12542143/vend-a-friend" class="btn btn-default" id="discuss-button">讨论 (3)</a>
+<a href="/forum/t-13517934/the-old-wiki" class="btn btn-default" id="discuss-button">讨论 (4)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -710,10 +1156,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://machinima138.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/machinima138.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://fifabeapro360.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fifabeapro360.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://machinima138.wikidot.com">Machinima 138</a></h3>
+            <h3><a target="_blank" href="http://fifabeapro360.wikidot.com">Fifa Be A Pro 360</a></h3>
             <div class="desc">          
               
             </div>
@@ -721,34 +1167,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://f650cs.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/f650cs.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://2012hoax.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/2012hoax.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://f650cs.wikidot.com">F650CS FAQ</a></h3>
+            <h3><a target="_blank" href="http://2012hoax.wikidot.com">2012hoax</a></h3>
             <div class="desc">          
-              Alternative / Supplement  to Black Belt Gang FAQ&#039;s for the BMW Scarver
+              Debunking the &quot;2012 Doomsday&quot;
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://scp-int-sandbox.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-int-sandbox.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://celesia.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/celesia.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://scp-int-sandbox.wikidot.com">SCP Sandbox</a></h3>
+            <h3><a target="_blank" href="http://celesia.wikidot.com">Legends of Celesia</a></h3>
             <div class="desc">          
-              of the International Translation Archive
+              A D&amp;D 3.5/Pathfinder Campaign
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://jakeopod.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/jakeopod.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://oversoulgame.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/oversoulgame.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://jakeopod.wikidot.com">Jakeopod Wiki</a></h3>
+            <h3><a target="_blank" href="http://oversoulgame.wikidot.com">.</a></h3>
             <div class="desc">          
-              All things Jakeopod
+              
             </div>
           </div>
         </div>

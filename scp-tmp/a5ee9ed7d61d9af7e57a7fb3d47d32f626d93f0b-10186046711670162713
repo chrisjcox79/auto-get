@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<style type="text/css">
+body
+{
+   font-family:verdana,arial,helvetica,sans-serif;
+   font-size:12.8px;
+   color:#424248;
+   line-height:251%
+}
+#title {
+    margin: 0 0 .6em;
+    border-color: #424248;
+    border-color: rgb(var(--swatch-menubg-medium-dark-color,66,66,72));
+    padding: 0 0 .25em;
+    min-height: 2rem;
+    color: #0c0c0c;
+    font-family: Poppins,sans-serif;
+    font-family: var(--title-font);
+    font-weight: 600;
+    text-align: left;
+    font-size: 250%;
+    border-bottom: 1px solid #666;
+}
+</style>
+
+<body>
+
+<span id="title">迷茫者，解铃人</span>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+
+<script language="JavaScript">
+
+var truetitle="身为迷茫者的你和解铃人的我，都上不了西天";
+var num=truetitle.length;
+var i=0;//用于保存固定文字位置
+var chu=0;//保留除数
+var intChange=301;//保存变化总次数
+chu=Math.floor(intChange/num);
+
+function getRandomInt(max) {
+    return Math.floor((Math.random() * Math.floor(max-i))+i);
+}
+
+function getRandomChar() {
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz6789!"£$%^&*()-=_+{}[]~#:@;\'<>?,./|\\`¬¦/*-αβγδεζηθικλμνξοπρστυφχψωáéíóúÁÉÍÓÚ';
+    var charactersLength = characters.length;
+    return (characters.charAt(Math.floor(Math.random() * charactersLength)));
+}
+
+function insertChar(id, n){
+    var modString= document.getElementById(id).innerText;
+    var modStringLength= modString.length;
+    var charIndex = getRandomInt(modStringLength);
+    var charToSwap = modString.charAt(charIndex);
+    modString = modString.replace(charToSwap, n);
+    if (i < num) {
+    document.getElementById(id).innerText =truetitle.slice(0,i)+modString.slice(i);
+    }
+    else{
+     document.getElementById(id).innerText =truetitle.slice(0,i);
+    }
+}
+
+var counter = 0;
+
+var timeout = setTimeout(start, 30000);
+function start() {
+    var interval = setInterval(scrambleTitle, 40);
+    function scrambleTitle() {
+        if (counter < intChange) {
+            var char = getRandomChar();
+            insertChar("title", char);
+            counter = counter + 1;
+            i=Math.floor(counter/chu);
+        }
+    }
+}
+
+</script>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

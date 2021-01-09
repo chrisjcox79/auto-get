@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<html ng-app="buteo" ng-controller="ButeoController">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script>
+        "use strict";
+        /* global $, angular */
+        (function(){
+            var buteo = angular
+                .module('buteo',[])
+                .controller('ButeoController',ButeoController);
+            ButeoController.$inject = ['$scope'];
+            function ButeoController($scope){
+                $scope.schedule = "Your surgery is scheduled for ";
+                var date = new Date(+new Date + 3*86400000);
+                var month = "January,February,March,April,May,June,July,August,September,October,November,December".split(",")[date.getMonth()];
+                $scope.schedule += date.getDate()+nth(date.getDate()) +" "+month+" "+"2130!";
+                function nth(d) {
+                    if(d>3 && d<21) return 'th';
+                    switch (d % 10) {
+                        case 1:  return "st";
+                        case 2:  return "nd";
+                        case 3:  return "rd";
+                        default: return "th";
+                    }
+                } 
+            }
+        })();
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        #date {
+            color: #295183; font-family: Raleway,sans-serif; font-weight: bold; text-align: center; font-size: 1.52em;
+        }
+    </style>
+    <body>
+        <div id="date">{{schedule}}</div>
+    <script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+</html>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

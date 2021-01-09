@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+<link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<head>
+
+<style>
+
+body {
+
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12.8px; /* 16px * 0.8 */
+    color: #333;
+    line-height: 141%;
+}
+
+bodysmall {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10.4px; /* 14px * 0.8 */
+  color: #333;
+  line-height: 141%;
+}
+
+bodysmallred {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10.4px; /* 14px * 0.8 */
+  color: #901;
+  line-height: 141%;
+}
+
+a {
+    color: #b01;
+    text-decoration: none;
+    background: transparent;
+}
+
+robot {
+    font-family: Aldrich;
+    font-size: 12.8px;
+
+}
+
+.square{
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: grey;
+    background-color: #F5F5F5;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.squaregrey{
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-style: none;
+    border-width: 1px;
+    border-color: grey;
+    background-color: #F5F5F5;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.squarered{
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: #901;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.squareOpen{
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-left: solid #901 6px;
+    border-right: solid grey 1px;
+    border-bottom: solid grey 1px;
+    border-top: solid grey 1px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.squareOpen2{
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-left: solid grey 1px;
+    border-right: solid grey 1px;
+    border-bottom: solid grey 1px;
+    border-top: solid grey 1px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#input.button {
+  display: flex;
+  justify-content: center;
+}
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #901;
+}
+
+#label {
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+div {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12.8px; /* 16px * 0.8 */
+    color: #333;
+    line-height: 141%;
+}
+
+span {
+   font-family: Aldrich;font-size: 12.8px;
+   font-size: 12.8px; /* 16px * 0.8 */
+    color: #333;
+    line-height: 141%;
+}
+
+hr {
+
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.button {
+    border: none;
+    padding: none;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12.8px; /* 16px * 0.8 */
+    line-height: 141%;
+    color: #b01;
+    text-decoration: none;
+    background: transparent;
+    text-align: left,
+}
+
+.button2 {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 6px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+  background: #901;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background: #7a000d;
+}
+
+/* Buttons' focus effect */
+.button2:focus {
+  border-color: #05a;
+}
+
+.right{
+    float: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+</style>
+
+</head>
+
+<body>
+<br>
+<center><button class="button2" onclick="this.style.visibility='hidden'; move(); showDiv()">核验权限</button></center>
+<br>
+<div id="myProgress">
+  <div id="myBar">
+    <div id="label">10%</div>
+  </div>
+</div>
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv1" class="animate-bottom">
+<br>
+<span>系统访问解码中</span>
+<br>
+<br>
+<span>权限确认，允许访问</span>
+<br>
+<br>
+</div>
+<div style="display:none;" id="myDiv2" class="animate-bottom">
+<span>请求档案加载...</span>
+<br>
+</div>
+</div>
+<div style="display:none;" id="myDiv3" class="animate-bottom">
+<span>.</span>
+</div>
+
+<div style="display:none;" id="myDiv4" class="animate-bottom">
+<span>.</span>
+</div>
+
+<div style="display:none;" id="myDiv5" class="animate-bottom">
+<span>.</span>
+</div>
+<br>
+<br>
+<div style="display:none;" id="myDiv6" class="animate-bottom">
+<br>
+<div align="right"><bodysmallred><b>显示版本：</b> 3级/ES-100</bodysmallred> <bodysmall>[ 已审查元素： <b>4</b> | 审查人： <b>Dr. Fisher</b>]</bodysmall></div><br><br><br><br><br>
+
+<b>事故034.100.001/N3 - 调查报告</b><br><br>
+
+<b>日期：</b> 2007/07/21<br><br>
+
+<b>地点：</b> 西班牙瓦伦西亚（39.4███° N, 0.39██° W）<br><br>
+
+<b>出勤员工：</b> Agent Ariadna Llaurado<br><br>
+
+<b>事故记录：</b> 事故记录：2007年7月14日约18:23时，Andrea Vázquez Garrido（白人女性，16岁）搭乘了位于████████街4号建筑物内的一部电梯，一如既往地从一层搭乘至其全家所居住的四层。<br><br>
+
+有证据及记录表明Andrea Vázquez Garrido在电梯到达其终点四层前在电梯轿厢内部拨出一通电话并发出三条短信。<br><br>
+
+据估测，到其首条信息发送前，对象已在电梯轿厢内度过约5小时26分钟的时间。已证明在非异常情况下，该趟乘坐过程时间应该不长于31秒钟。<br><br>
+
+Andrea Vázquez Garrido约于23:47抵达四层并回到其住处，并对其自身与其拨出电话与发出短信之间的关系一无所知。<br><br>
+
+可调取该异常事件原始调查报告的数字复制件。[查看： <a href="http://scpsandboxcn.wdfiles.com/local--files/hueyacuetzpali/wDNeFWFr.jpg" target="_blank">事故034.100.001/N3 - 原始报告</a>]<br><br>
+
+<div align="right"><bodysmall>编辑于2007/07/28, 13:13:58 UTC 由：Agent Llaurado, <bodysmallred>a.llaurado@info.scp.net</bodysmallred></bodysmall></div>
+
+<center><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/Barra%20de%20Separaci%C3%B3n%20Final.png"></center>
+
+<p><a href="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-05/elisei-abiculesei-510729-unsplash.png"target="_blank"><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-05/elisei-abiculesei-510729-unsplash.png" class="right" style="width:350px;margin-left:15px;"></a><b>事故后续概况：</b> 据标准操作程序，基金会对Andrea Vázquez Garrido（PoI-034.6701/ES-100）及其亲朋进行了后续访谈。访谈结果表明从这些访谈中获取关于本事故的新信息无意义。</p>
+
+由于其中短信的重要性，基金会回收了PoI-034.6701/ES-100及其母亲的手机，并对PoI-034.6701/ES-100在事故034.100.001/N3期间搭乘的电梯轿厢进行了拆除与更换，并将之运送到了Site-34中，存贮至今。<br><br>
+
+值得注意的是，PoI-034.6701/ES-100的手机中并没有任何拨出或发出的通话或短信记录。<br><br>
+
+据信PoI-034.6701/ES-100或其他人并未删除这些记录，尽管其母亲的手机收到了这三条短信。<br><br>
+
+请注意，由于PoI-034.6701/ES-100的心理状态，当前我们无法准确知道除了记录显示的这些，其是否在事故034.100.001/N3期间向其他人拨打过电话或是发出过其他短信。<br><br>
+
+由于可能在未来提供重要证词，不允许对受影响者进行诱导性或解构性记忆清除，掩盖故事审查及处决部作为替代手段，制造了一个合适的掩盖故事来掩盖该故事。<br><br>
+
+<div class="square"><b>更新 - 2007/10/11：</b> 基于SCP-ES-100研究组领导的申请，基金会对PoI-034.6701/ES-100进行了秘密DNA比对，并确认了其身份。<br><br>
+
+当前基金会仍保持着对PoI-034.6701/ES-100及其核心家族成员的监视。</div><br>
+
+<div align="right"><bodysmall>编辑于2007/07/28, 13:16:24 UTC 由：Dr. Ashworth, <bodysmallred>j.ashworth@rsrch.scp.net</bodysmallred></bodysmall><br>
+<bodysmall>最后更新[2]于2007/10/15, 15:09:41 UTC 由：Doctor Ashworth, <bodysmallred>j.ashworth@rsrch.scp.net</bodysmallred></bodysmall></div>
+
+<center><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/Barra%20de%20Separaci%C3%B3n%20Final.png"></center>
+
+<div class="squarered">
+  <center><img src="http://vignette2.wikia.nocookie.net/mlp/images/7/78/SCP_Foundation_Logo_white.png/revision/latest/scale-to-width-down/480?cb=20150517110821" style="width:100px;height:100px;"><strong><h2>请注意！</h2></strong></center>
+
+<center><b>反模因及认知危害部通知</b><br><br>
+<hr><br>
+下列图像已经过清理，可安全查看。<br><br>
+
+下列图像虽无任何严重认知危害，仍建议谨慎查看。</center></div>
+
+<br>
+
+<b>文本及音频034.100.02/N3 - 转写：</b> 下列材料为PoI-034.6701/ES-100在2007年7月14日18:23至23:47之间乘坐2800型电梯轿厢预计到达其目标层之前的通讯尝试。<br><br><br>
+
+<div class="squareOpen">
+<b>时间：</b> 2007/07/14, 18:23<br><br>
+
+<b>收信人：</b> PoI-034.6701/ES-100母亲<br><br>
+
+<b>通信类别：</b> 短信息<br><br>
+
+<hr><br>
+
+<div class="squaregrey"><robot>妈！！！我觉得楼里的电梯八成出毛病了能出来等一下我吗？！</robot></div><br><br><br>
+
+<center><button class="button2" onclick="myFunction3()">随信图片</button></center><br>
+
+<div id="Collap3" style="display:none;">
+<center><a href="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/jonathan-simcoe-177914-unsplashFinal2-glitched-6-13-2018-10-11-53-PM.png"target="_blank"><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/jonathan-simcoe-177914-unsplashFinal2-glitched-6-13-2018-10-11-53-PM.png"></a></center><br></div></div><br>
+
+<hr><br>
+
+<div class="squareOpen">
+<b>时间：</b> 2007/07/14, 18:49<br><br>
+
+<b>收信人：</b> PoI-034.6701/ES-100母亲<br><br>
+
+<b>通信类别：</b> 短信息<br><br>
+
+<hr><br>
+
+<div class="squaregrey"><robot>我又上来了一转。可怕极了我觉得肯定出啥岔子了电梯的数字也不显示了。妈啊快来啊！！！</div></robot><br><br><br>
+
+<center><button class="button2" onclick="myFunction4()">随信图片</button></center><br>
+
+<div id="Collap4" style="display:none;">
+<center><a href="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/paul-volkmer-299704-unsplash-Final2-glitched-6-17-2018-12-38-30-AM.png"target="_blank"><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/paul-volkmer-299704-unsplash-Final2-glitched-6-17-2018-12-38-30-AM.png"></a></center><br></div></div><br>
+
+<hr><br>
+
+<div class="squareOpen">
+<b>时间：</b> 2007/07/14, 20:08<br><br>
+
+<b>收信人：</b> ████████公司后勤及维修部<br><br>
+
+<b>通信类别：</b> 电话呼叫<br><br>
+
+<hr><br>
+
+<center><button class="button2" onclick="myFunction8()">打开文字版</button></center><br>
+
+<div id="Collap8" style="display:none;">
+
+<div class="squaregrey">
+<b>< 通话开始，2007/07/14 - 20:08 ></b><br><br>
+
+<b>接线员：</b> 晚上好。您现在拨打的是████████公司后勤及维修部。为了更好地帮助您，可以先说明您的电梯型号吗？<br><br>
+
+<b>Andrea：</b> 喂……？喂！能听到我说话吗？<br><br>
+
+<b>接线员：</b> 可以的，我听得到您说话。<br><br>
+
+<b>Andrea：</b> 谢谢，天哪……谢谢。你得帮帮我！<br><br>
+
+<b>接线员：</b> 请告诉我您电梯的型号。<br><br>
+
+<b>Andrea：</b> 型号？我不知道你在说啥……听不懂我说话吗……？得有个人来帮帮我，现在，马上！很急。<br><br>
+
+<b>接线员：</b> 恐怕如果您不提供电梯型号的话，我们无法提供帮——<br><br>
+
+<b>Andrea：</b> 别……别挂……救救我，求你了！这台电梯出岔子了。你得把我从这儿救出去！<br><br>
+
+<b>接线员：</b> 您是说电梯故障了吗？您被关在电梯里了吗？<br><br>
+
+<b>Andrea：</b> 嗯，啊……不对，不是这回事……我得理一下……<i>（哭泣）</i> 我知道这看起来跟我疯了一样，但是我很确定，每次这电梯到我家那一层楼的时候，它都不一样。<br><br>
+
+<b>接线员：</b> 不好意思，我不是太明白。您说您家那层楼不一样是啥意思？<br><br>
+
+<b>Andrea：</b> 一开始就是一种感觉……有什么东西不对劲。天哪……我真的不知道怎么描述……每天我都上这台电梯回家，我家在四楼。今天也是，但是我到的时候……嗯，不一样……和往常的不一样。那些墙啊，它们和往常不一样了，它们……它们更蓝了！<br><br>
+
+<b>接线员：</b> 好。您说您那一层楼墙的颜色不对劲……<i>（叹气）</i> 您得马上告诉我您电梯的型——<br><br>
+
+<b>Andrea：</b> 听我说完呐！我告诉你它确实不一样。那不是我家！你得把我救出来，求你了。我真的不是神经病……<i>(llora)</i><br><br>
+
+<b>接线员：</b> 好啦……冷静一点。可不可能只是您不在楼里的时候有人刷了墙？<br><br>
+
+<b>Andrea：</b> 我确定一定以及肯定没有，墙一直都是那颜色……而且也不只是墙……我出电梯之后还有一堆别的事不同。我看不出来但是我知道有不同……太奇怪了，我很害怕就跑回电梯里了。我回到一楼但是门一开还是不一样，一楼也变了。就跟发了噩梦一样……你得把我从这儿救出去，求你了！我不想死在这一汪蓝里……我想回家！<br><br>
+
+<b>接线员：</b> 您确定您楼层按对了吗？您可能搞错——<br><br>
+
+<b>Andrea：</b> 你没听我说话还是咋？我都不觉得我还在这栋楼里！电梯出岔子了……我觉得是蓝色，我确定一定以及肯定。我试过好几次了，但是每次到我那楼门一开，就完全不一样了。就好像……每次都有一层新的蓝色在等着我。你得救救我！<br><br>
+
+<b>接线员：</b> 行。您冷静一下。要救您您得告诉我电梯型号。您可以在——<br><br>
+
+<b>Andrea：</b> 天哪……你听到了吗？别又来了……<br><br>
+
+<b>接线员：</b> 您说啥？<br><br>
+
+<b>Andrea：</b> 嗡嗡嗡的，那些声音……你听不见吗？又开始了……<i>（哭泣）</i><br><br>
+
+<b>接线员：</b> 没，我只听得到您说话。我说了啊，电梯型号您可以——<br><br>
+
+<b>Andrea：</b> 嘘……等等，他们在嗡嗡嗡地说着啥…… <i>（沉默）</i><br><br>
+
+<b>Andrea：</b> 你知道吗？他们觉得我听不见它们，但是那不对，我听得见。虽然它们在那蓝色深处在嗡嗡嗡……但是我听不懂他们在说啥，我都不确定他们在用语言交流……您觉得我应该答应一声马？不不不……<i>（哭泣）</i> 我怕，我不敢……<br><br>
+
+<b>接线员：</b> 不好意思。我不明白您为啥要给我说——<br><br>
+
+<b>Andrea：</b> 是他们……你没发觉吗？为啥你不听我说话？为啥大家都不听我说话……？我知道了，一直是他们。他们在看着我，但是我不想看到他们。谁都不想看到他们……你听懂了吧？我觉得他们并不喜欢我给你说这个……他们从那蓝色深处看着我……我一上电梯就看着我，但是他们可能很早，比那早得多就开始了。你得把我救出去……求你了把我救出去！<br><br>
+
+<b>接线员：</b> 我再重复一次……您得马上告诉我您电梯的型号。您不提供这个信息我没办法帮助您。<br><br>
+
+<b>Andrea：</b> 别，求你了，别逼着我这么干……我知道他们在那。我怕我一转身就看到他们在看着w——<i>（干涉音）</i><br><br>
+
+<b>接线员：</b> 喂……？这啥声音？您还在吗？喂？<br><br>
+
+<b>接线员：</b> 请回答。您还在吗？喂……？<br><br>
+
+<b>Andrea：</b> <i>（干涉音）</i> ……在这一汪蓝里……<i>（干涉音）</i><br><br>
+
+<b>接线员：</b> 您还在吗？我听不见您说什么了……喂？喂？<br><br>
+
+<b>< 通话结束，20:13 ></b><br><br></div></div></div>
+
+<br><hr><br>
+
+<div class="squareOpen">
+<b>时间：</b> 2007/07/10, 22:10<br><br>
+
+<b>收信人：</b> PoI-034.6701/ES-100母亲<br><br>
+
+<b>通信类别：</b> 短信息<br><br>
+
+<hr><br>
+
+<div class="squaregrey"><robot>妈你在那？？！！到处都是蓝的他们在蓝色里。我也在蓝色里？？？咋不会信啊？？！！！！！</robot></div><br><br><br>
+
+<center><button class="button2" onclick="myFunction5()">随信图片</button></center><br>
+
+<div id="Collap5" style="display:none;">
+<center><a href="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/jamison-riley-524424-unsplash-Final2%20%28ver3%29-glitched-6-17-2018-12-20-23-AM.png"target="_blank"><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/jamison-riley-524424-unsplash-Final2%20%28ver3%29-glitched-6-17-2018-12-20-23-AM.png"></a></center><br></div></div><br>
+
+<hr><br>
+
+<div class="square"><b>更新 - 2007/10/04：</b> 2007年10月3日于PoI-034.6701/ES-100母亲手机中回收到一条从PoI-034.6701/ES-100号码发来的新信息。<br><br>
+
+对自PoI-034.6701/ES-100处回收手机的核验表明该手机自回收后便未曾有过通话。<br><br>
+
+<center><button class="button2" onclick="myFunction7()">打开附录</button></center><br>
+
+<div id="Collap7" style="display:none;">
+
+<div class="squareOpen">
+<b>日期：</b> 2007/09/03, 04:23<br><br>
+
+<b>收信人：</b> PoI-034.6701/ES-100母亲<br><br>
+
+<b>通信类别：</b> 短信息<br><br>
+
+<hr><br>
+
+<div class="squaregrey"><robot>sAZ!23ioer?oU#r&eeeeeeeee L!!!qwqeqwqwqwqwqw</robot></div><br><br><br>
+
+<center><button class="button2" onclick="myFunction6()">随信图片</button></center><br>
+
+<div id="Collap6" style="display:none;">
+<center><a href="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/charles-deluvio-456801-unsplash%20Final2.png"target="_blank"><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/charles-deluvio-456801-unsplash%20Final2.png"></a></center><br></div></div></div></div><br>
+
+<div align="right"><bodysmall>编辑于2007/07/28, 13:44:06 UTC 由：Agent Llaurado, <bodysmallred>a.llaurado@info.scp.net</bodysmallred></bodysmall><br>
+<bodysmall>最后更新[2]于08/10/2007, 10:03:27 UTC 由：Dr. Ashworth, <bodysmallred>j.ashworth@rsrch.scp.net</bodysmallred></bodysmall></div>
+
+<center><img src="http://borradores-scp-es.wdfiles.com/local--files/concursoscpes100belasias-01/Barra%20de%20Separaci%C3%B3n%20Final.png"></center>
+
+<b>附录034.100.047/N3 - 项目停止：</b> 2010年2月12日，Site-34领导层决定终止SCP-ES-100研究协议，同时无限期停止相关实验。<br><br>
+
+该决议更多信息可参见该意见相关文件。 [ref: <a href="http://scp-wiki-cn.wikidot.com/scp-es-100/offset/1" target="_blank">文件034.100.047/N3 - 项目停止：原因</a>]<br><br>
+
+<div align="right"><bodysmall>编辑于2010/02/14, 12:43:51 UTC 由：Dr. Hayman, <bodysmallred>r.hayman@ethc.scp.net</bodysmallred></bodysmall></div>
+
+<br><br><br>
+
+</div>
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 10;
+  var id = setInterval(frame, 25);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      document.getElementById("label").innerHTML = width * 1  + '%';
+    }
+  }
+}
+function showDiv() {
+    setTimeout(showPage1, 3000);
+    setTimeout(showPage2, 4000);
+    setTimeout(showPage3, 4500);
+    setTimeout(showPage4, 5000);
+    setTimeout(showPage5, 5500);
+    setTimeout(showPage6, 6500);
+}
+
+function showPage1() {
+ document.getElementById("myDiv1").style.display = "block";
+}
+
+function showPage2() {
+ document.getElementById("myDiv2").style.display = "block";
+}
+
+function showPage3() {
+ document.getElementById("myDiv3").style.display = "block";
+}
+
+function showPage4() {
+ document.getElementById("myDiv4").style.display = "block";
+}
+
+function showPage5() {
+ document.getElementById("myDiv5").style.display = "block";
+}
+
+function showPage6() {
+ document.getElementById("myDiv6").style.display = "block";
+}
+
+function myFunction1() {
+    var x = document.getElementById("Collap1");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction2() {
+    var x = document.getElementById("Collap2");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction3() {
+    var x = document.getElementById("Collap3");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction4() {
+    var x = document.getElementById("Collap4");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction5() {
+    var x = document.getElementById("Collap5");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction6() {
+    var x = document.getElementById("Collap6");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction7() {
+    var x = document.getElementById("Collap7");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction8() {
+    var x = document.getElementById("Collap8");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}   
+
+</script>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

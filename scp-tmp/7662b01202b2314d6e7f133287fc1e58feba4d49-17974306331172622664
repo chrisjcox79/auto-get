@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<head>    
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script>    
+
+ $(document).ready(function(){ 
+  $("#outside").mouseenter(function(){
+    $("#outside").addClass("door");
+    $(".kuang1").animate({opacity:'0.3',},500);  
+    $("#outside").removeClass("gate");
+  });
+
+  $("#outside").mouseleave(function(){
+    $("#outside").addClass("gate");
+    $(".kuang1").animate({opacity:'0.6',},500);    
+    $("#outside").removeClass("door");  
+  });    
+
+  $("#inner").mouseenter(function(){
+    $("#inner").addClass("door");
+    $(".kuang2").animate({opacity:'0.8',},500);   
+    $("#inner").removeClass("gate");
+  });
+
+  $("#inner").mouseleave(function(){
+    $("#inner").addClass("gate");
+    $(".kuang3").animate({opacity:'0.6',},500);   
+    $("#inner").removeClass("door");  
+  });    
+
+  $("#novote").mouseenter(function(){
+    $("#novote").addClass("door");
+    $(".kuang3").animate({opacity:'0.4',},500);   
+    $("#novote").removeClass("gate");
+  });
+
+    $("#novote").mouseleave(function(){
+    $("#novote").addClass("gate");
+    $(".kuang3").animate({opacity:'0.9',},500);   
+    $("#novote").removeClass("door");  
+  });      
+
+ $("#novote").bind("click",function(){
+    $(this).height($(this).height());
+      $("#table .nov").each(function(i){ 
+        var hid3=$(this);   
+        hid3.delay(i * 100).animate({opacity:'0'},1000);
+    hid3.delay(i * 60).animate({width:'0',height:'0'},800).fadeOut(10);;
+        $("#novote").fadeOut(3000);    
+        $("#o5u").delay(100).animate({opacity:'1'},4000);
+        $("#o5d").delay(100).animate({opacity:'1'},4000);
+        $(".leftbox").delay(1600).animate({width:'37%'},2400);  
+});
+  });
+
+});    
+
+function agree(){
+
+var noseeit = document.getElementById('o5u').style.opacity;
+
+if (noseeit == 0){
+$("#o5u").html("O5-13");    
+$("#o5u").delay(100).animate({opacity:'1'},2000);
+$(".leftbox").delay(1600).animate({width:'46%'},2400); 
+$("#inner").fadeOut(3000);
+$("#novote").fadeOut(2000);
+
+setTimeout(function (){
+document.getElementById('yes').style="font-size:200%;color:red;";    
+$("#yes").html("=)");
+$("#hd").html("谢 谢 你");
+
+alert("投票结果：6赞成，5反对，2弃权" + "\n" + "取消对SCP-CN-866收容的决议通过！");
+
+setTimeout(function (){
+window.opener=null;
+window.open('','_self');
+top.window.close();    
+window.location.href="http://scp-wiki-cn.wikidot.com/scp-cn-866/offset/2"    
+},2100);
+
+},4000);       
+}
+
+else{
+$("#o5-13").delay(100).animate({opacity:'1'},2000);
+$("#inner").fadeOut(3000);
+$("#yes").html("=)");
+
+setTimeout(function (){
+document.getElementById('yes').style="font-size:200%;color:red;";    
+$("#yes").html("=)");
+setTimeout(function (){    
+alert("投票结果：7赞成，6反对" + '\n' +" 取消对SCP-CN-866收容的决议通过！" );    
+window.location.href=window.history.go(-999);
+},1000);
+},3000);    
+}
+
+}
+
+function anti(){
+
+var noseeit = document.getElementById('o5u').style.opacity;    
+document.getElementById('inner').onclick=" "
+$("#fuck").html('<s>反 对</s>');
+
+setTimeout(function (){    
+document.getElementById('table').style="background: url(http://kaktuskontainer.wdfiles.com/local--files/component%3Apataphysics-theme/Pataphysics-logo.png) center no-repeat ;";    
+},10000);    
+
+$("#novote").fadeOut(1000);
+$("#outside").animate({width:'5%'},2400).fadeOut(1000);
+$(".leftbox").delay(1600).animate({width:'42%'},2400); 
+
+<!--文字波动-->    
+if (noseeit == 0){    
+$("#u2").delay(100).animate({opacity:'0'},500);
+$("#u5").delay(100).animate({opacity:'0'},500);    
+$("#d1").delay(100).animate({opacity:'0'},500);
+$("#n1").delay(100).animate({opacity:'0'},500);    
+$("#n2").delay(100).animate({opacity:'0'},500);
+$("#you").delay(100).animate({opacity:'0'},500);    
+$("#s13").delay(100).fadeOut(400);    
+setTimeout(function (){
+$("#u2").html("O5-2");
+$("#u5").html("O5-4");    
+$("#d1").html("O5-9");
+$("#d5").html(" ");    
+$("#n1").html("O5-10");    
+$("#n2").html("O5-11");    
+$("#you").html(" 不欢迎，滚！  ");
+},500);    
+$("#u2").animate({opacity:'1'},500);
+$("#u5").animate({opacity:'1'},500);    
+$("#d1").animate({opacity:'1'},500);
+$("#n1").animate({opacity:'1'},500);    
+$("#n2").animate({opacity:'1'},500);    
+$("#you").delay(100).animate({opacity:'1'},500);    
+
+setTimeout(function (){    
+$("#d2").delay(100).animate({opacity:'0'},500);
+$("#n1").delay(100).animate({opacity:'0'},500);    
+$("#n2").delay(100).animate({opacity:'0'},500);
+$("#d4").delay(100).animate({opacity:'0'},500);    
+$("#s12").delay(100).fadeOut(400);
+$("#s11").delay(100).fadeOut(400);    
+setTimeout(function (){
+$("#d1").html("O5-7");
+$("#n1").html("O5-10");
+$("#d4").html("O5-9");    
+$("#n2").html(" ");    
+},500);    
+$("#d2").animate({opacity:'1'},500);
+$("#n1").delay(100).animate({opacity:'1'},500);
+$("#n2").delay(100).animate({opacity:'1'},500);    
+$("#d4").delay(100).animate({opacity:'1'},500);    
+},1800);
+
+setTimeout(function (){    
+$("#u4").delay(100).animate({opacity:'0'},500);
+$("#n1").delay(100).animate({opacity:'0'},500);    
+$("#n2").delay(100).animate({opacity:'0'},500);
+$("#d3").delay(100).animate({opacity:'0'},500);    
+$("#s10").delay(100).fadeOut(400);
+$("#s9").delay(100).fadeOut(400);
+$("#s8").delay(100).fadeOut(400);    
+setTimeout(function (){
+$("#u4").html("O5-6");    
+$("#d3").html(" ");    
+$("#d1").html("O5-7");
+$("#n1").html(" ");
+$("#d4").html(" ");    
+$("#n2").html(" ");    
+},500);
+$("#u4").animate({opacity:'1'},500);    
+$("#n1").delay(100).animate({opacity:'1'},500);
+$("#n2").delay(100).animate({opacity:'1'},500);    
+$("#d3").delay(100).animate({opacity:'1'},500);
+$("#d4").delay(100).animate({opacity:'1'},500);    
+},2700);    
+
+setTimeout(function (){    
+$("#u4").delay(100).animate({opacity:'0'},500);
+$("#d2").delay(100).animate({opacity:'0'},500);    
+$("#s7").delay(100).fadeOut(400);    
+setTimeout(function (){
+$("#u4").html("O5-3");    
+$("#d1").html("O5-6");    
+$("#d2").html(" ");    
+},500);
+$("#u4").animate({opacity:'1'},500);    
+$("#d2").delay(100).animate({opacity:'1'},500);    
+},3600);    
+
+setTimeout(function (){    
+$("#d1").delay(100).animate({opacity:'0'},500);    
+$("#s6").delay(100).fadeOut(400);    
+setTimeout(function (){    
+$("#d1").html(" ");    
+},500);    
+$("#d1").delay(100).animate({opacity:'1'},500);    
+},4800);
+
+setTimeout(function (){    
+$("#u3").delay(100).animate({opacity:'0'},500);    
+$("#u4").delay(100).animate({opacity:'0'},500);    
+$("#u5").delay(100).animate({opacity:'0'},500);    
+setTimeout(function (){    
+$("#u3").html("O5-3");
+$("#u4").html("O5-4");    
+$("#u5").html("O5-5");
+$("#hd").html("坏孩子你知道什么？");    
+},500);    
+$("#u3").delay(100).animate({opacity:'1'},500);
+$("#u4").delay(100).animate({opacity:'1'},500);    
+$("#u5").delay(100).animate({opacity:'1'},500);    
+$(".down").delay(1000).animate({width:'0',height:'0',opacity:'0'},800).fadeOut(100);
+$(".nov").delay(1000).animate({width:'0',height:'0',opacity:'0'},800).fadeOut(100);    
+},5000);    
+
+setTimeout(function (){    
+$("#fuck").html('<p style="font-size:200%,color:#f4f4f4;font-weight:bold;"> =（</p>');    
+alert("投票结果：5 赞成，Nobody 反对" + '\n' +" 取消对SCP-CN-866收容的决议通过！");
+window.location.href="http://scp-wiki-cn.wikidot.com/scp-cn-866/offset/2"    
+},8100);    
+
+}
+
+else{
+$("#d1").delay(100).animate({opacity:'0'},500);    
+$("#u2").delay(100).animate({opacity:'0'},500);
+$("#d5").delay(100).animate({opacity:'0'},500);    
+$("#u6").delay(100).animate({opacity:'0'},500);    
+$("#d6").delay(100).animate({opacity:'0'},500);
+$("#s12").delay(100).fadeOut(400);    
+$("#s13").delay(100).fadeOut(400);    
+$("#you").delay(100).animate({opacity:'0'},500);
+setTimeout(function (){
+$("#u2").html("O5-2");
+$("#d1").html("O5-9");    
+$("#d5").html("O5-10");    
+$("#u6").html("O5-4");    
+$("#d6").html(" ");
+$("#you").html("欢迎您，N/A");    
+},500);    
+$("#u2").animate({opacity:'1'},500);
+$("#u5").animate({opacity:'1'},500);
+$("#d5").animate({opacity:'1'},500);    
+$("#d1").animate({opacity:'1'},500);
+$("#u6").animate({opacity:'1'},500);
+$("#d6").animate({opacity:'1'},500);
+$("#you").delay(100).animate({opacity:'1'},500);
+
+setTimeout(function (){    
+$("#u5").delay(100).animate({opacity:'0'},500);    
+$("#d4").delay(100).animate({opacity:'0'},500);
+$("#d1").delay(100).animate({opacity:'0'},500);
+$("#d5").delay(100).animate({opacity:'0'},500);    
+$("#s11").delay(100).fadeOut(400);    
+setTimeout(function (){    
+$("#d1").html("O5-7");
+$("#d4").html("O5-10");    
+$("#u5").html("O5-9");
+$("#d5").html(" ");    
+},500);    
+$("#d1").delay(100).animate({opacity:'1'},500);
+$("#d4").delay(100).animate({opacity:'1'},500);    
+$("#u5").delay(100).animate({opacity:'1'},500);    
+$("#d5").delay(100).animate({opacity:'1'},500);    
+},1200);    
+
+setTimeout(function (){    
+$("#s10").delay(100).fadeOut(400);    
+$("#s9").delay(100).fadeOut(400);
+$("#s7").delay(100).fadeOut(400);    
+$("#u5").delay(100).animate({opacity:'0'},500);
+$("#u4").delay(100).animate({opacity:'0'},500);    
+$("#d4").delay(100).animate({opacity:'0'},500);
+$("#d3").delay(100).animate({opacity:'0'},500);
+$("#d2").delay(100).animate({opacity:'0'},500);    
+$("#d1").delay(100).animate({opacity:'0'},500);    
+setTimeout(function (){    
+$("#d1").html("O5-3");
+$("#d4").html(" ");    
+$("#d3").html(" ");
+$("#d2").html(" ");    
+$("#u4").html("O5-6");    
+$("#u5").html("O5-7");    
+},500);    
+$("#d4").delay(100).animate({opacity:'1'},500);
+$("#d3").delay(100).animate({opacity:'1'},500);
+$("#d2").delay(100).animate({opacity:'1'},500);    
+$("#d1").delay(100).animate({opacity:'1'},500);    
+$("#u5").delay(100).animate({opacity:'1'},500);
+$("#u4").delay(100).animate({opacity:'1'},500);    
+},2500);    
+
+setTimeout(function (){    
+$("#s8").delay(100).fadeOut(400);    
+$("#d1").delay(100).animate({opacity:'0'},500);    
+$("#u5").delay(100).animate({opacity:'0'},500);    
+setTimeout(function (){    
+$("#d1").html(" ");
+$("#u5").html("O5-3");    
+},500);    
+$("#d1").delay(100).animate({opacity:'1'},500);
+$("#u5").delay(100).animate({opacity:'1'},500);    
+},3600);
+
+setTimeout(function (){    
+$("#u1").delay(100).animate({opacity:'0'},500);    
+$("#u2").delay(100).animate({opacity:'0'},500);
+$("#u3").delay(100).animate({opacity:'0'},500);
+$("#u4").delay(100).animate({opacity:'0'},500);
+$("#u5").delay(100).animate({opacity:'0'},500);
+$("#u6").delay(100).animate({opacity:'0'},500);    
+setTimeout(function (){    
+$("#u1").html("O5-1");
+$("#u2").html("O5-2");
+    $("#u3").html("O5-3");
+    $("#u4").html("O5-4");
+    $("#u5").html("O5-5");
+    $("#u6").html("O5-6");
+    $("#hd").html("坏孩子你知道什么？");    
+},500);    
+$("#u1").delay(100).animate({opacity:'1'},500);    
+$("#u2").delay(100).animate({opacity:'1'},500);
+$("#u3").delay(100).animate({opacity:'1'},500);
+$("#u4").delay(100).animate({opacity:'1'},500);
+$("#u5").delay(100).animate({opacity:'1'},500);
+$("#u6").delay(100).animate({opacity:'1'},500);    
+$(".down").delay(1000).animate({width:'0',height:'0',opacity:'0'},800).fadeOut(100);    
+},4600);
+
+setTimeout(function (){    
+$("#fuck").html('<p style="font-size:200%,color:#f4f4f4;font-weight:bold;"> =（ </p>');    
+alert("投票结果：6 赞成，Nobody 反对" + '\n' +" 你们让一切如此简单，基金会！");    
+window.location.href="http://scp-wiki-cn.wikidot.com/scp-cn-866/offset/2"
+},7200);    
+}    
+}
+
+function idcheck(){
+document.getElementById("hd2").onclick=""    
+$("#vote").fadeIn(3500); 
+$("#hd2").html("[ 最 后 无 人 知 晓 ]");
+
+if(!navigator.userAgent.match(/mobile/i)){
+document.getElementById('player').innerHTML='<embed src="http://fjdx.sc.chinaz.com/files/download/sound1/201309/3469.wav" loop="true" autostart=true name=bgss width="0" height="0" autoplay="autoplay">';
+}
+
+}
+
+function show(){
+$("#checkit").fadeIn(2000);
+$("#hd3").html(" ");
+
+setTimeout(function (){  
+$(".enterbox").slideDown(2000);
+},2000);
+}
+
+ </script>
+
+<style type="text/css">
+
+    .gate{
+border:1px solid #6c6c6c;
+width:10%;text-align: center; 
+float:left;
+    }    
+
+    .door{
+border:1px solid #6c6c6c;
+width:10%;text-align: center; float:left;
+background:url(http://scp-wiki.wdfiles.com/local--files/the-great-hippo/scp_trans.png) center no-repeat;
+background-size:80%    ;
+cursor:pointer;    
+    }    
+
+    .kuang1{
+    background:#CCCCFF;    
+    opacity: 0.8; 
+    }
+
+   .kuang2{
+    background:#CC0000;    
+    opacity: 0.6; 
+    }
+
+   .kuang3{
+    background:#D5D8DA;    
+    opacity: 0.7; 
+    }
+
+    .nov{
+    color:grey
+    }
+    .down{
+    color:#660000
+    }
+
+    .leftbox{
+    float:left;width:30%;
+    }    
+
+    .enterbox{
+    float:center;
+    border:double  5px #BCB7B6;    
+    background: url(http://kaktuskontainer.wdfiles.com/local--files/component%3Adarkbodytheme/body_bg.png) top left repeat;"
+    padding-top: 2px; padding-bottom: 2px; padding-right: 50px; padding-left: 20px;
+display:none;
+    }
+
+    #hd{
+    color:#f4f4f4;
+    font-size:170%;
+    font-family:'华文中宋';
+    text-shadow:2px 2px 7px #CCFFFF;    
+    }
+
+    #hd2{
+    color:red;
+    font-size:150%;
+    font-family:'华文楷体'
+    font-weight:bold;
+    text-decoration:none;    
+    }
+
+    a {
+    color: #b01;
+    text-decoration: none;
+    background: transparent;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12.8px; /* 16px * 0.8 */
+    }
+
+a:hover{
+text-decoration:underline
+}
+
+.welcome{
+text-align:center;
+margin:0px auto;    
+float:left;
+height:100%;
+width:100%;
+}
+
+.txt{
+border:1px solid #ccc;
+background:#f4f4f4;
+padding:10px 15px 10px 15px;
+font-size:150%;
+}
+
+.cancel{
+ border:solid 1px #999999;
+ background:#D5D5D5;
+ padding:5px;
+ margin-bottom: 10px;
+}
+
+.cancel p{
+margin-left: 10px;
+}
+
+.jdz{
+text-align:center;
+background: url(http://www.kaktuskontainer.wikidot.com/local--files/component:darkbodytheme/logo.png) left no-repeat;"
+}
+
+@media (max-width: 479px) {
+#hd {
+    font-size: 140%;
+    color:#8A2BE2;
+    font-weight:bold;
+    text-shadow:2px 2px 14px #660033;
+}
+
+#jdz{
+text-align:center;
+background: url(http://www.kaktuskontainer.wikidot.com/local--files/component:darkbodytheme/logo.png) center no-repeat;"
+background-size:20%
+}
+}
+
+</style>
+
+</head>    
+
+<body>
+<a id="hd3" href="javascript:;"  onclick="show()" > ✪ 您有一封新邮件！ </a>    
+<p id="player" style="font-size:0px"></p>
+
+<div style="width:100%;">    
+
+<div id="checkit" style="float:center;width:100%;display:none;">    
+
+<br>    <br>    <br>    
+<div class="cancel">
+<p style="font-size:130%;text-align:center;">‡<b> 来自监督者议会的通知 </b>‡</p>
+<p><b>提案UTF_64</b>：取消对SCP-CN-866的特殊收容措施</p>
+<p><b>投票情况</b>：<span style="color:orange;">进行中</span ></p>
+<p style="text-align:right;font-family:'yukarimobileregular';"><i>————The Administrator &ensp; </i></p>
+</div>    
+<br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    
+
+<div class="enterbox">
+<div id="jdz" class="jdz">    
+<br>
+<p id="hd"> 请您进行身份验证以进行投票</p>
+<a id="hd2" href="javascript:;" onclick="idcheck()"> [ 黑 月 是 否 嚎 叫 ] </a>    
+<br>    
+</div>
+</div>
+</div>
+<div id="vote" style="display:none">    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="welcome">
+<span id="you" class="txt">欢迎您，O5-13</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
+<table  id="table" border="1" align="center" style="background: url(http://scp-wiki.wdfiles.com/local--files/djkaktus-s-proposal/amber.png) center no-repeat;
+" >
+  <tr id="s0">
+    <th id="u0"  style="font-size:150%">&#12288; 赞成 &#12288; </th>
+    <th id="d0"  class="down" style="font-size:150%">&#12288;  反对 &#12288; </th>
+    <th id="n0"  class="nov" style="font-size:150%;color:black">&#12288;  弃权&#12288;  </th>
+  </tr>
+
+  <tr id="s1">
+    <th id="u1" style="color:green">O5-1</th>
+    <th id="d1" class="down">O5-2</th> 
+    <th  id="n1" class="nov">O5-11</th>
+  </tr>
+
+ <tr id="s2">
+    <th id="u2" style="color:green">O5-4</th>
+    <th id="d2" class="down">O5-3</th> 
+    <th id="n2" class="nov">O5-12</th>
+  </tr>
+
+ <tr id="s3">
+    <th id="u3" style="color:green">O5-5</th>
+    <th id="d3" class="down">O5-6</th> 
+    <th class="nov"></th>
+  </tr>
+
+ <tr id="s4">
+    <th id="u4"style="color:green">O5-8</th>
+    <th id="d4"class="down">O5-7</th> 
+    <th class="nov"></th>
+  </tr>
+
+ <tr id="s5">
+    <th id="u5" style="color:green">O5-10</th>
+    <th id="d5" class="down">O5-9</th> 
+    <th class="nov"></th>
+  </tr>
+
+ <tr id="s6">
+    <th id="u6" style="color:green"><span id="o5u" style="opacity: 0">O5-12</span></th>
+    <th id="d6" class="down"><span id="o5d" style="opacity: 0">O5-11</span></th> 
+    <th class="nov">&#12288;</th>
+  </tr>
+
+ <tr id="s7">
+    <th  style="color:green"><span id="o5-13" style="opacity: 0">O5-13</span></th>
+    <th  class="down">&#12288;  </th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s8">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s9">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s10">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s11">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s12">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+ <tr id="s13">
+    <th style="color:green">&#12288;  </th>
+    <th class="down"></th> 
+    <th class="nov"></th>
+  </tr>
+</table>
+
+<div>    
+<br><br><br><br>
+
+<div class="leftbox">
+<br>    
+</div>    
+
+<div id="outside" class="gate" onclick="agree()">
+<div class="kuang1">    
+    <br>
+<p id="yes">赞 成</p>
+    <br>
+</div>
+</div>    
+
+<div style="float:left;width:5%;">
+<br>    
+</div>    
+
+<div id="inner" class="gate" onclick="anti()">
+<div class="kuang2">    
+    <br>
+<p id="fuck">反 对</p>    
+    <br>
+</div>    
+</div>    
+
+<div style="float:left;width:5%;">
+<br>    
+</div>    
+
+<div id="novote" class="gate" >
+<div class="kuang3">
+    <br>
+<p>弃 权</p>
+    <br>
+</div>    
+</div>    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
+</div>
+</div>
+<br>
+<br>
+<br>
+</div>
+<br>
+<br>
+<br>    
+<br>
+<br>
+<br>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body>
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>

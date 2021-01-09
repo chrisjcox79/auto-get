@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="/common--theme/base/css/html-block.css"/></head><body>
+
+<script type="text/javascript" src="https://l2.io/ip.js?var=myip"></script>
+
+您的上级已被告知您的访问尝试的时间和所在地点。
+
+<title>Geo City Locator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head> 
+<body > 
+    <div>Country: <span id="country"></span></div>
+    <div>Latitude: <span id="latitude"></span></div>
+    <div>Longitude: <span id="longitude"></span></div>
+    <div>IP: <span id="ip"></span></div>    
+
+    <script>
+      $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+         .done (function(location)
+         {
+            $('#country').html(location.country_name);
+            $('#latitude').html(location.latitude);
+            $('#longitude').html(location.longitude);
+            $('#ip').html(location.IPv4);               
+         });
+    </script>
+
+<script type="text/javascript">
+
+if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+ var ffversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+ if (ffversion>=35)
+document.write("Terminal: FF 35")
+ else if (ffversion>=5)
+document.write("Terminal: FF 5.x")
+ else if (ffversion>=4)
+document.write("Terminal: FF 4.x")
+ else if (ffversion>=3)
+document.write("Terminal: FF 3.x")
+ else if (ffversion>=2)
+document.write("Terminal: FF 2.x")
+ else if (ffversion>=1)
+document.write("Terminal: FF 1.x")
+}
+
+</script>
+
+<script type="text/javascript">
+
+if (navigator.userAgent.indexOf('MSIE') != -1)
+ var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
+else // if no "MSIE" string in userAgent
+ var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
+
+if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
+ var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+ if (ieversion>=12)
+  document.write("Terminal: IE12")
+ else if (ieversion>=11)
+  document.write("Terminal: IE11")
+ else if (ieversion>=10)
+  document.write("Terminal: IE10")
+ else if (ieversion>=9)
+  document.write("Terminal: IE9")
+ else if (ieversion>=8)
+  document.write("Terminal: IE8")
+ else if (ieversion>=7)
+  document.write("Terminal: IE7.x")
+ else if (ieversion>=6)
+  document.write("Terminal: IE6.x")
+ else if (ieversion>=5)
+  document.write("Terminal: IE5.x")
+}
+
+</script>
+<script type="text/javascript">
+var opera15andabovever = /OPR\/(\d+\.\d+)/i.test(navigator.userAgent) // test and capture Opera 15+ version
+if (opera15andabovever){
+ var operaver = new Number(RegExp.$1) // contains exact Opera15+ version, such as 25 for Opera 25.0
+ document.write("Terminal: Opera" + operaver)
+}
+
+</script>
+
+<script type="text/javascript">
+
+if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Opera/x.x or Opera x.x (ignoring remaining decimal places);
+ var oprversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+ if (oprversion>=10)
+  document.write("Terminal: Opera 10.x")
+ else if (oprversion>=9)
+  document.write("Terminal: Opera 9.x")
+ else if (oprversion>=8)
+  document.write("Terminal: Opera 8.x")
+ else if (oprversion>=7)
+  document.write("Terminal: Opera 7.x")
+
+}
+
+var isChromium = window.chrome,
+    winNav = window.navigator,
+    vendorName = winNav.vendor,
+    isOpera = winNav.userAgent.indexOf("OPR") > -1,
+    isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+    isIOSChrome = winNav.userAgent.match("CriOS");
+
+if(isIOSChrome){
+   // is Google Chrome on IOS
+} else if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+   // is Google Chrome
+  document.write("Terminal: Chrome")
+} else { 
+   // not Google Chrome 
+}
+
+</script>
+
+<script>
+
+var OSName = "Unknown";
+if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
+if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
+if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
+if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
+if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
+if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
+if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
+if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+
+if (OSName != "Unknown")
+{
+document.write (OSName);
+}
+</script>
+
+<script type="text/javascript" src="/common--javascript/html-block-iframe.js"></script></body></html>
