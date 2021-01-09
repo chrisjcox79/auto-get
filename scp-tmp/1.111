@@ -1,262 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+
 /*
-    SPC Theme
-    [2018 Wikidot Theme]
-    Based on Aelanna's Sigma 9 and Greenwolf's Third Law and djkaktus' Darkbody Theme
-    Edited by PeppersGhost for the Doomsday Contest
-    SPC logo by BABAAL from CN branch.
+    Super Cool Plants!
+    [2020 Wikidot Theme]
+    Created for the SCP Foundation by stormbreath
+    Image Sources: https://www.kissclipart.com/leaf-icon-png-clipart-computer-icons-leaf-g0jlo5/. Edited by stormbreath.
 */
 
-a:visited {
-    color: #176784;
+/* COMMON */
+h1, #page-title {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
+    color: #090;
 }
 
+a,
+#side-bar a:visited,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a {
+    color: #0b0;
+}
+a.newpage {
+    color: #6d6;
+}
+
+a:visited {
+   color: #282;
+}
+
+/* GLOBAL WIDTH */
+div#container-wrap {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/plantbg.png);
+}
 
 /* HEADER */
 #header {
-    height: 140px;
-    position: relative;
-    z-index: 10;
-    padding-bottom: 30px; /* FOR MENU */
-    background: url(http://scp-wiki.wdfiles.com/local--files/spc-001/SPCLogo50.png) 10px 35px no-repeat;
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/plantlogo.png);
+}
+#search-top-box-input {
+    border: solid 1px #696;
+    background-color: #030;
+}
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background-color: #060;
+}
+#search-top-box-form input[type=submit] {
+    border: solid 1px #696;
+    background-color: #363;
+    background: linear-gradient(to bottom, #696,#060,#030);
+}
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    background-color: #696;
+    background: linear-gradient(to bottom, #9c9,#696,#363);
 }
 
-#header h1 a {
-    content: "SPC数据库";
-}
-
-#header h1 a::before {
-    content: "SPC数据库";
-}
-
-#header h1 a span{
-    display: block;
-    content: "";
-    visibility: hidden;
-}
-
-#header h2 {
-    margin-left: 120px;
-    padding: 0;
-    clear: left;
-    float: left;
-    font-size: 105%;
-    max-height: 38px;
-}
+#header h1 a,
 #header h2 span {
-    display: block;
-    margin: 0;
-    padding: 19px 0;
-    line-height: 0px;
-    max-height: 0px;
-    font-weight: bold;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Short Stack', '方正舒体', cursive;
+}
+
+#header h2 span {
     color: transparent;
     text-shadow: none;
 }
+
 #header h2 span::before {
-    content: "殴打鲨鱼中心";
-    display: block;
-    margin: 0;
-    padding: 0px 0;
-    line-height: 0px;
-    max-height: 0px;
-    font-weight: bold;
-    color: #f0f0c0;
-    text-shadow: 1px 1px 1px #000;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+     content: '超酷植物！';
+     color: #f0f0c0;
+     text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 
-div#container-wrap {
-    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aspc/SPCWrapper.jpg);
-}
-
-/* Source: https://www.flickr.com/photos/telemax/2818520042 */
-
-/* SIDEBAR */
+/* SIDE MENU */
 #side-bar .side-block {
-    border-color: #0e7dcd;
-    box-shadow: 0 2px 6px rgba(0,0,51,.5);
+    border: 1px solid #060;
+    box-shadow: 0 2px 6px rgba(0,102,0,.5);
 }
-
-#side-bar img {
-  width:13px;
-  height:13px;
-  box-sizing:border-box;
-  padding-left: 13px;
-  background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aspc/FirstIconTransparent.png) left top no-repeat;
-}
-/* Source: https://commons.wikimedia.org/wiki/File:Noun_project_758.svg */
 
 #side-bar .heading {
-    color: #0e7dcd;
-    border-bottom: solid 1px #0e7dcd;
-}
-
-#side-bar div.menu-item.inactive a {
-    color: #0b65c0;
-}
-
-#side-bar a:visited {
-    color: #0c499c;
-}
-
-#side-bar div.menu-item .sub-text {
-    color: #0b65c0;
+    color: #060;
+    border-bottom: solid 1px #060;
 }
 
 #side-bar .collapsible-block-folded {
     background-image: none;
 }
 #side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px #0b65c0;
+    border-bottom: solid 1px #060;
 }
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-    color: #0b65c0;
+    color: #060;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #0b0;
 }
 
-.interwiki_title {
-    color: #0b65c0;
+/* Changes background for un-folded sidebar */
+@media (max-width: 767px) {
+     #side-bar {
+         background-color: #090;
+     }
 }
 
-.interwiki_entry a {
-    color: #0b65c0;
+.side-block .menu-item > .image,
+iframe.scpnet-interwiki-frame {
+    -webkit-filter: hue-rotate(140deg) brightness(220%);
+    filter: hue-rotate(140deg) brightness(220%);
 }
 
-/* LINKS */
-
-a {
-    color: #0c499c;
-    text-decoration: none;
-    background: transparent;
+#side-bar .side-block[style="background-color: #fff0f0;"] {
+    background-color: #f0fff0!important;
 }
-a.newpage {
-    color: #0c499c;
-    text-decoration: none;
-    background: transparent;
+#side-bar .side-block[style="background-color: #e5e5ff;"] {
+     background-color: #e5ffe5 !important;
 }
 
-/* INFO PANE */
-.rate-box-with-credit-button {
-    background-color: #132639 !important;
-    border-color: #0b65c0 !important;
+/* FOOTER */
+#footer {
+    background: #242;
 }
 
-.page-rate-widget-box{
-    border: none !important;
+/* SOME NICE BOXES */
+.content-panel {
+    border: solid 1px #308830;
+    background-color: #339930;
 }
 
-.rate-box-with-credit-button .fa-info {
-    border-color: #0b65c0 !important;
-    color: #f3f3f3 !important;
-}
-
-.rate-box-with-credit-button .fa-info:hover {
-    color: #3182d3 !important;
-}
-
-.rate-box-with-credit-button .cancel {
-    border: none !important;
-}
-
-.close-credits{
-    filter: hue-rotate(210deg);
-}
-
-.modalbox {
-    box-shadow: 0px 1px 10px rgb(39,130,221,0.3) !important;
-}
-
-/* RATING MODULE */
+/* Page Rating Module Customizations */
 .page-rate-widget-box .rate-points {
-    background-color: #132639 !important;
-    border: solid 1px #0b65c0;
+    background-color: #363 !important;
+    border: solid 1px #363;
 }
+
 .page-rate-widget-box .rateup,
 .page-rate-widget-box .ratedown {
-    background-color: 132639;
-    border-top: solid 1px #0b65c0;
-    border-bottom: solid 1px #0b65c0;
-    font-weight: bold;
+    background-color: #f6fff6;
+    border-top: solid 1px #363;
+    border-bottom: solid 1px #363;
 }
 .page-rate-widget-box .rateup a,
 .page-rate-widget-box .ratedown a {
-    background: 132639;
-    color: #0b65c0;
-    padding: 0 4px;
-    margin: 0 1px;
+    color: #363;
 }
 .page-rate-widget-box .rateup a:hover,
 .page-rate-widget-box .ratedown a:hover {
-    background: #132639;
-    color: #0b65c0;
-    text-decoration: none;
+    background: #363;
+    color: #fffff0;
 }
 .page-rate-widget-box .cancel {
-    background-color: #132639;
-    border: solid 1px #0b65c0;
-    border-left: 0;
-    border-radius: 0 5px 5px 0;
+    background-color: #363;
+    border: solid 1px #363;
 }
 .page-rate-widget-box .cancel a {
-    background: transparent;
-    text-transform: uppercase;
-    color: #0b65c0;
+    color: #696;
 }
 .page-rate-widget-box .cancel a:hover {
-    border-radius: 0 3px 3px 0;
-    background: #132639;
+    background: #363;
     color: #fffff0;
-    text-decoration: none;
 }
 
-/* PAGE TITLEs */
-h1, #page-title {
-    color: #0c499c;
+#page-content .rate-box-with-credit-button{
+    background-color: #363;
+    border: solid 1px #363;
 }
 
-/* NAV DROPDOWN */
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    color: #0c499c;
+#page-content .creditButton p a {
+    border-left-color: #696;
 }
 
-/* SEARCH BAR */
-#search-top-box-input {
-    border: solid 1px #0b65c0;
-    background-color: #132639;
+.close-credits,
+.credit-back {
+     filter: hue-rotate(140deg)
 }
 
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    border: solid 1px #0b65c0;
-    background-color: #132639;
+#page-content .modalbox {
+    box-shadow: 0 2px 6px rgba(0, 100,0 ,.5);
 }
 
-#search-top-box-form input[type=submit] {
-    border: solid 1px #0b65c0;
-    background-color: #132639;
-    color: #0b2447;
-    background: linear-gradient(to bottom, #2373cd,#319ec2,#183291);
+/* Heritage Collection Rating Module */
+.heritage-rating-module {
+  background-color: #363;
+  border: solid 1px #ccc066;
 }
 
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #0b65c0;
-    color: #0b2447;
-    background-color: #132639;
-    background: linear-gradient(to bottom, #2373cd,#319ec2,#183291);
-}
 
-.scpnet-interwiki-frame{
-     filter: hue-rotate(260deg) brightness(150%);
+/* YUI-TABS */
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png);
 }
-
-/* LOGIN STATUS */
-#login-status ul a {
-    color: #0c499c;
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png); /* selected tab background */
 }
-
-/* Changes background for collapsed sidebar */
-@media (max-width: 767px) {
-#side-bar{background-color: #0b65c0}
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aplant/tabs.png);
 }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>云销雨霁 - SCP基金会</title>
+    <title>糟糕之事 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "as-clouds-and-rain-clear";
-        OZONE.request.timestamp = 1610162466;
+        WIKIREQUEST.info.requestPageName = "a-terrible-thing";
+        OZONE.request.timestamp = 1610182468;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "as-clouds-and-rain-clear";
-        WIKIREQUEST.info.pageId = 939118270;
+                WIKIREQUEST.info.pageUnixName = "a-terrible-thing";
+        WIKIREQUEST.info.pageId = 1306279591;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -65,9 +65,6 @@
     <style type="text/css" id="internal-style">
         
         /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
-
-
         
                 
         /* theme */
@@ -124,14 +121,229 @@
 @import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
 </style>
 <style>
-@import url("http://scp-wiki-cn.wikidot.com/theme:neo-linkage/code/1");
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
 </style>
 <style>
-@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+@import url(http://scp-wiki-cn.wikidot.com/theme:swirling-ashes/code/1);
+</style>
+<style>
+/* This theme overrides some of the Swirling Ashes headers.
+ * Made by Croquembouche for djkaktus' The Four Arcana. */
+
+/* Replace the sky with an aurora. */
+body::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/sky.webp);
+  background-size: 1500px calc(var(--header-height-on-desktop));
+  animation-duration: 360s;
+  filter: grayscale(70%);
+}
+
+/* Replace the buildings. */
+div#container-wrap-wrap::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/skyline.png);
+  filter: grayscale(70%);
+}
+
+@keyframes sky {
+  from { background-position: 1500px 0; }
+  to { background-position: 0 0; }
+}
+
+/* Replace fog layers with snow */
+div#container-wrap-wrap::after, body::after {
+  background-image: url(http://scp-sandbox-3.wikidot.com/local--files/croquemtest2/snow.webp);
+  background-size: var(--ashes-width);
+  background-repeat: repeat;
+  animation: ashes-move linear var(--ashes-move-duration) infinite;
+  opacity: 0.8;
+}
+div#container-wrap-wrap::after {
+  --ashes-move-duration: 37s;
+  --ashes-width: 250px;
+}
+body::after {
+  --ashes-move-duration: 30s;
+  --ashes-width: 400px;
+}
+@keyframes ashes-move {
+  from { background-position: 0 0; }
+  to { background-position: var(--ashes-width) var(--ashes-width); }
+}
+</style>
+<style>
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+</style>
+<style>
+:root {
+  --swatch-menubg-color: var(--dark-gray-monochrome);
+  --sidebar-links-text: var(--white-monochrome);
+}
+
+#side-bar {
+  background: 
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),1) 30%,
+      rgba(var(--swatch-menubg-color),0)),
+    linear-gradient(
+      rgba(var(--swatch-menubg-color),0),
+      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)),
+    radial-gradient(farthest-side at 50% 100%,
+      rgba(var(--swatch-primary-darkest),.5),
+      rgba(var(--white-monochrome),0)) 0 100%;
+  color: rgb(var(--swatch-text-light));
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-dark-color),0) 
+    rgba(var(--swatch-menubg-dark-color),0);
+}
+
+#side-bar div.menu-item .sub-text {
+    color: rgba(var(--swatch-text-light),0.75);
+}
+
+#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
+    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+}
+
+#side-bar:hover {
+  scrollbar-color: 
+    rgba(var(--swatch-menubg-medium-color),1) 
+    rgba(var(--swatch-menubg-dark-color),1);
+}
+
+#side-bar::-webkit-scrollbar-thumb,
+#side-bar::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-medium-color),0)
+}
+
+#side-bar:hover::-webkit-scrollbar-track {
+  background:rgba(var(--swatch-menubg-dark-color),1)
+}
+
+#side-bar:hover::-webkit-scrollbar-thumb {
+  background:rgba(var(--swatch-menubg-medium-color),1)
+}
+
+.scpnet-interwiki-wrapper {
+    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+}
+</style>
+<style>
+@import url(http://scp-wiki-cn.wikidot.com/theme:swirling-ashes/code/1);
+</style>
+<style>
+/* Replace the sky with an aurora. */
+body::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/sky.webp);
+  background-size: 1500px calc(var(--header-height-on-desktop));
+  animation-duration: 360s;
+  filter: grayscale(70%);
+}
+
+/* Replace the buildings. */
+div#container-wrap-wrap::before {
+  background-image: url(http://scp-wiki.wikidot.com/local--files/the-four-arcana/skyline.png);
+  filter: grayscale(70%);
+}
+
+@keyframes sky {
+  from { background-position: 1500px 0; }
+  to { background-position: 0 0; }
+}
+
+/* Replace fog layers with snow */
+div#container-wrap-wrap::after, body::after {
+  background-image: url(http://scp-sandbox-3.wikidot.com/local--files/croquemtest2/snow.webp);
+  background-size: var(--ashes-width);
+  background-repeat: repeat;
+  animation: ashes-move linear var(--ashes-move-duration) infinite;
+  opacity: 0.8;
+}
+div#container-wrap-wrap::after {
+  --ashes-move-duration: 37s;
+  --ashes-width: 250px;
+}
+body::after {
+  --ashes-move-duration: 30s;
+  --ashes-width: 400px;
+}
+@keyframes ashes-move {
+  from { background-position: 0 0; }
+  to { background-position: var(--ashes-width) var(--ashes-width); }
+}
+</style>
+<style>
+#header h1 a::before {
+  content: "畸人";
+}
+#header h2 span::before {
+  content: "死物" !important;
+}
+#header::before {
+  display: none;
+}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -478,7 +690,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=as-clouds-and-rain-clear" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=a-terrible-thing" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -500,10 +712,14 @@
                     
                     
                         <div id="page-title">
-                            云销雨霁
+                            糟糕之事
                         </div>
                     
 
+                    
+                        <div id="breadcrumbs">
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/rat-s-nest-hub">鼠巢中心页</a> &raquo; 糟糕之事
+                        </div>
                     
 
                     
@@ -522,68 +738,72 @@
 
 
 
-<div class="creditRate">
-<div class="rateBox">
-<div class="rate-box-with-credit-button"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+59</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div>
-<div class="creditButton">
-<p><a class="fa fa-info" href="#u-credit-view"></a></p>
-</div>
-</div>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div id="u-credit-view">
-<div class="fader">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
-</div>
-<div class="modalcontainer">
-<div class="modalbox">
-<div style="text-align: center;">
-<h2><span>著作信息</span></h2>
-</div>
-<hr />
-<div class="credit first">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-<p><strong>云销雨霁</strong><br />
-<strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/timeelapsed" onclick="WIKIDOT.page.listeners.userInfo(3662783); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3662783&amp;amp;size=small&amp;amp;timestamp=1606663842" alt="TimeElapsed" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3662783)" /></a><a href="http://www.wikidot.com/user:info/timeelapsed" onclick="WIKIDOT.page.listeners.userInfo(3662783); return false;">TimeElapsed</a></span>，<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/yoghurt-rescuer" onclick="WIKIDOT.page.listeners.userInfo(3167340); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3167340&amp;amp;size=small&amp;amp;timestamp=1606663842" alt="Yoghurt-rescuer" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3167340)" /></a><a href="http://www.wikidot.com/user:info/yoghurt-rescuer" onclick="WIKIDOT.page.listeners.userInfo(3167340); return false;">Yoghurt-rescuer</a></span></p>
-<p>拨云见日固然大快人心，但这又是以什么代价换来的呢？</p>
-<p>是以研究员们互相百合为代价。它不怎么值钱。</p>
-<p>抑或是以全体AIC为代价，这与人类命运相比仍不值一提。</p>
-<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1606663842" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>的人设图！其遵循cc3.0协议。本文人设皆参照面包人设图进行描写。</p>
-<p>本文为“你的鸽子，我来炖”活动的成品文章。</p>
-<p>同时，也是基金会galgame其中一条路线的文案。</p>
-</div>
-<hr />
-<div class="credit-back" style="text-align: center;">
-<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-</div>
-<div class="creditBottomRate" style="position:relative;height:30px;">
-<div style="text-align: center; top: 0px;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+59</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
-</div>
-</div>
-</div>
-</div>
+
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p>3级研究员Sylvia ”Diorite” Yan如往常一样从Site-CN-91出发。骑着他已经破旧不堪的自行车回到自己的公寓。不是他懒得换一辆新的，而是他已经好几年没有见到哪怕一个仍在开业的自行车店了。Diorite还依稀记得刚买上自行车时老板对他说的最后一句话：“谢谢您的惠顾。呵，该死的世界——终于可以永别了。”</p>
-<p>他曾听到的“最后一句话”，想都不用想就可以列举出成百上千种，总之都是关于现实的生活状态是多么迷乱，所处的物质世界是多么荒诞。具体而言，这些论调中不乏有对于展现出理智的新生之物的质疑、指责痴人说梦的讪笑以及毫无逻辑可言的新阴谋论剧本；但毫无疑问，这些反对的话语背后都透露着对工业发展、反自然和新生的未知之恐惧。</p>
-<p>Diorite自己倒是理解这些人的想法，反正他们如果要摒弃这所谓肮脏的世界，扎进麦克斯韦宗网络中一去不复返，那也阻止不了，让他们去便是。当一个人亦或是一个群体发现他们的前路黯然无光，而自己身处陌生的环境之中惶惶不可终日时，逃避往往是最好的选择。在前行之人行至天明之前，蜷缩在角落的人们始终对这个寒冷而晦暝的世界抱有绝对的绝望和恐惧，而麦克斯韦宗网络正是他们肆意消费自己生命和社会价值的最好去处。</p>
-<p>花不是很贵的钱配置一个脑机接口，改造一下仅由血肉构筑的“破碎”身体，就可以来到麦克斯韦宗网络的怀抱。人们能够在这个全新的虚拟世界中得到任何他们在现实中无法得到的一切：美食、放松、欲望宣泄、自尊、还有一些刺激体验。在这光怪陆离的世界中待的时间愈久，堕落的人类便愈加无法容忍现实世界的任何障碍和不顺，他们可以在此慰藉支离破碎的内心，并只需要花费一些微不足道的信仰和机械器官。此时，真实的存在对于他们而言远远比不上在麦宗网络厮混的时光来的重要。让他们重新回到现实中，无疑是将他们重新溺入现实生活之痛苦，一切美好的面纱被掀去后只会留下无法愈合的伤口和恐惧。任何经历过黑暗的人们都绝不会让自己重新堕入黑暗。</p>
-<p>现实中的联合政府和基金会也未曾没有尝试去阻止过这种情况的发生。但是，唐突地将人们来入现实和肆无忌惮的记忆删除都无法抑制这个特殊时代人们内容的任何负面想法，在面对越来越高的自残、自杀率和抑郁症患病率时，联合政府终于是抛下了基金会并投入麦克斯韦宗网络的怀抱。基金会，到底还是停下了脚步。</p>
-<p>麦克斯韦宗教会得益于此，并正式跻身于当前世界上最大的异常组织的行列。</p>
-<p>但不同的是，麦宗似乎并不希望人们在此回到原来的世界中，并且这种感觉最近越发强烈了。原因？身处网络之外的人怎会清楚。Diorite并不知道基金会高层是否还攥着什么底牌，更不知道O5是不是已经放弃了对人类的挽留。这个世界不值得被拯救，还是拯救的时机未到？如果基金会高层确实想要做些什么，那么留下的时间已然不多。</p>
-<p>如今，地球上将近98％的人口都进入了麦克斯韦宗网络，现实中的国家已成为了历史，机械彻底掌控了现实。人们的确能够在虚拟的汪洋中获得存在的价值，但也必须承认人工智能在其中的意义和地位。服务于或臣服于麦克斯韦宗的AI们获得了人性化程序，如今不仅仅是处于全麦宗网络顶点的六边形议会，每个AI都有了属于自己的那或高或低的“人”权。基金会的AIC们此时仍然没有融入麦宗的意思，而麦宗的AI们便以此为由，想方设法地像推销员那样“安利”麦宗网络的好。</p>
-<p>“他们整天人权人权的，也不想着换些别的词汇，我可不觉得进了那麦克斯韦宗网络有什么好的。”Diorite的大脑里发出了一阵声响。</p>
-<p>“那当然不，Gabbro.aic，”Diorite下了车，狠狠地踹了一脚支架，“那帮AI把你拉进去，可就出不来了。”</p>
-<p>Diorite登上了专属于他一人的电梯，来到了33层的天台。放眼望去，长夜之中，仅有那北极星闪烁着苍白的光芒；雾霭之下，曾是不夜城的都市，连一点点让人愉悦的火光都已不见。死寂，无边无际的死寂，连同那裹挟着海腥味的西北风，压在他的身上，压在Gabbro.aic的处理器上。这个置于主人身体之中却不为大多数基金会同事所知，与主人大脑直接相连的基金会AIC，不知道是第几千次在尝试着理解主人如何触景生情。</p>
-<p>“你说，我们和麦克斯韦宗到底要作对到什么时候？”Gabbro.aic发出疑问，“我们……会失败吗？”</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/as-clouds-and-rain-clear/offset/2">“不知道，”Diorite回答它，“看吧。万一赢了呢？”</a></p>
+
+
+
+<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;">
+<h6><span>导航:</span></h6>
+<p><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/0">1</a> | <strong><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/1">2</a></strong> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/2">3</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/3">4</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/4">5</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/5">6</a></p>
+</div>
+<p>畸人离开了<span class="ruby">聚落<span class="rt">the compound</span></span>，走进稠密如雾的白雪。永冻土受压嘎吱作响，他的脚陷了进去。他不以为意。他一步一步往前迈进，灵活的双脚留下一溜宽宽的脚印。</p>
+<p>他看不到<em><span class="ruby">机器<span class="rt">the Machine</span></span></em>。但他知道它在哪。他不得不知道。</p>
+<p>他边走边想。</p>
+<p>雪白的虚空之中，他是唯一的一个小点。畸人记不清他已经来到这里多久。太阳既不落下也不升起；他的灯黯淡苍白，灯光在暴雪中散射殆尽。行程永远不变。这里只有畸人，雪，和其余他人。</p>
+<p>畸人计着他的步子，口中念念有词，每吐出一个数字，就品尝一口寒冷。500步了，停。右转。</p>
+<p>这熟悉的节奏。他和狱卒稔熟于心的节奏。</p>
+<p>他右转。还有1124步要走。</p>
+<hr />
+<p>一段记忆。</p>
+<p>畸人大跨步走入暴雪之中。他身材高大，志骄意满。他献身于崇高的事业，他牢记着两天前收到的使命。他是<span class="ruby">亚恩<span class="rt">Ion</span></span>之子；他的信仰能够战胜这肆虐于冰原的暴雪。他不觉得冷。</p>
+<p>他每一步都在向目标迈进，他如同火焰，照亮了无垠幽暗。狂怒的劲风呼号咆啸，吹不灭他的热火。</p>
+<p>他勘察这异域的地形，视狂风若无物。风暴渐强，但他毫不在乎。</p>
+<p><em>机器</em>应该近在眼前。他左转。他会找到的。暴雪威力不减。</p>
+<p>苍灰的天穹已变得漆黑一片。畸人瞪大双眼，却在这永冻的炼狱中一无所获。他听不到自己的思索时的心声。唯有冰与霜与风的声音盖过了一切。</p>
+<p>他的指尖感受到了严寒。</p>
+<p>畸人迷失了自己的所在。他记不清已经来到这里多久。他只知道长夜已至，他只知道即将遭受的刻骨严寒。他瑟缩着身体等待。他不知道是为了什么。</p>
+<p>冰封的废墟之中，一个紧裹大衣的人影走近一块冰雪砌成的石冢。畸人离开聚落已有一段时间。那人影冲石冢弯下腰来，用锄用铲干了起来。</p>
+<hr />
+<p>还有313步要走。</p>
+<p>狱卒找到了畸人冻僵的身体。完好无损，宛若冰晶。她把他带回到了聚落，也正是在聚落，他们踱步演练、设下路径。</p>
+<p>畸人凝视着前方。在他身前，雄踞着一座蒸汽与钢铁的大塔。在那，他能够感受到下方那<em>机器</em>传来的热气。他拉开大门，沿着湿滑的楼梯向下走去。</p>
+<p>阶梯尽头是一个小小的房间。房间散发出腐肉和油脂的味道。房间内蒸汽四溢，一层闪亮的油脂裹在齿轮和机筒的表面。为维护<em>机器</em>，便掏开冰层，筑起这间小室。望向正对门口的那道墙，便是<em>机器</em>——由齿轮、管道和血肉筑起的迷宫。</p>
+<p><em>机器</em>，由齿轮、沥青和一位神的尸体构成的<em>机器</em>，正全身上下一齐摆动的<em>机器</em>。在大地的尽头，它的火焰驱动着造物之窑。它的创造者们却有些匆忙。他们不得不匆忙。<em>机器</em>需要维护。驱动它的齿轮会锈蚀。维系它的魔法需要补充。它呼啸出的<em><span class="ruby">讯息<span class="rt">message</span></span></em>需要解码。</p>
+<p>运行中的<em>机器</em>散发出高温。足以致人死地的高温，畸人没有察觉到的高温。他听到生锈的齿轮每转一下都发出尖叫。他解开了它们的系索。尖叫并不减弱。</p>
+<p>畸人坐了下来，干了起来。齿轮必须被擦洗，肉身必须被剥皮。他挥拳舞断蛛网——磨损机器的几丁质的弦。他的汗和血混杂着油为齿轮润滑。在这伴随着油脂滴落的噪声的漩涡之中，他一遍遍地擦拭着齿轮、这重复、重复动作仿佛机械的无声的祷文。这异端，沿他的脊柱下行。</p>
+<p>他忆起了萨拉热窝。渎神的机器熏染蓝天，亵渎的雨水打到先知追随者们的头顶。他忆起了狱卒们，忆起了图书管理员们，忆起了人类军队是如何凿开一道道裂隙，忆起了裂隙泄露，又是怎样的光景。他记忆最深的，是亚恩的脸庞。亚恩双眼中的神情。而那时的他尚无法理解。</p>
+<p>还剩一个齿轮。畸人站了起来，欣赏起那肉体。一丝不苟，他尽情享受每分每刻。他感到每分每秒都在向着亚恩的承诺更进一步，到那时，血肉和筋腱网遍世界，血腥又温暖的怀抱福满人间。闭上眼睛，他几乎能感受到那血脉正与他相连。</p>
+<p>畸人独自站在房中。他触摸着<em>机器</em>新鲜、血腥的肉体，等待着聆听它的教诲。</p>
+<p>畸人低头看向最后一个齿轮。他看到他的血脉在冰冷的金属之中流淌。是世界哲学，是世界神学。他的救世主，已然倒下。</p>
+<p>畸人把生锈的齿轮重新安回<em>机器</em>。他没法动手清洗。他承受不住异端的代价。</p>
+<p>畸人离开了房间，重新踏上了永冻的大地。他在远处看到一个缩成一团的人影。那是从聚落而来的另外一人。</p>
+<p>畸人想起了亚恩眼中的神情。他现在明白了。</p>
+<p>那是恐惧。</p>
+<div style="text-align: center;">
+<h6><span>导航:</span></h6>
+<p><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/0">1</a> | <strong><a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/1">2</a></strong> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/2">3</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/3">4</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/4">5</a> | <a href="http://scp-wiki-cn.wikidot.com/a-terrible-thing/offset/5">6</a></p>
+</div>
 </div>
     
     
     
     </div>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
+
                     </div>
 
                             
@@ -611,7 +831,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/_cc#pages">_cc</a><a href="/system:page-tags/tag/linkage#pages">linkage</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E5%90%88%E8%91%97#pages">合著</a><a href="/system:page-tags/tag/%E6%88%90%E4%BA%BA%E5%86%85%E5%AE%B9#pages">成人内容</a><a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E7%A0%B4%E7%A2%8E%E4%B9%8B%E7%A5%9E%E6%95%99%E4%BC%9A#pages">破碎之神教会</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%AC%B2%E8%82%89%E6%95%99#pages">欲肉教</a><a href="/system:page-tags/tag/%E7%89%B9%E5%BC%82%E4%BA%8B%E6%95%85%E5%A4%84#pages">特异事故处</a><a href="/system:page-tags/tag/%E7%A0%B4%E7%A2%8E%E4%B9%8B%E7%A5%9E%E6%95%99%E4%BC%9A#pages">破碎之神教会</a><a href="/system:page-tags/tag/%E8%A2%AB%E6%94%BE%E9%80%90%E8%80%85%E4%B9%8B%E5%9B%BE%E4%B9%A6%E9%A6%86#pages">被放逐者之图书馆</a><a href="/system:page-tags/tag/%E9%BC%A0%E5%B7%A2#pages">鼠巢</a>
                             </span>
                         </div>
                     
@@ -619,12 +839,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 17, 最后编辑于: <span class="odate time_1601621829 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Oct 2020 06:57</span></div>
+                            <div id="page-info">页面版本: 6, 最后编辑于: <span class="odate time_1608394848 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">19 Dec 2020 16:20</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+59</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+7</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-12827803/as-clouds-and-rain-clear" class="btn btn-default" id="discuss-button">讨论 (21)</a>
+<a href="/forum/t-13946597/a-terrible-thing" class="btn btn-default" id="discuss-button">讨论 (2)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -691,43 +911,43 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://philosophia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/philosophia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://neosteam.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/neosteam.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://philosophia.wikidot.com">Philosophia UAM</a></h3>
+            <h3><a target="_blank" href="http://neosteam.wikidot.com">Neo Steam Wiki</a></h3>
             <div class="desc">          
-              Wiki studentów filozofii UAM
+              May 2008 to February 2012
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://karma-lab.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/karma-lab.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://wiki.wdeditor.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wiki.wdeditor.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://karma-lab.wikidot.com">Karma-Lab</a></h3>
+            <h3><a target="_blank" href="http://wiki.wdeditor.com">STE documentation wiki</a></h3>
             <div class="desc">          
-              KARMA Technology and the products incorporating it
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://grave-box.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/grave-box.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.oracle-wiki.net">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.oracle-wiki.net/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://grave-box.wikidot.com">The Grave-Box</a></h3>
+            <h3><a target="_blank" href="http://www.oracle-wiki.net">Oracle Database</a></h3>
             <div class="desc">          
-              Close that grave-box door
+              All things oracle...
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://the-nexus.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/the-nexus.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://blackberrystorm.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/blackberrystorm.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://the-nexus.wikidot.com">Nexus Wiki</a></h3>
+            <h3><a target="_blank" href="http://blackberrystorm.wikidot.com">BlackBerry Storm Wiki</a></h3>
             <div class="desc">          
               
             </div>

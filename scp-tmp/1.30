@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-5579 - SCP基金会</title>
+    <title>SCP-5618 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-5579";
-        OZONE.request.timestamp = 1610159155;
+        WIKIREQUEST.info.requestPageName = "scp-5618";
+        OZONE.request.timestamp = 1610178132;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-5579";
-        WIKIREQUEST.info.pageId = 1026034459;
+                WIKIREQUEST.info.pageUnixName = "scp-5618";
+        WIKIREQUEST.info.pageId = 1306116241;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,69 +117,2168 @@
     </script>
         
 <style>
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+#header {
+    background: url("http://scp-wiki.wdfiles.com/local--files/component%3Apride-highlighter/gp_logo.svg") 15px 40px no-repeat !important;
+    background-size: 6rem !important;
+}
+@media (max-width: 580px) and (min-width: 480px) {
+    #header {
+        background-position: 0.5em 4.5em  !important;
+        background-size: 66px 66px  !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #header {
+        background-position: 0 5.5em !important;
+        background-size: 55px 55px !important;
+    }
+}
 </style>
 <style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap&amp;subset=latin-ext');
+
 :root {
-  --swatch-menubg-color: var(--dark-gray-monochrome);
-  --sidebar-links-text: var(--white-monochrome);
+    --five-color: 196,2,51;
+    --four-color: 255,109,0;
+    --three-color: 255,211,0;
+    --two-color: 0,135,189;
+    --one-color: 0,159,107;
 }
 
-#side-bar {
-  background: 
-    linear-gradient(
-      rgba(var(--swatch-menubg-color),1) 30%,
-      rgba(var(--swatch-menubg-color),0)),
-    linear-gradient(
-      rgba(var(--swatch-menubg-color),0),
-      rgba(var(--swatch-menubg-color),1) 70%) 0 100%,
-    radial-gradient(farthest-side at 50% 0,
-      rgba(var(--swatch-primary-darkest),.5),
-      rgba(var(--white-monochrome),0)),
-    radial-gradient(farthest-side at 50% 100%,
-      rgba(var(--swatch-primary-darkest),.5),
-      rgba(var(--white-monochrome),0)) 0 100%;
-  color: rgb(var(--swatch-text-light));
-  scrollbar-color: 
-    rgba(var(--swatch-menubg-dark-color),0) 
-    rgba(var(--swatch-menubg-dark-color),0);
+#page-title {
+    display: none;
 }
 
-#side-bar div.menu-item .sub-text {
-    color: rgba(var(--swatch-text-light),0.75);
+.anom-bar-container,
+.anom-bar-container * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: var(--title-font, 'Roboto', sans-serif);
 }
 
-#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
-    border-left: .125rem solid rgba(var(--white-monochrome),0.08);
+.anom-bar-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
 }
 
-#side-bar:hover {
-  scrollbar-color: 
-    rgba(var(--swatch-menubg-medium-color),1) 
-    rgba(var(--swatch-menubg-dark-color),1);
+.anom-bar {
+    display: -ms-grid;
+    display: grid;
+            grid-template-areas:
+        "top-box"
+        "bottom-box";
+    width: 100%;
 }
 
-#side-bar::-webkit-scrollbar-thumb,
-#side-bar::-webkit-scrollbar-track {
-  background:rgba(var(--swatch-menubg-medium-color),0)
+.anom-bar > .top-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    grid-area: top-box;
+                grid-template-areas:
+        "top-left-box top-center-box top-right-box";
+    width: 100%;
+        -ms-grid-columns: auto 1fr calc(5vw + 5rem);
+    grid-template-columns: auto 1fr -webkit-calc(5vw + 5rem);
+    grid-template-columns: auto 1fr -moz-calc(5vw + 5rem);
+    grid-template-columns: auto 1fr calc(5vw + 5rem);
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-items: stretch;
+    padding-bottom: 1rem;
 }
 
-#side-bar:hover::-webkit-scrollbar-track {
-  background:rgba(var(--swatch-menubg-dark-color),1)
+.top-box .top-left-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: top-left-box;
 }
 
-#side-bar:hover::-webkit-scrollbar-thumb {
-  background:rgba(var(--swatch-menubg-medium-color),1)
+.top-left-box > .item {
+    font-size: -webkit-calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
+    font-size: -moz-calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
+    font-size: calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
 }
 
-.scpnet-interwiki-wrapper {
-    -webkit-filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
-            filter: invert(0.8) hue-rotate(180deg) saturate(0.8);
+.top-left-box > .number {
+    font-size: -webkit-calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
+    font-size: -moz-calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
+    font-size: calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
 }
-</style>
-<style>
-@import url("http://scp-wiki-cn.wikidot.com/theme:black-market/code/1");
+
+.top-box .top-center-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-area: top-center-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    margin: 0 1rem;
+}
+
+.top-center-box > div {
+    background-color: rgb(0,0,0);
+    height: 0.5rem;
+    width: 100%;
+    margin: 0.125rem;
+    display: none;
+}
+
+.anom-bar-container.american .top-center-box > div {
+    background-image:
+    -webkit-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    -moz-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    -o-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    repeating-linear-gradient(25deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-attachment: scroll;
+}
+
+.anom-bar-container.clear-1 .top-center-box > div {
+    background-color: rgb(0,159,107);
+    background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.clear-2 .top-center-box > div {
+    background-color: rgb(0,135,189);
+    background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.clear-3 .top-center-box > div {
+    background-color: rgb(255,211,0);
+    background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.clear-4 .top-center-box > div {
+    background-color: rgb(255,109,0);
+    background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.clear-5 .top-center-box > div {
+    background-color: rgb(196,2,51);
+    background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.clear-1 .top-center-box > .bar-one,
+.anom-bar-container.clear-2 .top-center-box > .bar-one,
+.anom-bar-container.clear-3 .top-center-box > .bar-one,
+.anom-bar-container.clear-4 .top-center-box > .bar-one,
+.anom-bar-container.clear-5 .top-center-box > .bar-one,
+.anom-bar-container.clear-6 .top-center-box > .bar-one {
+    display: block;
+}
+
+.anom-bar-container.clear-2 .top-center-box > .bar-two,
+.anom-bar-container.clear-3 .top-center-box > .bar-two,
+.anom-bar-container.clear-4 .top-center-box > .bar-two,
+.anom-bar-container.clear-5 .top-center-box > .bar-two,
+.anom-bar-container.clear-6 .top-center-box > .bar-two {
+    display: block;
+}
+
+.anom-bar-container.clear-3 .top-center-box > .bar-three,
+.anom-bar-container.clear-4 .top-center-box > .bar-three,
+.anom-bar-container.clear-5 .top-center-box > .bar-three,
+.anom-bar-container.clear-6 .top-center-box > .bar-three {
+    display: block;
+}
+
+.anom-bar-container.clear-4 .top-center-box > .bar-four,
+.anom-bar-container.clear-5 .top-center-box > .bar-four,
+.anom-bar-container.clear-6 .top-center-box > .bar-four {
+    display: block;
+}
+
+.anom-bar-container.clear-5 .top-center-box > .bar-five,
+.anom-bar-container.clear-6 .top-center-box > .bar-five {
+    display: block;
+}
+
+.anom-bar-container.clear-6 .top-center-box > .bar-six {
+    display: block;
+}
+
+.anom-bar-container.clear-6 .anom-bar > .top-box {
+    -ms-grid-columns: auto 1fr calc(5vw + 8rem);
+    grid-template-columns: auto 1fr -webkit-calc(5vw + 8rem);
+    grid-template-columns: auto 1fr -moz-calc(5vw + 8rem);
+    grid-template-columns: auto 1fr calc(5vw + 8rem);
+    padding-bottom: 1.15em;
+}
+
+.anom-bar-container.clear-6 .top-center-box > div {
+    background-color: rgb(133, 0, 5);
+    background-color: rgb(var(--swatch-primary, 133, 0, 5));
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/galactic.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-blend-mode: overlay;
+}
+
+.top-box .top-right-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    display: -ms-grid;
+    display: grid;
+    grid-area: top-right-box;
+            grid-template-areas:
+        "level"
+        "clearance";
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.top-right-box > .level {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    grid-area: level;
+    font-size: 2.5em;
+    line-height: 1; /* 中文调整 */
+}
+
+.top-right-box > .clearance {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: clearance;
+    font-size: -webkit-calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    font-size: -moz-calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    font-size: calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.top-right-box > .clearance::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.anom-bar-container.clear-6.lang-cn .top-right-box > .clearance::before {
+    content: "宇宙绝密";
+}
+
+.anom-bar-container.clear-6.lang-tr .top-right-box > .clearance::before {
+    content: "宇宙絕密";
+}
+
+.anom-bar-container.clear-5.lang-cn .top-right-box > .clearance::before {
+    content: "最高机密";
+}
+
+.anom-bar-container.clear-5.lang-tr .top-right-box > .clearance::before {
+    content: "最高機密";
+}
+
+.anom-bar-container.clear-4.lang-cn .top-right-box > .clearance::before {
+    content: "机密";
+}
+
+.anom-bar-container.clear-4.lang-tr .top-right-box > .clearance::before {
+    content: "機密";
+}
+
+.anom-bar-container.clear-3.lang-cn .top-right-box > .clearance::before {
+    content: "保密";
+}
+
+.anom-bar-container.clear-3.lang-tr .top-right-box > .clearance::before {
+    content: "保密";
+}
+
+.anom-bar-container.clear-2.lang-cn .top-right-box > .clearance::before {
+    content: "受限";
+}
+
+.anom-bar-container.clear-2.lang-tr .top-right-box > .clearance::before {
+    content: "受限";
+}
+
+.anom-bar-container.clear-1.lang-cn .top-right-box > .clearance::before {
+    content: "公开";
+}
+
+.anom-bar-container.clear-1.lang-tr .top-right-box > .clearance::before {
+    content: "公開";
+}
+
+.anom-bar > .bottom-box {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    grid-area: bottom-box;
+            grid-template-areas:
+        "text-part diamond-part"
+        "text-part diamond-part";
+    -ms-grid-rows: 1fr 0.5rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 0.5rem 6rem;
+    grid-template-columns: 1fr 6rem;
+    grid-gap: 0.5rem;
+    width: 100%;
+    height: 6rem;
+    font-weight: 600;
+    -webkit-box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+       -moz-box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+            box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+    -webkit-box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+       -moz-box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+            box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+    margin-top: -0.5rem;
+    padding-top: 0.25rem;
+}
+
+.bottom-box > .text-part {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    height: 6rem;
+    grid-area: text-part;
+            grid-template-areas:
+        "main-class disrupt-class"
+        "main-class risk-class";
+    -ms-grid-rows: 1fr 0.25rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: auto 0.25rem 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 0.25rem;
+    text-transform: uppercase;
+    -webkit-box-pack: stretch;
+    -webkit-justify-content: stretch;
+       -moz-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+       -moz-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+.text-part div {
+    padding: 0 0.125rem;
+    margin: 0 0 0 0.25rem;
+    position: relative;
+}
+
+.text-part > .main-class {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    position: relative;
+    grid-area: main-class;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+       -moz-box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+            box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class {
+    padding-right: 3.5rem;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class,
+.anom-bar-container.机密 .text-part > .main-class,
+.anom-bar-container.機密 .text-part > .main-class {
+    padding-right: 2rem;
+}
+
+.text-part > .main-class::before {
+    content: "";
+    position: absolute;
+    top: -webkit-calc(50% - 2.25rem);
+    top: -moz-calc(50% - 2.25rem);
+    top: calc(50% - 2.25rem);
+    right: 0.5rem;
+    width: 3.53125rem;
+    height: 3.53125rem;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class::before,
+.anom-bar-container.机密 .text-part > .main-class::before,
+.anom-bar-container.機密 .text-part > .main-class::before {
+    top: 0.5rem;
+    right: 1.25rem;
+    width: 5rem;
+    -webkit-border-radius: -webkit-calc(3.53125rem / 2);
+       -moz-border-radius: -moz-calc(3.53125rem / 2);
+            border-radius: calc(3.53125rem / 2);
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    border-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/esoteric-icon.svg");
+    -webkit-background-size: 75% 75%;
+       -moz-background-size: 75% 75%;
+         -o-background-size: 75% 75%;
+            background-size: 75% 75%;
+    background-repeat: no-repeat;
+    background-position: left -10px center;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class::after,
+.anom-bar-container.机密 .text-part > .main-class::after,
+.anom-bar-container.機密 .text-part > .main-class::after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.25rem;
+    width: 3.53125rem;
+    height: 3.53125rem;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.anom-bar-container.N/A .text-part > .main-class::after {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/apollyon-icon.svg");
+}
+
+.anom-bar-container.explained .text-part > .main-class::before,
+.anom-bar-container.已解明 .text-part > .main-class::before,
+.anom-bar-container.已解明 .text-part > .main-class::before,
+.anom-bar-container.pending .text-part > .main-class::before,
+.anom-bar-container.等待分级 .text-part > .main-class::before,
+.anom-bar-container.等待分級 .text-part > .main-class::before,
+.anom-bar-container.neutralized .text-part > .main-class::before,
+.anom-bar-container.无效化 .text-part > .main-class::before,
+.anom-bar-container.無效化 .text-part > .main-class::before {
+    display:none;
+}
+
+.anom-bar-container.keter .text-part > .main-class::before {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keter-icon.svg");
+}
+
+.anom-bar-container.euclid .text-part > .main-class::before {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/euclid-icon.svg");
+}
+
+.anom-bar-container.safe .text-part > .main-class::before {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/safe-icon.svg");
+}
+
+.text-part > .main-class > div {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class > .second-class > .class-text,
+.anom-bar-container.机密 .text-part > .main-class > .second-class > .class-text,
+.anom-bar-container.機密 .text-part > .main-class > .second-class > .class-text {
+    font-size: -webkit-calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    position: relative;
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .contain-class > .class-text {
+    font-size: -webkit-calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .second-class {
+    display: none;
+}
+
+.text-part > .disrupt-class {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: disrupt-class;
+}
+
+.text-part > .risk-class {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: risk-class;
+}
+
+.text-part > .disrupt-class,
+.text-part > .risk-class {
+    overflow: hidden;
+}
+
+.anom-bar-container.esoteric .text-part .main-class,
+.anom-bar-container.机密 .text-part .main-class,
+.anom-bar-container.機密 .text-part .main-class {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    border-left: 0.75rem solid rgba(66, 66, 72 ,1);
+    border-left: 0.75rem solid rgba(var(--gray-monochrome, 66, 66, 72),1);
+}
+
+.anom-bar-container.neutralized .text-part .main-class,
+.anom-bar-container.无效化 .text-part .main-class,
+.anom-bar-container.無效化 .text-part .main-class {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    border-left: 0.75rem solid rgba(66, 66, 72 ,1);
+    border-left: 0.75rem solid rgba(var(--gray-monochrome, 66, 66, 72),1);
+}
+
+.anom-bar-container.pending .text-part .main-class,
+.anom-bar-container.等待分级 .text-part .main-class,
+.anom-bar-container.等待分級 .text-part .main-class {
+    background-color: rgba(12, 12, 12 ,0.15);
+    background-color: rgba(var(--black-monochrome, 12, 12, 12),0.15);
+    border-left: 0.75rem solid rgba(12, 12, 12 ,1);
+    border-left: 0.75rem solid rgba(var(--black-monochrome, 12, 12, 12),1);
+}
+
+.anom-bar-container.explained .text-part .main-class,
+.anom-bar-container.已解明 .text-part .main-class,
+.anom-bar-container.已解明 .text-part .main-class {
+    background-color: rgba(252, 252, 252 ,0.15);
+    background-color: rgba(var(--white-monochrome, 252, 252, 252),0.15);
+    border-left: 0.75rem solid rgba(12, 12, 12 ,1);
+    border-left: 0.75rem solid rgba(var(--black-monochrome, 12, 12, 12),1);
+}
+
+.anom-bar-container.keter .text-part .main-class,
+.anom-bar-container.amida .text-part .disrupt-class,
+.anom-bar-container.critical .text-part .risk-class,
+.anom-bar-container.危急 .text-part .risk-class,
+.anom-bar-container.危急 .text-part .risk-class {
+    background-color: rgba(196,2,51,0.15);
+    background-color: rgba(var(--five-color),0.15);
+    border-left: 0.5rem solid rgba(196,2,51,1);
+    border-left: 0.5rem solid rgba(var(--five-color),1);
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class,
+.anom-bar-container.danger .text-part .risk-class,
+.anom-bar-container.危险 .text-part .risk-class,
+.anom-bar-container.危險 .text-part .risk-class {
+    background-color: rgba(255,109,0,0.15);
+    background-color: rgba(var(--four-color),0.15);
+    border-left: 0.5rem solid rgba(255,109,0,1);
+    border-left: 0.5rem solid rgba(var(--four-color),1);
+}
+
+.anom-bar-container.euclid .text-part .main-class,
+.anom-bar-container.keneq .text-part .disrupt-class,
+.anom-bar-container.warning .text-part .risk-class,
+.anom-bar-container.警告 .text-part .risk-class,
+.anom-bar-container.警告 .text-part .risk-class {
+    border-left: 0.5rem solid rgba(255,211,0,1);
+    border-left: 0.5rem solid rgba(var(--three-color),1);
+    background-color: rgba(255,211,0,0.15);
+    background-color: rgba(var(--three-color),0.15);
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class,
+.anom-bar-container.caution .text-part .risk-class,
+.anom-bar-container.需谨慎 .text-part .risk-class,
+.anom-bar-container.需謹慎 .text-part .risk-class {
+    border-left: 0.5rem solid rgba(0,135,189,1);
+    border-left: 0.5rem solid rgba(var(--two-color),1);
+    background-color: rgba(0,135,189,0.15);
+    background-color: rgba(var(--two-color),0.15);
+}
+
+.anom-bar-container.safe .text-part .main-class,
+.anom-bar-container.dark .text-part .disrupt-class,
+.anom-bar-container.notice .text-part .risk-class,
+.anom-bar-container.待观察 .text-part .risk-class,
+.anom-bar-container.待觀察 .text-part .risk-class {
+    background-color: rgba(0,159,107,0.15);
+    background-color: rgba(var(--one-color),0.15);
+    border-left: 0.5rem solid rgba(0,159,107,1);
+    border-left: 0.5rem solid rgba(var(--one-color),1);
+}
+
+.anom-bar-container.neutralized .text-part,
+.anom-bar-container.无效化 .text-part,
+.anom-bar-container.無效化 .text-part,
+.anom-bar-container.pending .text-part,
+.anom-bar-container.等待分级 .text-part,
+.anom-bar-container.等待分級 .text-part,
+.anom-bar-container.explained .text-part,
+.anom-bar-container.已解明 .text-part,
+.anom-bar-container.已解明 .text-part {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.text-part .disrupt-class::after,
+.text-part .risk-class::after,
+.text-part .disrupt-class::before,
+.text-part .risk-class::before {
+    content: "";
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -webkit-calc(50% - 1.5rem);
+    top: -moz-calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+    font-size: 2em;
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.text-part .disrupt-class::after,
+.text-part .risk-class::after {
+    right: 0.15em;
+}
+
+.text-part .disrupt-class::before,
+.text-part .risk-class::before {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: rgb(12, 12, 12);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+    width: 3rem;
+    height: 3rem;
+    top: -webkit-calc(50% - 1.5rem);
+    top: -moz-calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+    border: 0;
+    right: 1rem;
+    text-align: left;
+    font-size: 1em;
+    padding-left: 0.5rem;
+    color: rgb(252, 252, 252);
+    color: rgb(var(--white-monochrome, 252, 252, 252));
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::before,
+.anom-bar-container.critical .text-part .risk-class::before,
+.anom-bar-container.危急 .text-part .risk-class::before,
+.anom-bar-container.危急 .text-part .risk-class::before {
+    content: "5";
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::before,
+.anom-bar-container.danger .text-part .risk-class::before,
+.anom-bar-container.危险 .text-part .risk-class::before,
+.anom-bar-container.危險 .text-part .risk-class::before {
+    content: "4";
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::before,
+.anom-bar-container.warning .text-part .risk-class::before,
+.anom-bar-container.警告 .text-part .risk-class::before,
+.anom-bar-container.警告 .text-part .risk-class::before {
+    content: "3";
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::before,
+.anom-bar-container.caution .text-part .risk-class::before,
+.anom-bar-container.需谨慎 .text-part .risk-class::before,
+.anom-bar-container.需謹慎 .text-part .risk-class::before {
+    content: "2";
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::before,
+.anom-bar-container.notice .text-part .risk-class::before,
+.anom-bar-container.待观察 .text-part .risk-class::before,
+.anom-bar-container.待觀察 .text-part .risk-class::before {
+    content: "1";
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::after,
+.anom-bar-container.critical .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/amida-icon.svg");
+}
+
+.anom-bar-container.critical .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/critical-icon.svg");
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::after,
+.anom-bar-container.danger .text-part .risk-class::after,
+.anom-bar-container.危险 .text-part .risk-class::after,
+.anom-bar-container.危險 .text-part .risk-class::after {
+    background-color: rgb(255,109,0);
+background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/ekhi-icon.svg");
+}
+
+.anom-bar-container.danger .text-part .risk-class::after,
+.anom-bar-container.危险 .text-part .risk-class::after,
+.anom-bar-container.危險 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/danger-icon.svg");
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::after,
+.anom-bar-container.warning .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+}
+
+.anom-bar-container.warning .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/warning-icon.svg");
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::after,
+.anom-bar-container.caution .text-part .risk-class::after,
+.anom-bar-container.需谨慎 .text-part .risk-class::after,
+.anom-bar-container.需謹慎 .text-part .risk-class::after {
+    background-color: rgb(0,135,189);
+background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/vlam-icon.svg");
+}
+
+.anom-bar-container.caution .text-part .risk-class::after,
+.anom-bar-container.需谨慎 .text-part .risk-class::after,
+.anom-bar-container.需謹慎 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/caution-icon.svg");
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::after,
+.anom-bar-container.notice .text-part .risk-class::after,
+.anom-bar-container.待观察 .text-part .risk-class::after,
+.anom-bar-container.待觀察 .text-part .risk-class::after {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/dark-icon.svg");
+}
+
+.anom-bar-container.notice .text-part .risk-class::after,
+.anom-bar-container.待观察 .text-part .risk-class::after,
+.anom-bar-container.待觀察 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/notice-icon.svg");
+}
+
+.text-part .main-class {
+    border-width: 1em !important;
+}
+
+.text-part > div .class-category {
+    position: relative;
+    font-weight: 500;
+    left: 0;
+}
+
+.anom-bar-container.esoteric .contain-class > .class-category,
+.anom-bar-container.机密 .contain-class > .class-category,
+.anom-bar-container.機密 .contain-class > .class-category {
+    max-width: 55% !important;
+}
+
+.anom-bar-container.explained .second-class,
+.anom-bar-container.explained .disrupt-class,
+.anom-bar-container.explained .risk-class,
+.anom-bar-container.explained .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.explained .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.explained .danger-diamond > .left-icon,
+.anom-bar-container.explained .danger-diamond > .right-icon,
+.anom-bar-container.已解明 .second-class,
+.anom-bar-container.已解明 .disrupt-class,
+.anom-bar-container.已解明 .risk-class,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.已解明 .danger-diamond > .left-icon,
+.anom-bar-container.已解明 .danger-diamond > .right-icon,
+.anom-bar-container.已解明 .second-class,
+.anom-bar-container.已解明 .disrupt-class,
+.anom-bar-container.已解明 .risk-class,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.已解明 .danger-diamond > .left-icon,
+.anom-bar-container.已解明 .danger-diamond > .right-icon,
+.anom-bar-container.neutralized .second-class,
+.anom-bar-container.neutralized .disrupt-class,
+.anom-bar-container.neutralized .risk-class,
+.anom-bar-container.neutralized .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.neutralized .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.neutralized .danger-diamond > .left-icon,
+.anom-bar-container.neutralized .danger-diamond > .right-icon,
+.anom-bar-container.无效化 .second-class,
+.anom-bar-container.无效化 .disrupt-class,
+.anom-bar-container.无效化 .risk-class,
+.anom-bar-container.无效化 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.无效化 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.无效化 .danger-diamond > .left-icon,
+.anom-bar-container.无效化 .danger-diamond > .right-icon,
+.anom-bar-container.無效化 .second-class,
+.anom-bar-container.無效化 .disrupt-class,
+.anom-bar-container.無效化 .risk-class,
+.anom-bar-container.無效化 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.無效化 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.無效化 .danger-diamond > .left-icon,
+.anom-bar-container.無效化 .danger-diamond > .right-icon,
+.anom-bar-container.pending .second-class,
+.anom-bar-container.pending .disrupt-class,
+.anom-bar-container.pending .risk-class,
+.anom-bar-container.pending .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.pending .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.pending .danger-diamond > .left-icon,
+.anom-bar-container.pending .danger-diamond > .right-icon,
+.anom-bar-container.等待分级 .second-class,
+.anom-bar-container.等待分级 .disrupt-class,
+.anom-bar-container.等待分级 .risk-class,
+.anom-bar-container.等待分级 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.等待分级 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.等待分级 .danger-diamond > .left-icon,
+.anom-bar-container.等待分级 .danger-diamond > .right-icon,
+.anom-bar-container.等待分級 .second-class,
+.anom-bar-container.等待分級 .disrupt-class,
+.anom-bar-container.等待分級 .risk-class,
+.anom-bar-container.等待分級 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.等待分級 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.等待分級 .danger-diamond > .left-icon,
+.anom-bar-container.等待分級 .danger-diamond > .right-icon {
+    display: none;
+}
+
+.text-part .contain-class,
+.text-part .second-class,
+.text-part .disrupt-class,
+.text-part .risk-class {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    line-height: 1;
+}
+
+.text-part .contain-class > div,
+.text-part .second-class > div,
+.text-part .disrupt-class > div,
+.text-part .risk-class > div {
+    width: 100%;
+}
+
+.text-part > div > .class-category,
+.anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-category,
+.anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-category,
+.anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-category {
+    font-size: 0.75em;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text,
+.anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text,
+.anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text,
+.text-part > .disrupt-class > .class-text,
+.text-part > .risk-class > .class-text {
+    font-size: -webkit-calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.bottom-box > .diamond-part {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    width: 100%;
+    padding-top: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    grid-area: diamond-part;
+    padding-left: 1rem;
+    -webkit-box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+       -moz-box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+            box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+    -webkit-box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+       -moz-box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+            box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+}
+
+.danger-diamond {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 2.5%;
+    left: 5%;
+}
+
+.danger-diamond a {
+    color: rgba(0,0,0,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+}
+
+.danger-diamond br {
+    display: none;
+}
+
+.danger-diamond > .arrows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 160 160' xml:space='preserve'%3E%3Cpath fill='%23010101' d='M136.1,133.3l23.9-23.9V51.2l-24-24l19.1-19.1l4.9,4.9l0-12.9l-12.9,0l4.9,4.9L133,24.2l-24-24H51l-24,24 L8,5.2l4.9-4.9L0,0.2l0,12.9l4.9-4.9L24,27.3l-24,24v58.2l23.9,23.9l-19,19L0,147.3l0,12.9l12.9,0L8,155.3l19-19l23.9,23.9h58.4 l23.9-23.9l19,19l-4.9,4.9l12.9,0l0-12.9l-4.9,4.9L136.1,133.3z M155.7,53v54.6l-22.6,22.6l-50-50L133,30.3L155.7,53z M52.8,4.5 h54.4l22.7,22.7L80,77.2L30.1,27.3L52.8,4.5z M4.3,107.6V53L27,30.3L77,80.2l-50,50L4.3,107.6z M107.4,155.9H52.6L30,133.3l50-50 l50,50L107.4,155.9z'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.danger-diamond > .octagon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+            clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+
+.danger-diamond > .quadrants {
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    top: 0;
+    left: 0;
+}
+
+.danger-diamond > .quadrants > div {
+    width: 67.5%;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 2%;
+    left: 16.25%;
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-clip-path: polygon(22% 0, 77% 0, 100% 31%, 50% 100%, 0 31%);
+            clip-path: polygon(22% 0, 77% 0, 100% 31%, 50% 100%, 0 31%);
+    -webkit-transform-origin: bottom center;
+       -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+         -o-transform-origin: bottom center;
+            transform-origin: bottom center;
+}
+
+.danger-diamond > .quadrants > .left-quad {
+    -webkit-transform: rotate(270deg);
+       -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+         -o-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+
+.danger-diamond > .quadrants > .right-quad {
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.danger-diamond > .quadrants > .bottom-quad {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.danger-diamond > .quadrants > .bottom-quad.none {
+    background-color: rgb(252, 252, 252 ,0.25);
+    background-color: rgb(var(--white-monochrome, 252, 252, 252),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.pending,
+.danger-diamond > .quadrants > .top-quad.等待分级,
+.danger-diamond > .quadrants > .top-quad.等待分級 {
+    background-color: rgb(12, 12, 12 ,0.25);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.neutralized,
+.danger-diamond > .quadrants > .top-quad.无效化,
+.danger-diamond > .quadrants > .top-quad.無效化 {
+    background-color: rgb(66, 66, 72 ,0.25);
+    background-color: rgb(var(--gray-monochrome, 66, 66, 72),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.explained,
+.danger-diamond > .quadrants > .top-quad.已解明,
+.danger-diamond > .quadrants > .top-quad.已解明 {
+    background-color: rgb(252, 252, 252 ,0.25);
+    background-color: rgb(var(--white-monochrome, 252, 252, 252),0.25);
+}
+
+.anom-bar-container.esoteric .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.机密 .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.機密 .danger-diamond > .quadrants > .top-quad {
+    background-color: rgb(66, 66, 72 ,0.15);
+    background-color: rgb(var(--gray-monochrome, 66, 66, 72),0.15);
+}
+
+.anom-bar-container.keter .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.amida .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.critical .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危急 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危急 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(196,2,51,0.25);
+    background-color: rgb(var(--five-color),0.25);
+}
+
+.anom-bar-container.ekhi .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.danger .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危险 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危險 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(255,109,0,0.25);
+    background-color: rgb(var(--five-color),0.25);
+}
+
+.anom-bar-container.euclid .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.keneq .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.warning .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.警告 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.警告 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(255,211,0,0.25);
+    background-color: rgb(var(--three-color),0.25);
+}
+
+.anom-bar-container.vlam .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.caution .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.需谨慎 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.需謹慎 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(0,135,189,0.25);
+    background-color: rgb(var(--two-color),0.25);
+}
+
+.anom-bar-container.safe .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.dark .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.notice .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.待观察 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.待觀察 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(0,159,107,0.25);
+    background-color: rgb(var(--one-color),0.25);
+}
+
+.anom-bar-container.clear-5 .danger-diamond > .center-circle::before {
+    content: "5";
+}
+
+.anom-bar-container.clear-4 .danger-diamond > .center-circle::before {
+    content: "4";
+}
+
+.anom-bar-container.clear-3 .danger-diamond > .center-circle::before {
+    content: "3";
+}
+
+.anom-bar-container.clear-2 .danger-diamond > .center-circle::before {
+    content: "2";
+}
+
+.anom-bar-container.clear-1 .danger-diamond > .center-circle::before {
+    content: "1";
+}
+
+.danger-diamond > .top-icon,
+.danger-diamond > .right-icon,
+.danger-diamond > .left-icon,
+.danger-diamond > .bottom-icon {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 33%;
+    height: 33%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.1875rem solid rgb(12, 12, 12);
+    border: 0.1875rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    overflow: hidden;
+    z-index: 2;
+}
+
+.danger-diamond > .top-icon {
+    top: 0.25rem;
+    left: 33.5%;
+}
+
+.danger-diamond > .right-icon {
+    right: 0.25rem;
+    top: 33.5%;
+}
+
+.danger-diamond > .left-icon {
+    left: 0.25rem;
+    top: 33.5%;
+}
+
+.danger-diamond > .bottom-icon {
+    bottom: 0.25rem;
+    left: 33.5%;
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon,
+.anom-bar-container.无效化 .danger-diamond > .top-icon,
+.anom-bar-container.無效化 .danger-diamond > .top-icon,
+.anom-bar-container.pending .danger-diamond > .top-icon,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon,
+.anom-bar-container.explained .danger-diamond > .top-icon,
+.anom-bar-container.已解明 .danger-diamond > .top-icon,
+.anom-bar-container.已解明 .danger-diamond > .top-icon {
+    width: 65%;
+    height: 65%;
+    top: 17.5%;
+    left: 17.5%;
+    border-width: 0.3625rem;
+}
+
+.anom-bar-container.pending .danger-diamond > .top-icon,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon {
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .danger-diamond > .bottom-icon {
+    display: none;
+}
+
+.danger-diamond > .top-icon::before,
+.danger-diamond > .right-icon::before,
+.danger-diamond > .left-icon::before,
+.danger-diamond > .bottom-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    left: 0;
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon,
+.anom-bar-container.无效化 .danger-diamond > .top-icon,
+.anom-bar-container.無效化 .danger-diamond > .top-icon {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon::before,
+.anom-bar-container.无效化 .danger-diamond > .top-icon::before,
+.anom-bar-container.無效化 .danger-diamond > .top-icon::before {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/neutralized-icon.svg");
+    -webkit-background-size: 110% 110%;
+       -moz-background-size: 110% 110%;
+         -o-background-size: 110% 110%;
+            background-size: 110% 110%;
+    background-position: center center;
+}
+
+.anom-bar-container.pending .danger-diamond > .top-icon::before,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon::before,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon::before {
+    background-color: rgb(12, 12, 12);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/pending-icon.svg");
+}
+
+.anom-bar-container.explained .danger-diamond > .top-icon::before,
+.anom-bar-container.已解明 .danger-diamond > .top-icon::before,
+.anom-bar-container.已解明 .danger-diamond > .top-icon::before {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/explained-icon.svg");
+}
+
+.anom-bar-container.esoteric .danger-diamond > .top-icon::before,
+.anom-bar-container.机密 .danger-diamond > .top-icon::before,
+.anom-bar-container.機密 .danger-diamond > .top-icon::before {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/esoteric-icon.svg");
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+
+.anom-bar-container.keter .danger-diamond > .top-icon::before,
+.anom-bar-container.amida .danger-diamond > .left-icon::before,
+.anom-bar-container.critical .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.keter .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keter-icon.svg");
+}
+
+.anom-bar-container.amida .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/amida-icon.svg");
+}
+
+.anom-bar-container.critical .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/critical-icon.svg");
+}
+
+.anom-bar-container.ekhi .danger-diamond > .left-icon::before,
+.anom-bar-container.danger .danger-diamond > .right-icon::before,
+.anom-bar-container.危险 .danger-diamond > .right-icon::before,
+.anom-bar-container.危險 .danger-diamond > .right-icon::before {
+    background-color: rgb(255,109,0);
+background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.ekhi .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/ekhi-icon.svg");
+}
+
+.anom-bar-container.danger .danger-diamond > .right-icon::before,
+.anom-bar-container.危险 .danger-diamond > .right-icon::before,
+.anom-bar-container.危險 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/danger-icon.svg");
+}
+
+.anom-bar-container.euclid .danger-diamond > .top-icon::before,
+.anom-bar-container.keneq .danger-diamond > .left-icon::before,
+.anom-bar-container.warning .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.euclid .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/euclid-icon.svg");
+}
+
+.anom-bar-container.keneq .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+}
+
+.anom-bar-container.warning .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/warning-icon.svg");
+}
+
+.anom-bar-container.vlam .danger-diamond > .left-icon::before,
+.anom-bar-container.caution .danger-diamond > .right-icon::before,
+.anom-bar-container.需谨慎 .danger-diamond > .right-icon::before,
+.anom-bar-container.需謹慎 .danger-diamond > .right-icon::before {
+    background-color: rgb(0,135,189);
+background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.vlam .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/vlam-icon.svg");
+}
+
+.anom-bar-container.caution .danger-diamond > .right-icon::before,
+.anom-bar-container.需谨慎 .danger-diamond > .right-icon::before,
+.anom-bar-container.需謹慎 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/caution-icon.svg");
+}
+
+.anom-bar-container.safe .danger-diamond > .top-icon::before,
+.anom-bar-container.dark .danger-diamond > .left-icon::before,
+.anom-bar-container.notice .danger-diamond > .right-icon::before,
+.anom-bar-container.待观察 .danger-diamond > .right-icon::before,
+.anom-bar-container.待觀察 .danger-diamond > .right-icon::before {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.safe .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/safe-icon.svg");
+}
+
+.anom-bar-container.dark .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/dark-icon.svg");
+}
+
+.anom-bar-container.notice .danger-diamond > .right-icon::before,
+.anom-bar-container.待观察 .danger-diamond > .right-icon::before,
+.anom-bar-container.待觀察 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/notice-icon.svg");
+}
+
+.anom-bar-container.N/A .danger-diamond > .bottom-icon::before {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/apollyon-icon.svg");
+    background-size: contain;
+}
+
+@media (max-width: 960px ) {
+    .anom-bar > .top-box {
+        padding-bottom: 1.5em;
+    }
+
+    .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 0.5rem 6rem;
+        grid-template-columns: 1fr 6rem;
+        height: 6rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text, .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text, .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text, .text-part > .disrupt-class > .class-text, .text-part > .risk-class > .class-text {
+        font-size: -webkit-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text,
+    .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text,
+    .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text {
+        font-size: -webkit-calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .second-class > .class-text,
+    .anom-bar-container.机密 .text-part > .main-class > .second-class > .class-text,
+    .anom-bar-container.機密 .text-part > .main-class > .second-class > .class-text {
+        font-size: -webkit-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .contain-class > .class-text {
+        font-size: -webkit-calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .text-part > .main-class {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .text-part > .disrupt-class {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .text-part > .risk-class {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+}
+
+@media (max-width: 875px ) {
+    .text-part > div {
+        padding: 0.25rem 0;
+    }
+
+    .anom-bar-container.pending .bottom-box > .text-part,
+    .anom-bar-container.等待分级 .bottom-box > .text-part,
+    .anom-bar-container.等待分級 .bottom-box > .text-part,
+    .anom-bar-container.neutralized .bottom-box > .text-part,
+    .anom-bar-container.无效化 .bottom-box > .text-part,
+    .anom-bar-container.無效化 .bottom-box > .text-part,
+    .anom-bar-container.explained .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part {
+        height: 6rem;
+    }
+
+    .bottom-box > .text-part {
+        grid-template-areas:
+            "main-class"
+            "disrupt-class"
+            "risk-class";
+        -ms-grid-rows: 2fr 0.25rem 1fr 0.25rem 1fr;
+        grid-template-rows: 3fr 2fr 2fr;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: 8rem;
+    }
+
+    .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 0.5rem 8rem;
+        grid-template-columns: 1fr 8rem;
+        height: 8rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after,
+    .text-part > .main-class::after {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after,
+    .text-part > .main-class::after,
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        top: -webkit-calc(50% - 1.125rem);
+        top: -moz-calc(50% - 1.125rem);
+        top: calc(50% - 1.125rem);
+        border-width: 0.25rem;
+    }
+
+    .text-part > .main-class::before {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-width: 0.25rem;
+        top: -webkit-calc(50% - 1.45rem);
+        top: -moz-calc(50% - 1.45rem);
+        top: calc(50% - 1.45rem);
+    }
+
+    .text-part .disrupt-class::before,
+    .text-part .risk-class::before {
+        height: 2.25rem;
+        width: 2.25rem;
+        top: -webkit-calc(50% - 1.125rem);
+        top: -moz-calc(50% - 1.125rem);
+        top: calc(50% - 1.125rem);
+        right: 0.75rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after {
+        top: 0.15rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::before,
+    .anom-bar-container.机密 .text-part > .main-class::before,
+    .anom-bar-container.機密 .text-part > .main-class::before {
+        top: 0.15rem;
+        width: 5.75rem;
+        height: 3rem;
+        right: 1.25rem;
+        -webkit-background-size: 100% 100%;
+           -moz-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        background-position: left -20px center;
+    }
+
+    .anom-bar-container.esoteric .contain-class > .class-category,
+    .anom-bar-container.机密 .contain-class > .class-category,
+    .anom-bar-container.機密 .contain-class > .class-category {
+        max-width: 100% !important;
+    }
+
+    .anom-bar-container.pending .bottom-box > .text-part,
+    .anom-bar-container.等待分级 .bottom-box > .text-part,
+    .anom-bar-container.等待分級 .bottom-box > .text-part,
+    .anom-bar-container.neutralized .bottom-box > .text-part,
+    .anom-bar-container.无效化 .bottom-box > .text-part,
+    .anom-bar-container.無效化 .bottom-box > .text-part,
+    .anom-bar-container.explained .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part {
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+            grid-template-areas: "main-class";
+    }
+
+    .text-part .disrupt-class,
+    .text-part .risk-class {
+        padding-left: 0.25rem;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+    }
+
+    .text-part .disrupt-class *,
+    .text-part .risk-class * {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media (max-width: 875px ) and (min-width: 480px ) {
+    .anom-bar-container.pending .anom-bar > .bottom-box,
+    .anom-bar-container.等待分级 .anom-bar > .bottom-box,
+    .anom-bar-container.等待分級 .anom-bar > .bottom-box,
+    .anom-bar-container.neutralized .anom-bar > .bottom-box,
+    .anom-bar-container.无效化 .anom-bar > .bottom-box,
+    .anom-bar-container.無效化 .anom-bar > .bottom-box,
+    .anom-bar-container.explained .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 6rem;
+        grid-template-columns: 1fr 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 480px ) {
+    .anom-bar {
+        position: relative;
+    }
+
+    .anom-bar > .top-box {
+        height: 40vw;
+        max-height: 40vw;
+                grid-template-areas:
+            "."
+            "top-left-box"
+            "top-center-box"
+            "top-right-box"
+            ".";
+        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        font-size: -webkit-calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        font-size: -moz-calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        font-size: calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        margin: 0 0 1rem 0;
+        padding-left: 1em;
+    }
+
+    .top-box .top-left-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        line-height: 1;
+    }
+
+    .top-left-box > .item {
+        font-size: 3em;
+    }
+
+    .top-box .top-left-box > span {
+        width: 100%;
+    }
+
+    .top-box .top-center-box {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    width: 100%;
+        max-width: 48vw;
+        margin: 0 0 0 -0.15rem;
+    height: 2rem;
+    }
+
+    .top-center-box > div {
+        height: 25%;
+        margin: 0.15rem 0.15rem 0 0.15rem;
+    }
+
+    .top-box .top-right-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    width: 100%;
+        max-width: 48vw;
+        margin: 0 0 0 -0.15rem;
+    height: 2rem;
+    }
+
+    .top-right-box > div {
+        line-height: 1;
+    }
+
+    .top-right-box > .level {
+        font-size: 4em;
+    }
+
+    .top-right-box > .clearance {
+        line-height: 1.5;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: -webkit-calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        font-size: -moz-calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        font-size: calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        width: initial;
+        height: 1.5rem;
+    }
+
+    .top-right-box > .clearance::before {
+        line-height: 0.5;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: initial;
+        height: initial;
+        position: initial;
+    }
+
+    .anom-bar > .bottom-box {
+        position: initial;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: 8rem;
+    }
+
+    .anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class::before {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: -webkit-calc(50% - 1.475rem);
+        top: -moz-calc(50% - 1.475rem);
+        top: calc(50% - 1.475rem);
+        right: 0.5rem;
+    }
+
+    .text-part > div > .class-category,
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-category,
+    .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-category,
+    .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-category {
+        font-size: 1em;
+    }
+
+    .text-part .disrupt-class,
+    .text-part .risk-class {
+        font-size: 0.9em;
+    }
+
+    .text-part > .main-class::after,
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        height: 2rem;
+        width: 2rem;
+        top: -webkit-calc(50% - 1.25rem);
+        top: -moz-calc(50% - 1.25rem);
+        top: calc(50% - 1.25rem);
+    }
+
+    .text-part > .main-class::before,
+    .text-part .disrupt-class::before,
+    .text-part .risk-class::before {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1rem;
+        top: -webkit-calc(50% - 1.25rem);
+        top: -moz-calc(50% - 1.25rem);
+        top: calc(50% - 1.25rem);
+        right: 1.5rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::before,
+    .anom-bar-container.机密 .text-part > .main-class::before,
+    .anom-bar-container.機密 .text-part > .main-class::before {
+        top: 0.15rem;
+        width: 4.5rem;
+        height: 2.5rem;
+        right: 1rem;
+        -webkit-background-size: 100% 100%;
+           -moz-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        background-position: left -10px center;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .bottom-box > .diamond-part {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        height: 40vw;
+        padding: 0;
+    }
+
+    .diamond-part * {
+        background-repeat: no-repeat;
+    }
+
+    .top-box .top-left-box {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .top-box .top-center-box {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .top-box .top-right-box {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+    }
+
+    .anom-bar-container.pending .anom-bar > .bottom-box,
+    .anom-bar-container.等待分级 .anom-bar > .bottom-box,
+    .anom-bar-container.等待分級 .anom-bar > .bottom-box,
+    .anom-bar-container.neutralized .anom-bar > .bottom-box,
+    .anom-bar-container.无效化 .anom-bar > .bottom-box,
+    .anom-bar-container.無效化 .anom-bar > .bottom-box,
+    .anom-bar-container.explained .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box {
+        height: 6rem;
+    }
+
+    .danger-diamond > .top-icon {
+        top: 0.375rem;
+    }
+
+    .danger-diamond > .right-icon {
+        right: 0.375rem;
+    }
+
+    .danger-diamond > .left-icon {
+        left: 0.375rem;
+    }
+
+    .danger-diamond > .bottom-icon {
+        bottom: 0.375rem;
+    }
+}
+
+@supports not (--css: variables) {
+
+    .anom-bar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: column nowrap;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+    }
+
+    .anom-bar > .top-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+    }
+
+    .top-box .top-center-box {
+        -webkit-box-flex: 2;
+        -webkit-flex-grow: 2;
+           -moz-box-flex: 2;
+            -ms-flex-positive: 2;
+                flex-grow: 2;
+    }
+
+    .anom-bar > .bottom-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .bottom-box > .text-part {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+           -moz-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        width: 100%;
+    }
+
+    .anom-bar-container .text-part .main-class {
+        overflow: hidden;
+    }
+
+    .anom-bar-container .text-part .disrupt-class,
+    .anom-bar-container .text-part .risk-class {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+           -moz-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+
+    .anom-bar-container .text-part .disrupt-class .class-category,
+    .anom-bar-container .text-part .risk-class  .class-category {
+        -webkit-flex-shrink: 4;
+            -ms-flex-negative: 4;
+                flex-shrink: 4;
+    }
+
+    .bottom-box > .diamond-part {
+        width: 6rem;
+        height: 6rem;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+           -moz-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+@media (max-width: 480px ) {
+        .anom-bar > .top-box {
+            height: 6rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+               -moz-box-orient: vertical;
+               -moz-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+            width: -webkit-calc(100% - 40vw);
+            width: -moz-calc(100% - 40vw);
+            width: calc(100% - 40vw);
+        }
+
+        .top-box .top-left-box {
+            display: initial;
+        }
+
+        .top-box > * {
+            width: 100%;
+            height: auto;
+        }
+
+        .top-box .top-center-box {
+                -webkit-box-flex: 0;
+                -webkit-flex-grow: 0;
+                   -moz-box-flex: 0;
+                    -ms-flex-positive: 0;
+                        flex-grow: 0;
+        }
+
+    }
+}
+
+.lang-cn .lang-tr,
+.lang-tr .lang-cn {
+    display: none;
+}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -529,7 +2628,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-5579" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-5618" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -551,7 +2650,7 @@
                     
                     
                         <div id="page-title">
-                            SCP-5579
+                            SCP-5618
                         </div>
                     
 
@@ -564,138 +2663,119 @@
                     <div id="page-content">
                         
 
+
+
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
 
 
 
-<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+<div style="text-align: center;">
+<p><strong>SCP-N/A：“占位符”</strong><br />
+很快<em>什么</em>都不会发生？</p>
+<p><strong><a class="newpage" href="/this-page-intentionally-left-blank">该作者的更多作品！</a></strong></p>
+</div>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
 
 
 
-
-
-<p><span style="color: purple">“你能到访真是好，亲爱的。我们都非常高兴你们能同意我们的提议。”</span></p>
-<p><span style="color: #da5a26">“那不是提议。最好，算是敲诈。最坏，要算恐怖袭击。”</span></p>
-<p>笔一摁。在静默的客厅里震耳欲聋。</p>
-<p><span style="color: #da5a26">“还有你要叫我监督者。”</span></p>
-<hr />
-<img src="http://scp-wiki.wdfiles.com/local--files/fragment:scp-5579-2/SUBROSA3.png" alt="SUBROSA3.png" class="image" /><sup class="footnoteref"><a id="footnoteref-119296-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-119296-1')">1</a></sup>
-<hr />
-<p><span style="color: purple">Iris Black</span>和<span style="color: #da5a26">O5-5</span>坐在高大的红绸扶手椅上，围在桃花心木咖啡桌边。后炉里的火苗咔哒作响，火光晃动中的大理石壁炉比白金汉宫还要奢华。墙上挂着猎获纪念—异域的野兽，平凡与异常皆有，有死眼睛的也有一直注目的。这是第五小宅，Marshall, Carter与Dark的伦敦藏身地。</p>
-<p><span style="color: purple">Iris讨价还价。</span><span style="color: #da5a26">O5-5据理力争。</span></p>
-<p><span style="color: purple">Iris饮下红酒。</span><span style="color: #da5a26">O5-5没有。</span></p>
-<p>谈判持续了将近六小时。</p>
-<hr />
-<blockquote>
-<p><strong>要约：</strong></p>
-<p><strong>[已编辑]</strong></p>
-</blockquote>
-<blockquote>
-<p><strong>收取：</strong></p>
-<ol>
-<li><strong>三(3)枚</strong><em>万灵胶囊</em> [SCP-500]</li>
-<li><strong>十五 (15)本</strong> <em>24小时减重手册</em> [SCP-4177]</li>
-<li><strong>一(1)份</strong> <em>950开钻石苗</em> [SCP-757]</li>
-<li><strong>十(10)颗</strong> <em>生日糖，70岁</em> [SCP-983]</li>
-<li><strong>400g</strong> <em>纯人金</em> [SCP-4938]</li>
-<li><strong>18kg</strong> <em>多用绿黏浆</em> [SCP-447]</li>
-<li><strong>10kg</strong> <em>寄生木薯</em> [SCP-5579]</li>
-</ol>
-</blockquote>
-<hr />
-<p><span style="color: #da5a26">“十六千克就差不多了。”</span>O5-5简洁地说。</p>
-<p><span style="color: purple">“你很走运我们没要走整个球。二十。”</span>Iris说。</p>
-<p><span style="color: #da5a26">“十八，还有你们必须务必保证—”</span></p>
-<p><span style="color: purple">“是的，是的，我们知道。不得有死尸。”</span></p>
-<p><span style="color: #da5a26">“那就十八千克。”</span>O5-5带着定论说道。</p>
-<p><span style="color: purple">“要是这样我们才能继续，好吧。”</span>Iris叹气。<span style="color: purple">“我们最后的条件&#8230;是什么来着&#8230;啊，是的，木薯。你们的SCP-5579。我觉得这一条的讲价可以略过了吧，嗯？十千克，你们的担保是你们的全部存货。除了，当然，极少样本留给你们供科学折腾。所以交易达成？”</span></p>
-<p>O5-5没有立即回复。她敲了敲笔，然后沉默地看向她的笔记板。Iris举起酒杯，很好奇这么一位聪颖的女士是为什么要磨蹭这么久。</p>
-<p><span style="color: #da5a26">“告诉我你们为什么要。”</span>O5-5终于开口。</p>
-<p>Iris喝到一半定住了。血红的两道边界，红唇与红酒，差点便要碰上。她吃惊了。今夜一直很单调，没错，但O5-5从来不会重复自己—她从来不说废话。</p>
-<p><span style="color: purple">“我们已经告诉过你们了。”</span>Iris说道。<span style="color: purple">“它们是特异的，它们是异常的，它们是有机的 <em>objet d'art</em>。它们对我们有价，对你们却无用。”</span></p>
-<p><span style="color: #da5a26">“是，但你们准备用它们做什么？”</span>O5-5问道。<span style="color: #da5a26">“即便是深度冷冻，在几十年内它们也只会变成一堆烂糊。这似乎没什么&#8230;稳定投资可言。”</span></p>
-<p>Iris笑了。虽然手握一队的豪车，一村的房产，还有若干私人岛屿，她只拥有三道微笑。她从来不需要更多。这是第一道，端庄盛气的一笑，在这谈判终于有趣起来的时刻开始浮现了。</p>
-<p><span style="color: purple">“我的天，监督者，你可是在放任好奇心吗？”</span>Iris问道。</p>
-<p><span style="color: #da5a26">“我只是在指出矛盾。”</span>O5-5平静地回答。<span style="color: #da5a26">“我们要保证你们不会用SCP-5579做可能威胁广大世界的事情。”</span></p>
-<p><span style="color: purple">“比如说呢？”</span>Iris问着脑袋端庄一歪。</p>
-<p><span style="color: #da5a26">“孵化它们。”</span>O5-5回答。</p>
-<p>Iris哼了一声，而后窃笑，再而后完全放声大笑。她笑得是如此用力，必须得放下酒杯，不然这$1,500的红酒就得弄脏她$38,000的裙子。</p>
-<p><span style="color: purple">“不可能的。”</span>她控住呼吸后说。</p>
-<p><span style="color: #da5a26">“我们应该相信—”</span>O5-5刚开口。</p>
-<p><span style="color: purple">“这是不可能的。”</span>Iris坚定地又说了一遍。</p>
-<p>O5-5皱起眉头。</p>
-<p><span style="color: #da5a26">“怎么这么肯定？”</span>她问道。</p>
-<p><span style="color: purple">“因为过了九百万九千六十四颗行星后，你可能会开始猜到Avanaski不过是可悲可怜的寄生虫。”</span>Iris说道。</p>
-<p><span style="color: #da5a26">“什么？”</span>O5-5发问。</p>
-<p><span style="color: purple">“Avanaski。”</span>Iris重复一遍。<span style="color: purple">“它们还是有点名气，或者我们是这么听说的。过去几年里小子们和我交了些许新的商业伙伴，在&#8230;非常高的地方。”</span></p>
-<p><span style="color: #da5a26">“你是说你们接触了系外生物？”</span>O5-5问道。</p>
-<p><span style="color: purple">“啊，非常抱歉；这可不在我们的披露合约之内哦，不是么？”</span>Iris说着又笑了。</p>
-<p><span style="color: #da5a26">“呵。”</span>O5-5嘀咕着。<span style="color: #da5a26">“所以，这个‘Avanaski’在寻找合适宿主上遇到麻烦了？”</span></p>
-<p><span style="color: purple">“Avanaski在所有事情上都遇到麻烦了，亲爱的。我说，你们是不是觉得它们非常的&#8230;有能耐？”</span></p>
-<p><span style="color: #da5a26">“他们可以进行跨星系飞行。”</span></p>
-<p><span style="color: purple">“答案不是这样。”</span></p>
-<p><span style="color: #da5a26">“不是么？”</span></p>
-<p>Iris Dark喝完了最后一口酒。她举起酒杯，一个灰色皮肤的男人已经出现在她身旁。他拿走空杯，用流利的动作把满满的新杯递进她等待的手里。他刚刚还在，一息之间便又离去，O5-5只能在火光闪动间稍微瞥见这人。他完全没有脸。</p>
-<p><span style="color: purple">“Avanaski，”</span>Iris开始说了，<span style="color: purple">“来自一个资源无比丰富的世界，比起那里地球不过是半苔藓的悬崖而已。它们消化了这样的一个世界，那个它们叫做‘一号’的星球可能只是它们成功感染的第一颗星球。我们还不确定它们到底来自何处，但从休眠时的耐受力看，我们怀疑它们曾经搭过彗星便车。”</span></p>
-<p><span style="color: purple">“反正，它们这第一批也是唯一的宿主不过是些胖乎乎的灰色小家伙—想一想小象遇到了考拉。这些懒惰的肿块曾住在巨大的空心树里，整年都在挖果子。那是个双星系统—没有冬天的世界。还不止，下面的地层整块都是矿石和可开发能源。当然，当地人从未加以利用—革新来自必需，而它们别无所求。然而Avanaski无所不求。”</span></p>
-<p><span style="color: purple">“就把它们看作是宇宙里的娇惯顽童吧，监督者—整个物种都发育在太过容易的环境里。人类才想出用火之时，它们的工业革命已经进行到半路。它们闲逛着进了太空，因为他们有现成的晶石，豌豆大小就含有50吨石油的能量。Avanaski手握通往银河的钥匙，如同它是老爹送的凯迪拉克。”</span></p>
-<p><span style="color: purple">“然而，你看你看，其余的邻居就远没有这么理想了，就如它们在小广播里暗示的那样。现在，在烧光了所剩无几的“一号”行星后，Avanask缩减到了屈指可数的程度。它们对节约或适应都毫无概念—它们完全无法想到这些方面。我们怀疑，或者至少我们的商业伙伴怀疑，它们会在下个二十年内彻底完蛋。”</span></p>
-<p>一瞬的沉默在他们间凝滞。</p>
-<p><span style="color: #da5a26">“你回避了问题。”</span>O5-5到底开口了。</p>
-<p><span style="color: purple">“哪一个问题？”</span>Iris问道。</p>
-<p><span style="color: #da5a26">“你们为什么要木薯？”</span></p>
-<p><span style="color: purple">“吃呗，多明显的事。”</span></p>
-<p>O5-5停顿，而后叹息，把她的钢笔头朝下定在笔记板上。</p>
-<p><span style="color: #da5a26">“如果你非要浪费我的时间，Dark小姐，那么我们可以直接删去这一条件，今晚到此为止。”</span>O5-5说道。</p>
-<p><span style="color: purple">“我是认真的！”</span>Iris带着一股冒犯回答道，她的手掌按在了锁骨上。<span style="color: purple">“我们想要把整批都吃的精光！其实，已经计划要开一整桌筵席了—非常高档唷。”</span></p>
-<p><span style="color: #da5a26">“和街角的咖啡一样高档。”</span>O5-5讥讽。<span style="color: #da5a26">“那不过是木薯而已。”</span></p>
-<p><span style="color: purple">“充满外星寄生物的木薯。”</span></p>
-<p><span style="color: #da5a26">“它吃起来就和木薯一样。SCP-5579对化学分析都没有反应，更别说人的舌头。为什么在意？”</span></p>
-<p>Iris Black的第二次微笑来了：些微又顽皮，就像童年好友间心照不宣的笑话。那是与知晓世界真实面目者共享的微笑—不只是投在帷幕后的那些，更有上面的操偶人。</p>
-<p><span style="color: purple">“你可曾享用过Faisan Pathétique？”</span>她问道。</p>
-<p><span style="color: #da5a26">“我觉得反正你也会解释是什么。”</span>O5-5说。</p>
-<p><span style="color: purple">“是一种野鸡，”</span>Iris说道，<span style="color: purple">“只能在法国的一座农场里找到。前任主人在谷仓自缢了。不知是什么原因，每当一头Faisan Pathétique被宰杀，它都会体验到一瞬间的存在领悟。它会理解到自己是一只鸟。它会理解到它活了无意义的一生。它甚至会知道自己的死不过是某些人类要吃晚餐。”</span></p>
-<p><span style="color: #da5a26">“你们怎么可能-”</span>O5-5开口。</p>
-<p><span style="color: purple">“核磁共振，”</span>Iris打断道。<span style="color: purple">“灵魂道标，共情微投射&#8230;哦，还有其实它们会在你砍掉它们脑袋前一刻大喊出‘等下！’、‘住手！’或者‘饶命！’我稍微享用过几回。你知道它们吃起来什么味道么？”</span></p>
-<p>O5-5没有回应。</p>
-<p><span style="color: purple">“鸡肉。”</span>Iris还是说了。<span style="color: purple">“吃起来就是干柴、寡淡的鸡肉。”</span></p>
-<p>O5-5依然没有回应。</p>
-<p><span style="color: purple">“所以你大概又想问‘何必呢？’”</span>Iris舞手而言。<span style="color: purple">“然后我就会回答说：‘不是关于口味，亲爱的。’然后你又要嫌我把你叫做亲爱的了，但我会继续说‘真正的重点在于Faisan Pathétique里要吃掉的东西，在光荣的一瞬之间，明白了它在宇宙秩序中的捕食位。’”</span></p>
-<p>O5-5眼睛一眯，但没说话。</p>
-<p><span style="color: purple">“捕食位？”</span>Iris重复道，手停在半空。<span style="color: purple">“拜托，监督者小姐，我非常高兴聊天里一人说两人话，但要是这里那里有点笑声配合我会很高兴的。微笑一下？畏缩下？随便啥？”</span></p>
-<p>O5-5把笔在板上敲打着。</p>
-<p><span style="color: purple">“哦好吧，一直这样。”</span>Iris不悦。<span style="color: purple">“我只是想给我的观点添些轻浮。”</span></p>
-<p><span style="color: #da5a26">“那么到底是什么观点，Dark小姐？”</span>O5-5单不带感情地问道。</p>
-<p><span style="color: purple">“‘色调’可不只是口味的事呀！”</span>Iris解释道。<span style="color: purple">“是我们不需要被这些原始的神经反馈支配！就比如这杯红酒。我可以欣赏它的味道，没错，但历史呢？生产它的技艺呢？为了占有存放它将近两百年的那座酒窖，我们开展的残暴美丽之资产侵占呢？这些我品尝不到，但我能体验得到。”</span></p>
-<p>Iris缓慢而故意地一口喝完了红酒，一把放下了酒杯。灰人没有回来。过了一会儿，O5-5把笔放到一边。</p>
-<p><span style="color: #da5a26">“那这样的话，”</span>O5-5说，<span style="color: #da5a26">“你能从SCP-5579体验到什么？”</span></p>
-<p>Iris把手叠在下巴下，身子向前靠来，火光映在她的眼里。</p>
-<p><span style="color: purple">“和我们的先祖一样的体验，监督者，当他们狩猎斩杀猎物之时。不是飘忽的小肉，不，我是说强大的猎物。熊。公牛。要生存下去就会把你挖成血淋淋空壳的野兽。但你还是战胜了它们。你，靠着力量和狡猾，现在大啖起它们生嫩、鲜活的血肉—可不是从死尸上剥下来，是要从惨叫的活物上撕下来。这时候你毫无羞愧，只有满足。你便是统治生命。你是高等物种。你活，它们死。”</span></p>
-<p><span style="color: purple">“现在对一支银河强权也是如此。”</span></p>
-<p><span style="color: purple">“想想一下吧！你把这些宝贵的小黑珠‘嘭’进嘴里，整个吞下。所有这些群落，所有新生的Avanaski孵化开来，试图缠上你的胃壁，上你的食道，缠上一切！然而，它们只会溶化、烧灼、恶心，被单纯的人类生理所挫败。每一秒的消化，都是对宇宙间最伟大的文明之一发起一边倒战争。每咬一口，你都在申明我们，人类，不会单单接管群星，而要<em>尽吞群星</em>。”</span></p>
-<p>终于，Iris Black露出了第三个、也是最后的一笑。</p>
-<p>全牙毕露。</p>
-<p><span style="color: purple">“我来问你：还有什么比这更甜美呢？”</span></p>
-<hr />
+<div class="anom-bar-container item-N/A clear-0 N/A N/A N/A N/A {$american} lang-cn">
+<div class="anom-bar">
+<div class="top-box">
+<div class="top-left-box"><span class="item"><span class="lang-cn">项目编号：</span><span class="lang-tr">項目編號：</span></span><span class="number">N/A</span></div>
+<div class="top-center-box">
+<div class="bar-one"></div>
+<div class="bar-two"></div>
+<div class="bar-three"></div>
+<div class="bar-four"></div>
+<div class="bar-five"></div>
+<div class="bar-six"></div>
+</div>
+<div class="top-right-box">
+<div class="level"><span class="lang-cn">等级</span><span class="lang-tr">等級</span>0</div>
+<div class="clearance"></div>
+</div>
+</div>
+<div class="bottom-box">
+<div class="text-part">
+<div class="main-class">
+<div class="contain-class">
+<div class="class-category"><span class="lang-cn">收容等级：</span><span class="lang-tr">收容等級：</span></div>
+<div class="class-text">N/A</div>
+</div>
+<div class="second-class">
+<div class="class-category"><span class="lang-cn">次要等级：</span><span class="lang-tr">次要等級：</span></div>
+<div class="class-text">N/A</div>
+</div>
+</div>
+<div class="disrupt-class">
+<div class="class-category"><span class="lang-cn">扰动等级：</span><span class="lang-tr">擾動等級：</span></div>
+<div class="class-text">N/A</div>
+</div>
+<div class="risk-class">
+<div class="class-category"><span class="lang-cn">风险等级：</span><span class="lang-tr">風險等級：</span></div>
+<div class="class-text">N/A</div>
+</div>
+</div>
+<div class="diamond-part">
+<div class="danger-diamond"><a href="http://scp-wiki-cn.wikidot.com/classification-committee-memo">备忘录链接</a><br />
+<div class="arrows"></div>
+<div class="octagon"></div>
+<div class="quadrants">
+<div class="top-quad"></div>
+<div class="right-quad"></div>
+<div class="left-quad"></div>
+<div class="bottom-quad"></div>
+</div>
+<div class="top-icon"></div>
+<div class="right-icon"></div>
+<div class="left-icon"></div>
+<div class="bottom-icon"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><strong>特殊收容措施：</strong>N/A</p>
+<p><strong>描述：</strong>N/A</p>
+<div style="border:solid 1px #999999; background:#F5D8E0; padding:5px; margin-bottom: 10px;">
+<div style="text-align: center;">
+<h4><span>基金会时间异常部提醒</span></h4>
+<p>本文件为一占位文档，当前没有使用。<strong><sup class="footnoteref"><a id="footnoteref-378033-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-378033-1')">1</a></sup><sup>，</sup><sup class="footnoteref"><a id="footnoteref-378033-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-378033-2')">2</a></sup></strong>其项目等级、扰动等级、风险等级、特殊收容措施及描述均为空白，因为其所指对象仅是理论性存在。其所在时间线本身按定义已经不复存在，或者很快就会如此。</p>
+<p>&#8212; Dr. Alice Forth，DoTA主管</p>
+</div>
+</div>
 <div class="footnotes-footer">
 <div class="title">脚注</div>
-<div class="footnote-footer" id="footnote-119296-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-119296-1')">1</a>. 译注：图中文字如下：
-<p>MC＆D有限公司<br />
-玫瑰花下协定</p>
-<p>提交于2019年10月1日，玫瑰花下协定规定MC＆D有限公司（MCD）合伙人与非法人组织SCP基金会（SCP）将进行一次正式的财产交易。本合同的条款设计通过共同利益及敌对可能（参加第10条）规避了基金会的零谈判政策。</p>
-<p>1、MCD合伙人将交易出一定量的收藏品—其物质价值低、对常态潜在威胁高。</p>
-<p>2、SCP基金会将交易出等量的秘密项目—其对常态潜在威胁低，物质价值高。</p>
-<p>3、一名SCP基金会“监督者”，将与一名MCD合伙人就此交易展开谈判。</p>
-<p>4、谈判将在MCD自主选定的一间小宅内进行。</p>
-<p>5、货品的物理交易将在SCP基金会自主选定的一间站点内进行。</p>
-<p>6、双方都将为所列出的商品提供完整、未删改的记录。包括完整历史，特异性，以及异常性能力。</p>
-<p>7、SCP基金会列出的任何商品均不得被MCD拍卖—所有商品必须供私人使用，或加入“收藏品”之列。</p>
-<p>8、基金会保留每两年对已交易货品进行一次检查的权利，确保其被持续地完备收容。</p>
-<p>9、玫瑰之下协定内容严格限于SCP基金会“监督者”，以及MCD合伙人知晓。</p>
-<p>10、若SCP基金会拒绝参加玫瑰之下协定，MCD将把全部所列商品在全球范围内的随机人口中心投放。</p>
-</div>
+<div class="footnote-footer" id="footnote-378033-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-378033-1')">1</a>. <em>我希望我们永远也不需要填这东西。</em>[SZ]</div>
+<div class="footnote-footer" id="footnote-378033-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-378033-2')">2</a>. <em>如果我们真的要填，那也不真的是我们。反正不会很久。</em>[AF]</div>
 </div>
 </div>
     
@@ -704,7 +2784,7 @@
     </div>
 <div class="footer-wikiwalk-nav">
 <div style="text-align: center;">
-<p>&#171; <a class="newpage" href="/scp-5578">SCP-5578</a> | SCP-5579 | <a href="/scp-5570">SCP-5570</a> &#187;</p>
+<p>&#171; <a class="newpage" href="/scp-5617">SCP-5617</a> | SCP-5618 | <a class="newpage" href="/scp-5619">SCP-5619</a> &#187;</p>
 </div>
 </div>
 
@@ -735,7 +2815,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/euclid#pages">euclid</a><a href="/system:page-tags/tag/iris-dark#pages">iris-dark</a><a href="/system:page-tags/tag/mc%26d#pages">mc&amp;d</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/%E5%8C%96%E5%AD%A6%E6%80%A7#pages">化学性</a><a href="/system:page-tags/tag/%E5%AF%84%E7%94%9F%E6%80%A7#pages">寄生性</a><a href="/system:page-tags/tag/%E6%98%9F%E9%99%85#pages">星际</a><a href="/system:page-tags/tag/%E6%B4%BB%E7%89%A9#pages">活物</a><a href="/system:page-tags/tag/%E7%BB%86%E8%8F%8C#pages">细菌</a><a href="/system:page-tags/tag/%E9%A3%9F%E7%89%A9#pages">食物</a>
+                                <a href="/system:page-tags/tag/k%E7%BA%A7%E6%83%85%E6%99%AF#pages">k级情景</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/%E6%97%B6%E9%97%B4%E5%BD%B1%E5%93%8D#pages">时间影响</a><a href="/system:page-tags/tag/%E6%9C%BA%E5%AF%86%E5%88%86%E7%BA%A7#pages">机密分级</a>
                             </span>
                         </div>
                     
@@ -743,12 +2823,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 2, 最后编辑于: <span class="odate time_1587447453 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">21 Apr 2020 05:37</span></div>
+                            <div id="page-info">页面版本: 2, 最后编辑于: <span class="odate time_1607237693 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">06 Dec 2020 06:54</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+3</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+10</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13256999/scp-5579" class="btn btn-default" id="discuss-button">讨论 (6)</a>
+<a href="/forum/t-13896289/scp-5618" class="btn btn-default" id="discuss-button">讨论 (4)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -815,32 +2895,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://liminal-archives.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/liminal-archives.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://musicandcyberculture.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/musicandcyberculture.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://liminal-archives.wikidot.com">Liminal Archives</a></h3>
+            <h3><a target="_blank" href="http://musicandcyberculture.wikidot.com">Music and Cyberculture</a></h3>
             <div class="desc">          
-              Exploring spaces which shouldn&#039;t exist
+              MUS 6314 - Topics in Ethnomusicology
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://corvidcollege.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/corvidcollege.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://psi-ppwg.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/psi-ppwg.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://corvidcollege.wikidot.com">Logos Tao Deus</a></h3>
-            <div class="desc">          
-              a slowschool
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://cst133a.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cst133a.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://cst133a.wikidot.com">CST 133 A</a></h3>
+            <h3><a target="_blank" href="http://psi-ppwg.wikidot.com">Performance &amp; Philosophy</a></h3>
             <div class="desc">          
               
             </div>
@@ -848,12 +2917,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://sandbox.scp-wiki.kr">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sandbox.scp-wiki.kr/80.jpg"/>
+            <a target="_blank" class="image" href="http://halfmoonbay.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/halfmoonbay.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://sandbox.scp-wiki.kr">SB-KO1</a></h3>
+            <h3><a target="_blank" href="http://halfmoonbay.wikidot.com">Half Moon Bay Weyr</a></h3>
             <div class="desc">          
-              SCP-KO 샌드박스 초호기
+              Join us at paper.mudmagic.com Port:2211
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://ladyhood66.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ladyhood66.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://ladyhood66.wikidot.com">welcome</a></h3>
+            <div class="desc">          
+              
             </div>
           </div>
         </div>

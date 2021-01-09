@@ -1,427 +1,336 @@
-/* All Vars Used */
+/*
+    Y2K Theme
+    [2020 Wikidot Theme]
+    By etoisle
+    Based on SCP Sigma 9 Theme created by Aelanna and Dr Devan
+*/
 
-:root {
-    /* S-CSS-P Integration */
-    /* If you're making a new CSS theme, please include the following three variables at minimum. */
-    --theme-base: "nuscp";
-    /* must be either "nuscp" or "sigma9" */
-    --theme-id: "nuscp";
-    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-    --theme-name: "i57-theme";
-    /* set this to your theme's full name */
-
-    /* Header */
-    --logo-image:url("http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57logo.png");
-
-    --header-title: '57號設施';
-    --header-subtitle: '控制，收容，保護';
-
-    /* Typefaces */
-    --body-font: "Noto Sans SC", sans-serif;
-    --header-font: "ZCOOL QingKe HuangYou", cursive;
-    --title-font: "Noto Sans SC", sans-serif;
-    --mono-font: 'PT Mono', 'Andale Mono', 'Courier New', Courier, '仿宋', monospace;
-
-    /* Standard Colors */
-    --white-monochrome: 252, 252, 252;
-    /* white */
-    --pale-gray-monochrome: 244, 244, 244;
-    /* v light gray for blockquotes and stuff */
-    --light-gray-monochrome: 170, 170, 170;
-    /* light accent gray for login status */
-    --gray-monochrome: 66, 66, 72;
-    /* gray */
-    --dark-gray-monochrome: 48, 48, 52;
-    /* dark accent gray for sidebar background */
-    --black-monochrome: 12, 12, 12;
-    /* black */
-    --bright-accent: 243,207,0;
-    /* bright yellow */
-    --medium-accent: 221,188,0;
-    /* medium yellow 4 header */
-    --dark-accent: 18,20,17;
-    /* dark blue */
-    --link-color: 131, 115, 15;
-    /* blue */
-
-    /* Primary Theme Colors */
-    --swatch-background: 240, 240, 240;
-    --swatch-primary: var(--medium-accent);
-    --swatch-primary-darker: var(--bright-accent);
-    --swatch-primary-darkest: var(--bright-accent);
-    /* Primary Text Colors */
-    --swatch-text-dark: var(--black-monochrome);
-    --swatch-text-light: var(--white-monochrome);
-    --swatch-important-text: var(--bright-accent);
-
-    /* Primary Menu Colors */
-    --swatch-menubg-color: var(--dark-accent);
-    --swatch-menubg-light-color: var(--white-monochrome);
-    --swatch-menubg-medium-color: var(--medium-accent);
-    --swatch-menubg-medium-dark-color: var(--black-monochrome);
-    --swatch-menubg-dark-color: var(--medium-accent);
-    --swatch-menubg-black-color: var(--black-monochrome);
-    --swatch-menubg-hover-color: var(--gray-monochrome);
-    --swatch-menutxt-dark-color: var(--white-monochrome);
-    --swatch-menutxt-light-color: var(--white-monochrome);
-    --swatch-border-color: var(--medium-accent);
-    /* Primary Header Colors */
-    --swatch-headerh1-color: var(--bright-accent) !important;
-    --swatch-headerh2-color: var(--bright-accent) !important;
-    --swatch-topmenu-border-color: var(--dark-accent);
-    --swatch-topmenu-bg-color: var(--dark-accent);
-
-    --rating-module-button-color: var(--black-monochrome);
-    --rating-module-text-color: var(--black-monochrome);
-
-     --diagonal-stripes: none;
-
-     --cutColour: rgb(var(--bright-accent));
-     --barColour: rgb(var(--dark-accent));
-
+.scp-image-block.block-right {
+	margin: 0 2em 1em;
 }
 
-html,
-body,
-#side-bar:hover {
-    scrollbar-color: rgb(var(--bright-accent)) rgb(var(--dark-accent));
-}
-
- ::-webkit-scrollbar,
-#side-bar:hover::-webkit-scrollbar {
-    background-color: rgb(var(--dark-accent));
-}
-
-::-webkit-scrollbar-thumb,
-#side-bar:hover::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--bright-accent));
-}
-
-#header {
-     filter: none;
-}
-#header h1 a::before {
-     color: rgb(var(--medium-accent));
-   --text-shadow: none;
-}
-
-#search-top-box-form input[type="submit"], #search-top-box-form input[type="submit"]:focus, #search-top-box-form input[type="submit"]:hover {
-    background: rgb(var(--black-monochrome));
-    color: rgb(var(--medium-accent));
-}
-
-@media only screen and (max-width: 768px) {
-    #search-top-box:not(:focus-within)::before {
-          color: rgb(var(--medium-accent));
-     }
-
-    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
-         background-color: #181a17;
-    }
-}
-
-
-
-hr {
-    border-top: 1px solid #272727;
-    border-bottom: 1px solid #272727;
-    border-left: 30px solid rgb(var(--bright-accent));
-    border-right: 30px solid rgb(var(--bright-accent));
-    background: #272727;
-}
-
-.scp-image-block {
-background: #272727;
-border: none;
-border-radius: 5px;
-}
-
-.scp-image-block .scp-image-caption {
-background-color: rgb(var(--dark-accent));
-color: rgb(var(--bright-accent));
-}
-
-blockquote,
-.blockquote {
-     border: 2px dashed rgba(var(--light-gray-monochrome),0.7);
-     background-color: rgba(var(--light-gray-monochrome),0.3);
-}
-
-.footnotes-footer {
-     background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     background-size: contain;
-     background-repeat: repeat;
-     border-left: .35em solid transparent;
-     border-right: .35em solid transparent;
-     color: rgb(var(--bright-accent));
-     transition: border-right 300ms ease-in-out, border-left 300ms ease-in-out;
-}
-
-.footnotes-footer:hover {
-     border-right: .35em solid rgb(var(--medium-accent));
-     border-left: .35em solid rgb(var(--medium-accent));
-}
-
-.footnotes-footer .title {
-     border-bottom: 2px dashed rgb(var(--bright-accent));
-}
-
-div#page-options-bottom > a,
-div#page-options-bottom-2 > a {
-     background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     background-size: contain;
-     background-repeat: repeat;
-    border: 0.125rem solid rgba(var(--bright-accent), 1);
-    color: rgba(var(--bright-accent), 1);
-}
-
-div#page-options-bottom > a:hover,
-div#page-options-bottom > a:active,
-div#page-options-bottom-2 > a:hover,
-div#page-options-bottom-2 > a:active {
-    background: rgba(var(--medium-accent), 1) !important;
-    color: rgba(var(--dark-accent), 1);
+body {
+	background-attachment: fixed;
+	color: #000000;
+	font-family: "Microsoft Sans Serif", "宋体";
+	font-size: 14px;
+	image-rendering: pixelated;
+	word-break: unset;
+	--themeColor: #008484;
+	--accentColor: #008484;
 }
 
 a {
-    color: rgb(var(--link-color));
+	color: rgb(0, 0, 255);
 }
-#main-content a:hover {
-    background-color: rgb(var(--link-color));
-    color: rgb(var(--white-monochrome));
-}
+
 a:visited {
-    color: #40401f;
-}
-a.newpage{
-    color: rgb(var(--bright-accent));
+	color: #800080;
 }
 
-.report {
-    background: url(http://scp-yerko.wdfiles.com/local--files/almacen-de-archivos/SCP%20LOGO%20PNG%20HD%20DEGRADE%202%20chico.png) center center no-repeat;
-    display: block;
-    border: dashed 1px #999999;
-    width:84%;
-    padding: 5px 15px;
-    margin: 10px auto;
+h1 {
+	color: #000084;
+	font-family: "Microsoft Sans Serif", "宋体";
 }
 
-.mac {
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/MAC-1.png) top no-repeat;
-    background-color: white;
-    background-size: 200px;
-    display: block;
-    border: solid 3px rgb(var(--dark-accent));
-    width: 84%;
-    padding: 195px 15px 15px 15px;
-    margin: 10px auto;
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Microsoft Sans Serif", "宋体";
 }
 
-.mac p {
-    border-top: 2px solid black;
-    padding-top: 4px;
+blockquote, 
+div.blockquote {
+	border: #DFDFDF outset 2px;
+	background-color: #C0C0C0;
+	color: black;
+	color: #000;
 }
 
-#extra-div-2 {
-     display: block;
-     width: 100%;
-     height: 7.5rem;
-     top: 0;
-     left: 0;
-     position: absolute;
-     background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png");
-     background-position: top;
-     background-repeat: repeat;
-     -webkit-background-size: contain;
-     -moz-background-size: contain;
-     -o-background-size: contain;
-     background-size: contain;
-     pointer-events: none;
-    }
+#account-topbutton{
+	border: 1px solid #000 !important;
+}
 
+div#container-wrap {
+	background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ay2k/bg.png);
+}
 
+div#header {
+	background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ay2k/logo.png);
+	image-rendering: pixelated;
+}
 
+.scp-image-block {
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0;
+	margin: 0 2em 1em;
+}
 
-/* TABVIEW - Abandon All Hope Ye Who Enter Here */
+div#side-bar div.side-block {
+	background: #C0C0C0;
+	border: #DFDFDF outset 2px;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0;
+}
 
-.yui-navset * {
-    -webkit-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    -o-transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    transition: background-color 80ms cubic-bezier(0.4, 0.0, 0.2, 1), color 80ms cubic-bezier(0.4, 0.0, 0.2, 1);
+div#side-bar div.side-block div.heading,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link,
+div#side-bar div.collapsible-block-unfolded-link a.collapsible-block-link:hover {
+	color: black;
+	border-color: black;
+}
+
+div#side-bar div.collapsible-block-folded {
+        background-image: none;
+}
+
+div.yui-navset div.yui-content {
+	color: #000000;
+	background: #C0C0C0;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-bottom: #DFDFDF outset 2px;
+	border-top: transparent 0;
+}
+
+.yui-navset .yui-nav a,
+div.yui-navset div.yui-navset-top .yui-nav a {
+	/* protect nested tabviews from other orientations */
+	border: #DFDFDF outset 2px;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em,
+.yui-navset .yui-nav a em,
+.yui-navset .yui-navset-top .yui-nav a em {
+	border-color: transparent;
 }
 
 .yui-navset .yui-nav,
 .yui-navset .yui-navset-top .yui-nav {
-    zoom: unset;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    border-color: rgb(var(--bright-accent));
-    width: -webkit-calc(100% - 0.125rem);
-    width: calc(100% - 0.125rem);
-    margin: 0 auto;
-    border: 0;
-    -webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 rgb(var(--bright-accent));
-    box-shadow: 0 calc(0.0625rem * 5) 0 0 rgb(var(--bright-accent));
+	border-color: #008484;
 }
 
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    zoom: unset;
-    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ai57/i57.png);
-     -webkit-background-size: contain;
-     -moz-background-size: contain;
-     -o-background-size: contain;
-     background-size: contain;
-     background-repeat: repeat;
-    border: unset;
-    color: rgb(var(--bright-accent));
-    font-weight: bold;
+div.yui-navset ul.yui-nav a,
+div.yui-navset div.yui-navset-top ul.yui-nav a {
+	background: #C0C0C0;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-top: #DFDFDF outset 2px;
+	border-bottom: transparent 0;
 }
 
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    zoom: unset;
-    background-image: none;
-    background: rgba(var(--bright-accent), 0.5);
-    color: rgb(var(--dark-accent));
-    font-weight: bold;
+div.yui-navset ul.yui-nav a:hover,
+div.yui-navset ul.yui-nav a:focus {
+	background: #C0C0C0;
+	border-left: #DFDFDF inset 2px;
+	border-right: #DFDFDF inset 2px;
+	border-top: #DFDFDF inset 2px;
+	border-bottom: transparent 0;
 }
 
-.yui-navset .yui-nav li,
-.yui-navset .yui-navset-top .yui-nav li {
-    background: rgb(244, 244, 244);
-    border-color: transparent;
-    max-width: 100%;
-    padding: 0;
-    margin: 0 0.25em 0.5em;
-    zoom: unset;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-flex-basis: 7vw;
-    -ms-flex-preferred-size: 7vw;
-    flex-basis: 7vw;
-    -webkit-box-flex: 2;
-    -webkit-flex-grow: 2;
-    -moz-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    -webkit-box-shadow: 0 0 0 0.0625rem rgba(var(--dark-accent), 0.5);
-    box-shadow: 0 0 0 0.0625rem rgba(var(--dark-accent), 0.5);
-    transition: all 300ms cubic-bezier(0.4,0.0,0.2,1);
+div.yui-navset ul.yui-nav .selected a,
+div.yui-navset ul.yui-nav .selected a:focus,
+div.yui-navset ul.yui-nav .selected a:hover {
+	background: #008484;
+	border-left: #DFDFDF outset 2px;
+	border-right: #DFDFDF outset 2px;
+	border-top: #DFDFDF outset 2px;
+	border-bottom: transparent 0;
 }
 
-.yui-navset .yui-nav li a,
-.yui-navset-top .yui-nav li a,
-.yui-navset-bottom .yui-nav li a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    vertical-align: bottom;
-    zoom: unset;
-    width: 100%;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+div.open-menu a {
+	color: black!important;
+	border-color: black!important;
 }
 
-.yui-navset .yui-nav a em,
-.yui-navset .yui-navset-top .yui-nav a em {
-    padding: 0.35em 0.75em;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
+div.page-rate-widget-box {
+	box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0 !important;
 }
 
-.yui-navset .yui-nav li em {
-    /* Undoes border set by wikidot's default layout */
-    border: unset !important;
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel {
+	background-color: #C0C0C0!important;
+	border: #DFDFDF outset 2px !important;
+	border-radius: 0 !important;
 }
 
-/* Selected Tab */
-
-.yui-navset .yui-nav .selected,
-.yui-navset .yui-navset-top .yui-nav .selected,
-.yui-navset .yui-nav .selected:hover,
-.yui-navset .yui-navset-top .yui-nav .selected:hover {
-    padding: 0;
-    margin: -0.25em 0 0.25em 0;
-    -webkit-box-flex: 2;
-    -webkit-flex-grow: 2;
-    -moz-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    color: rgb(var(--dark-accent));
-    background-image: none;
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+	border: #DFDFDF outset 2px!important;
 }
 
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a em {
-    border: none !important;
-    border-color: transparent;
-     color: rgb(var(--dark-accent));
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel a,
+div.page-rate-widget-box span.cancel a:hover {
+	color: #000000;
 }
 
-.yui-navset .yui-nav .selected a {
-    /* Undoes a color set by wikidot's default layout */
-    color: rgb(252, 252, 252) !important;
-    width: 100%;
-    background-image: none;
+div.page-rate-widget-box span.rateup,
+div.page-rate-widget-box span.ratedown {
+	background-color: #C0C0C0!important;
 }
 
-.yui-navset .yui-content {
-    background-color: rgba(var(--light-gray-monochrome),0.5);
-    /* content background color */
+div.page-rate-widget-box span.rateup a,
+div.page-rate-widget-box span.ratedown a {
+	color: #000000!important;
 }
 
-.yui-navset .yui-content,
-.yui-navset .yui-navset-top .yui-content {
-    border-color: rgb(var(--light-gray-monochrome));
-    /* content border */
+div.page-rate-widget-box span.cancel a:hover,
+div.page-rate-widget-box span.rateup a:hover,
+div.page-rate-widget-box span.ratedown a:hover {
+	background: transparent!important;
+	color: #008484!important;
 }
 
-.yui-navset-left .yui-content {
-    border-left-color: rgba(var(--dark-accent),1);
-    /* different border color */
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus,
-.yui-navset .yui-nav .selected a:hover {
-        background-image: none;
-        background-color:rgb(var(--medium-accent));
-        color: rgb(var(--dark-accent));
-        cursor: default;
-        margin-bottom: -2px;
-        font-weight: bold;
+
+/* Info Pane */
+
+.rate-box-with-credit-button {
+	background-color: #C0C0C0!important;
+	border: #DFDFDF outset 2px !important;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2) !important;
+	border-radius: 0 !important;
 }
 
-/* Reduced Animations */
+.rate-box-with-credit-button .fa-info {
+	border: transparent 0px !important;
+	border-radius: 0 !important;
+	color: #000000 !important;
+}
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.001s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001s !important;
-  }
+.rate-box-with-credit-button .fa-info:hover {
+	background: transparent!important;
+	color: #008484!important;
+}
+
+.rate-box-with-credit-button .cancel {
+	border: #DFDFDF outset 2px !important;
+}
+
+.close-credits,
+.credit-back {
+	filter: hue-rotate(288deg);
+}
+
+.modalbox{
+    background: #fff !important;
+    border: #000 solid 1px !important;
+    border-radius: 0px !important;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+#side-bar a:visited,
+#top-bar a,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a,
+#login-status ul a:hover {
+	color: #800080;
+}
+
+#page-title {
+	color: #000084;
+}
+
+#login-status,
+#login-status a {
+	color: white;
+}
+
+table.wiki-content-table td {
+	border: 1px solid #000;
+	background-color: #FFFFFF;
+}
+
+table.wiki-content-table th {
+	border: 1px solid #000;
+	background-color: #DFDFDF;
+}
+
+@media (max-width: 767px) {
+	#side-bar {
+		background-color: #C0C0C0;
+	}
+}
+
+.side-block .menu-item>.image {
+	filter: hue-rotate(250deg);
+}
+
+#footer {
+	background: transparent;
+}
+
+#search-top-box-input,
+#search-top-box-input:hover,
+#search-top-box-input:focus,
+#search-top-box-form input[type=submit],
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+	border: #DFDFDF outset 2px;
+	background: #C0C0C0;
+	box-shadow: none;
+	border-radius: 0;
+	color: #000000;
+}
+
+#search-top-box input.empty {
+	color: #8b8b8b;
+}
+
+hr {
+	margin: 1em 2em;
+	padding: 0;
+	height: 0;
+	border-top: #F0F0F0 groove 2px;
+	/*color: #555545;*/
+	/*background-color: #555545;*/
+}
+
+#header h1 span {
+	font-family: "Microsoft Sans Serif", "宋体";
+	color: #ffffff;
+	text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+#header h2 span::before {
+	font-family: "Microsoft Sans Serif", "宋体";
+	content: '安保的新千年';
+	color: #ffffff;
+	text-shadow: none;
+}
+
+#header h1 a,
+#header h2 span {
+	color: transparent;
+	text-shadow: none;
+}
+
+.scp-image-block.block-right {
+	margin: 0 2em 1em;
+}
+
+.code {
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+	padding: 3px;
+	margin: 0.2em 0;
+	overflow: auto;
+}
+
+.interwiki {
+	font-family: "Microsoft Sans Serif", "宋体";
+	background-color: #C0C0C0;
+	border: #DFDFDF outset 2px;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+#top-bar ul li ul {
+    border: solid 1px #000;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
 }

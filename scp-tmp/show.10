@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-CN-001 - SCP基金会</title>
+    <title>一大群螃蟹的人事页 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-cn-001";
-        OZONE.request.timestamp = 1610160857;
+        WIKIREQUEST.info.requestPageName = "e-u";
+        OZONE.request.timestamp = 1610181367;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-cn-001";
-        WIKIREQUEST.info.pageId = 46439783;
+                WIKIREQUEST.info.pageUnixName = "e-u";
+        WIKIREQUEST.info.pageId = 1260655487;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -54,7 +54,7 @@
                                 <meta name="language" content="zh,zh-cn"/>
                                                             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                             
-        <link rel="canonical" href="/scp-cn-001" />
+        <link rel="canonical" href="/e-u" />
 
     
     
@@ -117,8 +117,222 @@
         });
     </script>
         
+<style>
+#header {
+    height: 140px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 22px; /* FOR MENU */
+    background: url(http://scp-wiki-cn.wikidot.com/local--files/kcorena-s-artwork/白%20_奇术部.svg) 5px 30px no-repeat;
+    background-size: 110px;
+}
+
+#header h1 a::before {
+    content: "基金会奇术部";
+    font-size: 80%;
+    font-family: 'Exo', sans-serif;
+    font-weight: 800;
+    text-shadow: 4px 4px 4px rgba(0,0,0,.8);
+}
+ @media (max-width: 479px) {
+#header{
+    background-position: 0 5.5em;
+    background-size: 55px 55px;
+}
+}
+
+@media (min-width: 480px) and (max-width: 580px) {
+#header{
+background-position: 0.5em 4.5em;
+background-size: 66px 66px;
+}
+}
+#header h1 a span{
+    visibility: hidden;
+}
+
+#header h2 span {
+    color: transparent;
+    text-shadow: 0px 0px 0px;
+}
+
+#header h2 span::before {
+    content: "人能弘道，非道弘人";
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    text-shadow: 3px 3px 3px rgba(0,0,0,.9);
+}
+</style>
+<style>
+.unblur{
+transition: .2s;
+-webkit-filter: blur(12px);
+filter: blur(12px);
+}
+
+.unblur:hover{
+transition: .2s;
+transition-delay: .1s;
+-webkit-filter: blur(0.001px);
+filter: blur(0.001px);
+}
+</style>
+<style>
+.infobox {
+ display:inline-box;
+ overflow:hidden;
+ position:fixed;
+ right: 1em;
+ bottom: 2em;
+ width: 21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:#ffffff;
+ opacity: 1;
+ transition: all 0.5s ease-out;
+}
+
+.infobox:hover {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+.preview{
+ color:grey;
+ width:100%;
+ display: inline-block;
+ padding-left:1%;
+ transition: box-shadow 1s ease-out;
+}
+
+.preview:hover{
+ box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
+ transition: box-shadow 0.3s ease-out;
+}
+
+.preview.yes:hover, .preview.true:hover{
+  background: url('http://scpsandboxcn.wikidot.com/local--files/asriel3/logo.png') 80% 50% fixed no-repeat;
+}
+
+.preview .span { 
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease-in-out;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ position:fixed;
+ z-index: 11;
+ right: 1em;
+ bottom: 2em;
+ width:21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ color:grey;
+ text-size:0.9em;
+ font-family:微软细黑, Segoe UI Light,Verdana,sans-serif;
+}
+
+.preview:hover .span { 
+ opacity: 1;
+ background-color:#ffffff;
+}
+
+.collab-header{
+ display:none;
+}
+
+.imagepre{
+ background:#fff;
+ max-width:19%;
+ max-height:40%;
+ position:fixed;
+ right: 2em;
+ bottom:calc(23% + 3em);
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagepre.\{\$image\} {
+display:none
+}
+
+.translation.\{\$translation\} {
+display:none
+}
+
+.sortbar.no{
+display:none
+}
+
+@media screen and (max-width:992px) {
+    .preview .span{
+        display: none;
+    }
+    .infobox {
+        position: relative;
+        margin: 1em auto;
+        right: 0;
+        bottom: 0;
+        height: 9em;
+    }
+}
+
+#page-options-container {
+ background: transparent;
+ position: relative;
+ z-index: 10;
+}
+
+#action-area { position: relative; z-index: 20; }
+</style>
+<link rel="alternate" type="application/rss+xml" title="Comments for the page &quot;一大群螃蟹的人事页&quot;" href="/feed/page/comments-1260655487.xml"/><style>
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-shadow:none;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+</style>
+<style>
+@import url('http://www.scp-wiki.net/local--files/chicago-spirit/Yukarimobile.css');
+
+#main-content .page-tags {
+    display: none;
+}
+
+div.pseudo-tags ul {
+    font-size: 85%;
+    border-top: 1px solid #BBB;
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 0 2px;
+    list-style: none;
+}
+
+div.pseudo-tags li {
+    color: #b01;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 1px;
+    cursor: pointer;
+}
+</style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/ForumCommentsModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/ForumViewThreadModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/ForumViewThreadPostsModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/forum/sub/ForumNewPostFormModule.js"></script>
 </head>
 <body id="html-body">
 <div id="skrollr-body">
@@ -465,7 +679,7 @@
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-cn-001" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=e-u" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -487,7 +701,7 @@
                     
                     
                         <div id="page-title">
-                            SCP-CN-001
+                            一大群螃蟹的人事页
                         </div>
                     
 
@@ -500,303 +714,959 @@
                     <div id="page-content">
                         
 
-<div style="text-align: center;">
-<h2 id="toc0"><span>在管理者的命令下</span></h2>
-<h2 id="toc1"><span>此文档已被列为</span></h2>
-<h1 id="toc2"><span><span style="font-size:200%;">最高机密</span></span></h1>
+
+
+最近状态不好，溜了溜了，有缘再见<br />
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
+</script>
+<div id="wiki-tabview-c38444ec76a0277ab0b1200631c01450" class="yui-navset">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>下层叙事 一大群螃蟹</em></a></li>
+<li><a href="javascript:;"><em>上层叙事 一只胖鸽子</em></a></li>
+<li><a href="javascript:;"><em>作品</em></a></li>
+<li><a href="javascript:;"><em>工具栏</em></a></li>
+<li><a href="javascript:;"><em>留言区</em></a></li>
+<li><a href="javascript:;"><em>MTF大赛招人中</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p><strong>姓名：</strong>解宇，或称explain universe，简称E_U</p>
+<p><strong>性别：</strong>不明</p>
+<p><strong>站点：</strong>无，目前于Site-CN-09担任客座研究员</p>
+<p><strong>权限：</strong>三级研究员，出入站点需站点主管允许</p>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/e-u/576px-%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9_%E7%86%9F_%E8%92%B8%E5%90%8E.jpg" style="width:300px;" alt="576px-%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9_%E7%86%9F_%E8%92%B8%E5%90%8E.jpg" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>一次站点宴会的解宇博士</p>
+</div>
+</div>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wikidot.com/local--files/eueu6/001" style="width:300px;" alt="001" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>解宇博士正在遭受非人待遇</p>
+</div>
+</div>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/e-u/-53327a33538ebe6e.jpg" style="width:300px;" alt="-53327a33538ebe6e.jpg" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>由<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/h-storm-z" onclick="WIKIDOT.page.listeners.userInfo(4761754); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4761754&amp;amp;size=small&amp;amp;timestamp=1610176820" alt="H-Storm Z" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4761754)" /></a><a href="http://www.wikidot.com/user:info/h-storm-z" onclick="WIKIDOT.page.listeners.userInfo(4761754); return false;">H-Storm Z</a></span>绘制的解宇博士的艺术描绘</p>
+</div>
+</div>
+<p><strong>履历：</strong></p>
+<p>解宇博士毕业于█████大学（██校区）██系，后进入基金会附属大学修习了中国异常史与现代奇术学 ，擅长于对古代历史项目的解明与研究以及奇术相关原理的解明 ，同时也参与了部分异常收容室的建设工作。</p>
+<p>解宇博士原为一正常人类男性。200█年，在一针对普罗米修斯实验室废弃站点的研究中，某研究员不慎触发了［数据删除］。解宇博士随即紧急关闭了站点能源，不幸遭到一空间传送奇术的波动影响而失踪。</p>
+<p>不久之后，在基金会对普罗米修斯实验室的一次突袭中，基金会发现了解宇博士的尸体与一改造后的中华绒螯蟹（俗称大闸蟹）种群，并回收了一 <a href="/shengyujiqunyishi">文档</a>。随后，此大闸蟹种群被编号为SCP-CN-███</p>
+<p>经技术反向解析，基金会不久后唤醒了此大闸蟹种群的集体意识，并经过记忆与灵魂图谱分析，确认此意识来源于前逝世人员解宇博士。经过一系列心理治疗，加上解宇博士的强烈要求，目前已允许解宇博士返回岗位。</p>
+<p>201█年，去除解宇博士的SCP编号，改为POI-███</p>
+<p>201█年，解宇博士已解除POI-███编号。</p>
+<p>为称呼方便，以下将解宇博士整体称为解宇博士，组成解宇博士的大闸蟹称为解宇蟹</p>
+
+
+
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wikidot.com/local--files/eueu6/002" style="width:300px;" class="unblur" alt="002" />
+<div class="scp-image-caption" style="width:300px;">
+<p>奇术标记（其实是我的头像啦）</p>
+</div>
+</div>
+<p><strong>现状</strong></p>
+<p>目前，解宇博士的宿舍安置于水生动物收容间旁，配有一可容纳80支解宇蟹的水族箱。每日应为解宇博士提供一定量的食物。</p>
+<p>为便于确认身份，在站点内观察到有以下奇术印记的大闸蟹应视为解宇博士的一部分，不应感到惊慌。</p>
+<p>解宇博士为人较开朗，喜欢于工作间开一些无伤大雅的玩笑。但遭遇挫折以及意外时情绪波动较大，并经常会发表激进言论并进行激进行为<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup>。与其交际时需特别注意。</p>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>未经解宇博士同意 ，不得捕捉，烧煮任何解宇蟹。</li>
+</ul>
+<ul>
+<li>若将解宇博士种群强行分离成多个部分，可以谋杀罪起诉</li>
+</ul>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
+<p>来自解宇，一名云小鬼经过无限down爆最终成为鸽子的传奇故事</p>
+<p>即将成为一般通过大学生的菜鸡</p>
+<p>只有四篇，尽力创作ing</p>
+<p>性格大条，无绘画天赋（悲）</p>
+<p><span style="text-decoration: line-through;">你站人均画写双佬</span></p>
+<p>什么也不会的萌新</p>
+<p>如果喜欢我的作品，在此不甚感激</p>
+<p>谢谢(｡･ω･｡)ﾉ♡</p>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<h2 id="toc0"><span><a href="/scp-cn-1558">SCP-CN-1558</a></span></h2>
+<div class="blockquote">
+<p>作为异学会成员的白居易将数据层比喻为“仙山”不可能是毫无根据的，那么是否需要推翻所有古代传说中对于仙境的理解和描述？或者说有多少遨游仙界的传说其实不过是远古数据层的投射？</p>
 </div>
 <hr />
-<div class="content-panel standalone series">
-<div style="text-align: justify;">
-<p><strong>通用说明 001-Alpha：</strong>为防止SCP-CN-001的真相泄漏，多份/零份伪造的掩盖文件与该份/多份真正的CN-001文件一并储存。所有涉及到SCP-CN-001本质的文件，包括一份/多份假文件，均由模因抹杀触媒保护，如有未授权人员查看，将立刻导致心脏骤停死亡。除非是受到████-███-██████的指令，否則将SCP-CN-001的内容透露给公众者将会被处决。</p>
-</div>
-</div>
-<hr />
-<div style="text-align: center;">
-<h1 id="toc3"><span><span style="font-size:200%;">警告：</span></span></h1>
-<p>任何未经授权之人员访问该文档将立即被<strong>BERRYMAN-LANGFORD</strong>模因抹杀触媒处决。在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。</p>
-<h1 id="toc4"><span>你已经被警告过了。</span></h1>
+<h2 id="toc1"><span><a href="http://scp-wiki-cn.wikidot.com/taihua">苔花如米小</a></span></h2>
+<div class="blockquote">
+<p>夜幕低垂，万物沉寂，但总有一些人，还在散发着自己的微光。</p>
 </div>
 <hr />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-cn-001/fractal-1864285_1280.jpg" alt="fractal-1864285_1280.jpg" class="image" /><br />
-<div style="text-align: center;">
-<p><strong>模因抹杀触媒启动</strong></p>
-<p><strong>检测到生命迹象</strong></p>
-<p><strong>解开安全锁</strong></p>
-<p><em>欢迎，已获授权的人员。请选择您要看的文件。</em></p>
+<h2 id="toc2"><span><a href="http://scp-wiki-cn.wikidot.com/shengyujiqunyishi">批准关于生物集群意识转化技术体系建设的申请</a></span></h2>
+<div class="blockquote">
+<p>理论上，该生物群可由任何物种构成。为便于改造，目前采用的是自然条件下体内奇术回路较丰富，且繁殖较为容易的黑眶蟾蜍 （Bufo Melanostictus Schneider ）。</p>
 </div>
 <hr />
-<div class="content-panel standalone series">
-<div style="text-align: center;">
-<p><a href="/darkequation-s-proposal">代号：Darkequation</a> - 竹簡</p>
-<p><a href="/anglia-s-proposal">代号：Anglia</a> - 龙脉</p>
-<p><a href="/scarlet-s-proposal">代号：MScarlet</a> - 諸皇之秘</p>
-<p><a href="/lomias-s-proposal">代号：Lomias</a> - 阴阳</p>
-<p><a href="/blackcat-s-proposal">代号：Blackcat</a> - 天下</p>
-<p><a href="/aieditor059-s-proposal-password">代号：AIeditor059</a> - 剧本</p>
-<p><a href="/raven-s-proposal-1">代号：Ravenfield</a> - 大傩</p>
-<p><a href="/tictoc-s-proposal">代号：Tictoc</a> - 获麟解</p>
-<p><a href="/qblevi-s-proposal">代号：QBLevi</a> - 骑虎难下</p>
-<p><a href="/freedomkoo-s-proposal">代号：Freedom Koo</a> - 八荒</p>
-<p><a href="/asriel-s-proposal">代号：Asriel</a> - 天命</p>
-<p><a href="/fuban-s-proposal">代号：fuban</a> - 圣地</p>
-<p><a href="/veleafer-s-proposal">代号：Veleafer</a> - 演绎部</p>
-<p><a href="/tokitsuki-s-proposal">代号：Tokitsuki</a> - 复演论</p>
-<p><a href="/monitor-256-s-proposal">代号：monitor-256</a> - 石碑</p>
-<p><a href="/qblevi-s-proposal-ii">代号：QBLevi II</a> - 苍穹之上</p>
-<p><a href="/ninth-s-proposal">代号：Ninth</a> - 常风之地</p>
-<p><a href="/adamnpluto-s-proposal-i">代号：Adamn Pluto</a> - 鲨群</p>
-<p><a href="/kirkestein-s-proposal">代号：KirkeStein</a> - 原典</p>
-<p><a href="/rigilkentaurus-miku393-s-proposal">代号：Rigil Kentaurus/miku393</a> - 风雨再洗岳阳楼</p>
-<p><a href="/re-spectator-s-proposal">代号：Re_spectators</a> - 取代反应</p>
-<p><a href="/ninth-s-proposal-ii">代号：Ninth II</a> - 美好的每一天</p>
-<p><a href="/rigil-kentaurus-s-proposal">代号：Rigil Kentaurus</a> - 千秋星河悬鬓边</p>
+<h2 id="toc3"><span><a href="http://scp-wiki-cn.wikidot.com/hundun-tuoluo-shousi" target="_blank">寿司陀螺，馄饨分裂者与基金会中国分部的大决战！</a></span></h2>
+<div class="blockquote">
+<p>……近来，馄饨分裂者对于我分部南方站点的袭击日渐增多，严重干扰了我部收容的进行。为此，我方提议借用贵部的SCP-1134-JP，利用［已编辑］，将“寿司”的概念扩展至“东方主食”，以执行对馄饨分裂者的一次打击。具体细则如下………</p>
 </div>
+</div>
+<div id="wiki-tab-0-3" style="display:none">
+
+
+<div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/hundun-tuoluo-shousi">随机作品传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong>(user deleted)</strong></tt></p>
+<p style="text-align: center;">共2篇</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/short-stories:00013">随机页面传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong>(user deleted)</strong></tt></p>
+<p style="text-align: center;">共4个页面</p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="sortbar {$sortbar}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/e-u/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/e-u/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/e-u/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/e-u/order/updated_at%20desc/category/*">最近编辑</a></p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创SCP</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/scp-cn-1558">SCP-CN-1558</a></strong><br />
++<strong><tt>42</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
+<em>最新评论：</em> <strong><tt>(user deleted)</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596805632 format_%25D%20%25H%3A%25M">07 Aug 2020 13:07</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>(user deleted)</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606632606 format_%25D%20%25H%3A%25M">29 Nov 2020 06:50</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;SCP-CN-1558：长恨歌.txt&#32;作者：E_U&#32;不匹配任何一个现有的用户名&#32;作者页：欢迎来吃螃蟹&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1/CN-1558&#32;级&#32;1/CN-1558&#32;机密&#32;&#32;&#32;&#32;项目编号:&#32;SCP-CN-1558&#32;&#32;&#32;&#32;Safe&#32;&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2020夏季征文 safe scp site-cn-82 原创 异学会 欲肉教 电子 电脑 破碎之神教会 线上</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创故事</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview {$background}">
+<p><strong><a href="/hundun-tuoluo-shousi">寿司陀螺，馄饨分裂者与基金会中国分部的大决战！</a></strong><br />
++<strong><tt>71</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>19</tt></strong><br />
+<em>最新评论：</em> <strong><tt>dograss</tt></strong> <em>于</em> <strong><tt><span class="odate time_1601785966 format_%25D%20%25H%3A%25M">04 Oct 2020 04:32</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>(user deleted)</tt></strong> <em>于</em> <strong><tt><span class="odate time_1597199928 format_%25D%20%25H%3A%25M">12 Aug 2020 02:38</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：E_U&#32;不匹配任何一个现有的用户名...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 05 原创 寿司陀螺 搞笑 故事</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div>
+<div class="translation {$translation}"><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div></div>
+<div class="collab-header" style="text-align: center;">
+<hr />
+<h2 id="toc4"><span>更多页面</span></h2>
+<hr /></div>
+</div>
+<div id="wiki-tab-0-4" style="display:none">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;讨论区</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;收起</a></div>
+<div class="collapsible-block-content"><div class="comments-box">
+		
+	<div class="options" id="comments-options-hidden" style="display: none">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumCommentsModule.listeners.showComments(event)">显示评论</a> 
+	</div>
+		
+	<div id="thread-container" class="thread-container" style="margin-top: 1em">
+					
+
+
+<script type="text/javascript">
+	WIKIDOT.forumThreadId = 13622017;
+</script>
+
+
+	<div class="options" id="comments-options-shown">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumCommentsModule.listeners.hideComments(event)" class="btn btn-default btn-small btn-sm">隐藏所有评论</a> 
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.unfoldAll(event)" class="btn btn-default btn-small btn-sm">全部展开</a> 
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.foldAll(event)" class="btn btn-default btn-small btn-sm">全部折叠</a>
+	</div>
+
+<div id="thread-container-posts" style="display: none">
+    
+
+<div class="pager"><span class="pager-no">page 1 of 2</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">next &raquo;</a></span></div>
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739699">
+                      
+		<div class="post" id="post-4739699">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739699)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739699">
+																		图片来源
+															</div>
+				<div class="info">
+					<span class="printuser deleted" data-id="6176669"><img class="small" src="http://www.wikidot.com/common--images/avatars/default/a16.png" alt=""/>(account deleted)</span> <span class="odate time_1596682346 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 02:52</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739699">
+									
+
+<p>第一张为<a href="https://commons.m.wikimedia.org/wiki/File:%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9.jpg">这里</a><br />
+第二张为我绘制<br />
+右上logo由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3396110&amp;amp;size=small&amp;amp;timestamp=1596683187" alt="Kcorena" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3396110)" /></a><a href="http://www.wikidot.com/user:info/kcorena" onclick="WIKIDOT.page.listeners.userInfo(3396110); return false;">Kcorena</a></span>绘制<br />
+感谢诸位的帮助</p>
+<p>CSS修改自蛇之手</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p>菜鸡一只，欢迎批判</p>
+
+				</div>
+					
+							<div class="changes">
+					最后编辑于 <span class="odate time_1596683187 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:06</span>
+					由 <span class="printuser deleted" data-id="6176669"><img class="small" src="http://www.wikidot.com/common--images/avatars/default/a16.png" alt=""/>(account deleted)</span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,4739699)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739699)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739699)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739699" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739699)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739699)">图片来源</a> 由 <span class="printuser deleted" data-id="6176669"><img class="small" src="http://www.wikidot.com/common--images/avatars/default/a16.png" alt=""/>(account deleted)</span>, <span class="odate time_1596682346 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 02:52</span>
+		</div>
+	</div>
+ 
+                
+                	
+
+
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739741">
+                      
+		<div class="post" id="post-4739741">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739741)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739741">
+																		蟹宇哈哈哈哈哈哈哈哈
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/anzetos" onclick="WIKIDOT.page.listeners.userInfo(6166225); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6166225&amp;amp;size=small&amp;amp;timestamp=1610178139" alt="Anzetos" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6166225)"/></a><a href="http://www.wikidot.com/user:info/anzetos" onclick="WIKIDOT.page.listeners.userInfo(6166225); return false;" >Anzetos</a></span> <span class="odate time_1596684740 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:32</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739741">
+									
+
+<p>不管怎么说，贺电——<br />
+请问有螃蟹吃吗？</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739741)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739741)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739741" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739741)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739741)">蟹宇哈哈哈哈哈哈哈哈</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/anzetos" onclick="WIKIDOT.page.listeners.userInfo(6166225); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6166225&amp;amp;size=small&amp;amp;timestamp=1610178139" alt="Anzetos" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6166225)"/></a><a href="http://www.wikidot.com/user:info/anzetos" onclick="WIKIDOT.page.listeners.userInfo(6166225); return false;" >Anzetos</a></span>, <span class="odate time_1596684740 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:32</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739749">
+                      
+		<div class="post" id="post-4739749">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739749)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739749">
+																		贺电贺电
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mo-ring" onclick="WIKIDOT.page.listeners.userInfo(3606007); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3606007&amp;amp;size=small&amp;amp;timestamp=1610178139" alt="Mo-ring" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3606007)"/></a><a href="http://www.wikidot.com/user:info/mo-ring" onclick="WIKIDOT.page.listeners.userInfo(3606007); return false;" >Mo-ring</a></span> <span class="odate time_1596685027 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:37</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739749">
+									
+
+<p>前排能领螃蟹吗（探头</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739749)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739749)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739749" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739749)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739749)">贺电贺电</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mo-ring" onclick="WIKIDOT.page.listeners.userInfo(3606007); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=3606007&amp;amp;size=small&amp;amp;timestamp=1610178139" alt="Mo-ring" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3606007)"/></a><a href="http://www.wikidot.com/user:info/mo-ring" onclick="WIKIDOT.page.listeners.userInfo(3606007); return false;" >Mo-ring</a></span>, <span class="odate time_1596685027 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:37</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739757">
+                      
+		<div class="post" id="post-4739757">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739757)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739757">
+																		“未经解宇博士允许禁止烹饪任何解宇蟹”
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sfmnok" onclick="WIKIDOT.page.listeners.userInfo(5990797); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5990797&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="SFMNOK " style="background-image:url(http://www.wikidot.com/userkarma.php?u=5990797)"/></a><a href="http://www.wikidot.com/user:info/sfmnok" onclick="WIKIDOT.page.listeners.userInfo(5990797); return false;" >SFMNOK </a></span> <span class="odate time_1596685552 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:45</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739757">
+									
+
+<p>意思是征得同意就可以烹饪咯？<br />
+（老M了）</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739757)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739757)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739757" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739757)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739757)">“未经解宇博士允许禁止烹饪任何解宇蟹”</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sfmnok" onclick="WIKIDOT.page.listeners.userInfo(5990797); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5990797&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="SFMNOK " style="background-image:url(http://www.wikidot.com/userkarma.php?u=5990797)"/></a><a href="http://www.wikidot.com/user:info/sfmnok" onclick="WIKIDOT.page.listeners.userInfo(5990797); return false;" >SFMNOK </a></span>, <span class="odate time_1596685552 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:45</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739768">
+                      
+		<div class="post" id="post-4739768">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739768)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739768">
+																		清洗，去皮，食用（大嘘
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5934437&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="Sirius Dawn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5934437)"/></a><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;" >Sirius Dawn</a></span> <span class="odate time_1596686264 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:57</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739768">
+									
+
+<p>核电（偷偷抱走一只蟹宇</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739768)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739768)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739768" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739768)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739768)">清洗，去皮，食用（大嘘</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5934437&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="Sirius Dawn" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5934437)"/></a><a href="http://www.wikidot.com/user:info/sirius-dawn" onclick="WIKIDOT.page.listeners.userInfo(5934437); return false;" >Sirius Dawn</a></span>, <span class="odate time_1596686264 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 03:57</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739797">
+                      
+		<div class="post" id="post-4739797">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739797)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739797">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)"/></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;" >WOrs Obrine</a></span> <span class="odate time_1596688586 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 04:36</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739797">
+									
+
+<p>核电！</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739797)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739797)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739797" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739797)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739797)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)"/></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;" >WOrs Obrine</a></span>, <span class="odate time_1596688586 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 04:36</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739813">
+                      
+		<div class="post" id="post-4739813">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739813)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739813">
+																		核电！
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5375092&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="RainTree" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5375092)"/></a><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;" >RainTree</a></span> <span class="odate time_1596690792 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 05:13</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739813">
+									
+
+<p>事膀屑，呕要次逄泄（混乱）</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739813)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739813)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739813" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739813)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739813)">核电！</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5375092&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="RainTree" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5375092)"/></a><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;" >RainTree</a></span>, <span class="odate time_1596690792 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 05:13</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739839">
+                      
+		<div class="post" id="post-4739839">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739839)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739839">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-jotaro" onclick="WIKIDOT.page.listeners.userInfo(6277235); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6277235&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="the Jotaro" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6277235)"/></a><a href="http://www.wikidot.com/user:info/the-jotaro" onclick="WIKIDOT.page.listeners.userInfo(6277235); return false;" >the Jotaro</a></span> <span class="odate time_1596692439 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 05:40</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739839">
+									
+
+<p>核电！事佬！</p>
+
+							</div>
+
+								
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739839)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739839)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739839" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739839)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739839)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-jotaro" onclick="WIKIDOT.page.listeners.userInfo(6277235); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=6277235&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="the Jotaro" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6277235)"/></a><a href="http://www.wikidot.com/user:info/the-jotaro" onclick="WIKIDOT.page.listeners.userInfo(6277235); return false;" >the Jotaro</a></span>, <span class="odate time_1596692439 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 05:40</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739868">
+                      
+		<div class="post" id="post-4739868">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739868)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739868">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/joke3579" onclick="WIKIDOT.page.listeners.userInfo(4915133); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915133&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="joke3579" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915133)"/></a><a href="http://www.wikidot.com/user:info/joke3579" onclick="WIKIDOT.page.listeners.userInfo(4915133); return false;" >joke3579</a></span> <span class="odate time_1596694995 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 06:23</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739868">
+									
+
+<p>事解宇！吃解宇！(?)</p>
+<p>对了你版头又崩了<br />
+我想问问你：图片也是白色，底也是白色……有什么用呢……<br />
+把图片反色没准可以</p>
+
+							</div>
+
+								
+							<div class="changes">
+					最后编辑于 <span class="odate time_1596843258 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">07 Aug 2020 23:34</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/joke3579" onclick="WIKIDOT.page.listeners.userInfo(4915133); return false;" >joke3579</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,4739868)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739868)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739868)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739868" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739868)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739868)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/joke3579" onclick="WIKIDOT.page.listeners.userInfo(4915133); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=4915133&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="joke3579" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4915133)"/></a><a href="http://www.wikidot.com/user:info/joke3579" onclick="WIKIDOT.page.listeners.userInfo(4915133); return false;" >joke3579</a></span>, <span class="odate time_1596694995 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 06:23</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-4739915">
+                      
+		<div class="post" id="post-4739915">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739915)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739915">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser deleted" data-id="6176669"><img class="small" src="http://www.wikidot.com/common--images/avatars/default/a16.png" alt=""/>(account deleted)</span> <span class="odate time_1596700798 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 07:59</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739915">
+									
+
+<p>修好了，修好了，只可惜太小（</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p>菜鸡一只，欢迎批判</p>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739915)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739915)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739915" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739915)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739915)"></a> 由 <span class="printuser deleted" data-id="6176669"><img class="small" src="http://www.wikidot.com/common--images/avatars/default/a16.png" alt=""/>(account deleted)</span>, <span class="odate time_1596700798 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 07:59</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-4739932">
+                      
+		<div class="post" id="post-4739932">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,4739932)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-4739932">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/brucewu0463" onclick="WIKIDOT.page.listeners.userInfo(5526785); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5526785&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="BruceWu0463" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5526785)"/></a><a href="http://www.wikidot.com/user:info/brucewu0463" onclick="WIKIDOT.page.listeners.userInfo(5526785); return false;" >BruceWu0463</a></span> <span class="odate time_1596702414 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 08:26</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-4739932">
+									
+
+<p>草草草，这人设骚到我了，请我吃螃蟹🦀️（）</p>
+
+							</div>
+
+								
+							<div class="changes">
+					最后编辑于 <span class="odate time_1596702453 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 08:27</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/brucewu0463" onclick="WIKIDOT.page.listeners.userInfo(5526785); return false;" >BruceWu0463</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,4739932)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,4739932)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,4739932)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-4739932" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,4739932)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,4739932)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/brucewu0463" onclick="WIKIDOT.page.listeners.userInfo(5526785); return false;"  ><img class="small" src="http://www.wikidot.com/avatar.php?userid=5526785&amp;amp;size=small&amp;amp;timestamp=1610178140" alt="BruceWu0463" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5526785)"/></a><a href="http://www.wikidot.com/user:info/brucewu0463" onclick="WIKIDOT.page.listeners.userInfo(5526785); return false;" >BruceWu0463</a></span>, <span class="odate time_1596702414 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Aug 2020 08:26</span>
+		</div>
+	</div>
+ 
+                
+                	
+
+
+        
+            </div>
+ 
+
+
+<div class="pager"><span class="pager-no">page 1 of 2</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadPostsModule.listeners.updateList(2)">next &raquo;</a></span></div>
+</div>
+
+        <a href="javascript:;" id="new-post-button" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.newPost(event,null)"
+      style="display:  block ; margin-bottom:1em"
+    >新回复</a>
+
+ 
+
+<div style="display:none" id="post-options-template">
+	<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showPermalink(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">永久链接</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.editPost(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">编辑</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.deletePost(event,'%POST_ID%')" class="btn btn-danger btn-small btn-sm">删除</a>
+</div>
+	
+			</div>
+	
+	
+	
+</div></div>
+</div>
+</div>
+</div>
+<div id="wiki-tab-0-5" style="display:none">
+<p><strong>编号</strong>：MTF-庚子-13 “三峡星河”</p>
+<p><strong>职能</strong>：主要负责对中低危蓝绿型个体的处决或重收容工作，以及对于态度不明的高危蓝绿型实体的接触。</p>
+<p><strong>主要成员</strong>：</p>
+<p><strong>队长</strong>：江见月。负责战地奇术指导，指挥，以及异常人形处决工作。</p>
+<p><strong>奇术AI</strong>：［禁止访问］，主要负责定点高速奇术吟唱以及释放，以及现实稳定锚部署。</p>
+<p><strong>潜入与异常人员接触</strong>：［禁止访问］，负责接触异常人员，擅长近身搏斗。</p>
+<p><strong>心理攻坚</strong>：［禁止访问］，负责对异常人形的心理攻坚或欺骗工作以及前期调查，数据采集。</p>
+<p><strong>远程奇术指导</strong>：解宇博士。</p>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/e-u/-507341b84589a265.png" style="width:300px;" alt="-507341b84589a265.png" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>logo</p>
+</div>
+</div>
+<p><strong>创建者的话</strong>：</p>
+<p>这是我一直以来的一个点子啦。名字源自“五更鼓角声悲壮，三峡星河影动摇”。用水面比喻并不稳定的帷幕或者现实，而用群星比喻队员。</p>
+<p>这个MTF既有欢乐向的伪装勇者骗蓝型老爷爷，也有正经向的在茫茫人海定位并击杀绿型，也有道德问题的讨论。</p>
+<p>不过我更倾向的结局是在鼠巢设定下，队员一个个或者死亡，或者叛逃，“群星一一落下”，而队长在长夜里自尽。</p>
+<p>毕竟，这首诗的接下来是“野哭千家闻战伐，夷歌数处起渔樵。卧龙跃马终黄土，人事音书漫寂寥”。</p>
+<p>另外，空着的名字是留给合著者的。</p>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabViewc38444ec76a0277ab0b1200631c01450 = new YAHOO.widget.TabView('wiki-tabview-c38444ec76a0277ab0b1200631c01450');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
+
+
+<div class="snowflakes">
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+<div class="snowflake">
+<p>🐟<br /></p>
+</div>
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+<div class="snowflake">
+<p>🦐<br /></p>
+</div>
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+<div class="snowflake">
+<p>🦀<br /></p>
+</div>
+</div>
+<div class="pseudo-tags">
+<ul>
+<li><a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a></li>
+<li>捆绑</li>
+<li>虐待</li>
+<li>非人类</li>
+<li>群交</li>
+<li>成蟹内容</li>
+<li>咕咕咕</li>
+</ul>
+</div>
+
+
+
+<div class="footnotes-footer">
+<div class="title">Footnotes</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. 老申必人了</div>
 </div>
 
                     </div>
@@ -826,7 +1696,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/_cc#pages">_cc</a><a href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83#pages">中心</a>
+                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a>
                             </span>
                         </div>
                     
@@ -834,12 +1704,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 82, 最后编辑于: <span class="odate time_1604130167 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">31 Oct 2020 07:42</span></div>
+                            <div id="page-info">页面版本: 53, 最后编辑于: <span class="odate time_1609372410 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">30 Dec 2020 23:53</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+39</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+24</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-2026993/scp-cn-001" class="btn btn-default" id="discuss-button">讨论 (38)</a>
+<a href="/forum/t-13622017/e-u" class="btn btn-default" id="discuss-button">讨论 (22)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -906,43 +1776,43 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://swageofmight.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/swageofmight.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://cosmerezh.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/cosmerezh.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://swageofmight.wikidot.com">Star Wars: Age of Might</a></h3>
+            <h3><a target="_blank" href="http://cosmerezh.wikidot.com">山德森寰宇祕典</a></h3>
             <div class="desc">          
-              My Star Wars Saga
+              星河之間，無垠之上
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://kuruni.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kuruni.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://tradicional.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/tradicional.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://kuruni.wikidot.com">Mecha Documents</a></h3>
+            <h3><a target="_blank" href="http://tradicional.wikidot.com">Tradicional</a></h3>
             <div class="desc">          
-              The Collection
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://www.wikialo.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.wikialo.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://vyprmedia.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/vyprmedia.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://www.wikialo.com">Wikialo</a></h3>
+            <h3><a target="_blank" href="http://vyprmedia.wikidot.com">VyprMedia</a></h3>
             <div class="desc">          
-              Un directorio wiki para blogs
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://lightworks.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/lightworks.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://morningside-genetics.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/morningside-genetics.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://lightworks.wikidot.com">Lightworks Unofficial Wiki</a></h3>
+            <h3><a target="_blank" href="http://morningside-genetics.wikidot.com">Morningside Genetics</a></h3>
             <div class="desc">          
               
             </div>

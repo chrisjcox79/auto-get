@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>可折叠侧边栏 - SCP基金会</title>
+    <title>贩卖伙伴链接 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 4228703;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "component:collapsible-sidebar";
-        OZONE.request.timestamp = 1610163356;
+        WIKIREQUEST.info.requestPageName = "component:vaf-links";
+        OZONE.request.timestamp = 1610183476;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "component:collapsible-sidebar";
-        WIKIREQUEST.info.pageId = 987290505;
+                WIKIREQUEST.info.pageUnixName = "component:vaf-links";
+        WIKIREQUEST.info.pageId = 1304910318;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,20 +117,28 @@
     </script>
         
 <style>
-@import url("http://www.scp-wiki.net/component:collapsible-sidebar/code/1");
-
-#toc0 {
-    color: rgb(var(--swatch-primary,126,27,1));
+td { vertical-align: top; }
+td strong { white-space: nowrap; }
+.options table.wiki-content-table td { border: none; padding: 0.7em 1em; }
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+#page-content .navigation-links a[href="/"],
+#page-content .navigation-links a:visited[href="/"],
+#page-content .navigation-links a:hover[href="/"] {
+ text-decoration: none;
+ color: #2e023a;
+ pointer-events: none;
+ cursor: text;
 }
-div.blockquote {
-    padding-top: 0.5em;
+.navigation-links.hub {
+ display: none;
 }
-div.blockquote tt {
-    margin: 0.5em 1em 1em 1em;
-    display: block;
-    background-color: rgb(var(--dark-gray-monochrome,48,48,52));
-    color: rgb(var(--white-monochrome,252,252,252));
-    padding: 0.5em;
+.navigation-links.first .previous {
+ display: none;
+}
+.navigation-links.last .next {
+ display: none;
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -481,7 +489,7 @@ div.blockquote tt {
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=component&pagename=component:collapsible-sidebar" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=component&pagename=component:vaf-links" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -503,10 +511,14 @@ div.blockquote tt {
                     
                     
                         <div id="page-title">
-                            可折叠侧边栏
+                            贩卖伙伴链接
                         </div>
                     
 
+                    
+                        <div id="breadcrumbs">
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/wonder-world">多么奇妙世界中心页</a> &raquo; <a href="/vend-a-friend">贩卖伙伴中心页</a> &raquo; 贩卖伙伴链接
+                        </div>
                     
 
                     
@@ -529,31 +541,95 @@ div.blockquote tt {
 </div>
 </div>
 <hr />
-<div class="list-pages-box">    
+
+
+
+<p>此组件用于<a href="/vend-a-friend">贩卖伙伴</a>系列作品。它有两种功能：</p>
+<ol>
+<li>添加一个链接，可以打开或者关闭 Wondertainment 版式。</li>
+<li>自动创建导航链接。</li>
+</ol>
+<p>此组件将会应用 <a href="/theme:wondertainment">Wondertainment 版式</a>至页面，并引入 Berkshire Swash 字体，但并非版式本身。</p>
+<p>由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1600701313" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span> 于 2018 年应 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/darkstuff" onclick="WIKIDOT.page.listeners.userInfo(1581620); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1581620&amp;amp;size=small&amp;amp;timestamp=1600701313" alt="DarkStuff" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1581620)" /></a><a href="http://www.wikidot.com/user:info/darkstuff" onclick="WIKIDOT.page.listeners.userInfo(1581620); return false;">DarkStuff</a></span> 的要求制作。</p>
+<h1 id="toc0"><span>使用方法</span></h1>
+<p>在你希望插入导航链接和版式开关的地方添加如下语法：</p>
+<div class="code">
+<p><span style="white-space: pre-wrap;">[[include&#32;:scp-wiki-cn:component:vaf-links</span><br />
+| position=middle<br />
+| previous-page=<br />
+| previous-page-name=<br />
+| next-page=<br />
+| next-page-name=<br />
+]]</p>
+</div>
+<p>任何需要覆盖 Wondertainment 版式的 CSS 应该位于此组件的下方。其他 CSS 则无限制。</p>
+<hr />
+<p>将以下参数修改为你希望链接至的页面名称。</p>
+<div class="options">
+<table class="wiki-content-table">
+<tr>
+<td><strong>position</strong></td>
+<td>页面在系列中的位置。允许“first”、“middle”、“last”或“hub”。<br />
+<em>“first”将显示中心页及下一页的链接。</em><br />
+<em>“middle”将显示中心页、上一页及下一页的链接。</em><br />
+<em>“last”将显示中心页及上一页的链接。</em><br />
+<em>“hub”将不显示任何链接。</em></td>
+</tr>
+<tr>
+<td><strong>previous-page</strong></td>
+<td>系列中上一页的相对 URL（或页面完整名称（fullname））。<br />
+<em>如果没有上一页，将 <strong>position</strong> 设置为“first”。</em></td>
+</tr>
+<tr>
+<td><strong>previous-page-name</strong></td>
+<td>系列中上一页的标题。<br />
+<em>如果没有上一页，将 <strong>position</strong> 设置为“first”。</em></td>
+</tr>
+<tr>
+<td><strong>next-page</strong></td>
+<td>系列中下一页的相对 URL（或页面完整名称（fullname））。<br />
+<em>如果没有下一页，将 <strong>position</strong> 设置为“last”。</em></td>
+</tr>
+<tr>
+<td><strong>next-page-name</strong></td>
+<td>系列中下一页的标题。<br />
+<em>如果没有下一页，将 <strong>position</strong> 设置为“last”。</em></td>
+</tr>
+</table>
+</div>
+<p>如果你不希望添加任何导航链接，将 <strong>position</strong> 设置为“hub”，不要添加其他参数。</p>
+<p>如果设置任意页面的 URL 为“/”，链接会显示为普通的不可点击文本，你可以在那里添加任何东西。</p>
+
+
+
+<div class="navigation-links {$position}">
+<div style="text-align: center;">
+<p><strong><span class="previous">&#171; <a class="newpage" href="/previous-page">{$previous-page-name}</a> |</span> <a href="/vend-a-friend">贩卖伙伴中心页</a> <span class="next">| <a class="newpage" href="/next-page">{$next-page-name}</a> &#187;</span></strong></p>
+</div>
+</div>
+<hr />
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="link-to-with" style="display: block;">
+<blockquote>
+<p><a href="/component:vaf-links/offset/0">打开 Wondertainment 版式</a></p>
+</blockquote>
+</div>
+<div class="link-to-without" style="display: none;">
+<blockquote>
+<p><a href="/component:vaf-links/offset/1">关闭 Wondertainment 版式</a></p>
+</blockquote>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
     
     
     
     </div>
-
-
-<div style="text-align: center;">
-<div class="blockquote">
-<h3 id="toc0"><span>！！！警告！！！</span></h3>
-<tt>这个组件有点试验性质，可能会在一小部分浏览器上无法正常工作。<br />
-<br />
-如果你发现了一个错误，请在<a href="http://www.scp-wiki.net/forum/t-13040798/component:collapsible-sidebar">讨论区</a>反馈，包括<strong>浏览器、浏览器版本和操作系统。</strong><br />
-<br />
-截止 2020 年 02 月 13 日，没有已知的错误。</tt></div>
-<hr />
-<div class="blockquote">用于添加可折叠侧边栏的组件。<br />
-可用于黑色标记笔和 Sigma-9。<br />
-<a href="http://scp-wiki-cn.wikidot.com/component:collapsible-sidebar">&gt;点击这里查看黑色标记笔预览效果&lt;</a><br />
-<a href="http://scp-wiki-cn.wikidot.com/component:collapsible-sidebar/offset/1">&gt;点击这里查看 Sigma-9 预览效果&lt;</a><br />
-<span style="white-space: pre-wrap;">&#32;</span><br />
-在任何版式<strong>下方</strong>添加以下 include 代码：<br />
-<tt>[[include :scp-wiki:component:collapsible-sidebar]]</tt></div>
-</div>
-
                     </div>
 
                             
@@ -589,12 +665,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 2, 最后编辑于: <span class="odate time_1591192541 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">03 Jun 2020 13:55</span></div>
+                            <div id="page-info">页面版本: 0, 最后编辑于: <span class="odate time_1600701313 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">21 Sep 2020 15:15</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+1</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13044965/component:collapsible-sidebar" class="btn btn-default" id="discuss-button">讨论 (0)</a>
+<a href="/forum/t-13749453/component:vaf-links" class="btn btn-default" id="discuss-button">讨论 (0)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -661,23 +737,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chrysaliswiki.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chrysaliswiki.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://sfugamedev.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sfugamedev.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chrysaliswiki.com">Chrysalis</a></h3>
+            <h3><a target="_blank" href="http://sfugamedev.wikidot.com">SFU Game Developers Club</a></h3>
             <div class="desc">          
-              A Final Fantasy Wiki
+              
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://imocamp.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/imocamp.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://edmw.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/edmw.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://imocamp.wikidot.com">2020 IMOC</a></h3>
+            <h3><a target="_blank" href="http://edmw.wikidot.com">Eat-Drink-Man-Woman</a></h3>
             <div class="desc">          
-              2020 暑期奧林匹亞數學研習營網頁
+              A hang-out place to relax and chit-chat about food and boy-girl stuff...
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://warsztatywww.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/warsztatywww.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://warsztatywww.wikidot.com">WWW 10</a></h3>
+            <div class="desc">          
+              Wakacyjne Warsztaty Wielodyscyplinarne 9
             </div>
           </div>
         </div>
@@ -689,17 +776,6 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
             <h3><a target="_blank" href="http://mbitcoin.wikidot.com">BitCoin</a></h3>
             <div class="desc">          
               
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://soymilkls.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/soymilkls.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://soymilkls.wikidot.com">Soymilk Linkshell</a></h3>
-            <div class="desc">          
-              Professional, drama-free dynamis since 2005!
             </div>
           </div>
         </div>

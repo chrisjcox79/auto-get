@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
         WIKIREQUEST.info.requestPageName = "uiu-file-1996-005";
-        OZONE.request.timestamp = 1610157821;
+        OZONE.request.timestamp = 1610176542;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
                 WIKIREQUEST.info.pageUnixName = "uiu-file-1996-005";
@@ -120,33 +120,617 @@
     </script>
         
 <style>
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
-@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+@import url(http://scp-sandbox-3.wikidot.com/turbo-vision/code/2);
 </style>
 <style>
-@import url("http://scp-wiki-cn.wikidot.com/theme:uiu-bhl-theme/code/1");
-</style>
-<style>
-/* 非bhl版式
-@import url(http://scp-wiki-cn.wikidot.com/component:uitheme/code/1);
-@import url(http://scp-wiki-cn.wikidot.com/component:spirit-theme/code/1);
+.fake-link {
+color: #b01;
+text-decoration: none;
+background: transparent;
+cursor:pointer;
+}
 
-.yui-navset .yui-nav, .yui-navset .yui-navset-top .yui-nav {
-    font-size: 80%;
+.fake-link:hover {
+text-decoration: underline;
+background-color: transparent;
+cursor:pointer;
+}
+
+.dummyDescription{
+line-height: 0em;
+border: 1px solid #CCC;
+margin: 1em 4em;
+padding: 0.5em;
+background-color: #F5F5F5;
+overflow: hidden;
+height: 100%;
+border-radius: 10px;
+box-shadow: 0 1px 5px rgba(0,0,0,.15),
+inset 0 1px 0 rgba(255,255,255,.8),
+inset 0 10px 5px rgba(255,255,255,.25),
+inset 0 -15px 30px rgba(0,0,0,.1)
+}
+
+.dummyOptions{
+text-align: right;
+margin: 0.2em 4em;
+color: #b01;
+}
+
+.dummySummaySentence{
+padding:0.5em 0em 1em 0em;
+}
+
+.dummySummaySentence:before{
+content:"サマリー";
+display:block;
+color: #777;
+font-size: 87%;
+bottom:0em;
+}
+
+.dummyHead{
+display:block;
+color: #777;
+font-size: 87%;
+}
+
+div.DummyNew-post {
+    text-align: left;
+    margin: 20px 0;
+}
+div.DummyNew-post .fake-link{
+    border: 1px solid #999;
+    background-color: #F7F7F7;
+    padding: 5px 10px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.DummyForumTitle{
+padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
+font-size: 200%;
+color: #901;
+padding: 0;
+font-weight: normal;
+}
+
+.DummyForumTitle p{
+padding-top: 0.5em;
+display:block;
+padding:0px 0px 1px 0px;
+margin:0;
+border-bottom: 1px #999 solid;
+
+}
+
+.DummyForumTitle h2{
+padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
+font-size: 100%;
+color: #901;
+display:block;
+padding:0px 0px 1px 0px;
+border-bottom: 1px #999 solid;
+font-weight: normal;
+}
+
+.DummyForumTitle ul{
+display:block;
+padding:0em;
+border-color: #bbb;
+font-size:50%;
+}
+
+.DummyForumTitle ul li{
+cursor:pointer;
+color: #b01;
+display:inline;
+background: transparent;
+padding:0;
+
+}
+
+.DummyForumTitle ul li:hover{
+text-decoration: underline;
+background-color: transparent;
+cursor:pointer;
+
+}
+
+.DummyForumTitle ul li:after {
+    content:" » ";
+color:#000;
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:after {
+    content:" » ";
+color:#000;
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:after:hover {
+text-decoration:none;
+}
+
+.DummyForumTitle ul li:last-child{
+text-decoration:none;
+color:#000;
+cursor:auto;
+}
+
+.DummyForumTitle ul li:last-child:hover {
+text-decoration:none;
+color:#000;
+}
+
+.DummyForumTitle ul li:last-child:after {
+    content : none ;
+}
+
+.post-container .dummyOptions{
+margin: 0.2em 0em;
+}
+
+.post-container .dummyOptions .fake-link{
+margin:0; padding:0;
+color: #77A;
+}
+
+.DummyStatistics{
+margin: 0.5em 0;
+padding: 0 0.5em;
+font-size: 87%;
+color: #666;
+text-align: right;
+float: right;
+line-height: 1.5em;
+}
+
+.Dummytitle{
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.dummyPostHead{
+line-height: 0em;
+padding: 0.5em 1em;
+background-color: #eee;
+background: linear-gradient(to right, #eee, #eeecec);
+box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
+border-radius: 5px 5px 0 0;
+}
+
+.dummyPostHead p{
+margin:0;
+padding:0;
+}
+.dummyContent{
+
+}
+
+.dummyContent:after{
+    content: "返信 オプション";
+    display:block;
+    font-weight:bold;
+    color: #77A;
+    text-align:right;
+    padding: 10px 0 10px 0;
+}
+
+/*隠し機能*/
+.CustomTabR .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+    border-left:none;
+}
+
+.CustomTabR .yui-navset ul {
+   border-bottom:none;
+    padding:0;
+    border-right:solid #333 2px;
+}
+
+.CustomTabR .yui-navset ul li{
+    display: block;
+}
+.CustomTabR .yui-navset .yui-nav li{
+margin:0;
+}
+
+.CustomTabR .yui-navset ul li.select{
+    display: block;
+    margin:0;
+    border-radius:0;
+}
+
+.CustomTabR  .yui-content{
+        background-color:#F6F6F6;
+        display:inline-block;
+        border:solid #000 1px;
+}
+
+.CustomTabR  .yui-content div{
+    width:100%;
+    border:none;
+    background-color:transparent;
+}
+
+.CustomTabRJ .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+}
+
+.CustomTabRJ .yui-navset ul {
+   border-bottom:none;
+display:block;
+width:2.5em;
+border-right:solid #333 2px;
+    padding:0;
+    margin:0;
+}
+
+.CustomTabRJ .yui-navset .yui-nav li{
+    display: block;
+width:100%;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+text-orientation: upright; 
+margin:0;
+}
+
+.CustomTabRJ .yui-navset ul li.select{
+    display: block;
+    margin:0;
+    border-radius:0;
+}
+
+.CustomTabRJ  .yui-content{
+    border:solid #333 1px;
+    display:block;
+width:calc(100% - 2.5em);
+}
+
+.CustomTabRJ  .yui-content div{
+    width:98%;
+    border:none;
+    background-color:transparent;
+        padding: 0px 5px 0px 10px;
+}
+
+@media all and (-ms-high-contrast:none) {
+.CustomTabRJ .yui-navset .yui-nav li {
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+.CustomTabRJ .yui-navset ul li em{
+width:100%;
+height:8em;
+    overflow:hidden;
+}
+.CustomTabRJ .yui-navset ul {
+    overflow:hidden;
+}
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul li{
+width:100%;
+height:8em;
+    overflow:hidden;
+
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul li em{
+width:100%;
+height:8em;
+    overflow:hidden;
+}
+
+_:-ms-lang(x), .CustomTabRJ .yui-navset ul {
+    overflow:hidden;
+}
+
+.CustomTabRJC .yui-navset{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    vertical-align: top;
+    width:100%;
+}
+
+.CustomTabRJC .yui-navset ul {
+   border:none;
+display:block;
+width:2.5em;
+    padding:0;
+    margin:0;
+    position:relative;
+    background-color:#333;
+
+}
+
+.CustomTabRJC .yui-navset .yui-nav li{
+    display: block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+text-orientation: upright; 
+margin:0;
+padding:0;
+width:100%;
+
+}
+
+.CustomTabRJC .yui-nav li a{
+color:#333;
+display:block;
+    border:none !important;
+    padding:0;
+    margin:0;
+}
+
+.CustomTabRJC .yui-nav li a em{
+        background-color:#DADADA;
+display:block;
+color:#333;
+width:100%;
+-moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-o-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+-ms-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
+}
+
+.CustomTabRJC .yui-navset ul li.select{
+    border-radius:0 !important;
+    border-right:none !important;
+z-index:1000;
+}
+
+.CustomTabRJC .yui-nav li.selected a{
+
+        background-color:#F6F6F6;
+    border:none !important;
+    /*background:*/
+}
+
+.CustomTabRJC .yui-nav li.selected a em{
+        background-color:#F6F6F6;
+z-index:1000;
+position:static;
+width:100%;
+color:#333;
+overflow-y:hidden;
+border-left:solid #000 1px;
+border-bottom:solid #000 1px;
+    -moz-box-shadow: none;
+-webkit-box-shadow: none;
+-o-box-shadow: none;
+-ms-box-shadow: none;
+}
+.CustomTabRJC .yui-nav li.selected a em:after{
+        content:" ";
+        background-color:#F6F6F6;
+display:block;
+height:100%;
+width:3px;
+position:absolute;
+right:-1px;
+top:0px;
+z-index:1000;
+border-top:solid #000 1px;
+
+}
+
+.CustomTabRJC  .yui-content{
+    border:none;
+    background-color:#F6F6F6;
+    width:calc(100% - 2.5em);
+    border:solid #333 1px;
+    margin:0;
+}
+
+.CustomTabRJC  .yui-content div{
+    width:98%;
+    padding: 0px 5px 0px 10px;
+    border:none;
+    background-color:transparent;
+}
+
+@media all and (-ms-high-contrast:none) {
+.CustomTabRJC .yui-navset .yui-nav li {
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+.CustomTabRJC .yui-navset ul li em{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+
+}
+
+_:-ms-lang(x), .CustomTabRJC .yui-navset ul li{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+
+_:-ms-lang(x), .CustomTabRJC .yui-navset ul li em{
+width:100%;
+height:8em;
+overflow-y:hidden;
+}
+</style>
+<style>
+#header {
+    background: url(http://scpsandboxcn.wikidot.com/local--files/image/Logo-uiu-1996-005-2.png) 0 16px no-repeat;
+background-size: 135px;
+}
+#search-top-box{
+display:none;
+}
+
+@media (max-width: 1500px) {
+#header h1, #header h2 {
+       margin-left: 116px;
+       font-size:80%;
+       line-height: 1;
+}
+}
+
+/* 修改过后的列表属性 */
+.listbox ul li:first-child {list-style-type:disc !important}
+.listbox ul li:first-child ul li {list-style-type:circle !important}
+
+.listbox ul {
+    width: 100% !important;
+}
+
+.CustomTabRJC .yui-navset ul {
+    background-color: #ebeaea;
+}
+
+.CustomTabRJC .yui-content {
+    background-color: #E7E7E7;
+    letter-spacing: 2px;
+   font-family:'等线','幼圆',kaiti;
+}
+
+strong, b{
+    font-weight: bolder;
+}
+
+.CustomTabRJC p {
+    line-height: 140%;
+}
+
+table.wiki-content-table th {
+    background-color: #D5D5D5;
+}
+
+/* 弱化对比 
+#side-bar .side-block[style="background-color: #fff0f0;"], #side-bar .side-block[style="background-color: #fff0f0;"] .heading p {
+    background-color: #848484 !important;
+}
+
+#side-bar .side-block[style="background-color: #f0fff6;"], #side-bar .side-block[style="background-color: #f0fff6;"] .heading p {
+    background-color: #bcbcbc !important;
+}
+*/
+
+/* 删去,#action-area 保留蓝屏，改底栏颜色 */
+#page-options-container{
+    background: #848484;
+    border-image: url(http://scp-sandbox-3.wikidot.com/local--files/turbo-vision/border_white.png) 16 round;
+    color: white;
+}
+
+/* 修改信息 */
+.inline-diff ins {
+    background-color: #047F15;
+}
+
+.inline-diff del {
+    background-color: #000;
+}
+
+#header h1 ,#header h2 {
+    display: block ;
+}
+
+#header h1 a {
+    display: block ;
+    margin: 0;
+    padding: 80px 0 25px;
+    line-height: 0px;
+    max-height: 0px;
+    color: transparent;
+    background: transparent;
+    font-family: 'Andale Mono', 'Courier New','等线', '幼圆',kaiti;
+    text-decoration: none;
+    text-shadow: none;
+    letter-spacing: 0.9px;
 }
 
 #header h1 a::before {
     content: "联邦调查局特异事故处";
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-shadow: 3px 3px 5px #000;
+}
+
+#header h2 span {
+    display: block;
+    margin: 0;
+    padding: 19px 0;
+    line-height: 0px;
+    max-height: 0px;
+    font-weight: bold;
+    color: transparent;
+    text-shadow: none;
 }
 
 #header h2 span::before {
     content: '忠诚，勇敢，正直';
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    font-family: 'Andale Mono', 'Courier New', '幼圆';
+    line-height: 1.2;
 }
 
-table.wiki-content-table th {
-    background-color: #D9D9D9;
+#header h1, #header h2 {
+    margin-left: 160px;
 }
-*/
+
+.page-rate-widget-box .rate-points{
+    background-color: #666 !important;
+    color: #FFF !important;
+    font-weight: bold !important;
+    padding: 0 10px !important;
+    -moz-border-radius: 4px 0 0 4px !important;
+    border-radius: 0 !important;
+        border: none !important; 
+}    
+
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
+    border: none !important;
+}
+
+.page-rate-widget-box .cancel a:hover {
+    border-radius:0 !important;
+}
+
+.page-rate-widget-box a{
+    text-decoration: none !important;
+    color: #000 !important;
+    background-color: #DDD !important;
+    padding: 0 5px !important;
+}
+.page-rate-widget-box a:hover{
+    background-color: #EEE !important;
+}
+
+.page-rate-widget-box .cancel, .page-rate-widget-box .cancel a{
+    -moz-border-radius:  0 !important;
+}
+
+.page-rate-widget-box .cancel {
+    background-color: transparent !important;
+    border: none !important;
+}
 </style>
 <style>
 .enlarge{
@@ -548,18 +1132,18 @@ z-index: 1000;
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
-<div class="image-container aligncenter"><img src="http://scp-wiki.wdfiles.com/local--files/theme%3Auiu-bhl-theme/UIU_Logo.png" width="40%" alt="UIU_Logo.png" class="image" /></div>
+<p><br /></p>
+<div class="image-container aligncenter"><img src="http://scpsandboxcn.wdfiles.com/local--files/image/Logo-uiu-1996-005.png" alt="Logo-uiu-1996-005.png" class="image" /></div>
 <p><br />
 <br /></p>
+
+
+
+
+
 <div style="display:none">
 <p><a href="/uiu-file-1996-005">uiu-file-1996-005</a></p>
 </div>
-
-
-
-<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
-
-
 
 
 </div>
@@ -860,10 +1444,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://osx86.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/osx86.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://geminisector.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/geminisector.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://osx86.wikidot.com">InfiniteMac Wiki</a></h3>
+            <h3><a target="_blank" href="http://geminisector.wikidot.com">Wing Commander: Gemini Sector</a></h3>
             <div class="desc">          
               
             </div>
@@ -871,10 +1455,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://globalclimatechange.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/globalclimatechange.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ds2009a.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ds2009a.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://globalclimatechange.wikidot.com">Global Climate Destabilization</a></h3>
+            <h3><a target="_blank" href="http://ds2009a.wikidot.com">Data Structures</a></h3>
             <div class="desc">          
               
             </div>
@@ -882,23 +1466,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://pt851.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pt851.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpexplained.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpexplained.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://pt851.wikidot.com">Cell Biology of Disease and Exercise</a></h3>
+            <h3><a target="_blank" href="http://scpexplained.wikidot.com">SCP Explained</a></h3>
             <div class="desc">          
-              
+              Simplify, Condense, Paraphrase
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://diafimisikaipaidi.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/diafimisikaipaidi.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://eldritch00.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/eldritch00.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://diafimisikaipaidi.wikidot.com">Διαφήμιση και παιδί</a></h3>
+            <h3><a target="_blank" href="http://eldritch00.wikidot.com">A Shining Brainless Beacon</a></h3>
             <div class="desc">          
-              
+              I Have a Special Plan for This World
             </div>
           </div>
         </div>

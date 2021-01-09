@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-1911-JP - SCP基金会</title>
+    <title>SCP-2000-JP - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-1911-jp";
-        OZONE.request.timestamp = 1610160544;
+        WIKIREQUEST.info.requestPageName = "scp-2000-jp";
+        OZONE.request.timestamp = 1610180267;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-1911-jp";
-        WIKIREQUEST.info.pageId = 1260591466;
+                WIKIREQUEST.info.pageUnixName = "scp-2000-jp";
+        WIKIREQUEST.info.pageId = 986537021;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -120,471 +120,246 @@
 @import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
 </style>
 <style>
-body{
--webkit-text-size-adjust: 110%;
+div#container-wrap{
+background: url(http://ja.scp-wiki.net/local--files/scp-2000-jp/black.png) top left repeat-x;
+background-size:100px;
 }
-.vpoem{
-text-indent: 0;
--webkit-writing-mode: vertical-rl;
-writing-mode: vertical-rl;
-margin: auto;
-margin-bottom:0.5em;
-font-size:2.5em;
-font-family: 'KaiTi', 'MS PMincho', 'STKaiti', 'HiraMinProN-W6', 'Hiragino Kaku Gothic Pro', 'MS PGothic', serif;
+#html-body{
+background-color:#000;
+color:#FFF;
 }
-
-.vpoem p{
-line-height: 1.4;
-margin:0 auto;
+.scp-image-caption{
+color:#333;
+}
+.hovertip .content{
+color:#333;
 }
 
-.vpoem tt{
-    vertical-align: middle;
-font-family: 'KaiTi', 'MS PMincho', 'STKaiti', 'HiraMinProN-W6', 'Hiragino Kaku Gothic Pro', 'MS PGothic', serif;
+:root{
+--mecolor: #B0C4DE;
+--youcolor: #FFFFFF;
 }
 
-@media screen and (max-width: 767px) { 
-.vpoem{
-font-size:1.5em;
-}
+#page-content .me{
+position: relative;
+float: right;
+width: 75%;
+max-width: 450px;
+margin-bottom: 8px;
+padding-right: 12px;
+text-align: right;
+white-space: nowrap;
 }
 
-span[style="text-decoration: line-through;"]{
-display: -webkit-inline-flex; /* Safari */
-  display: inline-flex;
-  -webkit-flex-direction: column; /* Safari */
-  flex-direction:         column;
+#page-content .metalk{
+background: var(--mecolor);
+}
+
+#page-content .you{
+display: inline-block;
+position: relative;
+width: 75%;
+max-width: 450px;
+margin-bottom: 8px;
+padding-left: 12px;
+text-align: left;
+white-space: nowrap;
+vertical-align: top;
+}
+
+#page-content .youtalk{
+background: var(--youcolor);
+}
+
+#page-content .talk{
+display: inline-block;
+max-width: 75%;
+white-space: normal;
+color: #000000;
+text-align: left;
+padding: 6px 11px;
 vertical-align: bottom;
 }
 
-span[style="text-decoration: line-through;"]>tt{
-font-size: 50%;
-line-height: 0.5em;
-}
-.tategaki span[style="text-decoration: line-through;"]>tt{
-line-height: 1em;
-}
-.tategaki span[style="text-decoration: line-through;"]{
-vertical-align: 0.3em;
-}
-.tategaki blockquote {
-    padding: 2em .5em;
+.talk p{
+margin: 0;
 }
 
-.tategaki tt {
-    vertical-align: middle;
-    font-family: "ヒラギノ明朝 Pro W3","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+.me::after{
+content: "";
+right: -18px;
+position: absolute;
+transform: rotate(-30deg);
+height: 0;
+width: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-right: 20px solid transparent;
+border-left: 20px solid var(--mecolor);
 }
 
-.tategaki .henoji:before {
-    content: "〳〵";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1,1)rotateX(0) translateY(0);
+.you::before{
+content: "";
+left: -18px;
+position: absolute;
+transform: rotate(30deg);
+height: 0;
+width: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-right: 20px solid var(--youcolor);
+border-left: 20px solid transparent;
 }
 
-.tategaki .dhenoji:before {
-    content: "〴〵";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1,1)rotateX(0) translateY(0);
+#page-content .area{
+height:500px;
+width:330px;
+position: absolute;
+max-width: none;
+font-family: verdana,arial,helvetica,sans-serif;
 }
 
-.tategaki .dhenoji:after {
-    content: "";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1,1)rotateX(0) translateY(0);
+#page-content .mail{
+color: #333333;
+max-width:700px;
+min-width:300px;
+width:60vw;
+position: absolute;
 }
 
-.tategaki {
-    -webkit-columns-axis: vertical;
-    -moz-columns: auto 20em;
-    -moz-column-gap: 20px;
-    -moz-column-rule: 1px solid #ddd;
-    -moz-column-fill: auto;
-    -webkit-columns: auto 20em;
-    -webkit-column-gap: 20px;
-    -webkit-column-rule: 1px solid #ddd;
-    -webkit-column-fill: auto;
-    columns: auto 20em;
-    column-gap: 20px;
-    column-rule: 1px solid #ddd;
-    column-fill: auto;
-    font-size: small;
-    overflow-y: scroll;
-    width: calc(100% + 3em);
-    padding-right: 2em;
-    writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    -moz-writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    font-family: "ヒラギノ明朝 Pro W3","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-}
-.tategaki {
-    -webkit-column-axis: vertical;
-    -moz-columns: auto 20em;
-    -moz-column-gap: 20px;
-    -moz-column-rule: 1px solid #ddd;
-    -moz-column-fill: auto;
-    -webkit-columns: auto 20em;
-    -webkit-column-gap: 20px;
-    -webkit-column-rule: 1px solid #ddd;
-    -webkit-column-fill: auto;
-    columns: auto 20em;
-    column-gap: 20px;
-    column-rule: 1px solid #ddd;
-    column-fill: auto;
-    font-size: small;
-    width: calc(100% + 3em);
-    padding-right: 2em;
-    writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    -moz-writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    font-family: "ヒラギノ明朝 Pro W3","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+.top{
+width:100%;
+height: 50px;
+color: #FFFFFF;
+background-color: #4682B4;
+border-collapse:collapse;
+font-size: 150%;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .tategaki{
-        overflow-y: scroll;
-    }
+.chat{
+background-color: #DDDDDD;
+padding-top: 10px;
+height: 400px;
+overflow-x: hidden;
+overflow-y: scroll;
 }
 
-.henoji:before {
-    content: "へ";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1.9,1)rotateX(180deg) translateY(-0.08em);
-    position: absolute;
-    display: inline-block;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    z-index: 1;
+.bottom{
+width:100%;
+height: 50px;
+color: #333333;
+background-color: #FFFFFF;
+border-collapse:collapse;
+border: solid 1px;
+font-size: 180%;"
 }
 
-.henoji {
-    position: relative;
-    width: 1em;
-    white-space: pre;
-    display: inline-block;
-    padding: 0 .5em;
-    color: rgba(51,51,51,0);
+.hole{
+position: relative;
+overflow: hidden;
 }
 
-.dhenoji:before {
-    content: "へ";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1.9,1)rotateX(180deg) translateY(-0.08em);
-    position: absolute;
-    display: inline-block;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    z-index: 1;
+.hole img{
+position: absolute;
+z-index: 5;
 }
 
-.dhenoji {
-    position: relative;
-    width: 1em;
-    white-space: pre;
-    display: inline-block;
-    padding: 0 .5em;
-    color: rgba(51,51,51,0);
+#u-open0:target ~.hole0{
+overflow: visible;
+z-index: 6;
 }
 
-.dhenoji:after {
-    position: absolute;
-    color: rgba(51,51,51,1.0);
-    content: "゛";
-    top: .07em;
-    left: .6em;
-    z-index: 1;
+#u-open0:target ~.hole0 img{
+display: none;
 }
 
-.hdhenoji:before {
-    content: "へ";
-    color: rgba(51,51,51,1.0);
-    opacity: 1;
-    transform: scale(1.9,1)rotateX(180deg) translateY(-0.08em);
-    position: absolute;
-    display: inline-block;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    z-index: 1;
+#u-open1:target ~.hole1{
+overflow: visible;
+z-index: 6;
 }
 
-.hdhenoji {
-    position: relative;
-    width: 1em;
-    white-space: pre;
-    display: inline-block;
-    padding: 0 .5em;
-    color: rgba(51,51,51,0);
+#u-open1:target ~.hole1 img{
+display: none;
 }
 
-.hdhenoji:after {
-    position: absolute;
-    color: rgba(51,51,51,1.0);
-    content: "゜";
-    top: .07em;
-    left: .6em;
-    z-index: 1;
+#u-open2:target ~.hole2{
+overflow: visible;
+z-index: 6;
 }
 
-span[style="text-decoration: underline;"] tt {
-    position: relative;
-    text-decoration: none;
+#u-open2:target ~.hole2 img{
+display: none;
 }
 
-span[style="text-decoration: underline;"] tt::before {
-    content: '';
-    position: absolute;
-    top: 90%;
-    width: 100%;
-    height: .25em;
-    background: -webkit-linear-gradient(315deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%),-webkit-linear-gradient(45deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%);
-    background: linear-gradient(135deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%),linear-gradient(45deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%);
-    background-size: .5em .5em;
-    background-repeat: repeat-x,repeat-x;
+#u-open3:target ~.hole3{
+overflow: visible;
+z-index: 6;
 }
 
-.namisen {
-    position: relative;
+#u-open3:target ~.hole3 img{
+display: none;
 }
 
-.namisen::before {
-    content: '';
-    position: absolute;
-    top: 90%;
-    width: 100%;
-    height: .25em;
-    background: -webkit-linear-gradient(315deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%),-webkit-linear-gradient(45deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%);
-    background: linear-gradient(135deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%),linear-gradient(45deg,transparent,transparent 45%,#000,transparent 55%,transparent 100%);
-    background-size: .5em .5em;
-    background-repeat: repeat-x,repeat-x;
+#u-open4:target ~.hole4{
+overflow: visible;
+z-index: 6;
 }
 
-.warning {
-    position: relative;
+#u-open4:target ~.hole4 img{
+display: none;
+}
+#u-open5:target ~.hole5{
+overflow: visible;
+z-index: 6;
 }
 
-.warning::before {
-    content: '';
-    position: absolute;
-    top: 90%;
-    width: 100%;
-    height: .25em;
-    background: -webkit-linear-gradient(315deg,transparent,transparent 45%,#f00,transparent 55%,transparent 100%),-webkit-linear-gradient(45deg,transparent,transparent 45%,#f00,transparent 55%,transparent 100%);
-    background: linear-gradient(135deg,transparent,transparent 45%,#f00,transparent 55%,transparent 100%),linear-gradient(45deg,transparent,transparent 45%,#f00,transparent 55%,transparent 100%);
-    background-size: .5em .5em;
-    background-repeat: repeat-x,repeat-x;
+#u-open5:target ~.hole5 img{
+display: none;
 }
 
-tt {
-    font-family: verdana,arial,helvetica,sans-serif;
-    font-size: 1em;
-    display: inline-table;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 1;
-    height: 1em;
-    vertical-align: calc(1em - 1px);
-    text-indent: 0%;
+#u-open6:target ~.hole6{
+overflow: visible;
+z-index: 6;
 }
 
-tt>sup {
-    display: table-header-group;
-    font-size: .6em;
-    line-height: 1.1;
-    text-align: center;
-    white-space: pre;
+#u-open6:target ~.hole6 img{
+display: none;
+}
+#u-open7:target ~.hole7{
+overflow: visible;
+z-index: 6;
 }
 
-tt>sub {
-    -webkit-text-emphasis-style: filled sesame;
-    text-emphasis-style: filled sesame;
-    font-size: 1em;
-    vertical-align: calc(-1em + 1px);
+#u-open7:target ~.hole7 img{
+display: none;
 }
 
-tt>em {
-    font-style: normal;
-    -webkit-text-emphasis-style: filled dot;
-    text-emphasis-style: filled dot;
-    vertical-align: calc(-1em + 1px);
-}
-/* For FireFox */
-/*
-@-moz-document url-prefix() {
-tt>em {
-    /* For the environments which comply with CSS3. */
-
+#u-open8:target ~.hole8{
+overflow: visible;
+z-index: 6;
 }
 
-tt>em {
-/* For the environments which comply with CSS3. */
-    font-family: monospace;
-    font-style: normal;
-    font-weight: 400;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABgCAYAAAAU0fKgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAbElEQVRYw+3TQQ6AIAxEUcZw/yuXlYkRKaPEhMXvnsfQFkVElIU6Vg5vCEgqkr4DZz/fQN0TrkNxkMce3JEMGjbRXQ97CqMUKeCk+H+RZimqc0uGbPYXAAAAAAAAAAAAAAAAAAAAAAAAAACSajbCGcGsSkirAAAAAElFTkSuQmCC) ,none;
-    background-repeat: repeat-x;
-    padding: .5em 0 0;
-    background-color: transparent;
-    background-clip: padding-box,content-box;
-    background-size: 1em 1.3em,auto;
-}    
+#u-open8:target ~.hole8 img{
+display: none;
 }
 
-/* For IE10 */
-@media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
-    tt>sub {
-    /* For the environments which comply with CSS3. */
-        font-family: monospace;
-        font-style: normal;
-        font-weight: 400;
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABgCAYAAAAU0fKgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAXElEQVRYw+3RMQrAIAwF0ER6/yunWweptmALDs8pInkk36yqioXTVpojIo7RQ2Ze9WzI9tR8d/90hX+AfudZBsMQ3/7uphkAAAAAAAAAAAAAAAAAAAAAAABgU+AEkmQQveksCV0AAAAASUVORK5CYII=),none;
-        background-repeat: repeat-x;
-        padding: .5em 0 0;
-        background-color: transparent;
-        background-clip: padding-box,content-box;
-        background-size: 1em 1.3em,auto;
-    }
-
-    tt>em {
-    /* For the environments which comply with CSS3. */
-        font-family: monospace;
-        font-style: normal;
-        font-weight: 400;
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABgCAYAAAAU0fKgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAbElEQVRYw+3TQQ6AIAxEUcZw/yuXlYkRKaPEhMXvnsfQFkVElIU6Vg5vCEgqkr4DZz/fQN0TrkNxkMce3JEMGjbRXQ97CqMUKeCk+H+RZimqc0uGbPYXAAAAAAAAAAAAAAAAAAAAAAAAAACSajbCGcGsSkirAAAAAElFTkSuQmCC) ,none;
-        background-repeat: repeat-x;
-        padding: .5em 0 0;
-        background-color: transparent;
-        background-clip: padding-box,content-box;
-        background-size: 1em 1.3em,auto;
-    }
+#u-open9:target ~.hole9{
+overflow: visible;
+z-index: 6;
 }
 
-*/
-.reddel {
-    position: relative;
+#u-open9:target ~.hole9 img{
+display: none;
 }
 
-.reddel:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 40%;
-    bottom: 40%;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
+#u-open10:target ~.hole10{
+overflow: visible;
+z-index: 6;
 }
 
-.kenten-b {
-    -webkit-text-emphasis-style: filled dot;
-    text-emphasis-style: filled dot;
+#u-open10:target ~.hole10 img{
+display: none;
 }
-
-.kenten-c {
-    -webkit-text-emphasis-style: filled circle;
-    text-emphasis-style: filled circle;
-}
-
-.kenten-janome {
-    -webkit-text-emphasis-style: filled double-circle;
-    text-emphasis-style: filled double-circle;
-}
-
-.kenten-t {
-    -webkit-text-emphasis-style: filled triangle;
-    text-emphasis-style: filled triangle;
-}
-
-.kenten-goma {
-    -webkit-text-emphasis-style: filled sesame;
-    text-emphasis-style: filled sesame;
-}
-
-.kenten-wb {
-    -webkit-text-emphasis-style: open dot;
-    text-emphasis-style: open dot;
-}
-
-.kenten-wc {
-    -webkit-text-emphasis-style: open circle;
-    text-emphasis-style: open circle;
-}
-
-.kenten-doublec {
-    -webkit-text-emphasis-style: open double-circle;
-    text-emphasis-style: open double-circle;
-}
-
-.kenten-wt {
-    -webkit-text-emphasis-style: open triangle;
-    text-emphasis-style: open triangle;
-}
-
-.kenten-wgoma {
-    -webkit-text-emphasis-style: open sesame;
-    text-emphasis-style: open sesame;
-}
-
-.kenten-hoshi {
-    -webkit-text-emphasis-style: "★";
-    text-emphasis-style: "★";
-}
-
-.kenten-kane {
-    -webkit-text-emphasis-style:"¥";
-    text-emphasis-style: "¥";
-}
-
-.bousen {
-    text-decoration: overline;
-}
-</style>
-<style>
-div.pseudo-tags ul {
-    font-size: 85%;
-    border-top: 1px solid #BBB;
-    display: inline-block;
-    margin: 10px 0 0;
-    padding: 0 2px;
-    list-style: none;
-}
-
-div.pseudo-tags li {
-    color: #b01;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 1px;
-    cursor: pointer;
-}
-
-div.pseudo-tags li:hover {
-    text-decoration: underline;
-}
-</style>
-<style>
-.animSVG {
-    width: 100%;
-    height: 0px; 
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-</style>
-<style>
-@import url("http://www.scp-wiki.net/local--files/svg-animation/gocLogo.css");
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -934,7 +709,7 @@ div.pseudo-tags li:hover {
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-1911-jp" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-2000-jp" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -956,7 +731,7 @@ div.pseudo-tags li:hover {
                     
                     
                         <div id="page-title">
-                            SCP-1911-JP
+                            SCP-2000-JP
                         </div>
                     
 
@@ -990,11 +765,31 @@ div.pseudo-tags li:hover {
 <hr />
 <div class="credit first">
 <p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
-<p><strong>标题:</strong> SCP-1911-JP - 东弊战舰大秋津洲<br />
-<strong>作者:</strong> ©︎<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hey-kounoike" onclick="WIKIDOT.page.listeners.userInfo(2094799); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2094799&amp;amp;size=small&amp;amp;timestamp=1610022603" alt="hey_kounoike" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2094799)" /></a><a href="http://www.wikidot.com/user:info/hey-kounoike" onclick="WIKIDOT.page.listeners.userInfo(2094799); return false;">hey_kounoike</a></span><br />
-<strong>作成年:</strong> 2019<br />
-<strong>翻译：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pueraria-lobata" onclick="WIKIDOT.page.listeners.userInfo(4421601); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4421601&amp;amp;size=small&amp;amp;timestamp=1610022603" alt="Pueraria lobata" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4421601)" /></a><a href="http://www.wikidot.com/user:info/pueraria-lobata" onclick="WIKIDOT.page.listeners.userInfo(4421601); return false;">Pueraria lobata</a></span><br />
-<strong>校对：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/benjaminchong" onclick="WIKIDOT.page.listeners.userInfo(3699277); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3699277&amp;amp;size=small&amp;amp;timestamp=1610022603" alt="BenjaminChong" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3699277)" /></a><a href="http://www.wikidot.com/user:info/benjaminchong" onclick="WIKIDOT.page.listeners.userInfo(3699277); return false;">BenjaminChong</a></span></p>
+<p><strong>标题：</strong>SCP-2000-JP - 信使<br />
+<strong>作者：</strong>©︎<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wagnascousin" onclick="WIKIDOT.page.listeners.userInfo(3389120); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3389120&amp;amp;size=small&amp;amp;timestamp=1607753478" alt="WagnasCousin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3389120)" /></a><a href="http://www.wikidot.com/user:info/wagnascousin" onclick="WIKIDOT.page.listeners.userInfo(3389120); return false;">WagnasCousin</a></span><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fes-ryuukatetu" onclick="WIKIDOT.page.listeners.userInfo(4577911); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4577911&amp;amp;size=small&amp;amp;timestamp=1607753478" alt="FeS_ryuukatetu" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4577911)" /></a><a href="http://www.wikidot.com/user:info/fes-ryuukatetu" onclick="WIKIDOT.page.listeners.userInfo(4577911); return false;">FeS_ryuukatetu</a></span> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/furabbit" onclick="WIKIDOT.page.listeners.userInfo(3198079); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3198079&amp;amp;size=small&amp;amp;timestamp=1607753478" alt="furabbit" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3198079)" /></a><a href="http://www.wikidot.com/user:info/furabbit" onclick="WIKIDOT.page.listeners.userInfo(3198079); return false;">furabbit</a></span><br />
+<strong>翻译：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/benjaminchong" onclick="WIKIDOT.page.listeners.userInfo(3699277); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3699277&amp;amp;size=small&amp;amp;timestamp=1607753478" alt="BenjaminChong" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3699277)" /></a><a href="http://www.wikidot.com/user:info/benjaminchong" onclick="WIKIDOT.page.listeners.userInfo(3699277); return false;">BenjaminChong</a></span><br />
+<strong>发布年份：</strong>2020</p>
+</div>
+<hr />
+<div class="credit" style="text-align:center; margin-top: 0.5em;">
+<p><a href="#u-credit-otherwise">更多</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="u-credit-otherwise">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/3" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>更多</span></h2>
+</div>
+<hr />
+<div class="credit otherwise">
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp2000jp-contest-hub">SCP-2000-JP竞赛</a></p>
+<p style="text-align: center;">优胜作品</p>
 </div>
 <hr />
 <div class="credit-back" style="text-align: center;">
@@ -1003,10 +798,6 @@ div.pseudo-tags li:hover {
 </div>
 </div>
 </div>
-
-
-
-
 <div class="list-pages-box">    
     
     
@@ -1017,212 +808,867 @@ div.pseudo-tags li:hover {
 
 
 
-
-
-<div class="gocLogo animSVG" style="width: 100%; padding-bottom: calc(100%/ 1.5); background-image: var(--gocLogo);"></div>
-<div class="licensebox">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;Licensing&nbsp;/&nbsp;Citation</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;Hide&nbsp;Licensing&nbsp;/&nbsp;Citation</a></div>
-<div class="collapsible-block-content">
-<p>Cite this page as:</p>
-<div class="error-block">The ListPages module does not work recursively.</div>
-<p>For more information, see <a href="http://www.scp-wiki.net/licensing-guide">Licensing Guide</a>.<br />
-<strong>Licensing Disclosures</strong></p>
-<div class="content-separator" style="display: none:"></div>
+<div id="u-back" style="display:none;"></div>
+<div id="u-open0" style="display:none;"></div>
+<div id="u-open1" style="display:none;"></div>
+<div id="u-open2" style="display:none;"></div>
+<div id="u-open3" style="display:none;"></div>
+<div id="u-open4" style="display:none;"></div>
+<div id="u-open5" style="display:none;"></div>
+<div id="u-open6" style="display:none;"></div>
+<div id="u-open7" style="display:none;"></div>
+<div id="u-open8" style="display:none;"></div>
+<div id="u-open9" style="display:none;"></div>
+<div id="u-open10" style="display:none;"></div>
+<div class="hole hole0" style="height:200px; width:200px;right: calc(-100% + 300px)"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open0"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="mail" style="right: -100px;">
 <blockquote>
-<p><strong>Filename:</strong> beyondE.css<br />
-<strong>Name:</strong> beyondE.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fantem" onclick="WIKIDOT.page.listeners.userInfo(1391641); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1391641&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="Fantem" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1391641)" /></a><a href="http://www.wikidot.com/user:info/fantem" onclick="WIKIDOT.page.listeners.userInfo(1391641); return false;">Fantem</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
 <blockquote>
-<p><strong>Filename:</strong> caecus-c.css<br />
-<strong>Name:</strong> caecus-c.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/aelanna" onclick="WIKIDOT.page.listeners.userInfo(334454); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=334454&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="Aelanna" style="background-image:url(http://www.wikidot.com/userkarma.php?u=334454)" /></a><a href="http://www.wikidot.com/user:info/aelanna" onclick="WIKIDOT.page.listeners.userInfo(334454); return false;">Aelanna</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
+<p>五条研究员<br />
+你好。我是自↑天前开始在这个区域搜集SCP-■縺ｫ帙s相关信息的Clef。我已经看到了你的报告。<br />
+正如你的报告所言，Site-縺斐↓的反模因武器开发很可能已经快要完成。这是站点内调查的最重要一项。但是，我不得不很遗憾地告诉你，我无法派出技术人员来解除Site-縺斐↓的设施放弃协议。</p>
+<p>实际上，我这边的状况和Site-縺斐↓差不多。我到达这个区域的时候，所有基金会成员已经全都死光了。所以，我这里已经没有任何能够派出的人员了。如果有必要的话，你可以从Site-縺斐↓的Anomalous收容区里拿几个异常来用一用。我知道你的时间和人手都不够，但眼下的状况只能由你一个人对应。</p>
 </blockquote>
-<blockquote>
-<p><strong>Filename:</strong> ciLogo.css<br />
-<strong>Name:</strong> ciLogo.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1888434&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="djkaktus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1888434)" /></a><a href="http://www.wikidot.com/user:info/djkaktus" onclick="WIKIDOT.page.listeners.userInfo(1888434); return false;">djkaktus</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
+<div style="text-align: center;">
+<p><a href="#u-back">关闭</a></p>
+</div>
 </blockquote>
-<blockquote>
-<p><strong>Filename:</strong> cotbg.css<br />
-<strong>Name:</strong> cotbg.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/drkens" onclick="WIKIDOT.page.listeners.userInfo(304092); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=304092&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="DrKens" style="background-image:url(http://www.wikidot.com/userkarma.php?u=304092)" /></a><a href="http://www.wikidot.com/user:info/drkens" onclick="WIKIDOT.page.listeners.userInfo(304092); return false;">DrKens</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> fixed-flowers.css<br />
-<strong>Name:</strong> fixed-flowers.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/twistedgears" onclick="WIKIDOT.page.listeners.userInfo(1735681); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1735681&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="TwistedGears" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1735681)" /></a><a href="http://www.wikidot.com/user:info/twistedgears" onclick="WIKIDOT.page.listeners.userInfo(1735681); return false;">TwistedGears</a></span> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/chubert" onclick="WIKIDOT.page.listeners.userInfo(502908); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=502908&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="Chubert" style="background-image:url(http://www.wikidot.com/userkarma.php?u=502908)" /></a><a href="http://www.wikidot.com/user:info/chubert" onclick="WIKIDOT.page.listeners.userInfo(502908); return false;">Chubert</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> gocLogo.css<br />
-<strong>Name:</strong> gocLogo.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/thd-glasses" onclick="WIKIDOT.page.listeners.userInfo(1664610); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1664610&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="thd-glasses" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1664610)" /></a><a href="http://www.wikidot.com/user:info/thd-glasses" onclick="WIKIDOT.page.listeners.userInfo(1664610); return false;">thd-glasses</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> joicl.css<br />
-<strong>Name:</strong> joicl.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> mcdLogo.css<br />
-<strong>Name:</strong> mcdLogo.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tps-geronam" onclick="WIKIDOT.page.listeners.userInfo(2863064); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2863064&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="TPS-Geronam" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2863064)" /></a><a href="http://www.wikidot.com/user:info/tps-geronam" onclick="WIKIDOT.page.listeners.userInfo(2863064); return false;">TPS-Geronam</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> rTech.css<br />
-<strong>Name:</strong> rTech.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanija" onclick="WIKIDOT.page.listeners.userInfo(4536361); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4536361&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="Tanija" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4536361)" /></a><a href="http://www.wikidot.com/user:info/tanija" onclick="WIKIDOT.page.listeners.userInfo(4536361); return false;">Tanija</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> oneiroi.css<br />
-<strong>Name:</strong> oneiroi.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tsucchii0301" onclick="WIKIDOT.page.listeners.userInfo(2043380); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2043380&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="tsucchii0301" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2043380)" /></a><a href="http://www.wikidot.com/user:info/tsucchii0301" onclick="WIKIDOT.page.listeners.userInfo(2043380); return false;">tsucchii0301</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> recycle.css<br />
-<strong>Name:</strong> recycle.css<br />
-<strong>Author:</strong> <span class="error-inline"><em>Nanimono Daemon</em> 不匹配任何一个现有的用户名</span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<blockquote>
-<p><strong>Filename:</strong> scarlet-2.css<br />
-<strong>Name:</strong> scarlet-2.css<br />
-<strong>Author:</strong> <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sunnyclockwork" onclick="WIKIDOT.page.listeners.userInfo(1621343); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1621343&amp;amp;size=small&amp;amp;timestamp=1610160544" alt="SunnyClockwork" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1621343)" /></a><a href="http://www.wikidot.com/user:info/sunnyclockwork" onclick="WIKIDOT.page.listeners.userInfo(1621343); return false;">SunnyClockwork</a></span><br />
-<strong>License:</strong> CC BY-SA 3.0<br />
-<strong>Source Link:</strong> <a href="http://scp-wiki.wikidot.com/svg-animation">http://scp-wiki.wikidot.com/svg-animation</a></p>
-</blockquote>
-<div class="content-separator" style="display: none:"></div>
-<div class="content-separator" style="display: none:"></div>
-<p>For more information about on-wiki content, visit the <a href="http://www.scp-wiki.net/licensing-master-list">Licensing Master List</a>.</p>
 </div>
 </div>
-</div>
-</div>
-<div style="border-bottom:2px solid #777; margin-bottom:1px;"></div>
-<div style="border-bottom:1px solid #777;"></div>
-<h1><span>威胁实体数据库条目</span></h1>
-<p><span style="font-size:large;"><strong>威胁ID:</strong></span></p>
-<p><strong>LTE&#8212;3358-Caliburn &quot;超无畏舰&quot;</strong></p>
-<p><span style="color: #102141"><span style="font-size:large;"><strong>授权应对等级:</strong></span></span><br />
-<br />
-<span style="color: red"><span style="font-size:250%;">5</span></span> (紧急威胁)</p>
-<p><span style="color: #102141"><span style="font-size:large;"><strong>描述:</strong></span></span></p>
-<p>当1997年的一场天文事件发生时，突然观测到该对象。<br />
-推测在其目标出现之前，该舰应该一直在木星内部潜航。<br />
-表现为一艘非常巨大的战舰，其武器似乎还在在正常运行。</p>
-<p><span style="color: #102141"><span style="font-size:large;"><strong>消灭:</strong></span></span></p>
-<p><strong>重要事件时间线</strong></p>
+<div class="hole hole1" style="height:150px; width:150px;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open1"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="mail">
 <blockquote>
-<p><strong><span style="text-decoration: underline;">1997年7月16日 0:32</span>-</strong> 苏梅克-列维彗星在经过木星附近时被摧毁。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年7月16日 08:39</span>-</strong> 小型探查无人机前往木星附近宇域探测。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年7月18日 05:17</span>-</strong> 探查无人机探测到威胁的存在。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年7月20日 07:20</span>-</strong> 日蚀级无人巡航舰队从月球表面基地出击。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年7月25日 16:11</span>-</strong> 日蚀级无人巡航舰队与威胁开始战斗。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年7月30日 11:23</span>-</strong>与日蚀级舰队的通信中断。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年8月01日 09:00</span>-</strong>为了确认日蚀级舰队的情况，任务小组-Psi被组建。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年8月02日 09:00</span>-</strong>任务小组-Psi搭乘巡洋舰“万灵药号”出击。<br />
-<br />
-<strong><span style="text-decoration: underline;">1997年8月02日 09:00</span>-</strong>任务小组-Psi成功回收到了埃克利普斯级的黑匣子。<br /></p>
+<blockquote>
+<p>看来你没能很好的把握状况，毕竟被隔离了一段时间，这也难免。<br />
+你可能很想与其他据点取得联系，但丧失功能的并不仅仅只有这个区域。基金会没能控制住<a href="http://scp-wiki-cn.wikidot.com/scp-3519">SCP-輔s縺阪�</a>。指挥系统已经完全崩溃，其他据点也完全销声匿迹。你最好还是不要期待能有人发现你，带你走出困境。现在已经不是缩手缩脚，生怕乱动会搞出什么乱子的时候了。</p>
+<p>我要尽力去做我能够做的事，不然无颜面对前人。<br />
+你想怎么办？</p>
 </blockquote>
-<p>从伊克里普斯级回收的黑匣子表明，威胁成功防御了伊克里普斯级发射的所有武器。</p>
-<p>发射到威胁的武器如下所示意。</p>
-<h1><span>神秘部门记录</span></h1>
-<p><em>部门-10所属，霍雷斯・华莱士会计下士的AOD(Armaments Used in Destruction、破坏用武器)文件报告</em></p>
-<blockquote>
-<table class="wiki-content-table">
+<div style="text-align: center;">
+<p><a href="#u-back">关闭</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="hole hole2" style="height:250px; width:250px; right: calc(-100% + 250px)"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open2"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="right: 0;">
+<table class="top">
 <tr>
-<th colspan="4">军需课-AOD-2712</th>
-</tr>
-<tr>
-<th>番号</th>
-<th>世代</th>
-<th>器材名</th>
-<th>数量</th>
-</tr>
-<tr>
-<td>1</td>
-<td>+1Gen-AGB</td>
-<td>GOC無人巡航感 <em>日蚀</em></td>
-<td>50</td>
-</tr>
-<tr>
-<td>2</td>
-<td>+1Gen-HRG</td>
-<td>荷电粒子炮</td>
-<td>5</td>
-</tr>
-<tr>
-<td colspan="4"><strong>注:</strong> <em>日蚀级</em>共装备了5门荷电粒子炮 ，全舰齐射但对象没有损伤</td>
-</tr>
-<tr>
-<td>3</td>
-<td>+1Gen-GBU</td>
-<td>空间爆雷</td>
-<td>15</td>
-</tr>
-<tr>
-<td colspan="4"><strong>注:</strong> 从对象上方直接投弹，但未确认到可见的损伤。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>+1Gen-CTD</td>
-<td>巡航导弹</td>
-<td>5</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Gen0/GenAlt-ABJ</td>
-<td>铅固火精灵对物燃烧榴弹</td>
-<td>50</td>
-</tr>
-<tr>
-<td colspan="4"><strong>注:</strong> 虽然该对象的构成材料是木头，但没有发现任何可见的损伤。</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻蜊/梧怦/莠牙</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
 </tr>
 </table>
-</blockquote>
-<div style="border-bottom:2px solid #777; margin-bottom:1px;"></div>
-<div style="border-bottom:1px solid #777;"></div>
-<p>投入了以上的火力。在突袭行动中，将50艘无人舰分为A组和B组2个组，每组25艘。 但是，A组被威胁装备的高射机枪击落了5艘战舰，剩余20艘被其释放出的空间鱼雷及舰载机所击落。之后，B组被威胁强大的火炮一轮齐射瞬间全灭了。</p>
-<h1><span>心智部门记录</span></h1>
-<p>由于LTE-3358的出现以及对其突袭行动的失败，导致全球超自然联盟陷入了一项政治问题。 这是由于该次突袭失败后，基金会提出了一项监视威胁的临时协议。考虑到上述失败，秘书长D.C. al Fine不得不接受了这一要求。</p>
-<p>目前，KTE-3358正处与基金会联合监视状态。</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-1911-jp">退出</a></p>
+<div class="chat">
+<div class="you">
+<div class="talk youtalk">
+<p>到达目的地，在那执行给你的程序，训练就算成功。</p>
 </div>
-    
-    
-    
-    </div><div class="list-pages-box">    
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>首先你要去蜿ｳ髫｣縺ｮ。其他路线比较危险，你可不要乱走。明白了吗，AO-蝗幃峺？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯，明白啦！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>忘记要去哪里了……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>去蜿ｳ髫｣縺ｮ。需要我解释的更详细一点吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>不用！我记住了！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>迷路了……。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>去蜿ｳ髫｣縺ｮ。还明白吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯！我明白啦！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>在哪里哦……。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="hole hole3" style="height:100px; width:100px; left:20vw"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open3"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="mail" style="left: -20vw">
+<blockquote>
+<blockquote>
+<p>感谢你能够理解我。我准备去SCP-■縺ｫ帙s的管理设施。能知道除自己以外还有能行动的人，仅仅这一点就足够让我欣然了。如果一切顺利，到时候我们再联系。</p>
+<p>祝你幸运。</p>
+</blockquote>
+<div style="text-align: center;">
+<p><a href="#u-back">关闭</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="hole hole4" style="height:200px; width:200px;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open4"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="top: -200px;">
+<table class="top">
+<tr>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻蜊/梧怦/香譌</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
+</tr>
+</table>
+<div class="chat">
+<div class="you">
+<div class="talk youtalk">
+<p>AO-蝗幃峺，没时间了。快从巢里出来。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>才不要。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>来，让我摸摸你。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>乖孩子。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>怎么了？不喜欢训练吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>我很快就会忘掉，所以不喜欢。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>这就头疼了……如果有奖励的话，你会努力吗？你想要什么都可以。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>那，我想要新的名字。特别的名字。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>除了“AO-蝗幃峺”之外的名字吗？那如果你成功了，我给你起个最特别的名字。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>真的？那我想要SCP什么什么的名字。有编号的。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>这说特别倒也特别……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>等等，这个……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>不行吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>不……没事。如果成功了，我会想办法的。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>太棒了！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="hole hole5" style="height:80px; width:80px; right: calc(-50% + 40px);"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open5"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="mail" style="right:-150px;">
+<blockquote>
+<div style="text-align: center;">
+<blockquote>
+<h4><span>来自RAISA的通知</span></h4>
+<p>由于检测到SCP-輔s縺阪�，禁止访问本邮件。<br />
+需确认详细内容的人员请联系负责人员。</p>
+</blockquote>
+<p><a href="#u-back">关闭</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="hole hole6" style="height:150px; width:150px;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open6"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="top:-50px;">
+<table class="top">
+<tr>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻蜊/∽ｹ/荳ｴ</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
+</tr>
+</table>
+<div class="chat">
+<div class="me">
+<div class="talk metalk">
+<p>五条先生，今天不训练吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>不用了。谢谢你一直努力到今天。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>但我还没有成功啊？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>已经没有必要了。因为世界明天就要毁灭。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>世界末日要来了吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>是啊。所以我们都要早点去死。明白吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>这个，这个……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯！我明白！凡事都要早一点呢！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>AO-蝗幃峺，你也快点准备去死吧……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>AO-蝗幃峺要怎么才能死？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>咦？我要怎么死呢？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>这可头疼了。我能为你做什么吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>那，那我想去看看外面。<br />
+能不能帮我连上叫SCiPNET的地方呀。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>原则上是不可以的。但世界末日了，就满足你的愿望吧。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>来，给你连上了。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>我想让你看看，只要有目的地，我就能成功呢。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>你在说什么？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>来自RAISA……<br />
+检测到端口-蝗幃峺……非法访问……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>突然怎么了，五条先生？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>AO-蝗幃峺难道在这里进行了训练……？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>镇静气体……<br />
+安保人员……装备……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>哎，哎，怎么办，停不下来。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>五条先生，怎么办？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>五条先生？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="hole hole7" style="height:300px; width:300px; right: calc(-100% + 300px);"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open7"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="right: 0; top: -20;">
+<table class="top">
+<tr>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻蜊/∽ｹ/晏ｴ</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
+</tr>
+</table>
+<div class="chat">
+<div class="you">
+<div class="talk youtalk">
+<p>唔……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>现在几点？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>现在是莠悟鴻蜊/∽ｹ/晏ｴの荳画:疲律呢。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>你刚才说什么？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>再说一遍。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>莠悟鴻蜊/∽ｹ/晏ｴの荳画:疲律。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>∽ｹ/晏ｴ之后，世界应该已经毁灭了才对……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>时间已经过了，但是什么也没发生啊？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>真是太好了。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="hole hole8" style="height:170px; width:170px; right: calc(-100% + 240px);"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open8"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="right: -60px;">
+<table class="top">
+<tr>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻蜊/∽ｹ/蜈ｭ</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
+</tr>
+</table>
+<div class="chat">
+<div class="me">
+<div class="talk metalk">
+<p>五条先生，头很疼吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>看上去状态不是很好……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>呃，毕竟我刚刚知道了一个震惊的事实。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>看来我今后只能一个人努力了。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>还有我在呢，打起精神来。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>咳，也是。不是垂头丧气的时候。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯嗯。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>对不起，那时做了些奇怪的事情。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>不，你真是帮了我大忙了。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>真的？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>嗯，你做的很不错。<br />
+我可以给你之前说好的奖励了。你想要的特别的名字。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>太棒了！是新的巢穴！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>但我有件事想要你帮忙，可以吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>什么事？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>你能去SCiPNET里你喜欢的地方收集信息吗？<br />
+然后把信息带回来给我看。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>明白！好的！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="hole hole9" style="height:140px; width:140px;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open9"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="mail">
+<blockquote>
+<div style="text-align: center;">
+<blockquote>
+<h4><span>来自RAISA的通知</span></h4>
+<p>由于检测到SCP-輔s縺阪�，禁止访问本邮件。<br />
+需确认详细内容的人员请联系负责人员。</p>
+</blockquote>
+</div>
+<blockquote>
+<p>五条研究员，你那边状况如何？<br />
+我这边糟透了。格尼美德协议没能正常解除安全锁。看上去管理员将<a href="http://scp-wiki-cn.wikidot.com/scp-2000">SCP-■縺ｫ帙s</a>给封锁了。靠我一个人对抗基金会最坚固的安全措施，未免太强人所难了。</p>
+<p>如果我能早点行动，是不是就能够一切顺利？因为我的过错，人类漫长的历史，很快就要打上句号。<br />
+我能做的事只剩下一件。那就是尽快去迎接死亡。</p>
+</blockquote>
+<div style="text-align: center;">
+<p><a href="#u-back">关闭</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="hole hole10" style="height:230px; width:230px; left: 50px;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-open10"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_clear.png" alt="ana_clear.png" class="image" /></a>
+<div class="area" style="left: -50px; bottom: -70px;">
+<table class="top">
+<tr>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="text-align: center;">莠悟鴻莠/疲怦/晄蜊</td>
+<td style="width: 10%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp/offset/1/page2_limit/1#u-back"><span class="fa fa-times fa-2x"><span style="white-space: pre-wrap;">&nbsp;</span></span></a></td>
+</tr>
+</table>
+<div class="chat">
+<div class="you">
+<div class="talk youtalk">
+<p>Clef博士居然也……<br />
+谢谢你捡了这些回来。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>我厉害吧。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>厉害厉害，乖孩子。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>我还有件事想要拜托乖孩子，可以吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>好呀，我会努力的！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>我希望你能像训练时那样去SCP-■縺ｫ帙s，然后执行程序。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>如果我成功了，你要摸摸我！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>啊，但我会忘记在什么地方……</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>这次一定没问题的。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>对了，我之前给你的名字你还喜欢吗？</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯！最喜欢了！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>刚刚和你说的SCP-■縺ｫ帙s，也有同样特别的名字呢。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>真的呢。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>你们这下凑一对了。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>那边会有很多人，如果成功了，他们会夸奖你的。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>真的！太棒了！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="you">
+<div class="talk youtalk">
+<p>这样，就算你忘记了目的地，也能够再次想起来。</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div class="me">
+<div class="talk metalk">
+<p>嗯！</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<table class="bottom">
+<tr>
+<td style="width: 2%; text-align: center;"><span style="white-space: pre-wrap;">&nbsp;</span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-image"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="width: 10%; text-align: center;"><span class="fa fa-microphone"><span style="white-space: pre-wrap;">&nbsp;</span></span></td>
+<td style="text-align: center;">
+<div class="talk" style="background-color: #EEEEEE; width: 85%; max-width: none; font-size: medium;">
+<div style="float: right; display: inline-block; color: #303060;">
+<p>‪‪<span class="fa fa-user-circle"><span style="white-space: pre-wrap;">&nbsp;</span></span></p>
+</div>
+<div style="display: inline-block; color: #BBBBBB;">
+<p>Aa</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="image-container aligncenter"><a href="http://scp-wiki-cn.wikidot.com/scp-2000-jp#u-back"><img src="http://ja.scp-wiki.net/local--files/scp-2000-jp/ana_white.png" style="width: 70%;" alt="ana_white.png" class="image" /></a></div>
+</div>
     
     
     
@@ -1258,7 +1704,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/euclid#pages">euclid</a><a href="/system:page-tags/tag/jp#pages">jp</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/%E4%B8%9C%E5%BC%8A%E9%87%8D%E5%B7%A5#pages">东弊重工</a><a href="/system:page-tags/tag/%E4%BA%94%E8%A1%8C%E7%BB%93%E7%A4%BE#pages">五行结社</a><a href="/system:page-tags/tag/%E5%85%A8%E7%90%83%E8%B6%85%E8%87%AA%E7%84%B6%E8%81%94%E7%9B%9F#pages">全球超自然联盟</a><a href="/system:page-tags/tag/%E6%89%B6%E6%A1%91%E7%BA%AA#pages">扶桑纪</a><a href="/system:page-tags/tag/%E6%98%9F%E9%99%85#pages">星际</a><a href="/system:page-tags/tag/%E8%88%B0%E6%94%BF%E6%9C%AC%E9%83%A8%E5%AF%B9%E8%B6%85%E5%B8%B8%E8%AF%BE#pages">舰政本部对超常课</a><a href="/system:page-tags/tag/%E8%92%90%E9%9B%86%E9%99%A2#pages">蒐集院</a>
+                                <a href="/system:page-tags/tag/2000jp#pages">2000jp</a><a href="/system:page-tags/tag/jp#pages">jp</a><a href="/system:page-tags/tag/meta#pages">meta</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/thaumiel#pages">thaumiel</a><a href="/system:page-tags/tag/%E5%8A%A8%E7%89%A9#pages">动物</a><a href="/system:page-tags/tag/%E5%90%88%E8%91%97#pages">合著</a><a href="/system:page-tags/tag/%E6%84%9F%E7%9F%A5%E5%8A%9B#pages">感知力</a><a href="/system:page-tags/tag/%E6%99%BA%E8%83%BD#pages">智能</a><a href="/system:page-tags/tag/%E7%8A%AC%E7%B1%BB#pages">犬类</a><a href="/system:page-tags/tag/%E7%94%B5%E8%84%91#pages">电脑</a>
                             </span>
                         </div>
                     
@@ -1266,12 +1712,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 8, 最后编辑于: <span class="odate time_1610022602 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">07 Jan 2021 12:30</span></div>
+                            <div id="page-info">页面版本: 9, 最后编辑于: <span class="odate time_1581782232 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">15 Feb 2020 15:57</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+4</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+16</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13604798/scp-1911-jp" class="btn btn-default" id="discuss-button">讨论 (1)</a>
+<a href="/forum/t-13001970/scp-2000-jp" class="btn btn-default" id="discuss-button">讨论 (16)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -1338,32 +1784,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://the-ic.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/the-ic.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://caughtnotsleeping.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/caughtnotsleeping.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://the-ic.wikidot.com">无尽长廊</a></h3>
+            <h3><a target="_blank" href="http://caughtnotsleeping.wikidot.com">CaughtNotSleeping</a></h3>
             <div class="desc">          
-              行于廊屋，游于万物
+              It&#039;s just a game...It&#039;s just a game...
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ds09.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ds09.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://indexhibit.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/indexhibit.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ds09.wikidot.com">Data Structures</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://educ400-401.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/educ400-401.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://educ400-401.wikidot.com">Dyslexia Connection</a></h3>
+            <h3><a target="_blank" href="http://indexhibit.wikidot.com">indexhibit customisations</a></h3>
             <div class="desc">          
               
             </div>
@@ -1371,10 +1806,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://pofomultiquiz.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pofomultiquiz.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://backrooms-sandbox.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/backrooms-sandbox.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://pofomultiquiz.wikidot.com">Pofo MultiQuiz</a></h3>
+            <h3><a target="_blank" href="http://backrooms-sandbox.wikidot.com">Backrooms Sandbox</a></h3>
+            <div class="desc">          
+              When your Sandbox just gets too Backrooms
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://wiki.wdeditor.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wiki.wdeditor.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://wiki.wdeditor.com">STE documentation wiki</a></h3>
             <div class="desc">          
               
             </div>

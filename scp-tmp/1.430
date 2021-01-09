@@ -1,1379 +1,1328 @@
-@charset "utf-8";
-
-/*
-    엔트로피를 넘어서 CSS 테마
-    [2016 Wikidot Theme]
-    Edited by thd-glasses.
-    Based on THIRD LAW theme created by GreenWolf, with technical assistance from Randomini and aesthetic assistance from Dr Kens and thomas.
-    Originally based on SCP Sigma 9 Theme created by Aelanna and Dr Devan.
-    The Beyond Entropy Logo was created by thd-glasses and is licensed under CC-BY-SA 3.0.
-*/
-
-/* COMMON */
-#content-wrap {
-    position: relative;
-    margin: 2em auto 0;
-    max-width: 1040px;
-    min-height:1300px;
-    height: auto !important;
-    height: 1500px;
-}
-
-h1, #page-title {
-    color: #210B61;
-    padding: 0 0 0.25em;
-    margin: 0 0 0.6em;
-    font-weight: normal;
-}
-h1 {
-    margin-top: 0.7em;
-    padding: 0;
-    font-weight: bold;
-}
-h2, h3, h4, h5, h6, h7 {
-    margin: 0.5em 0 0.4em;
-    padding: 0;
-    letter-spacing: 1px;
-}
-#page-title {
-    border-color: #210B61;
-}
-ul {
-    /* list-style-image: url(http://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/bullet.gif); */
-    list-style: square;
-}
-#top-bar ul {
-    /* list-style-image: none; IE ONLY! IF list-style-image IS SET */
-}
-
-li, p {
-    line-height: 141%;
-}
-/* links */
-a {
-    color: #050099;
-    text-decoration: none;
-    background: transparent;
-}
-a.newpage {
-    color: #050099;
-    text-decoration: none;
-    background: transparent;
-}
-a:hover {
-    text-decoration: underline;
-    background-color: transparent;
-}
-
-.form-control {
-width: 95%;
-}
-
-/* GLOBAL WIDTH */
-#header, #top-bar {
-    width: 90%;
-    max-width: 980px;
-    margin: 0 auto;
-}
-
-#top-bar {
-    width: 100%;
-    margin: 0 auto;
-}
-
-body {
-    background-color: #DDDDE7;
-    font-size: 0.80em;
-    color: #000000;
-}
-div#container-wrap {
-    background: url(http://scpko.wdfiles.com/local--files/component%3Abeyondentropy-theme/body_bg_0.png) top left repeat-x;
-}
-
-/* HEADER */
-#header {
-    height: 140px;
-    position: relative;
-    z-index: 10;
-    padding-bottom: 22px; /* FOR MENU */
-    background: url(http://scpkrsandbox.wdfiles.com/local--files/component%3Abeyondentropy-theme/BE-logo-small0.png) 20px 50px no-repeat;
-}
-#search-top-box {
-    position: absolute;
-    top: 79px;
-    right: 9px;
-    width: 250px;
-    text-align: right;
-}
-#search-top-box-input {
-    border: solid 1px #0c1121;
-    border-radius: 5px;
-    color: #e9ebf0;
-    background-color: #222e59;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,.5);
-}
-#search-top-box-input:hover,
-#search-top-box-input:focus {
-    border: solid 1px #bfc3d4;
-    color: #e9ebf0;
-    background-color: #404d7e;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,.8);
-}
-#search-top-box-form input[type=submit] {
-    border: solid 1px #0c1121;
-    border-radius: 5px;
-    padding: 2px 5px;
-    font-size: 90%;
-    font-weight: bold;
-    color: #e9ebf0;
-    background-color: #222e59;
-    background: linear-gradient(to bottom, #263464,#1e284e);
-    box-shadow: 0 1px 3px rgba(0,0,0,.5);
-    cursor: pointer;
-}
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: solid 1px #bfc3d4;
-    color: #e9ebf0;
-    text-shadow: 0 0 1px rgba(255,255,255,.25)
-    background-color: #222e59;
-    background: linear-gradient(to bottom, #1e284e,#263464);
-    box-shadow: 0 1px 3px rgba(0,0,0,.8);
-}
-
-#login-status {
-    color: #e9ebf0;
-    font-size: 90%;
-    z-index: 30;
-}
-#login-status a {
-    background: transparent;
-    color: #e9ebf0;
-}
-#login-status ul a {
-    color: #4057a7;
-    background: transparent;
-}
-
-#account-topbutton {
-    background: #CCCCCC;
-    color: #4057a7;
-}
-
-.printuser img.small {
-    margin-right: 1px;
-}
-
-#header h1 {
-    margin-left: 120px;
-    padding: 0;
-    float: left;
-    max-height: 95px;
-}
-#header h2 {
-    margin-left: 120px;
-    padding: 0;
-    clear: left;
-    float: left;
-    font-size: 105%;
-    max-height: 38px;
-}
-
-#header h1 a {
-    display: block;
-    margin: 0;
-    padding: 80px 0px 25px;
-    line-height: 0px;
-    max-height: 0px;
-    color: transparent;
-    background: transparent;
-    font-family: '맑은 고딕', Arial, sans-serif;
-    font-size: 150%;
-    text-decoration: none;
-    text-shadow: none;
-    letter-spacing: 0.5px;
-}
-
-#header h1 a::before {
-    content: "超 熵";
-    color: #CCCCCC;
-    text-shadow: 3px 3px 5px #000000;
-}
-
-#header h2 span {
-    display: block;
-    margin: 0;
-    padding: 19px 0px;
-    line-height: 0px;
-    max-height: 0px;
-    font-family: '맑은 고딕', Arial, sans-serif;
-    font-weight: bold;
-    color: transparent;
-    text-shadow: none;
-}
-
-#header h2 span::before {
-    content: 'BEYOND ENTROPY';
-    color: #CCCCCC;
-    text-shadow: 1px 1px 1px #000000;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.8);}
-
-/* TOP MENU */
-#top-bar {
-    position: absolute;
-    z-index: 50;
-    top: 140px;
-    height: 21px;
-    line-height: 18px;
-    padding: 0;
-    z-index: 20;
-    font-size: 90%;
-}
-
-#top-bar ul {
-    float: right;
-}
-
-#top-bar li {
-    margin: 0;
-}
-
-#top-bar a {
-    color: #e9ebf0;
-    background: transparent;
-}
-
-#top-bar ul li {
-    border: 0;
-    position: relative;
-}
-
-#top-bar ul li ul {
-    border: solid 1px #4B4194;
-    box-shadow: 0 2px 6px rgba(0,0,0,.5);
-    border-top: 0;
-}
-
-#top-bar ul li a {
-    border-left: solid 1px rgba(64,64,64,.1);
-    border-right: solid 1px rgba(64,64,64,.1);
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1px;
-    max-height: 1px;
-    overflow: hidden;
-}
-
-#top-bar ul li.sfhover a,
-#top-bar ul li:hover a {
-    background: #E3E7EA;
-    color: #4682B4;
-    border-left: solid 1px rgba(64,64,64,1);
-    border-right: solid 1px rgba(64,64,64,1);
-}
-
-#top-bar ul li.sfhover ul li a,
-#top-bar ul li:hover ul li a {
-    border-width: 0;
-    width: 150px;
-    border-top: 1px solid #6A7194;
-    line-height: 160%;
-    height: auto;
-    max-height: none;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover {
-    background: #E4E4EE;
-    text-decoration: none;
-}
-#top-bar ul li ul {
-    border-width: 0 1px 1px 1px;
-    width: auto;
-}
-#top-bar ul li ul li, #top-bar ul li ul li.sfhover,
-#top-bar ul li ul li, #top-bar ul li ul li:hover {
-    border-width: 0;
-}
-#top-bar ul li ul li a {
-    border-width: 0;
-}
-#top-bar ul li ul a, #top-bar a:hover {
-    color: #4682B4;
-}
-
-.top-bar ul li:last-of-type ul {
-    right: 0;
-}
-
-/* IE7 HACK */
-#top-bar ul > li > ul {
-    *margin-top: -4px;
-}
-
-/* SIDE MENU */
-#side-bar {
-    clear: none;
-    float: none;
-    position: absolute;
-    top: 0.5em;
-    left: 2em;
-    width: 17em;
-    padding: 0;
-    border: none;
-    display: block;
-    background: transparent;
-}
-
-#side-bar img {
-    filter: hue-rotate(210deg);
-    -webkit-filter: hue-rotate(210deg);
-}
-
-#side-bar div.side-block:nth-child(5) > div:nth-child(2) > div:nth-child(1) img {
-    filter: none;
-    -webkit-filter: none;
-}
-
-#side-bar .side-block {
-    padding: 10px;
-    border: 1px solid #315B7D;
-    border-radius: 10px;
-    background: #E4E4EE !important;
-    box-shadow: none !important;
-    margin-bottom: 15px;
-}
-#side-bar .side-area {
-    padding: 10px;
-}
-#side-bar .heading {
-    color: #315B7D;
-    border-bottom: solid 1px #315B7D;
-    padding-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 8pt;
-    font-weight: bold;
-}
-#side-bar p {
-    margin: 0;
-}
-#side-bar div.menu-item {
-    margin: 2px 0;
-}
-#side-bar div.menu-item img {
-    width: 13px;
-    height: 13px;
-    border: 0;
-    margin-right: 2px;
-    position: relative;
-    bottom: -2px;
-}
-
-#side-bar div.menu-item a {
-    font-weight: bold;
-}
-#side-bar div.menu-item.inactive img {
-    opacity: 0.25;
-}
-#side-bar div.menu-item.inactive a {
-    color: #315B7D;
-}
-#side-bar div.menu-item .sub-text {
-    font-size: 80%;
-    color: #315B7D;
-}
-#side-bar div.menu-item.sub-item {
-}
-
-#side-bar .collapsible-block-folded {
-    background: none;
-}
-
-#side-bar .collapsible-block-link {
-    margin-left: 15px;
-    font-weight: bold;
-}
-#side-bar .collapsible-block-unfolded-link {
-    border-bottom: solid 1px #315B7D;
-}
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 8pt;
-    color: #315B7D;
-}
-#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-    color: #4682B4;
-    text-decoration: none;
-}
-
-#side-bar ul{
-    list-style-type: none;
-    padding: 0 5px 0;
-}
-/* CONTENT */
-#main-content {
-    margin: 0 2em 0 22em;
-    padding: 1em;
-    position: relative;
-}
-
-/* ACTUALLY HIDE HIDDEN TAGS */
-#main-content .page-tags a[href^="/system:page-tags/tag/_"]
-{
-    display: none;
-}
-
-#breadcrumbs {
-    margin: -1em 0 1em;
-    font-weight: 85%;
-}
-
-/* YUI-TABS */
-.yui-navset .yui-content{
-    background-color: #E4E4EE;
-}
-.yui-navset .yui-nav a,
-.yui-navset .yui-navset-top .yui-nav a {
-    background-color: #210B61;
-}
-.yui-navset .yui-nav .selected a,
-.yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
-.yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
-    background: #210B61; /* selected tab background */
-    color: #eeeeee;
-}
-.yui-navset .yui-nav a:hover,
-.yui-navset .yui-nav a:focus {
-    background: #bfc3d4;
-    text-decoration: none;
-}
-.yui-navset .yui-nav,
-.yui-navset .yui-navset-top .yui-nav {
-    border-color: #210B61;
-}
-.yui-navset li {
-    line-height: normal;
-}
-
-/* FOOTER */
-#footer {
-    clear: both;
-    font-size: 77%;
-    background: #7F7C94;
-    color: #C1BCE0;
-    margin-top: 15px;
-    padding: 3px 10px;
-}
-#footer .options {
-    visibility: visible;
-    display: block;
-    float: right;
-    width: 50%;
-    font-size: 100%;
-    text-align: right;
-}
-#footer a {
-    color: #E0E0E0;
-    background: transparent;
-}
-
-/* SOME NICE BOXES */
-div.sexy-box {
-    background: #E0E0E0;
-    border: 1px solid #C1BCE0;
-    padding: 0 10px 12px;
-    margin: 7px 4px 12px;
-    overflow: hidden;
-}
-div.sexy-box div.image-container img {
-    margin: 5px;
-    padding: 2px;
-    border: 1px solid #E0E0E0;
-}
-
-/* Custom page content classes */
-#page-content {
-    min-height: 720px;
-}
-
-.unmargined > p {
-    margin: 0;
-    line-height: 100%;
-}
-.content-panel {
-    border: solid 1px #888880;
-    border-radius: 10px;
-    background-color: #1F1F1F;
-    margin: 10px 0 15px;
-    box-shadow: 3px 3px 6px #BBBBBB;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.1);
-}
-.content-panel.standalone {
-    background: #E0E0E0;
-}
-.content-panel.series {
-    padding: 0 20px;
-    margin-bottom: 20px;
-}
-.content-panel.centered {
-    text-align: center;
-}
-.content-panel.left-column {
-    float: left;
-    width: 48%;
-}
-.content-panel.right-column {
-    float: right;
-    width: 48%;
-}
-
-.content-panel .panel-heading {
-    padding: 2px 10px;
-    color: #E0E0E0;
-    font-size: 90%;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.35);
-}
-.content-panel .panel-heading > p,
-.content-panel .panel-footer > p {
-    margin: 0;
-}
-.content-panel .panel-body {
-    padding: 5px 10px;
-    background: #E0E0E0;
-    /* box-shadow: 1px 2px 3px rgba(0,0,0,.2) inset */
-}
-.content-panel .panel-footer {
-    padding: 1px 10px;
-    color: #E0E0E0;
-    font-size: 80%;
-    font-weight: bold;
-    text-align: right;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-}
-.content-panel .panel-footer a {
-    color: #E0E0E0;
-}
-.content-panel .content-toc {
-    float: right;
-    padding: 0 20px;
-    background-color: #E0E0E0;
-    border: solid 1px #CCCCCC;
-    border-radius: 10px;
-    margin: 20px 0 5px 5px;
-    white-space: nowrap;
-    box-shadow: inset 1px 2px 6px rgba(0,0,0,.15)
-}
-
-.alternate:nth-child(even) {
-    background-color: rgba(255,255,255,.9);
-}
-
-/* Page Rating Module Customizations */
-.page-rate-widget-box {
-    display: inline-block;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-    margin-bottom: 10px;
-    margin-right: 2em;
-}
-.page-rate-widget-box .rate-points {
-    background-color: #222e59 !important;
-    border: solid 1px #312259;
-    border-right: 0;
-    border-radius: 5px 0 0 5px;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: #404d7e;
-    border-top: solid 1px #0c1121;
-    border-bottom: solid 1px #0c1121;
-    font-weight: bold;
-}
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: #e9ebf0;
-    padding: 0 4px;
-    margin: 0 1px;
-}
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: #222e59;
-    color: #e9ebf0;
-    text-decoration: none;
-}
-.page-rate-widget-box .cancel {
-    background-color: #222e59;
-    border: solid 1px #0c1121;
-    border-left: 0;
-    border-radius: 0 5px 5px 0;
-}
-.page-rate-widget-box .cancel a {
-    background: transparent;
-    text-transform: uppercase;
-    color: #e9ebf0;
-}
-.page-rate-widget-box .cancel a:hover {
-    border-radius: 0 3px 3px 0;
-    background: #404d7e;
-    color: #e9ebf0;
-    text-decoration: none;
-}
-
-/* Fixes for multi-line page tags */
-
-#main-content .page-tags {
-    margin: 1em 0 0;
-    padding: 0;
-}
-#main-content .page-tags span {
-    display: inline-block;
-    padding: 0;
-    max-width: 60%;
-}
-#main-content .page-tags a {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-/* Standard Image Block */
-.scp-image-block {
-    border: solid 1px #4B4194;
-    box-shadow: 0 1px 6px rgba(0,0,0,.25);
-    width: 300px;
-}
-
-.scp-image-block.block-right {
-        float: right;
-    clear: right;
-    margin: 0 2em 1em 2em;
-}
-
-.scp-image-block.block-left {
-    float: left;
-    clear: left;
-    margin: 0 2em 1em 0;
-}
-
-.scp-image-block.block-center {
-    margin-right: auto;
-    margin-left: auto;
-}
-.scp-image-block img {
-    border: 0;
-    width: 300px;
-}
-.scp-image-block .scp-image-caption {
-    background-color: #E0E0E0;
-    border-top: solid 1px #4B4194;
-    padding: 2px 0;
-    font-size: 80%;
-    font-weight: bold;
-    text-align: center;
-    width: 300px;
-}
-.scp-image-block > p {
-    margin: 0;
-}
-.scp-image-block .scp-image-caption > p {
-    margin: 0;
-    padding: 0 10px;
-}
-
-/* Forum Customizations */
-.forum-thread-box .description-block {
-    padding: .5em 1em;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px rgba(0,0,0,.15),
-    inset 0 1px 0 rgba(255,255,255,.8),
-    inset 0 10px 5px rgba(255,255,255,.25),
-    inset 0 -15px 30px rgba(0,0,0,.1)
-}
-
-.thread-container .post .head {
-    padding: 0.5em 1em;
-    background-color: #EEEEEE;
-    background: linear-gradient(to right, #EEEEEE, #ECECEE);
-    box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
-    border-radius: 5px 5px 0 0;
-}
-
-/* Hide Forum Signatures */
-.signature {
-    display:none !important;
-}
-
-/* Ruby by Nanimono Demonai */
-
-.ruby, ruby {
-    display:inline-table;
-    text-align:center;
-    white-space:nowrap;
-    line-height:1;
-    height:1em;
-    vertical-align:text-bottom;
-}
-
-.rt, rt {
-    display:table-header-group;
-    font-size:0.6em;
-    line-height:1.1;
-    text-align:center;
-    white-space:nowrap;
-}
-
-/* Keycap */
-
-.keycap {
-    border: 1px solid;
-    border-color: #ddd #bbb #bbb #ddd;
-    border-bottom-width: 2px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background-color: #f9f9f9;
-    padding: 1px 3px;
-    font-family: inherit;
-    font-size: 0.85em;
-    white-space: nowrap;
-}
-
-/* tag style */
-
-.tags {
-display: inline-block;
-margin: 0 0 0 5px;
-padding: 3px 5px 3px 0px;
-height: 13px;
-line-height: 13px;
-font-size: 11px;
-background: #666;
-color: #fff;
-text-decoration: none;
--moz-border-radius-bottomright: 4px;
--webkit-border-bottom-right-radius: 4px;
-border-bottom-right-radius: 4px;
--moz-border-radius-topright: 4px;
--webkit-border-top-right-radius: 4px;
-border-top-right-radius: 4px;
-}
-
-.tags:before {
-content: "";
-padding: 0px 1px 3px 1px;
-float: left;
-position: relative;
-top: -3px;
-left: -10px;
-width: 0;
-height: 0;
-border-color: transparent #666 transparent transparent;
-border-style: solid;
-border-width: 8px 8px 8px 0px;
-}
-
-.tags:after {
-content: "";
-position: relative;
-top: 4.5px;
-left: -8px;
-float: left;
-width: 4px;
-height: 4px;
--moz-border-radius: 2px;
--webkit-border-radius: 2px;
-border-radius: 2px;
-background: #fff;
--moz-box-shadow: -1px -1px 2px #004977;
--webkit-box-shadow: -1px -1px 2px #333;
-box-shadow: -1px -1px 2px #333;
-}
-
-/* Display Black Block by Nanimono Demonai */
-.bblock {
-    color: #000000;
-    background-color:#000000;
-    transition: 2s;
-    text-decoration: none;
-}
-
-.bblock:hover {
-    background-color:#000000;
-    color: #006600;
-    text-decoration: none;
-}
-
-.dblock {
-    color:#000000;
-    background-color:#000000;
-    transition: 2s;
-    text-decoration: none;
-}
-
-.dblock:hover {
-    background-color:transparent;
-    text-decoration: none;
-}
-
-/*
-    2011-11-13 Minobe Hiroyuki @ Marguerite Site
-    www.marguerite.jp/Nihongo/WWW/CSSTips/EmphasizeDots-CSS3.html
-    Edited for the SCP Foundation by Nanimono_Demonai
-*/
-
-.emph {
-    text-emphasis-style: dot ;
-    -webkit-text-emphasis-style: dot ;
-}
-
-/* For FireFox */
-@-moz-document url-prefix() {
-.emph {
-    /* For the environments which comply with CSS3. */
-    font-family: monospace;
-    font-style: normal;
-    font-weight: normal;
-    background-image: url(http://www.scp-wiki.net/local--files/component%3Atheme/dot.png), none;
-    background-repeat: repeat-x;
-    padding: 0.5em 0 0;
-    background-color:transparent;
-    background-clip: padding-box, content-box;
-    background-size: 1em 1.3em, auto;
-}
-}
-
-/* For IE10 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.emph {
-    /* For the environments which comply with CSS3. */
-    font-family: monospace;
-    font-style: normal;
-    font-weight: normal;
-    background-image: url(http://www.scp-wiki.net/local--files/component%3Atheme/dot.png), none;
-    background-repeat: repeat-x;
-    padding: 0.5em 0 0;
-    background-color:transparent;
-    background-clip: padding-box, content-box;
-    background-size: 1em 1.3em, auto;
-}
-}
-
-/* viewport */
-
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-/* IE viewport */
-@-ms-viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-/* opera viewport */
-@-o-viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-/* chrome viewport - maybe it isn't work... */
-@-webkit-viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-/* firefox viewport - maybe it isn't work too... */
-@-moz-viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-/* webkit scrollbar */
-::-webkit-scrollbar
-{
-    width: 9px;    /* for vertical scrollbars */
-    height: 9px; /* for horizontal scrollbars */
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    border-round: 0.5px;
-}
-
-::-webkit-scrollbar-track
-{
-    background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-thumb
-{
-    background: rgba(50, 50, 50, 0.3);
-}
-
-.page-source {
-word-break: break-all;
-}
-
-/* Responsive Web Design */
-img, embed, video, object, iframe, table {
-    max-width: 100%;
-}
-
-#page-content div, #page-content div table {
-    max-width: 100%;
-}
-
-#edit-page-comments {
-    width: 100%;
-}
-
-/* basic Query for mobile devices */
-
-@media (max-width: 767px) {
-.owindow {
-    min-width: 80%;
-    max-width: 99%;
-}
-
-.modal-body .table, .modal-body .table ~ div {
-    float: left;
-}
-
-.owindow .button-bar {
-    float: right;
-}
-
-.owindow div a.btn-primary {
-    width: 100%;
-    float: left;
-}
-
-.mobile-top-bar ul li:last-of-type ul {
-    right: 0;
-}
-
-span, a {
-word-break: break-all;
-}
-}
-
-/* Mobile Media Query */
-@media (max-width: 479px) {
-#search-top-box-input {
-    width: 5em;
-}
-
-#page-content {
-    font-size: 0.9em;
-}
-
-#main-content {
-    margin: 0;
-}
-
-#recent-posts-category {
-width: 100%;
-}
-
-#header, .mobile-top-bar {
-    max-width: 90%;
-}
-
-#side-bar {
-    width: 80%;
-    position: relative;
-}
-
-.top-bar {
-    display:none;
-}
-
-.mobile-top-bar {
-    display: block;
-    padding: 0;
-}
-
-.page-options-bottom a {
-    padding: 0 4px;
-}
-
-#header h1 a {
-    font-size: 100%;
-}
-
-blockquote {
-    margin: 1em 0;
-}
-
-.license-area {
-    font-size: 0.8em;
-}
-
-#header {
-    background-position: 0 5.5em;
-    background-size: 55px 55px;
-}
-
-#header h1, #header h2 {
-    margin-left: 66px;
-}
-
-table.form td, table.form th {
-    float: left;
-}
-
-/*
-td.title {
-    width: 30%;
-}
-*/
-
-td.name {
-    width: 15em;
-}
-
-table.form td, table.form th {
-    padding: 0;
-}
-
-#edit-page-title {
-    max-width: 90%;
-}
-
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
-
-#page-content div, #page-content div table {
-clear: both;
-}
-
-#page-content div.title {
-word-break: keep-all;
-}
-
-}
-
-/* Note Media Query */
-@media (min-width: 480px) and (max-width: 580px) {
-#search-top-box-input {
-    width: 7em;
-}
-
-#main-content {
-    margin: 0 2em 0 2em;
-}
-
-#header, .mobile-top-bar {
-    max-width: 90%;
-}
-
-#side-bar {
-    width: 80%;
-    position: relative;
-}
-
-.top-bar {
-    display:none;
-}
-
-.mobile-top-bar {
-    display: block;
-}
-
-.page-options-bottom a {
-    padding: 0 5px;
-}
-
-#header h1 a {
-    font-size: 120%;
-}
-
-blockquote {
-    margin: 0.5em;
-}
-
-.license-area {
-    font-size: 0.85em;
-}
-
-#header {
-    background-position: 0.5em 4.5em;
-    background-size: 66px 66px;
-}
-
-#header h1, #header h2 {
-    margin-left: 80px;
-}
-
-/*
-td.title {
-    width: 30%;
-}
-*/
-
-#page-content div.title {
-word-break: keep-all;
-}
-
-td.name {
-    width: 15em;
-}
-
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
-
-#page-content div, #page-content div table {
-clear: both;
-}
-}
-
-/* Mini Tablet Media Query */
-@media (min-width: 581px) and (max-width: 767px) {
-#search-top-box-input {
-    width: 8em;
-}
-
-#side-bar {
-    width: 80%;
-    position: relative;
-}
-
-#main-content {
-    margin: 0 3em 0 2em;
-}
-
-#header, .mobile-top-bar {
-    max-width: 90%;
-}
-
-.top-bar {
-    display: none;
-}
-
-.mobile-top-bar {
-    display: block;
-}
-
-.page-options-bottom a {
-    padding: 0 6px;
-}
-
-#header h1 a {
-    font-size: 140%;
-}
-
-.license-area {
-    font-size: 0.9em;
-}
-
-#header {
-    background-position: 1em 4em;
-    background-size: 77px 77px;
-}
-
-#header h1, #header h2 {
-    margin-left: 93px;
-}
-}
-
-/* Tablet Media Query */
-@media (min-width: 768px) and (max-width: 979px) {
-#main-content {
-    margin: 0 4em 0 20em;
-}
-
-#header, #top-bar #side-bar {
-    max-width: 100%;
-}
-
-.top-bar li {
-    margin: 0;
-}
-
-#top-bar ul li.sfhover ul li a, #top-bar ul li:hover ul li a {
-    width: 110px;
-}
-
-.page-options-bottom a {
-    padding: 0 7px;
-}
-
-#header h1 a {
-    font-size: 160%;
-}
-
-.license-area {
-    font-size: 0.95em;
-}
-
-#header {
-    background-position: 1em 4em;
-    background-size: 88px 88px;
-}
-
-#header h1, #header h2 {
-    margin-left: 106px;
-}
-
-.content-panel.left-column, .content-panel.right-column  {
-width: 99%;
-float: left;
-}
-
-#page-content div, #page-content div table {
-clear: both;
-}
-}
-
-/* Desktop Media Query -----------
-@media (min-width: 980px) and (max-width: 1399px) {
-
-}
------------------------------------------- */
-
-/* Wide Monitor Media Query -----
-@media (min-width: 1400px) {
-
-}
------------------------------------------- */
-
-/* off-canvas */
-
-.close-menu {
-    display: none;
-}
-
-@media (max-width: 767px) {
-
-.page-history tbody tr td:last-child {
-width: 35%;
-}
-
-.owindow {
-    min-width: 80%;
-    max-width: 99%;
-}
-
-.modal-body .table, .modal-body .table ~ div {
-    float: left;
-}
-
-.owindow .button-bar {
-    float: right;
-}
-
-.owindow div .btn-primary {
-width: 100%;
-float: left;
-}
-
-.owindow div .btn-primary ~ div {
-width: 100%;
-}
-
-.yui-navset {
-z-index: 1;
-}
-
-#navi-bar, #navi-bar-shadow {
-    display: none;
-}
-
-.open-menu a {
-    position: fixed;
-    bottom: 0.5em;
-    left: 0.5em;
-    z-index: 15;
-    font-family: 'Nanum Gothic', san-serif;
-    font-size: 30px;
-    font-weight: 700;
-    width: 30px;
-    height: 30px;
-    line-height: 0.9em;
-    text-align: center;
-    border: 0.2em solid #888 !important;
-    background-color: #fff !important;
-    border-radius: 3em;
-    color: #888 !important;
-}
-
-.open-menu a:hover {
-    text-decoration: none !important;
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -ms-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    -o-box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-    box-shadow: 0px 0px 20px 3px rgba(153,153,153,1);
-}
-
-#main-content {
-    max-width: 90%;
-    margin: 0 5%;
-    padding: 0;
-    -webkit-transition: 0.5s ease-in-out 0.1s;
-    -moz-transition: 0.5s ease-in-out 0.1s;
-    -ms-transition: 0.5s ease-in-out 0.1s;
-    -o-transition: 0.5s ease-in-out 0.1s;
-    transition: 0.5s ease-in-out 0.1s;
-}
-
-#side-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -25em;
-    width: 17em;
-    height: 100%;
-    background-color: rgb(54, 100, 139);
-    overflow-y: auto;
-    z-index: 10;
-    padding: 1em 1em 0 1em;
-    -webkit-transition: left 0.5s ease-in-out 0.1s;
-    -moz-transition: left 0.5s ease-in-out 0.1s;
-    -ms-transition: left 0.5s ease-in-out 0.1s;
-    -o-transition: left 0.5s ease-in-out 0.1s;
-    transition: left 0.5s ease-in-out 0.1s;
-}
-
-#side-bar:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-
-}
-
-#side-bar:target {
-    display: block;
-    left: 0;
-    width: 17em;
-    margin: 0;
-    border: 1px solid #dedede;
-    z-index: 10;
-}
-
-#side-bar:target + #main-content {
-    left: 0;
-}
-
-#side-bar:target .close-menu {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.3) 1px 1px repeat;
-    z-index: -1;
-}
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+
+<head>
+    <title>Area-CN-07 - SCP基金会</title>
+    
+    
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
+        WIKIREQUEST.info.siteId = 530812;
+        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
+        WIKIREQUEST.info.categoryId = 3342264;
+        WIKIREQUEST.info.themeId = 1;
+        WIKIREQUEST.info.requestPageName = "area-cn-07";
+        OZONE.request.timestamp = 1610183487;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'cn';
+                WIKIREQUEST.info.pageUnixName = "area-cn-07";
+        WIKIREQUEST.info.pageId = 102128948;
+                        WIKIREQUEST.info.lang = "cn";
+        OZONE.lang = "cn";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+                            <meta name="robots" content="index,follow"/>
+                                <meta name="language" content="zh,zh-cn"/>
+                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="zh,zh-cn"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
+
+
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
+                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
+        
+            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
+                
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="/onesignal/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+<style>
+@import url(http://scpsandboxcn.wikidot.com/Area-CN-07-CSS/code/1);
+</style>
+<script src="https://s.nitropay.com/ads-143.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>SCP基金会</span></a></h1>
+                
+                    <h2><span>控制，收容，保护</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<div class="top-bar">
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>SCP-CN系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+</ul>
+</li>
+<li>SCP国际
+<ul>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
+<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
+<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
+<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
+<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
+<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
+<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
+<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
+<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
+<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
+<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
+<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
+<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mobile-top-bar">
+<div class="open-menu">
+<p><a href="#side-bar">≡</a></p>
+</div>
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<div class="side-block" style="background-color: #f0fff6;">
+<div class="heading">
+<p>新人资讯</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
+</div>
+<div class="side-block">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
+<div class="heading">
+<p>SCP-CN系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
+<div class="heading">
+<p>SCP系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
+<div class="heading">
+<p>SCP系列故事</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
+<div class="heading">
+<p>SCP图书馆</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
+<div class="heading">
+<p>网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
+<div class="heading">
+<p>社交</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
+<div class="heading">
+<p>相关网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
+</div>
+<div class="side-block resources" style="background-color: #e7e5e8;">
+<div class="heading">
+<p>写作指导</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
+</div>
+<div class="side-block" style="background-color: #fff0f0;">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="side-block media" style="background-color: #e5e5ff;">
+<div class="heading">
+<p>相关媒体</p>
+</div>
+<div class="menu-item">
+<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
+</div>
+</div>
+<div class="side-block" style="background-color: #f0f0f0;">
+<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
+<span style="font-size:80%;">© SCP基金会<br />
+<a href="/licensing-guide">授权指南</a></span></div>
+</div>
+<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=area-cn-07" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+</div>
+    
+    
+    
+    </div></div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<a class="close-menu" href="###"><br />
+<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            Area-CN-07
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+96</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+
+
+
+<div style="background: #BDBDBD;&quot; &quot;float: center; border: solid 4px #444444; width: 570px; padding: 1px 15px; margin: 10px 10px 10px 40px; box-shadow: 2px 1px 3px rgba(0,0,0,.2);">
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<div style="text-align: center;">
+<h1 id="toc0"><span>SCP基金会机密研究设施副本</span></h1>
+<h2 id="toc1"><span>官方名称：SCP基金会中国分部特殊异常研究设施</span></h2>
+<p><strong>站点识别码：</strong>Taklimakan-Area-CN-07</p>
+</div>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<div style="text-align: center;">
+<h3 id="toc2"><span>设施基础信息</span></h3>
+</div>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wdfiles.com/local--files/area-cn-07/rukou-0" style="width:300px;" alt="rukou-0" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>Area-CN-07主设施的一处入口</p>
+</div>
+</div>
+<p><strong>建立时间：</strong>1988年8月17日。</p>
+<p><strong>主设施地点：</strong>中国，新疆维吾尔自治区，塔克拉玛干沙漠</p>
+<p><strong>设施特殊制度：</strong>全球保护制度</p>
+<p><strong>设施特殊权限：</strong>A07议会</p>
+<p><strong>设施主要职务：</strong>文职管理及异常的收容</p>
+<p><strong>主设施占地面积：</strong>7.17km<sup>2</sup></p>
+<p><strong>特殊划分制度：</strong>划分为六个区域</p>
+<p><strong>建立者：</strong>Adamn Pluto</p>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<div style="text-align: center;">
+<h3 id="toc3"><span>主设施内主要记录的异常</span></h3>
+<table class="wiki-content-table">
+<tr>
+<th>项目编号</th>
+<th>项目等级</th>
+<th>HCML权限管理人员</th>
+</tr>
+<tr>
+<td><a href="/scp-cn-075">SCP-CN-075</a></td>
+<td><span style="color: purple">Thaumiel</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-760">SCP-CN-760</a></td>
+<td><span style="color: purple">Thaumiel</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-840">SCP-CN-840</a></td>
+<td><span style="color: purple">Thaumiel</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1416">SCP-CN-1416</a></td>
+<td><span style="color: purple">Thaumiel</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-438">SCP-CN-438</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-710">SCP-CN-710</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4331640&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Adviser-Shen" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4331640)" /></a><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;">Adviser-Shen</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-878">SCP-CN-878</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-919">SCP-CN-919</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-941">SCP-CN-941</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/meowait" onclick="WIKIDOT.page.listeners.userInfo(4274367); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4274367&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Meowait" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4274367)" /></a><a href="http://www.wikidot.com/user:info/meowait" onclick="WIKIDOT.page.listeners.userInfo(4274367); return false;">Meowait</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1868">SCP-CN-1868</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-zhengshi" onclick="WIKIDOT.page.listeners.userInfo(5288378); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5288378&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Dr Zhengshi" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5288378)" /></a><a href="http://www.wikidot.com/user:info/dr-zhengshi" onclick="WIKIDOT.page.listeners.userInfo(5288378); return false;">Dr Zhengshi</a></span></td>
+</tr>
+<tr>
+<td><a href="/ninth-s-proposal">Ninth的提案</a></td>
+<td><span style="color: gray">Neutralized</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4370469&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Ninth BB" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4370469)" /></a><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;">Ninth BB</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-125">SCP-CN-125</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-273">SCP-CN-273</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3007237&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="LeoOverheat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3007237)" /></a><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;">LeoOverheat</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-313">SCP-CN-313</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3722555&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Resazurin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3722555)" /></a><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;">Resazurin</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-323">SCP-CN-323</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-464">SCP-CN-464</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-669">SCP-CN-669</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1002">SCP-CN-1002</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1006">SCP-CN-1006</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/abigail-ade" onclick="WIKIDOT.page.listeners.userInfo(5984391); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5984391&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Abigail_Ade" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5984391)" /></a><a href="http://www.wikidot.com/user:info/abigail-ade" onclick="WIKIDOT.page.listeners.userInfo(5984391); return false;">Abigail_Ade</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1898">SCP-CN-1898</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1972">SCP-CN-1972</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1994">SCP-CN-1994</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1995">SCP-CN-1995</a></td>
+<td><span style="color: red">Keter</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/meowait" onclick="WIKIDOT.page.listeners.userInfo(4274367); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4274367&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Meowait" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4274367)" /></a><a href="http://www.wikidot.com/user:info/meowait" onclick="WIKIDOT.page.listeners.userInfo(4274367); return false;">Meowait</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-040">SCP-CN-040</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-271">SCP-CN-271</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-276">SCP-CN-276</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-284">SCP-CN-284</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/old-wall" onclick="WIKIDOT.page.listeners.userInfo(2742867); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2742867&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Old wall" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2742867)" /></a><a href="http://www.wikidot.com/user:info/old-wall" onclick="WIKIDOT.page.listeners.userInfo(2742867); return false;">Old wall</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-380">SCP-CN-380</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-493">SCP-CN-493</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3722555&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Resazurin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3722555)" /></a><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;">Resazurin</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-524">SCP-CN-524</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-544">SCP-CN-544</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sleepang" onclick="WIKIDOT.page.listeners.userInfo(3735837); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3735837&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="sleepang" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3735837)" /></a><a href="http://www.wikidot.com/user:info/sleepang" onclick="WIKIDOT.page.listeners.userInfo(3735837); return false;">sleepang</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-587">SCP-CN-587</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-597">SCP-CN-597</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-673">SCP-CN-673</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-688">SCP-CN-688</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-729">SCP-CN-729</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-748">SCP-CN-748</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-848">SCP-CN-848</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-854">SCP-CN-854</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rachud" onclick="WIKIDOT.page.listeners.userInfo(4516971); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4516971&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rachud" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4516971)" /></a><a href="http://www.wikidot.com/user:info/rachud" onclick="WIKIDOT.page.listeners.userInfo(4516971); return false;">Rachud</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-895">SCP-CN-895</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-963">SCP-CN-963</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-979">SCP-CN-979</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967270&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Dr Aral See" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967270)" /></a><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;">Dr Aral See</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1018">SCP-CN-1018</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1104">SCP-CN-1104</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1098">SCP-CN-1098</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1666">SCP-CN-1666</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1899">SCP-CN-1899</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1901">SCP-CN-1901</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1939">SCP-CN-1939</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-alucardsin" onclick="WIKIDOT.page.listeners.userInfo(4513786); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4513786&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Dr AlucardSin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4513786)" /></a><a href="http://www.wikidot.com/user:info/dr-alucardsin" onclick="WIKIDOT.page.listeners.userInfo(4513786); return false;">Dr AlucardSin</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1960">SCP-CN-1960</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1982">SCP-CN-1982</a></td>
+<td><span style="color: orange">Euclid</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-304">SCP-CN-304</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-355">SCP-CN-355</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-411">SCP-CN-411</a></td>
+<td><span style="color: green">Safe</span></td>
+<td>(account deleted)</td>
+</tr>
+<tr>
+<td><a href="/scp-cn-418">SCP-CN-418</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3007237&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="LeoOverheat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3007237)" /></a><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;">LeoOverheat</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-598">SCP-CN-598</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-518">SCP-CN-518</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-542">SCP-CN-542</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-548">SCP-CN-548</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ymq" onclick="WIKIDOT.page.listeners.userInfo(4337532); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4337532&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="YMQ" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4337532)" /></a><a href="http://www.wikidot.com/user:info/ymq" onclick="WIKIDOT.page.listeners.userInfo(4337532); return false;">YMQ</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-607">SCP-CN-607</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4425890&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Kawa_bata" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4425890)" /></a><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;">Kawa_bata</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-627">SCP-CN-627</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-663">SCP-CN-663</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fighters-in-flags" onclick="WIKIDOT.page.listeners.userInfo(4220300); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4220300&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Fighters in flags" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4220300)" /></a><a href="http://www.wikidot.com/user:info/fighters-in-flags" onclick="WIKIDOT.page.listeners.userInfo(4220300); return false;">Fighters in flags</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-685">SCP-CN-685</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4331640&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Adviser-Shen" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4331640)" /></a><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;">Adviser-Shen</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-776">SCP-CN-776</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4370469&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Ninth BB" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4370469)" /></a><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;">Ninth BB</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-802">SCP-CN-802</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-814">SCP-CN-814</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-828">SCP-CN-828</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-984">SCP-CN-984</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1123">SCP-CN-1123</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1539">SCP-CN-1539</a></td>
+<td><span style="color: green">Safe</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-048-j">SCP-CN-048-J</a></td>
+<td><span style="color: yellow">Joke</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3621630&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="JustinTrenchcoat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3621630)" /></a><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;">JustinTrenchcoat</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-052-j">SCP-CN-052-J</a></td>
+<td><span style="color: yellow">Joke</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3621630&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="JustinTrenchcoat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3621630)" /></a><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;">JustinTrenchcoat</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-660-j">SCP-CN-660-J</a></td>
+<td><span style="color: yellow">Joke</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4370469&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Ninth BB" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4370469)" /></a><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;">Ninth BB</a></span></td>
+</tr>
+</table>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/scp-cn-116-ex">SCP-CN-116-EX</a></td>
+<td><span style="color: brown">Explained</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></td>
+</tr>
+<tr>
+<td><a class="newpage" href="/adamnpluto-s-proposal">Adamn Pluto的提案</a></td>
+<td><span style="color: brown">Malkuth</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-277">SCP-CN-277</a></td>
+<td><span style="color: brown">Apollyon</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1011">SCP-CN-1011</a></td>
+<td><span style="color: brown">Archon</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/justaswelljar-pepper" onclick="WIKIDOT.page.listeners.userInfo(4301969); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4301969&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="JustAswellJar Pepper" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4301969)" /></a><a href="http://www.wikidot.com/user:info/justaswelljar-pepper" onclick="WIKIDOT.page.listeners.userInfo(4301969); return false;">JustAswellJar Pepper</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1244">SCP-CN-1244</a></td>
+<td><span style="color: brown">Godel</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1245">SCP-CN-1245</a></td>
+<td><span style="color: brown">Tiamat</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1260">SCP-CN-1260</a></td>
+<td><span style="color: brown">Chhokmah</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1261">SCP-CN-1261</a></td>
+<td><span style="color: brown">Eparch</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></td>
+</tr>
+<tr>
+<td><a href="/scp-cn-1900">SCP-CN-1900</a></td>
+<td><span style="color: brown">Chhokmah</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<div style="text-align: center;">
+<h3 id="toc4"><span>收录于Area-CN-07主设施内图书馆的文献</span></h3>
+<div class="list-pages-box">    
+
+<p><a href="/adamn">小憩</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/duizhi">对峙</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/gonecn">凋谢</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/gone-vol-2">凋零</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/silence-the-fated-ending">既定的结局</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/toaa-root" onclick="WIKIDOT.page.listeners.userInfo(3719976); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3719976&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Toaa root" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3719976)" /></a><a href="http://www.wikidot.com/user:info/toaa-root" onclick="WIKIDOT.page.listeners.userInfo(3719976); return false;">Toaa root</a></span></p>
+<p><br />
+<a href="/xizao">洗澡</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/thanos">演绎部的一天</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/protectmonth">国产异常保护月</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/andy-w7" onclick="WIKIDOT.page.listeners.userInfo(2964191); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2964191&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Andy_W7" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2964191)" /></a><a href="http://www.wikidot.com/user:info/andy-w7" onclick="WIKIDOT.page.listeners.userInfo(2964191); return false;">Andy_W7</a></span></p>
+<p><br />
+<a href="/the-source-of-the-plague">瘟疫之源</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4465342&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="The Salt Fish" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4465342)" /></a><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;">The Salt Fish</a></span></p>
+<p><br />
+<a href="/tupac">5</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></p>
+<p><br />
+<a href="/travel-by-public-i-agree">公款旅游：准假</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4465342&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="The Salt Fish" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4465342)" /></a><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;">The Salt Fish</a></span></p>
+<p><br />
+<a href="/wallisbroken">破壁行动</a> 记录者： (user deleted)</p>
+<p><br />
+<a href="/before-the-reality">现实以前</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></p>
+<p><br />
+<a href="/rip-dr-ecun">一位博士就埋葬在这里</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></p>
+<p><br />
+<a href="/recovery-by-our-hands">手复人躯</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4465342&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="The Salt Fish" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4465342)" /></a><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;">The Salt Fish</a></span></p>
+<p><br />
+<a href="/bostongarden">花园球馆今天没有比赛</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4425890&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Kawa_bata" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4425890)" /></a><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;">Kawa_bata</a></span></p>
+<p><br />
+<a href="/jail-of-freedom">“自由”生活</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></p>
+<p><br />
+<a href="/foundation-won-t-watching-you">Foundation won't watch you</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4465342&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="The Salt Fish" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4465342)" /></a><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;">The Salt Fish</a></span></p>
+<p><br />
+<a href="/the-ash-of-the-world">世界的灰烬，随风飘向那夜空</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4370469&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="Ninth BB" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4370469)" /></a><a href="http://www.wikidot.com/user:info/ninth-bb" onclick="WIKIDOT.page.listeners.userInfo(4370469); return false;">Ninth BB</a></span></p>
+<p><br />
+<a href="/the-last-moment">机娘的噩梦</a> 记录者： <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1610183487" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></p>
+
+    
+    <div class="pager"><span class="pager-no">page 1 of 3</span><span class="current">1</span><span class="target"><a href="/area-cn-07/p/2">2</a></span><span class="target"><a href="/area-cn-07/p/3">3</a></span><span class="target"><a href="/area-cn-07/p/2">next &raquo;</a></span></div>
+    
+    </div></div>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<div style="text-align: center;">
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wdfiles.com/local--files/area-cn-07/yanjku" style="width:300px;" alt="yanjku" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>Area-CN-07的研究设备</p>
+</div>
+</div>
+<h3 id="toc5"><span>设施内部的特殊划分</span></h3>
+<ul>
+<li>办公区域：在Area-CN-07内，办公室是最常见的建筑。通常，Area-CN-07会将员工的上班区域控制在一个楼层。</li>
+<li>住宿区域：Area-CN-07内的住宿水平一向以高水平著称。站点主管Adamn认为，能够在一天中发挥出自己所有实力的前提是休息好。Area-CN-07内的任何一个通电角落都会有AIAD员工的存在以便辅助员工的生活。</li>
+<li>娱乐区域：在Area-CN-07内，休闲不是不被允许的。在Area-CN-07的每一个地方你几乎都能看到休闲场地的设计。尽管很少有人体验它。</li>
+<li>餐厅：Area-CN-07内部的餐厅得到了所有员工的一致好评，原因在于Area-CN-07提供的菜式多样，所有的厨师仅会制作自己家乡的菜肴。</li>
+<li>运动场地：运动场地与娱乐场地一样可以供人员消遣，但是大多数情况下娱乐场地的人数少于运动场地。</li>
+</ul>
+<div style="text-align: center;">
+<p><span style="font-size:large;"><br />
+Sector<br /></span></p>
+</div>
+<br />
+为保证对项目异常的钻研足够深入，Area-CN-07根据不同的异常分为五个分区域及一个总区域。总区域负责了对Area-CN-07的管理工作，文书及人事工作。而五个分区则负责了对异常的具体收容。</div>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<h3 id="toc6"><span>设施内工作人员</span></h3>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wdfiles.com/local--files/area-cn-07/talk_0" style="width:300px;" alt="talk_0" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>Philip博士与Dominic博士在交谈</p>
+</div>
+</div>
+<p><strong>站长：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3550607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="#ApmV" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3550607)" /></a><a href="http://www.wikidot.com/user:info/apmv" onclick="WIKIDOT.page.listeners.userInfo(3550607); return false;">#ApmV</a></span></strong><br />
+<strong>副站长：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3007237&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="LeoOverheat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3007237)" /></a><a href="http://www.wikidot.com/user:info/leooverheat" onclick="WIKIDOT.page.listeners.userInfo(3007237); return false;">LeoOverheat</a></span></strong></p>
+<p><strong>信息数据部主管：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4008607&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="62ECN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4008607)" /></a><a href="http://www.wikidot.com/user:info/62ecn" onclick="WIKIDOT.page.listeners.userInfo(4008607); return false;">62ECN</a></span></strong></p>
+<p><strong>主管：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3722555&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Resazurin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3722555)" /></a><a href="http://www.wikidot.com/user:info/resazurin" onclick="WIKIDOT.page.listeners.userInfo(3722555); return false;">Resazurin</a></span></strong><br />
+<strong>主管：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3742139&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="MadeInHeaven" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3742139)" /></a><a href="http://www.wikidot.com/user:info/madeinheaven" onclick="WIKIDOT.page.listeners.userInfo(3742139); return false;">MadeInHeaven</a></span></strong><br />
+<strong>主管：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3621630&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="JustinTrenchcoat" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3621630)" /></a><a href="http://www.wikidot.com/user:info/justintrenchcoat" onclick="WIKIDOT.page.listeners.userInfo(3621630); return false;">JustinTrenchcoat</a></span></strong><br />
+<strong>主管：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3290685&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Rye Travis" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3290685)" /></a><a href="http://www.wikidot.com/user:info/rye-travis" onclick="WIKIDOT.page.listeners.userInfo(3290685); return false;">Rye Travis</a></span></strong></p>
+<p><strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/day-by-die" onclick="WIKIDOT.page.listeners.userInfo(3626255); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3626255&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="day by die" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3626255)" /></a><a href="http://www.wikidot.com/user:info/day-by-die" onclick="WIKIDOT.page.listeners.userInfo(3626255); return false;">day by die</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4471374&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="readeiier" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4471374)" /></a><a href="http://www.wikidot.com/user:info/readeiier" onclick="WIKIDOT.page.listeners.userInfo(4471374); return false;">readeiier</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2950163&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="maki_hisane" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2950163)" /></a><a href="http://www.wikidot.com/user:info/maki-hisane" onclick="WIKIDOT.page.listeners.userInfo(2950163); return false;">maki_hisane</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/notexam-houses" onclick="WIKIDOT.page.listeners.userInfo(4301802); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4301802&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Notexam Houses" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4301802)" /></a><a href="http://www.wikidot.com/user:info/notexam-houses" onclick="WIKIDOT.page.listeners.userInfo(4301802); return false;">Notexam Houses</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/toaa-root" onclick="WIKIDOT.page.listeners.userInfo(3719976); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3719976&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Toaa root" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3719976)" /></a><a href="http://www.wikidot.com/user:info/toaa-root" onclick="WIKIDOT.page.listeners.userInfo(3719976); return false;">Toaa root</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4371077&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Pric" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4371077)" /></a><a href="http://www.wikidot.com/user:info/pric" onclick="WIKIDOT.page.listeners.userInfo(4371077); return false;">Pric</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6167306&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="EveTerminus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6167306)" /></a><a href="http://www.wikidot.com/user:info/eveterminus" onclick="WIKIDOT.page.listeners.userInfo(6167306); return false;">EveTerminus</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4465342&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="The Salt Fish" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4465342)" /></a><a href="http://www.wikidot.com/user:info/the-salt-fish" onclick="WIKIDOT.page.listeners.userInfo(4465342); return false;">The Salt Fish</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/xiao-lin" onclick="WIKIDOT.page.listeners.userInfo(3711439); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3711439&amp;amp;size=small&amp;amp;timestamp=1594946796" alt="Xiao Lin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3711439)" /></a><a href="http://www.wikidot.com/user:info/xiao-lin" onclick="WIKIDOT.page.listeners.userInfo(3711439); return false;">Xiao Lin</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fomal" onclick="WIKIDOT.page.listeners.userInfo(4681073); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4681073&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Fomal" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4681073)" /></a><a href="http://www.wikidot.com/user:info/fomal" onclick="WIKIDOT.page.listeners.userInfo(4681073); return false;">Fomal</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967806&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="ShineShadowD" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967806)" /></a><a href="http://www.wikidot.com/user:info/shineshadowd" onclick="WIKIDOT.page.listeners.userInfo(3967806); return false;">ShineShadowD</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/yuannn" onclick="WIKIDOT.page.listeners.userInfo(6062512); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6062512&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="YUANNN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6062512)" /></a><a href="http://www.wikidot.com/user:info/yuannn" onclick="WIKIDOT.page.listeners.userInfo(6062512); return false;">YUANNN</a></span></strong><br />
+<strong>高级研究员：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-naxurt" onclick="WIKIDOT.page.listeners.userInfo(4423816); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4423816&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Dr_Naxurt" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4423816)" /></a><a href="http://www.wikidot.com/user:info/dr-naxurt" onclick="WIKIDOT.page.listeners.userInfo(4423816); return false;">Dr_Naxurt</a></span></strong></p>
+<p><strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ymq" onclick="WIKIDOT.page.listeners.userInfo(4337532); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4337532&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="YMQ" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4337532)" /></a><a href="http://www.wikidot.com/user:info/ymq" onclick="WIKIDOT.page.listeners.userInfo(4337532); return false;">YMQ</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3967270&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Dr Aral See" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3967270)" /></a><a href="http://www.wikidot.com/user:info/dr-aral-see" onclick="WIKIDOT.page.listeners.userInfo(3967270); return false;">Dr Aral See</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/old-wall" onclick="WIKIDOT.page.listeners.userInfo(2742867); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2742867&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Old wall" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2742867)" /></a><a href="http://www.wikidot.com/user:info/old-wall" onclick="WIKIDOT.page.listeners.userInfo(2742867); return false;">Old wall</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/andy-w7" onclick="WIKIDOT.page.listeners.userInfo(2964191); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2964191&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Andy_W7" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2964191)" /></a><a href="http://www.wikidot.com/user:info/andy-w7" onclick="WIKIDOT.page.listeners.userInfo(2964191); return false;">Andy_W7</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fighters-in-flags" onclick="WIKIDOT.page.listeners.userInfo(4220300); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4220300&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Fighters in flags" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4220300)" /></a><a href="http://www.wikidot.com/user:info/fighters-in-flags" onclick="WIKIDOT.page.listeners.userInfo(4220300); return false;">Fighters in flags</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4425890&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Kawa_bata" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4425890)" /></a><a href="http://www.wikidot.com/user:info/kawa-bata" onclick="WIKIDOT.page.listeners.userInfo(4425890); return false;">Kawa_bata</a></span></strong><br />
+<strong>项目助理：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4331640&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="Adviser-Shen" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4331640)" /></a><a href="http://www.wikidot.com/user:info/adviser-shen" onclick="WIKIDOT.page.listeners.userInfo(4331640); return false;">Adviser-Shen</a></span></strong></p>
+<p><strong>外勤特工：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/fk-nakago" onclick="WIKIDOT.page.listeners.userInfo(4013440); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4013440&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="FK-Nakago" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4013440)" /></a><a href="http://www.wikidot.com/user:info/fk-nakago" onclick="WIKIDOT.page.listeners.userInfo(4013440); return false;">FK-Nakago</a></span></strong><br />
+<strong>外勤特工：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/sleepang" onclick="WIKIDOT.page.listeners.userInfo(3735837); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3735837&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="sleepang" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3735837)" /></a><a href="http://www.wikidot.com/user:info/sleepang" onclick="WIKIDOT.page.listeners.userInfo(3735837); return false;">sleepang</a></span></strong><br />
+<strong>外勤特工：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/hoily" onclick="WIKIDOT.page.listeners.userInfo(4202002); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4202002&amp;amp;size=small&amp;amp;timestamp=1594946797" alt="hoily" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4202002)" /></a><a href="http://www.wikidot.com/user:info/hoily" onclick="WIKIDOT.page.listeners.userInfo(4202002); return false;">hoily</a></span></strong></p>
+</div>
+<div class="content-panel standalone" style="font-family: Courier New, Courier, monospace; width: auto; padding: 10px 30px; margin: 20px auto; background: url(http://scpsandbox2.wikidot.com/sirens-sandbox-3/local--files/sirens-sandbox-2/folder.jpg) repeat; text-shadow: 1px 1px 1px rgba(0,0,0,.25)">
+<h2 id="toc7"><span>其他Area-CN-07的设施</span></h2>
+<p><a href="/area-cn-07-1">Area-CN-07-α</a><br />
+<a href="/area-cn-07-2">Area-CN-07-β</a><br />
+<a href="/area-cn-07-3">Area-CN-07-γ</a><br />
+<a href="/area-cn-07-4">Area-CN-07-δ</a><br />
+<a href="/area-cn-07-5">Area-CN-07-ε</a></p>
+<div style="display: inline-block; border-radius: 10px; border:dashed 1px #B22222; background:#A9A9A9; float:top; width:96.5%; padding:10px">
+<p>请求错误：未能搜索到更多关于 Area-CN-07 的相关<a href="/ninth-s-proposal">站点信息</a></p>
+</div>
+<br />
+<br /></div>
+</div>
+
+                    </div>
+
+                            
+            <!-- wikidot_bottom_300x250 -->
+<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
+<script type='text/javascript'>
+nads.createAd('wad-scp-wiki-cn-below-content', {
+  "refreshLimit": 10,
+  "refreshTime": 83,
+  "sizes": [ [ 300, 250 ] ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  }
+  });
+</script>
+        
+    
+
+                    
+
+
+
+                    
+                        <div class="page-tags">
+                            <span>
+                                <a href="/system:page-tags/tag/area-cn-07#pages">area-cn-07</a><a href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83#pages">中心</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E7%AB%99%E7%82%B9#pages">站点</a>
+                            </span>
+                        </div>
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">页面版本: 106, 最后编辑于: <span class="odate time_1594946795 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">17 Jul 2020 00:46</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+96</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
+<a href="/forum/t-6956537/area-cn-07" class="btn btn-default" id="discuss-button">讨论 (28)</a>
+<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
+</div>
+基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                <div id="footer-bar">
+  <div>
+     </div>
+  <h2>其它有趣的网站</h2>
+  
+  <div class="units">
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://scp-yerko-4.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-yerko-4.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://scp-yerko-4.wikidot.com">Yerko&#039;s Sandbox IV</a></h3>
+            <div class="desc">          
+              ¿Cuatro ya? LeL
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://hswiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/hswiki.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://hswiki.wikidot.com">.</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://caughtnotsleeping.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/caughtnotsleeping.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://caughtnotsleeping.wikidot.com">CaughtNotSleeping</a></h3>
+            <div class="desc">          
+              It&#039;s just a game...It&#039;s just a game...
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://scpguy.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpguy.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://scpguy.wikidot.com">FakeProGaming Wiki Offical Website</a></h3>
+            <div class="desc">          
+              FakeProGaming Wiki Offical Website
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        请点此编辑本页内容。    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
+    <div id="edit-append-button-hovertip">
+        在不编辑整个页面源代码的情况下添加内容。    </div>
+    <div id="history-button-hovertip">
+        看看本页过去是如何沿革的。    </div>
+    <div id="discuss-button-hovertip">
+        若您想要讨论本页内容 - 这是最简单的方法。    </div>
+    <div id="files-button-hovertip">
+        检视并管理本页附件。    </div>
+    <div id="site-tools-button-hovertip">
+        管理网站的实用工具。    </div>
+    <div id="backlinks-button-hovertip">
+        检视链接至本页或引用本页的页面。    </div>
+    <div id="rename-move-button-hovertip">
+        变更页面名称（及URL 位址，或许会影响分类）。    </div>
+    <div id="view-source-button-hovertip">
+        在不编辑的情形下检视维基原始码。    </div>
+    <div id="parent-page-button-hovertip">  
+        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
+            <div id="abuse-report-button-hovertip">
+            向管理员举报本页有令人反感的内容。        </div>
+        <div id="bug-report-button-hovertip">
+            事情不如预期？看看您可以做些什么。        </div>
+        <div id="wikidot-help-button-hovertip">
+            一般的 Wikidot.com 文件与说明。        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com 隐私政策。          
+        </div>
+    </div>
+</body>
+</html>

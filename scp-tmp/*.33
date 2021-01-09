@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>Site-CN-06人事档案存储服务器 E扇区 - SCP基金会</title>
+    <title>Dr. Foymug的人事档案 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "dr-eule-s-personnel-file";
-        OZONE.request.timestamp = 1610161248;
+        WIKIREQUEST.info.requestPageName = "dr-foymug-s-personnel-file";
+        OZONE.request.timestamp = 1610181175;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "dr-eule-s-personnel-file";
-        WIKIREQUEST.info.pageId = 100773304;
+                WIKIREQUEST.info.pageUnixName = "dr-foymug-s-personnel-file";
+        WIKIREQUEST.info.pageId = 323051589;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,49 +117,127 @@
     </script>
         
 <style>
-#header {
-    background: url(https://s2.ax1x.com/2019/01/10/FOYglq.png) 1px 20px no-repeat;
-}
-#header h1 a span {
+.number {
     display: none;
 }
-#header h1 a::before {
-    content: "Site-CN-06";
-    font-family: 'Times New Roman', cursive;
-    color: #ffffff;
-    bottom: -2em;
-    text-shadow:
-        1px 1px 1px #000;
+
+#prw54355{
+display:none
 }
-#header h2 {
-    display: inline-block;
-    position: absolute;
-    bottom: 30%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 65px 125px 0px;
+</style>
+<style>
+.infobox {
+ display:inline-box;
+ overflow:hidden;
+ position:fixed;
+ right: 1em;
+ bottom: 2em;
+ width: 21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:#ffffff;
+ opacity: 1;
+ transition: all 0.5s ease-out;
 }
-#header h2 span{
-    font-size: 0px;
-    padding: 0px 0px;
+
+.infobox:hover {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
 }
-#header h2:after {
-    content: "站点员工人事档案";
-    color: #ffffff;
-    text-shadow: 1px 1px 1px #000;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
-    white-space: pre;
+
+.preview{
+ color:grey;
+ width:100%;
+ display: inline-block;
+ padding-left:1%;
+ transition: box-shadow 1s ease-out;
 }
-div#container-wrap{background: url("https://s2.ax1x.com/2019/01/09/FLJCTJ.png") top left repeat-x;
-background-position-y: -50px;
+
+.preview:hover{
+ box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.19);
+ transition: box-shadow 0.3s ease-out;
 }
-h1, #page-title {
-    color: #282e48;
-    padding: 0 0 0.25em;
-    margin: 0 0 0.6em;
-    font-weight: normal;
+
+.preview.yes:hover, .preview.true:hover{
+  background: url('http://scpsandboxcn.wikidot.com/local--files/asriel3/logo.png') 80% 50% fixed no-repeat;
 }
+
+.preview .span { 
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease-in-out;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ position:fixed;
+ z-index: 11;
+ right: 1em;
+ bottom: 2em;
+ width:21%;
+ width: calc(50vw - 520px);
+ min-width: 250px;
+ height:23%;
+ padding:1%;
+ float:top; 
+ color:grey;
+ text-size:0.9em;
+ font-family:微软细黑, Segoe UI Light,Verdana,sans-serif;
+}
+
+.preview:hover .span { 
+ opacity: 1;
+ background-color:#ffffff;
+}
+
+.collab-header{
+ display:none;
+}
+
+.imagepre{
+ background:#fff;
+ max-width:19%;
+ max-height:40%;
+ position:fixed;
+ right: 2em;
+ bottom:calc(23% + 3em);
+ box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagepre.\{\$image\} {
+display:none
+}
+
+.translation.\{\$translation\} {
+display:none
+}
+
+.sortbar.no{
+display:none
+}
+
+@media screen and (max-width:992px) {
+    .preview .span{
+        display: none;
+    }
+    .infobox {
+        position: relative;
+        margin: 1em auto;
+        right: 0;
+        bottom: 0;
+        height: 9em;
+    }
+}
+
+#page-options-container {
+ background: transparent;
+ position: relative;
+ z-index: 10;
+}
+
+#action-area { position: relative; z-index: 20; }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -509,7 +587,7 @@ h1, #page-title {
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=dr-eule-s-personnel-file" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=dr-foymug-s-personnel-file" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -531,7 +609,7 @@ h1, #page-title {
                     
                     
                         <div id="page-title">
-                            Site-CN-06人事档案存储服务器 E扇区
+                            Dr. Foymug的人事档案
                         </div>
                     
 
@@ -546,453 +624,1270 @@ h1, #page-title {
 
 
 
-
-<div style="text-align: center;">
-<blockquote>
-<p><em>勝ち取りたいものもない</em><br />
-<em>我怎能成为无欲无求</em><br />
-<br />
-<em>無欲なバカにはなれない</em><br />
-<em>无心奋进的愚人</em><br />
-<br />
-<em>それで君はいいんだよ</em><br />
-<em>不过你无需改变</em><br />
-<br />
-<em>ヒリヒリと生き様を</em><br />
-<em>为了活出刺激的一生</em><br />
-<br />
-<em>その為に死ねるなにかを</em><br />
-<em>就用值得付出生命的信念</em><br />
-<br />
-<em>この時代に叩きつけてやれ</em><br />
-<em>冲击这个时代吧</em><br />
-<br />
-<em>——《RAGE OF DUST》by SPYAIR</em></p>
-</blockquote>
-</div>
-<p>欢迎你，我的朋友</p>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
 </script>
-<div id="wiki-tabview-977b20e29c18fcdbfb73410749cec2a9" class="yui-navset">
+<div id="wiki-tabview-ea5ba51b6a37753c3a4375534216f994" class="yui-navset">
 <ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>Dr.Eule的个人档案</em></a></li>
-<li><a href="javascript:;"><em>Dr.Ji的人事档案</em></a></li>
-<li><a href="javascript:;"><em>Vodka的人事档案</em></a></li>
-<li><a href="javascript:;"><em>Fahrer的人事档案</em></a></li>
+<li class="selected"><a href="javascript:;"><em>Dr. Foymug的人事档案</em></a></li>
+<li><a href="javascript:;"><em>经手的项目文档</em></a></li>
+<li><a href="javascript:;"><em>翻译的总部文档</em></a></li>
+<li><a href="javascript:;"><em>.</em></a></li>
+<li><a href="javascript:;"><em>.</em></a></li>
+<li><a href="javascript:;"><em>.</em></a></li>
+<li><a href="javascript:;"><em>.</em></a></li>
+<li><a href="javascript:;"><em>.</em></a></li>
 </ul>
 <div class="yui-content">
 <div id="wiki-tab-0-0">
-<p><em>“也许有这样那样的理由逃避，也许有这样那样的理由离开。但是，在那一天，为了保护素昧平生的机动特遣队的伤员，他勇敢地抓起了步枪，去面对从未面对过的巨大生物。他那时候甚至还没有加入这里。事实上，在那一刻他所表现出的勇气，已经让他拥有了加入这里的资格。”</em>——Site-CN-06 人事部门主管 ██</p>
-<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180812231324.jpg" style="width:300px;" alt="%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180812231324.jpg" class="image" />
-<div class="scp-image-caption" style="width:300px;">
-<p>一次在漫展现场发生的SCP-CN-822收容失效事件中仓促上阵未更换为基金会着装的Dr.Eule</p>
-</div>
-</div>
-<p><strong>姓名：</strong>刘君道，自称Eule“Nemo”Lau</p>
-<p><strong>别称：</strong>左轮庸医、人质拯救者（指彩六人质局表现）、吃货研究员、特工夜枭</p>
-<p><strong>安全许可等级：</strong>3级，部分项目为4级</p>
-<p><strong>职务：</strong>研究员，MTF-CN-Gamma-06负责人</p>
-<p><strong>所属设施：</strong><a href="http://scp-wiki-cn.wikidot.com/site-cn-06">Site-CN-06</a>，实际上满地跑</p>
-<p><strong>外貌描述：</strong>28岁，男性，黄种人，黑发棕瞳，身高176体重，60公斤上下</p>
-<p><strong>毕业院校：</strong>美国███大学医学院</p>
-<p><strong>加入基金会途径：</strong>事故CN-███后被基金会吸收</p>
-<p><span style="color: white"><strong>使用Rider System时的危险等级：</strong>七级</span></p>
-<p><strong>爱好：</strong>游泳、网球、射击、读书、打彩六以及<span style="text-decoration: line-through;">彩虹六号指定云联动手游</span>少女██、打wota、<span style="text-decoration: line-through;">吃各种各样的美食</span>、擦军靴</p>
-<p><strong>特长：</strong>历史学、医学、院前急救、地理学、生物学</p>
-<p><strong>服装：</strong>通常情况下为灰色上衣黑色运动裤军靴，外穿一件白大褂<span style="text-decoration: line-through;">左胸前的兜里插着一根金色的Lamy LX钢笔</span>，跟随MTF-CN-Gamma-06执行任务时为机动特遣队标准着装</p>
-<p><strong>简介：</strong>Eule是一个风趣幽默喜好运动的……“狂热追番者”，喜欢唠嗑，除了看书或者思考人生的时候。拥有不错的步枪射击成绩（在SCP-CN-███收容失效时曾使用一把没有任何配件的AK12式自动步枪在2秒内连续射击10颗子弹且全部击中在73米外的SCP-CN-███的直径不到5cm的眼眶内，压制住了项目）以及惨不忍睹的手枪射击成绩（除了用倍镜左轮的时候）（Eule：有本事放进10米内啊！把靶子放在25米是什么意思！我要见主管！我要见主管！）。当然，偶尔星际也是正常情况。而且，身位一名不喜欢坐办公室的研究员，他经常跟着MTF-CN-Gamma-06一起出动<span style="text-decoration: line-through;">也因此经历过更多危险变得……就算坐在巨人观旁边也能安静的啃煎饼果子</span>。</p>
-<p>自述自己首先是一名医生，然后才是研究员。因此会拒绝执行有悖于希波克拉底誓言的任务。在对D级人员的使用上慎之又慎。</p>
-<p>Eule的前18年在中国度过，随后在亚利桑那经历了一年的大学生活（顺便掌握了基础德语……虽然忘得差不多了）之后转校到了俄亥俄，并在俄亥俄的三年学习生活中练出了一手极好的枪法——仅限于长枪。在宾夕法尼亚州的医学生生涯对他造成的影响伴随终生。</p>
-<p>喜欢喝Jagermeister这点在国内就有了，不提。</p>
-<p>与Eule聊天时的禁忌在于：不要在他面前秀恩爱，不要在他面前给侵华日军洗地。前者会使他情绪低落，后者……他曾经因为这一点徒手将一名日本分部的成员打至脑震荡同时4根肋骨骨折。同样的禁忌在于他的手办。据Eule本人声称他之所以在SCP-CN-███收容事件中打出如此精准的射击，只是因为收容失效时产生的震动将他的南小鸟手办震倒。</p>
-<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wikidot.com/local--files/eulenlauii/%E6%AD%A3%E5%9C%A8%E4%BC%91%E6%81%AF%E7%9A%84Eule" style="width:300px;" alt="%E6%AD%A3%E5%9C%A8%E4%BC%91%E6%81%AF%E7%9A%84Eule" class="image" />
-<div class="scp-image-caption" style="width:300px;">
-<p>正在休息的Dr.Eule</p>
-</div>
-</div>
-<p>Eule会随身携带一把CZ75 Shadow2手枪和一把加装倍镜的MR73左轮手枪，只不过从来没有人见过他将枪口指向自己的同事，哪怕是在极度愤怒的情况下。</p>
-<p>对于异常人形以及为基金会工作的现实扭曲者们，Eule始终秉承着一视同仁的心态。毕竟，不管走到哪里，对于Eule而言，跨出大学校门前许下的誓言会伴随他终生。嘛，毕竟有一点点逆模因抗性真的可以为所欲为。</p>
-<blockquote>
-<p><em>In every house where I come I will enter only for the good of my patients, keeping myself far from all intentional ill-doing and all seduction and especially from the pleasures of love with women or with men, be they free or slaves.——希波克拉底誓言</em></p>
-</blockquote>
-<p><span style="text-decoration: line-through;">这个逼人要喝酒的时候让他喝，不然他可能会直接拿可乐和医用酒精兑着喝</span></p>
-<p><span style="color: white">他曾经接触过异常，没错。他是个很勇敢的年轻人，也很鲁莽。他被卷入过异常事件，一次。他几乎死了，但他没有死。他变成了他和她。他还是一样的勇敢，她，几乎是他的相反面，却也在渐渐接近。很奇怪的是，他和她没有任何基因上的亲缘关系，骨龄也出现了差别，尽管他是在特遣队的面前变成他和她……啊该死的逻辑。如果说上帝让他在离开我们之后又找了回来，那就不要让他走了。顺便，让她也来吧。</span></p>
-<p><span style="color: white">在正式加入基金会之前，Eule在俄亥俄的一次见义勇为行动中被枪匪使用的异常武器击中，造成</span><br />
-<span style="color: red">@#￥！#！@￥@</span><br />
-<span style="color: white">在基金会的医疗中心接受治疗后被实施记忆消除并释放。在其本人的记忆中关于枪战的记忆被修改为“在营救乔█时被击中导致昏迷”。</span></p>
-<p><span style="color: red">Eule的履历</span><br />
-2008-2009：亚利桑那州立大学生物化学专业<br />
-2009-2012：俄亥俄州立大学生物化学专业，初级日语课程，美国陆军CBRN威胁防护培训<br />
-2012-2016：宾夕法尼亚州███大学医学院临床医学系，得克萨斯州圣安东尼奥慈爱医院实习，美国陆军CBRN威胁防护训练<br />
-2016.7-2016.8：天津市石菖蒲医院实习外科医生<br />
-2016.8.01：SCP-CN-███收容失效事件中为保护伤员持枪参战<br />
-2016.9-2017.5：培训期<br />
-2017.5：正式宣誓加入基金会，筹建CBRN特遣队<br />
-2017.7：担任机动特遣队CN-Gamma-06“免疫系统”指挥官至今，接手SCP-CN-822的调查</p>
+<p><strong>代号：</strong>Dr. Foymug</p>
+<p><strong>状态：</strong>在职</p>
+<p><strong>真实姓名：</strong>█████</p>
+<p><strong>性别：</strong>男</p>
+<p><strong>安全许可等级：</strong>3级</p>
+<p><strong>职务：</strong>非著名研究员</p>
+<p><strong>所属站点：</strong>无</p>
+<p><strong>个人特质：</strong></p>
+<ul>
+<li>自称是一个流浪研究员，从不在一个站点常驻，也不隶属于流动者站点。用他自己的话说，他永远在寻找最适合自己的站点的路上。曾经去过西藏，成功地解读出一份末日手稿可能导致的部分宇宙末日情景；也到过繁华的██市，琢磨一台出故障无法开启传送的自传送游戏设备。</li>
+</ul>
+<ul>
+<li>对于经手的项目荤素不忌，没有特定要求，没有固定模式。从生物到空间再到概念，从人畜无害的异常工艺品到必须以最小心的心态对待、危险而棘手的带敌意实体，只要戳中他的点，什么都可以接。兴趣点很泛也很谜。</li>
+</ul>
+<ul>
+<li>不感兴趣的内容倒十分明确：演绎部、形而上学、跨叙事层。从来不愿深入了解其概念，宁可固执地相信那是骗经费的异想天开。</li>
+</ul>
+<ul>
+<li>常年使用一台年龄比自己还大的DOS古董机与一个麂皮旅行箱改造成的“便携电脑”，操作古老的Wordstar文字处理软件编辑研究笔记和SCP文档初稿。只有在必要时才使用基金会配备的标准办公机。</li>
+</ul>
+<ul>
+<li>撰写文档时试图打造一个严谨的人设，然而不时会制造出这样的案例——对自己的文档草稿自我感觉良好，却在正式提交基金会数据库后立刻自查出多处错误、不得不反复修改。</li>
+</ul>
+<ul>
+<li>除自身的研究以外，还会将一部分工作时间投入到总部异常项目文档3级安全许可等级版本的翻译归档工作。</li>
+</ul>
+<ul>
+<li>经常刚刚经手完一个项目交接给同事，没两天就发生了不可思议的展开或者高烈度的事故，自己此时却已经在前往下一个站点的路上，神奇地错过了。关于这一点已经在数个站点内部形成了微妙的口碑。</li>
+</ul>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
 </div>
 <div id="wiki-tab-0-1" style="display:none">
-<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wikidot.com/local--files/breaddddd3/img535.jpg" style="width:300px;" alt="img535.jpg" class="image" />
-<div class="scp-image-caption" style="width:300px;">
-<p>感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1609672055" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>的人设！</p>
-</div>
-</div>
-<p><strong>姓名：</strong>乔蘩</p>
-<p><strong>别称：</strong>乔姬，荇菜</p>
-<p><strong>安全许可等级：</strong>2级，部分项目为4级</p>
-<p><strong>职务：</strong>研究员</p>
-<p><strong>所属设施：</strong><span style="text-decoration: line-through;">Area-CN-07</span><a href="http://scp-wiki-cn.wikidot.com/site-cn-06">Site-CN-06</a></p>
-<p><strong>外貌描述：</strong>26岁，女性，黄种人，高马尾，身高160上下，体重[数据删除]</p>
-<p><strong>毕业院校：</strong>美国███大学生物化学/生物科学双学位</p>
-<p><strong>加入基金会途径：</strong>被某位前辈拉进了基金会的大坑</p>
-<p><strong>爱好：</strong>追番、打羽毛球（很菜，真的——Eule）、看电影、下棋、旅游</p>
-<p><strong>特长：</strong>生物化学</p>
-<p><strong>服装：</strong>夏季为白色半袖衫/衬衫+白大褂，冬季为灰色毛衣+灰色大衣/全黑外套</p>
-<p><strong>简介：</strong>与Eule是校友，尽管两人的交集仅限于刚刚入学时被Eule带着飞。</p>
-<p>学霸级别的dalao，持有生物化学硕士与生物科学硕士双学位，心理学水平据说也达到了硕士的水准</p>
-<p>擅长西班牙语、英语、韩语等语言，日语水平仅限于听懂。</p>
-<p>[数据删除]]</p>
-</div>
-<div id="wiki-tab-0-2" style="display:none">
-<p><strong>特工代号：</strong>Vodka</p>
-<p><strong>特工姓名：</strong>刘██</p>
-<p><strong>别称：</strong>沃德嘉</p>
-<p><strong>性别：</strong>男</p>
-<p><strong>安保级别：</strong>3级</p>
-<p><strong>职位：</strong>外勤特工，机动特遣队CN-Delta-06“靶向治疗”干员</p>
-<p><strong>职务：</strong>[权限不足]</p>
-<p><strong>履历：</strong>[权限不足]</p>
-</div>
-<div id="wiki-tab-0-3" style="display:none">
-<p><strong>特工代号：</strong>Fahrer</p>
-<p><strong>特工姓名：</strong>程龑</p>
-<p><strong>别称：</strong>老司机</p>
-<p><strong>性别：</strong>男</p>
-<p><strong>安保级别：</strong>3级</p>
-<p><strong>职位：</strong>外勤特工，机动特遣队CN-Beta-06“初期防疫”干员</p>
-<p><strong>职务：</strong>机动特遣队CN-Beta-06-B“疫苗”特别行动班班长</p>
-<p><strong>履历：</strong>[权限不足]</p>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
-OZONE.dom.onDomReady(function(){
-        var tabView977b20e29c18fcdbfb73410749cec2a9 = new YAHOO.widget.TabView('wiki-tabview-977b20e29c18fcdbfb73410749cec2a9');
-                }, "dummy-ondomready-block");
-        
-//]]>
-</script><script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
-</script>
-<div id="wiki-tabview-a10ba753b7bfe46b0db182893ab0c8fd" class="yui-navset">
-<ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>文章总览</em></a></li>
-<li><a href="javascript:;"><em>成就一览</em></a></li>
-</ul>
-<div class="yui-content">
-<div id="wiki-tab-0-0"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><a href="http://scp-wiki-cn.wikidot.com/dr-eule-s-personnel-file/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-eule-s-personnel-file/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-eule-s-personnel-file/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-eule-s-personnel-file/order/updated_at%20desc/category/*">最近编辑</a></p>
+<div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/orphans-of-mt-qilian">随机作品传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4313927&amp;amp;size=small&amp;amp;timestamp=1610181153" alt="ForgotMyDrug" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4313927)" /></a><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;">ForgotMyDrug</a></span></strong></tt></p>
+<p style="text-align: center;">共10篇</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/scp-2263">随机页面传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4313927&amp;amp;size=small&amp;amp;timestamp=1610181153" alt="ForgotMyDrug" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4313927)" /></a><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;">ForgotMyDrug</a></span></strong></tt></p>
+<p style="text-align: center;">共71个页面</p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="sortbar {$sortbar}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/dr-foymug-s-personnel-file/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-foymug-s-personnel-file/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-foymug-s-personnel-file/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/dr-foymug-s-personnel-file/order/updated_at%20desc/category/*">最近编辑</a></p>
+</div>
+    
+    
+    
+    </div></div>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创SCP</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-cn-617">SCP-CN-617</a></strong><br />
++<strong><tt>12</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>2</tt></strong><br />
+<em>最新评论：</em> <strong><tt>KingLorse</tt></strong> <em>于</em> <strong><tt><span class="odate time_1534837068 format_%25D%20%25H%3A%25M">21 Aug 2018 07:37</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595470887 format_%25D%20%25H%3A%25M">23 Jul 2020 02:21</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-cn-617/planes1.png" class="imagepre yes" alt="planes1.png" /><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-CN-617&#32;项目等级：Euclid&#32;特殊收容措施：SCP-CN-617须被置于Site-CN-34异常物体收容区内一间6m&#32;x...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid letters娱乐 scp site-cn-34 原创 未收容 游戏 电子 超维度 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-cn-1166">SCP-CN-1166</a></strong><br />
++<strong><tt>66</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>17</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Confucian Lee</tt></strong> <em>于</em> <strong><tt><span class="odate time_1594786139 format_%25D%20%25H%3A%25M">15 Jul 2020 04:08</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581510774 format_%25D%20%25H%3A%25M">12 Feb 2020 12:32</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> letters娱乐 safe scp site-cn-34 原创 听觉影响 感知影响 游戏 线上 视觉性 货币</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-cn-942">SCP-CN-942</a></strong><br />
++<strong><tt>16</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>18</tt></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1545880947 format_%25D%20%25H%3A%25M">27 Dec 2018 03:22</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1545187223 format_%25D%20%25H%3A%25M">19 Dec 2018 02:40</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-CN-942&#32;项目等级：Safe&#32;Keter&#32;特殊收容措施：SCP-CN...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter k级情景 scp 原创 反物理定律 成瘾性 文件 本质促动 知识 精神影响</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-cn-556">SCP-CN-556</a></strong><br />
++<strong><tt>15</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>4</tt></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578409595 format_%25D%20%25H%3A%25M">07 Jan 2020 15:06</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1545185858 format_%25D%20%25H%3A%25M">19 Dec 2018 02:17</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-cn-556/ltgcard.png" class="imagepre yes" alt="ltgcard.png" /><br />
+<span style="white-space: pre-wrap;">项目名称：SCP-CN-556&#32;项目等级：Euclid&#32;特殊收容措施：全部SCP-CN-556均收容于Site-CN-56的B级异常物品保管库中。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid letters娱乐 scp 原创 合著 成瘾性 精神影响 饰品</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>原创故事</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/adult:a-luv-song">情歌</a></strong><br />
++<strong><tt>38</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>9</tt></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582782099 format_%25D%20%25H%3A%25M">27 Feb 2020 05:41</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>M Element</tt></strong> <em>于</em> <strong><tt><span class="odate time_1610175055 format_%25D%20%25H%3A%25M">09 Jan 2021 06:50</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> creepypasta 原创 成人内容 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/orphans-of-mt-qilian">祁连山上的孤儿</a></strong><br />
++<strong><tt>27</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>8</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Think cyan</tt></strong> <em>于</em> <strong><tt><span class="odate time_1598270008 format_%25D%20%25H%3A%25M">24 Aug 2020 11:53</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578889908 format_%25D%20%25H%3A%25M">13 Jan 2020 04:31</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> bright博士 原创 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/sharkwater">鲨鱼海域</a></strong><br />
++<strong><tt>57</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>18</tt></strong><br />
+<em>最新评论：</em> <strong><tt>BruceWu0463</tt></strong> <em>于</em> <strong><tt><span class="odate time_1598432720 format_%25D%20%25H%3A%25M">26 Aug 2020 09:05</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578889248 format_%25D%20%25H%3A%25M">13 Jan 2020 04:20</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 人类之后 原创 打鲨鱼中心 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/merry-freakmas">圣诞快乐</a></strong><br />
++<strong><tt>137</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>20</tt></strong><br />
+<em>最新评论：</em> <strong><tt>AACannon</tt></strong> <em>于</em> <strong><tt><span class="odate time_1580810528 format_%25D%20%25H%3A%25M">04 Feb 2020 10:02</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>M Element</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578586453 format_%25D%20%25H%3A%25M">09 Jan 2020 16:14</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> creepypasta 主题精品 原创 故事</div>
+</div>
 </div>
     
     
     
     </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
 
-<p><strong><a href="/shenrugucheng-qianjinshike">深入孤城：前进时刻</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+15](+16/-1)</tt></strong> <strong><tt>3</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Dr Hormress</strong></tt> <tt><strong><span class="odate time_1599830960 format_%25y-%25m-%25d%20%25H%3A%25M">11 Sep 2020 13:29</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1609391212 format_%25y-%25m-%25d%20%25H%3A%25M">31 Dec 2020 05:06</span></strong></tt></span></span></span><br />
-<strong><a href="/a-story-deep-in-memory">记忆深处的故事</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+28](+31/-3)</tt></strong> <strong><tt>3</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>TheDreamKiller</strong></tt> <tt><strong><span class="odate time_1609343759 format_%25y-%25m-%25d%20%25H%3A%25M">30 Dec 2020 15:55</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1609341086 format_%25y-%25m-%25d%20%25H%3A%25M">30 Dec 2020 15:11</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1578-1">SCP-CN-1578</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+5](+5/-0)</tt></strong> <strong><tt>4</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Mr black cat **</strong></tt> <tt><span class="odate time_1543651483 format_%25y-%25m-%25d%20%25H%3A%25M">01 Dec 2018 08:04</span></tt> <strong>最近编辑 </strong><tt>Sekai_s</tt> <tt><span class="odate time_1606970343 format_%25y-%25m-%25d%20%25H%3A%25M">03 Dec 2020 04:39</span></tt></span></span><br /></span><a href="/about-shanggong">关于上工</a><strong><br />
-<span style="color:blue"><tt>[+9](+9/-0)</tt>** <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1542372235 format_%25y-%25m-%25d%20%25H%3A%25M">16 Nov 2018 12:43</span></strong></tt> 最近编辑 <tt><strong>Sekai_s</strong></tt> <tt><strong><span class="odate time_1606970255 format_%25y-%25m-%25d%20%25H%3A%25M">03 Dec 2020 04:37</span></strong></tt></span></span></strong><br />
-<strong><a href="/scp-cn-1577">SCP-CN-1577</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+23](+23/-0)</tt></strong> <strong><tt>2</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>H-Storm Z</strong></tt> <tt><strong><span class="odate time_1605410741 format_%25y-%25m-%25d%20%25H%3A%25M">15 Nov 2020 03:25</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1605403901 format_%25y-%25m-%25d%20%25H%3A%25M">15 Nov 2020 01:31</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1579">SCP-CN-1579</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+33](+39/-6)</tt></strong> <strong><tt>9</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Hourglass_G</strong></tt> <tt><strong><span class="odate time_1603897486 format_%25y-%25m-%25d%20%25H%3A%25M">28 Oct 2020 15:04</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1605403797 format_%25y-%25m-%25d%20%25H%3A%25M">15 Nov 2020 01:29</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1795">SCP-CN-1795</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+29](+33/-4)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Rachud</strong></tt> <tt><strong><span class="odate time_1599456741 format_%25y-%25m-%25d%20%25H%3A%25M">07 Sep 2020 05:32</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1605403758 format_%25y-%25m-%25d%20%25H%3A%25M">15 Nov 2020 01:29</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1178">SCP-CN-1178</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+42](+44/-2)</tt></strong> <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Archibald1</strong></tt> <tt><strong><span class="odate time_1596116039 format_%25y-%25m-%25d%20%25H%3A%25M">30 Jul 2020 13:33</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1603169598 format_%25y-%25m-%25d%20%25H%3A%25M">20 Oct 2020 04:53</span></strong></tt></span></span></span><br />
-<strong><a href="/shenrugucheng-weisheng">深入孤城：尾声</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+24](+24/-0)</tt></strong> <strong><tt>2</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>AAAAAAyin</strong></tt> <tt><strong><span class="odate time_1600782676 format_%25y-%25m-%25d%20%25H%3A%25M">22 Sep 2020 13:51</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1600727513 format_%25y-%25m-%25d%20%25H%3A%25M">21 Sep 2020 22:31</span></strong></tt></span></span></span><br />
-<strong><a href="/shenrugucheng-guiling">深入孤城：归零</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+16](+18/-2)</tt></strong> <strong><tt>3</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>VivelaAzathoth</strong></tt> <tt><strong><span class="odate time_1599968567 format_%25y-%25m-%25d%20%25H%3A%25M">13 Sep 2020 03:42</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1599959009 format_%25y-%25m-%25d%20%25H%3A%25M">13 Sep 2020 01:03</span></strong></tt></span></span></span><br />
-<strong><a href="/shenrugucheng-weigong">深入孤城：围攻</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+15](+16/-1)</tt></strong> <strong><tt>4</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>SFMNOK **</strong></tt> <tt><span class="odate time_1599909122 format_%25y-%25m-%25d%20%25H%3A%25M">12 Sep 2020 11:12</span></tt> <strong>最近编辑 </strong><tt>EuleNLau</tt> <tt><span class="odate time_1599847884 format_%25y-%25m-%25d%20%25H%3A%25M">11 Sep 2020 18:11</span></tt></span></span><br /></span><a href="/scp-cn-1861">SCP-CN-1861</a><strong><br />
-<span style="color:blue"><tt>[+34](+35/-1)</tt>** <strong><tt>10</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Archibald1</strong></tt> <tt><strong><span class="odate time_1589209708 format_%25y-%25m-%25d%20%25H%3A%25M">11 May 2020 15:08</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1599669095 format_%25y-%25m-%25d%20%25H%3A%25M">09 Sep 2020 16:31</span></strong></tt></span></span></strong><br />
-<strong><a href="/snakekiller-4">蛇人杀人事件·第四章</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+17/-0)</tt></strong> <strong><tt>4</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>CWMLTWO</strong></tt> <tt><strong><span class="odate time_1599020052 format_%25y-%25m-%25d%20%25H%3A%25M">02 Sep 2020 04:14</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1598368684 format_%25y-%25m-%25d%20%25H%3A%25M">25 Aug 2020 15:18</span></strong></tt></span></span></span><br />
-<strong><a href="/snakekiller-3">蛇人杀人事件·第三章</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+29](+29/-0)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>rain ze</strong></tt> <tt><strong><span class="odate time_1597842804 format_%25y-%25m-%25d%20%25H%3A%25M">19 Aug 2020 13:13</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1597836065 format_%25y-%25m-%25d%20%25H%3A%25M">19 Aug 2020 11:21</span></strong></tt></span></span></span><br />
-<strong><a href="/snakekiller-2">蛇人杀人事件·第二章</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+26](+26/-0)</tt></strong> <strong><tt>5</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1597727774 format_%25y-%25m-%25d%20%25H%3A%25M">18 Aug 2020 05:16</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1597639934 format_%25y-%25m-%25d%20%25H%3A%25M">17 Aug 2020 04:52</span></strong></tt></span></span></span><br />
-<strong><a href="/snakekiller">蛇人杀人事件·第一章</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+34](+34/-0)</tt></strong> <strong><tt>2</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>CTorJSChen</strong></tt> <tt><strong><span class="odate time_1597416578 format_%25y-%25m-%25d%20%25H%3A%25M">14 Aug 2020 14:49</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1597379743 format_%25y-%25m-%25d%20%25H%3A%25M">14 Aug 2020 04:35</span></strong></tt></span></span></span><br />
-<strong><a href="/lecture-of-hi-story">基金会学院人类史选修课第二单元第二课时</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+39/-22)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Bluen Catgod</strong></tt> <tt><strong><span class="odate time_1598541721 format_%25y-%25m-%25d%20%25H%3A%25M">27 Aug 2020 15:22</span></strong></tt> 最近编辑 <tt><strong>M Element</strong></tt> <tt><strong><span class="odate time_1596802205 format_%25y-%25m-%25d%20%25H%3A%25M">07 Aug 2020 12:10</span></strong></tt></span></span></span><br />
-<strong><a href="/love-can-bloom">一只异常章鱼引起的二三事</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+67](+70/-3)</tt></strong> <strong><tt>19</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Jochoi</strong></tt> <tt><strong><span class="odate time_1599675359 format_%25y-%25m-%25d%20%25H%3A%25M">09 Sep 2020 18:15</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1595513014 format_%25y-%25m-%25d%20%25H%3A%25M">23 Jul 2020 14:03</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1693">SCP-CN-1693</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+35](+37/-2)</tt></strong> <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1591602373 format_%25y-%25m-%25d%20%25H%3A%25M">08 Jun 2020 07:46</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1593429497 format_%25y-%25m-%25d%20%25H%3A%25M">29 Jun 2020 11:18</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1316">SCP-CN-1316</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+30](+33/-3)</tt></strong> <strong><tt>11</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1590855083 format_%25y-%25m-%25d%20%25H%3A%25M">30 May 2020 16:11</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1593429447 format_%25y-%25m-%25d%20%25H%3A%25M">29 Jun 2020 11:17</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1909">SCP-CN-1909</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+24](+24/-0)</tt></strong> <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>LPCaCO3</strong></tt> <tt><strong><span class="odate time_1561781058 format_%25y-%25m-%25d%20%25H%3A%25M">29 Jun 2019 04:04</span></strong></tt> 最近编辑 <tt><strong>WOrs Obrine</strong></tt> <tt><strong><span class="odate time_1591346796 format_%25y-%25m-%25d%20%25H%3A%25M">05 Jun 2020 08:46</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1825">SCP-CN-1825</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+36](+36/-0)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>afterglow159</strong></tt> <tt><strong><span class="odate time_1587450253 format_%25y-%25m-%25d%20%25H%3A%25M">21 Apr 2020 06:24</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1589109099 format_%25y-%25m-%25d%20%25H%3A%25M">10 May 2020 11:11</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1065">SCP-CN-1065</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+23](+25/-2)</tt></strong> <strong><tt>8</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>ddddxxxx</strong></tt> <tt><strong><span class="odate time_1578590261 format_%25y-%25m-%25d%20%25H%3A%25M">09 Jan 2020 17:17</span></strong></tt> 最近编辑 <tt><strong>miumeat</strong></tt> <tt><strong><span class="odate time_1583591338 format_%25y-%25m-%25d%20%25H%3A%25M">07 Mar 2020 14:28</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-822">SCP-CN-822</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+25](+27/-2)</tt></strong> <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1535003553 format_%25y-%25m-%25d%20%25H%3A%25M">23 Aug 2018 05:52</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1578052107 format_%25y-%25m-%25d%20%25H%3A%25M">03 Jan 2020 11:48</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-825">SCP-CN-825</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+21/-4)</tt></strong> <strong><tt>12</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>monitor-256</strong></tt> <tt><strong><span class="odate time_1535041096 format_%25y-%25m-%25d%20%25H%3A%25M">23 Aug 2018 16:18</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1577763443 format_%25y-%25m-%25d%20%25H%3A%25M">31 Dec 2019 03:37</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1451">SCP-CN-1451</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+25](+28/-3)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Hens</strong></tt> <tt><strong><span class="odate time_1583979144 format_%25y-%25m-%25d%20%25H%3A%25M">12 Mar 2020 02:12</span></strong></tt> 最近编辑 <tt><strong>Sekai_s</strong></tt> <tt><strong><span class="odate time_1576412360 format_%25y-%25m-%25d%20%25H%3A%25M">15 Dec 2019 12:19</span></strong></tt></span></span></span><br />
-<strong><a href="/muqizhishi">隐形守护者：幕启</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+13](+16/-3)</tt></strong> <strong><tt>5</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>(user deleted)</strong></tt> <tt><strong><span class="odate time_1570445082 format_%25y-%25m-%25d%20%25H%3A%25M">07 Oct 2019 10:44</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1570357056 format_%25y-%25m-%25d%20%25H%3A%25M">06 Oct 2019 10:17</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1906">SCP-CN-1906</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+63](+69/-6)</tt></strong> <strong><tt>11</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1562421030 format_%25y-%25m-%25d%20%25H%3A%25M">06 Jul 2019 13:50</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1569219001 format_%25y-%25m-%25d%20%25H%3A%25M">23 Sep 2019 06:10</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1578">SCP-CN-1578</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+49](+87/-38)</tt></strong> <strong><tt>40</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>mint_swater</strong></tt> <tt><strong><span class="odate time_1545664933 format_%25y-%25m-%25d%20%25H%3A%25M">24 Dec 2018 15:22</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1569210182 format_%25y-%25m-%25d%20%25H%3A%25M">23 Sep 2019 03:43</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1288">SCP-CN-1288</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+19/-2)</tt></strong> <strong><tt>6</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>liu jin</strong></tt> <tt><strong><span class="odate time_1597042662 format_%25y-%25m-%25d%20%25H%3A%25M">10 Aug 2020 06:57</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1569208390 format_%25y-%25m-%25d%20%25H%3A%25M">23 Sep 2019 03:13</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1962">SCP-CN-1962</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+22](+24/-2)</tt></strong> <strong><tt>3</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1550454838 format_%25y-%25m-%25d%20%25H%3A%25M">18 Feb 2019 01:53</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1568174793 format_%25y-%25m-%25d%20%25H%3A%25M">11 Sep 2019 04:06</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1941">SCP-CN-1941</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+28](+30/-2)</tt></strong> <strong><tt>5</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1559473556 format_%25y-%25m-%25d%20%25H%3A%25M">02 Jun 2019 11:05</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1568174451 format_%25y-%25m-%25d%20%25H%3A%25M">11 Sep 2019 04:00</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-1908">SCP-CN-1908</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+15](+16/-1)</tt></strong> <strong><tt>1</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1544356363 format_%25y-%25m-%25d%20%25H%3A%25M">09 Dec 2018 11:52</span></strong></tt> 最近编辑 <tt><strong>Simon Arran</strong></tt> <tt><strong><span class="odate time_1568174135 format_%25y-%25m-%25d%20%25H%3A%25M">11 Sep 2019 03:55</span></strong></tt></span></span></span><br />
-<strong><a href="/hold-and-attack">守护常态，无问死生。</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+11](+18/-7)</tt></strong> <strong><tt>4</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>YEZHI</strong></tt> <tt><strong><span class="odate time_1567502515 format_%25y-%25m-%25d%20%25H%3A%25M">03 Sep 2019 09:21</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1567572913 format_%25y-%25m-%25d%20%25H%3A%25M">04 Sep 2019 04:55</span></strong></tt></span></span></span><br />
-<strong><a href="/eule-ju-ran-qing-fen-le">我们终于，踏上了新的起点</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+16](+19/-3)</tt></strong> <strong><tt>3</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>(user deleted)</strong></tt> <tt><strong><span class="odate time_1566719081 format_%25y-%25m-%25d%20%25H%3A%25M">25 Aug 2019 07:44</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1566714113 format_%25y-%25m-%25d%20%25H%3A%25M">25 Aug 2019 06:21</span></strong></tt></span></span></span><br />
-<strong><a href="/travel-by-public-funds-gobi">公款旅游：戈壁滩</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+34](+39/-5)</tt></strong> <strong><tt>14</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Scader_Vinci</strong></tt> <tt><strong><span class="odate time_1605965878 format_%25y-%25m-%25d%20%25H%3A%25M">21 Nov 2020 13:37</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1562051239 format_%25y-%25m-%25d%20%25H%3A%25M">02 Jul 2019 07:07</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-837">SCP-CN-837</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+18/-1)</tt></strong> <strong><tt>5</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>The Salt Fish</strong></tt> <tt><strong><span class="odate time_1536833881 format_%25y-%25m-%25d%20%25H%3A%25M">13 Sep 2018 10:18</span></strong></tt> 最近编辑 <tt><strong>W Asriel</strong></tt> <tt><strong><span class="odate time_1557302582 format_%25y-%25m-%25d%20%25H%3A%25M">08 May 2019 08:03</span></strong></tt></span></span></span><br />
-<strong><a href="/the-man-who-is-a-hero">夫英雄者</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+10](+12/-2)</tt></strong> <strong><tt>4</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Tom_Wang055</strong></tt> <tt><strong><span class="odate time_1557906965 format_%25y-%25m-%25d%20%25H%3A%25M">15 May 2019 07:56</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1556195200 format_%25y-%25m-%25d%20%25H%3A%25M">25 Apr 2019 12:26</span></strong></tt></span></span></span><br />
-<strong><a href="/we-back-now">离去，与归来</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+16](+23/-7)</tt></strong> <strong><tt>9</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1547012736 format_%25y-%25m-%25d%20%25H%3A%25M">09 Jan 2019 05:45</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1546952736 format_%25y-%25m-%25d%20%25H%3A%25M">08 Jan 2019 13:05</span></strong></tt></span></span></span><br />
-<strong><a href="/we-do-not-have-holidays">公款旅游：假日作战</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+46](+47/-1)</tt></strong> <strong><tt>10</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Scader_Vinci</strong></tt> <tt><strong><span class="odate time_1605962935 format_%25y-%25m-%25d%20%25H%3A%25M">21 Nov 2020 12:48</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1545274009 format_%25y-%25m-%25d%20%25H%3A%25M">20 Dec 2018 02:46</span></strong></tt></span></span></span><br />
-<strong><a href="/not-a-dream">我们仍在此地</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+28](+29/-1)</tt></strong> <strong><tt>8</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1559473536 format_%25y-%25m-%25d%20%25H%3A%25M">02 Jun 2019 11:05</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1545273974 format_%25y-%25m-%25d%20%25H%3A%25M">20 Dec 2018 02:46</span></strong></tt></span></span></span><br />
-<strong><a href="/about-mtf-cn-gamma-06">只是MTF-CN-Gamma-06参与的事件之一</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+17](+18/-1)</tt></strong> <strong><tt>11</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>A Lancelot</strong></tt> <tt><strong><span class="odate time_1534340465 format_%25y-%25m-%25d%20%25H%3A%25M">15 Aug 2018 13:41</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1545273957 format_%25y-%25m-%25d%20%25H%3A%25M">20 Dec 2018 02:45</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-827">SCP-CN-827</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+57](+58/-1)</tt></strong> <strong><tt>11</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>PLASTICGUN</strong></tt> <tt><strong><span class="odate time_1538377873 format_%25y-%25m-%25d%20%25H%3A%25M">01 Oct 2018 07:11</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1545261286 format_%25y-%25m-%25d%20%25H%3A%25M">19 Dec 2018 23:14</span></strong></tt></span></span></span><br />
-<strong><a href="/i-got-you-now">I got you now</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+12](+12/-0)</tt></strong> <strong><tt>2</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>Pax_Pi</strong></tt> <tt><strong><span class="odate time_1543275823 format_%25y-%25m-%25d%20%25H%3A%25M">26 Nov 2018 23:43</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1543234820 format_%25y-%25m-%25d%20%25H%3A%25M">26 Nov 2018 12:20</span></strong></tt></span></span></span><br />
-<strong><a href="/scp-cn-762">SCP-CN-762</a></strong><br />
-<span style="color:blue"><span style="font-size:1em"><strong><tt>[+23](+27/-4)</tt></strong> <strong><tt>7</tt></strong><span style="font-size:0.9em;">评论 / 最近评论 <tt><strong>baisik</strong></tt> <tt><strong><span class="odate time_1603775608 format_%25y-%25m-%25d%20%25H%3A%25M">27 Oct 2020 05:13</span></strong></tt> 最近编辑 <tt><strong>EuleNLau</strong></tt> <tt><strong><span class="odate time_1535343592 format_%25y-%25m-%25d%20%25H%3A%25M">27 Aug 2018 04:19</span></strong></tt></span></span></span></p>
 
+<div style="text-align: center;">
+<hr />
+<h2><span>其他原创</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/gallery-writing">画廊大赛 中心页</a></strong><br />
++<strong><tt>48</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>189</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Si_Li</tt></strong> <em>于</em> <strong><tt><span class="odate time_1591460252 format_%25D%20%25H%3A%25M">06 Jun 2020 16:17</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1597567498 format_%25D%20%25H%3A%25M">16 Aug 2020 08:44</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/gallery-writing/galcon2020.png" class="imagepre yes" alt="galcon2020.png" /><br />
+<span style="white-space: pre-wrap;">画廊大赛&#32;暨&#32;众筹制看图说话竞赛、画廊功能激活运动、神叨叨影像作品召唤仪式&#32;“不，这不是一场艺作竞赛。”&#32;&#32;&#32;&#32;本次竞赛已结束！但你正好赶上了颁奖礼！颁奖礼！&#32;获奖作品：&#32;&#32;排名奖励&#32;&#32;冠军！&#32;&#32;UIU🔞档案：❤️内有露骨色情内容-❤️勿入&#32;&#32;作者：Tenth&#32;Lee&#32;&#32;得分：125&#32;(+158/-33)&#32;&#32;&#32;亚军！&#32;&#32;安布罗斯餐厅，又名再也吃不下去就停止营业&#32;&#32;作者：ShineShadowD&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2020画廊大赛 中心 原创 竞赛</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+<div class="translation {$translation}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译SCP</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-5999">SCP-5999</a></strong><br />
+<em>最新评论：</em> <strong><tt>AI_Mayca</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608561003 format_%25D%20%25H%3A%25M">21 Dec 2020 14:30</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608560452 format_%25D%20%25H%3A%25M">21 Dec 2020 14:20</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-5999/freedom.png" class="imagepre yes" alt="freedom.png" /><br />
+<span style="white-space: pre-wrap;">&#32;&#32;SCP-5998&#32;|&#32;SCP-5999&#32;|&#32;SCP-6000&#32;&#32;</span><br />
+<span style="color: #000000"><em>标签：</em></span> 5000 scp 人形生物 信息危害 合著 机密分级 活物 视频 音频</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-2355">SCP-2355</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606376202 format_%25D%20%25H%3A%25M">26 Nov 2020 07:36</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606389388 format_%25D%20%25H%3A%25M">26 Nov 2020 11:16</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-2355&#32;项目等级：Euclid&#32;特殊收容措施：回收的SCP-2355实例应储存在site&#32;██的8号收容区。将要有子嗣或在过去一年内有子嗣出生的安保人员不应分配到SCP-2355。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 家具 时间影响 记忆影响</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4098">SCP-4098</a></strong><br />
+<em>最新评论：</em> <strong><tt>Voctor</tt></strong> <em>于</em> <strong><tt><span class="odate time_1605505613 format_%25D%20%25H%3A%25M">16 Nov 2020 05:46</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1605068319 format_%25D%20%25H%3A%25M">11 Nov 2020 04:18</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">收容藏品批次：SCP-4098&#32;授权参与品阶&#32;4/4098&#32;&#32;&#32;收容藏品评级：“双生创世”评定...</span><br />
+<span style="color: #000000"><em>标签：</em></span> scp thaumiel 信息危害 合著 基金会制 建筑 模因 认知危害 误传部</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-1857">SCP-1857</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1576496715 format_%25D%20%25H%3A%25M">16 Dec 2019 11:45</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Rye Travis</tt></strong> <em>于</em> <strong><tt><span class="odate time_1598790346 format_%25D%20%25H%3A%25M">30 Aug 2020 12:25</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-1857&#32;项目等级：Euclid&#32;特殊收容措施：SCP-1857保存于专用的密封收容室中。对SCP-1857的监视必须通过间接方式，且所有涉及SCP-1857的收容和研究的人员必须经受每周的强制性精神病学评估。被发现受到SCP-1857影响的人员应按照标准模因危害隔离程序进行隔离，并执行A级记忆删除。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 人形生物 印刻 幻觉 感知力 电脑 精神影响 视觉性 骨骼</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4699">SCP-4699</a></strong><br />
+<em>最新评论：</em> <strong><tt>HauntinJ</tt></strong> <em>于</em> <strong><tt><span class="odate time_1559645775 format_%25D%20%25H%3A%25M">04 Jun 2019 10:56</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1593491946 format_%25D%20%25H%3A%25M">30 Jun 2020 04:39</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;SCP-4699：此后只有门径留存。&#32;作者：Tufto。这是他的2019老掉牙竞赛参赛篇目。更多Tufto作品，点击此处获取。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;项目编号：SCP-4699&#32;项目等级：Safe&#32;Euclid&#32;已修订的特殊收容措施，17/01/2019：SCP-4699应被收纳于Site&#32;189的一个标准物品储存柜中。在任何情况下，所有人员均不得查看或测试SCP-4699。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2019老掉牙竞赛 euclid scp 人造物品 强迫性 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3768">SCP-3768</a></strong><br />
+<em>最新评论：</em> <strong><tt>Exodus_S</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608894531 format_%25D%20%25H%3A%25M">25 Dec 2020 11:08</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1587643966 format_%25D%20%25H%3A%25M">23 Apr 2020 12:12</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> k级情景 safe scp 三重月倡议会 仪式性 超维度 通讯</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-5200">SCP-5200</a></strong><br />
+<em>最新评论：</em> <strong><tt>EdwardC</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582959138 format_%25D%20%25H%3A%25M">29 Feb 2020 06:52</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1586736697 format_%25D%20%25H%3A%25M">13 Apr 2020 00:11</span></tt></strong></p>
+<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/scp-5200/5200"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/scp-5200/5200/medium.jpg" class="imagepre yes" alt="5200" /></a><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter scp 历史性 异常移动 时空 星际 电子 阿卡迪亚</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-1888">SCP-1888</a></strong><br />
+<em>最新评论：</em> <strong><tt>tiger1218</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585569985 format_%25D%20%25H%3A%25M">30 Mar 2020 12:06</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>M Element</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585570078 format_%25D%20%25H%3A%25M">30 Mar 2020 12:07</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-1888&#32;项目等级：Keter&#32;Safe&#32;特殊收容措施：根据SCP-1...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 传染性 地点 建筑 心灵感应 掠食性 敌意 生物危害</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3496">SCP-3496</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1564670293 format_%25D%20%25H%3A%25M">01 Aug 2019 14:38</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Rye Travis</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585273371 format_%25D%20%25H%3A%25M">27 Mar 2020 01:42</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 动物 反熵 威尔逊野生动物 昆虫 木质 节肢动物 蚂蚁 蜜蜂 衣物</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4955">SCP-4955</a></strong><br />
+<em>最新评论：</em> <strong><tt>sciencekiller</tt></strong> <em>于</em> <strong><tt><span class="odate time_1605599606 format_%25D%20%25H%3A%25M">17 Nov 2020 07:53</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>hoah2333</tt></strong> <em>于</em> <strong><tt><span class="odate time_1584529410 format_%25D%20%25H%3A%25M">18 Mar 2020 11:03</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-4955&#32;无&#32;项目等级：Safe&#32;Mendax&#32;Decommissioned&#32;项目类型：认识论&#32;逆模因&#32;无&#32;特殊收容措施：SCP-4955应被保管在Site&#32;19的标准Safe级项目收容柜中。&#32;无&#32;描述：SCP-4955&#32;KNIFE是一把规格型号未知的刀具。&#32;&#32;&#32;&#32;记录&#32;1&#32;-&#32;2055/01/2&#32;&#32;记录&#32;1&#32;-&#32;2055/01/2&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2019老掉牙竞赛 meta scp 工具 强迫性 机密分级 研究员smalls</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3177">SCP-3177</a></strong><br />
+<em>最新评论：</em> <strong><tt>Elysion Devil</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596535067 format_%25D%20%25H%3A%25M">04 Aug 2020 09:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1584529184 format_%25D%20%25H%3A%25M">18 Mar 2020 10:59</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2018连写竞赛 safe scp 木质 模因 视觉性 认知危害 记忆影响 逆模因</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3542">SCP-3542</a></strong><br />
+<em>最新评论：</em> <strong><tt>Crumpled</tt></strong> <em>于</em> <strong><tt><span class="odate time_1586310618 format_%25D%20%25H%3A%25M">08 Apr 2020 01:50</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583396941 format_%25D%20%25H%3A%25M">05 Mar 2020 08:29</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">于混沌分裂者的突袭行动后，从SCP-3542处没收的物件。&#32;&#32;&#32;项目编号：SCP-3542&#32;项目等级：Keter&#32;特殊收容措施：SCP-3542须被收容于一处标准人形收容隔间内，位于Site&#32;952的Upsilon翼区。与SCP-3542互动人员除测试外不得与项目发生交谈。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter scp 人形生物 合著 感知力 智能 本质促动 概率性 活物 混沌分裂者</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-5600">SCP-5600</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583030808 format_%25D%20%25H%3A%25M">01 Mar 2020 02:46</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1583368862 format_%25D%20%25H%3A%25M">05 Mar 2020 00:41</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;4/5600&#32;级&#32;4/5600&#32;机密&#32;&#32;&#32;&#32;项目编号:&#32;SCP-5600&#32;&#32;&#32;&#32;Keter&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;摄于大约1978年的威斯康星州鹿林镇。&#32;&#32;&#32;&#32;&#32;&#32;特殊收容措施：在与SCP-5600相距5km处划出禁区，并竖起有害废弃物警告标志。与威斯康星州自然资源部的一项联合协议已将SCP-5600周边区域指定为损毁状态，所有道路均已改道，绕开禁区。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 5000 keter scp 城市 时间影响</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-mystery-j">SCP-谜团-J</a></strong><br />
+<em>最新评论：</em> <strong><tt>GUO-Hang</tt></strong> <em>于</em> <strong><tt><span class="odate time_1579861472 format_%25D%20%25H%3A%25M">24 Jan 2020 10:24</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582617696 format_%25D%20%25H%3A%25M">25 Feb 2020 08:01</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/scp-mystery-j/ghost.png" class="imagepre yes" alt="ghost.png" /><br />
+<span style="white-space: pre-wrap;">SCP-5000-J&#32;&#32;&#32;项目编号：SCP-谜团-J&#32;项目等级：Mysterious&#32;特殊收容措施：卧槽，现在连我也看不懂了。&#32;描述：SCP-5000-J是一个谜团，内容是这个页面怎么会得到了这么多的upvote。这是怎么一回事？&#32;附录5000-1：&#32;如果你要找竞赛页，请前往这里。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> meta scp 搞笑 机密分级 概念</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4510">SCP-4510</a></strong><br />
+<em>最新评论：</em> <strong><tt>Sakuya Fortuna</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581640154 format_%25D%20%25H%3A%25M">14 Feb 2020 00:29</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sakuya Fortuna</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581639263 format_%25D%20%25H%3A%25M">14 Feb 2020 00:14</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 交换 武器 线上 载具</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3198">SCP-3198</a></strong><br />
+<em>最新评论：</em> <strong><tt>longhunt</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581309875 format_%25D%20%25H%3A%25M">10 Feb 2020 04:44</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581572111 format_%25D%20%25H%3A%25M">13 Feb 2020 05:35</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 人形生物 微型 感知力 智能 活物 载具</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3529">SCP-3529</a></strong><br />
+<em>最新评论：</em> <strong><tt>MerakWhite</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609982127 format_%25D%20%25H%3A%25M">07 Jan 2021 01:15</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1580545749 format_%25D%20%25H%3A%25M">01 Feb 2020 08:29</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;萌萌蛇萌萌蛇&#32;作者：XilasCrowe&#32;萌萌蛇萌萌蛇&#32;&#32;&#32;&#32;&#32;{$authorPage}authorpage▸&#32;该作者的更多作品&#32;◂（原文链接）{$authorPage}▸&#32;该作者的更多作品&#32;◂&#32;&#32;&#32;&#32;&#32;&#32;其他语言&#32;&#32;&#32;&#32;&#32;常见问题&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;著作信息&#32;&#32;&#32;&#32;&#32;作者：XilasCrowe&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;更多&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 动物 感知力 未收容 本质促动 活物 蛇类 语言</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4610">SCP-4610</a></strong><br />
+<em>最新评论：</em> <strong><tt>Rei Eline</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595144010 format_%25D%20%25H%3A%25M">19 Jul 2020 07:33</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1579511365 format_%25D%20%25H%3A%25M">20 Jan 2020 09:09</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-4610&#32;项目等级：Safe&#32;特殊收容措施：SCP-4610应被收容于Site-15的标准异常项目收容柜中。到目前为止，仅定位到一份SCP-4610的原始实例，但据信该程序可能会有更多的拷贝在发行中。鉴于对SCP-4610的操作有特定的需求，凭借此前基金会寻找POI&#32;“dado”的类似产品的一系列工作，视为足以有效获取其它可能存在的实例。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> dado safe scp 媒体 气象 电脑</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3179">SCP-3179</a></strong><br />
+<em>最新评论：</em> <strong><tt>XANARCHY MILITIA</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609423616 format_%25D%20%25H%3A%25M">31 Dec 2020 14:06</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1579511339 format_%25D%20%25H%3A%25M">20 Jan 2020 09:08</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter scp 变形 感知力 拟态 无定形 星际 智能 机器人 液体 破碎之神教会 自主 金属</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4432">SCP-4432</a></strong><br />
+<em>最新评论：</em> <strong><tt>C8H17OH</tt></strong> <em>于</em> <strong><tt><span class="odate time_1579501858 format_%25D%20%25H%3A%25M">20 Jan 2020 06:30</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578192645 format_%25D%20%25H%3A%25M">05 Jan 2020 02:50</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> dado euclid scp 人形生物 小小先生 工具 感知力 活物 玩具</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3414">SCP-3414</a></strong><br />
+<em>最新评论：</em> <strong><tt>M-A-samsara</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578063943 format_%25D%20%25H%3A%25M">03 Jan 2020 15:05</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1577875502 format_%25D%20%25H%3A%25M">01 Jan 2020 10:45</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 动物 建筑 生物性 肉食性 腐蚀性 蛇类</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-2263">SCP-2263</a></strong><br />
+<em>最新评论：</em> <strong><tt>Eurya</tt></strong> <em>于</em> <strong><tt><span class="odate time_1577116529 format_%25D%20%25H%3A%25M">23 Dec 2019 15:55</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1577088270 format_%25D%20%25H%3A%25M">23 Dec 2019 08:04</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 反熵 时空 雕塑 骨骼</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4970">SCP-4970</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1574844913 format_%25D%20%25H%3A%25M">27 Nov 2019 08:55</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1574934092 format_%25D%20%25H%3A%25M">28 Nov 2019 09:41</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">SCP-4970&#32;&#32;&#32;项目编号：SCP-4970&#32;项目等级：Safe&#32;特殊收容措施：基金会已购下SCP-4970所在办公楼，以█████&#32;███电子破产为伪装借口遣散全体非基金会雇员。接触过SCP-4970的雇员均在施以记忆删除后释放。&#32;描述：SCP-4970是一部ISDN型可视电话，位于前█████...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 家用物品 电子 语言 超维度</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3566">SCP-3566</a></strong><br />
+<em>最新评论：</em> <strong><tt>Azusagiri Liu</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573112442 format_%25D%20%25H%3A%25M">07 Nov 2019 07:40</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1574209322 format_%25D%20%25H%3A%25M">20 Nov 2019 00:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 听觉影响 声音 幻觉 精神影响 认知危害</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3881">SCP-3881</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1554174026 format_%25D%20%25H%3A%25M">02 Apr 2019 03:00</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573463502 format_%25D%20%25H%3A%25M">11 Nov 2019 09:11</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;别名：并非我的001提案&#32;主题：「Breaking&#32;Out」&#32;批评者鸣谢：Phantom&#32;Ink,&#32;Golden506,&#32;REvil432&#32;&#32;&#32;Omega&#32;Warhead.&#32;图源：修改自这张图片&#32;&#32;&#32;&#32;&#32;ayers-arrayayers-array▸&#32;该作者的更多作品&#32;◂（原文链接）ayers-array▸&#32;该作者的更多作品&#32;◂&#32;&#32;&#32;&#32;&#32;&#32;其他语言&#32;&#32;&#32;&#32;&#32;常见问题&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 传送 饰品</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3506">SCP-3506</a></strong><br />
+<em>最新评论：</em> <strong><tt>Eurya</tt></strong> <em>于</em> <strong><tt><span class="odate time_1542345364 format_%25D%20%25H%3A%25M">16 Nov 2018 05:16</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573284248 format_%25D%20%25H%3A%25M">09 Nov 2019 07:24</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2018连写竞赛 keter scp 人形生物 反熵 建筑 时空 气象 表演</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3565">SCP-3565</a></strong><br />
+<em>最新评论：</em> <strong><tt>GOD FIEND</tt></strong> <em>于</em> <strong><tt><span class="odate time_1559524331 format_%25D%20%25H%3A%25M">03 Jun 2019 01:12</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1572971443 format_%25D%20%25H%3A%25M">05 Nov 2019 16:30</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 有机 生殖性 生物性 精神影响</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3486">SCP-3486</a></strong><br />
+<em>最新评论：</em> <strong><tt>NovaMeow</tt></strong> <em>于</em> <strong><tt><span class="odate time_1572960505 format_%25D%20%25H%3A%25M">05 Nov 2019 13:28</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1572962657 format_%25D%20%25H%3A%25M">05 Nov 2019 14:04</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-3486&#32;项目等级：Euclid&#32;特殊收容措施：工作人员应监视Cooke县垃圾填埋场，禁止平民进出，对外宣称该地点由于设备严重故障而废弃。食物与水的每日供应通过42A-46C号倾倒槽投放。由于SCP-3486未作出任何离开Cooke县垃圾填埋场的尝试，故将此地重分配为一个基金会设施。若任何SCP-3486个体试图突破收容，则将其重新收容到Site&#32;25的标准人类收容隔间内。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 人形生物 基因 感知力 智能 活物</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3551">SCP-3551</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1548815261 format_%25D%20%25H%3A%25M">30 Jan 2019 02:27</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1572760677 format_%25D%20%25H%3A%25M">03 Nov 2019 05:57</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp uiu wondertainment博士 感知力 智能 玩具 自主</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4243">SCP-4243</a></strong><br />
+<em>最新评论：</em> <strong><tt>Lambda Core</tt></strong> <em>于</em> <strong><tt><span class="odate time_1571831911 format_%25D%20%25H%3A%25M">23 Oct 2019 11:58</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1571407956 format_%25D%20%25H%3A%25M">18 Oct 2019 14:12</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">一个SCP-4243-BLUE个体。背景中还可以看到一个SCP-4243-RED个体。&#32;&#32;&#32;项目编号：SCP-4243&#32;项目等级：Euclid...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 城市 建筑 异常移动 自主</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-2728">SCP-2728</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1570965276 format_%25D%20%25H%3A%25M">13 Oct 2019 11:14</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1570981664 format_%25D%20%25H%3A%25M">13 Oct 2019 15:47</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;&#32;More&#32;by&#32;DarkStuff~!&#32;&#32;&#32;&#32;&#32;Independent&#32;SCPs&#32;&#32;&#32;SCP&#32;Title&#32;&#32;&#32;SCP-445-EX&#32;The&#32;Word&#32;of&#32;the&#32;Day&#32;is&#32;Hope&#32;&#32;&#32;SCP-2728&#32;On&#32;the&#32;Barcelona&#32;Skyline&#32;&#32;&#32;SCP-2729&#32;What&#32;is&#32;it&#32;Good&#32;For?&#32;&#32;&#32;SCP-3018&#32;France&#32;&#32;&#32;the&#32;Tale...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 反熵 建筑 特工laferrier 超维度 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3174">SCP-3174</a></strong><br />
+<em>最新评论：</em> <strong><tt>Clarence Adrian</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609854769 format_%25D%20%25H%3A%25M">05 Jan 2021 13:52</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1568107084 format_%25D%20%25H%3A%25M">10 Sep 2019 09:18</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">初步清洁后的SCP-3174&#32;&#32;&#32;项目编号：SCP-3174&#32;项目等级：Safe&#32;Euclid&#32;Safe&#32;特殊收容措施：当未被使用时，SCP-3174必须被妥善存放于一个上锁的标准收纳柜中。事故3174-A发生后，SCP-3174必须被存放在一个完全黑暗的封闭房间内单独放置的一个收纳柜中。在任何情况下均禁止有孩子的研究者处理SCP-3174。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 声音 感知力 智能 玩具 自主</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-2259">SCP-2259</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1565577517 format_%25D%20%25H%3A%25M">12 Aug 2019 02:38</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1567993612 format_%25D%20%25H%3A%25M">09 Sep 2019 01:46</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-2259&#32;项目等级：Euclid&#32;特殊收容措施：SCP-2259须受到长期维护，必要时更换碳滤芯及荧光灯。仔细清洁水缸，以防止内部样本受到伤害。每日在水面投放两次鱼饲料。&#32;未经站点主管████████及道德委员会批准，禁止使样本完成孕育。&#32;描述：SCP-2259是一个容量为1000升的玻璃鱼缸，尺寸为280cm&#32;x&#32;65cm&#32;x...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 人形生物 动物 容器 掠食性 水生 活物 生殖性 肉食性</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3454">SCP-3454</a></strong><br />
+<em>最新评论：</em> <strong><tt>Spadelee</tt></strong> <em>于</em> <strong><tt><span class="odate time_1542011565 format_%25D%20%25H%3A%25M">12 Nov 2018 08:32</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1567653599 format_%25D%20%25H%3A%25M">05 Sep 2019 03:19</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">Site-BEES，通向高大蜜蜂之乡的传送门径所在地。&#32;&#32;&#32;项目编号：SCP-3454&#32;项目等级：Euclid&#32;特殊收容措施：所有离开高大蜜蜂之乡的人类个体都要接受审讯，以确定该个体是否为一个SCP-3454实例。对SCP-3454个体的收容措施随即生效。Site-BEES的首席研究员的任务包括：&#32;&#32;确认对SCP-3454个体采取的具体措施，以及...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid meta scp 信息危害 精神影响 超维度 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3424">SCP-3424</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1543231730 format_%25D%20%25H%3A%25M">26 Nov 2018 11:28</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1566042378 format_%25D%20%25H%3A%25M">17 Aug 2019 11:46</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">SCP-3424&#32;&#32;&#32;项目编号：SCP-3424&#32;项目等级：Safe&#32;特殊收容措施：SCP-3424被放置在Site-19内一个透光的大型玻璃储存容器中，须接触阳光。SCP-3424-01不需要传统上供人形SCP居住的房间。为其提供住所后，&#32;SCP-3424和SCP-3424-01均无可见变化。&#32;描述：SCP-3424是一颗柠檬（Citrus&#32;limon），由Angela...</span><br />
+<span style="color: #000000"><em>标签：</em></span> are-we-cool-yet safe scp 听觉影响 幻觉 植物 观察影响 视觉性 认知危害</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3136">SCP-3136</a></strong><br />
+<em>最新评论：</em> <strong><tt>Eurya</tt></strong> <em>于</em> <strong><tt><span class="odate time_1535208529 format_%25D%20%25H%3A%25M">25 Aug 2018 14:48</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1565537692 format_%25D%20%25H%3A%25M">11 Aug 2019 15:34</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-3136&#32;项目等级：Safe&#32;特殊收容措施：SCP-3136须置于被发现时所在的文件收纳筒内。装有SCP-3136的文件收纳筒须被锁进一个铅质衬里的牢固箱体内。仅SCP-3136的研究员或经O5议会授权的人员可解锁该箱体。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 动物 反熵 水生 题写</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3839">SCP-3839</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1543910972 format_%25D%20%25H%3A%25M">04 Dec 2018 08:09</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1565533278 format_%25D%20%25H%3A%25M">11 Aug 2019 14:21</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-3839&#32;项目等级：Euclid...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 感知力 无定形 有机 神经性 隔地促动</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3086">SCP-3086</a></strong><br />
+<em>最新评论：</em> <strong><tt>Kaxu Yang</tt></strong> <em>于</em> <strong><tt><span class="odate time_1602560311 format_%25D%20%25H%3A%25M">13 Oct 2020 03:38</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>miumeat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1565532244 format_%25D%20%25H%3A%25M">11 Aug 2019 14:04</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid meta scp 传染性 信息危害 叙述性 媒体 音频</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-2895">SCP-2895</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561964253 format_%25D%20%25H%3A%25M">01 Jul 2019 06:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561965433 format_%25D%20%25H%3A%25M">01 Jul 2019 07:17</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 感知力 活物 生物危害 节肢动物</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-4636">SCP-4636</a></strong><br />
+<em>最新评论：</em> <strong><tt>Etinjat</tt></strong> <em>于</em> <strong><tt><span class="odate time_1548850713 format_%25D%20%25H%3A%25M">30 Jan 2019 12:18</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561822452 format_%25D%20%25H%3A%25M">29 Jun 2019 15:34</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">信息危害警告&#32;除非被明确要求获得SCP-4636的信息，否则应避免接触与之相关的一切数据。将自身暴露于本文档未删减版本将导致降级以及对全部基金会活动的认知清除。如已获得授权，请在下方输入您的访问秘钥。&#32;&#32;&#32;&#32;&#32;输入访问秘钥:&#32;7zE80f97RB5m9Af8&#32;&#32;&#32;身份验证已通过.&#32;文档加载中&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2019老掉牙竞赛 euclid meta scp 信息危害 声音 家具 强迫性 木质</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-1831">SCP-1831</a></strong><br />
+<em>最新评论：</em> <strong><tt>Archibald1</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561517145 format_%25D%20%25H%3A%25M">26 Jun 2019 02:45</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561092864 format_%25D%20%25H%3A%25M">21 Jun 2019 04:54</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 摄像 记忆影响</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3478">SCP-3478</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1541742345 format_%25D%20%25H%3A%25M">09 Nov 2018 05:45</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1561037630 format_%25D%20%25H%3A%25M">20 Jun 2019 13:33</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 人形生物 感知力 时空 智能 自主 超维度 门径</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3278">SCP-3278</a></strong><br />
+<em>最新评论：</em> <strong><tt>Exodus_S</tt></strong> <em>于</em> <strong><tt><span class="odate time_1608860512 format_%25D%20%25H%3A%25M">25 Dec 2020 01:41</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1541566754 format_%25D%20%25H%3A%25M">07 Nov 2018 04:59</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-3278&#32;项目等级：Euclid&#32;特殊收容措施：SCP-3278应被密封于可承受490,000牛顿冲击力的混凝土穹顶下。应考虑派遣测试潜水员探查该项目。&#32;直接接触SCP-3278穹顶的水体温度应被加热至70°C上下。该措施通过在海床上安装三台柴油动力热水炉实现。&#32;3278号船只须在SCP-3278的上方长期锚定，以为测试工作组提供住所并维持一般性监控。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 地下 星际 水生 球体 生物性</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3708">SCP-3708</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1534942371 format_%25D%20%25H%3A%25M">22 Aug 2018 12:52</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1534942702 format_%25D%20%25H%3A%25M">22 Aug 2018 12:58</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-3708&#32;项目等级：Safe&#32;&#32;&#32;&#32;&#32;&#32;&#32;SCP-3708。&#32;&#32;&#32;特殊收容措施：SCP-3708被收容在Site-73的标准低关注度收容区，可由2级以上人员调取并测试。&#32;描述：SCP-3708是一个重5千克，高21厘米的石制雄鸡1雕像。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 自主 雕塑 鸟类</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译故事</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/michael-the-kiler">撒手michael</a></strong><br />
+<em>最新评论：</em> <strong><tt>NovaMeow</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589304667 format_%25D%20%25H%3A%25M">12 May 2020 17:31</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1603495493 format_%25D%20%25H%3A%25M">23 Oct 2020 23:24</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">Headachemanager&#32;09/16/2013&#32;(Mon)&#32;15:15:02&#32;#11847297&#32;&#32;&#32;&#32;micael&#32;&#32;&#32;杀手micahel……&#32;michael是一个穿着灰色连帽衫的孩子，每一天脸上的表情都很伤心因为学校里的孩子们总是在霸凌他。他们总是拿走他的书，把他推倒在地，踢他的脸，他们这些孩子都对他非常非常刻薄！他脸上有瘀伤，每个人都拿他脸上的瘀伤开玩笑！！...</span><br />
+<span style="color: #000000"><em>标签：</em></span> creepypasta 故事 观谬维基</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/whitetail">白尾鹿</a></strong><br />
+<em>最新评论：</em> <strong><tt>Confer Alex</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581131407 format_%25D%20%25H%3A%25M">08 Feb 2020 03:10</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1602006626 format_%25D%20%25H%3A%25M">06 Oct 2020 17:50</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">YarrowWilliam&#32;06/21/2015&#32;(Sun)&#32;13:06:55...</span><br />
+<span style="color: #000000"><em>标签：</em></span> creepypasta 故事 观谬维基</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/death-of-aj-fader">AJ Fader之死</a></strong><br />
+<em>最新评论：</em> <strong><tt>Lambda Core</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585908178 format_%25D%20%25H%3A%25M">03 Apr 2020 10:02</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1600567124 format_%25D%20%25H%3A%25M">20 Sep 2020 01:58</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">crewtime&#32;04/23/15&#32;(Thu)&#32;01:03:29&#32;#83920137&#32;&#32;AJ&#32;Fader（及其朋友们）之死至今仍是是西北太平洋地区最令人困惑的谜团之一。尽管有推定凶手的清晰照片作为证据，但其身份仍然不明。&#32;他们是华盛顿大学西雅图分校2003级的六名新近毕业生。其中一名——Matt...</span><br />
+<span style="color: #000000"><em>标签：</em></span> creepypasta 故事 观谬维基</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/you-do-not-recognise-the-cabin-by-the-water">你不认得水边的小屋</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1556594607 format_%25D%20%25H%3A%25M">30 Apr 2019 03:23</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1591834606 format_%25D%20%25H%3A%25M">11 Jun 2020 00:16</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;故事名称：你不认得水边的小屋&#32;作者：Tufto。本故事是76班系列的一部分。更多Tufto作品，可点击此处获取。&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;纽约，2019年&#32;Winston&#32;Carter站在窗前，摇晃手中杯。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 76年班 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/back-to-square-one">打回原点</a></strong><br />
+<em>最新评论：</em> <strong><tt>Rachud</tt></strong> <em>于</em> <strong><tt><span class="odate time_1555287482 format_%25D%20%25H%3A%25M">15 Apr 2019 00:18</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582248339 format_%25D%20%25H%3A%25M">21 Feb 2020 01:25</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/back-to-square-one/mmletter1.png" class="imagepre yes" alt="mmletter1.png" /><br />
+<span style="white-space: pre-wrap;">“内心疑惑时，听柔和爵士”，这大概算Sophie在很长一段时间里听过的最糟糕的建议了。从二十分钟前到现在，她努力集中起注意力，却一再失败。状态实在太差，以至于她决定给父亲的馊主意一次尝试的机会。&#32;柔和爵士。我就不该费这力气。&#32;只是个小bug。今天我就能搞定。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 2019goi竞赛 letters娱乐 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/not-fade-away">并未消逝</a></strong><br />
+<em>最新评论：</em> <strong><tt>Nico_Nozomi</tt></strong> <em>于</em> <strong><tt><span class="odate time_1541330313 format_%25D%20%25H%3A%25M">04 Nov 2018 11:18</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1580740802 format_%25D%20%25H%3A%25M">03 Feb 2020 14:40</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 76年班 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/prelude-to-crisis-the-decline-and-fall-of-the-foundation">危难时刻：基金会的衰与陨 序言</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578646543 format_%25D%20%25H%3A%25M">10 Jan 2020 08:55</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Simon Arran</tt></strong> <em>于</em> <strong><tt><span class="odate time_1578668213 format_%25D%20%25H%3A%25M">10 Jan 2020 14:56</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">历史是由幸存者书写的。&#32;我的名字是Jacob&#32;Conwell，我试图要去讲述的那些事件，我多数并未亲身经历。其中的一些有我在场，我还认识一小批主要参与者，然而我的真实角色仅仅是一个收集了尽可能多的关于“危难时刻”的材料的人。&#32;我已将之整理成数十卷，涵盖了在我的认识里这段时期的风云变幻。停滞期，大崩溃，名录，四管理员之年，无政府阶段，还有复垦期。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/how-dr-clef-got-into-my-santa-claus-pants-i-ll-never-know">我永远没法弄清楚Clef博士怎么会穿上了我的圣诞老人裤</a></strong><br />
+<em>最新评论：</em> <strong><tt>Savannah Nightjar</tt></strong> <em>于</em> <strong><tt><span class="odate time_1581094677 format_%25D%20%25H%3A%25M">07 Feb 2020 16:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1577524936 format_%25D%20%25H%3A%25M">28 Dec 2019 09:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;一篇有关圣诞节宿醉的欢乐风基金会小故事。首发于我的youtube频道，现在wiki上也可以读到啦。&#32;&#32;&#32;&#32;&#32;http://scp-wiki-cn.wikidot.com/dr-cimmerian-s-personnel-filehttp:scp-wiki-cn-wikidot-com-dr-cimmerian-s-personnel-file▸&#32;该作者的更多作品...</span><br />
+<span style="color: #000000"><em>标签：</em></span> bright博士 cimmerian博士 clef博士 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/radical-acceptance">全然接受</a></strong><br />
+<em>最新评论：</em> <strong><tt>JustAswellJar Pepper</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573568273 format_%25D%20%25H%3A%25M">12 Nov 2019 14:17</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573690359 format_%25D%20%25H%3A%25M">14 Nov 2019 00:12</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 三重月倡议会 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/it-would-make-sense-if-that-were-true">如果是真的就说得通了，但其实根本说不通，那么祝好运</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573311576 format_%25D%20%25H%3A%25M">09 Nov 2019 14:59</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1573311393 format_%25D%20%25H%3A%25M">09 Nov 2019 14:56</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">在某一处平行时空……&#32;&#32;&#32;“斯克兰顿现实稳定锚这玩意看起来好用到家了。我们为何不将它到处推广使用呢？也许，用于收容？”&#32;&#32;&#32;Charles&#32;Vaux研究员刚刚晋升到3级，正手忙脚乱于全新的权限与刚揭开的机密，他正研究着一张成套实验措施的草稿，手持钢笔在上头指指点点。&#32;&#32;&#32;“主要是因为这玩意很危险，”&#32;Sophia...</span><br />
+<span style="color: #000000"><em>标签：</em></span> light博士 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/givingup">放手</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1554275597 format_%25D%20%25H%3A%25M">03 Apr 2019 07:13</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1566360621 format_%25D%20%25H%3A%25M">21 Aug 2019 04:10</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/so-you-ve-been-trapped-in-a-pocket-dimension-what-now">所以说，你被困于一个口袋维度。现在怎么办？</a></strong><br />
+<em>最新评论：</em> <strong><tt>FU MEDIC</tt></strong> <em>于</em> <strong><tt><span class="odate time_1554229035 format_%25D%20%25H%3A%25M">02 Apr 2019 18:17</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>DKzimu</tt></strong> <em>于</em> <strong><tt><span class="odate time_1558694814 format_%25D%20%25H%3A%25M">24 May 2019 10:46</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">基金会官方指导手册第三版&#32;&#32;&#32;&#32;空间性、时间性以及维度异常&#32;247页/章节-24&#32;-&#32;不稳定的跨维度旅行&#32;&#32;&#32;所以说，你被困于一个口袋维度。现在怎么办？&#32;&#32;&#32;...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 故事</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/the-price-we-pay">我们的代价</a></strong><br />
+<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1541411589 format_%25D%20%25H%3A%25M">05 Nov 2018 09:53</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1542429792 format_%25D%20%25H%3A%25M">17 Nov 2018 04:43</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> 故事</div>
+</div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>其他翻译</span></h2>
+<hr /></div>
+</div>
+    
+    
+    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/vend-a-friend">贩卖伙伴中心页</a></strong><br />
+<em>最新评论：</em> <strong><tt>Jack-26A26</tt></strong> <em>于</em> <strong><tt><span class="odate time_1568600941 format_%25D%20%25H%3A%25M">16 Sep 2019 02:29</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1600701726 format_%25D%20%25H%3A%25M">21 Sep 2020 15:22</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/vend-a-friend/Logo.png" class="imagepre yes" alt="Logo.png" /><br />
+<span style="white-space: pre-wrap;">第1章&#32;-&#32;We&#32;Just&#32;Make&#32;Toys&#32;第2章&#32;-&#32;To&#32;Think&#32;I've&#32;Spent&#32;My&#32;Whole&#32;Life&#32;Waiting&#32;第3章&#32;-&#32;I&#32;Don't&#32;Get&#32;It,&#32;I&#32;Functioned&#32;Before&#32;第4章&#32;-&#32;You&#32;Can't&#32;Win&#32;Them&#32;All&#32;第5章&#32;-&#32;Be&#32;Strange&#32;or&#32;Be&#32;Forgotten&#32;&#32;&#32;&#32;第6章&#32;/&#32;幕间休息&#32;-...</span><br />
+<span style="color: #000000"><em>标签：</em></span> brainy-brian wondertainment博士 中心 奇妙世界</div>
+</div>
+</div>
     
     
     
     </div></div>
-<div id="wiki-tab-0-1" style="display:none">
-<p>参考：<a href="http://scp-wiki-cn.wikidot.com/hal-aki-achievement-badges">成就徽章</a></p>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E6%8E%A1%E7%94%A8%E9%80%9A%E7%9F%A5.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E6%8E%A1%E7%94%A8%E9%80%9A%E7%9F%A5.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>录取通知</strong></span></span><br />
-<span style="font-size:85%;"><strong>创建人事档案</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E9%8A%80%E3%83%A1%E3%83%80%E3%83%AB.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E9%8A%80%E3%83%A1%E3%83%80%E3%83%AB.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>银奖章</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分30以上的文档</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%81%8A%E7%A5%AD%E3%82%8A%E5%A5%BD%E3%81%8D.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E3%81%8A%E7%A5%AD%E3%82%8A%E5%A5%BD%E3%81%8D.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>喜欢祭典</strong></span></span><br />
-<span style="font-size:85%;"><strong>参加一次竞赛</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A4%E3%82%BA%E3%83%99%E3%82%B9%E3%83%88.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A4%E3%82%BA%E3%83%99%E3%82%B9%E3%83%88.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>简单的就是最好的</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇通常格式的且不包含附录、录音、实验记录、访谈记录、探索记录等的SCP文章，并得到20以上的评分</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E4%BA%BA%E9%A1%9E%E5%AD%A6%E8%80%85.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E4%BA%BA%E9%A1%9E%E5%AD%A6%E8%80%85.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>人类学家</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上的、具自我的，外貌近似人类的，人型生物项目的SCP文档</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%85.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%85.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>生物学家</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上的、包含下列任一标签的SCP文档：生物性、活物、基因、动物、植物、细菌</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E5%8C%BB%E8%80%85.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E5%8C%BB%E8%80%85.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>医学家</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上的、包含下列任一标签的SCP文档：医学性、生理性、眼睛、骨骼、毒性</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%82%81%E3%81%A1%E3%82%83%E3%82%81%E3%81%A1%E3%82%83%E3%81%84%E3%82%B1%E3%83%86%E3%83%AB.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E3%82%81%E3%81%A1%E3%82%83%E3%82%81%E3%81%A1%E3%82%83%E3%81%84%E3%82%B1%E3%83%86%E3%83%AB.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>乱七八糟的Keter</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上、关于Keter级项目的SCP文档</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E7%A7%A9%E5%BA%8F%E3%82%92%E5%AE%88%E3%82%8B%E6%82%AA%E9%AD%94.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E7%A7%A9%E5%BA%8F%E3%82%92%E5%AE%88%E3%82%8B%E6%82%AA%E9%AD%94.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>守护秩序的恶魔</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上、关于Thaumiel级项目的SCP文档</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%A9%E3%83%A9%E3%83%A9%E3%82%A4%E3%82%B9%E3%83%89.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%A9%E3%83%A9%E3%83%A9%E3%82%A4%E3%82%B9%E3%83%89.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>无效攵攵攵化</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上、关于Neutralized级项目的SCP文档</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E5%85%88%E9%81%94%E3%81%AF%E3%81%82%E3%82%89%E3%81%BE%E3%81%BB%E3%81%97%E3%81%8D%E3%81%93%E3%81%A8.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E5%85%88%E9%81%94%E3%81%AF%E3%81%82%E3%82%89%E3%81%BE%E3%81%BB%E3%81%97%E3%81%8D%E3%81%93%E3%81%A8.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>众望所归的前辈</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇文章</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E3%83%9F%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%BB%E3%81%9D%E3%81%86%E3%81%95%E3%81%8F.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E3%83%9F%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%BB%E3%81%9D%E3%81%86%E3%81%95%E3%81%8F.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>创作先生</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布10篇以上的SCP文档</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E7%89%A9%E7%90%86%E5%AD%A6%E8%80%85.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E7%89%A9%E7%90%86%E5%AD%A6%E8%80%85.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>物理学家</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分20以上的、包含下列任一标签的SCP文档：反物理定律、反熵、电力、磁性、重力影响</strong></span></p>
-</div>
-<div class="left-grid">
-<div class="image-container floatleft"><img src="http://scp-jp.wdfiles.com/local--files/hal-aki-achievement-badges/%E5%AE%9F%E7%B8%BE_%E9%87%91%E3%83%A1%E3%83%80%E3%83%AB.png" width="50" alt="%E5%AE%9F%E7%B8%BE_%E9%87%91%E3%83%A1%E3%83%80%E3%83%AB.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>金奖章</strong></span></span><br />
-<span style="font-size:85%;"><strong>发布一篇评分50以上的文档</strong></span></p>
-</div>
-<div class="right-grid">
-<div class="image-container floatleft"><img src="http://scp-wiki-cn.wdfiles.com/local--files/achievement-badges/18.png" width="50" alt="18.png" class="image" /></div>
-<p><span style="font-size:120%;"><span style="color:#970118"><strong>生灵的光辉闪耀时</strong></span></span><br />
-<span style="font-size:85%;"><strong>创作至少6篇20+的作品，其中至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E6%A4%8D%E7%89%A9">植物</a>」/「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E6%A0%91%E6%9C%A8">树木</a>」/「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E4%BB%99%E4%BA%BA%E6%8E%8C">仙人掌</a>」标签、至少三篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E5%8A%A8%E7%89%A9">动物</a>」标签、至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E9%B8%9F%E7%B1%BB">鸟类</a>」标签、至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E5%A4%B4%E8%B6%B3%E7%B1%BB%E5%8A%A8%E7%89%A9">头足类动物</a>」标签、至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E6%97%A0%E8%84%8A%E6%A4%8E%E5%8A%A8%E7%89%A9">无脊椎动物</a>」/「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E6%98%86%E8%99%AB">昆虫</a>」/「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E8%8A%82%E8%82%A2%E5%8A%A8%E7%89%A9">节肢动物</a>」标签、至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E7%88%AC%E8%A1%8C%E7%B1%BB%E5%8A%A8%E7%89%A9">爬行类动物</a>」/「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E5%BC%82%E5%85%B3%E8%8A%82%E7%9B%AE">异关节目</a>」标签、至少一篇包含「<a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E9%B1%BC%E7%B1%BB">鱼类</a>」标签。</strong></span></p>
-</div>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
-OZONE.dom.onDomReady(function(){
-        var tabViewa10ba753b7bfe46b0db182893ab0c8fd = new YAHOO.widget.TabView('wiki-tabview-a10ba753b7bfe46b0db182893ab0c8fd');
-                }, "dummy-ondomready-block");
-        
-//]]>
-</script><script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
-</script>
-<div id="wiki-tabview-89237d89421df387aebd691fca2414a6" class="yui-navset">
-<ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>Eule的翻译</em></a></li>
-<li><a href="javascript:;"><em>Eule的原创文档</em></a></li>
-<li><a href="javascript:;"><em>Eule的原创故事</em></a></li>
-<li><a href="javascript:;"><em>待填坑一览</em></a></li>
-<li><a href="javascript:;"><em>MTF-CN-Gamma-06到目前为止已有的设定</em></a></li>
-<li><a href="javascript:;"><em>关于Eule的图册</em></a></li>
-<li><a href="javascript:;"><em>Eule的客串作品</em></a></li>
-<li><a href="javascript:;"><em>Eule的胡言乱语</em></a></li>
-</ul>
-<div class="yui-content">
-<div id="wiki-tab-0-0">
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-4339">SCP-4339</a></p>
-</div>
-<div id="wiki-tab-0-1" style="display:none">
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-762">SCP-CN-762</a><em>战士的忠魂仍然在保卫祖国的海疆</em></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-822">SCP-CN-822</a><em>就算用身体作为囚笼我也要把这些恶魔送回去</em></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-825">SCP-CN-825</a><em>如果找到了我的尸体，请将我埋葬在西伯利亚</em>（写的不是很好……）</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-827">SCP-CN-827</a><em>虽为人类之身，亦涉神域</em></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-837">SCP-CN-837</a><em>καὶ σὺ τέκνον!</em></p>
+<div class="collab-header" style="text-align: center;">
+<hr />
+<h2 id="toc0"><span>更多页面</span></h2>
+<hr /></div>
 </div>
 <div id="wiki-tab-0-2" style="display:none">
-<p><a href="http://scp-wiki-cn.wikidot.com/about-mtf-cn-gamma-06">只是MTF-CN-Gamma-06参与的事件之一</a><em>我们会搜索它们，找到它们，然后，把它们送回地狱。</em></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/not-a-dream">我们仍在此地</a><em>守住这里。</em></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/we-do-not-have-holidays">公款旅游：假日作战</a><em>你未完成的事情，我们已经完成了。去吧，兄弟，在那个世界好好的生活吧。</em></p>
+<p><strong>Dr. Foymug翻译的总部文档列表：</strong></p>
+<p><a href="/scp-1831">SCP-1831</a><br />
+<a href="/scp-1857">SCP-1857</a><br />
+<a href="/scp-1888">SCP-1888</a><br />
+<a href="/scp-2259">SCP-2259</a><br />
+<a href="/scp-2263">SCP-2263</a><br />
+<a href="/scp-2728">SCP-2728</a><br />
+<a href="/scp-2895">SCP-2895</a><br />
+<a href="/scp-3086">SCP-3086</a><br />
+<a href="/scp-3136">SCP-3136</a><br />
+<a href="/scp-3174">SCP-3174</a><br />
+<a href="/scp-3177">SCP-3177</a><br />
+<a href="/scp-3179">SCP-3179</a><br />
+<a href="/scp-3198">SCP-3198</a><br />
+<a href="/scp-3278">SCP-3278</a><br />
+<a href="/scp-3414">SCP-3414</a><br />
+<a href="/scp-3424">SCP-3424</a><br />
+<a href="/scp-3454">SCP-3454</a><br />
+<a href="/scp-3478">SCP-3478</a><br />
+<a href="/scp-3486">SCP-3486</a><br />
+<a href="/scp-3496">SCP-3496</a><br />
+<a href="/scp-3506">SCP-3506</a><br />
+<a href="/scp-3529">SCP-3529</a><br />
+<a href="/scp-3542">SCP-3542</a><br />
+<a href="/scp-3551">SCP-3551</a><br />
+<a href="/scp-3565">SCP-3565</a><br />
+<a href="/scp-3566">SCP-3566</a><br />
+<a href="/scp-3708">SCP-3708</a><br />
+<a href="/scp-3768">SCP-3768</a><br />
+<a href="/scp-3839">SCP-3839</a><br />
+<a href="/scp-3881">SCP-3881</a><br />
+<a href="/scp-4098">SCP-4098</a> [合译]<br />
+<a href="/scp-4243">SCP-4243</a><br />
+<a href="/scp-4432">SCP-4432</a><br />
+<a href="/scp-4510">SCP-4510</a><br />
+<a href="/scp-4610">SCP-4610</a><br />
+<a href="/scp-4636">SCP-4636</a><br />
+<a href="/scp-4699">SCP-4699</a><br />
+<a href="/scp-4955">SCP-4955</a><br />
+<a href="/scp-4970">SCP-4970</a><br />
+<a href="/scp-5200">SCP-5200</a><br />
+<a href="/scp-5600">SCP-5600</a><br />
+<a href="/scp-5999">SCP-5999</a><br />
+<a href="/scp-mystery-j">SCP-谜团-J</a></p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br /></p>
+<div style="text-align: right;">
+<p><strong><span style="color:#F5F5F5;">Dr. Foymug翻译的总部其它内容列表：</span></strong><br />
+<a href="/not-fade-away">并未消逝</a><br />
+<a href="/the-price-we-pay">我们的代价</a><br />
+<a href="/back-to-square-one">打回原点</a><br />
+<a href="/so-you-ve-been-trapped-in-a-pocket-dimension-what-now">所以说，你被困于一个口袋维度。现在怎么办？</a><br />
+<a href="/givingup">放手</a><br />
+<a href="/you-do-not-recognise-the-cabin-by-the-water">你不认得水边的小屋</a><br />
+<a href="/it-would-make-sense-if-that-were-true">如果是真的就说得通了，但其实根本说不通，那么祝好运</a><br />
+<a href="/vend-a-friend">贩卖伙伴中心页</a><br />
+<a href="/radical-acceptance">全然接受</a><br />
+<a href="/how-dr-clef-got-into-my-santa-claus-pants-i-ll-never-know">我永远没法弄清楚Clef博士怎么会穿上了我的圣诞老人裤</a><br />
+<a href="/prelude-to-crisis-the-decline-and-fall-of-the-foundation">危难时刻：基金会的衰与陨 序言</a><br />
+<a href="/michael-the-kiler">撒手michael</a><br />
+<a href="/whitetail">白尾鹿</a><br />
+<a href="/death-of-aj-fader">AJ Fader之死</a></p>
+</div>
 </div>
 <div id="wiki-tab-0-3" style="display:none">
-<p>一篇1111事故的文章</p>
-<h2 id="toc0"><span>我也不想咕咕咕啊！</span></h2>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="font-size:200%;"><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">……你在碎片数据的乱流中发现了……</a></div>
+<div class="collapsible-block-content">
+<p>一个上层叙事秘密讨论区！</p>
+<blockquote>
+<p><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4313927&amp;amp;size=small&amp;amp;timestamp=1607995747" alt="ForgotMyDrug" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4313927)" /></a><a href="http://www.wikidot.com/user:info/forgotmydrug" onclick="WIKIDOT.page.listeners.userInfo(4313927); return false;">ForgotMyDrug</a></span>：</strong>欢迎你，疲惫的旅人！我是Foymug的作者先生。快请进，在火炉旁找个位子随便坐。</p>
+</blockquote>
+</div>
+</div>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="color:#F5F5F5;">这是一个冗余标签页，数据碎片待清理。</span></p>
 </div>
 <div id="wiki-tab-0-4" style="display:none">
-<h1 id="toc1"><span>MTF-CN-Gamma-06“免疫系统”</span></h1>
-<div class="image-container aligncenter"><img src="http://scpsandboxcn.wikidot.com/local--files/eulelau/MTF-CN-Gamma-06%281%29.png" alt="MTF-CN-Gamma-06%281%29.png" class="image" /></div>
-<p><strong>机动特遣队规模：</strong>加强营级（满编为650人）</p>
-<p><strong>负责人：</strong>Eule&quot;Nemo&quot;Lau<em>（人事档案：<a href="http://scp-wiki-cn.wikidot.com/dr-eule-s-personnel-file|">Dr.Eule的人事档案</a>）</em></p>
-<p><strong>主要职责：</strong>协助（或主力）对具有极端生化/核/辐射威胁的SCP进行调查、压制、转运；大范围地区/大规模人群看管；协助其他机动特遣队执行常规任务</p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="font-size:200%;"><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></span><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
 <div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;MTF-CN-Gamma-06下辖分队</a></div>
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 <div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;收起</a></div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">……你在碎片数据的乱流中发现了……</a></div>
 <div class="collapsible-block-content">
-<h2 id="toc2"><span>MTF-CN-Gamma-06-α（侦查分队）</span></h2>
-<div class="image-container aligncenter"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/MTF-CN-Gamma-06-alpha.png" height="200px" alt="MTF-CN-Gamma-06-alpha.png" class="image" /></div>
-<p><strong>人数：</strong>75（满编）</p>
-<p><strong>代号：</strong>探针/Team Green</p>
-<p><strong>代表色：</strong><span style="color: green">█</span></p>
-<p><strong>任务：</strong>威胁等级确认，前出侦察</p>
-<h2 id="toc3"><span>MTF-CN-Gamma-06-β（战斗分队）</span></h2>
-<div class="image-container aligncenter"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/MTF-CN-Gamma-06-%CE%B2.png" height="200px" alt="MTF-CN-Gamma-06-%CE%B2.png" class="image" /></div>
-<p><strong>人数：</strong>275（满编）</p>
-<p><strong>代号：</strong>抗生素/Team Red</p>
-<p><strong>代表色：</strong><span style="color: red">█</span></p>
-<p><strong>任务：</strong>项目压制</p>
-<h2 id="toc4"><span>MTF-CN-Gamma-06-γ（消洗/清理分队）</span></h2>
-<div class="image-container aligncenter"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/MTF-CN-Gamma-06-%CE%B3.png" height="200px" alt="MTF-CN-Gamma-06-%CE%B3.png" class="image" /></div>
-<p><strong>人数：</strong>50（满编）</p>
-<p><strong>代号：</strong>焚化炉/Team Yellow</p>
-<p><strong>代表色：</strong><span style="color: yellow">█</span></p>
-<p><strong>任务：</strong>后续处理，CBRN污染范围消洗</p>
-<h2 id="toc5"><span>MTF-CN-Gamma-06-δ（空中分队）</span></h2>
-<div class="image-container aligncenter"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/MTF-CN-Gamma-06-%CE%B4.png" height="200px" alt="MTF-CN-Gamma-06-%CE%B4.png" class="image" /></div>
-<p><strong>人数：</strong>150（满编）</p>
-<p><strong>代号：</strong>雪鸮/Team Blue</p>
-<p><strong>代表色：</strong><span style="color: blue">█</span></p>
-<p><strong>任务：</strong>区域遮断/空中火力支援/制空权夺取/大范围地区控制/大规模人群监视</p>
+<p>一个隐藏的设定贴图区！</p>
+<div style="float:left; margin:0 2em 1em 2em; width:300px; border:0;">
+<table class="wiki-content-table">
+<tr>
+<td colspan="2"><img src="http://scp-wiki-cn.wdfiles.com/local--files/dr-foymug-s-personnel-file/foymug_bread.jpg" width="300px" alt="foymug_bread.jpg" class="image" /></td>
+</tr>
+<tr>
+<th colspan="2"><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=3471238&amp;amp;size=small&amp;amp;timestamp=1607995747" alt="breaddddd" style="background-image:url(http://www.wikidot.com/userkarma.php?u=3471238)" /></a><a href="http://www.wikidot.com/user:info/breaddddd" onclick="WIKIDOT.page.listeners.userInfo(3471238); return false;">breaddddd</a></span>创作的娘化宇宙版Dr. Foymug！赞美面包菌！！！</th>
+</tr>
+</table>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></div>
 </div>
 </div>
-</div>
-<p><strong>协助收容项目：</strong><br />
-<a href="http://scp-wiki-cn.wikidot.com/scp-cn-822">SCP-CN-822</a></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-825">SCP-CN-825</a></p>
-<p><strong>参与收容项目：</strong><br />
-<a href="http://scp-wiki-cn.wikidot.com/scp-cn-827">SCP-CN-827</a></p>
-<p><strong>参与事件：</strong><br />
-<a href="http://scp-wiki-cn.wikidot.com/about-mtf-cn-gamma-06">只是MTF-CN-Gamma-06参与的事件之一</a></p>
+<br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="color:#F5F5F5;">这是一个冗余标签页，数据碎片待清理。</span></p>
 </div>
 <div id="wiki-tab-0-5" style="display:none">
-<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/dr-eule-s-personnel-file/Dr.Eule%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%B8%B8%E6%9C%8D.jpg" style="width:300px;" alt="Dr.Eule%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%B8%B8%E6%9C%8D.jpg" class="image" />
-<div class="scp-image-caption" style="width:300px;">
-<p>Eule的秋冬季节常服（自制）</p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="font-size:200%;"><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></span></p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">……你在碎片数据的乱流中发现了……</a></div>
+<div class="collapsible-block-content">
+<p>作者的SCP推荐列表！</p>
+<p>这里不负责列举所有广受好评的滥觞之作，只点名作者心目中的私家珍藏。</p>
+<ul>
+<li><a href="/scp-cn-500">SCP-CN-500</a></li>
+<li><a href="/scp-cn-801">SCP-CN-801</a></li>
+<li><a href="/scp-cn-985">SCP-CN-985</a></li>
+<li><a href="/scp-cn-1614">SCP-CN-1614</a></li>
+<li><a href="/scp-cn-1999">SCP-CN-1999</a></li>
+<li><a href="/scp-1357">SCP-1357</a></li>
+<li><a href="/scp-1867">SCP-1867</a></li>
+<li><a href="/scp-3306">SCP-3306</a></li>
+<li><a href="/scp-3477">SCP-3477</a></li>
+<li><a href="/scp-3844">SCP-3844</a></li>
+</ul>
+<p>以上，快去读吧！（热切）</p>
 </div>
 </div>
-<img src="http://scpsandboxcn.wikidot.com/local--files/eulelau/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180908222858.jpg" alt="%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180908222858.jpg" class="image" /><img src="http://scpsandboxcn.wikidot.com/local--files/eulelau/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180908222919.jpg" alt="%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180908222919.jpg" class="image" /></div>
+</div>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="color:#F5F5F5;">这是一个冗余标签页，数据碎片待清理。</span></p>
+</div>
 <div id="wiki-tab-0-6" style="display:none">
-<p><a href="http://scp-wiki-cn.wikidot.com/exposition">第一乐章：呈示部</a>性感Eule在线射击</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-605">SCP-CN-605</a>性感Eule在线休假（？？？）</p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="font-size:200%;"><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></span><br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">……你在碎片数据的乱流中发现了……</a></div>
+<div class="collapsible-block-content">
+<p><span style="white-space: pre-wrap;">[\\[ae0[[&lt;</span></p>
+<p><span style="white-space: pre-wrap;">[e\\\i.-a\\\.&#32;User&#32;Ccccrl\\\</span></p>
+<p><span style="white-space: pre-wrap;">[//fa/32][[b&#32;0.D-/</span></p>
+<p>噢，这只是另一堆杂乱的无用数据。</p>
+</div>
+</div>
+</div>
+<br />
+<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span></p>
+<p><span style="color:#F5F5F5;">这是一个冗余标签页，数据碎片待清理。</span></p>
 </div>
 <div id="wiki-tab-0-7" style="display:none">
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-762">海魂</a>很简单，一群无法回家的军人的故事（然而因为本人太菜了所以没写好……）</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-822">Sünde</a>本来是想写医闹模因的，突然想到加上丝状病毒的设定似乎贼带感，于是就有了<span style="text-decoration: line-through;">永远不好好起名系列</span></p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-825">змей Горыныч</a>斯拉夫神话来的灵感……不说了丢人</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-827">蛇杖下的誓言</a><span style="text-decoration: line-through;">终于开始好好起名了</span>名称来源是我的一篇被down爆的作品，灵感来源是一名二战期间与美帝马润一起被派遣的海军军医（毕竟四等人全员都得参战，没的军医和神职人员），一开始他拒绝使用武器，但在一次战斗中本来可以脱离险境的他发现日军在屠杀自己的伤员之后非常愤怒，抓起武器保护伤员直到援军抵达，自己战死沙场。至于为什么是美籍华人……没办法，非美国国籍上医学院太难了，就只能这么设定了。</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-837">καὶ σὺ τέκνον</a><span style="text-decoration: line-through;">又不开始好好起名了</span>AP历史中毒，正好当时有一个“医院”的医院的想法，于是就有了~</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/about-mtf-cn-gamma-06">只是MTF-CN-Gamma-06参与的事件之一</a>算是822的外围，灵感来源……彩六的Outbreak，嗯。</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/not-a-dream">我们仍在此地</a>医院系列的试水作品，灵感来源是喝酒之后的一次机枪哥五杀（DP28天下第一！）</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/we-do-not-have-holidays">公款旅游：假日行动</a><span style="text-decoration: line-through;">真名是我们没有假期，点进去之后注意网址</span>灵感来源……没啥来源，打赌输了写一篇文，就这么简单。地点定在广州是因为……我真的是个吃货，包括一直念叨着肠粉也是本人的真实写照。有以下因素导致我最后给写成这个样子了<br />
-·当时在知乎上跟dalao在他的回答下面聊在美国的自卫权一类的问题，dalao举例说在有些州，如果在路上发现暴力侵害事件，可以先警告之后直接开枪射击，当时dalao的回答里有一句话是“上帝创造万物，柯尔特使人人平等。”于是Eule的装备里就有了一把左轮手枪，虽然是MR73吧<br />
-·创作到一半的时候看了鱼叔的647，跟鱼叔聊了之后鱼叔表示彗星鱼不会复活了<span style="text-decoration: line-through;">于是随手把王腾也给写死了</span><br />
-·对于王腾特工的死深表愧疚，于是参照海豹的打鹰仪式写了葬礼部分<br />
-<span style="text-decoration: line-through;">·一如既往的彩六找灵感系列</span></p>
-<p><span style="color: red">关于06站点的特遣队</span>在构思SCP-CN-822的时候发现全中分当时没有一支特遣队是CBRN化的，于是就给搞了这个CBRN特遣队的设定。虽然后面涉及到的不只是CBRN了。起名还是瞎起的……</p>
-<p>初期防疫最开始是一个空壳的队伍，当时在整理06站点页的资料的时候发现这支特遣队只是列在那里没有具体的设定，于是正好在发愁CN-837里的常规特遣队该让谁来干的我直接就去完善了初期防疫的设定顺便写了几个作品出来。</p>
-<p><a href="http://scp-wiki-cn.wikidot.com/cn1000eulenlau">银针</a>很简单，对于中医的惋惜吧，毕竟被中医救过命，就这么看着中医被骂也好怎么着也好心里难受的一匹。至于-5的设计的话，主要还是想描述早期，西医还没有进入中国的时候，人们使用中医对抗的“疾病”概念的具象化吧。</p>
-<p>待续</p>
+<h1 id="toc1"><span><span style="color:#F5F5F5;">[数据删除]的人事档案</span></span></h1>
+<p><span style="color:#F5F5F5;"><strong>代号：</strong>Torg特工</span></p>
+<p><span style="color:#F5F5F5;"><strong>状态：</strong>MIA</span></p>
+<p><span style="color:#F5F5F5;"><strong>真实姓名：</strong>[数据删除]</span></p>
+<p><span style="color:#F5F5F5;"><strong>性别：</strong>[数据删除]</span></p>
+<p><span style="color:#F5F5F5;"><strong>安全许可等级：</strong>[数据删除]</span></p>
+<p><span style="color:#F5F5F5;"><strong>职务：</strong>[数据删除]</span></p>
+<p><span style="color:#F5F5F5;"><strong>所属MTF：</strong>[数据删除]</span></p>
+<p><span style="color:#F5F5F5;"><strong>个人特质：</strong></span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除]</span></p>
+<p><span style="color:#F5F5F5;">[数据删除][碎片恢复]不执行任务时，常常会念叨起他那个同样在基金会工作的哥哥，Foymug。</span></p>
 </div>
 </div>
 </div>
 <script type="text/javascript">
 //<![CDATA[
 OZONE.dom.onDomReady(function(){
-        var tabView89237d89421df387aebd691fca2414a6 = new YAHOO.widget.TabView('wiki-tabview-89237d89421df387aebd691fca2414a6');
+        var tabViewea5ba51b6a37753c3a4375534216f994 = new YAHOO.widget.TabView('wiki-tabview-ea5ba51b6a37753c3a4375534216f994');
                 }, "dummy-ondomready-block");
         
 //]]>
@@ -1032,12 +1927,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 94, 最后编辑于: <span class="odate time_1609672055 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">03 Jan 2021 11:07</span></div>
+                            <div id="page-info">页面版本: 75, 最后编辑于: <span class="odate time_1607995747 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">15 Dec 2020 01:29</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+13</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+12</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-10664727/dr-eule-s-personnel-file" class="btn btn-default" id="discuss-button">讨论 (0)</a>
+<a href="/forum/t-8518616/dr-foymug-s-personnel-file" class="btn btn-default" id="discuss-button">讨论 (6)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -1104,21 +1999,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://denver.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/denver.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://pkp.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pkp.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://denver.wikidot.com">Shadowrun: Denver</a></h3>
-            <div class="desc">          
-              Complicated Shadows
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://sistdig.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sistdig.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://sistdig.wikidot.com">Sistemas Digitales</a></h3>
+            <h3><a target="_blank" href="http://pkp.wikidot.com">Wiki.PKP.in</a></h3>
             <div class="desc">          
               
             </div>
@@ -1126,10 +2010,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://wiki.cloudtw.org">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wiki.cloudtw.org/80.jpg"/>
+            <a target="_blank" class="image" href="http://nsb.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/nsb.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://wiki.cloudtw.org">CloudTW</a></h3>
+            <h3><a target="_blank" href="http://nsb.wikidot.com">Nsb Notes</a></h3>
             <div class="desc">          
               
             </div>
@@ -1137,12 +2021,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://radiohub.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/radiohub.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://aviationknowledge.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/aviationknowledge.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://radiohub.wikidot.com">Radiohub</a></h3>
+            <h3><a target="_blank" href="http://aviationknowledge.wikidot.com">AviationKnowledge</a></h3>
             <div class="desc">          
-              Lossless Radiohead Hub Wiki
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://bua581.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bua581.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://bua581.wikidot.com">Managing Information Systems</a></h3>
+            <div class="desc">          
+              BUA 581 - Rick Sprenkle
             </div>
           </div>
         </div>

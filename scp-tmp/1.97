@@ -1,568 +1,307 @@
-@import url("https://use.typekit.net/nxg5itx.css");
-
-@supports(display:grid) {
-
-	:root {
-		/* S-CSS-P Integration */
-		/* If you're making a new CSS theme, please include the following three variables at minimum. */
-		--theme-base: "black-highlighter";
-		/* must be either "black-highlighter" or "sigma9" */
-		--theme-id: "old-money-theme";
-		/* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-		--theme-name: "nu-SCP Theme";
-		/* set this to your theme's full name */
-
-		/* Header */
-		--logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Logo.png");
-
-		/* Typefaces */
-		--body-font: turnip, '华文中宋', serif;
-		--header-font: ivymode, '华文新魏', sans-serif;
-		--title-font: ivymode, '华文新魏', sans-serif;
-		--mono-font: pennsylvania, '仿宋', monospace;
-
-		/* Standard Colors */
-		--white-monochrome: 252, 252, 252;
-		/* white */
-		--pale-gray-monochrome: 244, 244, 244;
-		/* v light gray for blockquotes and stuff */
-		--light-pale-gray-monochrome: 244, 244, 244;
-		/* very light pale gray for misc. use */
-		--very-light-gray-monochrome: 215, 215, 215;
-		--light-gray-monochrome: 215, 215, 215;
-		/* light accent gray for login status */
-		--gray-monochrome: 185, 150, 80;
-		/* gray */
-		--dark-gray-monochrome: 115, 94, 55;
-		/* dark accent gray for sidebar background */
-		--black-monochrome: 26, 25, 24;
-		/* black */
-		--bright-accent: 252, 236, 135;
-		/* bright red */
-		--medium-accent: 207, 159, 45;
-		/* medium red */
-		--dark-accent: 70, 56, 33;
-		/* dark red */
-		--newpage-color: 221, 102, 17;
-		/* pale orange */
-
-		/* Primary Menu Colors */
-		--swatch-menubg-color: var(--black-monochrome);
-		--swatch-border-color: var(--swatch-menubg-dark-color);
-		--sidebar-links-text: var(--swatch-menutxt-light-color);
-
-		/* Primary Theme Colors */
-		--swatch-background: var(--black-monochrome, 26, 25, 24);
-
-		/* Rating Module Colors */
-		--rating-module-button-color: var(--bright-accent);
-		--rating-module-button-plus-color: 45, 65, 25;
-		--rating-module-button-negative-color: 70, 35, 30;
-		--rating-module-button-cancel-color: 50, 45, 50;
-		--rating-module-button-credit-color: 50, 45, 50;
-		--rating-module-text-color: var(--bright-accent);
-		--rating-module-text-hover-color: var(--swatch-menutxt-light-color);
-
-		/* Background and Header Colors */
-		--background-gradient-color: var(--dark-accent, 70, 56, 33);
-		--header-gradient-color-bottom: var(--dark-accent);
-		--header-gradient-color-middle: var(--black-monochrome);
-		--header-gradient-color-top: var(--black-monochrome);
-
-		--gradient-header: linear-gradient(30deg,
-			rgb(var(--header-gradient-color-bottom)) 0%,
-			rgb(var(--header-gradient-color-middle)) 90%,
-			rgb(var(--header-gradient-color-top)) 100%);
-
-		--scrollbar-width: 0.5rem;
-
-		/* header measurements */
-		--header-height-on-desktop: 12rem;
-		--header-height-on-mobile: 12rem;
-		--topbar-height-on-desktop: 1.875rem;
-		--topbar-height-on-mobile: 3rem;
-
-		scrollbar-color: rgba(var(--dark-gray-monochrome), 1) rgba(var(--black-monochrome), 1);
-	}
-
-	html,
-	body {
-		color: rgb(var(--swatch-text-light));
-	}
-
-	a {
-		color: rgb(var(--swatch-primary-darker));
-	}
-
-	@supports (background-blend-mode: screen) {
-		#extrac-div-1 {
-			width: 100%;
-			height: var(--header-height-on-desktop);
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-image: var(--gradient-header), url(http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/deco-pattern.png);
-			background-size: var(--header-background-image-size) 100%, 100% 100%;
-			background-blend-mode: color-burn;
-			pointer-events: none;
-		}
-
-		div#extra-div-1 {
-			width: 100%;
-			height: calc(100% - var(--final-header-height-on-desktop));
-			position: absolute;
-			top: calc(var(--final-header-height-on-desktop));
-			left: 0;
-			z-index: -1;
-			background-color: rgba(252, 252, 252, 1);
-			background-color: rgba(var(--swatch-background), 1);
-			mask: var(--gradient-background);
-			-webkit-mask: var(--gradient-background);
-			background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/deco-pattern.png), var(--gradient-background);
-			background-size: 10%, 100% var(--background-gradient-distance);
-			background-blend-mode: difference;
-			background-repeat: repeat, repeat-x;
-			pointer-events: none;
-		}
-	}
-
-	#header {
-		background-repeat: no-repeat;
-		background-position: left 0 top 0.25rem;
-		background-clip: border-box;
-		-webkit-background-size: auto calc(var(--header-height-on-desktop) - 1rem);
-		background-size: auto calc(var(--header-height-on-desktop) - 1rem);
-		filter: initial;
-	}
-
-	#header h1 a {
-		font-size: 200%;
-		overflow-wrap: normal;
-		padding: 0;
-		margin-top: calc((var(--header-height-on-desktop) - 0.5em)/2);
-		margin-left: calc(var(--header-height-on-desktop) - .75rem);
-	}
-
-	#header h1 a::before {
-		color: rgb(255, 219, 90);
-		color: rgb(var(--bright-accent));
-		text-shadow: inherit;
-		background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/goldfoil.png");
-		-webkit-background-size: cover;
-		background-size: cover;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		overflow-wrap: normal;
-	}
-
-	#header h2 span {
-		margin-left: calc(var(--header-height-on-desktop) + 0.75rem);
-	}
-
-	#header h2 {
-		font-size: 150%;
-	}
-
-
-	#side-bar:hover {
-		background-color: rgb(var(--black-monochrome), 0.5);
-		scrollbar-color: rgba(var(--dark-gray-monochrome), 1) rgba(var(--black-monochrome), 1);
-	}
-
-	#side-bar {
-		background-color: rgb(var(--black-monochrome));
-		scrollbar-color: rgba(var(--dark-gray-monochrome), 0) rgba(var(--black-monochrome), 0);
-	}
-
-	#side-bar div.menu-item {
-		border-bottom: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
-		border-top: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
-		margin-top: -0.0625rem;
-	}
-
-	#side-bar div.menu-item > :not(:nth-child(2)):not(.collapsible-block) {
-		border-left: 0.0625rem solid rgb(var(--swatch-menubg-dark-color));
-	}
-
-	#side-bar div.menu-item a,
-	#side-bar div.menu-item .text {
-		color: rgb(var(--swatch-menutxt-light-color));
-	}
-
-	#side-bar .heading,
-	#side-bar .side-block > .collapsible-block:nth-child(1) .collapsible-block-folded {
-		background: initial;
-	}
-
-	#side-bar .heading p,
-	#side-bar .side-block > .collapsible-block .collapsible-block-link {
-		color: rgb(var(--swatch-menutxt-dark-color));
-		text-shadow: inherit;
-		letter-spacing: 0.05rem;
-		font-weight: 900;
-		font-size: 1.25rem;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		margin: 1rem 0 1rem 0.5rem;
-		color: rgb(255, 219, 90);
-		color: rgb(var(--bright-accent));
-		text-shadow: inherit;
-		background: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/goldfoil.png");
-		-webkit-background-size: cover;
-		background-size: cover;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		overflow-wrap: normal;
-		font-family: var(--header-font);
-		text-transform: none;
-	}
-
-	#side-bar .heading p::after,
-	#side-bar .side-block > .collapsible-block .collapsible-block-link::after,
-	#side-bar .heading p::before,
-	#side-bar .side-block > .collapsible-block .collapsible-block-link::before {
-		content: " ";
-		position: absolute;
-		width: 100%;
-		height: 0.35rem;
-		background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Divider.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	#side-bar .side-block[style*="background-color:"] * {
-		margin-left: 0 !important;
-	}
-
-	#side-bar > div[style="background-color: #e5e5ff;"] > div.menu-item > div {
-		background-color: rgb(var(--black-monochrome));
-	}
-
-	#side-bar .side-block[style*="background-color:"] .heading {
-		margin-top: .25rem;
-	}
-
-	#side-bar .heading p::after,
-	#side-bar .side-block > .collapsible-block .collapsible-block-link::after {
-		bottom: -0.6rem;
-	}
-
-	#side-bar .heading p::before,
-	#side-bar .side-block > .collapsible-block .collapsible-block-link::before {
-		top: -0.6rem;
-	}
-
-	#side-bar div.menu-item .sub-text {
-		color: rgba(var(--swatch-primary-darker), 1);
-	}
-
-	iframe.scpnet-interwiki-frame {
-		 filter: invert(0.9) hue-rotate(222deg) saturate(1.5) contrast(1);
-	}
-
-	#page-title {
-		color: rgb(var(--swatch-menutxt-light-color));
-	}
-
-	blockquote {
-		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
-	}
-
-	.yui-navset .yui-content {
-		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
-	}
-
-	.yui-navset .yui-content,
-	.yui-navset .yui-navset-top .yui-content {
-		border-color: rgb(var(--swatch-menubg-dark-color));
-	}
-
-	.yui-navset .yui-nav a,
-	.yui-navset .yui-navset-top .yui-nav a {
-		background-color: rgb(var(--swatch-menubg-black-color));
-		color: rgb(var(--swatch-text-light));
-	}
-
-	table.wiki-content-table th {
-		background: rgb(var(--swatch-primary-darkest));
-	}
-
-	.code {
-		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
-	}
-
-	.hl-main {
-		filter: invert(1) hue-rotate(180deg);
-	}
-
-	.scp-image-block .scp-image-caption {
-		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
-	}
-
-	.scp-image-block img {
-		border: 0.5rem solid rgba(var(--black-monochrome));
-	}
-
-	a:visited {
-		color: rgb(var(--swatch-primary-darker));
-	}
-
-	h1 {
-		color: rgb(var(--swatch-primary)) !important;
-	}
-
-	hr {
-		border-top: none;
-		position: relative;
-		height: 0.35rem;
-		background: rgba(0, 0, 0, 0);
-		display: flex;
-	}
-
-	hr::before {
-		content: " ";
-		position: absolute;
-		top: 0.1125rem;
-		left: 0;
-		border-top: none;
-		width: 100%;
-		height: 0.125rem;
-		background: -webkit-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
-		background: -o-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
-		background: -moz-linear-gradient(80deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
-		background: linear-gradient(10deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
-		background-position: center center;
-		-webkit-filter: blur(0.04rem);
-		filter: blur(0.04rem);
-	}
-
-	hr::after {
-		content: " ";
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 10%;
-		height: 0.35rem;
-		background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Divider.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-
-	.page-rate-widget-box {
-		background: linear-gradient(to top, rgba(var(--swatch-primary), 0.25) 0, rgba(var(--swatch-primary-darker), 0.15) 100%) !important;
-	}
-
-	form#edit-page-form {
-		background-color: rgba(var(--dark-accent), 0.25);
-	}
-
-	textarea,
-	input.text {
-		background-color: rgb(var(--black-monochrome));
-		color: rgb(var(--white-monochrome));
-		padding: 0.5em;
-	}
-
-
-	#lock-info {
-		background-color: rgb(var(--dark-accent));
-	}
-
-	div.buttons input,
-	input.button,
-	button,
-	file,
-	a.button {
-		background-color: rgb(var(--medium-accent));
-		color: rgb(var(-black-monochrome));
-		border-color: rgb(var(--black-monochrome))
-	}
-
-	div.buttons input:hover,
-	input.button:hover,
-	button:hover,
-	a.button:hover {
-		background-color: rgb(var(--bright-accent));
-	}
-
-	div#page-info,
-	div.page-watch-options {
-		padding: 0 1em;
-	}
-
-	div#page-options-bottom {
-		width: 90%;
-		margin-bottom: 2.125rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	div#page-options-bottom-2 {
-		width: 90%;
-		margin-top: -2.125rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	div#page-options-bottom,
-	div#page-options-bottom-2 {
-		text-align: left;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-	}
-
-	div#page-options-bottom,
-	div#page-options-bottom-2,
-	div#page-options-bottom > a {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	div#page-options-bottom > a,
-	div#page-options-bottom-2 > a {
-		-webkit-box-flex: 2;
-		-webkit-flex-grow: 2;
-		-moz-box-flex: 2;
-		-ms-flex-positive: 2;
-		flex-grow: 2;
-		padding: .25rem;
-		-webkit-border-radius: .25rem;
-		border-radius: .25rem;
-		background-color: rgba(var(--swatch-menubg-dark-color), 0.25);
-		border: 0.0625rem solid rgba(var(--swatch-primary), 0.25);
-		font-weight: 700;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-moz-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		-webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-		-o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-		transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-	}
-
-	div#page-options-bottom-2 > a {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	div#page-options-bottom > a:hover,
-	div#page-options-bottom > a:active,
-	div#page-options-bottom-2 > a:hover,
-	div#page-options-bottom-2 > a:active {
-		text-decoration: none;
-		background-color: rgba(var(--swatch-menubg-dark-color), 1);
-		color: rgba(var(--swatch-primary), 1);
-		border: 0.0625rem solid rgba(var(--swatch-primary-darkest),1);
-	}
-
-	.owindow .title {
-		background-color: rgb(var(--swatch-menubg-dark-color));
-	}
-
-	#odialog-container,
-	.title.modal-header,
-	.owindow,
-	.hovertip {
-		background-color: rgb(var(--swatch-primary-darkest));
-	}
-
-	.owindow .button-bar a {
-		background-color: rgb(var(--swatch-menubg-dark-color));
-		color: rgb(var(--white-monochrome));
-	}
-
-	@media only screen and (max-width: 768px) {
-		#header {
-			--size: calc(var(--final-header-height-on-mobile) - 0.875rem);
-			--y-offset: 1.5rem;
-			background-position:
-				calc((var(--header-height-on-mobile) - 3.75rem) - var(--size)) calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
-			background-size: var(--size), 100% var(--header-height-on-mobile);
-			background-repeat: no-repeat, repeat;
-		}
-
-		#header > h1 > a > span {
-			height: var(--header-height-on-mobile);
-		}
-
-
-		#header h1 a {
-			line-height: 1;
-		}
-
-		#header h2 span {
-			line-height: 1.1;
-		}
-	}
-
-	@media only screen and (min-width: 600px) and (max-width: 768px) {
-		#header {
-			--size: calc(var(--final-header-height-on-mobile) - 0.875rem);
-			--y-offset: 1.5rem;
-			background-position:
-                calc((var(--header-height-on-mobile) - 3.75rem) - var(--size))
-                calc(((var(--size) * -1) + var(--header-height-on-mobile) + var(--y-offset)) / 2);
-			background-size: var(--size), 100% var(--header-height-on-mobile);
-			background-repeat: no-repeat, repeat;
-		}
-
-		#header h1 a {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 0.75em);
-			line-height: 1;
-			font-size: 300%;
-		}
-
-		#header h2 span {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2) + 0.5em));
-			line-height: 1.1;
-			font-size: 120%;
-		}
-	}
-
-
-	@media only screen and (min-width: 400px) and (max-width: 600px) {
-		#header h1 a {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 1em);
-			font-size: 140%;
-		}
-
-
-		#header h2 span {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2) + 0.5em));
-			font-size: 60%;
-		}
-	}
-
-	@media only screen and (max-width: 400px) {
-		#header h1 a {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2)) - 1em);
-			font-size: 125%;
-		}
-
-
-		#header h2 span {
-			margin-left: calc(var(--header-height-on-mobile) - 3.5rem);
-			margin-top: calc(((var(--header-height-on-mobile) / 2) + 3.5em));
-			font-size: 35%;
-		}
-	}
+/*
+  Created for the Buried tale hub
+  By Sekai
+  CC BY-SA 3.0
+*/
+
+div#container-wrap {
+  background-image: url(http://scp-wiki-cn.wikidot.com/local--files/buried-hub/body_bg_grey.png);
+  background-repeat: repeat-x;
+}
+#header, #side-bar {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+#header {
+  background: none;
+}
+#header::before {
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 140px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: url(/local--files/component:theme/logo.png) 10px 40px no-repeat;
+  background-size: 100px 100px;
+}
+@media (max-width: 479px) {
+  #header::before {
+    background-position: 0 5.5em;
+    background-size: 55px 55px;
+  }
+}
+@media (min-width: 480px) and (max-width: 580px) {
+  #header::before {
+    background-position: 0.5em 4.5em;
+    background-size: 66px 66px;
+  }
+}
+@media (min-width: 581px) and (max-width: 767px) {
+  #header::before {
+    background-position: 1em 4em;
+    background-size: 77px 77px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+#header::before {
+    background-position: 1em 4em;
+    background-size: 88px 88px;
+  }
+}
+#header h1 {
+  -webkit-animation: flicker-1 10s infinite;
+  -o-animation: flicker-1 10s infinite;
+  animation: flicker-1 10s infinite;
+}
+#header::before {
+  -webkit-animation: flicker-2 10s infinite;
+  -o-animation: flicker-2 10s infinite;
+  animation: flicker-2 10s infinite;
+}
+#header h2 {
+  -webkit-animation: flicker-3 10s infinite;
+  -o-animation: flicker-3 10s infinite;
+  animation: flicker-3 10s infinite;
+}
+@keyframes flicker-1 {
+  53% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  53.5% {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+  }
+  54% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  54.5% {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+  }
+  55% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  64% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  64.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  65% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  65.5% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  66% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  96.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  97% {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+  }
+  97.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  98% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+}
+@keyframes flicker-2 {
+  54% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  54.5% {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+  }
+  55% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  55.5% {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+  }
+  56% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  65% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  65.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  66% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  66.5% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  67% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  97.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  98% {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+  }
+  98.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  99% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+}
+@keyframes flicker-3 {
+  55% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  55.5% {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+  }
+  56% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  56.5% {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+  }
+  57% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  66% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  66.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  67% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  67.5% {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  68% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  98.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  99% {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+  }
+  99.5% {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+  }
+  100% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+}
+#page-title {
+  color: rgb(34, 34, 34);
+}
+h1, a {
+  color: rgb(200, 0, 5);
+}
+a:visited {
+  color: rgb(100, 3, 15);
+}
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#top-bar ul li ul a,
+#top-bar a:hover,
+#side-bar a,
+#side-bar a:visited,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover,
+#breadcrumbs a,
+.page-tags a,
+#page-options-container a,
+#license-area a {
+  color: rgb(41, 41, 41);
+}
+.page-rate-widget-box .rate-points {
+  background-color: rgb(62, 62, 62) !important;
+  border-color: rgb(62, 62, 62);
+}
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: rgb(247, 247, 247);
+  border-color: rgb(62, 62, 62);
+}
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  color: rgb(62, 62, 62);
+}
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: rgb(62, 62, 62);
+  color: rgb(254, 254, 254);
+}
+.page-rate-widget-box .cancel {
+  background-color: rgb(62, 62, 62);
+  border-color: rgb(62, 62, 62);
+}
+.page-rate-widget-box .cancel a {
+  color: rgb(113, 113, 113);
+}
+.page-rate-widget-box .cancel a:hover {
+  background: rgb(62, 62, 62);
+  color: rgb(254, 254, 254);
+}
+.rate-box-with-credit-button {
+  background-color: rgb(62, 62, 62) !important;
+  border-color: rgb(62, 62, 62) !important;
+}
+.creditButton p a {
+  border-left-color: rgb(113, 113, 113) !important;
+}
+.modalbox {
+  box-shadow: 0 2px 6px rgba(22, 22, 22, .5) !important;
+}
+.close-credits, .credit-back {
+  filter: grayscale(100%);
 }

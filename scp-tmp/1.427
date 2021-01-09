@@ -1,160 +1,293 @@
-/*
-    Powered on 2019/09/06 03:05:59
-    [2019 Wikidot Theme]
-    Created by hey_kounoike
-    Fixed by Nanigashi Sato & Mishary
-    CC BY-SA 3.0
-*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Noto+Serif+SC&display=swap');
+/* ---------------------------------
+Word Processor Theme
+2020 Wikidot Theme
+Created by stormbreath
+Logo Image by Rounderhouse and MalyceGrayves
+--------------------------------- */
 
-/* COMMON */
-#page-content strong {
-    font-weight: bold;
-    margin-top: 4px;
+/* -------------- MAIN -------------- */
+a,
+a.newpage,
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a,
+#login-status ul a {
+    color: #00F;
 }
+
+a:visited{
+    color: #00C;
+}
+
+h1,
+#page-title {
+    color: black;
+    border-color: black;
+}
+
+/* Creates the page effect of the body. */
+#main-content {
+    margin-top: 2em;
+    background: white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+    padding: 1em;
+}
+
+
+/* -------------- HEADER -------------- */
+ div#container-wrap {
+     background-image: url(none);
+}
+
 body {
-    font-family: 'Noto Serif SC';
+    background-color: #e6e6e6;
+    background-image: linear-gradient(
+        to bottom,
+        #0F4699, #0F4699 38px,
+        #f4f4f4 38px, #f4f4f4 140px,
+        #0F4699 140px, #0F4699 162px,
+        #e6e6e6 162px, #e6e6e6 100%);
+    background-repeat: no-repeat;
 }
-div#container-wrap {
-    background: url( http://scp-jp-sandbox3.wikidot.com/local--files/draft:2094799-27-2d6f/haikei) top left repeat-x;
+
+#header {
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Aword-processor/commonlogo.png");
 }
-div#header {
-    background: url( http://scp-jp.wdfiles.com/local--files/theme%3Afusouki-theme/Japanese_crest_Kiku_ni_Ichimonnji_2.svg ) 10px 40px no-repeat;
-    background-size: 100px;
-    background-position: 10px;
+
+#header h1 a {
+    color: transparent;
+    text-shadow: none;
 }
-div#header h1 a span {
-    font-size: 0px;
+
+#header h1 a::before {
+    content: 'Common Office';
+    color: #333;
+    font-family: 'Baloo Bhaina 2', '微软雅黑', cursive;
 }
-div#header h1 a:before {
-    font-family: 'Noto Serif SC';
-    content: "扶桑紀";
-    color: rgb(68, 68, 68);;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+
+#header h2 span {
+   color: transparent;
+   text-shadow: none;
 }
-div#header h2 span {
-    font-size:0px;
-    padding: 4px;
+
+#header h2 span::before {
+    content: '开源文字处理器';
+    color: #0F4699;
+    font-family: 'Baloo Bhaina 2', '微软雅黑', cursive;
 }
-div#header h2:after {
-    font-family: 'Noto Serif SC';
-    content: "此載皇基國體";
-    font-weight: bold;
-    color: rgb(68, 68, 68);;
-    padding: 19px 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    white-space: pre;
+
+/* -------------- SEARCH-BAR -------------- */
+#search-top-box-input {
+    border-color: #999;
+    background-color: #e6e6e6;
+    box-shadow: none;
+    border-radius: 0;
 }
-#login-status {
+
+#search-top-box-input:hover,
+#search-top-box-input:focus {
+    background-color: #f2f2f2;
+    box-shadow: none;
+    border-color: #ccc;
     color: #333;
 }
-#login-status a {
-    color: inherit;
-}
-#search-top-box-input {
-    border: solid 1px #999;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
-}
-#search-top-box-input:hover, #search-top-box-input:focus {
-    border: solid 1px #000;
-    background-color: #fff;
-    box-shadow: none;
-    color: #000;
-}
+
 #search-top-box-form input[type=submit] {
-    padding: 2px 5px;
-    border: solid 1px #999;
-    border-radius: 5px;
-    background: none;
-    background-color: #000;
+    background: #0F4699;
+    border-color: #999;
+    border-radius: 0;
     box-shadow: none;
-    color: #ccc;
-    font-size: 90%;
-    font-weight: bold;
-    cursor: pointer;
 }
-#search-top-box-form input[type=submit]:hover, #search-top-box-form input[type=submit]:focus {
-    border: solid 1px #000;
-    background: none;
-    background-color: #ccc;
+
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    background: #1152B2;
     box-shadow: none;
-    text-shadow: none;
-    color: #fff;
+    border-color: #ccc;
 }
 
-/* For Smartphone */
-@media (max-width: 600px) {
-
-    div#header {
-        background-position: -5px 20px;
-    }
-
-    div#header h1 a {
-        padding: 72px 0 10px 20px;
-    }
-
-    div#header h1 a:before {
-        font-size: 160%;
-    }
-
-    div#header h2:after {
-        padding: 0 0 0 20px;
-    }
-
-    div#search-top-box {
-        top: 80px;
-    }
-
-    #search-top-box-input {
-        display: none;
-    }
-
+/* -------------- LOG-IN INFO -------------- */
+#login-status .printuser a {
+    display: none;
 }
 
-/* J-style Ruby Font */
-
-tt {
-    font-family: 'Noto Serif SC', sans-serif;
+#login-status {
+    color: white;
+}
+#login-status a {
+    background: transparent;
+    color: white;
 }
 
-/* CreditButton */
+#account-topbutton {
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+/* -------------- SIDE-BAR -------------- */
+/* See also: the Collapsible Side-Bar Component, included in this theme */
+#side-bar .side-block {
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+#side-bar .heading,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #333;
+    border-color: #333;
+}
+
+#side-bar a,
+#side-bar a:visited {
+    color: #666;
+}
+
+.side-block .menu-item > .image {
+    visibility: hidden;
+}
+
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+
+iframe.scpnet-interwiki-frame {
+    filter: saturate(0%);
+}
+
+/* -------------- MOBILE SIDE-BAR -------------- */
+@media (max-width: 767px) {
+    #side-bar {
+        background-color: white;
+    }
+
+    .open-menu a {
+        border-radius: 0;
+        border: none !important;
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #side-bar .close-menu {
+        transition: width 0.5s ease-in-out 0.1s,
+                    opacity 1s ease-in-out 0s;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(0,0,0,0.3);
+        background-position: 19em 50%;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #side-bar:target .close-menu {
+        width: calc(100% - 19em);
+        right: 0;
+        left: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* -------------- FOOTERS -------------- */
+.footnotes-footer {
+    border-top: 1px solid #333;
+}
+
+.footnotes-footer a {
+    color: #333;
+}
+
+.page-tags span {
+    border: none;
+    margin-top: 1em;
+}
+
+#page-options-container {
+    opacity: .1;
+    transition: opacity .75s;
+}
+
+#page-options-container:hover,
+#page-options-container:focus {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    #page-options-container {
+        opacity: .7;
+    }
+}
+
+#footer,
+#footer a {
+    background-color: transparent;
+    color: black;
+}
+
+/* -------------- RATING MODULE -------------- */
 .page-rate-widget-box {
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: none;
+    margin: unset;
 }
+
 .page-rate-widget-box .rate-points {
-    border: solid 1px #000;
-    background-color: #000 !important;
+    background-color: white !important;
+    color: black !important;
+    border: solid 1px white;
+    font-weight: normal !important;
 }
-.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown {
-    border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+    background-color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    font-weight: normal;
 }
-.page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a {
-    color: #000;
+
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+    background: transparent;
+    color: black;
 }
-.page-rate-widget-box .rateup a:hover, .page-rate-widget-box .ratedown a:hover {
-    background: #000;
+
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+    background: white;
+    color: black;
 }
+
 .page-rate-widget-box .cancel {
-    border: solid 1px #000;
-    background-color: #000;
+    background: transparent;
+    background-color: white;
+    border: solid 1px white;
 }
+
 .page-rate-widget-box .cancel a {
-    color: #ccc;
+    color: black;
 }
 .page-rate-widget-box .cancel a:hover {
-    border-radius: 0 3px 3px 0;
-    background: #000;
-    color: #fffff0;
+    background: white;
+    color: black;
 }
-#page-content .rate-box-with-credit-button {
-    background-color: #000;
-    border-color: #000;
+
+/* -------------- BLINK-BAR -------------- */
+#u-blink-bar p:last-child::after {
+    content: '|';
+    animation: blink 1.5s infinite;
+    position: relative;
+    right: 2px;
+    bottom: 2px;
 }
-#page-content .creditButton p a {
-    border-left-color: #ccc;
+
+@keyframes blink{
+    to {
+        opacity: .0;
+    }
 }

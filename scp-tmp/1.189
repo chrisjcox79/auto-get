@@ -1,527 +1,1352 @@
-/*
-    Paperstack Theme
-    [2020 Wikidot Theme]
-    By EstrellaYoshte
-    Based on:
-      Inkblot Theme by Croquembouche
-      Word Processor Theme by stormbreath
-      Modern Theme by Azamo
-      Simple Yonder Theme by EstrellaYoshte
-*/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
-
-#page-content { font-size: 0.87rem; }
-body { font-family: 'Oxygen', sans-serif; }
-
-body {
-    color: #000000;
-    background-image: linear-gradient(
-        to bottom,
-        #EFEFEF, #EFEFEF 276px,
-        #D3D3D3 276px, #ffffff 282px,
-        #ffffff 282px, #ffffff 100%);
-    background-repeat: no-repeat;
-}
-
-#main-content { top: -1.6rem; }
-
-.page-source, .code pre, .code p, .code, tt{
-    font-family: "Fira Code", '幼圆', monospace;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #333333;
-    font-family: 'Josefin Sans', '黑体', sans-serif;
-    font-weight: bold;
-}
+<head>
+    <title>SCP-CN-1356 - SCP基金会</title>
+    
+    
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
+        WIKIREQUEST.info.siteId = 530812;
+        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
+        WIKIREQUEST.info.categoryId = 3342264;
+        WIKIREQUEST.info.themeId = 1;
+        WIKIREQUEST.info.requestPageName = "scp-cn-1356";
+        OZONE.request.timestamp = 1610179728;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'cn';
+                WIKIREQUEST.info.pageUnixName = "scp-cn-1356";
+        WIKIREQUEST.info.pageId = 1165119015;
+                        WIKIREQUEST.info.lang = "cn";
+        OZONE.lang = "cn";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
 
 
-/* ---- PAGE WRAP ---- */
-
-div#container-wrap {
-     background-image: url(none);
-}
-div#header {
-    background-image: url(none);
-}
-
-#header h1, #header h2 { margin-left: 0; float: none; text-align: center; }
-/* Move the subtitle down a smidge */
-#header h2 { margin-top: 0.45rem; }
-/* Hide the existing text */
-#header h1 span, #header h2 span { font-size: 0; }
-/* Style the new text */
-#header h1 a::before, #header h2::before {
-  color: #333333;
-  font-family: 'Josefin Sans', '黑体', sans-serif;
-  text-shadow: none;
-}
-/* Set the new text's content from variable */
-#header h1 a::before {
-  content: var(--header-title, "SCP基金会");
-  font-weight: 300;
-  font-size: 1.3em;
-}
-#header h2::before {
-  content: var(--header-subtitle, "控制 - 收容 - 保护");
-  font-weight: 600;
-  font-size: 1.22em;
-}
-
-#login-status,
-#login-status a {
-    color: #333333;
-}
-
-#page-title {
-    display: none;
-}
-
-#footer, #footer a {
-    background: transparent;
-    color: #333333;
-}
-
-#search-top-box-input,
-#search-top-box-input:hover,
-#search-top-box-input:focus,
-#search-top-box-form input[type=submit],
-#search-top-box-form input[type=submit]:hover,
-#search-top-box-form input[type=submit]:focus {
-    border: none;
-    background: #333333;
-    box-shadow: none;
-    border-radius: 0px;
-    color: #efefef;
-}
-#search-top-box input.empty {
-    color: #999999;
-}
-
-#search-top-box {
-    top: 2.3rem!important;
-    right: 8px;
-}
-
-/* ---- TOP BAR ---- */
-
-#top-bar {
-   display: flex;
-   justify-content: center;
-   right: 0;
-   top: 7.9rem;
-}
-#top-bar, #top-bar a {
-    color: #333333;
-}
-
-/* ---- SIDE BAR ---- */
-
-@media (min-width: 1024px) {
-  #side-bar { top: 0.7rem; }
-}
-#side-bar .side-block {
-    border: transparent;
-    border-radius: 0;
-    box-shadow: 0px 0px 7px #999999;
-    background: #ffffff;
-}
-
-#top-bar div.open-menu a {
-    border-radius: 0;
-    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2), 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
-    border: 1px white;
-}
-
-@media (max-width: 767px) {
-    #main-content {
-        padding: 0;
-        margin: 0 5%;
-        border-left: none;
-    }
-    #page-title {
-        margin-top: 0.7em;
-    }
-    #side-bar {
-        background-color: #fff;
-        left: -19em;
-    }
-    #side-bar:target {
-        border: none;
-        box-shadow: 3px 0 1px -2px rgba(0,0,0,0.04), 1px 0 5px 0 rgba(0,0,0,0.2);
-    }
-    #side-bar .close-menu {
-        transition: width 0.5s ease-in-out 0.1s,
-                    opacity 1s ease-in-out 0s;
-        display: block;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: rgba(0,0,0,0.3);
-        background-position: 19em 50%;
-        z-index: -1;
-        opacity: 0;
-        pointer-events: none;
-    }
-    #side-bar:target .close-menu {
-        width: calc(100% - 19em);
-        right: 0;
-        left: auto;
-        opacity: 1;
-        pointer-events: auto;
-    }
-    #page-content > hr, #page-content > .list-pages-box > .list-pages-item > hr {
-        margin: 3em -5.5%;
-    }
-    #side-bar {
-        top: 0;
-    }
-    #side-bar .heading {
-        padding-left: 1em;
-        margin-left: -1em;
-    }
-    #search-top-box {
-        top: 107px;
-    }
-}
-
-/* ---- TABS ---- */
-
-/* ---- YUI TAB BASE ---- */
-.yui-navset .yui-nav a,.yui-navset .yui-navset-top .yui-nav a{background-color:inherit;background-image:inherit}.yui-navset .yui-nav a:hover,.yui-navset .yui-nav a:focus{background:inherit;text-decoration:inherit}.yui-navset .yui-nav .selected a,.yui-navset .yui-nav .selected a:focus,.yui-navset .yui-nav .selected a:hover{color:inherit;background:inherit}.yui-navset .yui-nav,.yui-navset .yui-navset-top .yui-nav{border-color:inherit}.yui-navset li{line-height:inherit}
-
-/* ---- YUI TAB CUSTOMIZATION ----*/
-
- .yui-navset .yui-nav,
- .yui-navset .yui-navset-top .yui-nav{
-     display: flex;
-     flex-wrap: wrap;
-     width: calc(100% - .125rem);
-     margin: 0 auto;
-     border-color: #333333;
-     box-shadow: none;
-}
- .yui-navset .yui-nav a, /* ---- Link Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav a{
-     color: #333333;
-    /* ---- Tab Background Colour | [UNSELECTED] ---- */
-     background-color: #efefef;
-     border: unset;
-     box-shadow: none;
-     box-shadow: none;
-}
- .yui-navset .yui-nav a:hover,
- .yui-navset .yui-nav a:focus{
-     color: #ffffff;
-    /* ---- Tab Background Colour | [HOVER] ---- */
-     background-color: #333333;
-}
- .yui-navset .yui-nav li, /* ---- Listitem Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav li{
-     position: relative;
-     display: flex;
-     flex-grow: 2;
-     max-width: 100%;
-     margin: 0;
-     padding: 0;
-     color: #ffffff;
-     background-color: #ffffff;
-     border-color: transparent;
-     box-shadow: none;
-}
- .yui-navset .yui-nav li a,
- .yui-navset-top .yui-nav li a,
- .yui-navset-bottom .yui-nav li a{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-}
- .yui-navset .yui-nav li em{
-     border: unset;
-}
- .yui-navset .yui-nav a em,
- .yui-navset .yui-navset-top .yui-nav a em{
-     padding: .35em .75em;
-
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
-}
- .yui-navset .yui-nav .selected, /* ---- Selection Modifier ---- */
- .yui-navset .yui-navset-top .yui-nav .selected{
-     flex-grow: 2;
-     margin: 0;
-     padding: 0;
-    /* ---- Tab Background Colour | [SELECTED] ---- */
-     background-color: #333333;
-}
- .yui-navset .yui-nav .selected a,
- .yui-navset .yui-nav .selected a em{
-     border: none;
-}
- .yui-navset .yui-nav .selected a{
-     width: 100%;
-     color: #ffffff;
-}
- .yui-navset .yui-nav .selected a:focus,
- .yui-navset .yui-nav .selected a:active{
-     color: #ffffff;
-     background-color: #333333;
-}
- .yui-navset .yui-content {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 4px #999999;
-}
- .yui-navset .yui-content,
- .yui-navset .yui-navset-top .yui-content{
-     padding: .5em;
-     border: none;
-}
-
-/* ---- INFO BAR ---- */
- body{
-     --barColour: #333333;
-}
-
- .info-container .collapsible-block-content{
-     padding: 0 .5em 30px;
-}
- .info-container .collapsible-block-content .wiki-content-table{
-     width: 100%;
-}
-
-/* ---- INFO PANE ---- */
-
-#page-content .creditRate{
-     margin: unset;
-}
-#page-content .rate-box-with-credit-button {
-    background-color: #ffffff;
-    border: solid 1px #ffffff;
-    box-shadow: 0px 0px 7px #999999;
-    border-radius: 0;
-}
-
-#page-content .rate-box-with-credit-button .fa-info {
-    border: none;
-    color: #333333;
-}
-
-#page-content .rate-box-with-credit-button .fa-info:hover {
-    background: #333333;
-    color: #ffffff;
-}
-
-.rate-box-with-credit-button .cancel {
-    border: solid 1px #ffffff;
-}
-
-/* ---- PAGE RATING ---- */
-
-.page-rate-widget-box {
-    box-shadow: 0px 0px 7px #999999;
-    margin: unset;
-    border-radius: 0;
-}
-
-.page-rate-widget-box .rate-points {
-    background-color: #ffffff !important;
-    color: #333333 !important;
-    border: solid 1px #ffffff;
-    border-radius: 0;
-}
-.page-rate-widget-box .rateup,
-.page-rate-widget-box .ratedown {
-    background-color: #ffffff;
-    border-top: solid 1px #ffffff;
-    border-bottom: solid 1px #ffffff;
-}
-
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    background: transparent;
-    color: #333333;
-}
-
-.page-rate-widget-box .rateup a:hover,
-.page-rate-widget-box .ratedown a:hover {
-    background: #333333;
-    color: #ffffff;
-}
-
-.page-rate-widget-box .cancel {
-    background: transparent;
-    background-color: #ffffff;
-    border: solid 1px #ffffff;
-    border-radius: 0;
-}
-
-.page-rate-widget-box .cancel a {
-    color: #333333;
-}
-.page-rate-widget-box .cancel a:hover {
-    background: #333333;
-    color: #ffffff;
-    border-radius: 0;
-}
-
-/* ---- PAGE ELEMENTS ---- */
-
-blockquote,
-div.blockquote,
-#toc,
-.code {
-    background-color: #F8F8F8;
-    border: solid 1px #F8F8F8;
-    box-shadow: 0px 0px 4px #999999;
-}
-
-.scp-image-block {
-    border: solid 8px #ffffff;
-    box-shadow: 0px 0px 5px #999999;
-    box-sizing: border-box;
-}
-.scp-image-block .scp-image-caption {
-    background-color: #ffffff;
-    border-top: solid 4px #ffffff;
-    color: black;
-}
-
-#page-content .wiki-content-table tr th {
-    border: solid 1px #999999;
-    background-color: #efefef;
-    /* set border for table title */
-}
-#page-content .wiki-content-table tr td {
-    border: solid 1px #999999;
-    /* set border for table content */
-}
-
-/*-- TAGGY TAGS. shamelessly ripped off from RSO --*/
-
-#main-content .page-tags {
-    border-top: 2px solid #efefef;
-}
-
-#main-content .page-tags a {
-    display: inline-block;
-    height: 0.8125rem;
-    line-height: 0.8125rem;
-    font-size: 0.6875rem;
-    background: #333333;
-    color: #ffffff;
-    border-bottom-right-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    margin: 0 0 .5rem .75rem;
-    padding: 0.1875rem 0.3125rem 0.1875rem 0;
-}
-
-#main-content .page-tags a:before {
-    top: -0.1875rem;
-    left: -0.625rem;
-    width: 0;
-    height: 0;
-    border-color:
-     transparent
-     #333333;
-     transparent
-     transparent;
-    border-style: solid;
-    border-width: 0.5rem 0.5rem 0.5rem 0;
-    padding: 0 0.0625rem 0.1875rem;
-}
-
-#main-content .page-tags a:before,
-#main-content .page-tags a:after {
-    content: "";
-    float: left;
-    position: relative;
-}
-
-#main-content .page-tags a:after {
-    top: 0.28125rem;
-    left: -0.5rem;
-    width: 0.25rem;
-    height: 0.25rem;
-    border-radius: 0.125rem;
-    background-color: #ffffff;
-}
-
-.page-tags span {
-    border-top: .5rem solid transparent;
-}
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+                            <meta name="robots" content="index,follow"/>
+                                <meta name="language" content="zh,zh-cn"/>
+                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="zh,zh-cn"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+@import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/css/pagerate/PageRateWidgetModule.css);
 
 
-/* ---- CUSTOM SYNTAX ---- */
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
+                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
+        
+            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
+                
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
 
-.header-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-around;
-  align-content: space-between;
-  width: 100%;
-  left: 0;
-  align-items: flex-start;
-  row-gap: 8px;
-}
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
 
-.text-item {
-  flex-grow: 1;
-  max-width: 25%;
-  text-align: center;
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="/onesignal/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+<style>
+.containercontainer {position: relative;width: auto;height: auto;border: 2px solid #666;background: #141212;color: #3F3;margin-top: 1em;margin-bottom: 1em;}.containercontainer .container .overlay {background: rgba(51, 255, 51, 0.9);color: #121010;position: absolute;width: auto;height: 50px;top: 0;right: 0;bottom: 0;left: 0;margin: auto;line-height: 50px;display: inline;vertical-align: middle;text-align: center;font-family: Courier New;font-size: 30px;letter-spacing: 5px;font-weight: bolder;z-index: 3;animation: overlay-anim 10s linear;animation-fill-mode: forwards;animation-iteration-count: infinite;}.overlayback {background: rgba(187, 187, 187, 0.5);z-index: 3;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: auto;height: auto;animation: overlay-anim 10s linear;animation-fill-mode: forwards;animation-iteration-count: infinite;}.containercontainer .container {text-align: center;width: inherit;height: inherit;position: relative;overflow: hidden;}.containercontainer .container::after {content: " ";display: block;position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: rgba(21, 19, 19, 0.2);opacity: 0;z-index: 2;animation: flicker 0.15s infinite;}.containercontainer .container::before {content: " ";display: block;position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: linear-gradient(rgba(18, 16, 16, 0.03) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.22), rgba(0, 255, 0, 0.11), rgba(0, 0, 255, 0.22));z-index: 2;background-size: 100% 2px, 3px 100%;}.no-unfold {text-align: center;}.container h1,.container h2,.container h3,.container h5,.container h6 {color: #3F3;}.container hr {border-top: 1px dotted #3F3;border-bottom: none;}.container hr {border-top: 1px solid #3F3;border-bottom: 1px solid #3F3;color: transparent;background-color: transparent;}.container hr:after {display: block;margin-top: 2px;border-top: 1px solid #3F3;border-bottom: 1px solid #3F3;}.blinkbar {animation: blink 1.5s infinite; letter-spacing: -0.13em;}@keyframes blink{to{opacity: .0;}}@keyframes flicker {0% {opacity: 0.9890; }5% {opacity: 0.5842; }10% {opacity: 0.9865; }15% {opacity: 0.0412; }20% {opacity: 0.6255; }25% {opacity: 0.3157; }30% {opacity: 0.7328; }35% {opacity: 0.4654; }40% {opacity: 0.9128; }45% {opacity: 0.2449; }50% {opacity: 0.5485; }55% {opacity: 0.6438; }60% {opacity: 0.1180; }65% {opacity: 0.9085; }70% {opacity: 0.0266; }75% {opacity: 0.6795; }80% {opacity: 0.7812; }85% {opacity: 0.0117; }90% {opacity: 0.2239; }95% {opacity: 0.8897; }100% {opacity: 0.2260; }}@keyframes overlay-anim {0% {visibility: hidden; }10% {visibility: hidden; }11% {visibility: visible; }50% {visibility: hidden; }100% {visibility: hidden; }}
+</style>
+<style>
+#u-start, .textchange div.sitemember:nth-child(2) {display:none;}.type-wrap-wrapper {position: relative;text-align: left;}.type-wrapper {background: #555;}.typearea {color: lime; font-family: "Courier";font-size: 1.2em;margin: 10px 0 0 10px;white-space: nowrap;overflow: hidden;width: 0;}#u-start:target ~ .typearea {width: 100%;animation: type 4s steps(60, end); }.typearea a{color: lime;text-decoration: none;}.blink {animation: blink 1s infinite;}@keyframes type{ from { width: 0; } } @keyframes blink{to{opacity: .0;}}.buttonwrapper {text-align: center;}.likebutton {padding: 0.1em 0.5em;text-decoration: none;font-size: 1.3em;background-color: #F4F4F4;border: 1px solid #AAA;color: #000;}.likebutton:hover {background-color: #DDD;color: #000;border: 1px solid #0098b3;}
+</style>
+<style>
+div.terminal{
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #131;
+/* 终端上方的黑色阴影 */
+    background-image:
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    display: block;
+/* 终端周围的阴影 */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* 防止扫描条产生滚动条 */
+    overflow:hidden;
 }
-
-
-.grid-item {
-  flex-grow: 1;
-  min-width: 25%;
-  text-align: center;
-  margin: 8px 6px;
+div.terminal blockquote {
+    background-color: black;
+    border: double 3px #80FF80
 }
-@media (max-width: 1200px) {
-  .grid-item {
-    min-width: 50%;
-  }
-}
-
-.logo {
-  position: absolute;
-  width: 180px;
-  top: -154px;
-  left: -17em;
-  z-index: -1;
-}
-@media (max-width: 767px) {
-  .logo {
-    width: 36%;
-    top: -9.7em;
-    left: 32%;
-  }
-}
-
-.textbox {
-  position: absolute;
-  width: 42%;
-  top: 7.5rem;
-}
-@media (max-width: 960px) and (min-width: 767px), (max-width: 666px) {
-  .textbox {
-    position: relative;
+div.scanline{
+    margin-top: -40%;
     width: 100%;
-    top: 0;
-  }
+    height: 60px;
+    position: relative;
+    pointer-events: none;
+/* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* 你可能需要修改这个。如果扫描条走得太快了，添加5秒。 */
+    animation: scan 12s linear 0s infinite; /* 同上 */
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
 }
+
+div.text{
+    color: rgba(128,255,128,0.8);
+    padding-left: 2em;
+    padding-top: 40%;
+    font-family: monospace;
+    font-size: 1.2em;
+    }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 你可能需要根据你终端的长短修改这个。如果扫描条走到一半停止了，增大第二个数字。 */
+}
+
+@keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* 同上。 */
+}
+
+div.text a {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
+}
+div.text a.newpage {
+    color: #90EE90;
+    text-decoration: none;
+    background: transparent;
+}
+div.text a:hover {
+    color: #131;
+    text-decoration: underline;
+    background-color: #80FF80;
+    padding: 1px;
+}
+div.text a:hover::before{
+content: "> ";
+}
+</style>
+<style>
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+</style>
+<script src="https://s.nitropay.com/ads-143.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/pagerate/PageRateWidgetModule.js"></script>
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>SCP基金会</span></a></h1>
+                
+                    <h2><span>控制，收容，保护</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<div class="top-bar">
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>SCP-CN系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+</ul>
+</li>
+<li>SCP国际
+<ul>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
+<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
+<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
+<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
+<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
+<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
+<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
+<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
+<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
+<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
+<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
+<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
+<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mobile-top-bar">
+<div class="open-menu">
+<p><a href="#side-bar">≡</a></p>
+</div>
+<ul>
+<li>SCP系列
+<ul>
+<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
+<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
+<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
+<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
+<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
+<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
+<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
+<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
+<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
+<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
+<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
+<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
+<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
+<li><a href="/scp-series">系列 I (001 - 999)</a></li>
+<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
+<li><a href="/joke-scps">搞笑SCP</a></li>
+<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
+<li><a href="/scp-ex">已解明SCP</a></li>
+<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
+<li><a href="/scp-international">SCP国际翻译中心</a></li>
+</ul>
+</li>
+<li>故事
+<ul>
+<li><a href="/foundation-tales">基金会故事</a></li>
+<li><a href="/canon-hub">设定</a></li>
+<li><a href="/series-archive">故事系列</a></li>
+<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
+<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
+<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
+<li><a href="/short-stories">原创短篇故事合集</a></li>
+<li><a href="/canon-hub-cn">原创设定</a></li>
+<li><a href="/series-archive-cn">原创故事系列</a></li>
+</ul>
+</li>
+<li>图书馆
+<ul>
+<li><a href="/user-curated-lists">用户推荐清单</a></li>
+<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
+<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
+<li><a href="/goi-formats">GoI格式</a></li>
+<li><a href="/audio-adaptations">音频记录</a></li>
+<li><a href="/scp-artwork-hub">艺术作品</a></li>
+<li><a href="/contest-archive">征文竞赛</a></li>
+<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
+<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
+<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
+<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
+<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
+</ul>
+</li>
+<li>背景资料
+<ul>
+<li><a href="/about-the-scp-foundation">关于基金会</a></li>
+<li><a href="/groups-of-interest">相关组织</a></li>
+<li><a href="/object-classes">项目等级</a></li>
+<li><a href="/personnel-and-character-dossier">职员档案</a></li>
+<li><a href="/security-clearance-levels">安保许可等级</a></li>
+<li><a href="/secure-facilities-locations">安保设施</a></li>
+<li><a href="/task-forces">机动特遣队</a></li>
+<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
+<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
+<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
+<li><a href="/image-use-policy">图像使用守则</a></li>
+<li><a href="/licensing-guide">授权指南</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/tag-search">标签搜索</a></li>
+<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
+<li><a href="/translation-rules">翻译与校对守则</a></li>
+<li><a href="/faq">常见问题解答</a></li>
+<li><a href="/site-rules">网站站规</a></li>
+<li><a href="/deletions-guide">删帖指导</a></li>
+<li><a href="/criticism-policy">批评守则</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<div class="side-block" style="background-color: #f0fff6;">
+<div class="heading">
+<p>新人资讯</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
+</div>
+<div class="side-block">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
+<div class="heading">
+<p>SCP-CN系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
+<div class="heading">
+<p>SCP系列</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
+<div class="heading">
+<p>SCP系列故事</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
+<div class="heading">
+<p>SCP图书馆</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
+<div class="heading">
+<p>网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
+<div class="heading">
+<p>社交</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
+<div class="heading">
+<p>相关网站</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
+</div>
+<div class="side-block resources" style="background-color: #e7e5e8;">
+<div class="heading">
+<p>写作指导</p>
+</div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
+</div>
+<div class="side-block" style="background-color: #fff0f0;">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
+<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="side-block media" style="background-color: #e5e5ff;">
+<div class="heading">
+<p>相关媒体</p>
+</div>
+<div class="menu-item">
+<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
+</div>
+</div>
+<div class="side-block" style="background-color: #f0f0f0;">
+<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
+<span style="font-size:80%;">© SCP基金会<br />
+<a href="/licensing-guide">授权指南</a></span></div>
+</div>
+<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-cn-1356" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+</div>
+    
+    
+    
+    </div></div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<a class="close-menu" href="###"><br />
+<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            SCP-CN-1356
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+
+
+
+
+
+
+
+
+
+<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
+<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+10</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong>项目编号：</strong>[编号已废除]</p>
+<p><strong>项目等级：</strong>Euclid</p>
+<p><strong>特殊收容措施：</strong>SCP-CN-1356可能需要被放置在一间可能由钢化玻璃与钢板制成的收容间里。该收容间可能存在于Site-CN-82，每天可能需要5-10个安保人员或者其它人员看守，初步估计在24小时内均有可能发生收容失效。</p>
+<p><strong>描述：</strong>SCP-CN-1356<strong>可能</strong>是一个异常物体，但由于其所存在的异常效应，对其下以的定义无法在项目存在的事实上契合超过0.1秒。因项目能够扭曲、改变其自身和现实及现实以外的事物和概念，所以暂时无法确定项目的编号为何。但项目不是现实扭曲实体。</p>
+<p>根据当前的时间段，基金会的现有手段<strong>不可能</strong>改变项目所影响的事实，任何人都不可能察觉项目对任何事物的影响，导致对其收容的成功率低于0.3%。尚且未知是如何将其发现并收容的，具体信息有待研究。<span style="text-decoration: line-through;">现仅知其为一逆模因实体。</span></p>
+<p>项目疑似拥有自我意识，因而禁止透露过多对项目性质的描述。</p>
+<p><strong>附录：</strong>起初，SCP-CN-1356被发现于Site-CN-82的地下第5层，该层曾因一场收容失效而被暂时废弃，未知其由谁建造、收容。对该事实的描述均不会受到SCP-CN-1356的影响，且对其的收容几乎完全稳定，但项目依然能透过收容设施影响外部现实。值得注意的是，在收容设施中曾发现了一部手机，现已整理并备份该手机中的文件。</p>
+<hr />
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 打开文件夹&quot;备忘录&quot;</a><a href="javascript:;">- 关闭文件夹&quot;备忘录&quot;</a></div>
+</div>
+<div class="colmod-content">
+<p><strong>AI助手：</strong>该文件夹内仅有[1]个文件。</p>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 打开文件</a><a href="javascript:;">- 关闭文件</a></div>
+</div>
+<div class="colmod-content">
+<hr />
+<div class="no-unfold">
+<div class="containercontainer">
+<div class="container"><span class="overlay">紧急通知</span>
+<div class="overlayback"></div>
+<h1><span>来自监督者议会的警告</span></h1>
+<h2><span>对该文档的查看应通过受试者协议</span></h2>
+<p>非受试者将被该异常以不受控手段抹杀<span class="blinkbar">[]</span></p>
+</div>
+</div>
+</div>
+<hr />
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+<div style="text-align: center;">
+<h1><span>欢迎您，受试者。</span></h1>
+<p><br /></p>
+</div>
+<div style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><strong>是否打开文件？</strong></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><strong><span style="color: green">确认成功√</span></strong></p>
+</div>
+<div class="colmod-block">
+<ul>
+<li class="folded">
+<ul>
+<li style="list-style: none">_</li>
+</ul>
+<div class="colmod-link-top">
+<div class="foldable-list-container"><a href="javascript:;">+ 打开文件SCP-CN-1356-A</a><a href="javascript:;">- 关闭文件SCP-CN-1356-A</a></div>
+</div>
+<div class="colmod-content">
+<div class="terminal">
+<div class="scanline"></div>
+<div class="text">
+<p><span style="font-size:150%;"><strong>已展开文件内容</strong></span><br /></p>
+<div style="text-align: left;">
+<blockquote>
+<p><span style="color: red">目前成功可能性为64.88275%。</span></p>
+<p>是否打开文件？(YES/NO)</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong><span style="color: green">YES</span>。</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>成功打开文件，请查阅。</p>
+</blockquote>
+<p><strong>已启用自动编辑器。<sup class="footnoteref"><a id="footnoteref-472844-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-472844-1')">1</a></sup></strong></p>
+</div>
+<p><strong>项目编号</strong>：SCP-CN-1356 <span style="color: red">72%</span></p>
+<p><strong>项目等级：</strong>Keter <span style="color: red">72%</span> Euclid <span style="color: red">28%</span></p>
+<p><strong>特殊收容措施：</strong> 无 <span style="color: red">0%</span></p>
+<p><strong>描述：</strong></p>
+<p>对项目的收容是不必要的。<span style="text-decoration: line-through;">因为它在现实上是不可能被收容的。</span></p>
+<div style="text-align: left;"></div>
+<hr />
+<div style="text-align: center;">
+<p>收容概率 <span style="color: red">0%</span></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.<br />
+.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>收容概率 <span style="color: red">0.00001%</span></p>
+</div>
+<hr />
+<blockquote>
+<p>那天我看见了它。</p>
+</blockquote>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong> 展开内容。</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>已成功展开。</p>
+</blockquote>
+</div>
+<blockquote>
+<p>记得那一天，那个突破收容的是一头与其对视能使人心脏病突发的怪物，它摧毁了建筑物，收容间的钢板被像撕纸一样撕开。<span style="color: red">100%</span></p>
+<p>偶然间，我发现了在被撕裂的钢板墙壁中是空心的，而空心的位置正好可以供一个人通过，我就走了过去。<span style="color: red">100%</span></p>
+<p>我走到了一个可能存在的地方，我看见了一个可能性。<span style="color: red">∞%</span></p>
+<p>一面很<em>亮</em>的墙，在发光，是白色的。背景没有任何东西，是空的，但那是一堵墙。<span style="color: red">100%</span></p>
+<p>我看见了可能性，至少[已编辑]种，它们差点填满了我的脑容量，不过幸亏我随身带着记忆删除药剂。本来是用来删除无关人员记忆的，没想到居然对自己派上了用场。<span style="color: red">∞%</span></p>
+<p>那可能是一个球，一个方块，一个盒子……或者是一个人？一具尸体？<span style="color: red">100%</span></p>
+<p>我看不见。<span style="color: red">0%</span></p>
+<p><span style="color: red">目前成功可能性为61.7285%。</span></p>
+</blockquote>
+<div style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<blockquote>
+<p>看……看不见现实。<span style="color: red">0%</span></p>
+<p>我感觉我的手是举着的，我似乎拿着什么东西，那个东西是硬的，长方形的。<span style="color: red">20%</span></p>
+<p>注释：该段落时，可能性被异常分割。</p>
+<p>是手机吗？我在录音吗？<span style="color: red">32%</span></p>
+<p>我在写备忘录……或者做别的什么？<span style="color: red">11%</span></p>
+<p>也许我在拍摄视频，因为摄像头没有对着我，我觉得我开着的是屏幕这一侧的摄像头。<span style="color: red">9.2%</span></p>
+<p>我的手指不自觉地在移动，它记下我一切所作所为的几率是百分百。我不知道为什么，也许这就是人类突破了极限才做到的事？<span style="color: red">24.4444%</span></p>
+<p>再回过头的时候，后面的入口已经不见了。面前只有一个巨大的空间，像是两个不一样的地方拼凑在一起，一段是损坏、破败的房间，另一段是巨大的墙。<span style="color: red">82%</span></p>
+<p>它很美。<span style="color: red">100%</span></p>
+<p>我想去触摸它。<span style="color: red">100%</span></p>
+</blockquote>
+<div style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>[警告：检测到认知危害]</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<blockquote>
+<p>我觉得我走近了它，我的脚在移动，可能在移动，或者没在移动。我的腿在动，很快感到了些酸痛感，也许很远。<span style="color: red">1%</span></p>
+<p>不知道走了多久，我没法看到它，但我知道它就在那里。<span style="color: red">50%</span></p>
+<p>永远不变，巨大的白色墙壁，透过现实的一切。<span style="color: red">100%</span></p>
+<p>是谁创造了它？上层叙事？或者其它人？<span style="color: red">33.3333%</span></p>
+<p>那都无所谓了。<span style="color: red">0%</span></p>
+<p><span style="color: red">目前成功可能性为47.1411%。</span></p>
+</blockquote>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<blockquote>
+<p>我是谁？<span style="color: red">50%</span></p>
+<p>我的脑海里猛然蹦出一个名字——<span style="color: red">100%</span></p>
+<p>又在随即忘却，因为我<strong>不可能</strong>有一个名字。<span style="color: red">0%</span></p>
+<p>也许吧，我觉得我依然在走，我还是没能摸到它。<span style="color: red">50-0%</span></p>
+<p><strong>████：</strong>你好，基金会。我是一个人。<span style="color: red">0%</span></p>
+<p><strong>████：</strong>哦天，我也没法确定我是不是个人……我有可能是一个有智慧的实体，一个异常物体什么的。<span style="color: red">33.3333%</span></p>
+<p>我对手机说了几句话，好像有东西记录下来了我的语言，也许吧。<span style="color: red">50%</span></p>
+<p><span style="color: red">目前成功可能性为31.4444%。</span></p>
+</blockquote>
+<div style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>成功可能性仍在降低，是否继续阅读？</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>继续。</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>在以下内容中仍检测到大量含认知危害内容，请谨慎选择。</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>别说那么多废话！快给我打开！</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>已为您展开。</p>
+</blockquote>
+</div>
+<blockquote>
+<p><strong>████：</strong>你好？<span style="color: red">100%</span></p>
+<p><strong>████：</strong>是基金会吗？<span style="color: red">100%</span></p>
+<p><strong>████：</strong>我总算摸到它了。<span style="color: red">100%</span></p>
+<p>我的手透过现实的墙，触摸到了另一处。<span style="color: red">unknown%</span></p>
+<p>温暖……舒适。没有想象过的舒服。<span style="color: red">100%</span></p>
+<p>我摸到了什么？一个圆滚滚的东西。<span style="color: red">50%</span></p>
+<p>它在滚动，而且好像有两个，并列的。<span style="color: red">100%</span></p>
+<p>那东西是热的？或许是冷的。摸起来是滑的，有些湿润，但很快就干了。<span style="color: red">25%</span></p>
+<p>我什么都看不见了，眼前有东西在晃动，眼球在刺痛。</p>
+<p>我不确定我到底摸到了什么。<span style="color: red">unknown%</span></p>
+<p><span style="color: red">目前成功可能性为27.6515%。</span></p>
+</blockquote>
+<blockquote>
+<p>继续向下……我可能摸到了一个很长的、软的物体，一直延伸下去。<span style="color: red">22%</span></p>
+<p>那是什么？<span style="color: red">0%</span></p>
+<p>在那个东西的最末端有一个可能是包裹着一层软垫子的硬东西，是一整块。从四周延伸出去五个可能很长的东西，和主体的长度差不多。<span style="color: red">1%</span></p>
+<p>那是……一只手？<span style="color: red">100%</span></p>
+<p>我很确定了。<span style="color: red">100%</span></p>
+<p>它同时在触摸我所触摸的地方，我突然能够感觉到了。<span style="color: red">100%</span></p>
+<p>那是我自己的手。<span style="color: red">100%</span></p>
+<p>我不该触碰它。<span style="color: red">100%</span></p>
+</blockquote>
+<div style="text-align: center;">
+<hr />
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p><span style="color: red">目前成功可能性为12.9899%，是否继续观看？</span></p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>继续。</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>检测到可能性极低，且仍在降低。请谨慎选择，您仅剩最后一次机会。</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>继续。</p>
+</blockquote>
+</div>
+<div style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>你知道的，你可能会<strong>死</strong>。</p>
+</blockquote>
+<blockquote>
+<p><span style="color: red">成功可能性提高至89.9982%。</span></p>
+</blockquote>
+<hr />
+<blockquote>
+<p>在刺痛。</p>
+<p>剧痛。</p>
+<p>那可能吗？对我来说现在不可能发生的事都变得可能了。</p>
+<p>那可能是认知危害，还有逆模因。</p>
+<p>我没法记得那是什么。</p>
+</blockquote>
+<hr />
+<p><strong>项目编号：</strong>SCP-CN-1356</p>
+<p><strong>项目等级：</strong>未分级</p>
+<p><strong>特殊收容措施：</strong>SCP-CN-1356可被使用任何手段封存，严禁任何存在于现实中的人获得有关其的信息。任何成功读完该页面的O5议会成员和受试者请立即对自己执行记忆删除程序，以防止SCP-CN-1356信息的泄露。我利用它的现实扭曲能力创造了这台计算机来封闭它！现在立刻关掉电脑，删除自己的记忆！</p>
+<p><strong>描述：</strong>SCP-CN-1356是一面无厚度、可穿过、透明的墙，也许吧。墙的另一边没有物质和空间存在，尚未知我是如何透过它摸到另一面的。那不是逆模因，不是模因，不是现实扭曲，我不知道它是不是叙事者所造。我不知道。当一名人员试图用手触摸它<sup class="footnoteref"><a id="footnoteref-472844-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-472844-2')">2</a></sup>时，该人员将会触碰到有关自己的事物。包括：身体部件、内脏器官、携带物体等。<span style="text-decoration: line-through;">我的眼球已经不见了，所以我看不见。</span>一旦该人员触摸到身体部件时，项目将使该人员破坏自身的几率提高至[数据损坏]，导致人员身体的损坏。这是它保护自己的方式，无论你们用什么手段都不可能摧毁它。尘封它，让它不被任何人知道。停止。</p>
+<p>一旦SCP-CN-1356的信息被了解，项目将通过了解信息者散播自身。项目自身并不属于现实，它周围的休谟指数是零。它能透过一切，影响一切，改变一切，所以我不知道它的本质，到底是用何种方法传播自己。最后的可能性，只剩下尽力地不要让项目的信息泄露，以防止ZK级“现实终结”情景发生。如果不控制它，最终一切都会变得不可能。让它从世界上消失，不要让任何人知道它。删除文档或者做点什么！现在……</p>
+<p><strong>无论你是O5议会的成员，还是一个授权的受试者，亦或者是一个愚蠢之人派来的D级人员——对自己执行记忆删除，就现在，立刻，马上。</strong></p>
+<p>这是来自已不可能存在之人的忠告，一次恳求，同时也是一个命令。</p>
+<p><span style="text-decoration: line-through;">求求你们……</span> ——Dr.àLjπλ<br /></p>
+<div style="text-align: center;">
+<hr />
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>已阅读完毕，是否关闭文档？</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>帮我筛选一下。</p>
+</blockquote>
+</div>
+<blockquote>
+<p>请选择筛选样式。</p>
+</blockquote>
+</div>
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>已删除内容。</p>
+</blockquote>
+</div>
+<blockquote>
+<p>已执行。</p>
+</blockquote>
+<hr />
+<p><strong>已被人为删除的句段：</strong></p>
+<ul>
+<li><span style="text-decoration: line-through;">杀死监督者！</span></li>
+</ul>
+<ul>
+<li>我亲手杀了我自己，脑浆飞溅，我看见[数据删除]从我的眼眶里冒了出来但是我还没死。我感觉不到疼，天啊，我——</li>
+</ul>
+<p><strong>已被异常删除的句段：</strong></p>
+<ul>
+<li>它能影响自身和自身之外的一切，包括宇宙，现实，思想，模因，逆模因。我们不知道至高神性能否受它所影响，但它无疑是强大的。</li>
+</ul>
+<ul>
+<li>快……如果你能看到我这句话，尽快……它能发现我们。</li>
+</ul>
+<ul>
+<li>它有意识，它能看见、听见我说的。我会死，我知道。</li>
+</ul>
+<hr />
+<div style="text-align: right;">
+<blockquote>
+<p><strong>输入：</strong>提交受试者权限撤除申请，都结束了。对我执行A级记忆删除。</p>
+</blockquote>
+</div>
+<div style="text-align: left;">
+<blockquote>
+<p>已执行。</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="foldable-list-container"></div>
+</div>
+</li>
+</ul>
+</div>
+<p><a href="http://scp-wiki-cn.wikidot.com/scp-cn-1356/offset/2">点此关闭文件</a></p>
+<div class="footnotes-footer">
+<div class="title">脚注</div>
+<div class="footnote-footer" id="footnote-472844-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-472844-1')">1</a>. 注：此处为该异常SCP-CN-1356所自发产生的异常效应，能在文档中自动计算有关的概率数值。</div>
+<div class="footnote-footer" id="footnote-472844-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-472844-2')">2</a>. 或其他方式？</div>
+</div>
+</div>
+    
+    
+    
+    </div>
+<div class="footer-wikiwalk-nav">
+<div style="text-align: center;">
+<p>&#171; <a href="/scp-cn-1355">SCP-CN-1355</a> | SCP-CN-1356 | <a href="/scp-cn-1357">SCP-CN-1357</a> &#187;</p>
+</div>
+</div>
+
+                    </div>
+
+                            
+            <!-- wikidot_bottom_300x250 -->
+<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
+<script type='text/javascript'>
+nads.createAd('wad-scp-wiki-cn-below-content', {
+  "refreshLimit": 10,
+  "refreshTime": 83,
+  "sizes": [ [ 300, 250 ] ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  }
+  });
+</script>
+        
+    
+
+                    
+
+
+
+                    
+                        <div class="page-tags">
+                            <span>
+                                <a href="/system:page-tags/tag/euclid#pages">euclid</a><a href="/system:page-tags/tag/k%E7%BA%A7%E6%83%85%E6%99%AF#pages">k级情景</a><a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/site-cn-82#pages">site-cn-82</a><a href="/system:page-tags/tag/%E4%BF%A1%E6%81%AF%E5%8D%B1%E5%AE%B3#pages">信息危害</a><a href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B#pages">原创</a><a href="/system:page-tags/tag/%E6%97%A0%E5%BD%A2#pages">无形</a><a href="/system:page-tags/tag/%E6%97%B6%E7%A9%BA#pages">时空</a><a href="/system:page-tags/tag/%E6%99%BA%E8%83%BD#pages">智能</a><a href="/system:page-tags/tag/%E6%9C%AA%E6%94%B6%E5%AE%B9#pages">未收容</a><a href="/system:page-tags/tag/%E6%A6%82%E5%BF%B5#pages">概念</a><a href="/system:page-tags/tag/%E6%A8%A1%E5%9B%A0#pages">模因</a><a href="/system:page-tags/tag/%E8%A7%A6%E8%A7%89%E5%BD%B1%E5%93%8D#pages">触觉影响</a><a href="/system:page-tags/tag/%E8%AE%A4%E7%9F%A5%E5%8D%B1%E5%AE%B3#pages">认知危害</a><a href="/system:page-tags/tag/%E8%AE%B0%E5%BF%86%E5%BD%B1%E5%93%8D#pages">记忆影响</a><a href="/system:page-tags/tag/%E8%B6%85%E7%BB%B4%E5%BA%A6#pages">超维度</a><a href="/system:page-tags/tag/%E9%80%86%E6%A8%A1%E5%9B%A0#pages">逆模因</a>
+                            </span>
+                        </div>
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">页面版本: 4, 最后编辑于: <span class="odate time_1595677379 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">25 Jul 2020 11:42</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+10</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
+<a href="/forum/t-13448426/scp-cn-1356" class="btn btn-default" id="discuss-button">讨论 (6)</a>
+<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
+</div>
+基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                <div id="footer-bar">
+  <div>
+     </div>
+  <h2>其它有趣的网站</h2>
+  
+  <div class="units">
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://rmitvnim2007b.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rmitvnim2007b.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://rmitvnim2007b.wikidot.com">RMIT Vietnam IM 2007B</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://dotflow.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/dotflow.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://dotflow.wikidot.com">.flow</a></h3>
+            <div class="desc">          
+              Rusting Away
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://geoffshousegames.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/geoffshousegames.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://geoffshousegames.wikidot.com">Geoff&#039;s House Games</a></h3>
+            <div class="desc">          
+              May Good Games Rise Again
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://opencascade.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/opencascade.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://opencascade.wikidot.com">Open CASCADE Wiki</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        请点此编辑本页内容。    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
+    <div id="edit-append-button-hovertip">
+        在不编辑整个页面源代码的情况下添加内容。    </div>
+    <div id="history-button-hovertip">
+        看看本页过去是如何沿革的。    </div>
+    <div id="discuss-button-hovertip">
+        若您想要讨论本页内容 - 这是最简单的方法。    </div>
+    <div id="files-button-hovertip">
+        检视并管理本页附件。    </div>
+    <div id="site-tools-button-hovertip">
+        管理网站的实用工具。    </div>
+    <div id="backlinks-button-hovertip">
+        检视链接至本页或引用本页的页面。    </div>
+    <div id="rename-move-button-hovertip">
+        变更页面名称（及URL 位址，或许会影响分类）。    </div>
+    <div id="view-source-button-hovertip">
+        在不编辑的情形下检视维基原始码。    </div>
+    <div id="parent-page-button-hovertip">  
+        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
+            <div id="abuse-report-button-hovertip">
+            向管理员举报本页有令人反感的内容。        </div>
+        <div id="bug-report-button-hovertip">
+            事情不如预期？看看您可以做些什么。        </div>
+        <div id="wikidot-help-button-hovertip">
+            一般的 Wikidot.com 文件与说明。        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com 隐私政策。          
+        </div>
+    </div>
+</body>
+</html>

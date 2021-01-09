@@ -1,1114 +1,1167 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Roboto+Mono:400,500,700|Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i&display=swap&subset=latin-ext');
 
-<head>
-    <title>Carroll 280号/R-01221 - SCP基金会</title>
-    
-    
-    
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
-    <script  type="text/javascript">
-        var URL_HOST = 'www.wikidot.com';
-        var URL_DOMAIN = 'wikidot.com';
-        var USE_SSL =  true ;
-        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9';
-        // global request information
-        
-        var WIKIREQUEST = {};
-        WIKIREQUEST.info = {};
-        
-        WIKIREQUEST.info.domain = "scp-wiki-cn.wikidot.com";
-        WIKIREQUEST.info.siteId = 530812;
-        WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
-        WIKIREQUEST.info.categoryId = 3342264;
-        WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "chicago-factory";
-        OZONE.request.timestamp = 1610159250;
-        OZONE.request.date = new Date();
-        WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "chicago-factory";
-        WIKIREQUEST.info.pageId = 853016910;
-                        WIKIREQUEST.info.lang = "cn";
-        OZONE.lang = "cn";
-        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    </script>
-    
-    
+@supports(display:grid) {
+	:root {
+		/* S-CSS-P Integration */
+		/* If you're making a new CSS theme, please include the following three variables at minimum. */
+		--theme-base: "nuscp";
+		/* must be either "nuscp" or "sigma9" */
+		--theme-id: "uiu-bhl-theme";
+		/* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+		--theme-name: "Unusual Incidents Unit BHL Theme";
+		/* set this to your theme's full name */
+
+		/* Header */
+		--logo-image: url("http://scp-wiki.wdfiles.com/local--files/theme%3Auiu-bhl-theme/UIU_Logo.svg");
+		--header-title: "FBI";
+		--header-subtitle: "特异 事故 办公处";
+
+		/* Typefaces */
+		--body-font: 'Source Sans Pro', 'Lato', '等线', sans-serif;
+		--header-font: 'Source Sans Pro', 'Poppins', '等线', sans-serif;
+		--title-font: 'Merriweather', 'Poppins', '华文中宋', sans-serif;
+		--mono-font: 'Roboto Mono', "Andale Mono", "Courier New", Courier, '黑体', monospace;
+
+		/* Standard Colors */
+		--white-monochrome: 230, 234, 246;
+		/* off-blue white */
+		--pale-gray-monochrome: 204, 216, 239;
+		/* v light blue for blockquotes and stuff */
+		--light-gray-monochrome: 118, 137, 174;
+		/* light accent blue for login status */
+		--gray-monochrome: 36, 59, 120;
+		/* blue */
+		--dark-gray-monochrome: 26, 20, 71;
+		/* deep blue */
+		--black-monochrome: 15, 11, 12;
+		/* off-blue black */
+		--bright-accent: 239, 221, 27;
+		/* bright yellow */
+		--medium-accent: 227, 69, 38;
+		/* medium red */
+		--dark-accent: 148, 26, 29;
+		/* deep red */
+		--newpage-color: var(--bright-accent);
+		/* pale orange */
+
+		/* Primary Theme Colors */
+		--swatch-background: var(--white-monochrome);
+		--swatch-primary: var(--bright-accent);
+		--swatch-primary-darker: var(--medium-accent);
+		--swatch-primary-darkest: var(--dark-accent);
+		/* Primary Text Colors */
+		--swatch-text-dark: var(--black-monochrome);
+		--swatch-text-light: var(--white-monochrome);
+		--swatch-important-text: var(--bright-accent);
+
+		/* Primary Menu Colors */
+		--swatch-menubg-color: var(--white-monochrome);
+		--swatch-menubg-light-color: var(--pale-gray-monochrome);
+		--swatch-menubg-medium-color: var(--light-gray-monochrome);
+		--swatch-menubg-medium-dark-color: var(--gray-monochrome);
+		--swatch-menubg-dark-color: var(--dark-gray-monochrome);
+		--swatch-menubg-black-color: var(--black-monochrome);
+		--swatch-menubg-hover-color: var(--black-monochrome);
+		--swatch-menutxt-dark-color: var(--black-monochrome);
+		--swatch-menutxt-light-color: var(--white-monochrome);
+		--swatch-border-color: var(--black-monochrome);
+		/* Primary Header Colors */
+		--header-gradient-color-bottom: var(--black-monochrome);
+		--header-gradient-color-middle: var(--dark-gray-monochrome);
+		--header-gradient-color-top: var(--dark-gray-monochrome);
+		--swatch-headerh1-color: var(--white-monochrome);
+		--swatch-headerh2-color: var(--white-monochrome);
+		--swatch-topmenu-border-color: var(--black-monochrome);
+		--swatch-topmenu-bg-color: var(--pale-gray-monochrome);
+
+		--link-color: var(--dark-accent);
+		--visited-link-color: var(--medium-accent);
+		--hover-link-color: var(--medium-accent);
+
+		--rating-module-button-color: var(--black-monochrome);
+		--rating-module-text-color: var(--swatch-menutxt-dark-color);
+
+		/* Header Gradients */
+		--gradient-header: linear-gradient(35deg,
+			rgb(var(--header-gradient-color-bottom)) 0,
+			rgb(var(--header-gradient-color-middle)) 90%,
+			rgb(var(--header-gradient-color-top)) 100%);
+
+		--gradient-topmenu: linear-gradient(to bottom,
+			rgba(255, 255, 255, 0) 0,
+			rgba(255, 255, 255, 0) 12.25rem,
+			rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) -webkit-calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) -webkit-calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+		--gradient-topmenu: linear-gradient(to bottom,
+			rgba(255, 255, 255, 0) 0,
+			rgba(255, 255, 255, 0) 12.25rem,
+			rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) -moz-calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) -moz-calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+		--gradient-topmenu: linear-gradient(to bottom,
+			rgba(255, 255, 255, 0) 0,
+			rgba(255, 255, 255, 0) 12.25rem,
+			rgba(var(--swatch-topmenu-border-color)) 12.25rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) 12.3125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) calc(100% - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 100%);
+
+		--gradient-topmenu-mobile: linear-gradient(to bottom,
+			rgba(var(--swatch-topmenu-border-color), 1) 0,
+			rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) -webkit-calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) -webkit-calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+		--gradient-topmenu-mobile: linear-gradient(to bottom,
+			rgba(var(--swatch-topmenu-border-color), 1) 0,
+			rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) -moz-calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) -moz-calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+		--gradient-topmenu-mobile: linear-gradient(to bottom,
+			rgba(var(--swatch-topmenu-border-color), 1) 0,
+			rgba(var(--swatch-topmenu-bg-color), 1) .125rem,
+			rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-bg-color), 0) calc(3rem - .125rem),
+			rgba(var(--swatch-topmenu-border-color), 0) 3rem);
+
+		--diagonal-stripes: inherit;
+
+		--header-background-image-size: 100% 12.25rem;
+		--base-font-size: 1rem;
+
+		--sidebar-width-on-desktop: -webkit-calc(var(--base-font-size) * 16);
+
+		--sidebar-width-on-desktop: -moz-calc(var(--base-font-size) * 16);
+
+		--sidebar-width-on-desktop: calc(var(--base-font-size) * 16);
+	}
+
+	::-webkit-scrollbar,
+	#side-bar:hover::-webkit-scrollbar {
+		background-color: rgba(var(--pale-gray-monochrome), 1);
+	}
+
+	::-webkit-scrollbar-thumb,
+	#side-bar:hover::-webkit-scrollbar-thumb {
+		background-color: rgba(var(--dark-gray-monochrome), 1);
+	}
+
+	::-moz-selection {
+		background: rgba(var(--bright-accent), 0.5);
+	}
+
+	::selection {
+		background: rgba(var(--bright-accent), 0.5);
+	}
+
+	html {
+		background: white;
+	}
+
+	html,
+	body {
+		-webkit-font-feature-settings: "onum"0;
+		-moz-font-feature-settings: "onum"0;
+		font-feature-settings: "onum"0;
+		font-variant-numeric: tabular-nums;
+		scrollbar-color: rgb(var(--dark-gray-monochrome)) rgb(var(--pale-gray-monochrome));
+	}
 
 
-    
-        <script  type="text/javascript">
-    
-        require.config({
-            baseUrl: URL_STATIC + '/common--javascript',
-            paths: {
-                'jquery.ui': 'jquery-ui.min',
-                'jquery.form': 'jquery.form'
-            }
-        });
-    
-    </script>
-    
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-                            <meta name="robots" content="index,follow"/>
-                                <meta name="language" content="zh,zh-cn"/>
-                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                            
-    
-    
-    
-    
-    <meta http-equiv="content-language" content="zh,zh-cn"/>
-    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
-        
-    
-    <style type="text/css" id="internal-style">
-        
-        /* modules */
-        
-                
-        /* theme */
-                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--theme/base/css/style.css);
-                    @import url(https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css);
-            </style>
-    
-        
-        
-        
-    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
-    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
-    
-            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
-        
-            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
-                
-            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
-    
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-18234656-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+	#page-content span > a,
+	#page-content div:not([id*="wiki-tabview"]) a {
+		-webkit-transition: -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-webkit-box-shadow: inset 0 0 0 0.01px rgba(var(--swatch-primary), 1);
+		-moz-box-shadow: inset 0 0 0 0.01px rgba(var(--swatch-primary), 1);
+		box-shadow: inset 0 0 0 0.01px rgba(var(--swatch-primary), 1);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
 
-        _gaq.push(['old._setAccount', 'UA-68540-5']);
-        _gaq.push(['old._setDomainName', 'none']);
-        _gaq.push(['old._setAllowLinker', true]);
-        _gaq.push(['old._trackPageview']);
+	.owindow .title {
+		background-color: rgb(var(--swatch-primary-darkest));
+		color: rgb(var(--white-monochrome));
+	}
 
-            </script>
-    
-    <script type="text/javascript">
-        window.google_analytics_uacct = 'UA-18234656-1';
-        window.google_analytics_domain_name = 'none';
-    </script>
-    
-        <link rel="manifest" href="/onesignal/manifest.json" />
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-          OneSignal.init({
-            appId: null,
-          });
-        });
-    </script>
-        
-<style>
-#page-title {
-  display: none;
+	.title.modal-header,
+	.owindow {
+		background: var(--gradient-header);
+		color: rgb(var(--white-monochrome));
+	}
+
+	.hovertip {
+		background: var(--gradient-header);
+		background-color: rgb(var(--dark-gray-monochrome));
+		color: rgb(var(--white-monochrome));
+		-webkit-background-size: contain;
+		   -moz-background-size: contain;
+		     -o-background-size: contain;
+		        background-size: contain;
+	}
+
+	.owindow .button-bar a {
+		background-color: rgb(var(--swatch-menubg-dark-color));
+		color: rgb(var(--white-monochrome));
+	}
+
+	.title.modal-header h1,
+	.owindow h1,
+	.hovertip h1 {
+		color: rgb(var(--white-monochrome));
+	}
+
+	#lock-info {
+		background-color: rgb(var(--pale-gray-monochrome));
+	}
+
+	#main-content {
+		margin-top: 2.1em;
+	}
+
+	#page-content span > a:hover,
+	#page-content div:not([id*="wiki-tabview"]) a:hover {
+		-webkit-transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), -moz-box-shadow 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--swatch-primary), 1);
+		-moz-box-shadow: inset 100vw 0 0 0 rgba(var(--swatch-primary), 1);
+		box-shadow: inset 100vw 0 0 0 rgba(var(--swatch-primary), 1);
+		text-decoration: none;
+	}
+
+	body {
+		-webkit-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+		-moz-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+		-o-background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+		background-size: var(--header-background-image-size), 100% 14.25rem, 100% var(--background-gradient-distance);
+	}
+
+	hr {
+		background: rgb(0, 0, 0, 0);
+		border: 0;
+		height: 1.5rem;
+		width: 90%;
+		position: relative;
+		margin: 1.875rem auto;
+	}
+
+	#page-title::before,
+	hr::before {
+		content: " ";
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 447.1 202.4' xml:space='preserve'%3E%3Cg%3E%3Cpolygon fill='%23E34526' points='223.5,45.7 208,90.5 160.6,91.4 198.4,120.1 184.6,165.5 223.5,138.4 262.5,165.5 248.7,120.1 286.5,91.4 239.1,90.5 '/%3E%3Cpolygon fill='%23E34526' points='89,58.3 77.7,90.7 43.4,91.4 70.8,112.2 60.9,145 89,125.4 117.2,145 107.2,112.2 134.6,91.4 100.3,90.7 '/%3E%3Cpolygon fill='%23E34526' points='403.6,91.4 369.4,90.7 358.1,58.3 346.8,90.7 312.5,91.4 339.9,112.2 329.9,145 358.1,125.4 386.2,145 376.3,112.2 '/%3E%3C/g%3E%3C/svg%3E%0A");
+		color: rgb(var(--medium-accent));
+		display: inline-block;
+		position: absolute;
+		top: 0.1em;
+		left: 0;
+		margin: 0 0 0 -0.188rem;
+		font-size: 0.938rem;
+		line-height: 0;
+		height: 1.5rem;
+		width: 4rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin-left: -webkit-calc(50% - 2rem);
+		margin-left: -moz-calc(50% - 2rem);
+		margin-left: calc(50% - 2rem);
+		background-color: transparent;
+		z-index: 1;
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+	}
+
+	#page-title::after,
+	hr::after {
+		content: " ";
+		height: 0.125rem;
+		width: 100%;
+		position: absolute;
+		margin: 0 auto;
+		background: rgb(var(--gray-monochrome));
+		left: 0;
+		top: 50%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+		mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 630 23' xml:space='preserve'%3E%3Cpath fill='%23E6EAF6' d='M0,0v23h630V0H0z M334.9,15.9l1.4,4.6l-13.9,2.3h-14.8l-13.9-2.3l1.4-4.6l0.8-2.6l-2.1-1.6l-3.9-2.9l4.9-0.1 l2.7-0.1l0.9-2.5l1.6-4.6L315,0.1l15.1,1.4l1.6,4.6l0.9,2.5l2.7,0.1l4.9,0.1l-3.9,2.9l-2.1,1.6L334.9,15.9z'/%3E%3C/svg%3E%0A");
+		-webkit-mask-size: 43.375rem auto;
+		mask-size: 43.375rem auto;
+		-webkit-mask-position: center center;
+		mask-position: center center;
+	}
+
+	#header {
+		background-position: left .75rem top 1rem;
+		-webkit-background-size: auto 10.375rem;
+		-moz-background-size: auto 10.375rem;
+		-o-background-size: auto 10.375rem;
+		background-size: auto 10.375rem;
+		height: 12.25rem;
+		-webkit-filter: initial;
+		        filter: initial;
+	}
+
+	#header h1 {
+		max-height: 12.75rem;
+	}
+
+	#header h1,
+	#header h1 a,
+	#header h2,
+	#header h2 span {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	#header h1 a {
+		margin-left: 11rem;
+		margin-top: -1em;
+		position: relative;
+		height: 12.75rem;
+		width: auto;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-moz-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		top: 0;
+	}
+
+	#header h1 a::before {
+		font-size: 7rem;
+		font-weight: 900;
+	}
+
+	#header h2,
+	#header h2 span {
+		word-break: keep-all; /* 中文调整 */
+		width: 15rem;
+		margin-left: 10.75rem;
+		height: 12.25rem;
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-moz-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		font-family: var(--title-font);
+		font-weight: 600;
+	}
+
+	#header h2 span {
+		line-height: 1.15;
+		font-size: 1.45rem;
+		margin-top: 0rem;
+	}
+
+	#top-bar {
+		font-size: var(--base-font-size);
+		font-weight: 900;
+		margin: 12.25rem 0 1.75rem 0;
+		height: 1.875rem;
+	}
+
+	#side-bar {
+		margin: 2em 0 0 0;
+	}
+
+	#side-bar:hover {
+		background: rgb(var(--white-monochrome));
+	}
+
+	#top-bar div.top-bar > ul > li:hover,
+	#top-bar div.mobile-top-bar > ul > li:hover {
+		background-color: rgb(var(--gray-monochrome));
+	}
+
+	#top-bar div.top-bar > ul > li > a,
+	#top-bar div.mobile-top-bar > ul > li > a {
+		color: rgb(var(--swatch-menutxt-dark-color)) !important;
+	}
+
+	#top-bar div.top-bar > ul > li > a::before,
+	#top-bar div.top-bar > ul > li > a::after,
+	#top-bar div.mobile-top-bar > ul > li > a::before,
+	#top-bar div.mobile-top-bar > ul > li > a::after {
+		background-color: rgb(var(--dark-accent));
+	}
+
+	#top-bar div.top-bar > ul > li:hover > a,
+	#top-bar div.top-bar > ul > li:hover > a,
+	#top-bar div.top-bar > ul > li.sfhover > a,
+	#top-bar div.top-bar > ul > li.sfhover > a,
+	#top-bar div.mobile-top-bar > ul > li:hover > a,
+	#top-bar div.mobile-top-bar > ul > li:hover > a,
+	#top-bar div.mobile-top-bar > ul > li.sfhover > a,
+	#top-bar div.mobile-top-bar > ul > li.sfhover > a {
+		color: rgb(var(--white-monochrome)) !important;
+	}
+
+	#top-bar div.top-bar > ul > li > ul,
+	#top-bar div.mobile-top-bar > ul > li > ul {
+		background-color: rgb(var(--dark-gray-monochrome));
+		background-image: var(--gradient-header);
+		margin-top: 1.875rem;
+		margin-left: -0.0625rem;
+		-webkit-box-shadow: inherit;
+		-moz-box-shadow: inherit;
+		box-shadow: inherit;
+	}
+
+	#top-bar div.top-bar > ul > li > ul,
+	#top-bar div.mobile-top-bar > ul > li > ul,
+	#top-bar div.top-bar > ul > li > ul > li,
+	#top-bar div.mobile-top-bar > ul > li > ul > li {
+		border-color: rgb(var(--light-gray-monochrome));
+	}
+
+	#top-bar div.top-bar > ul > li > ul > li > a,
+	#top-bar div.mobile-top-bar > ul > li > ul > li > a {
+		font-weight: 600;
+	}
+
+	#top-bar div.top-bar > ul > li > ul > li > a::before,
+	#top-bar div.top-bar > ul > li > ul > li > ul > li > a::before,
+	#top-bar div.top-bar > ul > li > ul > li > a:hover::before,
+	#top-bar div.mobile-top-bar > ul > li > ul > li > a::before,
+	#top-bar div.mobile-top-bar > ul > li > ul > li > ul > li > a::before,
+	#top-bar div.mobile-top-bar > ul > li > ul > li > a:hover::before {
+		background-color: rgb(var(--dark-accent));
+	}
+
+	#side-bar:hover {
+		background: rgb(var(--white-monochrome));
+	}
+
+	#side-bar .heading,
+	#side-bar .side-block > .collapsible-block:nth-child(1) .collapsible-block-folded {
+		background: rgba(var(--pale-gray-monochrome), 0.5);
+		font-family: var(--title-font);
+		min-height: 1.5rem;
+	}
+
+	#side-bar .heading p,
+	#side-bar .side-block > .collapsible-block .collapsible-block-link {
+		text-shadow: inherit;
+		color: rgb(var(--dark-gray-monochrome));
+		font-weight: 900;
+		letter-spacing: 0.15em;
+		font-size: -webkit-calc(var(--base-font-size) * 0.95);
+		font-size: -moz-calc(var(--base-font-size) * 0.95);
+		font-size: calc(var(--base-font-size) * 0.95);
+		height: 1.5rem;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-moz-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	#side-bar div.menu-item a::before,
+	#side-bar div.menu-item a:hover::before {
+		background-color: rgb(var(--light-gray-monochrome), 0.5);
+	}
+	
+	#side-bar div.menu-item .sub-text {
+		color: rgb(var(--medium-accent));
+	}
+
+	#page-title {
+		font-family: var(--title-font);
+		position: relative;
+		border: 0px;
+		text-align: center;
+	}
+
+	#page-title:before {
+		top: -webkit-calc(100% - 0.75rem);
+		top: -moz-calc(100% - 0.75rem);
+		top: calc(100% - 0.75rem);
+	}
+
+	#page-title:after {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		top: -webkit-calc(100%);
+		top: -moz-calc(100%);
+		top: calc(100%);
+		max-width: 43.375rem;
+	}
+
+	#content-wrap h1,
+	#content-wrap h2,
+	#content-wrap h3,
+	#content-wrap h4,
+	#content-wrap h5,
+	#content-wrap #page-title {
+		line-height: 1.25;
+		font-weight: 700;
+	}
+
+	#content-wrap h1,
+	#content-wrap #page-title {
+		font-size: 2.45rem;
+	}
+
+	#content-wrap h2 {
+		font-size: 1.7rem;
+	}
+
+	#content-wrap h3 {
+		font-size: 1.25rem;
+	}
+
+	#content-wrap h4 {
+		font-size: 1rem;
+	}
+
+	#content-wrap h5 {
+		font-size: .9rem;
+	}
+
+	#content-wrap * > #page-title,
+	#content-wrap * > h1:first-of-type,
+	#content-wrap * > h2:first-of-type,
+	#content-wrap * > h3:first-of-type,
+	#content-wrap * > h4:first-of-type,
+	#content-wrap * > h5:first-of-type,
+	#content-wrap * > h6:first-of-type {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#content-wrap * + h1,
+	#content-wrap * + h2,
+	#content-wrap * + h3,
+	#content-wrap * + h4,
+	#content-wrap * + h5,
+	#content-wrap * + h6 {
+		margin-top: 1.5em;
+	}
+
+	#content-wrap #page-title + *,
+	#content-wrap h1 + *,
+	#content-wrap h2 + *,
+	#content-wrap h3 + *,
+	#content-wrap h4 + *,
+	#content-wrap h5 + *,
+	#content-wrap h6 + * {
+		margin-top: 1em;
+	}
+
+	#content-wrap p + * {
+		margin-top: 1em;
+	}
+
+	#content-wrap ol:not([class*="yui-nav"]),
+	#content-wrap ul:not([class*="yui-nav"]) {
+		margin-bottom: 1em;
+		margin-top: 1em;
+		line-height: 1.5;
+		padding-left: 3ch;
+	}
+
+	#content-wrap ol:not([class*="yui-nav"]) li,
+	#content-wrap ul:not([class*="yui-nav"]) li {
+		margin-bottom: .25em;
+		max-width: 75ex;
+	}
+
+	.page-rate-widget-box .cancel a,
+	.page-rate-widget-box .rateup a,
+	.page-rate-widget-box .ratedown a,
+	.page-rate-widget-box .cancel a::before,
+	.page-rate-widget-box .rateup a::before,
+	.page-rate-widget-box .ratedown a::before {
+		-webkit-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: background-color 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+	}
+
+	.page-rate-widget-box .cancel a:hover {
+		background-color: rgba(var(--gray-monochrome), 0.2);
+	}
+
+	.page-rate-widget-box .rateup a:hover {
+		background-color: rgba(0, 200, 0, 0.2);
+	}
+
+	.page-rate-widget-box .ratedown a:hover {
+		background-color: rgba(var(--dark-accent), 0.2);
+	}
+
+	.page-rate-widget-box .cancel a {
+		-webkit-box-shadow: inset 0 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+		-moz-box-shadow: inset 0 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+		box-shadow: inset 0 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+	}
+
+	.page-rate-widget-box .rateup a {
+		-webkit-box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+		-moz-box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+		box-shadow: inset 0 0 0 0 rgba(0, 200, 0, 1) !important;
+	}
+
+	.page-rate-widget-box .ratedown a {
+		-webkit-box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+		-moz-box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+		box-shadow: inset 0 0 0 0 rgba(var(--dark-accent), 1) !important;
+	}
+
+	.page-rate-widget-box .cancel a:hover {
+		-webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+		-moz-box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+		box-shadow: inset 100vw 0 0 0 rgba(var(--gray-monochrome), 1) !important;
+	}
+
+	.page-rate-widget-box .cancel a:hover::before {
+		background-color: rgb(var(--white-monochrome));
+	}
+
+	.page-rate-widget-box .rateup a:hover {
+		-webkit-box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+		-moz-box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+		box-shadow: inset 100vw 0 0 0 rgba(0, 200, 0, 0.8) !important;
+	}
+
+	.page-rate-widget-box .rateup a:hover::before {
+		background-color: rgb(var(--white-monochrome));
+	}
+
+	.page-rate-widget-box .ratedown a:hover {
+		-webkit-box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+		-moz-box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+		box-shadow: inset 100vw 0 0 0 rgba(var(--dark-accent), 1) !important;
+	}
+
+	.page-rate-widget-box .ratedown a:hover::before {
+		background-color: rgb(var(--white-monochrome));
+	}
+
+	#content-wrap table {
+		font-size: 1rem;
+		line-height: 1.5;
+		border-spacing: 0;
+		margin: 1.25rem auto !important;
+		border-collapse: collapse !important;
+	}
+
+	#content-wrap table td,
+	#content-wrap table th,
+	#content-wrap td,
+	#content-wrap th {
+		border: 1px solid rgb(var(--gray-monochrome));
+		background-color: rgb(var(--white-monochrome));
+		font-weight: 400;
+		padding: .25rem 0.5rem !important;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		   -moz-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		grid-auto-flow: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		   -moz-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+
+	#content-wrap thead td,
+	#content-wrap thead th,
+	#content-wrap th {
+		background-color: rgb(var(--pale-gray-monochrome)) !important;
+		color: rgb(var(--dark-gray-monochrome));
+		font-weight: 700 !important;
+	}
+
+	#content-wrap table thead th,
+	#content-wrap thead th {
+		font-weight: 700;
+	}
+
+	#content-wrap table th,
+	#content-wrap th {
+		text-align: left;
+	}
+
+	table.form,
+	table.form > tbody,
+	table.form > tr,
+	table.form td,
+	table.form input {
+		display: -ms-grid;
+		display: grid;
+		-webkit-box-align: stretch;
+		-webkit-align-items: stretch;
+		   -moz-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+		-webkit-box-pack: stretch;
+		-webkit-justify-content: stretch;
+		   -moz-box-pack: stretch;
+		    -ms-flex-pack: stretch;
+		        justify-content: stretch;
+	}
+
+	table.form tr {
+		-webkit-box-align: stretch;
+		-webkit-align-items: stretch;
+		-moz-box-align: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+	}
+
+	.yui-navset .yui-nav,
+	.yui-navset .yui-navset-top .yui-nav {
+		--box-shadow: rgb(var(--dark-accent));
+		-webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 var(--box-shadow);
+		-moz-box-shadow: 0 -moz-calc(0.0625rem * 5) 0 0 var(--box-shadow);
+		box-shadow: 0 calc(0.0625rem * 5) 0 0 var(--box-shadow);
+		font-weight: 700;
+	}
+
+	.yui-navset .yui-nav li,
+	.yui-navset .yui-navset-top .yui-nav li {
+		--box-shadow: rgb(var(--dark-gray-monochrome));
+		-webkit-box-shadow: 0 0 0 .0625rem var(--box-shadow);
+		-moz-box-shadow: 0 0 0 .0625rem var(--box-shadow);
+		box-shadow: 0 0 0 .0625rem var(--box-shadow);
+		-webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		overflow: hidden;
+	}
+
+	.yui-navset .yui-nav .selected,
+	.yui-navset .yui-navset-top .yui-nav .selected {
+		background-color: rgb(var(--gray-monochrome));
+	}
+
+	.yui-navset .yui-nav .selected a,
+	.yui-navset .yui-nav .selected a em {
+		background-color: rgba(0, 0, 0, 0) !important;
+	}
+
+	.yui-navset .yui-nav *,
+	.yui-navset .yui-nav *:hover {
+		-webkit-transition:
+			color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+			background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition:
+			color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+			background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+		-moz-transition:
+			color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+			background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition:
+			color 100ms cubic-bezier(0.4, 0, 0.2, 1),
+			background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.yui-navset .yui-nav li:hover * {
+		color: rgb(var(--white-monochrome));
+	}
+
+	.yui-navset .yui-nav a:hover,
+	.yui-navset .yui-nav a:focus {
+		background-color: rgba(var(--dark-accent), 0.1);
+	}
+
+	.yui-navset .yui-nav a::before,
+	.yui-navset .yui-nav .selected a::before {
+		content: " ";
+		width: 125%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		background-color: rgb(var(--dark-accent), 1);
+		opacity: 1;
+		z-index: 0;
+		-webkit-clip-path: polygon(0.00% .00%, 100% 0, 90% 100%, 0 100%);
+		clip-path: polygon(0.00% .00%, 100% 0, 90% 100%, 0 100%);
+		-webkit-transform: translateX(-webkit-calc(-100% - 4rem));
+		-moz-transform: translateX(-moz-calc(-100% - 4rem));
+		-ms-transform: translateX(calc(-100% - 4rem));
+		-o-transform: translateX(calc(-100% - 4rem));
+		transform: translateX(calc(-100% - 4rem));
+		-webkit-transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition: -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		-moz-transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		-moz-transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -o-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		pointer-events: none
+	}
+
+	.yui-navset .yui-nav a:hover::before,
+	.yui-navset .yui-nav a:focus::before,
+	.yui-navset .yui-nav .selected a:hover::before {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0)
+	}
+	
+	.yui-navset .yui-content,
+	.yui-navset .yui-navset-top .yui-content {
+		padding: 0.5em 2em;
+	}
+
+	sup {
+		top: -0.3em;
+	}
+
+	.footnotes-footer,
+	.code {
+		background-image:
+			-webkit-gradient(linear, left top, right top, color-stop(2.35rem, transparent), color-stop(2.35rem, #abced4), color-stop(2.5rem, #abced4), color-stop(2.5rem, transparent)),
+			-webkit-gradient(linear, left top, left bottom, color-stop(.1rem, rgba(var(--light-gray-monochrome), 0.5)), color-stop(.1625rem, transparent));
+		background-image:
+			-webkit-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+			-webkit-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+		background-image:
+			-moz-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+			-moz-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+		background-image:
+			-o-linear-gradient(left, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+			-o-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+		background-image:
+			linear-gradient(90deg, transparent 2.35rem, #abced4 2.35rem, #abced4 2.5rem, transparent 2.5rem),
+			linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+		background-position: 1rem 0.75rem;
+		-webkit-background-size: 100% 1.8rem;
+		-moz-background-size: 100% 1.8rem;
+		-o-background-size: 100% 1.8rem;
+		background-size: 100% 1.8rem;
+		font-size: 0.9rem;
+		font-family: var(--mono-font);
+	}
+
+	.code pre {
+		white-space: pre;
+		white-space: normal;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.code > *,
+	.footnotes-footer > * {
+		padding: 0 0 0 3rem;
+		line-height: 2;
+		font-weight: 400;
+		letter-spacing: 0.05em;
+		outline: none;
+	}
+
+	.footnotes-footer div:not([id*="footnote-1"]) {
+		padding: 0 0 0 3rem;
+	}
+
+	.footnote-footer {
+		display: block;
+		position: relative;
+		width: 90%;
+		margin: 0;
+	}
+
+	.footnote-footer > a:nth-of-type(1) {
+		margin-left: 0;
+	}
+
+	.footnotes-footer .title {
+		margin: 0;
+		font-size: 1.5em;
+		font-weight: bold;
+		margin-bottom: -0.3em;
+		padding: 0.2em 0 0 3rem !important;
+	}
+
+	div.buttons.alignleft > input,
+	div#page-options-bottom > a,
+	div#page-options-bottom-2 > a {
+		-webkit-border-radius: 0rem;
+		-moz-border-radius: 0rem;
+		border-radius: 0rem;
+		background-color: rgba(var(--pale-gray-monochrome), 1);
+		border: .125rem solid rgba(var(--dark-gray-monochrome), 1);
+		color: rgb(var(--link-color)) !important;
+		-webkit-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), color 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+	}
+
+	div.buttons.alignleft > input:hover,
+	div.buttons.alignleft > input:active,
+	div#page-options-bottom > a:hover,
+	div#page-options-bottom > a:active,
+	div#page-options-bottom-2 > a:hover,
+	div#page-options-bottom-2 > a:active {
+		background-color: rgba(var(--dark-gray-monochrome), 1);
+		color: rgba(var(--swatch-menutxt-light-color), 1) !important;
+	}
+
+	.scp-image-block {
+		-moz-box-shadow: initial;
+		     box-shadow: initial;
+		-webkit-box-shadow: initial;
+	}
+
+	form#edit-page-form {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	#footer a {
+		color: rgb(var(--swatch-primary));
+	}
+
+	#footer {
+		color: rgba(var(--white-monochrome));
+		background: rgba(var(--dark-gray-monochrome));
+	}
+
+	@media only screen and (max-width: 768px) {
+		#header {
+			background-position: left .5rem top 2rem;
+			-webkit-background-size: auto 8.375rem;
+			-moz-background-size: auto 8.375rem;
+			-o-background-size: auto 8.375rem;
+			background-size: auto 8.375rem;
+			height: 12.25rem;
+			top: -12.25rem;
+		}
+
+		#header h1 a {
+			margin-left: 9rem;
+			margin-top: -4.5rem;
+		}
+
+		#header h1 a::before {
+			font-size: 6rem;
+		}
+
+		#header h2 {
+			width: -webkit-calc(100% - 9.5rem);
+			width: -moz-calc(100% - 9.5rem);
+			width: calc(100% - 9.5rem);
+			height: -webkit-calc(100% - 7.5rem);
+			height: -moz-calc(100% - 7.5rem);
+			height: calc(100% - 7.5rem);
+			margin-left: 9.35rem;
+			margin-top: 7.5rem;
+			text-align: left;
+		}
+
+		#header h2 span {
+			width: 6rem; /* 中文调整 */
+			height: 100%;
+			margin: 0;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: relative;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-moz-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-moz-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			font-size: -webkit-calc(var(--base-font-size) * 1);
+			font-size: -moz-calc(var(--base-font-size) * 1);
+			font-size: calc(var(--base-font-size) * 1);
+		}
+
+		#header h2 span::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 90%;
+			margin: 0;
+		}
+
+		#top-bar {
+			font-size: -webkit-calc(var(--base-font-size) * 0.8);
+			font-size: -moz-calc(var(--base-font-size) * 0.8);
+			font-size: calc(var(--base-font-size) * 0.8);
+			height: 2.5rem;
+			top: -12.25rem;
+		}
+
+		#top-bar > div.mobile-top-bar > div.open-menu {
+			font-size: -webkit-calc(var(--base-font-size) * 0.65);
+			font-size: -moz-calc(var(--base-font-size) * 0.65);
+			font-size: calc(var(--base-font-size) * 0.65);
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		#top-bar > div.mobile-top-bar > div.open-menu > p > a {
+			color: rgb(var(--swatch-menutxt-dark-color)) !important;
+		}
+
+		#top-bar div.mobile-top-bar > ul > li > a {
+			letter-spacing: 0;
+		}
+
+		#top-bar > div.top-bar > ul > li:last-of-type > ul,
+		#top-bar > div.mobile-top-bar > ul > li:last-of-type > ul {
+			left: 50%;
+		}
+
+		#top-bar div.mobile-top-bar > ul > li > ul {
+			margin-top: 2.5rem;
+		}
+
+		#login-status {
+			right: -webkit-calc(3% + 30px);
+			right: -moz-calc(3% + 30px);
+			right: calc(3% + 30px);
+		}
+
+		#search-top-box:not(:focus-within)::before {
+			top: 5.625rem;
+		}
+
+		#search-top-box,
+		#search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
+			height: 12.25rem;
+		}
+
+		#side-bar:target .close-menu {
+			width: -webkit-calc(100% - 15em - var(--scrollbar-width));
+			width: -moz-calc(100% - 15em - var(--scrollbar-width));
+			width: calc(100% - 15em - var(--scrollbar-width));
+		}
+
+		.footnotes-footer,
+		.code {
+			background-image:
+				-webkit-gradient(linear, left top, right top, color-stop(1.35rem, transparent), color-stop(1.35rem, #abced4), color-stop(1.5rem, #abced4), color-stop(1.5rem, transparent)),
+				-webkit-gradient(linear, left top, left bottom, color-stop(.1rem, rgba(var(--light-gray-monochrome), 0.5)), color-stop(.1625rem, transparent));
+			background-image:
+				-webkit-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+				-webkit-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+			background-image:
+				-moz-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+				-moz-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+			background-image:
+				-o-linear-gradient(left, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+				-o-linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+			background-image:
+				linear-gradient(90deg, transparent 1.35rem, #abced4 1.35rem, #abced4 1.5rem, transparent 1.5rem),
+				linear-gradient(rgba(var(--light-gray-monochrome), 0.5) .1rem, transparent .1625rem);
+			background-position: 1rem 0.45rem;
+			-webkit-background-size: 100% 1.25rem;
+			   -moz-background-size: 100% 1.25rem;
+			     -o-background-size: 100% 1.25rem;
+			        background-size: 100% 1.25rem;
+			font-size: 0.7rem;
+			font-family: var(--mono-font);
+
+		}
+
+		.code > *,
+		.footnotes-footer > * {
+			line-height: 1.75;
+			padding-left: 2.5rem;
+		}
+
+		.footnotes-footer .title {
+			padding-left: 2.5rem !important;
+			;
+		}
+
+		.footnotes-footer div:not([id*="footnote-1"]) {
+			padding: 0 0 0 2.5rem;
+		}
+
+		#content-wrap h1,
+		#content-wrap #page-title {
+			font-size: 1.9rem;
+		}
+
+		#content-wrap h2 {
+			font-size: 1.5rem;
+		}
+
+		#content-wrap h3 {
+			font-size: 1.1rem;
+		}
+
+		#content-wrap h4 {
+			font-size: 0.9rem;
+		}
+
+		#content-wrap h5 {
+			font-size: .8rem;
+		}
+
+	}
 }
-</style>
-<style>
-.meta-title {
-  border-bottom: solid 1px #bbbbbb;
-  color: #990011;
-  font-weight: normal;
-  margin: 0 0 0.6em;
-  padding: 0 0 0.25em;
-  font-size: 200%;
-}
-.meta-title p {
-  margin: 0;
-}
-</style>
-<style>
-.earthworm {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    margin: 1em 0;
-    clear: both;
-    z-index: 0;
-    min-height: 36px;
-}
-.earthworm > div {
-    display: flex;
-    align-items: center;
-}
-.earthworm p {
-    margin: 0 0.8em;
-    text-align: center;
-    position: relative;
-    z-index: 5;
-}
-.earthworm .first {
-    border-top: 2px rgba(150,150,150,0.5) solid;
-    border-bottom: 2px rgba(150,150,150,0.5) solid;
-    position: relative;
-}
-.earthworm .first:not(.true) img {
-    height: 100%;
-    width: auto;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -1.5px;
-    border: 2.8px rgba(150,150,150,0.5) solid;
-    transform: scale(0.707) rotate(-45deg);
-    border-width: 2.8px 0 0 2.8px;
-    transform-origin: 0% 100%;
-}
-.earthworm .hub {
-    margin: -3px 0;
-    border: 3px rgba(150,150,150,0.5) solid;
-    background: linear-gradient(10deg, rgba(150,150,150,0.1), rgba(150,150,150,0));
-    position: relative;
-    z-index: 5;
-}
-.earthworm .hub.no a, .earthworm a[href="/"], .earthworm a[href="http://scp-wiki-cn.wikidot.com"] {
-    color: #333;
-    text-decoration: none;
-    cursor: text;
-    pointer-events: none;
-}
-.earthworm .last {
-    border-top: 2px rgba(150,150,150,0.5) solid;
-    border-bottom: 2px rgba(150,150,150,0.5) solid;
-    position: relative;
-}
-.earthworm .last:not(.true) img {
-    height: 100%;
-    width: auto;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -1.5px;
-    border: 2.8px rgba(150,150,150,0.5) solid;
-    transform: scale(0.707) rotate(45deg);
-    border-width: 2.8px 2.8px 0 0;
-    transform-origin: 100% 100%;
-}
-.earthworm div.true {
-    width: 0;
-}
-.earthworm div.true p {
-    display: none;
-}
-.earthworm a {
-    word-break: normal;
-}
-</style>
-<script src="https://s.nitropay.com/ads-143.js"></script>
-<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
-</head>
-<body id="html-body">
-<div id="skrollr-body">
-<a name="page-top"></a>
-
-
-
-
-
-<div id="container-wrap-wrap">
-    <div id="container-wrap">
-        <div id="container">
-            <div id="header">
-              <h1><a href="/"><span>SCP基金会</span></a></h1>
-                
-                    <h2><span>控制，收容，保护</span></h2>
-                
-                
-                <!-- google_ad_section_start(weight=ignore) -->
-                
-                <div id="search-top-box" class="form-search">
-    <form id="search-top-box-form" action="dummy" class="input-append">
-        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
-    </form>
-</div>
-                
-                
-                    <div id="top-bar">
-                        
-
-<div class="top-bar">
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>SCP-CN系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-</ul>
-</li>
-<li>SCP国际
-<ul>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-<li><a href="http://scp-int.wikidot.com/">SCP国际翻译站</a></li>
-<li><a href="http://scpfoundation.net/">Russian Branch(-RU)</a></li>
-<li><a href="http://ko.scp-wiki.net/">SCP 재단(-KO)</a></li>
-<li><a href="http://fondationscp.wikidot.com/">Fondation SCP(-FR)</a></li>
-<li><a href="http://scp-wiki.net.pl/">Fundacja SCP(-PL)</a></li>
-<li><a href="http://scp-es.com/">La Fundación SCP(-ES)</a></li>
-<li><a href="http://scp-th.wikidot.com/">สถาบัน SCP(-TH)</a></li>
-<li><a href="http://ja.scp-wiki.net/">SCP財団(-JP)</a></li>
-<li><a href="http://scp-wiki-de.wikidot.com/">SCP auf Deutsch(-DE)</a></li>
-<li><a href="http://fondazionescp.wikidot.com/">Fondazione SCP(-IT)</a></li>
-<li><a href="http://scp-ukrainian.wikidot.com/">Ukrainian Branch(-UA)</a></li>
-<li><a href="http://scp-pt-br.wikidot.com/">Fundação SCP(-PT/BR)</a></li>
-<li><a href="http://scp-cs.wikidot.com/">SCP Nadace(-CZ)</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="mobile-top-bar">
-<div class="open-menu">
-<p><a href="#side-bar">≡</a></p>
-</div>
-<ul>
-<li>SCP系列
-<ul>
-<li><a href="/scp-series-cn-2">CN系列 II (CN-1000 - CN-1999)</a></li>
-<li><a href="/scp-series-cn">CN系列 I (CN-001 - CN-999)</a></li>
-<li><a href="/joke-scps-cn">搞笑SCP-CN</a></li>
-<li><a href="/scp-ex-cn">已解明SCP-CN</a></li>
-<li><a href="/scp-series-6">系列 VI (5000 - 5999)</a></li>
-<li><a href="/scp-series-5">系列 V (4000 - 4999)</a></li>
-<li><a href="/scp-series-5-tales-edition">» 系列 V 故事</a></li>
-<li><a href="/scp-series-4">系列 IV (3000 - 3999)</a></li>
-<li><a href="/scp-series-4-tales-edition">» 系列 IV 故事</a></li>
-<li><a href="/scp-series-3">系列 III (2000 - 2999)</a></li>
-<li><a href="/scp-series-3-tales-edition">» 系列 III 故事</a></li>
-<li><a href="/scp-series-2">系列 II (1000 - 1999)</a></li>
-<li><a href="/scp-series-2-tales-edition">» 系列 II 故事</a></li>
-<li><a href="/scp-series">系列 I (001 - 999)</a></li>
-<li><a href="/scp-series-1-tales-edition">» 系列 I 故事</a></li>
-<li><a href="/joke-scps">搞笑SCP</a></li>
-<li><a href="/joke-scps-tales-edition">» 搞笑SCP故事</a></li>
-<li><a href="/scp-ex">已解明SCP</a></li>
-<li><a href="/explained-scps-tales-edition">» 已解明SCP故事</a></li>
-<li><a href="/scp-international">SCP国际翻译中心</a></li>
-</ul>
-</li>
-<li>故事
-<ul>
-<li><a href="/foundation-tales">基金会故事</a></li>
-<li><a href="/canon-hub">设定</a></li>
-<li><a href="/series-archive">故事系列</a></li>
-<li><a href="/incident-reports-eye-witness-interviews-and-personal-logs">事故报告</a></li>
-<li><a href="/creepy-pasta">Creepy-Pasta 归档</a></li>
-<li><a href="/foundation-tales-cn">原创基金会故事</a></li>
-<li><a href="/short-stories">原创短篇故事合集</a></li>
-<li><a href="/canon-hub-cn">原创设定</a></li>
-<li><a href="/series-archive-cn">原创故事系列</a></li>
-</ul>
-</li>
-<li>图书馆
-<ul>
-<li><a href="/user-curated-lists">用户推荐清单</a></li>
-<li><a href="/log-of-anomalous-items">异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events">超常现象记录</a></li>
-<li><a href="/log-of-unexplained-locations">未解明地点记录</a></li>
-<li><a href="/goi-formats">GoI格式</a></li>
-<li><a href="/audio-adaptations">音频记录</a></li>
-<li><a href="/scp-artwork-hub">艺术作品</a></li>
-<li><a href="/contest-archive">征文竞赛</a></li>
-<li><a href="/log-of-anomalous-items-cn">原创异常物品记录</a></li>
-<li><a href="/log-of-extranormal-events-cn">原创超常现象记录</a></li>
-<li><a href="/contest-archive-cn">中文分部征文竞赛</a></li>
-<li><a href="/wanderers:start">被放逐者之图书馆</a></li>
-<li><a href="/wanderers:the-library-cn">原创图书馆中心</a></li>
-</ul>
-</li>
-<li>背景资料
-<ul>
-<li><a href="/about-the-scp-foundation">关于基金会</a></li>
-<li><a href="/groups-of-interest">相关组织</a></li>
-<li><a href="/object-classes">项目等级</a></li>
-<li><a href="/personnel-and-character-dossier">职员档案</a></li>
-<li><a href="/security-clearance-levels">安保许可等级</a></li>
-<li><a href="/secure-facilities-locations">安保设施</a></li>
-<li><a href="/task-forces">机动特遣队</a></li>
-<li><a href="/groups-of-interest-cn">中国相关组织</a></li>
-<li><a href="/secure-facilities-locations-cn">中国分部设施</a></li>
-<li><a href="/task-forces-cn">中国分部机动特遣队</a></li>
-</ul>
-</li>
-<li>指导
-<ul>
-<li><a href="/guide-hub">指导中心</a></li>
-<li><a href="/guide-for-newbies">新手指南</a></li>
-<li><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></li>
-<li><a href="/image-use-policy">图像使用守则</a></li>
-<li><a href="/licensing-guide">授权指南</a></li>
-<li><a href="/tag-guide">标签指导</a></li>
-<li><a href="/tag-search">标签搜索</a></li>
-<li><a href="/translation-movement-guide">翻译发布及搬运指南</a></li>
-<li><a href="/translation-rules">翻译与校对守则</a></li>
-<li><a href="/faq">常见问题解答</a></li>
-<li><a href="/site-rules">网站站规</a></li>
-<li><a href="/deletions-guide">删帖指导</a></li>
-<li><a href="/criticism-policy">批评守则</a></li>
-<li><a href="/links">链接</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-                    </div>
-                
-                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
-                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
-            </div>
-            
-            <div id="content-wrap">
-                
-                    <div id="side-bar">
-                        
-
-
-                        
-
-<div class="side-block" style="background-color: #f0fff6;">
-<div class="heading">
-<p>新人资讯</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-for-newbies">新手指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/site-rules">网站站规</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/system:join">加入网站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/how-to-write-an-scp">如何撰写一篇SCP文档</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scpsandboxcn.wikidot.com/">SCP中文沙盒站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/faq">常见问题解答</a></div>
-</div>
-<div class="side-block">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/home.png" alt="home.png" class="image" /><a href="/">主页</a></div>
-<div class="heading">
-<p>SCP-CN系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-cn">I</a> | <a href="/scp-series-cn-2">II</a></div>
-<div class="heading">
-<p>SCP系列</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series">I</a> | <a href="/scp-series-2">II</a> | <a href="/scp-series-3">III</a> | <a href="/scp-series-4">IV</a> | <a href="/scp-series-5">V</a> | <a href="/scp-series-6">VI</a></div>
-<div class="heading">
-<p>SCP系列故事</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /> <a href="/scp-series-1-tales-edition">I</a> | <a href="/scp-series-2-tales-edition">II</a> | <a href="/scp-series-3-tales-edition">III</a> | <a href="/scp-series-4-tales-edition">IV</a> | <a href="/scp-series-5-tales-edition">V</a></div>
-<div class="heading">
-<p>SCP图书馆</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/foundation-tales">故事</a> | <a href="/foundation-tales-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/canon-hub">设定</a> | <a href="/canon-hub-cn">原创设定</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/goi-formats">GoI格式</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/scp-international">SCP国际翻译中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/series.png" alt="series.png" class="image" /><a href="/wanderers:start">被放逐者之图书馆</a> | <a href="/wanderers:the-library-cn">原创中心</a></div>
-<div class="heading">
-<p>网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/most-recently-created">最近新增的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp">随机SCP</a> | <a href="/random:random-tale">故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/random:random-scp-cn">随机原创SCP</a> | <a href="/random:random-tale-cn">原创故事</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:recent-changes">最近的更新</a> | <a href="/most-recently-edited">修改的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/top-rated-pages">最高评分的页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/lowest-rated-pages">最低评分的页面</a></div>
-<div class="heading">
-<p>社交</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/forum.png" alt="forum.png" class="image" /><a href="/forum:start">讨论区</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/forum:recent-threads">最近讨论串</a> | <a href="/forum:recent-posts">帖子</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/criticism-policy">批评守则</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/members-pages">作者页</a> | <a href="/members-pages-cn">中文分部作者页</a></div>
-<div class="heading">
-<p>相关网站</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-tech-cn.wikidot.com/" target="_blank">SCP技术部门</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="http://scp-int.wikidot.com/" target="_blank">SCP国际翻译站</a></div>
-</div>
-<div class="side-block resources" style="background-color: #e7e5e8;">
-<div class="heading">
-<p>写作指导</p>
-</div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/guide-hub">指导中心</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/tag-guide">标签指导</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/tag-search">标签搜索</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/translation-movement-guide">翻译发布及搬运指南</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/help.png" alt="help.png" class="image" /><a href="/wiki-syntax">维基语法</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/syntax-quick-reference">语法速查</a></div>
-</div>
-<div class="side-block" style="background-color: #fff0f0;">
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">管理专用</a></div>
-<div class="collapsible-block-content">
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="/_admin">后台管理</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/main.png" alt="main.png" class="image" /><a href="http://05command-cn.wikidot.com/" target="_blank">职员专站</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:list-all-categories">所有页面</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/system:members">会员一览</a></div>
-<div class="menu-item"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/default.png" alt="default.png" class="image" /><a href="/nav:side">侧栏</a> | <a href="/nav:top">顶栏</a> | <a href="/component:theme">版式</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="side-block media" style="background-color: #e5e5ff;">
-<div class="heading">
-<p>相关媒体</p>
-</div>
-<div class="menu-item">
-<div style="text-align: center;"><a href="https://space.bilibili.com/872507" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/Bilibili_icon.png" style="width:30px; height:30px;" alt="Bilibili_icon.png" class="image" /></a></div>
-</div>
-</div>
-<div class="side-block" style="background-color: #f0f0f0;">
-<div style="text-align: center;"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank"><img src="http://scp-wiki-cn.wikidot.com/local--files/nav:side/cc-by-sa.svg" style="margin-bottom: 10px;" alt="cc-by-sa.svg" class="image" /></a><br />
-<span style="font-size:80%;">© SCP基金会<br />
-<a href="/licensing-guide">授权指南</a></span></div>
-</div>
-<div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=chicago-factory" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
-</div>
-    
-    
-    
-    </div></div>
-<div style="clear:both; height: 0px; font-size: 1px"></div>
-<a class="close-menu" href="###"><br />
-<img src="http://scp-wiki.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
-                        
-
-
-                    </div>
-                
-                
-                <!-- google_ad_section_end -->
-                
-                <div id="main-content">
-                    <div id="action-area-top"></div>
-                    
-                    
-                        <div id="page-title">
-                            Carroll 280号/R-01221
-                        </div>
-                    
-
-                    
-
-                    
-
-
-
-                    <div id="page-content">
-                        
-
-
-
-<div class="list-pages-box">    <div class="list-pages-item">
-
-
-
-
-
-<div class="meta-title">
-<div style="text-align: center;">
-<h2><span><strong><tt>芝加哥鬼灵的再订购（R-01221）</tt></strong></span></h2>
-</div>
-</div>
-<table style="border-collapse:collapse; width:100%; font-family:Monospace;font-size: 10pt;">
-<tr>
-<th style="border: 1px solid black; padding: 0 1%; background-color: silver;" rowspan="50"></th>
-<th style="border: 1px solid black; background-color: silver;">事件名称：</th>
-<td style="border: 1px solid black;" rowspan="10">
-<div style="text-align: center;">
-<p><span style="font-size:xx-large;"><tt>FACTORY</tt></span><br />
-<tt>(EST. 1835)</tt></p>
-</div>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">Richard Chappell对再订购货物的投诉</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;">事件编号：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">R-01221</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;">重要程度：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">中</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;">地点：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">“猪窝”设施，<br />
-伊利诺伊州，芝加哥市<sup class="footnoteref"><a id="footnoteref-880916-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-1')">1</a></sup></td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;">日期：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%"><span style="font-size:30%;"><span style="color: transparent">.</span></span><br />
-1927年10月8日</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">主要参与者：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<ul>
-<li>芝加哥鬼灵组织领导人，Richard Chappell</li>
-<li>芝加哥鬼灵组织执行者，Julius McGallan</li>
-<li>芝加哥鬼灵组织货运司机，Donald Smith</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">工厂方主要参与者：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<ul>
-<li>总领班 Kowalewicz<sup class="footnoteref"><a id="footnoteref-880916-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-2')">2</a></sup></li>
-</ul>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">其他工厂方参与者：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<ul>
-<li>秘书 Adriana Ramirez<sup class="footnoteref"><a id="footnoteref-880916-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-3')">3</a></sup></li>
-</ul>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">相关前提：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">芝加哥鬼灵创始人Richard Chappell与工厂管理部门进行了接触，要求安排一场与<a href="http://scp-wiki-cn.wikidot.com/chicago-factory/offset/0">产品03265972</a>的首席领班，总领班Kowalewicz的会议。</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">描述：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<p>1932年3月3日中午，领班Kowalewicz对Chappell致以了热忱的问候。在Chappell阐述其不满后，领班Kowalewicz向其询问了其使用产品03265972的方式。为向Chappell展示产品03265972的副产品是如何被使用的，其被给予了一次前往IL-9128657-NEM进行<em>无偿</em>参观的机会。</p>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">开端：</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<p>在使用产品03265972处理了某次芝加哥鬼灵组织行动的相关物品后<sup class="footnoteref"><a id="footnoteref-880916-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-4')">4</a></sup>，Chappell表示输出物无法使其满意。<sup class="footnoteref"><a id="footnoteref-880916-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-5')">5</a></sup>因此Chappell要与Julius McGallan一同和领班Kowalewicz当面对质。<sup class="footnoteref"><a id="footnoteref-880916-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-6')">6</a></sup><sup class="footnoteref"><a id="footnoteref-880916-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-7')">7</a></sup></p>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">事件顺序</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%"><strong>人员行动</strong></td>
-<td style="border: 1px solid black; padding: 0 1%"><strong>工厂应对</strong></td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Chappell与McGallan抵达了IL-9128657-NEM。</p>
-</td>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Adriana Ramirez迎接了两位外来人员。</p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Chappell要求面见负责领班。</p>
-</td>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Ramirez告知了位于车间层的Kowalewicz关于Chappell先生与McGallan先生要求和他会面的消息。<sup class="footnoteref"><a id="footnoteref-880916-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-8')">8</a></sup> 数分钟后，领班Kowalewicz出现在两位客户面前。</p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Chappell与McGallan向其诘问输送产物腐坏的原因。</p>
-</td>
-<td style="border: 1px solid black; padding: 0 1%"></td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%"></td>
-<td style="border: 1px solid black; padding: 0 1%">领班Kowalewicz对此情况表示遗憾，他邀请两人参观车间层。<sup class="footnoteref"><a id="footnoteref-880916-9" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-9')">9</a></sup><sup class="footnoteref"><a id="footnoteref-880916-10" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-10')">10</a></sup> Chappell接受了邀请，McGallan不情愿地同意陪同。</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">在领班Kowalewicz的陪同下，Chappell与McGallan进入了车间层。Chappell指出，他们发现劳工中的数名人员是通过使用产品03265972招募至此的。<sup class="footnoteref"><a id="footnoteref-880916-11" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-11')">11</a></sup><sup class="footnoteref"><a id="footnoteref-880916-12" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-12')">12</a></sup> 他们询问了关于前述芝加哥鬼灵组织行动中，被处理但未出现在此的数名个体的情况。</td>
-<td style="border: 1px solid black; padding: 0 1%">为方便参观，领班Kowalewicz指示所有机器停工五分钟，他招呼Chappell与McGallan前来观察一个金属整形机。</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>McGallan首先向前，检查机器是否可让Chappell安全观察。在目睹内部运作方式后，他立刻吓得连连后退，Chappell走上前，发现内容令他大为赞叹。<sup class="footnoteref"><a id="footnoteref-880916-13" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-13')">13</a></sup><sup class="footnoteref"><a id="footnoteref-880916-14" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-14')">14</a></sup></p>
-</td>
-<td style="border: 1px solid black; padding: 0 1%">总领班Kowalewicz对产品03265972的酒品转化机制进行了大致的讲解。<sup class="footnoteref"><a id="footnoteref-880916-15" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-15')">15</a></sup></td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%"></td>
-<td style="border: 1px solid black; padding: 0 1%">总领班Kowalewicz继续着他的讲解。<sup class="footnoteref"><a id="footnoteref-880916-16" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-16')">16</a></sup></td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">Chappell对产品运行故障的原因表示理解，并对总领班Kowalewicz付出的时间表示感谢。<sup class="footnoteref"><a id="footnoteref-880916-17" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-17')">17</a></sup></td>
-<td style="border: 1px solid black; padding: 0 1%">总领班Kowalewicz陪同两位非工厂人员离开了建筑。McGallan因身体不适走在最前。</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">离开建筑后，Chappell、McGallan与Kowalewicz遇到了芝加哥鬼灵组织的货运司机，Donald Smith，他正将数个空置的产品03265972装载上车。</td>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>为表善意，Kowalewicz决定<em>无偿</em>提供额外半栈板产品装载上车。</p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">Donald Smith，由于无法接受工厂总领班的外貌，抛弃了正在装载的产品，返回车内，未对载货进行固定就驾车离开，导致了产品的损坏。</td>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>Kowalewicz为没有变化成更为大众接受的形态道歉，他请求两位非工厂人员等待下次运输，届时再行装载运送。</p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%">Chappell向领班Kowalewicz伸出手，表示了对继续业务的兴趣。<sup class="footnoteref"><a id="footnoteref-880916-18" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-18')">18</a></sup></td>
-<td style="border: 1px solid black; padding: 0 1%">
-<p>领班Kowalewicz与Chappell握手，他对Chappell的处事手段表示赞赏。<sup class="footnoteref"><a id="footnoteref-880916-19" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-880916-19')">19</a></sup></p>
-</td>
-</tr>
-<tr>
-<th style="border: 1px solid black; background-color: silver;" colspan="2">结果/后续</th>
-</tr>
-<tr>
-<td style="border: 1px solid black; padding: 0 1%" colspan="2">
-<p>事件和平解决。来自芝加哥鬼灵的产品03265972订单有所增加。然而，在总领班Kowalewicz的指示下，由产品03265972作为副产品生产的假体替代物，其数量遭到了大幅度削减。建议寻找获取有机物部件的新途径，例如“屠宰场”IL-249。</p>
-</td>
-</tr>
-</table>
-<hr />
-<div class="footnotes-footer">
-<div class="title">脚注</div>
-<div class="footnote-footer" id="footnote-880916-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-1')">1</a>. 地点编号：IL-9128657-NEM</div>
-<div class="footnote-footer" id="footnote-880916-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-2')">2</a>. <span style="font-family: Monospace; font-size: 10pt;">领班编号：INV64425516</span></div>
-<div class="footnote-footer" id="footnote-880916-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-3')">3</a>. 劳工编号：SEA657562698</div>
-<div class="footnote-footer" id="footnote-880916-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-4')">4</a>. 见事件IL-020332-CHSP的文件</div>
-<div class="footnote-footer" id="footnote-880916-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-5')">5</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：我得到了二十桶酒，不仅看起来、尝起来，甚至<em>听起来</em>，都像是意识到自己要被他妈的Herman Fuller带走的大象吓出来的屎。我们得到的承诺是他妈的高质量产品，结果订购的二十五桶里有二十桶是废物。说是‘无法接受’都已经客气过头了。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-6')">6</a>.
-<blockquote>
-<p>芝加哥鬼灵组织执行者，Julius McGallan：我们理解阁下时间有限，但阁下知道二十桶酒值多少绿票子吗？足够买通大半个立法机构，而且我<em>清楚</em>他们已经开始调查你们这样的厂子了。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-7')">7</a>. Julius McGallan的陈述被认定为威胁。未知此时是否应当采取行动。</div>
-<div class="footnote-footer" id="footnote-880916-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-8')">8</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：我没告诉过你我的名字。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-9"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-9')">9</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：等下，你在耍我吗？我来这里是要你修好你那破玩意，不是来观光的。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-10"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-10')">10</a>.
-<blockquote>
-<p>总领班Kowalewicz：我向您保证，Chappell先生，只要稍作参观，您就会明白废品产生的原因。希望您能保持几分钟耐心。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-11"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-11')">11</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：看那边。这不是库克县的警长吗。你以前过的不是很舒坦吗，是不是，你个老东西？</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-12"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-12')">12</a>.
-<blockquote>
-<p>芝加哥鬼灵组织执行者，Julius McGallan：天杀的，真是倒胃口。那么既然他在这里，我猜枪战时的那几个小子是不是也都在这边干活？</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-13"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-13')">13</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：我们放进去的死人原来是这样处理的吗？我都没想到人类的骨头有这么硬。你建立的生产体系着实令我印象深刻，Kowalewicz。我很欣赏你的效率。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-14"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-14')">14</a>. 此时Julius McGallan拒绝作出评价。</div>
-<div class="footnote-footer" id="footnote-880916-15"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-15')">15</a>.
-<blockquote>
-<p>总领班Kowalewicz：传输的酒品质量取决于放入产品进行交换的货物是死是活。活个体将转化为酒品，具体结果大致取决于世界上哪些地区正处于黑夜。随后，他们就会成为我们劳工中的一员。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-16"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-16')">16</a>.
-<blockquote>
-<p>总领班Kowalewicz：然而，在送达时已经死亡的个体没法在车间派上用场。但我向您保证，我们并不会白白浪费他们，我们找到了其他方式来让他们为我们的机器工作。不幸的是，输送的酒品最终会因缺乏活组织导致质量下降。对此，我要向您致以诚挚的歉意，Chappell先生。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-17"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-17')">17</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：反正留他们一条命也给我们省了子弹。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-18"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-18')">18</a>.
-<blockquote>
-<p>芝加哥鬼灵组织领导人，Richard Chappell：要是吸够了这些天杀的烟雾就和我讲一声。头脑和肌肉是致命的组合，你马上就会成为我的头号部下。</p>
-</blockquote>
-</div>
-<div class="footnote-footer" id="footnote-880916-19"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-880916-19')">19</a>.
-<blockquote>
-<p>总领班Kowalewicz：我很荣幸，Chappell先生，但不得不说您在追求效率上的冷酷无情与老谋深算更是让我刮目相看。您若来我厂担任领班想必会相当称职。</p>
-</blockquote>
-</div>
-</div>
-</div>
-    
-    
-    
-    </div>
-<div class="earthworm">
-<div class="first true">
-<div class="inner"><img src="http://scp-wiki.wdfiles.com/local--files/component%3Aearthworm/Transparent.gif" alt="Transparent.gif" class="image" />
-<div class="arrow"></div>
-</div>
-<p><a href="/">/</a></p>
-</div>
-<div class="hub yes">
-<p><a href="/collaboration-contest">合著竞赛</a></p>
-</div>
-<div class="last false">
-<div class="inner"><img src="http://scp-wiki.wdfiles.com/local--files/component%3Aearthworm/Transparent.gif" alt="Transparent.gif" class="image" />
-<div class="arrow"></div>
-</div>
-<p><a href="/scp-4256">SCP-4256</a></p>
-</div>
-</div>
-
-
-
-                    </div>
-
-                            
-            <!-- wikidot_bottom_300x250 -->
-<div id="wad-scp-wiki-cn-below-content" class="wd-adunit wd-ad-np wd-adunit-below_content"></div>
-<script type='text/javascript'>
-nads.createAd('wad-scp-wiki-cn-below-content', {
-  "refreshLimit": 10,
-  "refreshTime": 83,
-  "sizes": [ [ 300, 250 ] ],
-  "report": {
-    "enabled": true,
-    "wording": "Report Ad",
-    "position": "bottom-right"
-  }
-  });
-</script>
-        
-    
-
-                    
-
-
-
-                    
-                        <div class="page-tags">
-                            <span>
-                                <a href="/system:page-tags/tag/2019%E5%90%88%E8%91%97%E7%AB%9E%E8%B5%9B#pages">2019合著竞赛</a><a href="/system:page-tags/tag/goi%E6%A0%BC%E5%BC%8F#pages">goi格式</a><a href="/system:page-tags/tag/%E5%90%88%E8%91%97#pages">合著</a><a href="/system:page-tags/tag/%E5%B7%A5%E5%8E%82#pages">工厂</a><a href="/system:page-tags/tag/_%E5%B7%A5%E5%8E%82#pages">_工厂</a><a href="/system:page-tags/tag/%E8%8A%9D%E5%8A%A0%E5%93%A5%E9%AC%BC%E7%81%B5#pages">芝加哥鬼灵</a><a href="/system:page-tags/tag/_%E8%8A%9D%E5%8A%A0%E5%93%A5%E9%AC%BC%E7%81%B5#pages">_芝加哥鬼灵</a>
-                            </span>
-                        </div>
-                    
-
-                    <div id="page-info-break"></div>
-                    
-                        <div id="page-options-container">
-                            <div id="page-info">页面版本: 9, 最后编辑于: <span class="odate time_1581685498 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">14 Feb 2020 13:04</span></div>
-            <div id="page-options-bottom"  class="page-options-bottom">
-            <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+1</span>)</a>
-<a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-12272737/chicago-factory" class="btn btn-default" id="discuss-button">讨论 (2)</a>
-<a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
-<a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
-<a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
-<a href="javascript:;" class="btn btn-default" id="site-tools-button">网站工具</a>
-<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;选项</a> 
-</div>
-<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
-    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">编辑段落</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-append-button">附加</a>
-    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">编辑元信息</a>
-    <a href="javascript:;" class="btn btn-default" id="watchers-button">关注者</a> 
-    <a href="javascript:;" class="btn btn-default" id="backlinks-button">反向链接</a> 
-    <a href="javascript:;" class="btn btn-default" id="view-source-button">页面源代码</a> 
-    <a href="javascript:;" class="btn btn-default" id="parent-page-button">父页面</a> 
-    <a href="javascript:;" class="btn btn-default" id="page-block-button">锁定页面</a>    
-    <a href="javascript:;" class="btn btn-default" id="rename-move-button">重新命名</a> 
-    <a href="javascript:;" class="btn btn-default" id="delete-button">删除</a> 
-</div>
-<div id="page-options-area-bottom">
-</div>
-
-                        </div>
-                    
-                    <div id="action-area" style="display: none;"></div>
-                </div>
-            </div>
-            
-            
-            
-            <div id="footer" style="display: block; visibility: visible;">
-                <div class="options" style="display: block; visibility: visible;">
-    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
-    &nbsp;|
-    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
-    &nbsp;|
-    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
-    &nbsp;|
-    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
-</div>
-基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
-            </div>
-            
-                <div id="license-area" class="license-area">
-                    除非特别注明，本页内容采用以下授权方式： <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
-                </div>
-            
-            
-            
-
-
-
-            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
-            
-            
-            
-            
-                <div id="footer-bar">
-  <div>
-     </div>
-  <h2>其它有趣的网站</h2>
-  
-  <div class="units">
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://ci-wiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ci-wiki.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://ci-wiki.wikidot.com">Chaos Insurgency</a></h3>
-            <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://scp-wiki-de.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-wiki-de.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://scp-wiki-de.wikidot.com">SCP Foundation</a></h3>
-            <div class="desc">          
-              auf Deutsch
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://witchipedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/witchipedia.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://witchipedia.wikidot.com">Witchipedia</a></h3>
-            <div class="desc">          
-              The online encyclopedia of magick, folklore and the occult
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://scp-mc-sandbox-pro.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-mc-sandbox-pro.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://scp-mc-sandbox-pro.wikidot.com">SCP基金会Minecraft分部沙盒</a></h3>
-            <div class="desc">          
-              宇宙之上，基岩之下
-            </div>
-          </div>
-        </div>
-        </div>
-  </div>
-
-            
-        </div>
-        
-    </div>
-<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
-<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
-<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
-</div>
-
-
-
-
-</div>
-<div id="dummy-ondomready-block" style="display: none;" ></div>
-    <!-- Google Analytics load -->
-    <script type="text/javascript">
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <!-- Quantcast -->
-    <script type="text/javascript">
-    _qoptions={
-        qacct:"p-edL3gsnUjJzw-"
-    };
-    (function() {
-        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
-        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
-    })();
-    </script>
-    <noscript>
-        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
-    </noscript>
-
-
-
-
-<div id="page-options-bottom-tips" style="display: none;">
-    <div id="edit-button-hovertip">
-        请点此编辑本页内容。    </div>
-</div>
-<div id="page-options-bottom-2-tips"  style="display: none;">
-    <div id="edit-sections-button-hovertip">
-        单击此处切换页面各部分的编辑按钮（如果有可能）。 在标题边会显示“编辑”链接。    </div>
-    <div id="edit-append-button-hovertip">
-        在不编辑整个页面源代码的情况下添加内容。    </div>
-    <div id="history-button-hovertip">
-        看看本页过去是如何沿革的。    </div>
-    <div id="discuss-button-hovertip">
-        若您想要讨论本页内容 - 这是最简单的方法。    </div>
-    <div id="files-button-hovertip">
-        检视并管理本页附件。    </div>
-    <div id="site-tools-button-hovertip">
-        管理网站的实用工具。    </div>
-    <div id="backlinks-button-hovertip">
-        检视链接至本页或引用本页的页面。    </div>
-    <div id="rename-move-button-hovertip">
-        变更页面名称（及URL 位址，或许会影响分类）。    </div>
-    <div id="view-source-button-hovertip">
-        在不编辑的情形下检视维基原始码。    </div>
-    <div id="parent-page-button-hovertip">  
-        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
-            <div id="abuse-report-button-hovertip">
-            向管理员举报本页有令人反感的内容。        </div>
-        <div id="bug-report-button-hovertip">
-            事情不如预期？看看您可以做些什么。        </div>
-        <div id="wikidot-help-button-hovertip">
-            一般的 Wikidot.com 文件与说明。        </div>
-        <div id="wikidot-tos-button-hovertip">
-            Wikidot.com 服务条款- 您可以做的事，您不该做的事之类的。        </div>
-        <div id="wikidot-privacy-button-hovertip">
-            Wikidot.com 隐私政策。          
-        </div>
-    </div>
-</body>
-</html>

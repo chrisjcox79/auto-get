@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>最近新增的原创页面 - SCP基金会</title>
+    <title>自动化无源记忆删除系统 Ver.17.09 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "most-recently-created-cn";
-        OZONE.request.timestamp = 1610162036;
+        WIKIREQUEST.info.requestPageName = "apas";
+        OZONE.request.timestamp = 1610182437;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "most-recently-created-cn";
-        WIKIREQUEST.info.pageId = 54699683;
+                WIKIREQUEST.info.pageUnixName = "apas";
+        WIKIREQUEST.info.pageId = 1035263844;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,40 +117,128 @@
     </script>
         
 <style>
-.content-panel .content-type-title > p {
-  margin: 0;
+.warning {
+  border: double 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: inline-block;
+  width: 75%;
 }
-.content-panel .content-type-title {
-  font-size: 120%;
+.warning a.collapsible-block-link {
   font-weight: bold;
-  padding: 5px 20px;
-  background-color: #666;
-  color: #fff;
-  border-radius: 8px 8px 0 0;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,.8),
-    inset 0 15px 1px rgba(255,255,255,.2),
-    inset 0 15px 10px rgba(255,255,255,.2);
 }
-.content-panel .content-type-description {
-padding: 0 20px;
-text-align: justify;
+/* Green terminal */
+.terminal {
+  border: solid 3px #BBBBBB;
+  border-radius: 16px;
+  background-color: #131;
+/* black shadow at the top of the terminal */
+  background-image: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+/* shadow around the terminal */
+  box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+  overflow: hidden;
+  color: rgba(128,255,128,0.8);
+  padding: 2em;
+  font-family: monospace;
+  font-size: 1.5em;
 }
-.content-panel.content-row .content-type-description {
-padding: 5px 20px;
-}
-.content-panel.content-row .content-type-description-2 {
-padding: 0 20px;
-text-align: justify;
+.terminal blockquote {
+  background-color: black;
+  border: double 3px #80FF80;
 }
 
-td.wanderers img.wanderers {
-display: block !important;
-width: 16px;
-height: 11px;
-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+.terminal a {
+  color: #90EE90;
+  text-decoration: none;
+  background: transparent;
+}
+.terminal a:hover, .terminal .green-header {
+  color: #131;
+  text-decoration: underline;
+  background-color: #80FF80;
+  padding: 1px;
+}
+.terminal .green-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.terminal a:hover::before {
+  content: "> ";
+}
+.terminal blockquote a:hover {
+  word-break: break-all;
+}
+.terminal .collapsible-block-link, .terminal .collapsible-block-unfolded-link, .terminal .collapsible-block-folded {
+  text-align: center;
+  font-weight: bold;
+}
+.terminal .collapsible-block-link:hover::before, .terminal .collapsible-block-unfolded-link:hover::before, .terminal .collapsible-block-folded:hover::before {
+  content: none;
+}
+
+/* What is APAS? */
+.fake-blockquote a {
+  color: #b01;
+}
+.fake-blockquote a.visited {
+  color: #824;
+}
+.fake-blockquote a:hover {
+  color: #b01;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: initial;
+}
+.fake-blockquote a.visited:hover {
+  color: #824;
+}
+.fake-blockquote a:hover::before {
+  content: none;
+}
+.fake-blockquote a:hover {
+  word-break: initial;
+}
+
+/* Secret text stuff */
+.hover {
+  color: black;
+}
+.hover .hover-text {
+   position: absolute;
+   display: none;
+   margin: 20px 0px;
+   height: auto;
+   width: auto;
+   background: white;
+   border: 1px solid black;
+   color: black;
+   padding: 0.5em;
+}
+.hover:hover {
+  text-decoration: none;
+  border-bottom: none;
+  color: blue;
+}
+.hover:hover .hover-text {
+  display: inline;
+}
+
+/* MDP table fixes */
+.first-table th:nth-child(1) {
+  width: 20%;
+}
+.first-table td:nth-child(1), .second-table td:nth-child(1), .second-table td:nth-child(2) {
+  text-align: center;
 }
 </style>
-<link rel="alternate" type="application/rss+xml" title="Most Recently Created CN" href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-created-cn/category/-fragment%2C-deleted/tags/scp%2Cwanderers%2C%E6%95%85%E4%BA%8B%2Cgoi%E6%A0%BC%E5%BC%8F%2C%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81%2C%E4%B8%AD%E5%BF%83%2C%E6%8C%87%E5%AF%BC%2C%E6%96%87%E7%AB%A0%2C%E6%A0%B7%E7%89%88%2C%E7%89%88%E5%BC%8F%2C%E7%AB%9E%E8%B5%9B%2C%E5%BE%85%E5%88%A0%E9%99%A4%2C%E5%BE%85%E5%88%AA%E9%99%A4%2C%E9%87%8D%E5%86%99%E4%B8%AD%2C%2B%E5%8E%9F%E5%88%9B/order/created_at+desc/limit/30/t/Most+Recently+Created+CN"/><script src="https://s.nitropay.com/ads-143.js"></script>
+<style>
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
+</style>
+<script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
 </head>
 <body id="html-body">
@@ -498,7 +586,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=most-recently-created-cn" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=apas" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -520,13 +608,13 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
                     
                     
                         <div id="page-title">
-                            最近新增的原创页面
+                            自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
                     
                         <div id="breadcrumbs">
-                            <a href="/most-recently-created">最近新增的页面</a> &raquo; 最近新增的原创页面
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/site-17-hub">Site-17 深井目录</a> &raquo; 自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
@@ -540,247 +628,98 @@ box-shadow: 0 1px 3px rgba(0,0,0,.5);
 
 
 
-<div class="content-panel standalone content-row">
-<div class="content-type-title">
-<p>最近新增的原创页面</p>
-</div>
-<div class="content-type-description-2">
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff; background-color: #666;">
-<td style="padding: 0 2px; width: 50%;">页面</td>
-<td style="padding: 0 2px; width: 25%; text-align: center;">创建日期</td>
-<td style="padding: 0 2px; text-align: center;">评论</td>
-</tr>
-</table>
-</div>
-<div class="content-type-description"><div class="list-pages-box">    
 
-<table style="width: 100%;">
-<tr style="font-weight: bold; color: #fff;">
-<td style="padding: 0 2px; width: 50%;"></td>
-<td style="padding: 0 2px; width: 25%; text-align: center;"></td>
-<td style="padding: 0 2px; text-align: center;"></td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/sector-cn-28-4">Sector-CN-28（4）</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607092566 format_%25Y-%25m-%25d%20%25R%7Cagohover">04 Dec 2020 14:36</span></td>
-<td style="vertical-align: top; text-align: center;">3</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1409">SCP-CN-1409</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607075005 format_%25Y-%25m-%25d%20%25R%7Cagohover">04 Dec 2020 09:43</span></td>
-<td style="vertical-align: top; text-align: center;">4</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/x-history-knights">特殊绿型专题：超常世界的骑士史概论</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1607047421 format_%25Y-%25m-%25d%20%25R%7Cagohover">04 Dec 2020 02:03</span></td>
-<td style="vertical-align: top; text-align: center;">4</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/the-story-of-my-life">负重前行</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606959527 format_%25Y-%25m-%25d%20%25R%7Cagohover">03 Dec 2020 01:38</span></td>
-<td style="vertical-align: top; text-align: center;">3</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/singlesparkprairiefire">星火燎原</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606924058 format_%25Y-%25m-%25d%20%25R%7Cagohover">02 Dec 2020 15:47</span></td>
-<td style="vertical-align: top; text-align: center;">6</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/mingchaonaxieshi2">天泉依旧</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606922169 format_%25Y-%25m-%25d%20%25R%7Cagohover">02 Dec 2020 15:16</span></td>
-<td style="vertical-align: top; text-align: center;">6</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1563">SCP-CN-1563</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606913482 format_%25Y-%25m-%25d%20%25R%7Cagohover">02 Dec 2020 12:51</span></td>
-<td style="vertical-align: top; text-align: center;">4</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/blue-album">靛蓝相册</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606838319 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 15:58</span></td>
-<td style="vertical-align: top; text-align: center;">14</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/end-of-each">有始有终</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606836184 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 15:23</span></td>
-<td style="vertical-align: top; text-align: center;">0</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/sector-cn-28-3">Sector-CN-28（3）</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606831723 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 14:08</span></td>
-<td style="vertical-align: top; text-align: center;">3</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1419">SCP-CN-1419</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606822292 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 11:31</span></td>
-<td style="vertical-align: top; text-align: center;">13</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/that-is-too-easy">很成功的出逃</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606818662 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 10:31</span></td>
-<td style="vertical-align: top; text-align: center;">11</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/in-the-woods-by-the-river">在林间，在水边</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606816349 format_%25Y-%25m-%25d%20%25R%7Cagohover">01 Dec 2020 09:52</span></td>
-<td style="vertical-align: top; text-align: center;">18</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1544">SCP-CN-1544</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606749133 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 15:12</span></td>
-<td style="vertical-align: top; text-align: center;">7</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1543">SCP-CN-1543</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606748870 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 15:07</span></td>
-<td style="vertical-align: top; text-align: center;">8</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1698">SCP-CN-1698</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606741060 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 12:57</span></td>
-<td style="vertical-align: top; text-align: center;">5</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/hard-to-name-20201130">花</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606738665 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 12:17</span></td>
-<td style="vertical-align: top; text-align: center;">4</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/just-ash">亦如散落的尘埃</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606736941 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 11:49</span></td>
-<td style="vertical-align: top; text-align: center;">0</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/olicus">Olicus的艺作页</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606710279 format_%25Y-%25m-%25d%20%25R%7Cagohover">30 Nov 2020 04:24</span></td>
-<td style="vertical-align: top; text-align: center;">19</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/xiaxuehou">下雪后</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606646115 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 10:35</span></td>
-<td style="vertical-align: top; text-align: center;">6</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/time-of-siege">围攻之时</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606639979 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 08:52</span></td>
-<td style="vertical-align: top; text-align: center;">5</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1854">SCP-CN-1854</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606636575 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 07:56</span></td>
-<td style="vertical-align: top; text-align: center;">9</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/swaying-star">孤星摇曳</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606629450 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 05:57</span></td>
-<td style="vertical-align: top; text-align: center;">5</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/take-down">击毙</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606620228 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 03:23</span></td>
-<td style="vertical-align: top; text-align: center;">11</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/goc-oneiroi">Totsuka Saika副部长的独呜：简单易懂的梦神集团</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606616331 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 02:18</span></td>
-<td style="vertical-align: top; text-align: center;">12</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/hahahahaha">致敬美好的明天</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606615973 format_%25Y-%25m-%25d%20%25R%7Cagohover">29 Nov 2020 02:12</span></td>
-<td style="vertical-align: top; text-align: center;">3</td>
-</tr>
-<tr>
-<td class="wanderers" style="vertical-align: top;"><a href="/wanderers:but-they-can-wake-up">但他们会醒来</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606607986 format_%25Y-%25m-%25d%20%25R%7Cagohover">28 Nov 2020 23:59</span></td>
-<td style="vertical-align: top; text-align: center;">4</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1593">已非SCP-CN-1593</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606591288 format_%25Y-%25m-%25d%20%25R%7Cagohover">28 Nov 2020 19:21</span></td>
-<td style="vertical-align: top; text-align: center;">20</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1862">SCP-CN-1862</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606579939 format_%25Y-%25m-%25d%20%25R%7Cagohover">28 Nov 2020 16:12</span></td>
-<td style="vertical-align: top; text-align: center;">16</td>
-</tr>
-<tr>
-<td class="_default" style="vertical-align: top;"><a href="/scp-cn-1791">SCP-CN-1791</a>
-<div class="image-container floatright"><img src="http://scp-wiki.wdfiles.com/local--files/main/SerpHand.png" style="display: none;" class="wanderers" alt="Wanderers" /></div>
-</td>
-<td style="vertical-align: top; text-align: center;"><span class="odate time_1606573831 format_%25Y-%25m-%25d%20%25R%7Cagohover">28 Nov 2020 14:30</span></td>
-<td style="vertical-align: top; text-align: center;">2</td>
-</tr>
-</table>
 
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+<div style="text-align: center;">
+<h1 id="toc0"><span>自动化无源记忆删除系统 Ver.17.09</span></h1>
+<p><strong><a href="http://scpper.com/page/789889960">scpper上的作者</a> <span style="color: grey">|</span> <a href="http://scpexplained.wikidot.com/apas">解释</a></strong></p>
+</div>
+<hr />
+<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>，现在建了<strong><a class="newpage" href="/nagiros">一个作者页</a></strong>.</p>
+<p><strong>感谢：</strong></p>
+<ul>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>，他写了对我非常有帮助的<a href="http://scp-wiki-cn.wikidot.com/listpages-magic-and-you">Listpages 魔法与你</a>这篇指导。</li>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4780073&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="calamitous1" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4780073)" /></a><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;">calamitous1</a></span>，他在<a href="http://scp-wiki.wikidot.com/forum/t-11168832/tale:site-wide-behavioral-control#post-4220273">草稿与批判</a>里给我的作品进行了点评。</li>
+</ul>
+<hr />
+<p><strong>图像使用权限：</strong></p>
+<ul>
+<li>文件名“dro-0001”来自于<a href="https://www.flickr.com/photos/nve/8733992389/">NVE的Flickr</a>，那里所有的照片都有cc协议。</li>
+</ul>
+<hr />
+<p><strong>你也可能喜欢的东西：</strong><span style="font-size:75%;">对于这篇文章来说，更像是我“把格式割裂了的东西”。</span></p>
+<ul>
+<li><a href="/scp-2798">SCP-2798</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2203795&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Kalinin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2203795)" /></a><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;">Kalinin</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/tanhony-s-proposal">SCP-001 - 死人</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=776854&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Tanhony" style="background-image:url(http://www.wikidot.com/userkarma.php?u=776854)" /></a><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;">Tanhony</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/scp-3942">未定义</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1618170&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Jack Ike" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1618170)" /></a><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;">Jack Ike</a></span></li>
+</ul>
+<hr />
+<p>多谢了，大家！</p>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
+<div class="list-pages-box">    
     
-    <div class="pager"><span class="pager-no">page 5 of 164</span><span class="target"><a href="/most-recently-created-cn/p/4">&laquo; previous</a></span><span class="target"><a href="/most-recently-created-cn/p/1">1</a></span><span class="target"><a href="/most-recently-created-cn/p/2">2</a></span><span class="target"><a href="/most-recently-created-cn/p/3">3</a></span><span class="target"><a href="/most-recently-created-cn/p/4">4</a></span><span class="current">5</span><span class="target"><a href="/most-recently-created-cn/p/6">6</a></span><span class="target"><a href="/most-recently-created-cn/p/7">7</a></span><span class="dots">...</span><span class="target"><a href="/most-recently-created-cn/p/163">163</a></span><span class="target"><a href="/most-recently-created-cn/p/164">164</a></span><span class="target"><a href="/most-recently-created-cn/p/6">next &raquo;</a></span></div>
     
-            <div class="feedinfo">
-            <span class="rss-icon"><img src="/common--theme/base/images/feed/feed-icon-14x14.png" alt="rss icon"/></span>
-            <a href="http://scp-wiki-cn.wikidot.com/feed/pages/pagename/most-recently-created-cn/category/-fragment%2C-deleted/tags/scp%2Cwanderers%2C%E6%95%85%E4%BA%8B%2Cgoi%E6%A0%BC%E5%BC%8F%2C%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81%2C%E4%B8%AD%E5%BF%83%2C%E6%8C%87%E5%AF%BC%2C%E6%96%87%E7%AB%A0%2C%E6%A0%B7%E7%89%88%2C%E7%89%88%E5%BC%8F%2C%E7%AB%9E%E8%B5%9B%2C%E5%BE%85%E5%88%A0%E9%99%A4%2C%E5%BE%85%E5%88%AA%E9%99%A4%2C%E9%87%8D%E5%86%99%E4%B8%AD%2C%2B%E5%8E%9F%E5%88%9B/order/created_at+desc/limit/30/t/Most+Recently+Created+CN">RSS 消息来源</a>
-        </div>
-    </div></div>
+    
+    </div>
+<div style="height: 25px"></div>
+<div class="licensebox">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;授权&nbsp;/&nbsp;引用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;隐藏授权&nbsp;/&nbsp;引用</a></div>
+<div class="collapsible-block-content">
+<p>请按如下方式引用此页：</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<blockquote>
+<p>“<a href="/apas">自动化无源记忆删除系统 Ver.17.09</a>”，作者 Nagiros，来自 <a href="http://www.scpwiki.com/">SCP 维基</a>。原文链接：<a href="http://www.scpwiki.com/apas">http://www.scpwiki.com/apas</a>。译者 joke3579，来自 <a href="http://scp-wiki-cn.wikidot.com/">SCP-CN 维基</a>。译文链接：<a href="http://scp-wiki-cn.wikidot.com/apas">http://scp-wiki-cn.wikidot.com/apas</a>。遵循 <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC-BY-SA</a> 协议。</p>
+</blockquote>
+</div>
+    
+    
+    
+    </div>
+<p>更多详情请参阅<a href="http://scp-wiki-cn.wikidot.com/licensing-guide">授权指南</a>。<br />
+<strong>授权信息</strong></p>
+<div class="content-separator" style="display: none:"></div>
+<blockquote>
+<p><strong>文件名：</strong>dro-0001<br />
+<strong>图像名：</strong>北领地的黑人硬汉<br />
+<strong>图像作者：</strong>NVE（Charles Rabot）<br />
+<strong>授权协议：</strong>CC BY-SA 2.0<br />
+<strong>来源链接：</strong><a href="https://www.flickr.com/photos/nve/8733992389/">Flickr</a></p>
+</blockquote>
+<div class="content-separator" style="display: none:"></div>
+<p>更多维基文档信息，请见<a href="http://www.scp-wiki.net/licensing-master-list">版权信息总览</a>。</p>
+</div>
+</div>
+</div>
 </div>
 
                     </div>
@@ -810,7 +749,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E7%AE%A1%E7%90%86#pages">管理</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%B7%B1%E4%BA%95%E7%9B%AE%E5%BD%95#pages">深井目录</a>
                             </span>
                         </div>
                     
@@ -818,12 +757,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 20, 最后编辑于: <span class="odate time_1607139635 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">05 Dec 2020 03:40</span></div>
+                            <div id="page-info">页面版本: 10, 最后编辑于: <span class="odate time_1609579490 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Jan 2021 09:24</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+64</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+5</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-6384393/most-recently-created-cn" class="btn btn-default" id="discuss-button">讨论 (27)</a>
+<a href="/forum/t-13298810/apas" class="btn btn-default" id="discuss-button">讨论 (7)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -890,10 +829,21 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://mbitcoin.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mbitcoin.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpkosb.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpkosb.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://mbitcoin.wikidot.com">BitCoin</a></h3>
+            <h3><a target="_blank" href="http://scpkosb.wikidot.com">SB-KO2</a></h3>
+            <div class="desc">          
+              SCP-KO 샌드박스 이호기
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://amiii.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/amiii.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://amiii.wikidot.com">Análise Matemática III</a></h3>
             <div class="desc">          
               
             </div>
@@ -901,34 +851,23 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://ubmh.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ubmh.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://www.oracle-wiki.net">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/www.oracle-wiki.net/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://ubmh.wikidot.com">地下黑市</a></h3>
+            <h3><a target="_blank" href="http://www.oracle-wiki.net">Oracle Database</a></h3>
             <div class="desc">          
-              属于闲人的社区
+              All things oracle...
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://zmk.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/zmk.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://wanderers-library-pl.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/wanderers-library-pl.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://zmk.wikidot.com">Zagłębiowska Masa Krytyczna</a></h3>
+            <h3><a target="_blank" href="http://wanderers-library-pl.wikidot.com">Biblioteka Wędrowca</a></h3>
             <div class="desc">          
-              Czwartek 3 Maja 2018 Godz.15:00
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://microchipdeveloper.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/microchipdeveloper.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://microchipdeveloper.com">Developer Help</a></h3>
-            <div class="desc">          
-              
+              Polska Filia
             </div>
           </div>
         </div>
