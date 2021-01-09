@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>SCP-2117 - SCP基金会</title>
+    <title>自动化无源记忆删除系统 Ver.17.09 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "scp-2117";
-        OZONE.request.timestamp = 1610199643;
+        WIKIREQUEST.info.requestPageName = "apas";
+        OZONE.request.timestamp = 1610221289;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "scp-2117";
-        WIKIREQUEST.info.pageId = 1035074907;
+                WIKIREQUEST.info.pageUnixName = "apas";
+        WIKIREQUEST.info.pageId = 1035263844;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,12 +117,126 @@
     </script>
         
 <style>
-@import url(http://www.scp-wiki.net/component:scp-pride/code/1);
+.warning {
+  border: double 3px black;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: inline-block;
+  width: 75%;
+}
+.warning a.collapsible-block-link {
+  font-weight: bold;
+}
+/* Green terminal */
+.terminal {
+  border: solid 3px #BBBBBB;
+  border-radius: 16px;
+  background-color: #131;
+/* black shadow at the top of the terminal */
+  background-image: radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+/* shadow around the terminal */
+  box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+/* prevents scanline from forming a scrollwheel */
+  overflow: hidden;
+  color: rgba(128,255,128,0.8);
+  padding: 2em;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+.terminal blockquote {
+  background-color: black;
+  border: double 3px #80FF80;
+}
+
+.terminal a {
+  color: #90EE90;
+  text-decoration: none;
+  background: transparent;
+}
+.terminal a:hover, .terminal .green-header {
+  color: #131;
+  text-decoration: underline;
+  background-color: #80FF80;
+  padding: 1px;
+}
+.terminal .green-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.terminal a:hover::before {
+  content: "> ";
+}
+.terminal blockquote a:hover {
+  word-break: break-all;
+}
+.terminal .collapsible-block-link, .terminal .collapsible-block-unfolded-link, .terminal .collapsible-block-folded {
+  text-align: center;
+  font-weight: bold;
+}
+.terminal .collapsible-block-link:hover::before, .terminal .collapsible-block-unfolded-link:hover::before, .terminal .collapsible-block-folded:hover::before {
+  content: none;
+}
+
+/* What is APAS? */
+.fake-blockquote a {
+  color: #b01;
+}
+.fake-blockquote a.visited {
+  color: #824;
+}
+.fake-blockquote a:hover {
+  color: #b01;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: initial;
+}
+.fake-blockquote a.visited:hover {
+  color: #824;
+}
+.fake-blockquote a:hover::before {
+  content: none;
+}
+.fake-blockquote a:hover {
+  word-break: initial;
+}
+
+/* Secret text stuff */
+.hover {
+  color: black;
+}
+.hover .hover-text {
+   position: absolute;
+   display: none;
+   margin: 20px 0px;
+   height: auto;
+   width: auto;
+   background: white;
+   border: 1px solid black;
+   color: black;
+   padding: 0.5em;
+}
+.hover:hover {
+  text-decoration: none;
+  border-bottom: none;
+  color: blue;
+}
+.hover:hover .hover-text {
+  display: inline;
+}
+
+/* MDP table fixes */
+.first-table th:nth-child(1) {
+  width: 20%;
+}
+.first-table td:nth-child(1), .second-table td:nth-child(1), .second-table td:nth-child(2) {
+  text-align: center;
+}
 </style>
 <style>
-sup { 
-vertical-align: top; position: relative; top: -0.5em; 
-}
+@import url(http://scp-wiki.wdfiles.com/local--code/info%3Astyle/1);
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -472,7 +586,7 @@ vertical-align: top; position: relative; top: -0.5em;
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=scp-2117" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=apas" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -494,10 +608,14 @@ vertical-align: top; position: relative; top: -0.5em;
                     
                     
                         <div id="page-title">
-                            SCP-2117
+                            自动化无源记忆删除系统 Ver.17.09
                         </div>
                     
 
+                    
+                        <div id="breadcrumbs">
+                            <a href="/canon-hub">设定中心</a> &raquo; <a href="/site-17-hub">Site-17 深井目录</a> &raquo; 自动化无源记忆删除系统 Ver.17.09
+                        </div>
                     
 
                     
@@ -511,369 +629,167 @@ vertical-align: top; position: relative; top: -0.5em;
 
 
 
+
+<div class="creditRate">
+<div class="creditButtonStandalone">
+<p><a class="fa fa-info" href="#u-credit-view"></a></p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="u-credit-view">
+<div class="fader">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/1" align="" frameborder="" height="" scrolling="" width="" class="" style=""></iframe></p>
+</div>
+<div class="modalcontainer">
+<div class="modalbox">
+<div style="text-align: center;">
+<h2><span>著作信息</span></h2>
+</div>
+<hr />
+<div class="credit first">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/4" align="" frameborder="" height="" scrolling="" width="" class="close-credits" style="height:2em;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+<div style="text-align: center;">
+<h1 id="toc0"><span>自动化无源记忆删除系统 Ver.17.09</span></h1>
+<p><strong><a href="http://scpper.com/page/789889960">scpper上的作者</a> <span style="color: grey">|</span> <a href="http://scpexplained.wikidot.com/apas">解释</a></strong></p>
+</div>
+<hr />
+<p><strong>作者：</strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4665703&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Nagiros" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4665703)" /></a><a href="http://www.wikidot.com/user:info/nagiros" onclick="WIKIDOT.page.listeners.userInfo(4665703); return false;">Nagiros</a></span>，现在建了<strong><a class="newpage" href="/nagiros">一个作者页</a></strong>.</p>
+<p><strong>感谢：</strong></p>
+<ul>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2893766&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Croquembouche" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2893766)" /></a><a href="http://www.wikidot.com/user:info/croquembouche" onclick="WIKIDOT.page.listeners.userInfo(2893766); return false;">Croquembouche</a></span>，他写了对我非常有帮助的<a href="http://scp-wiki-cn.wikidot.com/listpages-magic-and-you">Listpages 魔法与你</a>这篇指导。</li>
+<li><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4780073&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="calamitous1" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4780073)" /></a><a href="http://www.wikidot.com/user:info/calamitous1" onclick="WIKIDOT.page.listeners.userInfo(4780073); return false;">calamitous1</a></span>，他在<a href="http://scp-wiki.wikidot.com/forum/t-11168832/tale:site-wide-behavioral-control#post-4220273">草稿与批判</a>里给我的作品进行了点评。</li>
+</ul>
+<hr />
+<p><strong>图像使用权限：</strong></p>
+<ul>
+<li>文件名“dro-0001”来自于<a href="https://www.flickr.com/photos/nve/8733992389/">NVE的Flickr</a>，那里所有的照片都有cc协议。</li>
+</ul>
+<hr />
+<p><strong>你也可能喜欢的东西：</strong><span style="font-size:75%;">对于这篇文章来说，更像是我“把格式割裂了的东西”。</span></p>
+<ul>
+<li><a href="/scp-2798">SCP-2798</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=2203795&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Kalinin" style="background-image:url(http://www.wikidot.com/userkarma.php?u=2203795)" /></a><a href="http://www.wikidot.com/user:info/kalinin" onclick="WIKIDOT.page.listeners.userInfo(2203795); return false;">Kalinin</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/tanhony-s-proposal">SCP-001 - 死人</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=776854&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Tanhony" style="background-image:url(http://www.wikidot.com/userkarma.php?u=776854)" /></a><a href="http://www.wikidot.com/user:info/tanhony" onclick="WIKIDOT.page.listeners.userInfo(776854); return false;">Tanhony</a></span></li>
+<li><a href="http://scp-wiki-cn.wikidot.com/scp-3942">未定义</a> 作者：<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=1618170&amp;amp;size=small&amp;amp;timestamp=1609579771" alt="Jack Ike" style="background-image:url(http://www.wikidot.com/userkarma.php?u=1618170)" /></a><a href="http://www.wikidot.com/user:info/jack-ike" onclick="WIKIDOT.page.listeners.userInfo(1618170); return false;">Jack Ike</a></span></li>
+</ul>
+<hr />
+<p>多谢了，大家！</p>
+</div>
+<hr />
+<div class="credit-back" style="text-align: center;">
+<p><iframe src="http://scp-wiki-cn.wikidot.com/credit:backmodule/code/2" align="" frameborder="" height="" scrolling="no" width="" class="" style="height:2em;width: 100%;margin: 0;padding: 0;border: 0;background: transparent;"></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
-<h2><span>延伸探索记录 2117</span></h2>
-<p>在他们被2085-A俘获后，SCP-2117-A-1所生成的传送门失效，因此与SCP-2117的连接中断。Site-19收到的一份信息显示，2085-A劫持了机动特遣队Zeta-9，但会保持单向通信畅通，以便小队可以向基金会报告他们的发现。</p>
-<p>在6/14/2019，小队在极小损失的情况下回到了地球。延伸探索记录如下。</p>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">延伸探索记录&nbsp;Day&nbsp;3</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">hide&nbsp;log</a></div>
-<div class="collapsible-block-content">
-<div style="display: inline-block; border:dashed 1px #999999; background:#F5F5F5; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p><em>（Z9-1穿着基金会标准制服，旁边有一个激光切割机。她配备了氧气罐和口罩。）</em></p>
-<p><strong>Z9-1：</strong>自从一个该死的猫耳朵女人强迫我们去找她的姐妹以来，已经有三天半了。他们禁用了立方体。她说一旦我们找到他们她就会把他们打开。</p>
-<p><strong>Z9-2：</strong>上帝啊，这个地方实在太大了。</p>
-<p><strong>Z9-1：</strong>到底有多大呢？</p>
-<p><strong>Z9-2：</strong>就我们过来用的那个速降机知道吧？用那种速度穿过这艘船的长度也需要两个多小时。</p>
-<p><strong>Z9-1：</strong>所以，呃，这里是Z9-1——也就是我——还有-2组成一队，-3和Tech-1在一队，-4和Tech-2在最后一队。还有——</p>
-<p><strong>2085-A：</strong>你的信号通过网络和我连着。</p>
-<p><strong>Z9-1：</strong>所以到底发生什么了？舰上说90%的船员都消失了。</p>
-<p><strong>2085-A：</strong>更多。你知道在<em>《星际迷航》</em>里，船上有一群平民，每当企业号撞击博格立方体或其他什么东西时，他们都不会被当一般人看？</p>
-<p><strong>Z9-1：</strong>有多少人？</p>
-<p><strong>2085-A：</strong>大概400个，大部分都是难民，来自那些不想要他们的宇宙。甚至也有些“Skips”在这艘船上，大部分都是从你们这跑出来的。</p>
-<p><strong>Z9-2：</strong>所以，我们要去牢房？</p>
-<p><strong>2085-A：</strong>就像名字所表达的，这是我们关那些捣蛋鬼的地方。大多数时候那都只是关醉汉的拘留所。速降机会带你们到那里。</p>
-<p><strong>Z9-1：</strong>我真不喜欢那些东西。</p>
-<p><strong>2085-A：</strong>没人喜欢那些东西。这东西投入使用后一个月大家就全不见了。</p>
-<p><em>（Z9-1和Z9-2攀爬上了速降机的平台，在扶手上握紧。）</em></p>
-<p><strong>Z9-1：</strong>一个月？安装它们要花不少精力吧。</p>
-<p><strong>2085-A：</strong>我们没有安装他们，它们自己出现的。这艘船上的一大部分组件都是这么来的。</p>
-<p><em>（速降机提速到300km/h。）</em></p>
-<p><strong>Z9-1：</strong>这堆东西一点都不花你心思？它自己就直接出现了？</p>
-<p><strong>2085-A：</strong>这东西差点吓得我心脏病发作。想象一下你突然发现屋子里的的咖啡机变得和你的桌子一样大，能够生产出人类已知的所有饮料！等下，我接个电话。</p>
-<p><em>（两分钟后，速降机来到了牢房门口。）</em></p>
-<p><strong>2085-A：</strong>好了。扫描仪他妈的坏了，但好消息是牢房是衬铅芯的，可以有效减少干扰。里面有生命迹象。</p>
-<p><strong>Z9-2：</strong>铅不是会更加干扰扫描吗？</p>
-<p><strong>2085-A：</strong>别想这类的东西，能用就行。</p>
-<p><em>（Z9-1和Z9-2看向对方。Z9-1耸了耸肩。摄像头显示他们进入了牢房。）</em></p>
-<p><em>（牢房是一个至少2km高的结构，几堵墙内衬各种尺寸和配置的牢房，包括金属棒、有机玻璃屏障、力场、以及据信是一个步入式的斯克兰顿现实稳定锚。可见超过200个牢房。）</em></p>
-<p><strong>2085-A：</strong>关闭重力。</p>
-<p><em>（牢房内人工重力系统关闭。Z9-1开启了微推动器，飞到了结构的最上面，而Z9-2开始检查结构底部。）</em></p>
-<p><strong>Z9-1：</strong>你说巫师去世了，但巫师不是你们船上的AI吗？</p>
-<p><strong>2085-A：</strong>差不多一样的。在他去世前我们把他上传到了电脑里。</p>
-<p><strong>Z9-1：</strong>我很抱歉问这个问题。</p>
-<p><strong>2085-A：</strong>感谢你们表示同情。难道这个宇宙里面的基金会不是由反螺旋族<sup class="footnoteref"><a id="footnoteref-717564-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-1')">1</a></sup>组成的？</p>
-<p><strong>Z9-2：</strong>我们在80年代遭受过一次巨大的打击。半个站点签订了自杀协议并且执行了。我们这才发现“冷酷，但并非无情”这一信条才适合人类。</p>
-<p><strong>Z9-1：</strong>不是说你不是人类的意思。等会，我们好像就是这个意……</p>
-<p><strong>2085-A：</strong>没事，我经历过比这更惨的经历。</p>
-<p><strong>Z9-2：</strong>基金会开始把职员当人看了，这种态度慢慢地影响到了你。</p>
-<p><strong>Z9-1：</strong>等会——</p>
-<p><em>（Z9-1在半空中的一个步进式现实稳定锚前面停下。在里面可以看到一个人形的脚，漂浮在半空中。）</em></p>
-<p><strong>Z9-1：</strong>我们有发现了。Mitch，到这里来。</p>
-<p><em>（Z9-2来到Z9-1旁边，在牢房外的步道上着陆。）</em></p>
-<p><strong>Z9-1：</strong>我觉得我们在打开这个东西之前要把这个现实稳定锚关掉。</p>
-<p><strong>Z9-2：</strong>你知道怎么关掉这东西吗，2085-A？</p>
-<p><em>（没有回复。）</em></p>
-<p><strong>Z9-1：</strong>他可能在和其他小队聊天。</p>
-<p><strong>Z9-2：</strong>没事，在训练里我们和这些东西打过照面。</p>
-<p><strong>Z9-1：</strong>让我看看手册。</p>
-<p><em>（Z9-1把平板电脑上面的文件打开，开始阅读。）</em></p>
-<p><strong>Z9-1：</strong>好的，首先把康德计数器关掉——</p>
-<p><strong>Z9-2：</strong>这……没必要吧。</p>
-<p><strong>Z9-1：</strong>这是什么意思？</p>
-<p><em>（Z9-2开启了控制面板。可见“开”和“关”两个按钮。）</em></p>
-<p><strong>Z9-1：</strong>嗯哼。</p>
-<p><em>（Z9-2按下了“关“按钮。现实稳定锚的前笼打开，可见一个女性人形，里面有轻轻的呻吟声。）</em></p>
-<p><strong>2085-A：</strong>我的天哪。你们这又来了谁？它是谁？</p>
-<p><em>（Z9-1尝试进入锚。）</em></p>
-<p><strong>2085-A：</strong>别！别进去。就——就只把摄像头和麦克风放在里面就行。你的头盔，让我和他们通一下话，他们——他们可能会受伤，可能很害怕，又或者——天呐——冷静一下。</p>
-<p><em>（Z9-1取下头盔，将它放在了里面，让微小的重力推动着它向前。摄像头显示其中有一位有家猫耳朵和斑猫发色的女性。）</em></p>
-<p><strong>2085-A：</strong>她还活着吗？我该怎么把这东西的热成像打开？</p>
-<p><em>（Z9-1开启了热成像。体内的人形有与活人一致的体温。）</em></p>
-<p><strong>2085-A：</strong>她还好。她一定已经——她有一个朋友，最后经常来这里。这里曾是醉汉拘留所，记得吗？她——她可能看到了什么，把自己困在这里了。</p>
-<p><strong>Z9-1：</strong>等会，她在这里呆了大概六个月还没有水？</p>
-<p><strong>2085-A：</strong>天呐，已经过了这么久了吗？我们是机械人，我们没有足够的水或者氧气将会进入低电量模式。好的，呃，在那个走道尽头，有个医疗站。急救，轮床，盐水，你需要的一切都在那里。可能还有口粮。</p>
-<p><strong>Z9-2：</strong>我去拿。</p>
-<p><strong>2085-A：</strong>把她带回基地。靠——第三队遇到麻烦了。欧几里德发动机故障。等等。</p>
-<p><em>（Z9-2推出了一个轮床和医疗用品。他突然皱起了眉。）</em></p>
-<p><strong>Z9-2：</strong>这里到基地至少还要走一个小时。在这种情况下我们用不了速降机。</p>
-<p><em>（Z9-1将这位女性从锚中移到轮床上，当他看到一大块尾巴已不见时，他发出一声惊讶。）</em></p>
-<p><strong>Z9-2：</strong>用绷带绑好。别——别让A看到这个。</p>
-<p><em>（Z9-1试图给尾巴绑上绷带。个体逐渐醒来，扫到了一眼Z9-1，在微重力作用下，他不经意地把她推开了。）</em></p>
-<p><strong>2085-A：</strong>让我和她谈谈。把我给你的通讯连接给她。</p>
-<p><em>（Z9-2将通讯连接给予这位人形，将其放在她的左耳。在几秒后他们冷静下来，她点了点头。）</em></p>
-<p><strong>2085-C：</strong>……呃，也对，你也听不到一个人点头。对不起姐妹。我尾巴怎么了？</p>
-<p><strong>Z9-1：</strong>我正试着包扎。</p>
-<p><strong>2085-C：</strong>不是，你才没有在包扎。你从来没有在尾巴上包过止血带吗？</p>
-<p><em>（Z9-1情绪稍微有点烦躁。）</em></p>
-<p><strong>2085-C：</strong>好了够了，把那东西给我。</p>
-<p><em>（2085-C把Z9-1的绷带和Z9-2的其他医疗物资都拿了过去。）</em></p>
-<p><strong>2085-C：</strong>姐妹，你把重力打开了吗？我不想因为注射吗啡错和抗生素而导致栓塞。</p>
-<p><em>（Z9-1和Z9-2在这时正漂浮在离牢房地面约几百米的空中。）</em></p>
-<p><strong>Z9-1：</strong>也许等我们降落之后？</p>
-<p><strong>2085-C：</strong>好吧，说得有理。</p>
-<p><em>（Z9-1，-2和2085-C都降落在水平地面上。重力重新被打开，2085-C继续在自我治疗。）</em></p>
-<p><strong>2085-C：</strong>好吧，速降机的撞击停止设定已经设到低了。把我放在那上面，你们再坐另一个。</p>
-<p><em>（2085-C停了下来。）</em></p>
-<p><strong>2085-C：</strong>为什么我只能听到老大对我说话？</p>
+<div class="terminal">
+<div style="text-align: center;">
+<p><span style="font-size:120%;"><span class="green-header"><span style="text-decoration: underline;">启动记录：记忆删除</span></span></span></p>
 </div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>正在存取文件……</p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>请稍后，不要断开显示器……</p>
 </div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">延伸探索记录&nbsp;Day&nbsp;12</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">hide&nbsp;log</a></div>
-<div class="collapsible-block-content">
-<div style="display: inline-block; border:dashed 1px #999999; background:#F5F5F5; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p><em>（Z9-1，Z9-4和Z9-Tech-2正在速降机上。）</em></p>
-<p><strong>Z9-1：</strong>好的，现在好多了。不知道是因为速降机慢了，还是我变成了个受虐狂。</p>
-<p><strong>Z9-4：</strong>所以，第12天，我们找到了她4个姐妹的其中一个。之前我们探索的六个区域都是死路。</p>
-<p><strong>Z9-Tech-2：</strong>昨天对核心进行了通风，热传感器能够更好地收集信息。里面至少有两个热信号。</p>
-<p><strong>Z9-4：</strong>我可感觉不到凉快了好多。</p>
-<p><strong>Z9-1：</strong>我们被告知不要质疑这个事实。这次我们是独自行动吗？</p>
-<p><strong>Z9-4：</strong>A在找她的姐妹们，找不到她们的她很烦躁。这次就带着C和我们一起出任务。</p>
-<p><strong>Z9-1：</strong>为啥叫她C，不能按顺序叫B吗?</p>
-<p><strong>Z9-Tech-2：</strong>她们坚持这么说。这是船的哪部分？</p>
-<p><em>（Z9-Tech-2的摄像机向上移动。标牌上写着“兽栏”。）</em></p>
-<p><strong>Z9-Tech-2：</strong>啊。</p>
-<p><strong>Z9-1：</strong>好吧，咱就别浪费时间了。</p>
-<p><em>（Z9-1尝试用控制面板打开其上写着“兽栏”的门。但其有一股拉力，好像被卡住了一样；当打开时，一种纤维状的网状物质在分开之前把门连接在一起。）</em></p>
-<p><strong>Z9-Tech-2：</strong>那是什么鬼东西？你们船上有巨型蜘蛛吗？</p>
-<p><strong>2085-C：</strong>我不觉得。</p>
-<p><em>（网状物质开始以一致的模式闪烁，带有吸引的模因效果。Z9-1、Z9-4和Z9-Tech-2都放下设备，进入网状物质。）</em></p>
-<p><strong>2085-C：</strong>哦，不，不，不。</p>
-<p><strong>2085-A：</strong>怎么了？</p>
-<p><strong>2085-C：</strong>我们红头发的姐妹在兽栏区里面。</p>
-<p><em>（Z9-1、-4和-Tech-2的相机只能看到网状物质。Z9-1的相机被一次突然的撞击破坏了，据信是由一个管子扳手打坏的。Z9-4和Z9-Tech-2分别落入陷阱。）</em></p>
-<p><em>（在阴影中，可以看到有人一只手在动物笼旁的护栏上。另一只手拿着一个开关；除了一个眼罩，其余的部分都被遮住了。Z9-1在他们旁边呈无意识状态。）</em></p>
-<p><strong>2085-D：</strong>好吧，你们这些混蛋。你要告诉我你做了什么，我的朋友，姐妹，还有我的船。</p>
-<p><em>（Z9没有反应，直到2085-D拨动开关，所有灯熄灭。）</em></p>
-<p><strong>2085-D：</strong>这些灯里大概有我的210个致命性模因，还有30个是音频的。如果你他妈的不开始说话，我就让黄镇<sup class="footnoteref"><a id="footnoteref-717564-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-2')">2</a></sup>把你一遍又一遍地归零。</p>
-<p><strong>Z9-4：</strong>你的姐妹让我们来找你的！</p>
-<p><strong>2085-D：</strong>去你的。</p>
-<p><em>（2085-D短暂的打开了控制器的开关，短暂的激活昏迷模因触媒。）</em></p>
-<p><strong>2085-D：</strong>一年。我们不能看到对方整整一年，说不了话，不知道对方是否还<em>活着</em>。我看到过这艘船上发生的破事，它把一整个摩门教会众从形而上学上吞噬了。而你们这群混蛋还<em>崇拜</em>着它。</p>
-<p><strong>2085-D：</strong>所以，趁我还没开始暴躁，最后问一遍。<strong>我，的，姐妹，们，在，哪——</strong></p>
-<p><em>（2085-D突然停止说话，看向远方，稍微走入了光线下，可见其红发和一只红色猫耳。）</em></p>
-<p><strong>2085-D：</strong>聊天频道可用了？——谁修好的？你怎么修好——</p>
-<p><em>（Z9-4和-Tech-2看向对方，表示迷惑不解。）</em></p>
-<p><strong>Z9-Tech-2：</strong>她们的眼睛不是——生物质。我觉得她们之间有一个界面之类的，就像内嵌显示器之类的。</p>
-<p><strong>2085-D：</strong>是，有个聊天窗口。什么鬼什么鬼什么鬼——</p>
-<p><em>（2085-D打开了另一个模因触媒，功效是让观看者昏睡过去。）</em></p>
-<p><strong>2085-D：</strong>我需要点隐私，天呐。</p>
-<p><em>（2085-D坐在一个笼子前面，顺着Z9小队的摄像机所指的方向延伸目光。可以听到她可能有点焦虑。）</em></p>
-<p><strong>2085-D:</strong>去你的。“感谢”你把这东西重新搞上线还不告诉我一声。</p>
-<p><em>（在此之后有几分钟的安静。Z9-1微微向2085-D靠近了一点。他们之间短暂的发生了对话，之后2085-D开启了一个双耳肾上腺素产生模因，Z9小队成员醒来。）</em></p>
-<p><strong>2085-D：</strong>起来吧，你们这群懒鬼。黑兔公司还有两个职员没有找到呢，而且老大允许我把你们都变成生物反应器的燃料，如果你们不服从的话。</p>
-<p><strong>2085-A：</strong>这可不是玩笑，它是唯一一个知道怎么捣鼓这个东西的。</p>
-<p><strong>Z9-4：</strong>呃，你得先把我们从网上搞下来。</p>
-<p><strong>2085-D：</strong>你们不是有刀吗，这些网具有纳米管编织的延展性，棉花糖的可弯性。自己砍断这些网下来。</p>
-<p><strong>Z9-1：</strong>妈的到底什么是黄镇？</p>
-</div>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">延伸探索记录&nbsp;Day&nbsp;20</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Hide&nbsp;Log</a></div>
-<div class="collapsible-block-content">
-<div style="display: inline-block; border:dashed 1px #999999; background:#F5F5F5; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p><strong>Z9-1：</strong>这里是Zeta-9探员Meghan Yu。我……被2085叫到了舰桥。他们想向我展示些东西，不知道是什么。</p>
-<p><em>（Z9-1登上速降机。）</em></p>
-<p><strong>Z9-1：</strong>我一直在看我的速度表。这东西越来越快，现在倒是慢了一点。如果发生了什么，我会适应的呃呃呃呃呃——</p>
-<p><em>（Z9-1的速降机加速到了超过600km/h，之后降落到舰桥。）</em></p>
-<p><strong>Z9-1：</strong><em>QTMD！</em>好的，好，呕。</p>
-<p><strong>Z9-1：</strong>我才发现，即使这么快的速度理论上能够把我弄瞎，我却连一点风经过眼睛的感觉都没有。虽然我们被告知不要质疑是怎么实现的，但是……我依然想搞明白。</p>
-<p><em>（Z9-1从速降机上下来，然后登上舰桥。一个大型的命令控制台在中间，2085-C试图从中解救另一个2085。2085-A站在离房间前面更远的控制台旁。透过窗户，可以看到土卫六和土星的景象。）</em></p>
-<p><strong>Z9-1：</strong>我靠。</p>
-<p><strong>2085-A：</strong>没错。世界可不会等你准备好了再告诉你事实。</p>
-<p><em>（Z9-1接近船头，向上看从观察区域上方可见的突出物。）</em></p>
-<p><strong>Z9-1：</strong>那是个……</p>
-<p><strong>2085-E：</strong>那是我的老公！</p>
-<p><em>（Z9-1受到惊吓并转向2085-E。2085-E与其他2085基本相同，只是头发、耳朵和尾巴上有银蓝色。他们的手臂似乎已经和指挥控制台合并了。）</em></p>
-<p><strong>2085-C：</strong>她试图向袭击这艘船的人开火。结果在这个过程中她变成了船的一部分。</p>
-<p><strong>2085-E：</strong>桃子，我可<em>赢</em>了。我都融入其中了！<span class="ruby">超级波动投射巨炮<span class="rt">The Grand Wave Motion Projection Cannon</span></span>!它就是我的老公！</p>
-<p><strong>2085-C：</strong>她吗啡中毒了。通常不会这么健谈。</p>
-<p><strong>2085-A：</strong>这就是船名的由来。<em>大队炮丸</em>，或“大炮”。我们就是用它炸了月亮。</p>
-<p><strong>Z9-1：</strong>你们干了<em>啥？！</em></p>
-<p><strong>2085-A：</strong>那一整件事都十分有超级战队<sup class="footnoteref"><a id="footnoteref-717564-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-3')">3</a></sup>的风格，我们异口同声喊出了袭击的名字。太棒了。</p>
-<p><strong>Z9-1：</strong>好的，但——你们为什么要把月球炸掉？</p>
-<p><strong>2085-A：</strong>我会告诉你的。巫师，回放<a href="http://scp-wiki-cn.wikidot.com/stealingsolidarityphase4">阶段四</a>。</p>
-<p><em>（2085-A呼出了全息投影，回放了一场涉及SCP-2117和一个暂定名为SCP-2117-Omega的实体的战斗。这个实体类似于一个无定形的触手结构，在录音开始时已经经过了几个镜头。）</em></p>
-<p><strong>2085-A：</strong>那是个监督者，在你们这个宇宙管理着整个基金会。</p>
-<p><strong>Z9-1：</strong>呃，好吧，我们的监督者可不长那样。</p>
-<p><strong>2085-A：</strong>也许这就是你为什么……好吧，你。据我们所知，整个事情包括半数的站点都在那时候发生了异常，但这艘船却被掩盖起来了。</p>
-<p><strong>Z9-1：</strong>天呐。这些东西会吃掉痛苦还是什么的吗？</p>
-<p><strong>2085-A：</strong>我认为他们是以现状为食的。不过，那不是我想给你看的。</p>
-<p><em>（2085-A离开控制台，露出一块牌匾。即使有SCP-2117-1的存在，由于其表面的损坏，也几乎难以辨认。）</em></p>
-<p><strong>2085-A：</strong>好好看看这个东西。</p>
-<blockquote>
-<p>你好，我们的[难以辨认]。我们肯定你在发现这个[难以辨认]之后一定会很困惑。你们肯定会怀疑它是怎么来的，就和我们一样，这很正常。宇宙是个危险的地方，就像我们[难以辨认]。</p>
-<p>[难以辨认]<em>团结号</em>这艘船只会出现在拥有一个保护常态[难以辨认]的组织的现实中。据我们所知只有一艘<em>团结号</em>[难以辨认]。</p>
-<p>它很久以前就出现在了我们的现实中，在我们面对来自于外太阳系的极大威胁前一直被忽视。这个威胁是不是被这艘船吸引过来的我们尚且未知，但它足够我们来[难以辨认]。</p>
-<p>所以，对你们，无论你们是谁，来说，我们，来自地球的人民，和第六梯队[难以辨认]。无论我们之间有多少时间或者空间的鸿沟，只要我们继续寻求生存下去，我们就永不会孤单。</p>
-</blockquote>
-<p><em>（在信息底部是一副雕刻，13个人，外形类似人猿，并拥有各有特色箭形头冠，都穿着同样的制服，这些个体围成一个半圆形，前面是一个类似地球的图像，其不同之处在于其北极是一片大陆，而有一系列岛屿从直布罗陀海峡一直向西延伸出去。）</em></p>
-<p><strong>Z9-1：</strong>我有些东西读不懂，但为什么我能……这不是英语，但是……</p>
-<p><strong>2085-A：</strong>这艘船上全是模因，我现在说的全是日文，你也发现不了。</p>
-<p><strong>Z9-1：</strong>是的，我的确没有发现。</p>
-<p><strong>2085-A：</strong>我以为你不会承认这个事实的。发现什么重要的吗？</p>
-<p><em>（Z9-1重读了一遍牌匾。）</em></p>
-<p><strong>Z9-1：</strong>“只有一艘<em>团结号</em>。”好像和现实……不符……</p>
-<p><strong>2085-A：</strong>这是小梭的错。他老是跑到其他宇宙并且把他们的<em>大队炮丸</em>号零件带回来……或者直接吧整艘船都带回来。我们不知道他为什么把那些东西带回来，也不知道他是怎么得到其他<em>大队炮丸</em>号的零件的。这些零件同样用来改造这艘船了。</p>
-<p><strong>2085-A：</strong>从我醒来起我就一直在看那些日志。我们从来没有设置巫师的自动信号，我们以前从来没有这些立方体，我们的电源核心也没有重新启动按钮。小梭带回来的这些零件改变了船，所以你才可以救我们。</p>
-<p><strong>Z9-1：</strong>这里看起来不错。甚至很有趣。</p>
-<p><strong>2085-A：</strong>太空摩门教徒可知道如何开派对了呢。</p>
-<p><strong>Z9-1：</strong>也许是小梭只是……想让你玩得开心吗？你有三分之一马赫的过山车作为交通工具，一个该死的反重力弹跳屋，你的剧院有来自大约80个不同宇宙的电影。</p>
-<p><em>（2085-A笑了起来。）</em></p>
-<p><strong>2085-A：</strong>这就是B的理论。我们孤独了？小梭带来了新的人。事情越来越紧张了？引进新的船舶部件。B一直在寻找战斗装甲，每周至少一次把它输入复制器。去年小梭消失了几天之后&#8212;</p>
-<p><em>（2085-A眨了眨眼。）</em></p>
-<p><strong>2085-A：</strong>我是个白痴。在危机中，除了军械库，一个枪械控会去哪里？船上有二十个，所有的二十个军械库都在下面。</p>
-<p><strong>Z9-1：</strong>我让小队立即出发寻找B。</p>
-<p><strong>2085-A：</strong>D是黑客——她是唯一能打开军械库门锁的人。</p>
-</div>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">延伸探索记录&nbsp;Day&nbsp;21</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Hide&nbsp;Log</a></div>
-<div class="collapsible-block-content">
-<div style="display: inline-block; border:dashed 1px #999999; background:#F5F5F5; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p><strong>2085-D：</strong>你知道“我尽我所能信任你。<sup class="footnoteref"><a id="footnoteref-717564-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-4')">4</a></sup>”这句话吗？</p>
-<p><strong>Z9-4：</strong>怎么了？</p>
-<p><strong>2085-D：</strong>在这里不管用。如果这艘船重力关了的话我轻易就可以把你这瘦弱的小白脸从船这一头丢到另一头。</p>
-<p><em>（2085-D从他们的衣口袋里拿出一个掌上电脑。）</em></p>
-<p><strong>2085-D：</strong>让我这样说：当我们死的时候，如果我有决定权决定我们是把尸体留给你还是艾德·盖恩<sup class="footnoteref"><a id="footnoteref-717564-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-5')">5</a></sup>，我会支持盖恩。</p>
-<p><strong>Z9-4：</strong>你性子一直都这样冲吗？</p>
-<p><strong>2085-D：</strong>你懂吗，当你长大了，发现有些白痴继承了父亲的公司，就根本不需要Karoshi<sup class="footnoteref"><a id="footnoteref-717564-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-6')">6</a></sup>，你才意识到人从一“出生”都是挺傻逼的。</p>
-<p><em>（2085-D蜷缩在一扇写着“15号军械库”的小门旁，正在操作她的掌上电脑。他们生产出一个玻璃瓶，里面装着一种不明的饮料；瓶颈上似乎有一个玻璃弹珠。）</em></p>
-<p><strong>2085-D：</strong>我们谁也不相信你。我们不会告诉你我们的名字，即使是假的。你不配我们这么做。</p>
-<p><em>（Z9-4将食指指向2085-D，一只眼闭上。）</em></p>
-<p><strong>Z9-4：</strong>次にお前は“如果你再这么做我会一拳打在你那该死的脸上！”と言う！<sup class="footnoteref"><a id="footnoteref-717564-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-7')">7</a></sup></p>
-<p><em>（2085-D抓住Z9-4的衣领，握拳。）</em></p>
-<p><strong>2085-D：</strong>如果你再这么做我会一拳打在你那该死的脸上！</p>
-<p><em>（2085-D停了下来，放下了Z9-4。）</em></p>
-<p><strong>2085-D：</strong>看起来还算识货。</p>
-<p><em>（2085-D继续在她的掌上电脑上工作，从瓶子里啜了一口。）</em></p>
-<p><strong>2085-D：</strong>话说你是怎么知道这个梗的？</p>
-<p><strong>Z9-4：</strong>下载了你嘲笑摩门教徒的那个音频日志。</p>
-<p><strong>2085-D：</strong>这可能是有史以来“最不冒犯我们隐私”的行为了。</p>
-<p><strong>Z9-4：</strong>那个日志是在，怎么，大概你们偷到这艘船之后大概两年吧？都过了大概30年了吧。你听起来和之前相比有点……</p>
-<p><strong>2085-D：</strong>累了？是，我是累趴下了。我要去了，整个人生都气鼓鼓的，在地球上的时光没有任何时候不是在躲条子。</p>
-<p><em>（2085-D放下掌上电脑，从瓶子里喝了几秒钟饮料。）</em></p>
-<p><strong>2085-D：</strong>当你做了30年的事情，很难保持冒险和友谊的精神，特别是如果你从来没有看过过在一个不是“炸毁地下基因诊所”的背景下的秋叶原美景的时候。</p>
-<p><strong>Z9-4：</strong>其他人看上去状态还好。</p>
-<p><strong>2085-D：</strong>他们都是装的。我在你们关我们时可没有装，现在我也没有装给你看。这个世界糟透了，我们大概在七天后就会去世，而且我也，有点厌倦生气了。</p>
-<p><em>（2085-D低声吼了几声。）</em></p>
-<p><strong>2085-D：</strong>如果她还活着，我就杀了她。她对加密做了些什么——</p>
-<p><em>（军械库的门开了。2085-B——黑白头发和耳朵，头上戴着头带——走了出来。）</em></p>
-<p><strong>2085-B：</strong>它没有锁上，你这蠢蛋。我把它关上了——我想确定是你。</p>
-<p><strong>2085-D：</strong>顺带一提，你输了。你的小姐妹们把波动炮搞坏了。</p>
-<p><strong>2085-B：</strong>好吧，这艘船该易主了。</p>
-</div>
-</div>
-</div>
-</div>
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">延伸探索记录&nbsp;Day&nbsp;25</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">Hide&nbsp;Log</a></div>
-<div class="collapsible-block-content">
-<div style="display: inline-block; border:dashed 1px #999999; background:#F5F5F5; float:center; width:84%; padding:1px 15px; margin: 10px 10px 10px 40px">
-<p><em>（Z9小队和所有2085都站在舰桥上，刚刚签署了一份由基金会起草的文件，在2085们都死亡后将SCP-2117的所有权移交给基金会。2085-A向前走了一步。）</em></p>
-<p><strong>2085-A:</strong>好吧，这些都是复制机复制出来的。</p>
-<p><em>（2085-A提供了一组与SCP-2117-A-1相同的立方体，但它们表面的咒语不同。Z9-Tech-2取了一个立方体。</em></p>
-<p><strong>Z9-Tech-2：</strong>“家永<em>大队炮丸</em>之卧，但今蔚蓝地球吾归。”这东西会把我们带向哪啊我说？</p>
-<p><strong>2085-A：</strong>长野郊外的田野。这就是它最初撞击的地方。</p>
-<p><strong>Z9-1：</strong>听到这个了吗同志们？我们准备回去了。</p>
-<p><em>（Z9-1看了看集结完毕的2085们。）</em></p>
-<p><strong>Z9-1：</strong>所以，你们要去哪，在你们……你知道的。</p>
-<p><strong>2085-B：</strong>喝几杯，玩游戏，看动漫。回忆下“旧时光”之类的。</p>
-<p><strong>2085-C：</strong>我会监视我们所有人，确保我们都舒舒服服的。</p>
-<p><strong>Z9-4：</strong>我们在地球上有基因治疗。你真的不必——</p>
-<p><strong>2085-E：</strong>不仅仅是我们的基因会失效的缘故。我们最初被设计出来也设计好了这个结局。</p>
-<p><em>（2085-E向前走了一步，将一个U盘交给Z9-1。）</em></p>
-<p><strong>2085-E：</strong>如何开这艘船的教材。包括启动波动炮的口令，如何喂养小梭，还有怎么使用机组人员名单的方法。</p>
-<p><strong>2085-D：</strong>小梭去哪了？它也被替换没了吗？</p>
-<p><strong>2085-C：</strong>这……嗯……原来的扫描器说船上有十二个，我们全到这来了，也只有十一个人。</p>
-<p><em>（SCP-2117-A-3出现在2085背后，伸出长长的舌头吃掉了Z9-Tech-2所持有的SCP-2117-A-1。）</em></p>
-<p><strong>Z9-Tech-2：</strong>嘿！什么鬼——我的天哪这是个外星人。</p>
-<p><em>（2085-E跳到SCP-2117-A-3<sup class="footnoteref"><a id="footnoteref-717564-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-8')">8</a></sup>上，开始试图让它呕吐。）</em></p>
-<p><strong>2085-E：</strong>给我！吐出来小梭，现在！</p>
-<p><em>（SCP-2117-A-3吞下了SCP-2117-A-1，然后从2085-E下方消失。）</em></p>
-<p><strong>2085-C：</strong>什么，为什么？</p>
-<p><strong>SCP-2117-A-2：</strong>我让他这么做的。</p>
-<p><em>（Z9小队和所有的2085都转向查看SCP-2117舰桥的主窗口，这些主窗口已变成一个屏幕。一个穿着宇航员制服，戴着巫师帽的病态男子俯视着聚集在一起的人。）</em></p>
-<p><strong>SCP-2117-A-2：</strong>我不想看着你们死，姑娘们。在过去的25年里你几乎没有离开过这艘船。这个宇宙的基金会仍然是一群混蛋，他们把你关起来，就因为你长了翅膀，并且拒绝治疗世界上的癌症……</p>
-<p><strong>Z9-2：</strong>嘿！</p>
-<p><strong>SCP-2117-A-2：</strong>但他们比之前好了。</p>
-<p><em>（SCP-2117-A-2的视图屏幕显示2019年的新闻头条图片。这些头条包括：）</em></p>
-<blockquote>
-<p>一个宗教是如何让科技行业陷入风暴的<sup class="footnoteref"><a id="footnoteref-717564-9" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-9')">9</a></sup></p>
-</blockquote>
-<blockquote>
-<p>Guterres秘书长：“我们不能一直忽视萨莫色雷斯<sup class="footnoteref"><a id="footnoteref-717564-10" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-10')">10</a></sup>”</p>
-</blockquote>
-<blockquote>
-<p>大脚怪目击率创历史新高<sup class="footnoteref"><a id="footnoteref-717564-11" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-11')">11</a></sup></p>
-</blockquote>
-<blockquote>
-<p>两个月后，10名接受实验药物试验的儿童从艾滋病毒中痊愈</p>
-</blockquote>
-<blockquote>
-<p>非法基因实验团伙，首次在非洲曝光</p>
-</blockquote>
-<blockquote>
-<p>地平线倡议：慈善还是邪教？</p>
-</blockquote>
-<blockquote>
-<p>在南美洲发现的遗迹可能是亚特兰蒂斯</p>
-</blockquote>
-<p><strong>2085-D：</strong>这些都是什么？</p>
-<p><strong>Z9-4：</strong>为末日做准备。</p>
-<p><strong>2085-A：</strong>什么？</p>
-<p><strong>Z9-2：</strong>世界将在未来几年内终结。我们正计划挽救它，如果我们这样做了，我们需要技术手段来迎接打击。</p>
-<p><strong>SCP-2117-A-2：</strong>黑兔公司公司条例第七条：“我们是一家人，没人会被饿着，没人会被抛下。”我把你们抛下了。</p>
-<p><strong>2085-A：</strong>巫师，你去世了，这不怪你。</p>
-<p><strong>SCP-2117-A-2：</strong>你们五个是我经历过的最大的冒险。但你们从未有过平静的生活——你们总是在星空和宇宙中奔跑。死亡不是平静——它是虚无。</p>
-<p><strong>SCP-2117-A-2：</strong>我不只是想让你们活下去。我想让你们过上平静的生活。</p>
-<p><em>（2085们都显示出困惑和苦恼。2085-C拥抱2085-D。所有人保持沉默了几分钟。2085-A说话了，声音很紧张。）</em></p>
-<p><strong>2085-A：</strong>经全体一致表决，黑兔公司将与Meghan Yu、Mitchell Arnold、Craig Brown、Francis Lucas<sup class="footnoteref"><a id="footnoteref-717564-12" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-717564-12')">12</a></sup>以及地球所有相关组织一道，接受目前状况的治疗。</p>
-<p><strong>2085-B：</strong>我得花点时间才能找到图纸——</p>
-<p><em>（2085-B咳嗽起来。）</em></p>
-<p><strong>2085-B：</strong>对不起，请你们在复制器里找到立方体的蓝图重造一个吧。在那之前卸一次货。</p>
-<p><strong>2085-D：</strong>我想我们还有一天肝脏就会脱落。在此之前谁想要喝点日式清酒？</p>
-</div>
-</div>
-</div>
-</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
 <hr />
-<h2><span>导航：</span></h2>
-<h4><span><a href="http://scp-wiki-cn.wikidot.com/scp-2117/offset/0">核心文件</a></span></h4>
-<h4><span><a href="http://scp-wiki-cn.wikidot.com/scp-2117/offset/1">探索</a></span></h4>
-<h3><span>正在观看：<a href="http://scp-wiki-cn.wikidot.com/scp-2117/offset/2">延伸探索记录</a></span></h3>
-<h4><span><a href="http://scp-wiki-cn.wikidot.com/scp-2117/offset/3">SCP-2117-B释放前面谈</a></span></h4>
-<h4><span><a href="http://scp-wiki.net/2117-recovered-materials">文件2117-Ω-2A，已恢复材料</a></span></h4>
-<div class="footnotes-footer">
-<div class="title">脚注</div>
-<div class="footnote-footer" id="footnote-717564-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-1')">1</a>. <strong>译注：</strong>出自《天元突破红莲螺岩》，原是螺旋族，后为了保护宇宙抑制了自己的进化，打压其他螺旋族。</div>
-<div class="footnote-footer" id="footnote-717564-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-2')">2</a>. <strong>译注：</strong>黄金体验镇魂曲，原文为G.E. Requiem，Golden Experience Requiem的缩写。</div>
-<div class="footnote-footer" id="footnote-717564-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-3')">3</a>. <strong>译注：</strong>《超级战队》是由日本朝日电视台于1975年开始制作的日本特摄系列英雄故事，至今共有44部（2020年）。</div>
-<div class="footnote-footer" id="footnote-717564-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-4')">4</a>. <strong>译注：</strong>原文为I trust you as far as I can throw you，字面意义为，如果我能把你丢出去我就相信你。</div>
-<div class="footnote-footer" id="footnote-717564-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-5')">5</a>. <strong>译注：</strong>Ed Gein，著名变态杀人狂，杀人后会将其皮肤割下。</div>
-<div class="footnote-footer" id="footnote-717564-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-6')">6</a>. 日语，意思是“过劳死”。</div>
-<div class="footnote-footer" id="footnote-717564-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-7')">7</a>. <strong>译注：</strong>日文，意为“你下一句要说的话是‘如果你再这么做我会一拳打在你那该死的脸上！’”</div>
-<div class="footnote-footer" id="footnote-717564-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-8')">8</a>. <strong>译注：</strong>原文为2117-A-4，疑似笔误。</div>
-<div class="footnote-footer" id="footnote-717564-9"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-9')">9</a>. <strong>译注：</strong>可能指破碎之神教会。</div>
-<div class="footnote-footer" id="footnote-717564-10"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-10')">10</a>. <strong>译注：</strong>SCP-1173。</div>
-<div class="footnote-footer" id="footnote-717564-11"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-11')">11</a>. <strong>译注：</strong>SCP-1000。</div>
-<div class="footnote-footer" id="footnote-717564-12"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-717564-12')">12</a>. <strong>译注：</strong>以上四个名字是机动特遣队Z9-1～4的真名。</div>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p>在一个要被遗忘的梦里，我看到大地颤抖了一下，一个巨人撕开了它的外壳，在黑暗中咆哮，同时，它那残忍的双手抓住了毗邻它所造出的深谷的山峰，将它自己举向空中。</p>
+<p>在另一个梦里，我坐在一个我深爱着的女人身边，握着正在轻轻哭泣的她的手，我的身体挡住了她，不让她工友好奇的目光打扰她。我告诉她，一切安好，我们都很安全。她问我知不知道我所说话的含义。</p>
+<p>她和我讲进入基金会设施的故事，那些设施现在已被享用过神尸的造物破坏。无论何时，当她经过另一名被屠杀、皮肤在室温下出现脓肿的研究员时，她都会告诉自己说，她已经看过更糟糕的事情，并<em>深信不疑</em>。他们背地里把她的特遣队称作卫生人员；他们捡起Keter遗留的残余。</p>
+<p>当我醒来后，我不会认出她，但在我的梦里，我紧紧的抱住她，告诉她她很好。她是一名研究员，不是士兵，也从未做过她所描述的事情。那只是梦。她为此笑了。</p>
+<p>“我的房间里有一扇窗户，”她说，“每晚，我抬头看月亮与星星时，就会想起我做过的一个<strong>梦</strong>。”</p>
+<p>“一个梦？”我问道，因为我也会做噩梦。</p>
+<p>“我独身一人，在一条尽头有十三个出口的笔直走廊里全副武装。透过天花板上断裂的钢铁，我所能听到的只有<strong>巨人</strong>撕裂石头与冰块发出的恐怖尖声。”</p>
+<p>我轻轻地抱住哭得更厉害的她，我的手碰到了他的肩膀。我开始试图安慰她，手指漂过她的背，在她的发丝下划过，并感觉她的脖底有一道<strong>疤</strong>。就像是反复注射<strong>记忆删除药剂</strong>的<strong>针痕</strong>。</p>
+<p>“这是什么？”我大声地问。她打了个颤。</p>
+<p>“在我的梦里，”她顿了顿，回答道，“我选择了正确的出口。我进入了一间使用像玻璃一样光滑的硫磺做成墙的房间，房间的中央是一颗被烟灰熏黑的跳动的心脏。那颗心脏对我说话。”</p>
+<p>我喃喃道。“它都说了什么？”</p>
+<p>“他向我展示了图片，里面是一个表示着<span style="color: #cb4b4b"><strong>战争</strong></span>与<span style="color: #cb4b4b"><strong>死亡</strong></span>的巨人，它冲破了地球表面，向着夜晚的天空发出了一声巨大的可怕尖叫，眼睛转向月亮。突然，天空被复仇之鸟填满，向着它巨大的身体一枚接一枚地发射<strong>导弹</strong>，直到其再次逐渐退入地表之内。”</p>
+<p>我该怎么回答？我的舌头卡在喉咙里面，拼命想要告诉她<strong>真相</strong>。</p>
+<p>“我也做过同样的梦，”我说。“现在，每个晚上我都能听到巨人撕裂地面，又一遍遍地被赶回去的声音。”</p>
+<p>她现在离我越来越远。她的身体就像一个<strong>幽灵</strong>，逃离我的拥抱，渐渐地失去色彩。</p>
+<p>“我很高兴，”她低声说。</p>
+<p>她走了。</p>
+<p><span style="color: #d0d0d0">Skyler。</span></p>
+<p><span style="color: #88a7a9">她的名字是Skyler。</span></p>
+<p><span style="color: #97c8cb">还有我的名字是Natalie。</span></p>
+<p>机动特遣队Upsilon-1从未存在过。他们从没有一个叫Skyler的成员，Site-17也从未被摧毁。离站点1英里远的那片空地上什么都没有。没有每月两次能撼动站点的地震。</p>
+<p>这里也没有尖叫。</p>
+<p>如果那些东西都是真的的话，我会记得的。我会记得<span style="color: #97c8cb"><strong>她</strong></span>的。</p>
+<p>我房内的空气再次变得浓稠，通风口也开始嗡嗡作响。他们用无味的遗忘填满整个房间，再次诱骗我躺在床上。</p>
+<p><span style="color: #97c8cb">在我那快要被埋藏的梦中，我看到她站在沙漠之间，满面平静。</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<hr />
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<p><span style="white-space: pre-wrap;">&#32;</span></p>
+<div class="terminal">
+<div class="collapsible-block">
+<div class="collapsible-block-folded" style="display:none"><a class="collapsible-block-link" href="javascript:;">[+]&nbsp;存取&nbsp;Site-17内APAS启用记录？&nbsp;[+]</a></div>
+<div class="collapsible-block-unfolded">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+<div class="collapsible-block-content">
+<blockquote>
+<p><a href="/apas/offset/4">紧急启动：模因传播程序</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/3">紧急启动：对电磁设备的校正</a></p>
+</blockquote>
+<blockquote>
+<p><a href="/apas/offset/0">返回 启动屏幕</a></p>
+</blockquote>
+</div>
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">[-]&nbsp;收回面板&nbsp;[-]</a></div>
+</div>
+</div>
 </div>
 </div>
     
     
     
     </div>
-<div class="footer-wikiwalk-nav">
-<div style="text-align: center;">
-<p>&#171; <a href="/scp-2116">SCP-2116</a> | SCP-2117 | <a href="/scp-2118">SCP-2118</a> &#187;</p>
+<div style="height: 25px"></div>
+<div class="licensebox">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;授权&nbsp;/&nbsp;引用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">‡&nbsp;隐藏授权&nbsp;/&nbsp;引用</a></div>
+<div class="collapsible-block-content">
+<p>请按如下方式引用此页：</p>
+<div class="list-pages-box">    <div class="list-pages-item">
+
+
+<blockquote>
+<p>“<a href="/apas">自动化无源记忆删除系统 Ver.17.09</a>”，作者 Nagiros，来自 <a href="http://www.scpwiki.com/">SCP 维基</a>。原文链接：<a href="http://www.scpwiki.com/apas">http://www.scpwiki.com/apas</a>。译者 joke3579，来自 <a href="http://scp-wiki-cn.wikidot.com/">SCP-CN 维基</a>。译文链接：<a href="http://scp-wiki-cn.wikidot.com/apas">http://scp-wiki-cn.wikidot.com/apas</a>。遵循 <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC-BY-SA</a> 协议。</p>
+</blockquote>
+</div>
+    
+    
+    
+    </div>
+<p>更多详情请参阅<a href="http://scp-wiki-cn.wikidot.com/licensing-guide">授权指南</a>。<br />
+<strong>授权信息</strong></p>
+<div class="content-separator" style="display: none:"></div>
+<blockquote>
+<p><strong>文件名：</strong>dro-0001<br />
+<strong>图像名：</strong>北领地的黑人硬汉<br />
+<strong>图像作者：</strong>NVE（Charles Rabot）<br />
+<strong>授权协议：</strong>CC BY-SA 2.0<br />
+<strong>来源链接：</strong><a href="https://www.flickr.com/photos/nve/8733992389/">Flickr</a></p>
+</blockquote>
+<div class="content-separator" style="display: none:"></div>
+<p>更多维基文档信息，请见<a href="http://www.scp-wiki.net/licensing-master-list">版权信息总览</a>。</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -904,7 +820,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/scp#pages">scp</a><a href="/system:page-tags/tag/thaumiel#pages">thaumiel</a><a href="/system:page-tags/tag/%E6%97%B6%E7%A9%BA#pages">时空</a><a href="/system:page-tags/tag/%E6%98%9F%E9%99%85#pages">星际</a><a href="/system:page-tags/tag/%E8%A7%82%E5%AF%9F%E5%BD%B1%E5%93%8D#pages">观察影响</a><a href="/system:page-tags/tag/%E8%BD%BD%E5%85%B7#pages">载具</a><a href="/system:page-tags/tag/%E9%A2%98%E5%86%99#pages">题写</a><a href="/system:page-tags/tag/%E9%BB%91%E5%85%94%E5%85%AC%E5%8F%B8#pages">黑兔公司</a>
+                                <a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E6%B7%B1%E4%BA%95%E7%9B%AE%E5%BD%95#pages">深井目录</a>
                             </span>
                         </div>
                     
@@ -912,12 +828,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 5, 最后编辑于: <span class="odate time_1588567132 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">04 May 2020 04:38</span></div>
+                            <div id="page-info">页面版本: 10, 最后编辑于: <span class="odate time_1609579490 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">02 Jan 2021 09:24</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+21</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+5</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13287790/scp-2117" class="btn btn-default" id="discuss-button">讨论 (14)</a>
+<a href="/forum/t-13298810/apas" class="btn btn-default" id="discuss-button">讨论 (7)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -984,21 +900,32 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://galacticunity.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/galacticunity.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scpcommune.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scpcommune.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://galacticunity.wikidot.com">Star Wars - Galactic Unity</a></h3>
+            <h3><a target="_blank" href="http://scpcommune.wikidot.com">The SCP Commune</a></h3>
             <div class="desc">          
-              A community of Star Wars Sims in Second Life.
+              Satirize, Collectivize, Politicize
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://zombiecafe.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/zombiecafe.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://mactutorial.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/mactutorial.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://zombiecafe.wikidot.com">Zombie Cafe Wiki</a></h3>
+            <h3><a target="_blank" href="http://mactutorial.wikidot.com">Mac Video Tutorial</a></h3>
+            <div class="desc">          
+              Mac OS X video tutorial i18n subtitles project
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://bozic-nation.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/bozic-nation.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://bozic-nation.wikidot.com">Bozic Nation</a></h3>
             <div class="desc">          
               
             </div>
@@ -1006,23 +933,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://anime-planet.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/anime-planet.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://albums-template.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/albums-template.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://anime-planet.wikidot.com">Anime Planet</a></h3>
+            <h3><a target="_blank" href="http://albums-template.wikidot.com">Albums-template</a></h3>
             <div class="desc">          
-              
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://exploringsciencewiki.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/exploringsciencewiki.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://exploringsciencewiki.wikidot.com">The Exploring Our World Wiki</a></h3>
-            <div class="desc">          
-              A Site for Everyone Interested in Teaching and Learning
+              Your pictures
             </div>
           </div>
         </div>

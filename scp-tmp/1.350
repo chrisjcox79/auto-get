@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>旧维基 - SCP基金会</title>
+    <title>伴月星恒 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "the-old-wiki";
-        OZONE.request.timestamp = 1610202521;
+        WIKIREQUEST.info.requestPageName = "the-moons-stellar-companion";
+        OZONE.request.timestamp = 1610223946;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "the-old-wiki";
-        WIKIREQUEST.info.pageId = 1184609422;
+                WIKIREQUEST.info.pageUnixName = "the-moons-stellar-companion";
+        WIKIREQUEST.info.pageId = 701436797;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -117,486 +117,1171 @@
     </script>
         
 <style>
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/normalize.min.css");
+@import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
+</style>
+<style>
+@import url("http://scp-wiki-cn.wikidot.com/theme:ch-scp-theme/code/1");
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+
+#page-content {
+    font-size: 120%;
+}
+
+#page-content > p {
+    padding: 0 1em;
+}
+
+.poem {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    background: url(http://www.scp-wiki.net/local--files/the-moons-stellar-companion/galfed_circle.png);
+    -webkit-background-size: contain;
+            background-size: contain;
+    -webkit-flex-shrink: 2;
+        -ms-flex-negative: 2;
+            flex-shrink: 2;
+}
+
+.poem::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(http://scptestwiki.wikidot.com/local--files/sigma:kuang-qiu-2/galfed_circle.png);
+    -webkit-background-size: contain;
+            background-size: contain;
+    -webkit-animation: rotation 300s infinite linear;
+       -moz-animation: rotation 300s infinite linear;
+         -o-animation: rotation 300s infinite linear;
+            animation: rotation 300s infinite linear;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+.poem:hover::before {
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+         -o-animation-play-state: running;
+            animation-play-state: running;
+}
+
+.poem::after {
+    content: " ";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.poem > .stanza {
+    width: 25%;
+    position: relative;
+    text-align: center;
+    font-family: 'ZCOOL QingKe HuangYou', var(--title-font);
+    font-size: -webkit-calc(var(--base-font-size) * 1.2);
+    font-size: -moz-calc(var(--base-font-size) * 1.2);
+    font-size: calc(var(--base-font-size) * 1.2);
+    font-weight: 600;
+    padding: -webkit-calc(var(--body-width-on-desktop) * 0.0125);
+    padding: -moz-calc(var(--body-width-on-desktop) * 0.0125);
+    padding: calc(var(--body-width-on-desktop) * 0.0125);
+}
+
+.stanza > div {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.stanza > .chinese,
+.stanza > .english {
+    -webkit-transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -o-transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -moz-transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.stanza > .chinese {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    font-weight: 500;
+}
+
+.stanza > .english {
+    opacity: 0;
+    -webkit-filter: blur(3em);
+            filter: blur(3em);
+}
+
+.poem:hover .chinese {
+    opacity: 0;
+    -webkit-filter: blur(3em);
+            filter: blur(3em);
+}
+
+.poem:hover .english {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+}
+
+.poem:hover .chinese,
+.poem:hover .english {
+    -webkit-transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -o-transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -moz-transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-filter 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.poem > .stanza > .chi,
+.poem-font .chi {
+    font-family: '方正姚体';/* 调整 */
+}
+
+.chi {
+    height: 100%;
+    width: 0.5em;
+    display: inline-block;
+    position: relative;
+}
+
+.chi::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.english > span:nth-child(3)::before {
+    content: "ˇ";
+    top: 0;
+}
+
+.english > span:nth-child(4)::before {
+    content: "`";
+    top: 0;
+}
+
+#page-content > p:nth-child(5) .chi::before {
+    content: "`";
+    top: 0;
+    left: 0.15em;
+}
+
+.poem-font .chi::before {
+    content: "-";
+    top: -0.5em;
+}
+
+.stanza.one {
+    margin-top: -webkit-calc(var(--body-width-on-desktop) * -0.4);
+    margin-top: -moz-calc(var(--body-width-on-desktop) * -0.4);
+    margin-top: calc(var(--body-width-on-desktop) * -0.4);
+}
+
+.stanza.two {
+    margin-top: -webkit-calc(var(--body-width-on-desktop) * -0.1375);
+    margin-top: -moz-calc(var(--body-width-on-desktop) * -0.1375);
+    margin-top: calc(var(--body-width-on-desktop) * -0.1375);
+}
+
+.stanza.three {
+    margin-top: -webkit-calc(var(--body-width-on-desktop) * 0.1375);
+    margin-top: -moz-calc(var(--body-width-on-desktop) * 0.1375);
+    margin-top: calc(var(--body-width-on-desktop) * 0.1375);
+}
+
+.stanza.four {
+    margin-top: -webkit-calc(var(--body-width-on-desktop) * 0.4);
+    margin-top: -moz-calc(var(--body-width-on-desktop) * 0.4);
+    margin-top: calc(var(--body-width-on-desktop) * 0.4);
+}
+
+.poem-font {
+    font-size: -webkit-calc(var(--base-font-size) * 1.2);
+    font-size: -moz-calc(var(--base-font-size) * 1.2);
+    font-size: calc(var(--base-font-size) * 1.2);
+    font-family:  '方正姚体';/* 调整 */
+    font-weight: 600;
+}
+
+.glitch {
+    position: relative;
+    opacity: 0.9;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 0.125rem;
+    text-shadow: -0.0625rem 0 rgba(var(--bright-accent));
+    animation: glitch-anim-1 14s infinite linear alternate-reverse;
+    -webkit-transform: scaleX(-1);
+       -moz-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+         -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+    -webkit-filter: FlipH;
+            filter: FlipH;
+    opacity: 0.75;
+}
+
+.glitch::after {
+    left: -0.125rem;
+    text-shadow: -0.0625rem 0 rgba(var(--dark-accent));
+    animation: glitch-anim-2 10s infinite linear alternate-reverse;
+    opacity: 0.4;
+}
+
+.leftTriangle,
+.rightTriangle {
+    width: 40%;
+    height: var(--body-width-on-desktop);
+    content: " ";
+    clear: unset !important;
+}
+
+.squish {
+    height: var(--body-width-on-desktop);
+    position: relative;
+}
+
+#page-content > div.squish > br {
+    display: none;
+}
+
+.sidd {
+    padding: 25em 2em 2em;
+    margin: 0 0 1em 0;
+    position: relative;
+}
+
+.sidd > p:nth-child(1) {
+    margin-top: 0;
+    padding-top: 1em;
+}
+
+.sidd::before,
+.sidd::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidd::after {
+    background: rgba(var(--dark-accent));
+    z-index: -2;
+    -webkit-border-radius: 0 0 2em 2em;
+            border-radius: 0 0 2em 2em;
+}
+
+/* Supports */
+
+@supports (mix-blend-mode: screen) {
+    .poem::before {
+     mix-blend-mode: darken;
+    }
+
+    .squish::after {
+     mix-blend-mode: soft-light;
+    }
+
+    .sidd:before {
+     mix-blend-mode: exclusion;
+    }
+}
+
+@supports ((-webkit-clip-path: url("")) or (clip-path: url(""))) {
+    .glitch::before {
+     background: rgba(var(--white-monochrome));
+     -webkit-clip-path: polygon(0 24%, 100% 24%, 100% 64%, 0 64%);
+     clip-path: polygon(0 24%, 100% 24%, 100% 64%, 0 64%);
+    }
+
+    .glitch::after {
+     background: rgba(var(--white-monochrome));
+     -webkit-clip-path: polygon(0 74%, 100% 74%, 100% 91%, 0 91%);
+     clip-path: polygon(0 74%, 100% 74%, 100% 91%, 0 91%);
+    }
+
+}
+
+@supports (((-webkit-mask-image: url("")) or (mask-image: url(""))) or (-webkit-mask-image: url(""))) {
+    .sidd:before {
+     background-image: url(http://www.scp-wiki.net/local--files/component:galactic-theme/galfed_bg.png);
+     z-index: -1;
+     -webkit-background-size: contain;
+             background-size: contain;
+     background-repeat: no-repeat;
+     background-position: top;
+     -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+         -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+             transform: rotate(180deg);
+     mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(40%, rgba(0, 0, 0, 0)));
+     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%);
+     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(40%, rgba(0, 0, 0, 0)));
+     -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%);
+     -webkit-border-radius: 2em 2em 0 0;
+             border-radius: 2em 2em 0 0;
+    }
+
+    .sidd::after {
+     background: rgba(var(--dark-accent));
+     z-index: -2;
+     -webkit-border-radius: 0 0 2em 2em;
+             border-radius: 0 0 2em 2em;
+     mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+     -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+     padding-top: 50rem;
+     margin-top: -50rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .poem > .stanza {
+     font-size: -webkit-calc(var(--base-font-size) * 0.9);
+     font-size: -moz-calc(var(--base-font-size) * 0.9);
+     font-size: calc(var(--base-font-size) * 0.9);
+     font-weight: 600;
+     padding: 0;
+     margin-left: -webkit-calc(var(--body-width-on-desktop) * -0.01);
+     margin-left: -moz-calc(var(--body-width-on-desktop) * -0.01);
+     margin-left: calc(var(--body-width-on-desktop) * -0.01);
+     margin-right: -webkit-calc(var(--body-width-on-desktop) * -0.01);
+     margin-right: -moz-calc(var(--body-width-on-desktop) * -0.01);
+     margin-right: calc(var(--body-width-on-desktop) * -0.01);
+    }
+
+    .stanza.one {
+     margin-top: -webkit-calc(var(--body-width-on-desktop) * -0.2325);
+     margin-top: -moz-calc(var(--body-width-on-desktop) * -0.2325);
+     margin-top: calc(var(--body-width-on-desktop) * -0.2325);
+    }
+
+    .stanza.two {
+     margin-top: -webkit-calc(var(--body-width-on-desktop) * -0.075);
+     margin-top: -moz-calc(var(--body-width-on-desktop) * -0.075);
+     margin-top: calc(var(--body-width-on-desktop) * -0.075);
+    }
+
+    .stanza.three {
+     margin-top: -webkit-calc(var(--body-width-on-desktop) * 0.075);
+     margin-top: -moz-calc(var(--body-width-on-desktop) * 0.075);
+     margin-top: calc(var(--body-width-on-desktop) * 0.075);
+    }
+
+    .stanza.four {
+     margin-top: -webkit-calc(var(--body-width-on-desktop) * 0.2325);
+     margin-top: -moz-calc(var(--body-width-on-desktop) * 0.2325);
+     margin-top: calc(var(--body-width-on-desktop) * 0.2325);
+    }
+    .glitch {
+        font-size: 78%;
+    }
+}
+
+/* Animations */
+
+@-webkit-keyframes glitch-anim-1 {
+    0% {
+     -webkit-clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+     clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+    }
+
+    5% {
+     -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+     clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+    }
+
+    10% {
+     -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+     clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+    }
+
+    15% {
+     -webkit-clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+     clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+     clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+    }
+
+    25% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+    }
+
+    30% {
+     -webkit-clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+     clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+    }
+
+    35% {
+     -webkit-clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+     clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+    }
+
+    45% {
+     -webkit-clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+     clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+    }
+
+    50% {
+     -webkit-clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+     clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+    }
+
+    55% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+     clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+    }
+
+    65% {
+     -webkit-clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+     clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+    }
+
+    70% {
+     -webkit-clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+     clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+    }
+
+    75% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+    }
+
+    85% {
+     -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+     clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+    }
+
+    90% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+    }
+
+    95% {
+     -webkit-clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+     clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+    }
+}
+
+@-moz-keyframes glitch-anim-1 {
+    0% {
+     -webkit-clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+     clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+    }
+
+    5% {
+     -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+     clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+    }
+
+    10% {
+     -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+     clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+    }
+
+    15% {
+     -webkit-clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+     clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+     clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+    }
+
+    25% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+    }
+
+    30% {
+     -webkit-clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+     clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+    }
+
+    35% {
+     -webkit-clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+     clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+    }
+
+    45% {
+     -webkit-clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+     clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+    }
+
+    50% {
+     -webkit-clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+     clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+    }
+
+    55% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+     clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+    }
+
+    65% {
+     -webkit-clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+     clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+    }
+
+    70% {
+     -webkit-clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+     clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+    }
+
+    75% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+    }
+
+    85% {
+     -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+     clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+    }
+
+    90% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+    }
+
+    95% {
+     -webkit-clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+     clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+    }
+}
+
+@-o-keyframes glitch-anim-1 {
+    0% {
+     -webkit-clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+     clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+    }
+
+    5% {
+     -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+     clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+    }
+
+    10% {
+     -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+     clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+    }
+
+    15% {
+     -webkit-clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+     clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+     clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+    }
+
+    25% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+    }
+
+    30% {
+     -webkit-clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+     clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+    }
+
+    35% {
+     -webkit-clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+     clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+    }
+
+    45% {
+     -webkit-clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+     clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+    }
+
+    50% {
+     -webkit-clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+     clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+    }
+
+    55% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+     clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+    }
+
+    65% {
+     -webkit-clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+     clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+    }
+
+    70% {
+     -webkit-clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+     clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+    }
+
+    75% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+    }
+
+    85% {
+     -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+     clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+    }
+
+    90% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+    }
+
+    95% {
+     -webkit-clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+     clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+    }
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+     -webkit-clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+     clip-path: polygon(0 8%, 100% 8%, 100% 67%, 0 67%);
+    }
+
+    5% {
+     -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+     clip-path: polygon(0 30%, 100% 30%, 100% 94%, 0 94%);
+    }
+
+    10% {
+     -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+     clip-path: polygon(0 33%, 100% 33%, 100% 94%, 0 94%);
+    }
+
+    15% {
+     -webkit-clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+     clip-path: polygon(0 86%, 100% 86%, 100% 8%, 0 8%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+     clip-path: polygon(0 54%, 100% 54%, 100% 18%, 0 18%);
+    }
+
+    25% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 47%, 0 47%);
+    }
+
+    30% {
+     -webkit-clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+     clip-path: polygon(0 89%, 100% 89%, 100% 2%, 0 2%);
+    }
+
+    35% {
+     -webkit-clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+     clip-path: polygon(0 79%, 100% 79%, 100% 77%, 0 77%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 71%, 0 71%);
+    }
+
+    45% {
+     -webkit-clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+     clip-path: polygon(0 4%, 100% 4%, 100% 91%, 0 91%);
+    }
+
+    50% {
+     -webkit-clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+     clip-path: polygon(0 34%, 100% 34%, 100% 56%, 0 56%);
+    }
+
+    55% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 23%, 0 23%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+     clip-path: polygon(0 69%, 100% 69%, 100% 41%, 0 41%);
+    }
+
+    65% {
+     -webkit-clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+     clip-path: polygon(0 21%, 100% 21%, 100% 62%, 0 62%);
+    }
+
+    70% {
+     -webkit-clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+     clip-path: polygon(0 43%, 100% 43%, 100% 99%, 0 99%);
+    }
+
+    75% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 31%, 0 31%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+     clip-path: polygon(0 29%, 100% 29%, 100% 37%, 0 37%);
+    }
+
+    85% {
+     -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+     clip-path: polygon(0 44%, 100% 44%, 100% 58%, 0 58%);
+    }
+
+    90% {
+     -webkit-clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+     clip-path: polygon(0 37%, 100% 37%, 100% 28%, 0 28%);
+    }
+
+    95% {
+     -webkit-clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+     clip-path: polygon(0 12%, 100% 12%, 100% 27%, 0 27%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+     clip-path: polygon(0 23%, 100% 23%, 100% 70%, 0 70%);
+    }
+}
+
+@-webkit-keyframes glitch-anim-2 {
+    0% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    6.6666666667% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+    }
+
+    13.3333333333% {
+     -webkit-clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+     clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+     clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+    }
+
+    26.6666666667% {
+     -webkit-clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+     clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+    }
+
+    33.3333333333% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+     clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+    }
+
+    46.6666666667% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+    }
+
+    53.3333333333% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+     clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+    }
+
+    66.6666666667% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+    }
+
+    73.3333333333% {
+     -webkit-clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+     clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+     clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+    }
+
+    86.6666666667% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    93.3333333333% {
+     -webkit-clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+     clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+     clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+    }
+}
+
+@-moz-keyframes glitch-anim-2 {
+    0% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    6.6666666667% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+    }
+
+    13.3333333333% {
+     -webkit-clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+     clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+     clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+    }
+
+    26.6666666667% {
+     -webkit-clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+     clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+    }
+
+    33.3333333333% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+     clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+    }
+
+    46.6666666667% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+    }
+
+    53.3333333333% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+     clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+    }
+
+    66.6666666667% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+    }
+
+    73.3333333333% {
+     -webkit-clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+     clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+     clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+    }
+
+    86.6666666667% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    93.3333333333% {
+     -webkit-clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+     clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+     clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+    }
+}
+
+@-o-keyframes glitch-anim-2 {
+    0% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    6.6666666667% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+    }
+
+    13.3333333333% {
+     -webkit-clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+     clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+     clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+    }
+
+    26.6666666667% {
+     -webkit-clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+     clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+    }
+
+    33.3333333333% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+     clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+    }
+
+    46.6666666667% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+    }
+
+    53.3333333333% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+     clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+    }
+
+    66.6666666667% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+    }
+
+    73.3333333333% {
+     -webkit-clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+     clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+     clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+    }
+
+    86.6666666667% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    93.3333333333% {
+     -webkit-clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+     clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+     clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    6.6666666667% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 38%, 0 38%);
+    }
+
+    13.3333333333% {
+     -webkit-clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+     clip-path: polygon(0 76%, 100% 76%, 100% 88%, 0 88%);
+    }
+
+    20% {
+     -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+     clip-path: polygon(0 80%, 100% 80%, 100% 72%, 0 72%);
+    }
+
+    26.6666666667% {
+     -webkit-clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+     clip-path: polygon(0 31%, 100% 31%, 100% 45%, 0 45%);
+    }
+
+    33.3333333333% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 84%, 0 84%);
+    }
+
+    40% {
+     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+     clip-path: polygon(0 67%, 100% 67%, 100% 52%, 0 52%);
+    }
+
+    46.6666666667% {
+     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+     clip-path: polygon(0 20%, 100% 20%, 100% 89%, 0 89%);
+    }
+
+    53.3333333333% {
+     -webkit-clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+     clip-path: polygon(0 6%, 100% 6%, 100% 58%, 0 58%);
+    }
+
+    60% {
+     -webkit-clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+     clip-path: polygon(0 95%, 100% 95%, 100% 81%, 0 81%);
+    }
+
+    66.6666666667% {
+     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+     clip-path: polygon(0 2%, 100% 2%, 100% 31%, 0 31%);
+    }
+
+    73.3333333333% {
+     -webkit-clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+     clip-path: polygon(0 7%, 100% 7%, 100% 49%, 0 49%);
+    }
+
+    80% {
+     -webkit-clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+     clip-path: polygon(0 27%, 100% 27%, 100% 27%, 0 27%);
+    }
+
+    86.6666666667% {
+     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+     clip-path: polygon(0 1%, 100% 1%, 100% 55%, 0 55%);
+    }
+
+    93.3333333333% {
+     -webkit-clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+     clip-path: polygon(0 41%, 100% 41%, 100% 6%, 0 6%);
+    }
+
+    100% {
+     -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+     clip-path: polygon(0 5%, 100% 5%, 100% 70%, 0 70%);
+    }
+}
+</style>
+<style>
+/* 标题字体 */
+@import url("http://scpsandboxcn.wikidot.com/etinjat-typefaces/code/5");
 #page-title {
-  display: none;
-}
-</style>
-<style>
-#page-title {
-  display: none;
-}
-
-.meta-title {
-  border-bottom: solid 1px #bbbbbb;
-  color: #990011;
-  font-weight: normal;
-  margin: 0 0 0.6em;
-  padding: 0 0 0.25em;
-  font-size: 200%;
-}
-
-.meta-title p {
-  margin: 0;
-}
-</style>
-<style>
-.fake-link {
-color: #b01;
-text-decoration: none;
-background: transparent;
-cursor:pointer;
-}
-
-.fake-link:hover {
-text-decoration: underline;
-background-color: transparent;
-cursor:pointer;
-}
-
-.dummyDescription{
-line-height: 0em;
-border: 1px solid #CCC;
-margin: 1em 4em;
-padding: 0.5em;
-background-color: #F5F5F5;
-overflow: hidden;
-height: 100%;
-border-radius: 10px;
-box-shadow: 0 1px 5px rgba(0,0,0,.15),
-inset 0 1px 0 rgba(255,255,255,.8),
-inset 0 10px 5px rgba(255,255,255,.25),
-inset 0 -15px 30px rgba(0,0,0,.1)
-}
-
-.dummyOptions{
-text-align: right;
-margin: 0.2em 4em;
-color: #b01;
-}
-
-.dummySummaySentence{
-padding:0.5em 0em 1em 0em;
-}
-
-.dummySummaySentence:before{
-content:"サマリー";
-display:block;
-color: #777;
-font-size: 87%;
-bottom:0em;
-}
-
-.dummyHead{
-display:block;
-color: #777;
-font-size: 87%;
-}
-
-div.DummyNew-post {
-    text-align: left;
-    margin: 20px 0;
-}
-div.DummyNew-post .fake-link{
-    border: 1px solid #999;
-    background-color: #F7F7F7;
-    padding: 5px 10px;
-    font-size: 100%;
-    font-weight: bold;
-}
-
-.DummyForumTitle{
-padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
-font-size: 200%;
-color: #901;
-padding: 0;
-font-weight: normal;
-}
-
-.DummyForumTitle p{
-padding-top: 0.5em;
-display:block;
-padding:0px 0px 1px 0px;
-margin:0;
-border-bottom: 1px #999 solid;
-
-}
-
-.DummyForumTitle h2{
-padding-top: 0.5em; /* Firefox bug? ←I don't know :-P*/
-font-size: 100%;
-color: #901;
-display:block;
-padding:0px 0px 1px 0px;
-border-bottom: 1px #999 solid;
-font-weight: normal;
-}
-
-.DummyForumTitle ul{
-display:block;
-padding:0em;
-border-color: #bbb;
-font-size:50%;
-}
-
-.DummyForumTitle ul li{
-cursor:pointer;
-color: #b01;
-display:inline;
-background: transparent;
-padding:0;
-
-}
-
-.DummyForumTitle ul li:hover{
-text-decoration: underline;
-background-color: transparent;
-cursor:pointer;
-
-}
-
-.DummyForumTitle ul li:after {
-    content:" » ";
-color:#000;
-text-decoration:none;
-}
-
-.DummyForumTitle ul li:after {
-    content:" » ";
-color:#000;
-text-decoration:none;
-}
-
-.DummyForumTitle ul li:after:hover {
-text-decoration:none;
-}
-
-.DummyForumTitle ul li:last-child{
-text-decoration:none;
-color:#000;
-cursor:auto;
-}
-
-.DummyForumTitle ul li:last-child:hover {
-text-decoration:none;
-color:#000;
-}
-
-.DummyForumTitle ul li:last-child:after {
-    content : none ;
-}
-
-.post-container .dummyOptions{
-margin: 0.2em 0em;
-}
-
-.post-container .dummyOptions .fake-link{
-margin:0; padding:0;
-color: #77A;
-}
-
-.DummyStatistics{
-margin: 0.5em 0;
-padding: 0 0.5em;
-font-size: 87%;
-color: #666;
-text-align: right;
-float: right;
-line-height: 1.5em;
-}
-
-.Dummytitle{
-font-weight: bold;
-font-size: 1.2em;
-}
-
-.dummyPostHead{
-line-height: 0em;
-padding: 0.5em 1em;
-background-color: #eee;
-background: linear-gradient(to right, #eee, #eeecec);
-box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
-border-radius: 5px 5px 0 0;
-}
-
-.dummyPostHead p{
-margin:0;
-padding:0;
-}
-.dummyContent{
-
-}
-
-.dummyContent:after{
-    content: "返信 オプション";
-    display:block;
-    font-weight:bold;
-    color: #77A;
-    text-align:right;
-    padding: 10px 0 10px 0;
-}
-
-/*隠し機能*/
-.CustomTabR .yui-navset{
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    vertical-align: top;
-    width:100%;
-    border-left:none;
-}
-
-.CustomTabR .yui-navset ul {
-   border-bottom:none;
-    padding:0;
-    border-right:solid #333 2px;
-}
-
-.CustomTabR .yui-navset ul li{
-    display: block;
-}
-.CustomTabR .yui-navset .yui-nav li{
-margin:0;
-}
-
-.CustomTabR .yui-navset ul li.select{
-    display: block;
-    margin:0;
-    border-radius:0;
-}
-
-.CustomTabR  .yui-content{
-        background-color:#F6F6F6;
-        display:inline-block;
-        border:solid #000 1px;
-}
-
-.CustomTabR  .yui-content div{
-    width:100%;
-    border:none;
-    background-color:transparent;
-}
-
-.CustomTabRJ .yui-navset{
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    vertical-align: top;
-    width:100%;
-}
-
-.CustomTabRJ .yui-navset ul {
-   border-bottom:none;
-display:block;
-width:2.5em;
-border-right:solid #333 2px;
-    padding:0;
-    margin:0;
-}
-
-.CustomTabRJ .yui-navset .yui-nav li{
-    display: block;
-width:100%;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-text-orientation: upright; 
-margin:0;
-}
-
-.CustomTabRJ .yui-navset ul li.select{
-    display: block;
-    margin:0;
-    border-radius:0;
-}
-
-.CustomTabRJ  .yui-content{
-    border:solid #333 1px;
-    display:block;
-width:calc(100% - 2.5em);
-}
-
-.CustomTabRJ  .yui-content div{
-    width:98%;
-    border:none;
-    background-color:transparent;
-        padding: 0px 5px 0px 10px;
-}
-
-@media all and (-ms-high-contrast:none) {
-.CustomTabRJ .yui-navset .yui-nav li {
-width:100%;
-height:8em;
-overflow-y:hidden;
-}
-.CustomTabRJ .yui-navset ul li em{
-width:100%;
-height:8em;
-    overflow:hidden;
-}
-.CustomTabRJ .yui-navset ul {
-    overflow:hidden;
-}
-}
-
-_:-ms-lang(x), .CustomTabRJ .yui-navset ul li{
-width:100%;
-height:8em;
-    overflow:hidden;
-
-}
-
-_:-ms-lang(x), .CustomTabRJ .yui-navset ul li em{
-width:100%;
-height:8em;
-    overflow:hidden;
-}
-
-_:-ms-lang(x), .CustomTabRJ .yui-navset ul {
-    overflow:hidden;
-}
-
-.CustomTabRJC .yui-navset{
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    vertical-align: top;
-    width:100%;
-}
-
-.CustomTabRJC .yui-navset ul {
-   border:none;
-display:block;
-width:2.5em;
-    padding:0;
-    margin:0;
-    position:relative;
-    background-color:#333;
-
-}
-
-.CustomTabRJC .yui-navset .yui-nav li{
-    display: block;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-text-orientation: upright; 
-margin:0;
-padding:0;
-width:100%;
-
-}
-
-.CustomTabRJC .yui-nav li a{
-color:#333;
-display:block;
-    border:none !important;
-    padding:0;
-    margin:0;
-}
-
-.CustomTabRJC .yui-nav li a em{
-        background-color:#DADADA;
-display:block;
-color:#333;
-width:100%;
--moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
--webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
--o-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
--ms-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.4) inset;
-}
-
-.CustomTabRJC .yui-navset ul li.select{
-    border-radius:0 !important;
-    border-right:none !important;
-z-index:1000;
-}
-
-.CustomTabRJC .yui-nav li.selected a{
-
-        background-color:#F6F6F6;
-    border:none !important;
-    /*background:*/
-}
-
-.CustomTabRJC .yui-nav li.selected a em{
-        background-color:#F6F6F6;
-z-index:1000;
-position:static;
-width:100%;
-color:#333;
-overflow-y:hidden;
-border-left:solid #000 1px;
-border-bottom:solid #000 1px;
-    -moz-box-shadow: none;
--webkit-box-shadow: none;
--o-box-shadow: none;
--ms-box-shadow: none;
-}
-.CustomTabRJC .yui-nav li.selected a em:after{
-        content:" ";
-        background-color:#F6F6F6;
-display:block;
-height:100%;
-width:3px;
-position:absolute;
-right:-1px;
-top:0px;
-z-index:1000;
-border-top:solid #000 1px;
-
-}
-
-.CustomTabRJC  .yui-content{
-    border:none;
-    background-color:#F6F6F6;
-    width:calc(100% - 2.5em);
-    border:solid #333 1px;
-    margin:0;
-}
-
-.CustomTabRJC  .yui-content div{
-    width:98%;
-    padding: 0px 5px 0px 10px;
-    border:none;
-    background-color:transparent;
-}
-
-@media all and (-ms-high-contrast:none) {
-.CustomTabRJC .yui-navset .yui-nav li {
-width:100%;
-height:8em;
-overflow-y:hidden;
-}
-.CustomTabRJC .yui-navset ul li em{
-width:100%;
-height:8em;
-overflow-y:hidden;
-}
-
-}
-
-_:-ms-lang(x), .CustomTabRJC .yui-navset ul li{
-width:100%;
-height:8em;
-overflow-y:hidden;
-}
-
-_:-ms-lang(x), .CustomTabRJC .yui-navset ul li em{
-width:100%;
-height:8em;
-overflow-y:hidden;
-}
-</style>
-<style>
-.dummySummaySentence:before{
-content:"摘要:";
-}
-
-.dummyContent:after{
-    content: "回复 选项";
+    font-family: '超世纪中古印',"Poppins",sans-serif  !important;
 }
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
@@ -947,7 +1632,7 @@ content:"摘要:";
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=the-old-wiki" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=the-moons-stellar-companion" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -969,7 +1654,7 @@ content:"摘要:";
                     
                     
                         <div id="page-title">
-                            旧维基
+                            伴月星恒
                         </div>
                     
 
@@ -982,73 +1667,158 @@ content:"摘要:";
                     <div id="page-content">
                         
 
-
-
 <div class="list-pages-box">    <div class="list-pages-item">
 
 
+<blockquote>
+<p>这个故事是依托银河联邦主题而用心设计的，那主题可以在这里找到:<a href="/the-moons-stellar-companion">银河联邦主题</a>。投票结果将在两个页面上共享，所以您可选择喜欢的版面进行投票。</p>
+</blockquote>
+<div class="poem">
+<div class="stanza one">
+<div class="chinese">云 何 见 苦 集<br />
+万 般 缘 生 起<br />
+随 观 何 苦 矣<br />
+随 隐 何 苦 矣</div>
+<div class="english">Painful is birth<br />
+with that we see<br />
+in that we hide.</div>
+</div>
+<div class="stanza two">
+<div class="chinese">云 何 波 罗 蜜<br />
+言 寻 光 于 彼<br />
+彼 光 亦 于 此<br />
+蕴 九 喻 寻 子</div>
+<div class="english">Look there for light<br />
+it looks for you<br />
+among the Ji<span class="chi">u</span> y<span class="chi">u</span>.</div>
+</div>
+<div class="stanza three">
+<div class="chinese">云 何 了 智 知<br />
+汝 众 所 思 议<br />
+须 臾 尽 破 止<br />
+尽 破 灭 坏 识</div>
+<div class="english">Quickly, now<br />
+all that you know<br />
+is broken.</div>
+</div>
+<div class="stanza four">
+<div class="chinese">汝 众 所 思 议<br />
+须 臾 尽 破 止<br />
+不 住 不 住 住<br />
+无 缚 无 真 际</div>
+<div class="english">All that you know<br />
+comes undone<br />
+unconfined.</div>
+</div>
+</div>
+<hr />
+<p>第一识反馈给我的是嗅觉。那&#8230;&#8230;那是什么？就像紫罗兰丝缕，飘入眼帘，荡于心田。</p>
+<p>但我可以闻得到。</p>
+<p>舌识在鼻识之后重新回来了。回来的并不是流动的妙香，却如同刀子一样，猛烈地割着我的肌肤。那里面蕴含有话语，我细细品之，发现，那<span class="poem-font">就<span class="chi">是</span>悟</span>。所语所呗，圆了声色，度我以升，升越群星。</p>
+<p>我现在看见，我顶上有某些东西，正在放大光明。我身入化，是多么的柔和。这使得我心清净下来，使得群星隐去了光芒，使得我开目而视。</p>
+<hr />
+<p><span class="poem-font">“秋&#8230;&#8230;”</span> 忽然有如同钟鸣般的回声，响彻在我的头颅内， <span class="poem-font">“秋&#8230;&#8230;炽燃燃灭<sup class="footnoteref"><a id="footnoteref-287173-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-1')">1</a></sup>”</span></p>
+<p>我摇了摇头，只觉得眼中，似长了眚，如有轻纱覆面。</p>
+<p>“是讠&#8230;&#8230;”我的声音&#8230;那是我的音？“是谁在哪？”我看见我的话语，刚刚从嘴唇间飘出，就破碎了，像玻璃般清脆。</p>
+<p><span class="poem-font">“莫多问此，非尔所知<sup class="footnoteref"><a id="footnoteref-287173-2" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-2')">2</a></sup>，<span class="ruby">善<span class="rt">Metta</span></span><span class="chi">哉</span>，善<span class="chi">哉</span>。&quot;</span> 声音又是从哪里发出来？</p>
+<p>就在这时候我呻吟了一下，自观于身。黑色外衣，新熨的白衬衫，衬衫上有纽扣。下面则有皮套，安安全全地装着手枪。可是四条腿不受控制地乱动，随着音乐在摇摆。</p>
+<p>“等等&#8230;&#8230;”我眨了眨眼，此界瞬间幻灭在开眼时。“两条&#8230;”探手向下抓了抓，碰到了布匹感觉到其质感，然后我才叹了一口气。</p>
+<p>“我要一直睁开眼睛，要看穿那面纱。同时我也要想起我知道的&#8230;&#8230;.我到底是谁。</p>
+<p>“我的名字是匡秋，年三十有六。母亲&#8230;是孙凤，父亲&#8230;匡差智<sup class="footnoteref"><a id="footnoteref-287173-3" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-3')">3</a></sup>，”每每述之，纱似渐清，周遭愈明。“我&#8230;我是一个指挥官。”</p>
+<p><span class="poem-font">“嚇，果为乎？”</span>那声音又又来了，究竟在哪里？</p>
+<p>“是的，我就是！”我高声回答，自信己之所言<sup class="footnoteref"><a id="footnoteref-287173-4" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-4')">4</a></sup>。就在那时，乱眼障蔽，突如轻纱飘落，而双眼复明。</p>
+<p>我喘了口气，忽觉周边环境，其性不思议。看那无量种色种种金柱，无量高升升未止<sup class="footnoteref"><a id="footnoteref-287173-5" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-5')">5</a></sup>。虽说这样，也见到千手舞于顶，无声而有韵。它们时而伸挺，时而旋折，在不思议的高台上，就在它们口吐黄金之时。而那些宝柱，虽言越升越高，但次第下降也越来越近。</p>
+<p>我身旁绕着瀚海，瀚海蓝中泛白，应着节律共同跌宕起伏。但是，我为什么听不见呢？&#8230;</p>
+<p>沧海强袭，狂浪欲覆。虽说如此，我犹岿然不动。这些波涛近我则散，如远避，似有惧。而在那远远遁去的海面上，虚影浮现在十方。尽管我一直看着前面，我却都能看见它们。</p>
+<p>有大人踏空来，每一步都变换着高下。身子就像是金属一般，拖曳着暗紫色的影子。而影子里，内旋金银之章，更有符文之辉。天哪，那个人是多么漂亮，可谓是无所不美。</p>
+<p><span class="poem-font">“匡秋。”</span>那个人的话就像是先前听到的声音一样。我料得那人是男的，嗯，虽然他没有开玉口。“<span class="poem-font">此界非汝室。</span>”那人终于靠近了我，就从十方。</p>
+<p>“<span class="glitch" data-text="处何在身知不实确我......去回我让请">处何在身知不实确我&#8230;&#8230;去回我让请</span>。”我举手住了自己扼喉，不知何所言，不晓何所出。</p>
+<p><span class="poem-font">“善<span class="chi">哉</span>，善<span class="chi">哉</span>，匡秋。 遏捺汝归，我不能为，汝明即可。&quot;</span>那妙相盛美的男子，各从十方探手向我摩顶。我感觉我的心脏在疯狂地跳动着，仿佛要蹦出来一样。在其滑入无涯大海之前，于旷阒无垠之水界中回荡起，那咔咔作响的湿浊噪声。</p>
+<p>我集中注意力想要说话，尽管越来越困难，“我在做梦，我一定是在做梦。”愤怒和沮丧涌上了我的心头。我举起双手，试图用暴力来推开他，“不！我一定是在做梦，别碰我！”我的手撞在他的胸部上。</p>
+<p>那个男子的尖啸声，把我高举到他上面，我底下的平台迅速升起……或说是我周围的空间在下降。我说不清。</p>
+<p><span class="poem-font">“善<span class="chi">哉</span>，善<span class="chi">哉</span>！”</span>那个男人在下端尖啸。他成倍膨胀，自我登举，正化形为华美而又诡异的存在，<span class="poem-font">“汝须明了，汝须明了。”</span></p>
+<p>众多多臂生物，于其金柱之顶，狂舞未止。金汁从其口中倾泄不休，尽填下方瀚海。但见蓝、金、白之物，向上腾起，包绕这一怪形之人。尖啸忽然归于静默，而其身形，则消失在彩色潮起下。</p>
+<p>吐了口气，我抬头看了看自己。正当我这么做的时候，一个发光的白色球体，与我自身的存在相碰撞，然后一切都变白了。</p>
+<hr />
+<div class="sidd">
+<p>一阵刺耳的喘息声充斥着我的肺部，打破了厚漆般的沉寂。</p>
+<p><span class="poem-font">“静心，静心，今当心静也。”</span> 有一个声音，让我想起了我的母亲&#8230;&#8230;<span class="poem-font">“非时莫开眼，<span class="ruby">至信<span class="rt">Saddha</span></span>焉余悲<sup class="footnoteref"><a id="footnoteref-287173-6" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-6')">6</a></sup>。从者汝欲归，今朝亦得归。”</span>重担忽然落我心上，我自觉思绪变得迟钝。</p>
+<p>我知道自己现在，被摇篮般的手臂轻轻地托着，时上时下。我沉浸于它们，深陷于它们…</p>
+<p><em>我的名字是匡秋</em>, 自己又想了想自己——一个提醒。</p>
+<p><span class="poem-font">“呜呼其是耶？言且让我侪，应如是住心，应于此住心。<sup class="footnoteref"><a id="footnoteref-287173-7" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-7')">7</a></sup>”</span>那声音又来了。<em>我想要睁开双眼&#8230;</em></p>
+<p><span class="poem-font">“莫张目。”</span> 那声音又又又来了，似乎变更远了。</p>
+<p>我现在被放下了来，被放在一个温暖柔软的东西上。<em>我想睁开眼睛……</em></p>
+<p><span class="poem-font">“此刻告从者，方能开汝目。”</span></p>
+<p>我照着那声音去做——睁开眼睛。重量从我的脑海中消失，我的恐慌像潮水一样涌回我的胸膛。我的呼吸，我需要呼吸!</p>
+<p>我急促地吸气，吸入空气，尽管我没有感觉到，有空气从我的嘴唇中流过。</p>
+<p>呼&#8230;吸&#8230;&#8230;</p>
+<p>呼&#8230;吸&#8230;&#8230;</p>
+<p>好吧，我得弄清我在哪儿。但我对周围环境感到迷惑，似乎我的大脑不愿意去理解，我的眼睛所看到的事物。一切都感觉<em>不对劲，</em>糟糕透了，这非常不对劲。我面前的地板被分成多层平面，尽管我知道这里本该只有一……我看到了八重。</p>
+<p>向下看去，我没看到我曾期待的那柔软温和的平面，却只见得一个圆形图案，在数百个方向上旋转。我觉得我似乎能沉浸其中。</p>
+<p>不，不，我得逃出去。我站着，跑着，滚TM地滚出去&#8230;从…梦？这是一场大梦。必须如此。</p>
+<p><span class="poem-font">“从者汝非梦，今可观殊胜。无量恒荣现，悉达多再世。”</span></p>
+<p>声音又又又又来了，“你在哪？”我高声喊道，而我的声音使得我前面的地面坍缩合一。出于习惯，我拔出手枪，摆在胸前。</p>
+<p><span class="poem-font">“一切众生处，无量难思议。从者如所愿，悉能为彼现<sup class="footnoteref"><a id="footnoteref-287173-8" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-8')">8</a></sup>。”</span></p>
+<p>我脸上的眉毛拧成了个结，“妈妈快来帮帮我，这只是一个梦，不管怎么说我很快就会醒来。”</p>
+<p><span class="poem-font">“开悟启慧心，证果心永图。从者其岂误？欢喜赞叹之<sup class="footnoteref"><a id="footnoteref-287173-9" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-9')">9</a></sup>。求道汝还远，亦可助我侪。”</span></p>
+<p>我尽量不去理会那声音，虽然我内心的一切，都在试图自我扭曲。然而，我开始朝着一扇，一扇我只能形容为门的东西前进。我没有看到它，但我知道它在那里。</p>
+<p><span class="poem-font">“从者汝未备，内寻空灵性。从者亦未备，修入般若境。<sup class="footnoteref"><a id="footnoteref-287173-10" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-10')">10</a></sup>”</span> I我看见我的脑海里闪过了一只金色的眼睛，眼睛的瞳孔随着声调而放大。</p>
+<p>我尽我所能地回忆我来这里之前发生的事情。回忆起那片浩瀚无垠的沧海，那个绝美非凡的男人，那些舞动着万千手臂的剪影。但更前面的又是什么?</p>
+<p>巴图！我记得！巴图和那&#8230;&#8230;.幻戏？不，别开玩笑。</p>
+<p><span class="poem-font">“此亦非把戏——巴图曾释汝。譬如钻木也，内火焚蝉衣<sup class="footnoteref"><a id="footnoteref-287173-11" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-11')">11</a></sup>。送此八道中，君路犹伊始。”</span></p>
+<p>我叹了口气，当我看到有文字在我面前的空气中显形时，我试图忽视那个声音的努力失败了。</p>
+<p>当我伸手去开门时，我看不见门，也打不开了。“小把戏，这只是个小把戏。”我对自己发誓。</p>
+<p>而我又看到一个光灿灿的球体&#8230;…月亮?</p>
+<p><span class="poem-font">“是也此为月，不日近布萨<sup class="footnoteref"><a id="footnoteref-287173-12" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-12')">12</a></sup>。亦近脱壳时，皆蜕粗重身<sup class="footnoteref"><a id="footnoteref-287173-13" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-13')">13</a></sup>。<br />
+且与我侪行，求慧起恒法<sup class="footnoteref"><a id="footnoteref-287173-14" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-14')">14</a></sup>。<span class="ruby">度母 <span class="rt">Tārā</span></span>尽接引，俱悟弹指时。”</span></p>
+<p>为什么我还没有醒来？我现在只想醒来。我凝视着那月亮，想知道它到底有多远。</p>
+<p>当它慢慢旋转，露出另一只眼睛的银色虹膜时，我感到自身存在要被它燃烧殆尽。</p>
+<p><span class="poem-font">“且令我释汝，释汝从者身。其道迈不移，彼真尔需见。”</span></p>
+<p>当我凝视着凹凸不平的地表时，我绝望地举起手枪，试图把我从它那里摆脱出去——试图把自己于这个残酷的幻梦中唤醒。“我不是你的从者！停止这样叫我！”我大喊着。但在我有机会去扣动扳机之前，那声音说道：</p>
+<p><span class="poem-font">“无心自解脱”<sup class="footnoteref"><a id="footnoteref-287173-15" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-287173-15')">15</a></sup></span></p>
+<p>&#8230;&#8230;.尔后其身，须臾尽碎。碎作群星，荧光微闪。</p>
+</div>
+<div class="skysermon-nav">
+<div class="footer-wikiwalk-nav">
+<div class="left"><a href="/scp-4161">SCP-4161 — 轮回</a></div>
+<div class="center"><span style="font-size:120%;">第二章节</span></div>
+<div class="right"><a class="newpage" href="/scp-4801">SCP-4801 - 心解脱：出离苦海</a></div>
+</div>
+</div>
+
+
+
+<div style="display:none"><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/styleFrame.html?bhl" name="typeFrame"></iframe></div>
 
 
 
 
 
-
-
-<div class="DummyForumTitle">
-<p><a href="/the-old-wiki">旧维基</a> / 讨论区</p>
-<ul>
-<li>Forum</li>
-<li>单页讨论 / 单页讨论</li>
-<li>旧维基</li>
-</ul>
-</div>
-<div class="dummyDescription">
-<div class="DummyStatistics">开始由: <span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/blank.png" class="small" alt="blank.png" /><span class="fake-link">Wikidot</span></span><br />
-日期: 12 Sep 2008, 00:44<br />
-文章数: 3<br />
-<span class="rss-icon"><img src="http://www.wikidot.com/common--theme/base/images/feed/feed-icon-14x14.png" class="" alt="feed-icon-14x14.png" /></span>RSS: <span class="fake-link">新文章</span></div>
-<div class="dummySummaySentence" style="display:block">
-<p>这是与维基页面相关联的讨论内容 <a href="/the-old-wiki">旧维基</a>.</p>
-</div>
-</div>
-<div class="dummyOptions">
-<p><span class="fake-link">全部展开</span> <span class="fake-link">全部收合</span> <span class="fake-link">更多选项</span></p>
-</div>
-<div class="post-container">
-<div class="dummyPostHead">
-<p><span class="Dummytitle">&nbsp;</span></p>
-<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Kain%20Pathos%20Crow.png" class="small" alt="Kain%20Pathos%20Crow.png" /><span class="fake-link">Kain Pathos Crow</span></span> 12 Sep 2008, 00:45</div>
-</div>
-<div class="dummyContent">
-<p>但是进化那些东西太牛了！冲啊！</p>
-</div>
-</div>
-<div class="post-container">
-<div class="dummyPostHead">
-<p><span class="Dummytitle">&nbsp;</span></p>
-<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Dr%20Gears.png" class="small" alt="Dr%20Gears.png" /><span class="fake-link">Dr Gears</span></span> 12 Sep 2008, 00:51</div>
-</div>
-<div class="dummyContent">
-<p>芜湖！我们就像某种奇怪的网络蝴蝶一样，冲出了旧网站的茧，比以前变得更好，更强了!</p>
-</div>
-</div>
-<div class="post-container">
-<div class="dummyPostHead">
-<p><span class="Dummytitle">&nbsp;</span></p>
-<div class="info"><span class="printuser avatarhover"><img src="http://scpsandboxcn.wikidot.com/local--files/cynthia7979/Noaqiyeum.png" class="small" alt="Noaqiyeum.png" /><span class="fake-link">Noaqiyeum</span></span> 12 Sep 2008, 06:07</div>
-</div>
-<div class="dummyContent">
-<p>一只奇怪的网络蝴蝶，险些被黑暗未知的恐怖吞噬……</p>
-</div>
-</div>
-<div class="DummyNew-post">
-<p><span class="fake-link">新文章</span></p>
+<div class="footnotes-footer">
+<div class="title">脚注</div>
+<div class="footnote-footer" id="footnote-287173-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-1')">1</a>. <strong>译注</strong>：此处翻译参考自《佛本行集经》：今应当知。此一切法。皆悉炽燃。言炽燃者。眼亦炽燃。色亦炽燃。眼识炽燃。眼触炽燃。眼触所因生者。有受若乐若苦非乐非苦。彼亦炽燃。以何炽燃。以欲火故烦恼炽燃&#8230;&#8230;</div>
+<div class="footnote-footer" id="footnote-287173-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-2')">2</a>. <strong>译注</strong>：此处翻译参考自《佛本行经》：汝瞿多弥。莫问此事。非尔所知。</div>
+<div class="footnote-footer" id="footnote-287173-3"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-3')">3</a>. <strong>译注：</strong> 原文为 Chaichi，翻译参考自《大方广佛华严经随疏演义钞》：智亦得名无有差别。谓无差智为能证故。</div>
+<div class="footnote-footer" id="footnote-287173-4"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-4')">4</a>. <strong>译注</strong>：此处翻译参考自《佛说长者女庵提遮师子吼了义经》：其女答曰。大德。能自信己之所言不。舍利弗言。我之自言。云何不自信。</div>
+<div class="footnote-footer" id="footnote-287173-5"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-5')">5</a>. <strong>译注：</strong>此处翻译参考自《正法念处经》：无量种色种种金柱而为庄严。</div>
+<div class="footnote-footer" id="footnote-287173-6"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-6')">6</a>. <strong>译注：</strong>此处翻译参考《相应部》：由苦至信,由信至乐，由乐至寂&#8230;&#8230;由解脱获涅槃，成就阿罗汉</div>
+<div class="footnote-footer" id="footnote-287173-7"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-7')">7</a>. <strong>译注：</strong>此处翻译参考自《金刚经》：如来答云，应如是住，如是降伏其心。</div>
+<div class="footnote-footer" id="footnote-287173-8"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-8')">8</a>. <strong>译注：</strong>原文直译过来即是我无处不在，此处翻译参考自《华严经》：十方诸佛土，一切群生类。悉能为彼现，如来之正法&#8230;&#8230;随彼众生根，普雨甘露法。为开诸法门，无量难思议。</div>
+<div class="footnote-footer" id="footnote-287173-9"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-9')">9</a>. <strong>译注：</strong>此处翻译参考自《大般若波罗蜜多经》：欢喜赞叹行布施波罗蜜多者。</div>
+<div class="footnote-footer" id="footnote-287173-10"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-10')">10</a>. <strong>译注：</strong>原文为 higher realms of spiritual evolution，灵性进化的更高境界。般若的意思是“终极智慧”，故翻译为此。</div>
+<div class="footnote-footer" id="footnote-287173-11"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-11')">11</a>. <strong>译注：</strong>蝉蜕，在此处借指外在躯壳。而此处翻译参考自《圆觉经》：譬如钻火,两木相因,火出木尽,灰飞烟灭,以幻修幻,亦复如是,诸幻虽尽,不入断灭。</div>
+<div class="footnote-footer" id="footnote-287173-12"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-12')">12</a>. <strong>译注：</strong>原文为Uposatha，即佛教僧团的持戒行为。此处据意思应是：比丘、比丘尼每半月即于望晦日（农历十五日、三十日或二十九日）齐集一处，专诵《戒本》，称为“说戒”，以检点、整饬戒行，为了长养善法，保持僧团戒行清净。</div>
+<div class="footnote-footer" id="footnote-287173-13"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-13')">13</a>. <strong>译注：</strong>此处翻译参考自《瑜伽论记》 ：异生五蕴带于烦恼不调柔，名粗重身。于粗重身执著人法自性差别，由彼宿习随眠种子及妄见为缘故计我我所能见闻等。</div>
+<div class="footnote-footer" id="footnote-287173-14"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-14')">14</a>. <strong>译注：</strong>此处据下文语义翻译，参考自《大般涅槃经》：无上上者即真解脱，真解脱者即是如来，又解脱者名曰恒法。</div>
+<div class="footnote-footer" id="footnote-287173-15"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-287173-15')">15</a>. <strong>译注：</strong>原文为Ceto-vimutti，即心解脱。此处翻译参考自诗句：一切唯心造，无心自解脱。</div>
 </div>
 </div>
     
     
     
     </div>
+
+
                     </div>
 
                             
@@ -1076,7 +1846,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E7%AE%A1%E7%90%86#pages">管理</a>
+                                <a href="/system:page-tags/tag/2019goi%E7%AB%9E%E8%B5%9B#pages">2019goi竞赛</a><a href="/system:page-tags/tag/%E6%95%85%E4%BA%8B#pages">故事</a><a href="/system:page-tags/tag/%E9%93%B6%E6%B2%B3%E8%81%94%E9%82%A6#pages">银河联邦</a>
                             </span>
                         </div>
                     
@@ -1084,12 +1854,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 1, 最后编辑于: <span class="odate time_1594712547 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">14 Jul 2020 07:42</span></div>
+                            <div id="page-info">页面版本: 4, 最后编辑于: <span class="odate time_1565099461 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">06 Aug 2019 13:51</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+1</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+5</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13517934/the-old-wiki" class="btn btn-default" id="discuss-button">讨论 (4)</a>
+<a href="/forum/t-11163090/the-moons-stellar-companion" class="btn btn-default" id="discuss-button">讨论 (2)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -1156,32 +1926,32 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://fmiseria3.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/fmiseria3.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ten-sb.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ten-sb.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://fmiseria3.wikidot.com">Portalul Seriilor de Informatica</a></h3>
+            <h3><a target="_blank" href="http://ten-sb.wikidot.com">The Employment Network of SB</a></h3>
             <div class="desc">          
-              Facultatea de Matematica si Informatica, Universitatea din Bucuresti
+              &quot;Don&#039;t Just Find A Job...Get a Job!!!&quot;
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://uberoptions.net">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/uberoptions.net/80.jpg"/>
+            <a target="_blank" class="image" href="http://schoolsteachersparents.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/schoolsteachersparents.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://uberoptions.net">uberOptions</a></h3>
+            <h3><a target="_blank" href="http://schoolsteachersparents.wikidot.com">Schools - Teachers - Parents</a></h3>
             <div class="desc">          
-              Enable all options on all buttons in SetPoint
+              Issues in Schooling
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://chessvariants.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/chessvariants.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scala.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scala.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://chessvariants.wikidot.com">Chess Variants Wiki</a></h3>
+            <h3><a target="_blank" href="http://scala.wikidot.com">Scala Geography Wiki</a></h3>
             <div class="desc">          
               
             </div>
@@ -1189,12 +1959,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://generals.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/generals.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://lulu.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/lulu.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://generals.wikidot.com">Generalia</a></h3>
+            <h3><a target="_blank" href="http://lulu.wikidot.com">UK Wiki Lulu</a></h3>
             <div class="desc">          
-              your one-stop shop for all things generals.
+              The website for the UK creators at Lulu.com
             </div>
           </div>
         </div>
