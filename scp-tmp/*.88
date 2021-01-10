@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
 
 <head>
-    <title>E̶R̶R̶O̶R̶ - SCP基金会</title>
+    <title>赤色之瞳似血与熔岩，魑魅魍魉咆哮在深渊 - SCP基金会</title>
     
     
     
@@ -22,12 +22,12 @@
         WIKIREQUEST.info.siteUnixName = "scp-wiki-cn";
         WIKIREQUEST.info.categoryId = 3342264;
         WIKIREQUEST.info.themeId = 1;
-        WIKIREQUEST.info.requestPageName = "worsssss";
-        OZONE.request.timestamp = 1610223632;
+        WIKIREQUEST.info.requestPageName = "vodkawells";
+        OZONE.request.timestamp = 1610248896;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'cn';
-                WIKIREQUEST.info.pageUnixName = "worsssss";
-        WIKIREQUEST.info.pageId = 1002361163;
+                WIKIREQUEST.info.pageUnixName = "vodkawells";
+        WIKIREQUEST.info.pageId = 1085463009;
                         WIKIREQUEST.info.lang = "cn";
         OZONE.lang = "cn";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -124,78 +124,2328 @@
 @import url("https://cdn.jsdelivr.net/gh/scp-cn-tech/black-highlighter@gh-pages/stable/styles/chinese/black-highlighter_ch.min.css");
 </style>
 <style>
+@import url("http://scp-wiki-cn.wikidot.com/theme:the-way-out/code/1");
+</style>
+<style>
+div#extra-div-1,div#extra-div-2{display:none;}
+</style>
+<style>
 /*
-    Powered on 2020/04/15 15:56:11
+    Disrememberment Theme
     [2020 Wikidot Theme]
-    Created by WOrs Obrine
-    CC BY-SA 3.0
+    Created by Rounderhouse.
+    Based on Black Highlighter Theme created by Woedenaz and Croquembouche.
+    Ennui Logo made by Ayers, CC BY SA 3.0.
 */
 
-body {
-    background: rgba(61,138,157);
-    color: rgba(10,48,75);
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+/* All Vars Used */
+
+:root {
+    /* S-CSS-P Integration */
+    /* If you're making a new CSS theme, please include the following three variables at minimum. */
+    --theme-base: "nuscp";
+    /* must be either "nuscp" or "sigma9" */
+    --theme-id: "disrememberment";
+    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+    --theme-name: "Dsirememberment Theme";
+    /* set this to your theme's full name */
+
+    /* Header */
+    --logo-image: url("http://ubmh.wikidot.com/local--files/forum:start/V-W.png");
+    --header-title: "伏特加·威尔斯博士";
+    --header-subtitle: "控制， 收容， 保护";
+
+    /* Typefaces */
+    --body-font: "Noto Sans SC", sans-serif;
+    --header-font: "Noto Sans SC", sans-serif;
+    --title-font: "Noto Sans SC", sans-serif;
+    --mono-font: "PT Mono", "Andale Mono", "Courier New", Courier, '仿宋', monospace;
+
+    /* Standard Colors */
+    --white-monochrome: 252, 252, 252;
+    /* white */
+    --pale-gray-monochrome: 244, 244, 244;
+    /* v light gray for blockquotes and stuff */
+    --light-gray-monochrome: 120, 120, 120;
+    /* light accent gray for login status */
+    --gray-monochrome: 66, 66, 72;
+    /* gray */
+    --dark-gray-monochrome: 48, 48, 52;
+    /* dark accent gray for sidebar background */
+    --black-monochrome: 12, 12, 12;
+    /* black */
+    --bright-accent: 90, 90, 90;
+    /* red */
+    --medium-accent: 103, 0, 0;
+    /* dark red */
+    --dark-accent: 103, 0, 0;
+    /* dark red */
+    --newpage-color: 99, 190, 255;
+    /* dark red */
+
+    /* Primary Theme Colors */
+    --swatch-background: var(--white-monochrome);
+    --swatch-primary: var(--medium-accent);
+    --swatch-primary-darker: var(--bright-accent);
+    --swatch-primary-darkest: var(--bright-accent);
+    /* Primary Text Colors */
+    --swatch-text-dark: var(--black-monochrome);
+    --swatch-text-light: var(--white-monochrome);
+    --swatch-important-text: var(--bright-accent);
+
+    /* Primary Menu Colors */
+    --swatch-menubg-color: var(--gray-monochrome);
+    --swatch-menubg-light-color: var(--gray-monochrome);
+    --swatch-menubg-medium-color: var(--gray-monochrome);
+    --swatch-menubg-medium-dark-color: var(--black-monochrome);
+    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--gray-monochrome);
+    --swatch-menutxt-dark-color: var(--white-monochrome);
+    --swatch-menutxt-light-color: var(--white-monochrome);
+    --swatch-border-color: var(--black-monochrome);
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    --swatch-topmenu-border-color: var(--dark-gray-monochrome);
+    --swatch-topmenu-bg-color: var(--dark-gray-monochrome);
+
+    --rating-module-button-color: var(--black-monochrome);
+    --rating-module-text-color: var(--black-monochrome);
+
+    /* Sidebar */
+    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+    --sidebar-internal-border-thickness: 0.125rem;
+
+    --background-gradient-color: 90, 90, 90;
+    --background-gradient-distance: 30rem;
+
+    /* Header Gradients */
+
+    --gradient-header: linear-gradient(to bottom, rgba(var(--black-monochrome),0.97) 0%, rgb(var(--dark-gray-monochrome)) 100%);
+    --gradient-topmenu: linear-gradient(to bottom,
+     white 0%,
+     white 7.5rem,
+     rgba(var(--swatch-topmenu-border-color), 1) 7.5rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) 7.625rem,
+     rgba(var(--swatch-topmenu-bg-color), 0.95) calc(100% - 0.125rem),
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - 0.125rem),
+     rgba(var(--swatch-topmenu-border-color), 1) 100%);
+    --gradient-topmenu-mobile: linear-gradient(to bottom,
+     rgba(var(--swatch-topmenu-border-color), 1) 0,
+     rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+     rgba(var(--swatch-topmenu-border-color), 1) 3rem);
+    --gradient-sidemenu-header: linear-gradient(40deg,
+     rgba(var(--medium-accent), 0.45) 0%,
+     rgba(var(--medium-accent), 0.55) 100%);
+    --gradient-background: linear-gradient(to bottom,
+     rgba(var(--background-gradient-color), 1) calc(calc(0 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.987) calc(calc(0.8 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.951) calc(calc(2.9 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.896) calc(calc(6.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.825) calc(calc(11 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.741) calc(calc(16.6 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.648) calc(calc(23.1 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.55) calc(calc(30.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.45) calc(calc(38.3 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.352) calc(calc(46.7 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.259) calc(calc(55.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.175) calc(calc(64.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.104) calc(calc(73.5 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.049) calc(calc(82.5 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0.013) calc(calc(91.4 / 100) * var(--background-gradient-distance)),
+     rgba(var(--background-gradient-color), 0) calc(calc(100 / 100) * var(--background-gradient-distance)));
 }
 
+.scp-image-block {
+   color: rgb(var(--white-monochrome));
+}
+#login-status {
+   color: rgb(var(--light-gray-monochrome));
+}
+
+#side-bar .heading p, #side-bar .side-block>.collapsible-block .collapsible-block-link {
+   color: rgb(var(--black-monochrome));
+   background-color: rgb(var(--light-gray-monochrome));
+}
+blockquote {
+    background-color: rgba(0,0,0,0.05);
+}
+#side-bar div.menu-item>:not(:nth-child(2)):not(.collapsible-block) {
+   color: rgb(var(--pale-gray-monochrome));
+}
+.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {
+   color: white;
+}
+
+#page-content .collapsible-block-link{color: #000;}
+
+#page-title{
+text-align: center!important;
+}
+
+.code {
+   background-color: rgba(var(--bright-accent), .75);
+   border-style: dashed;
+}
 div#container-wrap {
-    background: url(//scpsandboxcn.wdfiles.com/local--files/task-forces/6) top left no-repeat;
+    background: url('http://ubmh.wikidot.com/local--files/warp-logo/BLACKRAICD.png') top left repeat-x;
 }
-div#header {
-    background: url(//scpsandboxcn.wdfiles.com/local--files/task-forces/9) -50px -60px no-repeat;
+li, p {
+    line-height: 141%;
 }
-div#header h1 a span {
-    font-size: 0px;
+a {
+    color: darkred;
+    text-decoration: none;
+    background: transparent;
 }
-div#header h1 a:before {
-    content: "𝗘𝗥𝗥𝗢𝗥 𝟰𝟬𝟰";
-    color: #eee;
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap&amp;subset=latin-ext');
 
+:root {
+    --five-color: 196,2,51;
+    --four-color: 255,109,0;
+    --three-color: 255,211,0;
+    --two-color: 0,135,189;
+    --one-color: 0,159,107;
 }
-div#header h2 span {
-    font-size:0px;
-    padding: 4px;
+
+#page-title {
+    display: none;
 }
-div#header h2:after {
-    content: "--君且去 休回顾--";
-    font-weight: bold;
-    color: #f0f0c0;
-    padding: 19px 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
-    white-space: pre;
+
+.anom-bar-container,
+.anom-bar-container * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: var(--title-font, 'Roboto', sans-serif);
 }
-div#side-bar div.side-block {
-    background: rgba(31,69,77);
+
+.anom-bar-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
 }
-div#side-bar div.side-block div.heading,
-div#side-bar div.collapsible-block-unfolded-link,
-div#side-bar div.collapsible-block-unfolded-link div.collapsible-block-link {
-    color: rgba(9,31,57);
-    border-color: rgba(9,31,57);
+
+.anom-bar {
+    display: -ms-grid;
+    display: grid;
+            grid-template-areas:
+        "top-box"
+        "bottom-box";
+    width: 100%;
 }
-div.page-rate-widget-box,
-div.page-rate-widget-box span.rate-points,
-div.page-rate-widget-box span.cancel {
-    background-color: rgba(61,138,153)!important;
-    border: solid rgba(61,138,153) 1px!important;
+
+.anom-bar > .top-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    grid-area: top-box;
+                grid-template-areas:
+        "top-left-box top-center-box top-right-box";
+    width: 100%;
+        -ms-grid-columns: auto 1fr calc(5vw + 5rem);
+    grid-template-columns: auto 1fr -webkit-calc(5vw + 5rem);
+    grid-template-columns: auto 1fr -moz-calc(5vw + 5rem);
+    grid-template-columns: auto 1fr calc(5vw + 5rem);
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-items: stretch;
+    padding-bottom: 1rem;
 }
-div.page-rate-widget-box span.rateup,
-div.page-rate-widget-box span.ratedown {
-    border: solid rgba(61,138,153)!important;
-    border-width: 1px 0!important;
+
+.top-box .top-left-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: top-left-box;
 }
-div.page-rate-widget-box span.rate-points,
-div.page-rate-widget-box span.cancel a,
-div.page-rate-widget-box span.cancel a:hover {
-    color: rgba(9,31,57);
+
+.top-left-box > .item {
+    font-size: -webkit-calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
+    font-size: -moz-calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
+    font-size: calc(12px + (20 - 12) * ( (100vw - 300px) / ( 1920 - 960) ));
 }
-div.page-rate-widget-box span.cancel a:hover,
-div.page-rate-widget-box span.rateup a:hover,
-div.page-rate-widget-box span.ratedown a:hover {
-    background: transparent!important;
-    color: transparent!important;
+
+.top-left-box > .number {
+    font-size: -webkit-calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
+    font-size: -moz-calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
+    font-size: calc(25px + (50 - 25) * ( (100vw - 300px) / ( 1920 - 300) ));
 }
-div.open-menu a {
-    color: rgba(9,31,57)!important;
-    border-color: rgba(9,31,57)!important;
+
+.top-box .top-center-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-area: top-center-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    margin: 0 1rem;
+}
+
+.top-center-box > div {
+    background-color: rgb(0,0,0);
+    height: 0.5rem;
+    width: 100%;
+    margin: 0.125rem;
+    display: none;
+}
+
+.anom-bar-container.american .top-center-box > div {
+    background-image:
+    -webkit-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    -moz-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    -o-repeating-linear-gradient(65deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-image:
+    repeating-linear-gradient(25deg,
+        rgb(178,34,52),
+        rgb(252,252,252) 45%,
+        rgb(252,252,252) 55%,
+        rgb(60,59,110) 100%);
+    background-attachment: scroll;
+}
+
+.anom-bar-container.clear-1 .top-center-box > div {
+    background-color: rgb(0,159,107);
+    background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.clear-2 .top-center-box > div {
+    background-color: rgb(0,135,189);
+    background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.clear-3 .top-center-box > div {
+    background-color: rgb(255,211,0);
+    background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.clear-4 .top-center-box > div {
+    background-color: rgb(255,109,0);
+    background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.clear-5 .top-center-box > div {
+    background-color: rgb(196,2,51);
+    background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.clear-1 .top-center-box > .bar-one,
+.anom-bar-container.clear-2 .top-center-box > .bar-one,
+.anom-bar-container.clear-3 .top-center-box > .bar-one,
+.anom-bar-container.clear-4 .top-center-box > .bar-one,
+.anom-bar-container.clear-5 .top-center-box > .bar-one,
+.anom-bar-container.clear-6 .top-center-box > .bar-one {
+    display: block;
+}
+
+.anom-bar-container.clear-2 .top-center-box > .bar-two,
+.anom-bar-container.clear-3 .top-center-box > .bar-two,
+.anom-bar-container.clear-4 .top-center-box > .bar-two,
+.anom-bar-container.clear-5 .top-center-box > .bar-two,
+.anom-bar-container.clear-6 .top-center-box > .bar-two {
+    display: block;
+}
+
+.anom-bar-container.clear-3 .top-center-box > .bar-three,
+.anom-bar-container.clear-4 .top-center-box > .bar-three,
+.anom-bar-container.clear-5 .top-center-box > .bar-three,
+.anom-bar-container.clear-6 .top-center-box > .bar-three {
+    display: block;
+}
+
+.anom-bar-container.clear-4 .top-center-box > .bar-four,
+.anom-bar-container.clear-5 .top-center-box > .bar-four,
+.anom-bar-container.clear-6 .top-center-box > .bar-four {
+    display: block;
+}
+
+.anom-bar-container.clear-5 .top-center-box > .bar-five,
+.anom-bar-container.clear-6 .top-center-box > .bar-five {
+    display: block;
+}
+
+.anom-bar-container.clear-6 .top-center-box > .bar-six {
+    display: block;
+}
+
+.anom-bar-container.clear-6 .anom-bar > .top-box {
+    -ms-grid-columns: auto 1fr calc(5vw + 8rem);
+    grid-template-columns: auto 1fr -webkit-calc(5vw + 8rem);
+    grid-template-columns: auto 1fr -moz-calc(5vw + 8rem);
+    grid-template-columns: auto 1fr calc(5vw + 8rem);
+    padding-bottom: 1.15em;
+}
+
+.anom-bar-container.clear-6 .top-center-box > div {
+    background-color: rgb(133, 0, 5);
+    background-color: rgb(var(--swatch-primary, 133, 0, 5));
+    background-image: url("http://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/galactic.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-blend-mode: overlay;
+}
+
+.top-box .top-right-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    display: -ms-grid;
+    display: grid;
+    grid-area: top-right-box;
+            grid-template-areas:
+        "level"
+        "clearance";
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.top-right-box > .level {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    grid-area: level;
+    font-size: 2.5em;
+    line-height: 1; /* 中文调整 */
+}
+
+.top-right-box > .clearance {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: clearance;
+    font-size: -webkit-calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    font-size: -moz-calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    font-size: calc(12px + (15 - 12) * ( (100vw - 400px) / ( 1920 - 960) ));
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.top-right-box > .clearance::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.anom-bar-container.clear-6.lang-cn .top-right-box > .clearance::before {
+    content: "宇宙绝密";
+}
+
+.anom-bar-container.clear-6.lang-tr .top-right-box > .clearance::before {
+    content: "宇宙絕密";
+}
+
+.anom-bar-container.clear-5.lang-cn .top-right-box > .clearance::before {
+    content: "最高机密";
+}
+
+.anom-bar-container.clear-5.lang-tr .top-right-box > .clearance::before {
+    content: "最高機密";
+}
+
+.anom-bar-container.clear-4.lang-cn .top-right-box > .clearance::before {
+    content: "机密";
+}
+
+.anom-bar-container.clear-4.lang-tr .top-right-box > .clearance::before {
+    content: "機密";
+}
+
+.anom-bar-container.clear-3.lang-cn .top-right-box > .clearance::before {
+    content: "保密";
+}
+
+.anom-bar-container.clear-3.lang-tr .top-right-box > .clearance::before {
+    content: "保密";
+}
+
+.anom-bar-container.clear-2.lang-cn .top-right-box > .clearance::before {
+    content: "受限";
+}
+
+.anom-bar-container.clear-2.lang-tr .top-right-box > .clearance::before {
+    content: "受限";
+}
+
+.anom-bar-container.clear-1.lang-cn .top-right-box > .clearance::before {
+    content: "公开";
+}
+
+.anom-bar-container.clear-1.lang-tr .top-right-box > .clearance::before {
+    content: "公開";
+}
+
+.anom-bar > .bottom-box {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    grid-area: bottom-box;
+            grid-template-areas:
+        "text-part diamond-part"
+        "text-part diamond-part";
+    -ms-grid-rows: 1fr 0.5rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 0.5rem 6rem;
+    grid-template-columns: 1fr 6rem;
+    grid-gap: 0.5rem;
+    width: 100%;
+    height: 6rem;
+    font-weight: 600;
+    -webkit-box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+       -moz-box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+            box-shadow: 0 -0.5rem 0 0 rgb(12, 12, 12);
+    -webkit-box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+       -moz-box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+            box-shadow: 0 -0.5rem 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+    margin-top: -0.5rem;
+    padding-top: 0.25rem;
+}
+
+.bottom-box > .text-part {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    display: -ms-grid;
+    display: grid;
+    height: 6rem;
+    grid-area: text-part;
+            grid-template-areas:
+        "main-class disrupt-class"
+        "main-class risk-class";
+    -ms-grid-rows: 1fr 0.25rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: auto 0.25rem 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 0.25rem;
+    text-transform: uppercase;
+    -webkit-box-pack: stretch;
+    -webkit-justify-content: stretch;
+       -moz-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+       -moz-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+.text-part div {
+    padding: 0 0.125rem;
+    margin: 0 0 0 0.25rem;
+    position: relative;
+}
+
+.text-part > .main-class {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    position: relative;
+    grid-area: main-class;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+       -moz-box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+            box-shadow: 0.25rem 0 0 0 rgba(0,0,0,0);
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class {
+    padding-right: 3.5rem;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class,
+.anom-bar-container.机密 .text-part > .main-class,
+.anom-bar-container.機密 .text-part > .main-class {
+    padding-right: 2rem;
+}
+
+.text-part > .main-class::before {
+    content: "";
+    position: absolute;
+    top: -webkit-calc(50% - 2.25rem);
+    top: -moz-calc(50% - 2.25rem);
+    top: calc(50% - 2.25rem);
+    right: 0.5rem;
+    width: 3.53125rem;
+    height: 3.53125rem;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class::before,
+.anom-bar-container.机密 .text-part > .main-class::before,
+.anom-bar-container.機密 .text-part > .main-class::before {
+    top: 0.5rem;
+    right: 1.25rem;
+    width: 5rem;
+    -webkit-border-radius: -webkit-calc(3.53125rem / 2);
+       -moz-border-radius: -moz-calc(3.53125rem / 2);
+            border-radius: calc(3.53125rem / 2);
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    border-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/esoteric-icon.svg");
+    -webkit-background-size: 75% 75%;
+       -moz-background-size: 75% 75%;
+         -o-background-size: 75% 75%;
+            background-size: 75% 75%;
+    background-repeat: no-repeat;
+    background-position: left -10px center;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class::after,
+.anom-bar-container.机密 .text-part > .main-class::after,
+.anom-bar-container.機密 .text-part > .main-class::after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.25rem;
+    width: 3.53125rem;
+    height: 3.53125rem;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.anom-bar-container.thaumiel .text-part > .main-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/thaumiel-icon.svg");
+}
+
+.anom-bar-container.explained .text-part > .main-class::before,
+.anom-bar-container.已解明 .text-part > .main-class::before,
+.anom-bar-container.已解明 .text-part > .main-class::before,
+.anom-bar-container.pending .text-part > .main-class::before,
+.anom-bar-container.等待分级 .text-part > .main-class::before,
+.anom-bar-container.等待分級 .text-part > .main-class::before,
+.anom-bar-container.neutralized .text-part > .main-class::before,
+.anom-bar-container.无效化 .text-part > .main-class::before,
+.anom-bar-container.無效化 .text-part > .main-class::before {
+    display:none;
+}
+
+.anom-bar-container.keter .text-part > .main-class::before {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keter-icon.svg");
+}
+
+.anom-bar-container.euclid .text-part > .main-class::before {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/euclid-icon.svg");
+}
+
+.anom-bar-container.safe .text-part > .main-class::before {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/safe-icon.svg");
+}
+
+.text-part > .main-class > div {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class > .second-class > .class-text,
+.anom-bar-container.机密 .text-part > .main-class > .second-class > .class-text,
+.anom-bar-container.機密 .text-part > .main-class > .second-class > .class-text {
+    font-size: -webkit-calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc( 6px + (11 - 6) * ( (100vw - 400px) / ( 800 - 400) ));
+    position: relative;
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .contain-class > .class-text {
+    font-size: -webkit-calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc(10px + (18 - 10) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .second-class {
+    display: none;
+}
+
+.text-part > .disrupt-class {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: disrupt-class;
+}
+
+.text-part > .risk-class {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: risk-class;
+}
+
+.text-part > .disrupt-class,
+.text-part > .risk-class {
+    overflow: hidden;
+}
+
+.anom-bar-container.esoteric .text-part .main-class,
+.anom-bar-container.机密 .text-part .main-class,
+.anom-bar-container.機密 .text-part .main-class {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    border-left: 0.75rem solid rgba(66, 66, 72 ,1);
+    border-left: 0.75rem solid rgba(var(--gray-monochrome, 66, 66, 72),1);
+}
+
+.anom-bar-container.neutralized .text-part .main-class,
+.anom-bar-container.无效化 .text-part .main-class,
+.anom-bar-container.無效化 .text-part .main-class {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    border-left: 0.75rem solid rgba(66, 66, 72 ,1);
+    border-left: 0.75rem solid rgba(var(--gray-monochrome, 66, 66, 72),1);
+}
+
+.anom-bar-container.pending .text-part .main-class,
+.anom-bar-container.等待分级 .text-part .main-class,
+.anom-bar-container.等待分級 .text-part .main-class {
+    background-color: rgba(12, 12, 12 ,0.15);
+    background-color: rgba(var(--black-monochrome, 12, 12, 12),0.15);
+    border-left: 0.75rem solid rgba(12, 12, 12 ,1);
+    border-left: 0.75rem solid rgba(var(--black-monochrome, 12, 12, 12),1);
+}
+
+.anom-bar-container.explained .text-part .main-class,
+.anom-bar-container.已解明 .text-part .main-class,
+.anom-bar-container.已解明 .text-part .main-class {
+    background-color: rgba(252, 252, 252 ,0.15);
+    background-color: rgba(var(--white-monochrome, 252, 252, 252),0.15);
+    border-left: 0.75rem solid rgba(12, 12, 12 ,1);
+    border-left: 0.75rem solid rgba(var(--black-monochrome, 12, 12, 12),1);
+}
+
+.anom-bar-container.keter .text-part .main-class,
+.anom-bar-container.amida .text-part .disrupt-class,
+.anom-bar-container.critical .text-part .risk-class,
+.anom-bar-container.危急 .text-part .risk-class,
+.anom-bar-container.危急 .text-part .risk-class {
+    background-color: rgba(196,2,51,0.15);
+    background-color: rgba(var(--five-color),0.15);
+    border-left: 0.5rem solid rgba(196,2,51,1);
+    border-left: 0.5rem solid rgba(var(--five-color),1);
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class,
+.anom-bar-container.danger .text-part .risk-class,
+.anom-bar-container.危险 .text-part .risk-class,
+.anom-bar-container.危險 .text-part .risk-class {
+    background-color: rgba(255,109,0,0.15);
+    background-color: rgba(var(--four-color),0.15);
+    border-left: 0.5rem solid rgba(255,109,0,1);
+    border-left: 0.5rem solid rgba(var(--four-color),1);
+}
+
+.anom-bar-container.euclid .text-part .main-class,
+.anom-bar-container.keneq .text-part .disrupt-class,
+.anom-bar-container.warning .text-part .risk-class,
+.anom-bar-container.警告 .text-part .risk-class,
+.anom-bar-container.警告 .text-part .risk-class {
+    border-left: 0.5rem solid rgba(255,211,0,1);
+    border-left: 0.5rem solid rgba(var(--three-color),1);
+    background-color: rgba(255,211,0,0.15);
+    background-color: rgba(var(--three-color),0.15);
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class,
+.anom-bar-container.caution .text-part .risk-class,
+.anom-bar-container.需谨慎 .text-part .risk-class,
+.anom-bar-container.需謹慎 .text-part .risk-class {
+    border-left: 0.5rem solid rgba(0,135,189,1);
+    border-left: 0.5rem solid rgba(var(--two-color),1);
+    background-color: rgba(0,135,189,0.15);
+    background-color: rgba(var(--two-color),0.15);
+}
+
+.anom-bar-container.safe .text-part .main-class,
+.anom-bar-container.dark .text-part .disrupt-class,
+.anom-bar-container.notice .text-part .risk-class,
+.anom-bar-container.待观察 .text-part .risk-class,
+.anom-bar-container.待觀察 .text-part .risk-class {
+    background-color: rgba(0,159,107,0.15);
+    background-color: rgba(var(--one-color),0.15);
+    border-left: 0.5rem solid rgba(0,159,107,1);
+    border-left: 0.5rem solid rgba(var(--one-color),1);
+}
+
+.anom-bar-container.neutralized .text-part,
+.anom-bar-container.无效化 .text-part,
+.anom-bar-container.無效化 .text-part,
+.anom-bar-container.pending .text-part,
+.anom-bar-container.等待分级 .text-part,
+.anom-bar-container.等待分級 .text-part,
+.anom-bar-container.explained .text-part,
+.anom-bar-container.已解明 .text-part,
+.anom-bar-container.已解明 .text-part {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.text-part .disrupt-class::after,
+.text-part .risk-class::after,
+.text-part .disrupt-class::before,
+.text-part .risk-class::before {
+    content: "";
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.25rem solid rgb(12, 12, 12);
+border: 0.25rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -webkit-calc(50% - 1.5rem);
+    top: -moz-calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+    font-size: 2em;
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+    background-position: center center;
+}
+
+.text-part .disrupt-class::after,
+.text-part .risk-class::after {
+    right: 0.15em;
+}
+
+.text-part .disrupt-class::before,
+.text-part .risk-class::before {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: rgb(12, 12, 12);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+    width: 3rem;
+    height: 3rem;
+    top: -webkit-calc(50% - 1.5rem);
+    top: -moz-calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+    border: 0;
+    right: 1rem;
+    text-align: left;
+    font-size: 1em;
+    padding-left: 0.5rem;
+    color: rgb(252, 252, 252);
+    color: rgb(var(--white-monochrome, 252, 252, 252));
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::before,
+.anom-bar-container.critical .text-part .risk-class::before,
+.anom-bar-container.危急 .text-part .risk-class::before,
+.anom-bar-container.危急 .text-part .risk-class::before {
+    content: "5";
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::before,
+.anom-bar-container.danger .text-part .risk-class::before,
+.anom-bar-container.危险 .text-part .risk-class::before,
+.anom-bar-container.危險 .text-part .risk-class::before {
+    content: "4";
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::before,
+.anom-bar-container.warning .text-part .risk-class::before,
+.anom-bar-container.警告 .text-part .risk-class::before,
+.anom-bar-container.警告 .text-part .risk-class::before {
+    content: "3";
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::before,
+.anom-bar-container.caution .text-part .risk-class::before,
+.anom-bar-container.需谨慎 .text-part .risk-class::before,
+.anom-bar-container.需謹慎 .text-part .risk-class::before {
+    content: "2";
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::before,
+.anom-bar-container.notice .text-part .risk-class::before,
+.anom-bar-container.待观察 .text-part .risk-class::before,
+.anom-bar-container.待觀察 .text-part .risk-class::before {
+    content: "1";
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::after,
+.anom-bar-container.critical .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.amida .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/amida-icon.svg");
+}
+
+.anom-bar-container.critical .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after,
+.anom-bar-container.危急 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/critical-icon.svg");
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::after,
+.anom-bar-container.danger .text-part .risk-class::after,
+.anom-bar-container.危险 .text-part .risk-class::after,
+.anom-bar-container.危險 .text-part .risk-class::after {
+    background-color: rgb(255,109,0);
+background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.ekhi .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/ekhi-icon.svg");
+}
+
+.anom-bar-container.danger .text-part .risk-class::after,
+.anom-bar-container.危险 .text-part .risk-class::after,
+.anom-bar-container.危險 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/danger-icon.svg");
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::after,
+.anom-bar-container.warning .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.keneq .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+}
+
+.anom-bar-container.warning .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after,
+.anom-bar-container.警告 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/warning-icon.svg");
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::after,
+.anom-bar-container.caution .text-part .risk-class::after,
+.anom-bar-container.需谨慎 .text-part .risk-class::after,
+.anom-bar-container.需謹慎 .text-part .risk-class::after {
+    background-color: rgb(0,135,189);
+background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.vlam .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/vlam-icon.svg");
+}
+
+.anom-bar-container.caution .text-part .risk-class::after,
+.anom-bar-container.需谨慎 .text-part .risk-class::after,
+.anom-bar-container.需謹慎 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/caution-icon.svg");
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::after,
+.anom-bar-container.notice .text-part .risk-class::after,
+.anom-bar-container.待观察 .text-part .risk-class::after,
+.anom-bar-container.待觀察 .text-part .risk-class::after {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.dark .text-part .disrupt-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/dark-icon.svg");
+}
+
+.anom-bar-container.notice .text-part .risk-class::after,
+.anom-bar-container.待观察 .text-part .risk-class::after,
+.anom-bar-container.待觀察 .text-part .risk-class::after {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/notice-icon.svg");
+}
+
+.text-part .main-class {
+    border-width: 1em !important;
+}
+
+.text-part > div .class-category {
+    position: relative;
+    font-weight: 500;
+    left: 0;
+}
+
+.anom-bar-container.esoteric .contain-class > .class-category,
+.anom-bar-container.机密 .contain-class > .class-category,
+.anom-bar-container.機密 .contain-class > .class-category {
+    max-width: 55% !important;
+}
+
+.anom-bar-container.explained .second-class,
+.anom-bar-container.explained .disrupt-class,
+.anom-bar-container.explained .risk-class,
+.anom-bar-container.explained .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.explained .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.explained .danger-diamond > .left-icon,
+.anom-bar-container.explained .danger-diamond > .right-icon,
+.anom-bar-container.已解明 .second-class,
+.anom-bar-container.已解明 .disrupt-class,
+.anom-bar-container.已解明 .risk-class,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.已解明 .danger-diamond > .left-icon,
+.anom-bar-container.已解明 .danger-diamond > .right-icon,
+.anom-bar-container.已解明 .second-class,
+.anom-bar-container.已解明 .disrupt-class,
+.anom-bar-container.已解明 .risk-class,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.已解明 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.已解明 .danger-diamond > .left-icon,
+.anom-bar-container.已解明 .danger-diamond > .right-icon,
+.anom-bar-container.neutralized .second-class,
+.anom-bar-container.neutralized .disrupt-class,
+.anom-bar-container.neutralized .risk-class,
+.anom-bar-container.neutralized .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.neutralized .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.neutralized .danger-diamond > .left-icon,
+.anom-bar-container.neutralized .danger-diamond > .right-icon,
+.anom-bar-container.无效化 .second-class,
+.anom-bar-container.无效化 .disrupt-class,
+.anom-bar-container.无效化 .risk-class,
+.anom-bar-container.无效化 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.无效化 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.无效化 .danger-diamond > .left-icon,
+.anom-bar-container.无效化 .danger-diamond > .right-icon,
+.anom-bar-container.無效化 .second-class,
+.anom-bar-container.無效化 .disrupt-class,
+.anom-bar-container.無效化 .risk-class,
+.anom-bar-container.無效化 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.無效化 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.無效化 .danger-diamond > .left-icon,
+.anom-bar-container.無效化 .danger-diamond > .right-icon,
+.anom-bar-container.pending .second-class,
+.anom-bar-container.pending .disrupt-class,
+.anom-bar-container.pending .risk-class,
+.anom-bar-container.pending .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.pending .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.pending .danger-diamond > .left-icon,
+.anom-bar-container.pending .danger-diamond > .right-icon,
+.anom-bar-container.等待分级 .second-class,
+.anom-bar-container.等待分级 .disrupt-class,
+.anom-bar-container.等待分级 .risk-class,
+.anom-bar-container.等待分级 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.等待分级 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.等待分级 .danger-diamond > .left-icon,
+.anom-bar-container.等待分级 .danger-diamond > .right-icon,
+.anom-bar-container.等待分級 .second-class,
+.anom-bar-container.等待分級 .disrupt-class,
+.anom-bar-container.等待分級 .risk-class,
+.anom-bar-container.等待分級 .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.等待分級 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.等待分級 .danger-diamond > .left-icon,
+.anom-bar-container.等待分級 .danger-diamond > .right-icon {
+    display: none;
+}
+
+.text-part .contain-class,
+.text-part .second-class,
+.text-part .disrupt-class,
+.text-part .risk-class {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    line-height: 1;
+}
+
+.text-part .contain-class > div,
+.text-part .second-class > div,
+.text-part .disrupt-class > div,
+.text-part .risk-class > div {
+    width: 100%;
+}
+
+.text-part > div > .class-category,
+.anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-category,
+.anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-category,
+.anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-category {
+    font-size: 0.75em;
+}
+
+.anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text,
+.anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text,
+.anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text,
+.text-part > .disrupt-class > .class-text,
+.text-part > .risk-class > .class-text {
+    font-size: -webkit-calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: -moz-calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+    font-size: calc( 8px + (12 - 8) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
+.bottom-box > .diamond-part {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    width: 100%;
+    padding-top: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    grid-area: diamond-part;
+    padding-left: 1rem;
+    -webkit-box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+       -moz-box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+            box-shadow: -0.5rem 0 0 0 rgb(12, 12, 12);
+    -webkit-box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+       -moz-box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+            box-shadow: -0.5rem 0 0 0 rgb(var(--black-monochrome, 12, 12, 12));
+}
+
+.danger-diamond {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 2.5%;
+    left: 5%;
+}
+
+.danger-diamond a {
+    color: rgba(0,0,0,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+}
+
+.danger-diamond br {
+    display: none;
+}
+
+.danger-diamond > .arrows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.2' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 160 160' xml:space='preserve'%3E%3Cpath fill='%23010101' d='M136.1,133.3l23.9-23.9V51.2l-24-24l19.1-19.1l4.9,4.9l0-12.9l-12.9,0l4.9,4.9L133,24.2l-24-24H51l-24,24 L8,5.2l4.9-4.9L0,0.2l0,12.9l4.9-4.9L24,27.3l-24,24v58.2l23.9,23.9l-19,19L0,147.3l0,12.9l12.9,0L8,155.3l19-19l23.9,23.9h58.4 l23.9-23.9l19,19l-4.9,4.9l12.9,0l0-12.9l-4.9,4.9L136.1,133.3z M155.7,53v54.6l-22.6,22.6l-50-50L133,30.3L155.7,53z M52.8,4.5 h54.4l22.7,22.7L80,77.2L30.1,27.3L52.8,4.5z M4.3,107.6V53L27,30.3L77,80.2l-50,50L4.3,107.6z M107.4,155.9H52.6L30,133.3l50-50 l50,50L107.4,155.9z'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.danger-diamond > .octagon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    -webkit-clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+            clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+
+.danger-diamond > .quadrants {
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    top: 0;
+    left: 0;
+}
+
+.danger-diamond > .quadrants > div {
+    width: 67.5%;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 2%;
+    left: 16.25%;
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    -webkit-clip-path: polygon(22% 0, 77% 0, 100% 31%, 50% 100%, 0 31%);
+            clip-path: polygon(22% 0, 77% 0, 100% 31%, 50% 100%, 0 31%);
+    -webkit-transform-origin: bottom center;
+       -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+         -o-transform-origin: bottom center;
+            transform-origin: bottom center;
+}
+
+.danger-diamond > .quadrants > .left-quad {
+    -webkit-transform: rotate(270deg);
+       -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+         -o-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+
+.danger-diamond > .quadrants > .right-quad {
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.danger-diamond > .quadrants > .bottom-quad {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.danger-diamond > .quadrants > .bottom-quad.none {
+    background-color: rgb(252, 252, 252 ,0.25);
+    background-color: rgb(var(--white-monochrome, 252, 252, 252),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.pending,
+.danger-diamond > .quadrants > .top-quad.等待分级,
+.danger-diamond > .quadrants > .top-quad.等待分級 {
+    background-color: rgb(12, 12, 12 ,0.25);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.neutralized,
+.danger-diamond > .quadrants > .top-quad.无效化,
+.danger-diamond > .quadrants > .top-quad.無效化 {
+    background-color: rgb(66, 66, 72 ,0.25);
+    background-color: rgb(var(--gray-monochrome, 66, 66, 72),0.25);
+}
+
+.danger-diamond > .quadrants > .top-quad.explained,
+.danger-diamond > .quadrants > .top-quad.已解明,
+.danger-diamond > .quadrants > .top-quad.已解明 {
+    background-color: rgb(252, 252, 252 ,0.25);
+    background-color: rgb(var(--white-monochrome, 252, 252, 252),0.25);
+}
+
+.anom-bar-container.esoteric .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.机密 .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.機密 .danger-diamond > .quadrants > .top-quad {
+    background-color: rgb(66, 66, 72 ,0.15);
+    background-color: rgb(var(--gray-monochrome, 66, 66, 72),0.15);
+}
+
+.anom-bar-container.keter .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.amida .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.critical .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危急 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危急 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(196,2,51,0.25);
+    background-color: rgb(var(--five-color),0.25);
+}
+
+.anom-bar-container.ekhi .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.danger .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危险 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.危險 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(255,109,0,0.25);
+    background-color: rgb(var(--five-color),0.25);
+}
+
+.anom-bar-container.euclid .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.keneq .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.warning .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.警告 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.警告 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(255,211,0,0.25);
+    background-color: rgb(var(--three-color),0.25);
+}
+
+.anom-bar-container.vlam .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.caution .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.需谨慎 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.需謹慎 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(0,135,189,0.25);
+    background-color: rgb(var(--two-color),0.25);
+}
+
+.anom-bar-container.safe .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.dark .danger-diamond > .quadrants > .left-quad,
+.anom-bar-container.notice .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.待观察 .danger-diamond > .quadrants > .right-quad,
+.anom-bar-container.待觀察 .danger-diamond > .quadrants > .right-quad {
+    background-color:rgba(0,159,107,0.25);
+    background-color: rgb(var(--one-color),0.25);
+}
+
+.anom-bar-container.clear-5 .danger-diamond > .center-circle::before {
+    content: "5";
+}
+
+.anom-bar-container.clear-4 .danger-diamond > .center-circle::before {
+    content: "4";
+}
+
+.anom-bar-container.clear-3 .danger-diamond > .center-circle::before {
+    content: "3";
+}
+
+.anom-bar-container.clear-2 .danger-diamond > .center-circle::before {
+    content: "2";
+}
+
+.anom-bar-container.clear-1 .danger-diamond > .center-circle::before {
+    content: "1";
+}
+
+.danger-diamond > .top-icon,
+.danger-diamond > .right-icon,
+.danger-diamond > .left-icon,
+.danger-diamond > .bottom-icon {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 33%;
+    height: 33%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.1875rem solid rgb(12, 12, 12);
+    border: 0.1875rem solid rgb(var(--black-monochrome, 12, 12, 12));
+    overflow: hidden;
+    z-index: 2;
+}
+
+.danger-diamond > .top-icon {
+    top: 0.25rem;
+    left: 33.5%;
+}
+
+.danger-diamond > .right-icon {
+    right: 0.25rem;
+    top: 33.5%;
+}
+
+.danger-diamond > .left-icon {
+    left: 0.25rem;
+    top: 33.5%;
+}
+
+.danger-diamond > .bottom-icon {
+    bottom: 0.25rem;
+    left: 33.5%;
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon,
+.anom-bar-container.无效化 .danger-diamond > .top-icon,
+.anom-bar-container.無效化 .danger-diamond > .top-icon,
+.anom-bar-container.pending .danger-diamond > .top-icon,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon,
+.anom-bar-container.explained .danger-diamond > .top-icon,
+.anom-bar-container.已解明 .danger-diamond > .top-icon,
+.anom-bar-container.已解明 .danger-diamond > .top-icon {
+    width: 65%;
+    height: 65%;
+    top: 17.5%;
+    left: 17.5%;
+    border-width: 0.3625rem;
+}
+
+.anom-bar-container.pending .danger-diamond > .top-icon,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon {
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+}
+
+.anom-bar-container:not(.esoteric):not(.机密):not(.機密) .danger-diamond > .bottom-icon {
+    display: none;
+}
+
+.danger-diamond > .top-icon::before,
+.danger-diamond > .right-icon::before,
+.danger-diamond > .left-icon::before,
+.danger-diamond > .bottom-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    left: 0;
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon,
+.anom-bar-container.无效化 .danger-diamond > .top-icon,
+.anom-bar-container.無效化 .danger-diamond > .top-icon {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+}
+
+.anom-bar-container.neutralized .danger-diamond > .top-icon::before,
+.anom-bar-container.无效化 .danger-diamond > .top-icon::before,
+.anom-bar-container.無效化 .danger-diamond > .top-icon::before {
+    background-color: rgba(66, 66, 72 ,0.15);
+    background-color: rgba(var(--gray-monochrome, 66, 66, 72),0.15);
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/neutralized-icon.svg");
+    -webkit-background-size: 110% 110%;
+       -moz-background-size: 110% 110%;
+         -o-background-size: 110% 110%;
+            background-size: 110% 110%;
+    background-position: center center;
+}
+
+.anom-bar-container.pending .danger-diamond > .top-icon::before,
+.anom-bar-container.等待分级 .danger-diamond > .top-icon::before,
+.anom-bar-container.等待分級 .danger-diamond > .top-icon::before {
+    background-color: rgb(12, 12, 12);
+    background-color: rgb(var(--black-monochrome, 12, 12, 12));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/pending-icon.svg");
+}
+
+.anom-bar-container.explained .danger-diamond > .top-icon::before,
+.anom-bar-container.已解明 .danger-diamond > .top-icon::before,
+.anom-bar-container.已解明 .danger-diamond > .top-icon::before {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/explained-icon.svg");
+}
+
+.anom-bar-container.esoteric .danger-diamond > .top-icon::before,
+.anom-bar-container.机密 .danger-diamond > .top-icon::before,
+.anom-bar-container.機密 .danger-diamond > .top-icon::before {
+    background-color: rgb(252, 252, 252);
+background-color: rgb(var(--white-monochrome, 252, 252, 252));
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/esoteric-icon.svg");
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+
+.anom-bar-container.keter .danger-diamond > .top-icon::before,
+.anom-bar-container.amida .danger-diamond > .left-icon::before,
+.anom-bar-container.critical .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before {
+    background-color: rgb(196,2,51);
+background-color: rgb(var(--five-color));
+}
+
+.anom-bar-container.keter .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keter-icon.svg");
+}
+
+.anom-bar-container.amida .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/amida-icon.svg");
+}
+
+.anom-bar-container.critical .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before,
+.anom-bar-container.危急 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/critical-icon.svg");
+}
+
+.anom-bar-container.ekhi .danger-diamond > .left-icon::before,
+.anom-bar-container.danger .danger-diamond > .right-icon::before,
+.anom-bar-container.危险 .danger-diamond > .right-icon::before,
+.anom-bar-container.危險 .danger-diamond > .right-icon::before {
+    background-color: rgb(255,109,0);
+background-color: rgb(var(--four-color));
+}
+
+.anom-bar-container.ekhi .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/ekhi-icon.svg");
+}
+
+.anom-bar-container.danger .danger-diamond > .right-icon::before,
+.anom-bar-container.危险 .danger-diamond > .right-icon::before,
+.anom-bar-container.危險 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/danger-icon.svg");
+}
+
+.anom-bar-container.euclid .danger-diamond > .top-icon::before,
+.anom-bar-container.keneq .danger-diamond > .left-icon::before,
+.anom-bar-container.warning .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before {
+    background-color: rgb(255,211,0);
+background-color: rgb(var(--three-color));
+}
+
+.anom-bar-container.euclid .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/euclid-icon.svg");
+}
+
+.anom-bar-container.keneq .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/keneq-icon.svg");
+}
+
+.anom-bar-container.warning .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before,
+.anom-bar-container.警告 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/warning-icon.svg");
+}
+
+.anom-bar-container.vlam .danger-diamond > .left-icon::before,
+.anom-bar-container.caution .danger-diamond > .right-icon::before,
+.anom-bar-container.需谨慎 .danger-diamond > .right-icon::before,
+.anom-bar-container.需謹慎 .danger-diamond > .right-icon::before {
+    background-color: rgb(0,135,189);
+background-color: rgb(var(--two-color));
+}
+
+.anom-bar-container.vlam .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/vlam-icon.svg");
+}
+
+.anom-bar-container.caution .danger-diamond > .right-icon::before,
+.anom-bar-container.需谨慎 .danger-diamond > .right-icon::before,
+.anom-bar-container.需謹慎 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/caution-icon.svg");
+}
+
+.anom-bar-container.safe .danger-diamond > .top-icon::before,
+.anom-bar-container.dark .danger-diamond > .left-icon::before,
+.anom-bar-container.notice .danger-diamond > .right-icon::before,
+.anom-bar-container.待观察 .danger-diamond > .right-icon::before,
+.anom-bar-container.待觀察 .danger-diamond > .right-icon::before {
+    background-color: rgb(0,159,107);
+background-color: rgb(var(--one-color));
+}
+
+.anom-bar-container.safe .danger-diamond > .top-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/safe-icon.svg");
+}
+
+.anom-bar-container.dark .danger-diamond > .left-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/dark-icon.svg");
+}
+
+.anom-bar-container.notice .danger-diamond > .right-icon::before,
+.anom-bar-container.待观察 .danger-diamond > .right-icon::before,
+.anom-bar-container.待觀察 .danger-diamond > .right-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/notice-icon.svg");
+}
+
+.anom-bar-container.thaumiel .danger-diamond > .bottom-icon::before {
+    background-image: url("http://scp-wiki.wikidot.com/local--files/component:anomaly-class-bar/thaumiel-icon.svg");
+    background-size: contain;
+}
+
+@media (max-width: 960px ) {
+    .anom-bar > .top-box {
+        padding-bottom: 1.5em;
+    }
+
+    .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 0.5rem 6rem;
+        grid-template-columns: 1fr 6rem;
+        height: 6rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text, .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text, .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text, .text-part > .disrupt-class > .class-text, .text-part > .risk-class > .class-text {
+        font-size: -webkit-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-text,
+    .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-text,
+    .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-text {
+        font-size: -webkit-calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 12px + (18 - 12) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class > .second-class > .class-text,
+    .anom-bar-container.机密 .text-part > .main-class > .second-class > .class-text,
+    .anom-bar-container.機密 .text-part > .main-class > .second-class > .class-text {
+        font-size: -webkit-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 18px + (24 - 18) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class > .contain-class > .class-text {
+        font-size: -webkit-calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: -moz-calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+        font-size: calc( 20px + (40 - 20) * ( (100vw - 400px) / ( 960 - 300) ));
+    }
+
+    .text-part > .main-class {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .text-part > .disrupt-class {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .text-part > .risk-class {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+}
+
+@media (max-width: 875px ) {
+    .text-part > div {
+        padding: 0.25rem 0;
+    }
+
+    .anom-bar-container.pending .bottom-box > .text-part,
+    .anom-bar-container.等待分级 .bottom-box > .text-part,
+    .anom-bar-container.等待分級 .bottom-box > .text-part,
+    .anom-bar-container.neutralized .bottom-box > .text-part,
+    .anom-bar-container.无效化 .bottom-box > .text-part,
+    .anom-bar-container.無效化 .bottom-box > .text-part,
+    .anom-bar-container.explained .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part {
+        height: 6rem;
+    }
+
+    .bottom-box > .text-part {
+        grid-template-areas:
+            "main-class"
+            "disrupt-class"
+            "risk-class";
+        -ms-grid-rows: 2fr 0.25rem 1fr 0.25rem 1fr;
+        grid-template-rows: 3fr 2fr 2fr;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: 8rem;
+    }
+
+    .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 0.5rem 8rem;
+        grid-template-columns: 1fr 8rem;
+        height: 8rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after,
+    .text-part > .main-class::after {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after,
+    .text-part > .main-class::after,
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        top: -webkit-calc(50% - 1.125rem);
+        top: -moz-calc(50% - 1.125rem);
+        top: calc(50% - 1.125rem);
+        border-width: 0.25rem;
+    }
+
+    .text-part > .main-class::before {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-width: 0.25rem;
+        top: -webkit-calc(50% - 1.45rem);
+        top: -moz-calc(50% - 1.45rem);
+        top: calc(50% - 1.45rem);
+    }
+
+    .text-part .disrupt-class::before,
+    .text-part .risk-class::before {
+        height: 2.25rem;
+        width: 2.25rem;
+        top: -webkit-calc(50% - 1.125rem);
+        top: -moz-calc(50% - 1.125rem);
+        top: calc(50% - 1.125rem);
+        right: 0.75rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after {
+        top: 0.15rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::before,
+    .anom-bar-container.机密 .text-part > .main-class::before,
+    .anom-bar-container.機密 .text-part > .main-class::before {
+        top: 0.15rem;
+        width: 5.75rem;
+        height: 3rem;
+        right: 1.25rem;
+        -webkit-background-size: 100% 100%;
+           -moz-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        background-position: left -20px center;
+    }
+
+    .anom-bar-container.esoteric .contain-class > .class-category,
+    .anom-bar-container.机密 .contain-class > .class-category,
+    .anom-bar-container.機密 .contain-class > .class-category {
+        max-width: 100% !important;
+    }
+
+    .anom-bar-container.pending .bottom-box > .text-part,
+    .anom-bar-container.等待分级 .bottom-box > .text-part,
+    .anom-bar-container.等待分級 .bottom-box > .text-part,
+    .anom-bar-container.neutralized .bottom-box > .text-part,
+    .anom-bar-container.无效化 .bottom-box > .text-part,
+    .anom-bar-container.無效化 .bottom-box > .text-part,
+    .anom-bar-container.explained .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part,
+    .anom-bar-container.已解明 .bottom-box > .text-part {
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+            grid-template-areas: "main-class";
+    }
+
+    .text-part .disrupt-class,
+    .text-part .risk-class {
+        padding-left: 0.25rem;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+    }
+
+    .text-part .disrupt-class *,
+    .text-part .risk-class * {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media (max-width: 875px ) and (min-width: 480px ) {
+    .anom-bar-container.pending .anom-bar > .bottom-box,
+    .anom-bar-container.等待分级 .anom-bar > .bottom-box,
+    .anom-bar-container.等待分級 .anom-bar > .bottom-box,
+    .anom-bar-container.neutralized .anom-bar > .bottom-box,
+    .anom-bar-container.无效化 .anom-bar > .bottom-box,
+    .anom-bar-container.無效化 .anom-bar > .bottom-box,
+    .anom-bar-container.explained .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box {
+        -ms-grid-columns: 1fr 6rem;
+        grid-template-columns: 1fr 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 480px ) {
+    .anom-bar {
+        position: relative;
+    }
+
+    .anom-bar > .top-box {
+        height: 40vw;
+        max-height: 40vw;
+                grid-template-areas:
+            "."
+            "top-left-box"
+            "top-center-box"
+            "top-right-box"
+            ".";
+        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        font-size: -webkit-calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        font-size: -moz-calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        font-size: calc(5px + (10 - 5) * ( (100vw - 300px) / ( 480 - 300) ));
+        margin: 0 0 1rem 0;
+        padding-left: 1em;
+    }
+
+    .top-box .top-left-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        line-height: 1;
+    }
+
+    .top-left-box > .item {
+        font-size: 3em;
+    }
+
+    .top-box .top-left-box > span {
+        width: 100%;
+    }
+
+    .top-box .top-center-box {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    width: 100%;
+        max-width: 48vw;
+        margin: 0 0 0 -0.15rem;
+    height: 2rem;
+    }
+
+    .top-center-box > div {
+        height: 25%;
+        margin: 0.15rem 0.15rem 0 0.15rem;
+    }
+
+    .top-box .top-right-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    width: 100%;
+        max-width: 48vw;
+        margin: 0 0 0 -0.15rem;
+    height: 2rem;
+    }
+
+    .top-right-box > div {
+        line-height: 1;
+    }
+
+    .top-right-box > .level {
+        font-size: 4em;
+    }
+
+    .top-right-box > .clearance {
+        line-height: 1.5;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: -webkit-calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        font-size: -moz-calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        font-size: calc(14px + (14 - 10) * ( (100vw - 400px) / ( 480 - 300) ));
+        width: initial;
+        height: 1.5rem;
+    }
+
+    .top-right-box > .clearance::before {
+        line-height: 0.5;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: initial;
+        height: initial;
+        position: initial;
+    }
+
+    .anom-bar > .bottom-box {
+        position: initial;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: 8rem;
+    }
+
+    .anom-bar-container:not(.esoteric):not(.机密):not(.機密) .text-part > .main-class::before {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: -webkit-calc(50% - 1.475rem);
+        top: -moz-calc(50% - 1.475rem);
+        top: calc(50% - 1.475rem);
+        right: 0.5rem;
+    }
+
+    .text-part > div > .class-category,
+    .anom-bar-container.esoteric .text-part > .main-class > .contain-class > .class-category,
+    .anom-bar-container.机密 .text-part > .main-class > .contain-class > .class-category,
+    .anom-bar-container.機密 .text-part > .main-class > .contain-class > .class-category {
+        font-size: 1em;
+    }
+
+    .text-part .disrupt-class,
+    .text-part .risk-class {
+        font-size: 0.9em;
+    }
+
+    .text-part > .main-class::after,
+    .text-part .disrupt-class::after,
+    .text-part .risk-class::after {
+        height: 2rem;
+        width: 2rem;
+        top: -webkit-calc(50% - 1.25rem);
+        top: -moz-calc(50% - 1.25rem);
+        top: calc(50% - 1.25rem);
+    }
+
+    .text-part > .main-class::before,
+    .text-part .disrupt-class::before,
+    .text-part .risk-class::before {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1rem;
+        top: -webkit-calc(50% - 1.25rem);
+        top: -moz-calc(50% - 1.25rem);
+        top: calc(50% - 1.25rem);
+        right: 1.5rem;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::before,
+    .anom-bar-container.机密 .text-part > .main-class::before,
+    .anom-bar-container.機密 .text-part > .main-class::before {
+        top: 0.15rem;
+        width: 4.5rem;
+        height: 2.5rem;
+        right: 1rem;
+        -webkit-background-size: 100% 100%;
+           -moz-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        background-position: left -10px center;
+    }
+
+    .anom-bar-container.esoteric .text-part > .main-class::after,
+    .anom-bar-container.机密 .text-part > .main-class::after,
+    .anom-bar-container.機密 .text-part > .main-class::after {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .bottom-box > .diamond-part {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        height: 40vw;
+        padding: 0;
+    }
+
+    .diamond-part * {
+        background-repeat: no-repeat;
+    }
+
+    .top-box .top-left-box {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .top-box .top-center-box {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .top-box .top-right-box {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+    }
+
+    .anom-bar-container.pending .anom-bar > .bottom-box,
+    .anom-bar-container.等待分级 .anom-bar > .bottom-box,
+    .anom-bar-container.等待分級 .anom-bar > .bottom-box,
+    .anom-bar-container.neutralized .anom-bar > .bottom-box,
+    .anom-bar-container.无效化 .anom-bar > .bottom-box,
+    .anom-bar-container.無效化 .anom-bar > .bottom-box,
+    .anom-bar-container.explained .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box,
+    .anom-bar-container.已解明 .anom-bar > .bottom-box {
+        height: 6rem;
+    }
+
+    .danger-diamond > .top-icon {
+        top: 0.375rem;
+    }
+
+    .danger-diamond > .right-icon {
+        right: 0.375rem;
+    }
+
+    .danger-diamond > .left-icon {
+        left: 0.375rem;
+    }
+
+    .danger-diamond > .bottom-icon {
+        bottom: 0.375rem;
+    }
+}
+
+@supports not (--css: variables) {
+
+    .anom-bar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: column nowrap;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+    }
+
+    .anom-bar > .top-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+    }
+
+    .top-box .top-center-box {
+        -webkit-box-flex: 2;
+        -webkit-flex-grow: 2;
+           -moz-box-flex: 2;
+            -ms-flex-positive: 2;
+                flex-grow: 2;
+    }
+
+    .anom-bar > .bottom-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .bottom-box > .text-part {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+           -moz-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        width: 100%;
+    }
+
+    .anom-bar-container .text-part .main-class {
+        overflow: hidden;
+    }
+
+    .anom-bar-container .text-part .disrupt-class,
+    .anom-bar-container .text-part .risk-class {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+           -moz-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+
+    .anom-bar-container .text-part .disrupt-class .class-category,
+    .anom-bar-container .text-part .risk-class  .class-category {
+        -webkit-flex-shrink: 4;
+            -ms-flex-negative: 4;
+                flex-shrink: 4;
+    }
+
+    .bottom-box > .diamond-part {
+        width: 6rem;
+        height: 6rem;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+           -moz-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+@media (max-width: 480px ) {
+        .anom-bar > .top-box {
+            height: 6rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+               -moz-box-orient: vertical;
+               -moz-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+            width: -webkit-calc(100% - 40vw);
+            width: -moz-calc(100% - 40vw);
+            width: calc(100% - 40vw);
+        }
+
+        .top-box .top-left-box {
+            display: initial;
+        }
+
+        .top-box > * {
+            width: 100%;
+            height: auto;
+        }
+
+        .top-box .top-center-box {
+                -webkit-box-flex: 0;
+                -webkit-flex-grow: 0;
+                   -moz-box-flex: 0;
+                    -ms-flex-positive: 0;
+                        flex-grow: 0;
+        }
+
+    }
+}
+
+.lang-cn .lang-tr,
+.lang-tr .lang-cn {
+    display: none;
 }
 </style>
 <style>
@@ -311,6 +2561,14 @@ display:none
 }
 
 #action-area { position: relative; z-index: 20; }
+</style>
+<style>
+.ratingofscp-5110.\{\$rating\} {display: none;}
+ .collabnoteofscp-5110.\{\$note\} {display: none;}
+</style>
+<style>
+.ratingofscp-3311.\{\$rating\} {display: none;}
+ .collabnoteofscp-3311.\{\$note\} {display: none;}
 </style>
 <script src="https://s.nitropay.com/ads-143.js"></script>
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--modules/js/list/ListPagesModule.js"></script>
@@ -661,7 +2919,7 @@ display:none
 <div class="scpnet-interwiki-wrapper"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=worsssss" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
+<p><iframe src="http://scp-wiki-cn.wdfiles.com/local--files/nav%3Aside/interwikiFrame.html?category=_default&pagename=vodkawells" class="html-block-iframe scpnet-interwiki-frame" name="interwikiFrame"></iframe></p>
 </div>
     
     
@@ -683,7 +2941,7 @@ display:none
                     
                     
                         <div id="page-title">
-                            E̶R̶R̶O̶R̶
+                            赤色之瞳似血与熔岩，魑魅魍魉咆哮在深渊
                         </div>
                     
 
@@ -703,47 +2961,165 @@ display:none
 
 
 
-<div style="text-align: right;"><div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+52</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+
+
+
+
+<div style="text-align: center;">
+<div class="content-panel standalone series" style="background-color: #FFFFFF;"><img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/vw566" width="350px" alt="vw566" class="image" /><br />
+<br />
+欢迎查阅
+<p style="text-align: center;"><span style="font-size:105%;">Vodka Wells博士の人事档案</span></p>
+<p style="text-align: center;"><span style="color: gray"><span style="font-size:60%;">Form Site-CN-10</span></span></p>
+<hr />
+<div class="page-rate-widget-box"><span class="rate-points">评分:&nbsp;<span class="number prw54353">+36</span></span><span class="rateup btn btn-default"><a title="我喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)">+</a></span><span class="ratedown btn btn-default"><a title="我不喜欢" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, -1)">&#8211;</a></span><span class="cancel btn btn-default"><a title="取消我的投票" href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)">x</a></span></div></div>
+</div>
+
+
+
+<div class="anom-bar-container item-Wells clear-6 机密 thaumiel ekhi 危险 {$american} lang-cn">
+<div class="anom-bar">
+<div class="top-box">
+<div class="top-left-box"><span class="item"><span class="lang-cn">项目编号：</span><span class="lang-tr">項目編號：</span></span><span class="number">Wells</span></div>
+<div class="top-center-box">
+<div class="bar-one"></div>
+<div class="bar-two"></div>
+<div class="bar-three"></div>
+<div class="bar-four"></div>
+<div class="bar-five"></div>
+<div class="bar-six"></div>
+</div>
+<div class="top-right-box">
+<div class="level"><span class="lang-cn">等级</span><span class="lang-tr">等級</span>6</div>
+<div class="clearance"></div>
+</div>
+</div>
+<div class="bottom-box">
+<div class="text-part">
+<div class="main-class">
+<div class="contain-class">
+<div class="class-category"><span class="lang-cn">收容等级：</span><span class="lang-tr">收容等級：</span></div>
+<div class="class-text">机密</div>
+</div>
+<div class="second-class">
+<div class="class-category"><span class="lang-cn">次要等级：</span><span class="lang-tr">次要等級：</span></div>
+<div class="class-text">thaumiel</div>
+</div>
+</div>
+<div class="disrupt-class">
+<div class="class-category"><span class="lang-cn">扰动等级：</span><span class="lang-tr">擾動等級：</span></div>
+<div class="class-text">ekhi</div>
+</div>
+<div class="risk-class">
+<div class="class-category"><span class="lang-cn">风险等级：</span><span class="lang-tr">風險等級：</span></div>
+<div class="class-text">危险</div>
+</div>
+</div>
+<div class="diamond-part">
+<div class="danger-diamond"><a href="http://scp-wiki-cn.wikidot.com/classification-committee-memo">备忘录链接</a><br />
+<div class="arrows"></div>
+<div class="octagon"></div>
+<div class="quadrants">
+<div class="top-quad"></div>
+<div class="right-quad"></div>
+<div class="left-quad"></div>
+<div class="bottom-quad"></div>
+</div>
+<div class="top-icon"></div>
+<div class="right-icon"></div>
+<div class="left-icon"></div>
+<div class="bottom-icon"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<br />
+<br />
 <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/yahooui/tabview-min.js">
 </script>
-<div id="wiki-tabview-483fc5278609c0ee8ef7dd75039ebf7f" class="yui-navset">
+<div id="wiki-tabview-4b64982d0ecc6a959e560cd5307e4e06" class="yui-navset">
 <ul class="yui-nav">
-<li class="selected"><a href="javascript:;"><em>p̸̮̳̯̊̈̆̿̐̚͝͠ͅĕ̵̪̩̬̙͚͉̈́̇̾r̵̜͕̞͓̫̘͕͖̓̿͑͒̈́̄̆̄̚͜͜s̸̨̠̲̤̠͚̗̫̓̇̇̄̈͋͊̾̕͠ǒ̸̢̹̺̳̞̳͘n̷̻̜͙̗͖͒̿̇̍͌̓̿͠a̶̗͕͗l̴̨̢̳̝͓̖͍͐̓̈̍͆̌̿͘͠ ̸̛̗̂̃̓̍͂̕d̸̳̩̯̮͙͇͍̿̾ạ̶̢̠̰̔̓̑͗́͘t̷̛͓̙̮̺͙̗͛̅̋̇̌͝ā̸̧̹̠̖̏̓̓̃̐ͅ</em></a></li>
-<li><a href="javascript:;"><em>P̷̢̯̥͂͊͛̽̆͛ȧ̵͕r̵̮͂̓̔̍̄̃͘̚͝͠t̵͔͓̋͐̉͌͋͠͝͝i̴̡͙̗͉̞̗͎̱͇̅̐̑̑̏̄̒̚͝͝c̴̼̱͉̤̰͈̭̖̿̒́̋̀î̵̲̯͐̌͐̓̌́̚p̴͚̗̯̞̺̭̘̒͝ͅͅǎ̶̛̬͕̐͑̈́̾͠t̷͈̀̈̿͐͐̾̔͝͝í̸̼͓̐͆͋̽̈́͛͊̇͠ͅȏ̷͚̫͔͔͍̈̔́̈́̿͂̚͠n̸̡̡͔̫͈̯̿̈́̐̀̇͊͜ ̷͖͎̠̅i̶̦̖͕̻͇̼͓̯͗̆͂̂̏̈͊̍n̶̺̒͌̀̊͜͝ ̸̦̻̖̹̹͓̩̊́̿̄̈́͌͆p̵̜̮̦̤̮͍̐̈́̓̽̍̈́r̸̜̗͉̀̆̂̈̿͒̌̍̇̈́ơ̴̧͆͌̾́̈́̐́͊̚j̵̇̌̽͊͆͐͘̕͝͝ͅe̵̯͓̭̖̙̖͙͓̅͗̒͊͝ͅc̷̻̞̘̙͖͙͓̗͇̺̽̓̏ţ̴̲͓̫̭̰͙̋̂̓̆̓̕͝s̵̮̖̭̫̣̳̫͘</em></a></li>
-<li><a href="javascript:;"><em>M̸̨͔̪͙̯͙̠̖͓̔͐̍̎e̶̠̯̲̥̜͋̐̈́̏͂̑͊ŝ̸̡̡̪̤̩̬̻̪͓̈́ş̶̪̹̥͎̈̌͐̿̓̈́͐̎̕͘á̵̝̬̫̣͇͔̥̃̌͝͠g̸̙̱̕̚e̴͚͗͒̃̅̽̊̓͐͠ ̴̥̖̠̍͗̌̌ͅB̷̙̟͋̆̏̿͊̌͂̚ò̸̹́̍̾̉̔͐͜͠͠ą̸̞̾r̵̡̡̞̣͚̙̙̟̘͋̄̐͝ḑ̶̭̥͗͆̀̾̄̋́̓̈́͐</em></a></li>
-<li><a href="javascript:;"><em>A̶̤̰̯̤̳͗ć̴̛̗̹̣̫̩̜̥͓̯̬͋͋h̴̤̼͙̞̤̫͋͆́̎̐̄͛̉͆͠i̴̦̮̤̬̩̲̊͐̇̓͛̉̈́͌͋́e̸̠̮̻͍̾͒̒́̊̅̈́v̶̢̡̤̭̯̜͙̗̳̩̀͊͗͆͛̈́̂̾͘e̸͚̬̪̫̾̽̐̀̏̂̕͝ḿ̵̨̡̗̺̬͓̃̋̆̔͌͛̌͜͠ȩ̷̛̗̪͖̲̩̣̭̒̂̈́n̷͇͉̗̬̜͔̺̠͇͗͋̈͑t̷̙̰͉̩̞̬͖͔̝̅̅́̓̀͗̔͌͛̈ ̸̡̡̪̎͛̓̃̓̉͐̓͠ẅ̸̨̰̯̥̲̫̱͉͙́͌̊͗͗̚͘͜͝a̷̘͉͖̗̮͙̻͎̦̔̍͌l̵͈̰̞̠̥͖͎̝̮͛͑̄͒̀̀̅̐̐l̸̬̫̘̮͛̄́͠</em></a></li>
-<li><a href="javascript:;"><em>......</em></a></li>
-<li><a href="javascript:;"><em>P̶͔̪͚̝̭͕͋̓̀̏̌̋͌̊͜h̵̻̻̗͗͜o̸̡̘̦͉̦̖̞̱̓̀̈́̈́͋̄̍͝t̶͔̝͇̠̗̣̹̒̈́̔͝ó̴̡̼̗̮̙̜̎̀͆̍̑͜͜͝ ̶̨͕͙̋͗̅́̏̓̔̋̾̈́ͅẃ̸̘̦̭͔̙̊͗̐̂̄̾̿a̴̼͛́͌̕l̴͈̪͍͑̎͝ͅl̷͈̳̥̳̻̜̟̹͚̈́̉̿̇̈́̕̚</em></a></li>
-<li><a href="javascript:;"><em>Ç̸̇̀̽̈́̈͗͜ͅṳ̶̜̌̏̅͠r̷͔̥͒̾̄͛̓̚r̶͓̳̈́̓̒̌̀͆̚e̴̳͌̍̀̿̾̓͂̎̈̓n̵̦̲̗̏̆̌̀͆̈̚̕ț̶͙̳̋͌̍͛͐ ̷̻̞̭̯̹̅̈́̔͆͊t̴̳͈͍͙̠̥͐̉ą̶͎͉̪̦̩̪̐͊̋͌͊͘͠ͅͅs̷̲̱͖̝̰̦̅̾̋͛́̍̚͝͝ͅk̴̫̪̺͈̝̜̱̐̀͘</em></a></li>
+<li class="selected"><a href="javascript:;"><em>概述（下层叙事）</em></a></li>
+<li><a href="javascript:;"><em>概述（上层叙事）</em></a></li>
+<li><a href="javascript:;"><em>原创内容</em></a></li>
+<li><a href="javascript:;"><em>翻译内容</em></a></li>
+<li><a href="javascript:;"><em>艺术作品</em></a></li>
 </ul>
 <div class="yui-content">
 <div id="wiki-tab-0-0">
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/1"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/1/medium.jpg" alt="1" class="image" /></a></p>
-<p style="text-align: center;">↑WOrs Obrine↑</p>
-<p><strong>项目编号</strong>：已撤档</p>
-<p><strong>项目等级：</strong>无效化</p>
-<p><strong>特殊收容措施</strong>：鉴于目前项目已经以固定常态出现并不再引起事件，已撤销所有相关的收容措施。</p>
-<p><strong>描述：</strong>项目本质为一种潜在模因，在阅读██之后会显示出对<a href="http://scp-wiki-cn.wikidot.com/scp-cn-1810">AM基金会</a>的忠诚与热情，并拥有不可控的压制休谟指数反应，原因未知。在一次偶然的事故中，平民WOrs Obrine受此影响，在心理医师的努力下，WOrs Obrine不再出现上述反应，但其降低休谟指数的异常无法抵消。此外，项目再没有出现收容失效的情况，已于██撤除档案。</p>
-<hr />
-<p><strong>人员姓名</strong>：WOrs Obrine，又称WOrso，虫草，麦芽汁。</p>
-<p><strong>中文名</strong>：破阵子。你也可以叫他小羊（？）。</p>
-<p><strong>人员性别：</strong>男</p>
-<p><strong>年龄</strong>：15</p>
-<p><strong>人员描述</strong>：一头的棕色卷发，蓝瞳，以及一副伪装成管家镜的斯克兰顿微型稳定锚。日常以白衬衫出现在人们视野里，偶尔会出现其他服饰。对他人沉默寡言，对熟悉的人口若悬河，心理硬伤（指物理上，心脏先天性畸形）。说话声音很懒，有时喜欢拖尾音，心情不好时攻击性极高，但是一般心态都不会炸。</p>
-<p>2018年进入基金会，两年间一直任职于Site-CN-09，由于模因原因，其心理年龄未知，但似乎因为身体年龄原因，行事不太方便。体型较小，行动灵活。推测因为模因污染，其思维方式跟不上/超越当前节奏，言语谈吐也会发生跳跃式改变，精神也受其影响而存在问题。</p>
-<p><strong>爱好</strong>：绘画，游戏，看书（尤其是科幻）</p>
-<p><strong>厌恶</strong>：你猜啊~</p>
-<p>无更多信息。</p>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scpsandboxcn.wikidot.com/local--files/collab:yizuo/18wells" style="width:300px;" alt="18wells" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>Wells在18岁时的照片，他当时在做吧台的酒保。</p>
+</div>
+</div>
+<p><strong>姓名：</strong>Harrison Wells/哈尔森 威尔斯</p>
+<p><strong>性别：</strong>男/女(佩戴面具后)</p>
+<p><strong>年龄：</strong>28</p>
+<p><strong>安保许可等级：</strong>三级</p>
+<p><strong>职位：</strong>研究员、收容专家、外勤特工</p>
+<p><strong>所属部门：</strong>Site-CN-10，Site-CN-09</p>
+<p><strong>工作年龄：</strong>1年</p>
+<p><strong>现状：</strong>就职于CN-10站点</p>
+<p><strong>人设外观：</strong>Dr.Wells原本是一个奔三的猥琐大叔，长着一头不应该长出来的黑色短发(?)，右眼瞳色为黑色，而左眼则为红色。平日里身穿黑色西服，戴着黑色高筒礼帽，有时会戴着圆框眼睛。工作时间通常穿着基金会研究员标准的白大褂工作服，喜欢一只手插在兜里，另一只手玩弄他收集到的光团（通常呈十字形状）。穿着一双<strong>盗版</strong>的名牌黑色皮鞋。</p>
+<p>借由一副异常面具导致Wells自身隐藏极深的女性人格从主体分离出来成为一个独立人格，并有着和Wells相同的异常能力。其穿衣风格和Wells相似，保留了双色瞳的外貌特征，头发颜色是不同于男版Wells的银白色卷发，同样喜欢玩弄光团。</p>
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">.</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;竟然被你发现了</a></div>
+<div class="collapsible-block-content">
+<p>BGM来自undertale</p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=39224634&auto=1&height=32"></iframe></p>
+</div>
+</div>
+</div>
+<p><strong>简述：</strong>Wells博士一般在档案中写作Dr.Wells。</p>
+<p>Wells在18岁时曾去酒吧打工，他的标志性物品也就是那个帽子就是他用打工的钱的买的。没错，从得到帽子那一天，他就一直戴着那个帽子，从没换过新的 。</p>
+<p>Wells在2018年2月1日通过在其所任职的大学研究所的秘密招聘中得知SCP基金会的存在。他因为科学研究能力和单体作战能力较为突出而被选中，担负起保护全人类的重担与责任。通过在工作岗位上一年多的摸爬滚打，他获得了属于自己的办公室和一张二级职员卡。而在此时，他也发现了隐藏在自己体内的一种异常能力——他可以吸收太阳光，就像太阳能电力板一样。于是，在他向他的站点主管Dr.Darry汇报后，他开始了解这股异常并接受实验测试。</p>
+<p>几十次的实验，每次都让Wells更深的了解自身的异常能力。他可以通过晒太阳来吸收光线，以未知形态储存在体内，缺点是有储存上限。Wells可以将储存的光线折射出去，大概就是&#8230;将光聚集到身体的某个部位，以使用高度压缩的光子进行蓄能攻击的能力。他也可以用光大量聚集起来使对方暂时致盲。Wells如果在体内光能充足时可将光蓄积到四肢，使其能做到高速移动来产生重击，以及用一部分光具象化出物品来，可以是武器，盔甲或是其他的什么东西。在光线比较充足时，他同样可以让自身也达到直线的高速移动，与此同时反应速度也会提升。但这些举动都会增加他体内光能量的流失，因此不得不尽可能多的晒太阳来补充体内的光能。随着时间的流逝，同事们都习惯了Wells的异常能力，而他也熟练掌控了这种能力。</p>
+<p>2020年4月，因其协助收容SCP-CN-1720，Wells博士被提拔为三级研究员并被授予收容专家的职位头衔。</p>
 </div>
 <div id="wiki-tab-0-1" style="display:none">
+<div class="image-container floatright"><img src="http://ubmh.wdfiles.com/local--files/forum%3Astart/V-W%20LOGO.png" width="80px" alt="V-W%20LOGO.png" class="image" /></div>
+<h1 id="toc0"><span>作者的自述</span></h1>
+<p>我在基金会的下叙——Wells博士的人物形象来自于一幅同人画作，后来对其进行个性化才形成了现在的Wells，黑色的高筒礼帽，左红右黑的眼瞳颜色，黑色的大风衣，有时衬衣上会打着领带或系上一个蝴蝶结；下身一件黑色的长裤，最后一双黑色的皮鞋。因为所在职位的薪水不稳定，Wells买不起名牌皮鞋，所以他通过人际关系搞到了一双古驰真皮皮鞋——A货。</p>
+<p>​Wells的全名“Vodka·Harrison·Wells”，Vodka也就是我上叙的wikidot ID“<span class="printuser"><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;">Vodka Wells</a></span>”原本应叫做伏特加博士而并非Wells博士，但我在几个月前发现CN-06站点已经有了一位被称作Vodka的外勤特工，我便采取了下一个方案，并试图把我的wiki名改成Harrison Wells，但我发现改名的次数已经用光了（</p>
+<p>​而Harrison这个名字来自于我喜欢看的一个美剧角色的名字——Harrison Wells，并且也是一名博士，所以我将Harrison加到我在基金会所扮演的角色的名字里使其组合成我的全名 Vodka Harrison Wells，在此人事档案和关于我的中分原创作品里也缩写为V.H.Wells博士。（大概会这么写，如果懒得写这么长的缩写，就直接写作Wells吧。）<br />
+​<br />
+Wells的性格​类似一些人在现实中的性格——平日里懒散但到了很正经的时候又会稍显勤快起来。他靠着那些懒惰的神情来掩盖他的心思缜密，这也使他得到了一份在大学的心理医学研究员的职位。后来基金会到他所任职的大学秘密的招聘专员，他因此加入了基金会，成为了一名异常项目研究员。<br />
+他在面对异性时会表现得像一个不小心看到邻居家洗澡一样老脸一红，但在他得到了一幅面具后他内心隐藏已久的，属于他自己的异性朋友终于出现在他身边——唯一一个不会使他害臊的异性，但貌似会使他害羞（好像没什么区别）</p>
+<p>Wells的年龄，是的，他已经28岁了，距离30岁还有&#8230;&#8230;哦，不，我忘记了，活在故事里的角色是不会衰老的，只要我想让他永远保持28岁，他就永远不会成功奔三。</p>
+<p>Wells的异常能力源于日本漫画《航海王》里的一个人物角色拥有的恶魔果实能力，但是为了更个性化，也为了避免龙傲天设定而削弱这个能力，将光元素化改成吸收光并控制光的能力。</p>
+<p>Wells最大的爱好可能也就是每天白嫖站点免费甜甜圈，巧克力味的。虽然他现在得到了在站点的后勤职位并且完全接管了整个站点的伙食分配事务，但在闲暇时间顺走几个巧克力味的甜甜圈已经成为了他的一个改不掉的习惯和生活方式。</p>
+<p>Wells的追求和理想莫过于担任站点的后勤部门的最高主管，但他的理想很快就被十号站点总管Darry给他实现了，所以他现在的新追求是在不丢掉后勤主任的职位同时得到至少一个月以上的带薪假期，就像放暑假一样——尽管这根本不可能。<br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
+<div class="scp-image-block block-right" style="width:300px;"><img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wellswells.png" style="width:300px;" alt="wellswells.png" class="image" />
+<div class="scp-image-caption" style="width:300px;">
+<p>男Wells和女Wells第一次的合照，第一个爱情的见证 (?)</p>
+</div>
+</div>
+<p>Wells的专属CP是他的另一半，女版的Wells。他没法想象到为什么那副面具会产生一个女版的自己，但时间久了他也开始对这个自己产生好感。女版的Wells形象来自于上面提到的同一部美剧里的女性角色，为我绘制女性人设的画师也参与了形象创作。银白色的卷发，一米八的高个子和令人羡慕的大长腿，且拥有和Wells一样的控光能力。</p>
+<hr />
+<h1 id="toc1"><span>以后的打算</span></h1>
+<p>如果没有突发情况，希望我能一直参与基金会的创作和翻译，在基金会中文分部的网站上结识更多的前辈和朋友，这将会是我铭记于心的有趣的经历。<br />
+​</p>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<div style="text-align: center;">
+<hr />
+<h1 id="toc2"><span>原创作品</span></h1>
+<hr /></div>
+<br />
+
 
 
 <div class="infobox"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/scp-cn-1809">随机作品传送门！</a></strong></p>
-<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1610223623" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)" /></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;">WOrs Obrine</a></span></strong></tt></p>
-<p style="text-align: center;">共12篇</p>
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/scp-cn-1720">随机作品传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5721026&amp;amp;size=small&amp;amp;timestamp=1610248890" alt="Vodka Wells" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5721026)" /></a><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;">Vodka Wells</a></span></strong></tt></p>
+<p style="text-align: center;">共3篇</p>
 <p><br />
 <br />
 <br />
@@ -760,9 +3136,9 @@ display:none
     </div><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/scp-cn-1480">随机页面传送门！</a></strong></p>
-<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1610223623" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)" /></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;">WOrs Obrine</a></span></strong></tt></p>
-<p style="text-align: center;">共14个页面</p>
+<p style="text-align: center;"><strong><a target="_blank" href="http://scp-wiki-cn.wikidot.com/scp-5110">随机页面传送门！</a></strong></p>
+<p style="text-align: center;"><tt><strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5721026&amp;amp;size=small&amp;amp;timestamp=1610248890" alt="Vodka Wells" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5721026)" /></a><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;">Vodka Wells</a></span></strong></tt></p>
+<p style="text-align: center;">共6个页面</p>
 </div>
     
     
@@ -771,7 +3147,7 @@ display:none
 <div class="sortbar {$sortbar}"><div class="list-pages-box">    <div class="list-pages-item">
 
 
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/worsssss/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/worsssss/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/worsssss/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/worsssss/order/updated_at%20desc/category/*">最近编辑</a></p>
+<p style="text-align: center;"><a href="http://scp-wiki-cn.wikidot.com/vodkawells/order/created_at">时间顺序</a> | <a href="http://scp-wiki-cn.wikidot.com/vodkawells/order/created_at%20desc">最新发布</a> | <a href="http://scp-wiki-cn.wikidot.com/vodkawells/order/rating%20desc">分数排序</a> | <a href="http://scp-wiki-cn.wikidot.com/vodkawells/order/updated_at%20desc/category/*">最近编辑</a></p>
 </div>
     
     
@@ -792,52 +3168,26 @@ display:none
 
 
 <div class="preview yes">
-<p><strong><a href="/scp-cn-1809">SCP-CN-1809</a></strong><br />
-+<strong><tt>42</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>17</tt></strong><br />
-<em>最新评论：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589007337 format_%25D%20%25H%3A%25M">09 May 2020 06:55</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>SisterTan_Greasy</tt></strong> <em>于</em> <strong><tt><span class="odate time_1600251712 format_%25D%20%25H%3A%25M">16 Sep 2020 10:21</span></tt></strong></p>
+<p><strong><a href="/scp-cn-1720">SCP-CN-1720</a></strong><br />
++<strong><tt>36</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>17</tt></strong><br />
+<em>最新评论：</em> <strong><tt>really blood moon</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595598729 format_%25D%20%25H%3A%25M">24 Jul 2020 13:52</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609996436 format_%25D%20%25H%3A%25M">07 Jan 2021 05:13</span></tt></strong></p>
 <div class="span"><br />
-<span style="white-space: pre-wrap;">项目编号：項目編號：CN-1809&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;等级等級3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;收容等级：收容等級：&#32;机密&#32;&#32;&#32;次要等级：次要等級：&#32;thaumiel&#32;&#32;&#32;&#32;扰动等级：擾動等級：&#32;ekhi&#32;&#32;&#32;风险等级：風險等級：&#32;警告&#32;&#32;&#32;&#32;备忘录链接&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;...</span><br />
-<span style="color: #000000"><em>标签：</em></span> scp site-cn-09 site-cn-64 thaumiel 人造物品 原创 幻觉 时间影响 木质 本质促动</div>
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：Vodka&#32;Wells&#32;&#32;&#32;感谢Swred&#32;前辈为此文提供代码帮助和技术支持！&#32;&#32;&#32;建议打开声音观看。&#32;√&#32;-&#32;威尔斯博士的人事档案&#32;Swred的作者页&#32;&#32;&#32;&#32;&#32;SCP-CN-1720是一种认知危害异常，衣服本身并不存在。...</span><br />
+<span style="color: #000000"><em>标签：</em></span> keter k级情景 scp site-cn-10 原创 认知危害 音频</div>
 </div>
 </div>
 <div class="list-pages-item">
 
 
 <div class="preview yes">
-<p><strong><a href="/scp-cn-1340">SCP-CN-1340</a></strong><br />
-+<strong><tt>23</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>16</tt></strong><br />
-<em>最新评论：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1586229561 format_%25D%20%25H%3A%25M">07 Apr 2020 03:19</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>SisterTan_Greasy</tt></strong> <em>于</em> <strong><tt><span class="odate time_1600250548 format_%25D%20%25H%3A%25M">16 Sep 2020 10:02</span></tt></strong></p>
+<p><strong><a href="/scp-cn-1385">SCP-CN-1385</a></strong><br />
++<strong><tt>28</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>14</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1592179048 format_%25D%20%25H%3A%25M">14 Jun 2020 23:57</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1601277406 format_%25D%20%25H%3A%25M">28 Sep 2020 07:16</span></tt></strong></p>
 <div class="span"><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> euclid scp site-cn-09 site-cn-64 动物 原创 合著 基因 寄生性 无脊椎动物 活物 生物性 蠕虫</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/scp-cn-1810">SCP-CN-1810</a></strong><br />
-+<strong><tt>42</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>7</tt></strong><br />
-<em>最新评论：</em> <strong><tt>AeraWserA</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585362248 format_%25D%20%25H%3A%25M">28 Mar 2020 02:24</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>Scotoma</tt></strong> <em>于</em> <strong><tt><span class="odate time_1599552119 format_%25D%20%25H%3A%25M">08 Sep 2020 08:01</span></tt></strong></p>
-<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/scp-cn-1810/3"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/scp-cn-1810/3/medium.jpg" class="imagepre yes" alt="3" /></a><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 2020画廊大赛 scp site-cn-09 site-cn-64 不可移动 原创 基金会制 星球 星际 未收容 未来 机密分级</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/scp-cn-1480">SCP-CN-1480</a></strong><br />
-+<strong><tt>31</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>11</tt></strong><br />
-<em>最新评论：</em> <strong><tt>lanperouge</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595688151 format_%25D%20%25H%3A%25M">25 Jul 2020 14:42</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1591930774 format_%25D%20%25H%3A%25M">12 Jun 2020 02:59</span></tt></strong></p>
-<div class="span"><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> k级情景 scp site-cn-09 thaumiel 不可移动 原创 基金会制 循环 悖论 时间影响 超维度</div>
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：Vodka&#32;Wells&#32;威尔斯博士的人...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp site-cn-09 site-cn-10 wondertainment博士 原创</div>
 </div>
 </div>
     
@@ -858,65 +3208,13 @@ display:none
 
 
 <div class="preview yes">
-<p><strong><a href="/nianchunianmo">年末，年初</a></strong><br />
-+<strong><tt>33</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>14</tt></strong><br />
-<em>最新评论：</em> <strong><tt>Dr Talcite</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609092775 format_%25D%20%25H%3A%25M">27 Dec 2020 18:12</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1609118218 format_%25D%20%25H%3A%25M">28 Dec 2020 01:16</span></tt></strong></p>
-<div class="span"><br />
-<span style="white-space: pre-wrap;">阿尔萨斯小食社于1923年元月成立，营业不佳，仿佛只有年末才是它赚钱的时间。...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 原创 故事</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/xiaxuehou">下雪后</a></strong><br />
-+<strong><tt>26</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>6</tt></strong><br />
-<em>最新评论：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606663034 format_%25D%20%25H%3A%25M">29 Nov 2020 15:17</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606665361 format_%25D%20%25H%3A%25M">29 Nov 2020 15:56</span></tt></strong></p>
-<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/xiaxuehou/%E9%9B%AA%E5%9C%B0"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/xiaxuehou/%E9%9B%AA%E5%9C%B0/medium.jpg" class="imagepre yes" alt="雪地" /></a><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 原创 故事</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/zhongmoxia">终末下</a></strong><br />
-+<strong><tt>35</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>9</tt></strong><br />
-<em>最新评论：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1590674581 format_%25D%20%25H%3A%25M">28 May 2020 14:03</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>Sekai_s</tt></strong> <em>于</em> <strong><tt><span class="odate time_1600953879 format_%25D%20%25H%3A%25M">24 Sep 2020 13:24</span></tt></strong></p>
-<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/zhongmoxia/%E5%9C%B0%E7%90%83"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/zhongmoxia/%E5%9C%B0%E7%90%83/medium.jpg" class="imagepre yes" alt="地球" /></a><br />
-<span style="white-space: pre-wrap;">&#32;&#32;&#32;&#32;&#32;&#32;&#32;本文是建立在“直抵群星”背景上的非“直抵群星”设定，因此使用了直抵群星的css💦。文章大概就是讲述了废土之后的故事，和对生存意义的探讨，既然逃不脱死亡，那为什么还要挣扎？&#32;引用音乐：Goodbye&#32;To&#32;a&#32;World（将声音调大更有感觉哟）&#32;&#32;&#32;&#32;&#32;worsssssE̶R̶R̶O̶R̶▸&#32;该作者的更多作品&#32;◂（原文链接）worsssss▸&#32;该作者的更多作品&#32;◂&#32;&#32;&#32;&#32;&#32;&#32;其他语言&#32;...</span><br />
-<span style="color: #000000"><em>标签：</em></span> ad-astra 原创 故事</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/hua-huan">花与环</a></strong><br />
-+<strong><tt>26</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>4</tt></strong><br />
-<em>最新评论：</em> <strong><tt>ForgotMyDrug</tt></strong> <em>于</em> <strong><tt><span class="odate time_1582874509 format_%25D%20%25H%3A%25M">28 Feb 2020 07:21</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1587380217 format_%25D%20%25H%3A%25M">20 Apr 2020 10:56</span></tt></strong></p>
-<div class="span"><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 原创 故事</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/zheshigeshenmodongxi">恸哀，风雨与爱的追捧</a></strong><br />
-+<strong><tt>13</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
-<em>最新评论：</em> <strong><tt>Cynthia7979</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585794196 format_%25D%20%25H%3A%25M">02 Apr 2020 02:23</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1585781491 format_%25D%20%25H%3A%25M">01 Apr 2020 22:51</span></tt></strong></p>
-<div class="span"><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 2020愚人竞赛 原创 故事</div>
+<p><strong><a href="/road-still-far-off">路途尚远</a></strong><br />
++<strong><tt>20</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>11</tt></strong><br />
+<em>最新评论：</em> <strong><tt>Monica Alex</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607086067 format_%25D%20%25H%3A%25M">04 Dec 2020 12:47</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1601277425 format_%25D%20%25H%3A%25M">28 Sep 2020 07:17</span></tt></strong></p>
+<div class="span"><img src="http://scp-wiki-cn.wdfiles.com/local--files/road-still-far-off/cgnb.jpg" class="imagepre {$image}" alt="cgnb.jpg" /><br />
+<span style="white-space: pre-wrap;">著作信息&#32;&#32;&#32;&#32;&#32;作者：Vodka&#32;Wells...</span><br />
+<span style="color: #000000"><em>标签：</em></span> site-cn-10 原创 故事</div>
 </div>
 </div>
     
@@ -930,79 +3228,58 @@ display:none
     
     
     
-    </div><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div style="text-align: center;">
-<hr />
-<h2><span>原创图书馆页面</span></h2>
-<hr /></div>
-</div>
+    </div><div class="list-pages-box">    
     
     
     
-    </div><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/wanderers:huanxiang">幻神</a></strong><br />
-+<strong><tt>7</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>3</tt></strong><br />
-<em>最新评论：</em> <strong><tt>Cloud_StoMo</tt></strong> <em>于</em> <strong><tt><span class="odate time_1586149434 format_%25D%20%25H%3A%25M">06 Apr 2020 05:03</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1586048526 format_%25D%20%25H%3A%25M">05 Apr 2020 01:02</span></tt></strong></p>
-<div class="span"><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> wanderers 原创 苍树与血</div>
-</div>
-</div>
+    </div><div class="list-pages-box">    
     
     
     
-    </div><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div style="text-align: center;">
-<hr />
-<h2><span>其他原创</span></h2>
-<hr /></div>
-</div>
+    </div><div class="list-pages-box">    
     
     
     
-    </div><div class="list-pages-box">    <div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/zhongfenshouhezuo">中分兽同人创作！</a></strong><br />
-+<strong><tt>78</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>64</tt></strong><br />
-<em>最新评论：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1606461280 format_%25D%20%25H%3A%25M">27 Nov 2020 07:14</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>WOrs Obrine</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607530388 format_%25D%20%25H%3A%25M">09 Dec 2020 16:13</span></tt></strong></p>
-<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/zhongfenshouhezuo/ARM"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/zhongfenshouhezuo/ARM/medium.jpg" class="imagepre yes" alt="ARM" /></a><br />
-<span style="white-space: pre-wrap;">大家好呀！自饺酱发布后，它就得到了很多人的赞赏，也因为这样，我们的图片作者FishSimple鞠躬尽瘁的创作以至于肝都没了😂，一些热情的人知道了，也加入了这场庞大创作，所以，我又创建了一个页面作为存放同人作品的地方●ω●&#32;就是这里了！如果你已经绘制了一张饺酱，不要吝啬，放到这里来吧！不过得按照以下格式哟1：&#32;&#32;[[collapsible&#32;show=&#32;你要说的话&#32;&#32;hide=&#32;-&#32;关闭文件&#32;]]...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 原创 合作</div>
-</div>
-</div>
-<div class="list-pages-item">
-
-
-<div class="preview yes">
-<p><strong><a href="/ziyulaila">诶——！梓鱼的中分表情包居然从墙上跳了下来！</a></strong><br />
-+<strong><tt>149</tt></strong><span style="white-space: pre-wrap;">&#32;&#32;&#32;</span><sup>&#8230;</sup> <strong><tt>59</tt></strong><br />
-<em>最新评论：</em> <strong><tt>copperia</tt></strong> <em>于</em> <strong><tt><span class="odate time_1595671405 format_%25D%20%25H%3A%25M">25 Jul 2020 10:03</span></tt></strong><br />
-<em>最新编辑：</em> <strong><tt>DrStse</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596549555 format_%25D%20%25H%3A%25M">04 Aug 2020 13:59</span></tt></strong></p>
-<div class="span"><a href="http://scp-wiki-cn.wdfiles.com/local--files/ziyulaila/%E4%B8%BB%E7%AB%99"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/ziyulaila/%E4%B8%BB%E7%AB%99/medium.jpg" class="imagepre yes" alt="主站" /></a><br />
-<span style="white-space: pre-wrap;">...</span><br />
-<span style="color: #000000"><em>标签：</em></span> 原创</div>
-</div>
-</div>
+    </div><div class="list-pages-box">    
     
     
     
     </div>
-<div class="translation yes"><div class="list-pages-box">    
+<div class="translation {$translation}"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div style="text-align: center;">
+<hr />
+<h2><span>翻译SCP</span></h2>
+<hr /></div>
+</div>
     
     
     
-    </div><div class="list-pages-box">    
+    </div><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-3311">SCP-3311</a></strong><br />
+<em>最新评论：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607061529 format_%25D%20%25H%3A%25M">04 Dec 2020 05:58</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>LeafJensen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607084567 format_%25D%20%25H%3A%25M">04 Dec 2020 12:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 家具 容器 概念 认知危害 超维度 金属</div>
+</div>
+</div>
+<div class="list-pages-item">
+
+
+<div class="preview yes">
+<p><strong><a href="/scp-5110">SCP-5110</a></strong><br />
+<em>最新评论：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589342491 format_%25D%20%25H%3A%25M">13 May 2020 04:01</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596155597 format_%25D%20%25H%3A%25M">31 Jul 2020 00:33</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-5110&#32;项目等级：Safe&#32;特殊收容措施：所有被识别和确认的SCP-5110个体均须被收容在一间标准异常物品收容室内。在任何情况下，不允许安全许可等级高于D级的基金会职员摄入任何有关SCP-5110的产物。&#32;应对已查明的任何SCP-5110的产物加以控制并调回一切5110零售个体，参与获取货物的任何工作人员均须接受访谈。&#32;描述：SCP-5110是以“PURE...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 反熵 食物</div>
+</div>
+</div>
     
     
     
@@ -1041,113 +3318,117 @@ display:none
     </div></div>
 <div class="collab-header" style="text-align: center;">
 <hr />
-<h2 id="toc0"><span>更多页面</span></h2>
+<h2 id="toc3"><span>更多页面</span></h2>
 <hr /></div>
 </div>
-<div id="wiki-tab-0-2" style="display:none">
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/2"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/2/medium.jpg" alt="2" class="image" /></a></p>
-<hr />
-<p>欢迎留言啦~&#8230;&#8230;..<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4888797&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="WOrs Obrine" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4888797)" /></a><a href="http://www.wikidot.com/user:info/wors-obrine" onclick="WIKIDOT.page.listeners.userInfo(4888797); return false;">WOrs Obrine</a></span></p>
-<p>哟！恭喜WOrs！继续努力写完啦咕咕咕咕——<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/yuannn" onclick="WIKIDOT.page.listeners.userInfo(6062512); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6062512&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="YUANNN" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6062512)" /></a><a href="http://www.wikidot.com/user:info/yuannn" onclick="WIKIDOT.page.listeners.userInfo(6062512); return false;">YUANNN</a></span></p>
-<p>哇！恭喜WOrs！希望09越来越好鸭——<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/cloud-stomo" onclick="WIKIDOT.page.listeners.userInfo(4921264); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=4921264&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="Cloud_StoMo" style="background-image:url(http://www.wikidot.com/userkarma.php?u=4921264)" /></a><a href="http://www.wikidot.com/user:info/cloud-stomo" onclick="WIKIDOT.page.listeners.userInfo(4921264); return false;">Cloud_StoMo</a></span></p>
-<p>恭喜！<span style="text-decoration: line-through;">迟来的祝贺</span> ——<span class="error-inline"><em>Ora_Spring</em> does not match any existing user name</span></p>
-<p><span style="text-decoration: line-through;">靠，太厉害了。</span>恭喜！相信09必定会越来越好。——<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/vastrode" onclick="WIKIDOT.page.listeners.userInfo(6251754); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6251754&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="Vastrode" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6251754)" /></a><a href="http://www.wikidot.com/user:info/vastrode" onclick="WIKIDOT.page.listeners.userInfo(6251754); return false;">Vastrode</a></span></p>
-<p>啊哈，留个言纪念一下，愿共勉——<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/mystrs-my" onclick="WIKIDOT.page.listeners.userInfo(5661001); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5661001&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="Mystrs-MY" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5661001)" /></a><a href="http://www.wikidot.com/user:info/mystrs-my" onclick="WIKIDOT.page.listeners.userInfo(5661001); return false;">Mystrs-MY</a></span></p>
-<p>仰慕一下。<span style="color: white">那什么……前辈……其实那篇文章我又重写了一遍的……所以你相当于其实还没有看过……[]</span>——<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6603529&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="djpieplus" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6603529)" /></a><a href="http://www.wikidot.com/user:info/djpieplus" onclick="WIKIDOT.page.listeners.userInfo(6603529); return false;">djpieplus</a></span></p>
-</div>
 <div id="wiki-tab-0-3" style="display:none">
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E8%88%9E"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E8%88%9E/medium.jpg" alt="舞" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>2020嫁之竞赛</em></strong></p>
+<div style="text-align: center;">
 <hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/1810"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/1810/medium.jpg" alt="1810" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>2020画廊大赛</em></strong></p>
-<hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E8%8A%B1"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E8%8A%B1/medium.jpg" alt="花" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>第一篇外围</em></strong></p>
-<hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/1809"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/1809/medium.jpg" alt="1809" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>处女作</em></strong></p>
+<h1 id="toc4"><span>翻译作品</span></h1>
+<hr /></div>
+<br />
+
+
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/scp-5110">SCP-5110</a></strong><br />
+<span class="ratingofscp-5110 {$rating}"><em>主站评分：</em>+<tt><strong>{$rating}</strong></tt></span><span class="collabnoteofscp-5110 {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1589342491 format_%25D%20%25H%3A%25M">13 May 2020 04:01</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1596155597 format_%25D%20%25H%3A%25M">31 Jul 2020 00:33</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">项目编号：SCP-5110&#32;项目等级：Safe&#32;特殊收容措施：所有被识别和确认的SCP-5110个体均须被收容在一间标准异常物品收容室内。在任何情况下，不允许安全许可等级高于D级的基金会职员摄入任何有关SCP-5110的产物。&#32;应对已查明的任何SCP-5110的产物加以控制并调回一切5110零售个体，参与获取货物的任何工作人员均须接受访谈。&#32;描述：SCP-5110是以“PURE...</span><br />
+<span style="color: #000000"><em>标签：</em></span> safe scp 反熵 食物</div>
+<br />
+<br />
+<br />
+</div>
+    
+    
+    
+    </div>
+<p><strong><a href="http://www.scp-wiki.net/scp-5110">scp-5110</a></strong><br />
+<span class="ratingofscp-5110 {$rating}"><em>主站评分：</em>+<tt><strong>{$rating}</strong></tt></span><br />
+<span class="collabnoteofscp-5110 {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
+
+
+
+<div class="preview yesyes" style="height:7.7em;overflow:hidden;"><div class="list-pages-box">    <div class="list-pages-item">
+
+
+<p><strong><a href="/scp-3311">SCP-3311</a></strong><br />
+<span class="ratingofscp-3311 {$rating}"><em>主站评分：</em>+<tt><strong>{$rating}</strong></tt></span><span class="collabnoteofscp-3311 {$note}">；{$note}</span><br />
+<em>最新评论：</em> <strong><tt>Vodka Wells</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607061529 format_%25D%20%25H%3A%25M">04 Dec 2020 05:58</span></tt></strong><br />
+<em>最新编辑：</em> <strong><tt>LeafJensen</tt></strong> <em>于</em> <strong><tt><span class="odate time_1607084567 format_%25D%20%25H%3A%25M">04 Dec 2020 12:22</span></tt></strong></p>
+<div class="span"><br />
+<span style="white-space: pre-wrap;">...</span><br />
+<span style="color: #000000"><em>标签：</em></span> euclid scp 家具 容器 概念 认知危害 超维度 金属</div>
+<br />
+<br />
+<br />
+</div>
+    
+    
+    
+    </div>
+<p><strong><a href="http://www.scp-wiki.net/scp-3311">scp-3311</a></strong><br />
+<span class="ratingofscp-3311 {$rating}"><em>主站评分：</em>+<tt><strong>{$rating}</strong></tt></span><br />
+<span class="collabnoteofscp-3311 {$note}">{$note}</span><br />
+<em>等待翻译&#8230;</em></p>
+</div>
 </div>
 <div id="wiki-tab-0-4" style="display:none">
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E6%8A%84%E8%A2%AD"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E6%8A%84%E8%A2%AD/medium.jpg" alt="抄袭" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>被误的文章</em></strong></p>
+<div style="text-align: center;">
 <hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E4%BD%9C%E7%94%A8"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E4%BD%9C%E7%94%A8/medium.jpg" alt="作用" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>被误的作用</em></strong></p>
-<hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E6%80%A7%E5%88%AB"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E6%80%A7%E5%88%AB/medium.jpg" alt="性别" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>被误的性别</em></strong></p>
-<hr />
-<p style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E6%97%B6%E9%97%B4%E7%BA%BF"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E6%97%B6%E9%97%B4%E7%BA%BF/medium.jpg" alt="时间线" class="image" /></a></p>
-<p style="text-align: center;"><strong><em>学术讲座？</em></strong></p>
-</div>
-<div id="wiki-tab-0-5" style="display:none">
-<div style="text-align: center;"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E7%89%99"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E7%89%99/medium.jpg" alt="牙" class="image" /></a>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">感谢Morphie！</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;关闭</a></div>
-<div class="collapsible-block-content"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/Morphie"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/Morphie/medium.jpg" alt="Morphie" class="image" /></a><br />
-<strong>非常感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/morphie" onclick="WIKIDOT.page.listeners.userInfo(5001379); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5001379&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="Morphie" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5001379)" /></a><a href="http://www.wikidot.com/user:info/morphie" onclick="WIKIDOT.page.listeners.userInfo(5001379); return false;">Morphie</a></span>！</strong></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">如果你看见WOrs没有戴他的管家镜</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;关闭</a></div>
-<div class="collapsible-block-content"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E8%AE%B0%E5%BF%86"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E8%AE%B0%E5%BF%86/medium.jpg" alt="记忆" class="image" /></a><br />
-记得提醒他一下</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">嗯？WOrs的本体？</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;关闭</a></div>
-<div class="collapsible-block-content"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E5%85%A8%E8%BA%AB"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E5%85%A8%E8%BA%AB/medium.jpg" alt="全身" class="image" /></a><br />
-还行？</div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;感谢雨树！</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;点我隐藏</a></div>
-<div class="collapsible-block-content"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E9%9B%A8%E6%A0%91%E7%BB%98"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E9%9B%A8%E6%A0%91%E7%BB%98/medium.jpg" alt="雨树绘" class="image" /></a><br />
-<strong><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5375092&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="RainTree" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5375092)" /></a><a href="http://www.wikidot.com/user:info/raintree" onclick="WIKIDOT.page.listeners.userInfo(5375092); return false;">RainTree</a></span>绘制！</strong></div>
-</div>
-</div>
-<hr />
-<div class="collapsible-block">
-<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;感谢艺兮！</a></div>
-<div class="collapsible-block-unfolded" style="display:none">
-<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;点我隐藏</a></div>
-<div class="collapsible-block-content"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/%E8%89%BA%E5%85%AE%E7%BB%98"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/%E8%89%BA%E5%85%AE%E7%BB%98/medium.jpg" alt="艺兮绘" class="image" /></a><br />
-<strong>是<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/yixi-windbell" onclick="WIKIDOT.page.listeners.userInfo(5867553); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5867553&amp;amp;size=small&amp;amp;timestamp=1610207981" alt="yixi_Windbell" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5867553)" /></a><a href="http://www.wikidot.com/user:info/yixi-windbell" onclick="WIKIDOT.page.listeners.userInfo(5867553); return false;">yixi_Windbell</a></span>的作品！</strong></div>
-</div>
-</div>
+<h1 id="toc5"><span>艺术作品</span></h1>
+<hr /></div>
 <br />
-<strong>装饰中&#8230;</strong></div>
-</div>
-<div id="wiki-tab-0-6" style="display:none"><a href="http://scp-wiki-cn.wdfiles.com/local--files/worsssss/09%E5%8A%A8"><img src="http://scp-wiki-cn.wdfiles.com/local--resized-images/worsssss/09%E5%8A%A8/medium.jpg" alt="09动" class="image" /></a>
-<p style="text-align: center;"><em>点击查看</em></p>
-<p style="text-align: center;"><a href="http://scpsandboxcn.wikidot.com/collab:09">俺们在咕了</a></p>
-<p>这里就放些合著条目吧：</p>
-<h3 id="toc1"><span><a href="http://scp-wiki-cn.wikidot.com/is-monthly">基金会月刊六月报道</a></span></h3>
-<p>端午快乐！</p>
+在这里列出的是我自己和我的朋友们为我创作的艺术作品。<br />
+<div style="text-align: center;"><img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells5" width="260" alt="wells5" class="image" /><br />
+感谢 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-fishbone" onclick="WIKIDOT.page.listeners.userInfo(6127045); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6127045&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="Dr Fishbone" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6127045)" /></a><a href="http://www.wikidot.com/user:info/dr-fishbone" onclick="WIKIDOT.page.listeners.userInfo(6127045); return false;">Dr Fishbone</a></span> 为我创作的男性人设画作！
+<hr />
+<img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells8" width="260" alt="wells8" class="image" /><br />
+感谢我自己为我自己创作的女版人设画作！
+<hr />
+<img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells9" width="260" alt="wells9" class="image" /><br />
+感谢 <span class="error-inline"><em>Ora_Spring</em> does not match any existing user name</span> 为我创作的像素版女性人设画作！
+<hr />
+<img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells11" width="260" alt="wells11" class="image" /><br />
+感谢 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/william-wells" onclick="WIKIDOT.page.listeners.userInfo(6072093); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6072093&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="William Wells" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6072093)" /></a><a href="http://www.wikidot.com/user:info/william-wells" onclick="WIKIDOT.page.listeners.userInfo(6072093); return false;">William Wells</a></span> 为我创作的女版人设画作！
+<hr />
+<img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells6" width="300px" alt="wells6" class="image" /><br />
+感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-aurora-owl" onclick="WIKIDOT.page.listeners.userInfo(6126100); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6126100&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="Dr Aurora Owl" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6126100)" /></a><a href="http://www.wikidot.com/user:info/dr-aurora-owl" onclick="WIKIDOT.page.listeners.userInfo(6126100); return false;">Dr Aurora Owl</a></span> 为我创作的男性人设画作！
+<hr />
+<img src="http://scp-wiki-cn.wikidot.com/local--files/vodkawells/wells7" width="300px" alt="wells7" class="image" /><br />
+感谢<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/greendy" onclick="WIKIDOT.page.listeners.userInfo(6085158); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6085158&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="Greendy" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6085158)" /></a><a href="http://www.wikidot.com/user:info/greendy" onclick="WIKIDOT.page.listeners.userInfo(6085158); return false;">Greendy</a></span> 为我创作的男性人设画作！
+<hr />
+<img src="http://scpsandboxcn.wikidot.com/local--files/collab:yizuo/Screenshot_2020-05-25-10-59-28-94.png" width="150" alt="Screenshot_2020-05-25-10-59-28-94.png" class="image" /><br />
+<em>Q版のDr.Wells</em>
+<p>by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=5721026&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="Vodka Wells" style="background-image:url(http://www.wikidot.com/userkarma.php?u=5721026)" /></a><a href="http://www.wikidot.com/user:info/vodka-wells" onclick="WIKIDOT.page.listeners.userInfo(5721026); return false;">Vodka Wells</a></span></p>
+<hr />
+<img src="http://ubmh.wikidot.com/local--files/forum:start/VodkaWells-Q.png" alt="VodkaWells-Q.png" class="image" /><br />
+<em>Wells专属小恐龙上市啦！这大概是海报吧</em>
+<p>by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/guo-mu-ye" onclick="WIKIDOT.page.listeners.userInfo(6126600); return false;"><img class="small" src="http://www.wikidot.com/avatar.php?userid=6126600&amp;amp;size=small&amp;amp;timestamp=1610089769" alt="Guo_Mu_Ye" style="background-image:url(http://www.wikidot.com/userkarma.php?u=6126600)" /></a><a href="http://www.wikidot.com/user:info/guo-mu-ye" onclick="WIKIDOT.page.listeners.userInfo(6126600); return false;">Guo_Mu_Ye</a></span></p>
+<hr /></div>
 </div>
 </div>
 </div>
 <script type="text/javascript">
 //<![CDATA[
 OZONE.dom.onDomReady(function(){
-        var tabView483fc5278609c0ee8ef7dd75039ebf7f = new YAHOO.widget.TabView('wiki-tabview-483fc5278609c0ee8ef7dd75039ebf7f');
+        var tabView4b64982d0ecc6a959e560cd5307e4e06 = new YAHOO.widget.TabView('wiki-tabview-4b64982d0ecc6a959e560cd5307e4e06');
                 }, "dummy-ondomready-block");
         
 //]]>
-</script>
+</script><br />
+<br />
+<br />
+<span style="white-space: pre-wrap;">&#32;</span><br />
+<p style="text-align: center;">BGM：《Hotel》- Toby fox</p>
+
                     </div>
 
                             
@@ -1175,7 +3456,7 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     
                         <div class="page-tags">
                             <span>
-                                <a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a>
+                                <a href="/system:page-tags/tag/_image#pages">_image</a><a href="/system:page-tags/tag/%E4%BD%9C%E8%80%85#pages">作者</a><a href="/system:page-tags/tag/_%E9%9F%B3%E9%A2%91#pages">_音频</a>
                             </span>
                         </div>
                     
@@ -1183,12 +3464,12 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
                     <div id="page-info-break"></div>
                     
                         <div id="page-options-container">
-                            <div id="page-info">页面版本: 110, 最后编辑于: <span class="odate time_1609387937 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">31 Dec 2020 04:12</span></div>
+                            <div id="page-info">页面版本: 74, 最后编辑于: <span class="odate time_1609997066 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20%E5%89%8D%29">07 Jan 2021 05:24</span></div>
             <div id="page-options-bottom"  class="page-options-bottom">
             <a href="javascript:;" class="btn btn-default" id="edit-button">编辑</a>
-<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+52</span>)</a>
+<a href="javascript:;" class="btn btn-default" id="pagerate-button">评分 (<span id="prw54355">+36</span>)</a>
 <a href="javascript:;" class="btn btn-default" id="tags-button">标签</a>
-<a href="/forum/t-13184929/worsssss" class="btn btn-default" id="discuss-button">讨论 (31)</a>
+<a href="/forum/t-13372129/vodkawells" class="btn btn-default" id="discuss-button">讨论 (32)</a>
 <a href="javascript:;" class="btn btn-default" id="history-button">历史记录</a>
 <a href="javascript:;" class="btn btn-default" id="files-button">附件</a>
 <a href="javascript:;" class="btn btn-default" id="print-button">打印</a>
@@ -1255,10 +3536,10 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://the-nexus.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/the-nexus.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://trueblood-dallas.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/trueblood-dallas.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://the-nexus.wikidot.com">Nexus Wiki</a></h3>
+            <h3><a target="_blank" href="http://trueblood-dallas.wikidot.com">Trueblood: Dallas</a></h3>
             <div class="desc">          
               
             </div>
@@ -1266,34 +3547,34 @@ nads.createAd('wad-scp-wiki-cn-below-content', {
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://margopedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/margopedia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://ci-wiki.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/ci-wiki.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://margopedia.wikidot.com">Margopedia</a></h3>
-            <div class="desc">          
-              Połączenie wikipedii i nonsensopedii...
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://voyage34.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/voyage34.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://voyage34.wikidot.com">+VOYAGE34+</a></h3>
-            <div class="desc">          
-              Is this trip really necessary?
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://theskyremains.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/theskyremains.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://theskyremains.wikidot.com">The Sky Remains</a></h3>
+            <h3><a target="_blank" href="http://ci-wiki.wikidot.com">Chaos Insurgency</a></h3>
             <div class="desc">          
               
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://scp-hu.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-hu.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://scp-hu.wikidot.com">SCP Alapítvány</a></h3>
+            <div class="desc">          
+              Magyarnyelvű ágazat
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://excelencia.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/excelencia.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://excelencia.wikidot.com">EXCELENCIA</a></h3>
+            <div class="desc">          
+              exploring, describing and promoting  great websites!
             </div>
           </div>
         </div>

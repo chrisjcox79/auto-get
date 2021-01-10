@@ -1,1 +1,304 @@
-No such page
+/*
+-------------------------
+变量
+--------------------------
+*/
+:root{
+ 
+  /* 书本厚度色 */
+ 
+ --cl-a1:235,235,225,1;
+  --cl-a2:222,210,220,1;
+  --cl-a3:210,200,195,1;
+  --cl-a4:25,25,25,1;
+   --cl-a5:{$book-cover};
+
+
+    /* 书本厚度描框 */
+ 
+--box-bk-0:0.0625rem 0.0625rem 0 rgba(var(--cl-a1)), 0.125rem 0.125rem 0 rgba(var(--cl-a2)), 0.1875rem 0.1875rem 0 rgba(var(--cl-a2)), 0.25rem 0.25rem 0 rgba(var(--cl-a3)), 0.3125rem 0.3125rem 0 rgba(var(--cl-a2)), 0.375rem 0.375rem 0 rgba(var(--cl-a2)), 0.4375rem 0.4375rem 0 rgba(var(--cl-a2)), 0.58rem 0.8rem 0 rgba(var(--cl-a4));
+ 
+/* 各线 */
+--page-divider:linear-gradient(to right, transparent 50.2%, #000 50.3%, transparent 50.4%); 
+ 
+--mark-color:linear-gradient(to right, transparent 46%, #333 46.1%, #333 49%, transparent 49.1%);
+ 
+--line-color:linear-gradient(to top ,transparent 0%,#c0c0c0 1%, transparent 5%, #c0c0c0 11%,transparent 12%,transparent 20%);
+}
+ 
+/* 脚注上标 */
+a.footnoteref {
+    line-height: 0px;
+}
+
+.note-cover sup{
+   top: 5px;
+}
+ 
+/* 
+-----------------
+书页
+--------------
+*/
+ 
+.note-cover{
+    width:100%;
+    clear:both;
+    background-color: #f3f3f3;
+    margin: 0rem;
+}
+ 
+.note-wrap{
+    box-shadow: var(--box-bk-0);
+    background-color: #f3f3f3;
+    border:1px solid #cccccc;  
+}
+ 
+.note-leaf{
+     columns:1px 2;
+    -webkit-columns:1px 2;
+    -moz-columns:1px 2; 
+     column-rule:3px  outset #ccc;
+    min-height: 10px;
+    padding: 0 1.2rem 0 1.2rem;
+}
+ 
+.note-page {
+    white-space：normal;
+    float:left;
+    display: block;
+    font-family: '宋体',  '等线', lisu, sans-serif;
+    font-size:110%;
+    font-style: normal;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image:var(--line-color);
+    background-origin: padding-box;
+    background-position: 0em 1.5rem;
+    background-repeat: repeat;
+    background-size: 100% 1.5rem;
+ /*   padding: 0em 1em 0 1em; */
+}
+ 
+.note-page p {
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0rem 0.5rem 1.5rem 0.5rem;
+}
+ 
+/* 
+-------------------------
+左右书页
+--------------------------
+*/
+ 
+.note-line{
+    background-image:  var(--page-divider);
+    background-size:100%;
+    height:90%;
+}
+
+
+ 
+.note-left,.note-right {
+  width:45%;
+}
+
+.note-right {
+    float: right;
+    margin:0 1.2rem 0 0;
+}
+
+.note-left {
+    float: left;
+    margin:0 0 0 1rem;
+}
+
+
+.note-left p:last-child, 
+.note-right p:last-child {
+    padding: 0rem 0.5rem 1.5rem 0.5rem;
+}
+
+
+
+
+
+.note-left p:first-child, 
+.note-right p:first-child {
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;;
+}
+
+@media (max-width: 495px) {
+  .note-left p:first-child, 
+  .note-right p:first-child {
+    padding: 1.5rem 0.5rem 0rem 0.5rem;;
+  }
+
+  .note-right p:last-child {
+    padding: 0rem 0rem 0rem 0.5rem;
+  }
+    
+  .note-left  p:not(:first-child),
+  .note-right p:not(:first-child) {
+    margin: 1.5rem 0rem 0 0rem;
+  } 
+   
+  .note-left p:last-child   {
+   display: none;
+  }         
+}
+
+ 
+/*
+.note-right p{
+    padding: 0 0em 0 1em;
+}
+*/
+ 
+/* 
+-------------------------
+书签
+--------------------------
+*/
+.note-bookmark{
+    background-image:var(--mark-color);   
+    background-size:100% 20%;
+    background-position:12rem  0px; 
+    background-repeat: no-repeat;
+}
+ 
+
+/*
+-------------------------
+列表
+-------------------------
+*/
+
+.note-page li {
+   line-height: 1.5rem;
+   margin: 0;
+   padding: 0rem 0 0rem 0;
+/*! word-spacing: normal; */
+   word-break: break-word;
+}
+
+.note-page ul {
+   line-height: 0rem;
+   margin:  0rem 0rem 0rem 0rem;
+   list-style-type:circle;  
+}
+
+
+.note-page li ul{
+  margin:  0rem 0rem 0rem 0rem;  
+}
+
+.note-page ul + ul{
+  margin:  0rem 0rem 0rem 0rem; 
+}
+
+
+.note-page ul + p {
+    line-height: 1.5rem;
+    margin: 1.5rem 0rem 0rem 0rem;  
+} 
+
+.note-page p + ul {
+    line-height: 0rem;
+    margin:  -1.5rem 0rem 1.5rem 0rem;  
+}
+
+
+@media (max-width: 495px) {
+ .note-page p + ul {
+    line-height: 0rem;
+    margin:  0rem 0rem 0rem 0rem;  
+  }
+    
+}
+
+
+/* 
+-------------------------
+手机
+--------------------------
+*/
+@media (max-width: 495px) {
+ 
+#main-content {
+    min-width: 0rem !important;
+}
+ 
+.note-page {
+    width: 100%;
+    float:none ;
+ /*background-size: 90% 1.5rem; */
+    font-size:{$phone-size};
+}
+ 
+#search-top-box-input{
+display:none;
+}
+ 
+.note-leaf {
+         columns:1000em 2 ;
+    -webkit-columns:1000em 2 ; 
+    -moz-columns:1000em 2;
+}
+ 
+.note-cover {
+   padding: 0.6rem  ;
+   margin: 0 0.8rem  0 -0.7rem;
+    border: 2px solid #968787;
+ /*  overflow:hidden; */
+}
+ 
+.note-wrap p{
+    padding:0 0.5rem 0 0.5rem;
+}
+ 
+.note-wrap{
+    background: none ;
+    padding:0.1em ;
+    box-shadow: none ;
+    margin:0em ;
+    border: none ;
+}
+
+.note-bookmark{
+    background-image: none ;
+}
+ 
+.note-left, .note-right {
+    margin: 0rem;
+}
+ 
+
+
+
+/*
+.note-right p,.note-left p{
+padding: 0 3rem 0 0 ;
+}
+*/
+}
+
+
+ 
+/* 
+==================
+常规版式 
+==================
+*/
+ 
+
+
+#header {
+}
+ 
+.no-float{
+    width:100%;
+    clear: both;
+}

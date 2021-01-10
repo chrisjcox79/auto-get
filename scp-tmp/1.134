@@ -1,162 +1,327 @@
 /*
-    Foundless Theme
-    [2020 Wikidot Theme]
-     Created by Greyve
-     Logo by stephlynch
+    Second Hytoth Theme
+    [2019 Wikidot Theme]
+    Created by DrMacro with edits by 9Volt
+    Based on the SCP Sigma 9 created by Aelanna and Dr Devan, along with the WWS theme by Darkstuff.
+    The Second Hytoth logo is by Taoka.
 */
 
-/* ROOT - Header & General Recoloring */
-:root {
-/* Intro */
-    --theme-base: "nuscp"
-    --theme-id: "foundless"
-    --theme-name: "Foundless Theme";
+@import url('https://fonts.googleapis.com/css?family=Charm');
 
-/* Header */
-    --logo-image: url("http://www.scpwiki.com/local--files/theme:foundless/unfounded.gif");
-    --logo-size: 500%;
-    --header-title: "未建立";
-    --header-subtitle: "不受基金会所染";
+/*RECOLORING THE TITLES */
+h1, #page-title {
+    color: #6B0803;}
 
-/* Colors */
-    --pale-gray-monochrome: 220, 220, 240; /* Light Grey */
-    --light-gray-monochrome: 160, 160, 180; /* Accent Light Gray */
-    --gray-monochrome: 48, 48, 64; /* Gray  */
-    --dark-dray-monochrome: 48, 48, 64; /*Gray */
-
-    --pale-accent: 176, 210, 207; /* Pale Blue*/
-    --bright-accent: 206, 233, 234; /* Light Blue*/
-    --medium-accent: 139, 179, 180; /* Blue */
-    --dark-accent: 68, 92, 109; /* Dark Blue */
-    --newpage-color: 135, 158, 176; /* Grey Blue */
-
-/* Menu Colors */
-    --swatch-menubg-color: var(--gray-monochrome);
-    --swatch-menubg-light-color: var(--pale-gray-monochrome);
-    --swatch-menubg-medium-color: var(--light-gray-monochrome);
-    --swatch-menubg-medium-dark-color: var(--black-monochrome);
-    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
-    --swatch-menubg-black-color: var(--black-monochrome);
-    --swatch-menubg-hover-color: var(--gray-monochrome);
-    --swatch-menutxt-dark-color: var(--white-monochrome);
-    --swatch-menutxt-light-color: var(--white-monochrome);
-    --swatch-border-color: var(--black-monochrome);
-
-/* Header Colors */
-  --swatch-topmenu-border-color: var(--light-gray-monochrome);
-  --swatch-topmenu-bg-color: var(--light-gray-monochrome);
-
-/* Link Colors */
-  --link-color: var(--medium-accent);
-  --visited-link-color: var(--dark-accent);
-  --hover-link-color: var(--pale-accent);
-
-/* Rating Module Colors */
-    --rating-module-text-color: var(--black-monochrome);
-
-/* Navbar Shadow */
-    --gradient-background: linear-gradient(to bottom,
-     rgba(var(--background-gradient-color), 1) calc(calc(0 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 1) calc(calc(1.6 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 1) calc(calc(2.9 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 1) calc(calc(6.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 1) calc(calc(11 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 1) calc(calc(16.6 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.85) calc(calc(27.1 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.75) calc(calc(33.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.62) calc(calc(38.3 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.52) calc(calc(46.7 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.35) calc(calc(55.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.20) calc(calc(64.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.155) calc(calc(69.5 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.052) calc(calc(82.5 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0.03) calc(calc(91.4 / 100) * var(--background-gradient-distance)),
-     rgba(var(--background-gradient-color), 0) calc(calc(100 / 100) * var(--background-gradient-distance)));
-     --background-gradient-color: 0, 0, 0;
-     --background-gradient-distance: 15rem;
-
-    --header-gradient-color-bottom: 68, 92, 109;
-    --header-gradient-color-middle: 135, 158, 176;
-    --header-gradient-color-top: 154, 180, 181;
-
-  --diagonal-stripes: repeating-linear-gradient(
-    135deg,
-    hsla(0, 0%, 100%, 0),
-    hsla(0, 0%, 100%, 0) 0.25vh,
-    rgba(88, 88, 88, 0.1) 0.35vh,
-    rgba(88, 88, 88, 0.2) 0.5vh
-  );
-
-  --gradient-sidemenu-header: linear-gradient(10deg,
-    rgba(var(--medium-accent), 0.9) 0%,
-    rgba(var(--medium-accent), 1) 100%
-  );
+#page-title {
+    font-weight: lighter;
+    border-color: #D85D02;
 }
 
-/* SEARCH-BAR */
-#search-top-box-input,
+/*RECOLORING LINKS */
+a {
+    color: #B52B19;}
+
+a.newpage {
+    color: #F7C9B7;}
+
+#side-bar a:visited{ color: #842012; }
+
+ a:visited { color: #842012; }
+
+/* BACKGROUND COLOR FONT COLOR */
+body {
+    background-color: #ffd585;
+}
+
+/*HEADER IMAGES*/
+div#container-wrap {
+    background: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ahytoth/autumn_bg.png) repeat-x;
+}
+
+#header {
+    background-image: url(http://scp-wiki.wdfiles.com/local--files/theme%3Ahytoth/second_hytoth_logo5.png);
+}
+
+/* HIDE OR CHANGE HEADER TEXT */
+#header h1 a {
+    font-size: 150%;
+    color: transparent;
+    text-shadow: none;
+    font-family: 'Charm', '华文隶书', cursive;
+}
+
+#header h1 a::before {
+    content: "第二海托世教会";
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+}
+
+
+@media only screen and (max-width: 640px) {
+  #header h1 a {
+    font-size: 60%;
+  }
+}
+
+#header h2 span {
+    font-size: 100%;
+    color: transparent;
+    text-shadow: none;
+    font-family: 'Charm', '华文隶书', cursive;
+}
+#header h2 span::before {
+    content: "为生命、存在及永恒";
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+}
+
+/* RECOLORING THE NAVIGATION BAR */
+#search-top-box-input, #search-top-box-input:hover, #search-top-box-input:focus {
+    background-color: #3b1b0e;
+    border-radius: 2px 7px 2px 7px !important;
+}
 #search-top-box-input:hover,
 #search-top-box-input:focus {
-    background: rgb(var(--light-gray-monochrome)) !important;
-    color: rgb(var(--dark-accent)) !important;
-    border: rgb(var(--light-gray-monochrome)) !important;
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #6d311a;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.8);
 }
- 
-#search-top-box-form input[type="submit"],
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
-    background: rgb(var(--gray-monochrome)) !important;
-    border: rgb(var(--gray-monochrome)) !important;
+#search-top-box-form input[type=submit] {
+    background: linear-gradient(to bottom, #6A0702, #B93F02, #4A0C0C);
+    border-radius: 2px 7px 2px 7px;
 }
 
-  /* Filter */
-  --filter: hue-rotate(268deg) saturate(50%) brightness(111%);
-
-  /* Ayers' Info Bar */
-  --barColour: rgb(var(--dark-accent));
-}
- 
-body {
-  background-color: rgba(244, 244, 244, 1);
-  background-color: rgba(var(--swatch-menubg-light-color), 1);
+#search-top-box-form input[type=submit]:hover,
+#search-top-box-form input[type=submit]:focus {
+    background: linear-gradient(to bottom, #990303, #E84C04, #7A1414);
+    border-radius: 2px 7px 2px 7px;
 }
 
-/* Header Logo Compensation */
-   #header {
-    background-size: var(--header-height-on-desktop) auto;
-    background-position: left 0 top 0;
+/* LOGIN STUFF */
+#login-status {
+    color: #ffffff;
+}
+#login-status a {
+    color: #ffffff;
+}
+#login-status ul a {
+    color: #D85D02;
+}
+#account-topbutton {
+    background: #ccc;
+    color: #ffffff;
 }
 
-/* Page Title */
-#page-title {
-    color: rgb(var(--medium-accent));
-    border-color: rgb(var(--dark-gray));
+/* IMAGE BLOCK RECOLORING */
+.scp-image-block {
+  border: solid 1px #665731;
+}
+.scp-image-block .scp-image-caption {
+  background-color: #fdd3af;
+  border-top: solid 1px #665731;
 }
 
-/* Page Rating Module */
-.page-rate-widget-box {
-    background: linear-gradient(to top,
-     rgba(var(--pale-gray-monochrome),1) 0%,
-     rgba(var(--pale-gray-monochrome), 1) 100%);
-    border-color: rgb(var(--pale-gray-monochrome));
+/* RECOLOR OR MODIFY THE RATING MODULE */
+.page-rate-widget-box .rate-points {
+  background-color: #800202!important;
+  border: solid 1px #40150d;
+  border-radius: 2px 0 0 7px;
 }
-#page-content .rate-box-with-credit-button {
-    background: linear-gradient(to top,
-     rgba(var(--pale-gray-monochrome),1) 0%,
-     rgba(var(--pale-gray-monochrome), 1) 100%);
-    border-color: rgb(var(--pale-gray-monochrome));
+.page-rate-widget-box .rateup,
+.page-rate-widget-box .ratedown {
+  background-color: #ffd3af;
+  border-top: solid 1px #40150d;
+  border-bottom: solid 1px #40150d;
 }
-#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
-    background-color: rgb(var(--pale-gray-monochrome));
+.page-rate-widget-box .rateup a,
+.page-rate-widget-box .ratedown a {
+  background: transparent;
+  color: #800202;
 }
- 
-#page-content .rate-box-with-credit-button > .creditButton:hover {
-    background: rgba(var(--bright-accent), 0.8);
+.page-rate-widget-box .rateup a:hover,
+.page-rate-widget-box .ratedown a:hover {
+  background: #800202;
+  color: #f1fff0;
 }
- 
-#page-content .modalbox {
-     background: rgb(var(--pale-gray-monochrome)) !important;
-     color: rgb(var(--pale-gray-monochrome));
-     border-radius: 0;
-     box-shadow: 0 2px 6px rgba(var(--bright-accent), 0.5);
+.page-rate-widget-box .cancel {
+  background: transparent;
+  background-color: #800202;
+  border: solid 1px #40150d;
+  border-radius: 0 7px 2px 0 !important;
 }
+.page-rate-widget-box .cancel a {
+  color: #40150d;
+  border-radius: 0 7px 2px 0 !important;
+}
+.page-rate-widget-box .cancel a:hover {
+  background: #c84c02;
+  color: #f1fff0;
+}
+
+/* RECOLORING THE TABS */
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color:#ffd585; /* color between tab list and content */
+}
+
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color: #ffd585 ! important; /* tab background */
+    border-color: #ffd585;
+    color: #000000;
+    transition: 0.125s;
+}
+
+.yui-navset .yui-nav a em {
+background-color: #6a0702;
+box-shadow: 0px 1px 2px rgba(106,7,2,0.7);
+border-color: #6a0702;
+color: #ffd3af;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+    background-color: #ffd585; /* selected tab background */
+    color: black;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em {
+    border-color: #cb8d58;
+    box-shadow: 0px 1px 2px rgba(106,7,2,0.5);
+ background-color: #ffd3af;
+ color: #6a0702;
+}
+
+.yui-navset .yui-content {
+    background-color: #ffd585; /* content background color */
+}
+
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: #ffd585; /* content border */
+    border-top-color:#ffd585; /* different border color */
+}
+
+.yui-navset-left .yui-content {
+    border-left-color: #b7a9a9; /* different border color */
+}
+
+/*RECOLOR OR MODIFY THE SIDEBAR */
+#side-bar .side-block {
+    border: 1px solid #40150d;
+    box-shadow: 0 2px 6px rgba(64, 21, 13, 1);
+    background: #ffd3af!important;
+    border-radius: 2px;
+}
+#side-bar .heading {
+    color: #40150D;
+    border-bottom: solid 1px #40150d;
+}
+
+#side-bar img {
+    filter: hue-rotate(70deg);
+    -webkit-filter: hue-rotate(70deg);
+}
+#side-bar div.side-block:nth-child(5) > div:nth-child(2) > div:nth-child(1) img {
+    filter: none;
+    -webkit-filter: none;
+}
+#side-bar .collapsible-block-folded {
+    background-image: none;
+}
+#side-bar .collapsible-block-unfolded-link {
+    border-bottom: solid 1px #40150d;
+}
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link,
+#side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
+    color: #40150D;
+}
+
+/* RECOLOR THE TOP BAR*/
+#top-bar ul li ul {
+    border: solid 1px #40150D;
+}
+#top-bar ul li.sfhover ul li a,
+#top-bar ul li:hover ul li a {
+    border-top: 1px solid #40150D;
+}
+
+#top-bar ul li.sfhover a,
+#top-bar ul li:hover a {
+    background: #c84c02;
+    color: #ffffff;
+}
+#top-bar ul li ul a, #top-bar a:hover {
+    color: #943301;
+}
+#top-bar ul li.sfhover a:hover,
+#top-bar ul li:hover a:hover {
+    background: #EA7749; /* top bar hover background color */
+}
+
+/* RECOLOR THE TABLES */
+#page-content .wiki-content-table tr th {background-color: #800202; color: white; border: 1px solid #6b0803;}
+
+/* RECOLOR THE QUOTEBLOCK */
+blockquote,
+div.blockquote {
+    border: solid 1px #43130D;
+    background-color: #FCF5E0;
+}
+
+/* RECOLORING THE LINES OF SEPARATION */
+hr {
+    background-color: #665731;
+}
+
+/* SHORTCUTS */
+
+div.opening {float: center; border: solid 2px #800000; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #fdd3af; margin-bottom: 10px;}
+
+div.saduj {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #ffd6a8; margin-bottom: 10px;}
+
+div.nicole {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #fbf2b7; margin-bottom: 10px;}
+
+div.sarah {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #ffab93; margin-bottom: 10px;}
+
+div.bleu {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #e5ccff; margin-bottom: 10px;}
+
+div.fondation {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #FCF5E0; margin-bottom: 10px;}
+
+div.inconnu {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #c0a78e; margin-bottom: 10px;}
+
+div.merle {float: center; border: solid 2px #43130D; width: 90%; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #ffeba9; margin-bottom: 10px;}
+
+div.affiche {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #bebebe; margin-bottom: 10px;}
+
+div.quatrieme {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #ff834f; margin-bottom: 10px;}
+
+div.samarah {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #b2ffb2; margin-bottom: 10px;}
+
+div.st-hubert {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #0097f2; margin-bottom: 10px;}
+
+div.comptine {float: center; border: solid 2px #43130D; width: 570px; padding: 1px 15px; margin:0 auto; box-shadow: rgba(0,0,0,.2); background-color: #e4717a; margin-bottom: 10px;}
+
+.orderwrapper {position: relative;width: auto;text-align: center;}
+
+.second-hytoth {position: relative;top: 0;bottom: 0;left: 0;right: 0;width: 295px;height: 295px;margin: auto;background-image: url( "http://lefilet.wdfiles.com/local--files/component%3Aautumn2/logo-sh.png" );background-size: 295px 295px;background-repeat: no-repeat;background-position: center;}
+
+.ordertitle {position: absolute;left: 0;right: 0;top: 38px;}
+
+.ordertitle h1 {font-size: 220%;color: #9a1d12a;}
+
+.orderdescription {position: absolute;left: 0;right: 0;top: 85px;width: 100%;}
+
+.orderdescription p {font-size: 90%;color: #6B0803;}
+
+.orderdescription h1 {font-size: 120%;color: #c34d3c;}
+
+.itemno {position: absolute;left: 0;right: 0;bottom: 27px;}
+
+.itemno h1 {font-size: 170%;color: #853524;}
+
+.itemno h2 {color: #853524;}
